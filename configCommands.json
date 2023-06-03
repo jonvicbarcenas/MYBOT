@@ -1,0 +1,61 @@
+{
+  "commandBanned": {},
+  "envGlobal": {
+    "weatherApiKey": "d7e795ae6a0d44aaa8abb1a0a7ac19e4"
+  },
+  "envCommands": {
+    "daily": {
+      "rewardFirstDay": {
+        "coin": 100,
+        "exp": 10
+      }
+    },
+    "notification": {
+      "delayPerGroup": 250
+    },
+    "rank": {
+      "deltaNext": 5
+    },
+    "rankup": {
+      "deltaNext": 5
+    },
+    "appstore": {
+      "limitResult": 3
+    },
+    "dhbc": {
+      "reward": 1000
+    },
+    "notificationupg": {
+      "delayPerGroup": 250
+    },
+    "changenick": {
+      "delayPerGroup": 250
+    },
+    "nicknamechange": {
+      "delayPerGroup": 250
+    },
+    "autoseen": {
+      "delayPerMarkAsRead": 30000
+    },
+    "job": {
+      "rewardFirstDay": {
+        "coin": 100,
+        "exp": 10
+      }
+    },
+    "addbot": {
+      "delayPerGroup": 250
+    }
+  },
+  "envEvents": {
+    "logsbot": {
+      "allow": true
+    }
+  },
+  "commandUnload": [
+    "pickupline.js",
+    "ask.js",
+    "time.js",
+    "zautoseen.js"
+  ]
+}

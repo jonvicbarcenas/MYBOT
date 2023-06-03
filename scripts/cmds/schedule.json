@@ -1,0 +1,128 @@
+[
+  {
+    "time": "12:00 AM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "MASHLE",
+    "episode": "8",
+    "status": "already updated"
+  },
+  {
+    "time": "1:05 AM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Tonikaku Kawaii Season 2",
+    "episode": "9",
+    "status": "already updated"
+  },
+  {
+    "time": "1:23 AM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "BIRDIE WING -Golf Girls’ Story- Season 2",
+    "episode": "9",
+    "status": "already updated"
+  },
+  {
+    "time": "1:23 AM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Megami no Cafe Terrace",
+    "episode": "9",
+    "status": "already updated"
+  },
+  {
+    "time": "1:35 AM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Rokudou no Onna-tachi",
+    "episode": "9",
+    "status": "already updated"
+  },
+  {
+    "time": "1:53 AM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Mahou Shoujo Magical Destroyers",
+    "episode": "9",
+    "status": "already updated"
+  },
+  {
+    "time": "2:23 AM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Edomae Elf",
+    "episode": "9",
+    "status": "already updated"
+  },
+  {
+    "time": "5:22 AM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Bonobono",
+    "episode": "361",
+    "status": "already updated"
+  },
+  {
+    "time": "7:00 AM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Chibi Godzilla no Gyakushuu",
+    "episode": "10",
+    "status": "already updated"
+  },
+  {
+    "time": "7:58 AM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Gunma-chan Season 2",
+    "episode": "9",
+    "status": "already updated"
+  },
+  {
+    "time": "10:00 AM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Ninjala",
+    "episode": "71",
+    "status": "already updated"
+  },
+  {
+    "time": "12:00 PM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Huo Feng Liao Yuan",
+    "episode": "7",
+    "status": "upcoming"
+  },
+  {
+    "time": "4:30 PM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Crayon Shin-chan",
+    "episode": "1184",
+    "status": "upcoming"
+  },
+  {
+    "time": "5:00 PM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Doraemon (2005)",
+    "episode": "678",
+    "status": "upcoming"
+  },
+  {
+    "time": "5:30 PM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "MIX MEISEI STORY Season2",
+    "episode": "10",
+    "status": "upcoming"
+  },
+  {
+    "time": "6:00 PM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Meitantei Conan",
+    "episode": "1085",
+    "status": "upcoming"
+  },
+  {
+    "time": "10:00 PM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Tengoku Daimakyo",
+    "episode": "10",
+    "status": "upcoming"
+  },
+  {
+    "time": "11:00 PM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Jigokuraku",
+    "episode": "9",
+    "status": "upcoming"
+  }
+]
