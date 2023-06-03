@@ -68,6 +68,38 @@
       "mentions": {},
       "timestamp": "1685763647830",
       "isGroup": true
+    },
+    {
+      "type": "message",
+      "senderID": "100007150668975",
+      "senderName": "JV Barcenas",
+      "body": "",
+      "threadID": "6423232497687772",
+      "messageID": "mid.$gABbR5VtVnNyOsJ8AmmIf1m7mElLq",
+      "attachments": [
+        {
+          "type": "sticker",
+          "ID": "369239263222822",
+          "url": "https://scontent.xx.fbcdn.net/v/t39.1997-6/39178562_1505197616293642_5411344281094848512_n.png?stp=cp0_dst-png&_nc_cat=1&ccb=1-7&_nc_sid=ac3552&_nc_ohc=tQ4ZOolKRXIAX8wtdWA&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=00_AfAy3aO0uFqp6NJtIp7ArHAAKRn80FxbRwXeXGU79BZFKQ&oe=647ED48B",
+          "packID": "227877430692340",
+          "spriteUrl": null,
+          "spriteUrl2x": null,
+          "width": 72,
+          "height": 72,
+          "caption": "Like, thumbs up",
+          "description": "Like, thumbs up",
+          "frameCount": 1,
+          "frameRate": 83,
+          "framesPerRow": 1,
+          "framesPerCol": 1,
+          "stickerID": "369239263222822",
+          "spriteURI": null,
+          "spriteURI2x": null
+        }
+      ],
+      "mentions": {},
+      "timestamp": "1685763766426",
+      "isGroup": true
     }
   ],
   "messageMap": {}
