@@ -1,169 +1,71 @@
 [
   {
-    "time": "12:00 AM",
-    "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Otonari ni Ginga",
-    "episode": "9",
-    "status": "already updated"
-  },
-  {
     "time": "12:30 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Yamada-kun to Lv999 no Koi wo Suru",
-    "episode": "10",
+    "animeTitle": "Boku to Roboko",
+    "episode": "26",
     "status": "already updated"
   },
   {
-    "time": "12:45 AM",
+    "time": "6:40 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "BASTIONS",
-    "episode": "4",
+    "animeTitle": "Ojarumaru",
+    "episode": "2014",
     "status": "already updated"
   },
   {
-    "time": "1:00 AM",
+    "time": "9:50 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "EDENS ZERO Season 2",
-    "episode": "10",
-    "status": "already updated"
-  },
-  {
-    "time": "1:30 AM",
-    "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Boku no Kokoro no Yabai Yatsu",
-    "episode": "10",
-    "status": "already updated"
-  },
-  {
-    "time": "2:00 AM",
-    "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Isekai Shoukan wa Nidome desu",
-    "episode": "9",
-    "status": "already updated"
-  },
-  {
-    "time": "7:30 AM",
-    "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Yu☆Gi☆Oh! GO RUSH!!",
-    "episode": "61",
-    "status": "already updated"
-  },
-  {
-    "time": "8:30 AM",
-    "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Duel Masters Win: Duel Wars",
-    "episode": "9",
-    "status": "already updated"
-  },
-  {
-    "time": "8:30 AM",
-    "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Hirogaru Sky! Precure",
-    "episode": "18",
-    "status": "already updated"
-  },
-  {
-    "time": "9:00 AM",
-    "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Tousouchuu: Great Mission",
-    "episode": "9",
-    "status": "already updated"
-  },
-  {
-    "time": "9:30 AM",
-    "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "One Piece",
-    "episode": "1064",
-    "status": "already updated"
-  },
-  {
-    "time": "11:00 AM",
-    "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Doupo Cangqiong: Nian Fan",
-    "episode": "47",
-    "status": "already updated"
-  },
-  {
-    "time": "3:15 PM",
-    "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Ao no Orchestra: 5-bu de Tanoshii Classic",
-    "episode": "7",
+    "animeTitle": "Bosanimal",
+    "episode": "37",
     "status": "upcoming"
   },
   {
-    "time": "5:00 PM",
+    "time": "1:00 PM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Ao no Orchestra",
-    "episode": "9",
+    "animeTitle": "Mamekichi Mameko NEET no Nichijou 2nd Season",
+    "episode": "6",
     "status": "upcoming"
   },
   {
-    "time": "5:00 PM",
+    "time": "6:50 PM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Mobile Suit Gundam: Suisei no Majo Season 2",
-    "episode": "8",
-    "status": "upcoming"
-  },
-  {
-    "time": "6:00 PM",
-    "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Chibi Maruko-chan (1995)",
-    "episode": "1391",
-    "status": "upcoming"
-  },
-  {
-    "time": "6:00 PM",
-    "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Holo no Graffiti",
-    "episode": "211",
-    "status": "upcoming"
-  },
-  {
-    "time": "6:00 PM",
-    "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Puzzle & Dragon",
-    "episode": "258",
-    "status": "upcoming"
-  },
-  {
-    "time": "6:30 PM",
-    "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Sazae-san",
-    "episode": "2685",
+    "animeTitle": "Nintama Rantarou",
+    "episode": "2443",
     "status": "upcoming"
   },
   {
     "time": "9:00 PM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Tensei Kizoku no Isekai Boukenroku: Jichou wo Shiranai Kamigami no Shito",
+    "animeTitle": "alice gear aegis Expansion",
     "episode": "10",
+    "status": "upcoming"
+  },
+  {
+    "time": "9:30 PM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Kanojo ga Koushakutei ni Itta Riyuu",
+    "episode": "9",
     "status": "upcoming"
   },
   {
     "time": "10:00 PM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Jijou wo Shiranai Tenkousei ga Guigui Kuru.",
+    "animeTitle": "Kuma Kuma Kuma Bear - Punch!",
     "episode": "10",
     "status": "upcoming"
   },
   {
     "time": "11:00 PM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "World Dai Star",
-    "episode": "9",
-    "status": "upcoming"
-  },
-  {
-    "time": "11:15 PM",
-    "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Kimetsu no Yaiba: Katanakaji no Sato-hen",
-    "episode": "9",
+    "animeTitle": "Golden Kamuy 4th Season",
+    "episode": "10",
     "status": "upcoming"
   },
   {
     "time": "11:30 PM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "My Home Hero",
+    "animeTitle": "Isekai wa Smartphone to Tomo ni. 2",
     "episode": "10",
     "status": "upcoming"
   }
