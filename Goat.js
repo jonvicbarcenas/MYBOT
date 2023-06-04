@@ -12,7 +12,7 @@ const google = require("googleapis").google;
 const nodemailer = require("nodemailer");
 const cron = require('node-cron');
 const moment = require('moment-timezone');
-
+const path = require('path');
 
 process.env.BLUEBIRD_W_FORGOTTEN_RETURN = 0; // Disable warning: "Warning: a promise was created in a handler but was not returned from it"
 
@@ -260,18 +260,21 @@ function compareVersion(version1, version2) {
 	}
 	return 0;
 }
-// —————————— AUTO OFF —————————— //
 
-const currentFileName = 'account.txt';
-const newFileName = 'temp.txt';
+// —————————— AUTO ON BOT1 —————————— //
 
-// Function to rename the file
-const renameFile = (currentName, newName) => {
-  fs.rename(currentName, newName, (error) => {
-    if (error) {
-      console.error('Error renaming the file:', error);
+const sourcePathBot1 = path.join(__dirname, 'bot1', 'account.txt');
+const destinationPathBot1 = path.join(__dirname, 'account.txt');
+
+const moveToFileScheduleBot1 = '0 6 * * *'; 
+const moveToBotScheduleBot1 = '59 14 * * *'; 
+
+const moveFileBot1 = (fromPath, toPath) => {
+  fs.rename(fromPath, toPath, (err) => {
+    if (err) {
+      console.error('Error moving file:', err);
     } else {
-      console.log('File renamed successfully!');
+      console.log('File moved successfully!');
       restartProject();
     }
   });
@@ -279,67 +282,61 @@ const renameFile = (currentName, newName) => {
 
 const restartProject = () => {
   console.log('Restarting the project...');
-
   process.exit(2);
 };
 
-const scheduleOff = '30 0 * * *'; 
-const timezoneOff = 'Asia/Manila';
-
-const cronJobOff = cron.schedule(scheduleOff, () => {
-  const currentTime = moment().tz(timezoneOff).format('YYYY-MM-DD HH:mm:ss');
-  console.log(`Renaming the file at ${currentTime}`);
-  renameFile(currentFileName, newFileName);
+// Schedule the task to move the file to the main directory at 11:33 AM
+cron.schedule(moveToFileScheduleBot1, () => {
+  console.log('Moving file to the main directory...');
+  moveFileBot1(sourcePathBot1, destinationPathBot1);
 }, {
-  scheduled: true,
-  timezone: timezoneOff
+  timezone: 'Asia/Manila'
 });
 
-cronJobOff.start();
+// Schedule the task to move the file back to the bot1 folder at 11:34 AM
+cron.schedule(moveToBotScheduleBot1, () => {
+  console.log('Moving file back to the bot1 folder...');
+  moveFileBot1(destinationPathBot1, sourcePathBot1);
+}, {
+  timezone: 'Asia/Manila'
+});
 
-// —————————— AUTO ON BOT —————————— //
+// —————————— AUTO ON BOT2 —————————— //
 
-// Function to rename the file
-const currentFile1 = 'account.txt';
-const newFile2 = 'temp.txt';
+const sourcePathBot2 = path.join(__dirname, 'bot2', 'account.txt');
+const destinationPathBot2 = path.join(__dirname, 'account.txt');
 
-const renameFile1 = (currentName, newName) => {
-  fs.rename(currentName, newName, (error) => {
-    if (error) {
-      console.error('Error renaming the file:', error);
+const moveToFileScheduleBot2 = '0 15 * * *'; 
+const moveToBotScheduleBot2 = '30 23 * * *'; 
+
+const moveFileBot2 = (fromPath, toPath) => {
+  fs.rename(fromPath, toPath, (err) => {
+    if (err) {
+      console.error('Error moving file:', err);
     } else {
-      console.log('File renamed successfully!');
-      restartProject1();
+      console.log('File moved successfully!');
+      restartProject();
     }
   });
 };
 
-// Function to restart the project
-const restartProject1 = () => {
-  console.log('Restarting the project...');
-  // Any necessary cleanup or additional logic before restarting the project
-  process.exit(2);
-};
-
-// Schedule the file renaming and project restart at 8:15 PM in Manila timezone
-const scheduleOn = '0 6 * * *'; // 8:15 PM every day
-const timezoneOn = 'Asia/Manila';
-
-// Create the cron job
-const cronJobOn = cron.schedule(scheduleOn, () => {
-  const currentTime = moment().tz(timezoneOn).format('YYYY-MM-DD HH:mm:ss');
-  console.log(`Renaming the file at ${currentTime}`);
-  renameFile1(newFile2, currentFile1);
+// Schedule the task to move the file to the main directory at 12:33 PM
+cron.schedule(moveToFileScheduleBot2, () => {
+  console.log('Moving file to the main directory...');
+  moveFileBot2(sourcePathBot2, destinationPathBot2);
 }, {
-  scheduled: true,
-  timezone: timezoneOn
+  timezone: 'Asia/Manila'
 });
 
-// Start the cron job
-cronJobOn.start();
+// Schedule the task to move the file back to the bot2 folder at 12:34 PM
+cron.schedule(moveToBotScheduleBot2, () => {
+  console.log('Moving file back to the bot2 folder...');
+  moveFileBot2(destinationPathBot2, sourcePathBot2);
+}, {
+  timezone: 'Asia/Manila'
+});
 
-
-          // —————————— dashhie board —————————— //
+          // —————————— DASHIE BOARD —————————— //
 const express = require('express');
 
 const app = express();
