@@ -2,127 +2,169 @@
   {
     "time": "12:00 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "MASHLE",
-    "episode": "8",
-    "status": "already updated"
-  },
-  {
-    "time": "1:05 AM",
-    "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Tonikaku Kawaii Season 2",
+    "animeTitle": "Otonari ni Ginga",
     "episode": "9",
     "status": "already updated"
   },
   {
-    "time": "1:23 AM",
+    "time": "12:30 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "BIRDIE WING -Golf Girls’ Story- Season 2",
-    "episode": "9",
-    "status": "already updated"
-  },
-  {
-    "time": "1:23 AM",
-    "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Megami no Cafe Terrace",
-    "episode": "9",
-    "status": "already updated"
-  },
-  {
-    "time": "1:35 AM",
-    "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Rokudou no Onna-tachi",
-    "episode": "9",
-    "status": "already updated"
-  },
-  {
-    "time": "1:53 AM",
-    "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Mahou Shoujo Magical Destroyers",
-    "episode": "9",
-    "status": "already updated"
-  },
-  {
-    "time": "2:23 AM",
-    "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Edomae Elf",
-    "episode": "9",
-    "status": "already updated"
-  },
-  {
-    "time": "5:22 AM",
-    "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Bonobono",
-    "episode": "361",
-    "status": "already updated"
-  },
-  {
-    "time": "7:00 AM",
-    "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Chibi Godzilla no Gyakushuu",
+    "animeTitle": "Yamada-kun to Lv999 no Koi wo Suru",
     "episode": "10",
     "status": "already updated"
   },
   {
-    "time": "7:58 AM",
+    "time": "12:45 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Gunma-chan Season 2",
+    "animeTitle": "BASTIONS",
+    "episode": "4",
+    "status": "already updated"
+  },
+  {
+    "time": "1:00 AM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "EDENS ZERO Season 2",
+    "episode": "10",
+    "status": "already updated"
+  },
+  {
+    "time": "1:30 AM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Boku no Kokoro no Yabai Yatsu",
+    "episode": "10",
+    "status": "already updated"
+  },
+  {
+    "time": "2:00 AM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Isekai Shoukan wa Nidome desu",
     "episode": "9",
     "status": "already updated"
   },
   {
-    "time": "10:00 AM",
+    "time": "7:30 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Ninjala",
-    "episode": "71",
+    "animeTitle": "Yu☆Gi☆Oh! GO RUSH!!",
+    "episode": "61",
     "status": "already updated"
   },
   {
-    "time": "12:00 PM",
+    "time": "8:30 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Huo Feng Liao Yuan",
-    "episode": "7",
-    "status": "upcoming"
+    "animeTitle": "Duel Masters Win: Duel Wars",
+    "episode": "9",
+    "status": "already updated"
   },
   {
-    "time": "4:30 PM",
+    "time": "8:30 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Crayon Shin-chan",
-    "episode": "1184",
+    "animeTitle": "Hirogaru Sky! Precure",
+    "episode": "18",
+    "status": "already updated"
+  },
+  {
+    "time": "9:00 AM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Tousouchuu: Great Mission",
+    "episode": "9",
+    "status": "already updated"
+  },
+  {
+    "time": "9:30 AM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "One Piece",
+    "episode": "1064",
+    "status": "already updated"
+  },
+  {
+    "time": "11:00 AM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Doupo Cangqiong: Nian Fan",
+    "episode": "47",
+    "status": "already updated"
+  },
+  {
+    "time": "3:15 PM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Ao no Orchestra: 5-bu de Tanoshii Classic",
+    "episode": "7",
     "status": "upcoming"
   },
   {
     "time": "5:00 PM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Doraemon (2005)",
-    "episode": "678",
+    "animeTitle": "Ao no Orchestra",
+    "episode": "9",
     "status": "upcoming"
   },
   {
-    "time": "5:30 PM",
+    "time": "5:00 PM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "MIX MEISEI STORY Season2",
-    "episode": "10",
+    "animeTitle": "Mobile Suit Gundam: Suisei no Majo Season 2",
+    "episode": "8",
     "status": "upcoming"
   },
   {
     "time": "6:00 PM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Meitantei Conan",
-    "episode": "1085",
+    "animeTitle": "Chibi Maruko-chan (1995)",
+    "episode": "1391",
+    "status": "upcoming"
+  },
+  {
+    "time": "6:00 PM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Holo no Graffiti",
+    "episode": "211",
+    "status": "upcoming"
+  },
+  {
+    "time": "6:00 PM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Puzzle & Dragon",
+    "episode": "258",
+    "status": "upcoming"
+  },
+  {
+    "time": "6:30 PM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Sazae-san",
+    "episode": "2685",
+    "status": "upcoming"
+  },
+  {
+    "time": "9:00 PM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Tensei Kizoku no Isekai Boukenroku: Jichou wo Shiranai Kamigami no Shito",
+    "episode": "10",
     "status": "upcoming"
   },
   {
     "time": "10:00 PM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Tengoku Daimakyo",
+    "animeTitle": "Jijou wo Shiranai Tenkousei ga Guigui Kuru.",
     "episode": "10",
     "status": "upcoming"
   },
   {
     "time": "11:00 PM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Jigokuraku",
+    "animeTitle": "World Dai Star",
     "episode": "9",
+    "status": "upcoming"
+  },
+  {
+    "time": "11:15 PM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Kimetsu no Yaiba: Katanakaji no Sato-hen",
+    "episode": "9",
+    "status": "upcoming"
+  },
+  {
+    "time": "11:30 PM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "My Home Hero",
+    "episode": "10",
     "status": "upcoming"
   }
 ]
