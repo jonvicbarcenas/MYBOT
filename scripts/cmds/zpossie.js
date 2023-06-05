@@ -10,7 +10,7 @@ module.exports = {
     author: "JV Barcenas",
     role: 0,
     shortDescription: {
-      en: "Get a random image",
+      en: "Get a random NSFW image",
     },
     longDescription: {
       en:

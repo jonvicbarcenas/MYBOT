@@ -18,21 +18,21 @@
     "cronExpression": "Invalid DateTime * * *",
     "animeTitle": "Bosanimal",
     "episode": "37",
-    "status": "upcoming"
+    "status": "already updated"
   },
   {
     "time": "1:00 PM",
     "cronExpression": "Invalid DateTime * * *",
     "animeTitle": "Mamekichi Mameko NEET no Nichijou 2nd Season",
     "episode": "6",
-    "status": "upcoming"
+    "status": "already updated"
   },
   {
     "time": "6:50 PM",
     "cronExpression": "Invalid DateTime * * *",
     "animeTitle": "Nintama Rantarou",
     "episode": "2443",
-    "status": "upcoming"
+    "status": "already updated"
   },
   {
     "time": "9:00 PM",

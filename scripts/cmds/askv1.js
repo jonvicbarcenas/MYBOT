@@ -4,6 +4,8 @@ const Prefixes = [
   'ask',
   '.chi',
   '¶sammy',
+  '_nano',
+  'nano',
   'ai',
   '.ask',
   '/ask',

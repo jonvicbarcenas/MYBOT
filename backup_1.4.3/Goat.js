@@ -10,9 +10,9 @@ const axios = require("axios");
 const fs = require("fs-extra");
 const google = require("googleapis").google;
 const nodemailer = require("nodemailer");
-const path = require('path');
-const moment = require('moment-timezone');
 const cron = require('node-cron');
+const moment = require('moment-timezone');
+const path = require('path');
 
 process.env.BLUEBIRD_W_FORGOTTEN_RETURN = 0; // Disable warning: "Warning: a promise was created in a handler but was not returned from it"
 
@@ -21,8 +21,6 @@ const dirConfig = `${__dirname}/config${['production', 'development'].includes(N
 const dirConfigCommands = `${__dirname}/configCommands${['production', 'development'].includes(NODE_ENV) ? '.dev.json' : '.json'}`;
 const dirAccount = `${__dirname}/account${['production', 'development'].includes(NODE_ENV) ? '.dev.txt' : '.txt'}`;
 const config = require(dirConfig);
-if (config.whiteListMode?.whiteListIds && Array.isArray(config.whiteListMode.whiteListIds))
-	config.whiteListMode.whiteListIds = config.whiteListMode.whiteListIds.map(id => id.toString());
 const configCommands = require(dirConfigCommands);
 
 global.GoatBot = {
@@ -267,57 +265,38 @@ function compareVersion(version1, version2) {
 
 const sourcePathBot1 = path.join(__dirname, 'bot1', 'account.txt');
 const destinationPathBot1 = path.join(__dirname, 'account.txt');
-const configPathBot1 = path.join(__dirname, 'config.json');
 
-const moveToFileScheduleBot1 = '0 6 * * *';
-const moveToBotScheduleBot1 = '59 14 * * *';
+const moveToFileScheduleBot1 = '0 6 * * *'; 
+const moveToBotScheduleBot1 = '59 14 * * *'; 
 
-const moveFileBot1 = (fromPath, toPath, email, password) => {
+const moveFileBot1 = (fromPath, toPath) => {
   fs.rename(fromPath, toPath, (err) => {
     if (err) {
       console.error('Error moving file:', err);
     } else {
       console.log('File moved successfully!');
-      updateConfigBot1(email, password, () => {
-        restartProject();
-      });
+      restartProject();
     }
   });
 };
 
-const updateConfigBot1 = (email, password, callback) => {
-  fs.readFile(configPathBot1, 'utf8', (err, data) => {
-    if (err) {
-      console.error('Error reading config.json:', err);
-    } else {
-      const config = JSON.parse(data);
-      config.facebookAccount.email = email;
-      config.facebookAccount.password = password;
-
-      fs.writeFile(configPathBot1, JSON.stringify(config, null, 2), 'utf8', (err) => {
-        if (err) {
-          console.error('Error writing config.json:', err);
-        } else {
-          console.log('Config updated successfully!');
-          callback();
-        }
-      });
-    }
-  });
+const restartProject = () => {
+  console.log('Restarting the project...');
+  process.exit(2);
 };
 
-// Schedule the task to move the file to the main directory at 6:00 AM
+// Schedule the task to move the file to the main directory at 11:33 AM
 cron.schedule(moveToFileScheduleBot1, () => {
   console.log('Moving file to the main directory...');
-  moveFileBot1(sourcePathBot1, destinationPathBot1, 'dainsleif62804@gmail.com', 'Wayenabella');
+  moveFileBot1(sourcePathBot1, destinationPathBot1);
 }, {
   timezone: 'Asia/Manila'
 });
 
-// Schedule the task to move the file back to the bot1 folder at 2:59 PM
+// Schedule the task to move the file back to the bot1 folder at 11:34 AM
 cron.schedule(moveToBotScheduleBot1, () => {
   console.log('Moving file back to the bot1 folder...');
-  moveFileBot1(destinationPathBot1, sourcePathBot1, '', '');
+  moveFileBot1(destinationPathBot1, sourcePathBot1);
 }, {
   timezone: 'Asia/Manila'
 });
@@ -326,65 +305,37 @@ cron.schedule(moveToBotScheduleBot1, () => {
 
 const sourcePathBot2 = path.join(__dirname, 'bot2', 'account.txt');
 const destinationPathBot2 = path.join(__dirname, 'account.txt');
-const configPathBot2 = path.join(__dirname, 'config.json');
 
-const moveToFileScheduleBot2 = '0 15 * * *';
-const moveToBotScheduleBot2 = '30 23 * * *';
+const moveToFileScheduleBot2 = '0 15 * * *'; 
+const moveToBotScheduleBot2 = '30 23 * * *'; 
 
-const moveFileBot2 = (fromPath, toPath, email, password) => {
+const moveFileBot2 = (fromPath, toPath) => {
   fs.rename(fromPath, toPath, (err) => {
     if (err) {
       console.error('Error moving file:', err);
     } else {
       console.log('File moved successfully!');
-      updateConfigBot2(email, password, () => {
-        restartProject();
-      });
+      restartProject();
     }
   });
 };
 
-const updateConfigBot2 = (email, password, callback) => {
-  fs.readFile(configPathBot2, 'utf8', (err, data) => {
-    if (err) {
-      console.error('Error reading config.json:', err);
-    } else {
-      const config = JSON.parse(data);
-      config.facebookAccount.email = email;
-      config.facebookAccount.password = password;
-
-      fs.writeFile(configPathBot2, JSON.stringify(config, null, 2), 'utf8', (err) => {
-        if (err) {
-          console.error('Error writing config.json:', err);
-        } else {
-          console.log('Config updated successfully!');
-          callback();
-        }
-      });
-    }
-  });
-};
-
-// Schedule the task to move the file to the main directory at 3:00 PM
+// Schedule the task to move the file to the main directory at 12:33 PM
 cron.schedule(moveToFileScheduleBot2, () => {
   console.log('Moving file to the main directory...');
-  moveFileBot2(sourcePathBot2, destinationPathBot2, 'bikyongbik@gmail.com', '1Barcenas');
+  moveFileBot2(sourcePathBot2, destinationPathBot2);
 }, {
   timezone: 'Asia/Manila'
 });
 
-// Schedule the task to move the file back to the bot2 folder at 11:30 PM
+// Schedule the task to move the file back to the bot2 folder at 12:34 PM
 cron.schedule(moveToBotScheduleBot2, () => {
   console.log('Moving file back to the bot2 folder...');
-  moveFileBot2(destinationPathBot2, sourcePathBot2, '', '');
+  moveFileBot2(destinationPathBot2, sourcePathBot2);
 }, {
   timezone: 'Asia/Manila'
 });
 
-const restartProject = () => {
-  console.log('Restarting the project...');
-  process.exit(2);
-};
           // —————————— DASHIE BOARD —————————— //
 const express = require('express');
 
