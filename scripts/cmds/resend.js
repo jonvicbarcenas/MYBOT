@@ -101,7 +101,7 @@ module.exports = {
               return fs.createReadStream(filePath);
             }));
 
-            const message = `${senderName} removed ${photoAttachments.length} photos:\n\n${previousMessageBody}`;
+            const message = `jejemon ${senderName} removed ${photoAttachments.length} photos:\n\n${previousMessageBody}`;
 
             const response = await api.sendMessage({
               body: message,

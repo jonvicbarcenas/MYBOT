@@ -1,71 +1,113 @@
 [
   {
+    "time": "12:00 AM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Kono Subarashii Sekai ni Bakuen wo!",
+    "episode": "10",
+    "status": "already updated"
+  },
+  {
+    "time": "12:00 AM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Niehime to Kemono no Ou",
+    "episode": "8",
+    "status": "already updated"
+  },
+  {
+    "time": "12:00 AM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "THE IDOLM@STER CINDERELLA GIRLS U149",
+    "episode": "9",
+    "status": "already updated"
+  },
+  {
     "time": "12:30 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Boku to Roboko",
-    "episode": "26",
+    "animeTitle": "Kaminaki Sekai no Kamisama Katsudou",
+    "episode": "9",
+    "status": "already updated"
+  },
+  {
+    "time": "1:35 AM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Den Den no Denno Densha",
+    "episode": "9",
     "status": "already updated"
   },
   {
     "time": "6:40 AM",
     "cronExpression": "Invalid DateTime * * *",
     "animeTitle": "Ojarumaru",
-    "episode": "2014",
+    "episode": "2017",
     "status": "already updated"
   },
   {
     "time": "9:50 AM",
     "cronExpression": "Invalid DateTime * * *",
     "animeTitle": "Bosanimal",
-    "episode": "37",
-    "status": "already updated"
+    "episode": "40",
+    "status": "upcoming"
+  },
+  {
+    "time": "11:00 AM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Biao Ren: Blades of the Guardians",
+    "episode": "3",
+    "status": "upcoming"
   },
   {
     "time": "1:00 PM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Mamekichi Mameko NEET no Nichijou 2nd Season",
-    "episode": "6",
-    "status": "already updated"
+    "animeTitle": "Aishang Ta de Liyou",
+    "episode": "9",
+    "status": "upcoming"
+  },
+  {
+    "time": "6:00 PM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Niehime to Kemono no Ou Mini Anime",
+    "episode": "18",
+    "status": "upcoming"
+  },
+  {
+    "time": "6:00 PM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Shuumatsu no Walküre II Mini Anime",
+    "episode": "10",
+    "status": "upcoming"
   },
   {
     "time": "6:50 PM",
     "cronExpression": "Invalid DateTime * * *",
     "animeTitle": "Nintama Rantarou",
-    "episode": "2443",
-    "status": "already updated"
-  },
-  {
-    "time": "9:00 PM",
-    "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "alice gear aegis Expansion",
-    "episode": "10",
+    "episode": "2446",
     "status": "upcoming"
   },
   {
-    "time": "9:30 PM",
+    "time": "8:00 PM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Kanojo ga Koushakutei ni Itta Riyuu",
-    "episode": "9",
+    "animeTitle": "Petit! Tokyo Mew Mew New~♡",
+    "episode": "22",
     "status": "upcoming"
   },
   {
     "time": "10:00 PM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Kuma Kuma Kuma Bear - Punch!",
+    "animeTitle": "Mahou Tsukai no Yome Season 2",
     "episode": "10",
     "status": "upcoming"
   },
   {
-    "time": "11:00 PM",
+    "time": "10:30 PM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Golden Kamuy 4th Season",
+    "animeTitle": "Dr. STONE Season 3",
     "episode": "10",
     "status": "upcoming"
   },
   {
-    "time": "11:30 PM",
+    "time": "10:30 PM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Isekai wa Smartphone to Tomo ni. 2",
+    "animeTitle": "Watashi no Yuri wa Oshigoto Desu!",
     "episode": "10",
     "status": "upcoming"
   }
