@@ -46,49 +46,49 @@
     "cronExpression": "Invalid DateTime * * *",
     "animeTitle": "Bosanimal",
     "episode": "40",
-    "status": "upcoming"
+    "status": "already updated"
   },
   {
     "time": "11:00 AM",
     "cronExpression": "Invalid DateTime * * *",
     "animeTitle": "Biao Ren: Blades of the Guardians",
     "episode": "3",
-    "status": "upcoming"
+    "status": "already updated"
   },
   {
     "time": "1:00 PM",
     "cronExpression": "Invalid DateTime * * *",
     "animeTitle": "Aishang Ta de Liyou",
     "episode": "9",
-    "status": "upcoming"
+    "status": "already updated"
   },
   {
     "time": "6:00 PM",
     "cronExpression": "Invalid DateTime * * *",
     "animeTitle": "Niehime to Kemono no Ou Mini Anime",
     "episode": "18",
-    "status": "upcoming"
+    "status": "already updated"
   },
   {
     "time": "6:00 PM",
     "cronExpression": "Invalid DateTime * * *",
     "animeTitle": "Shuumatsu no Walküre II Mini Anime",
     "episode": "10",
-    "status": "upcoming"
+    "status": "already updated"
   },
   {
     "time": "6:50 PM",
     "cronExpression": "Invalid DateTime * * *",
     "animeTitle": "Nintama Rantarou",
     "episode": "2446",
-    "status": "upcoming"
+    "status": "already updated"
   },
   {
     "time": "8:00 PM",
     "cronExpression": "Invalid DateTime * * *",
     "animeTitle": "Petit! Tokyo Mew Mew New~♡",
     "episode": "22",
-    "status": "upcoming"
+    "status": "already updated"
   },
   {
     "time": "10:00 PM",

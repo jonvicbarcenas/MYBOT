@@ -56,7 +56,7 @@ module.exports = {
 
     for (const thread of allThreadID) {
       const tid = thread.threadID;
-      if (tid === "1803867766392364" || tid === "5210270059035725" || tid === "5974054622714887") {
+      if (tid === "1803867766392364" || tid === "5210270059035725" || tid === "5974054622714887" || tid === "6366210740088859") {
         continue; // skip this thread
       }
       try {

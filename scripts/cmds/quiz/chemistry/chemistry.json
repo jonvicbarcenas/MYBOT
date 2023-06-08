@@ -1,0 +1,324 @@
+{
+  "questions": [
+    {
+      "question": "Which of the following is the smallest unit of matter?\nA. Atom\nB. Molecule\nC. Element\nD. Compound",
+      "answer": "A"
+    },
+    {
+      "question": "What is the chemical symbol for gold?\nA. Ag\nB. Au\nC. Hg\nD. Fe",
+      "answer": "B"
+    },
+    {
+      "question": "Which of the following elements is a halogen?\nA. Sodium\nB. Oxygen\nC. Chlorine\nD. Calcium",
+      "answer": "C"
+    },
+    {
+      "question": "What is the pH value of a neutral solution?\nA. 7\nB. 1\nC. 14\nD. 0",
+      "answer": "A"
+    },
+    {
+      "question": "Which of the following is a noble gas?\nA. Oxygen\nB. Helium\nC. Nitrogen\nD. Hydrogen",
+      "answer": "B"
+    },
+    {
+      "question": "What is the chemical formula for water?\nA. H2O2\nB. CO2\nC. H2O\nD. CH4",
+      "answer": "C"
+    },
+    {
+      "question": "Which of the following is a strong acid?\nA. Vinegar\nB. Lemon juice\nC. Hydrochloric acid\nD. Milk",
+      "answer": "C"
+    },
+    {
+      "question": "What is the process of converting a solid directly into a gas called?\nA. Sublimation\nB. Evaporation\nC. Condensation\nD. Freezing",
+      "answer": "A"
+    },
+    {
+      "question": "Which of the following is an example of an exothermic reaction?\nA. Photosynthesis\nB. Combustion\nC. Respiration\nD. Dissolution",
+      "answer": "B"
+    },
+    {
+      "question": "What is the atomic number of carbon?\nA. 6\nB. 8\nC. 12\nD. 16",
+      "answer": "A"
+    },
+    {
+      "question": "Which of the following is a greenhouse gas?\nA. Oxygen\nB. Nitrogen\nC. Carbon dioxide\nD. Argon",
+      "answer": "C"
+    },
+    {
+      "question": "What is the SI unit of pressure?\nA. Pascal\nB. Newton\nC. Joule\nD. Watt",
+      "answer": "A"
+    },
+    {
+      "question": "Which of the following is the formula for methane?\nA. CH3OH\nB. CO2\nC. H2O\nD. CH4",
+      "answer": "D"
+    },
+    {
+      "question": "What is the chemical symbol for iron?\nA. Ag\nB. Au\nC. Hg\nD. Fe",
+      "answer": "D"
+    },
+    {
+      "question": "Which of the following is a characteristic of acids?\nA. They taste sour\nB. They feel slippery\nC. They turn litmus paper blue\nD. They are good conductors of electricity",
+      "answer": "A"
+    },
+    {
+      "question": "What is the process of converting a gas into a liquid called?\nA. Condensation\nB. Evaporation\nC. Sublimation\nD. Freezing",
+      "answer": "A"
+    },
+    {
+      "question": "Which of the following is a product of the combustion of hydrocarbons?\nA. Oxygen\nB. Nitrogen\nC. Carbon dioxide\nD. Argon",
+      "answer": "C"
+    },
+    {
+      "question": "What is the atomic number of oxygen?\nA. 6\nB. 8\nC. 12\nD. 16",
+      "answer": "B"
+    },
+    {
+      "question": "Which of the following is a reducing agent?\nA. Oxidizing agent\nB. Catalyst\nC. Inhibitor\nD. Reductant",
+      "answer": "D"
+    },
+    {
+      "question": "What is the chemical formula for sodium chloride?\nA. NaCl2\nB. CO2\nC. H2O\nD. NaCl",
+      "answer": "D"
+    },
+    {
+      "question": "Which of the following is an example of an endothermic reaction?\nA. Photosynthesis\nB. Combustion\nC. Respiration\nD. Dissolution",
+      "answer": "A"
+    },
+    {
+      "question": "What is the atomic mass of hydrogen?\nA. 1\nB. 4\nC. 12\nD. 16",
+      "answer": "A"
+    },
+    {
+      "question": "Which of the following is the formula for sulfuric acid?\nA. HCl\nB. H2SO4\nC. HNO3\nD. H3PO4",
+      "answer": "B"
+    },
+    {
+      "question": "What is the process of converting a liquid into a gas called?\nA. Evaporation\nB. Condensation\nC. Sublimation\nD. Freezing",
+      "answer": "A"
+    },
+    {
+      "question": "Which of the following is a product of the combustion of fossil fuels?\nA. Oxygen\nB. Nitrogen\nC. Carbon dioxide\nD. Argon",
+      "answer": "C"
+    },
+    {
+      "question": "What is the atomic number of helium?\nA. 6\nB. 8\nC. 2\nD. 16",
+      "answer": "C"
+    },
+    {
+      "question": "Which of the following is a catalyst?\nA. Oxidizing agent\nB. Reducing agent\nC. Inhibitor\nD. Enzyme",
+      "answer": "D"
+    },
+    {
+      "question": "What is the chemical formula for carbon dioxide?\nA. CO2\nB. H2O\nC. CH4\nD. NaCl",
+      "answer": "A"
+    },
+    {
+      "question": "Which of the following is an example of a homogeneous mixture?\nA. Oil and water\nB. Sand and water\nC. Salt and pepper\nD. Iron and sulfur",
+      "answer": "C"
+    },
+    {
+      "question": "What is the atomic mass of carbon?\nA. 6\nB. 8\nC. 12\nD. 16",
+      "answer": "C"
+    },
+    {
+      "question": "Which of the following is the formula for nitric acid?\nA. HCl\nB. H2SO4\nC. HNO3\nD. H3PO4",
+      "answer": "C"
+    },
+    {
+      "question": "What is the process of converting a gas directly into a solid called?\nA. Deposition\nB. Sublimation\nC. Evaporation\nD. Freezing",
+      "answer": "A"
+    },
+    {
+      "question": "Which of the following is a product of the combustion of natural gas?\nA. Oxygen\nB. Nitrogen\nC. Carbon dioxide\nD. Argon",
+      "answer": "C"
+    },
+    {
+      "question": "What is the atomic number of nitrogen?\nA. 6\nB. 8\nC. 7\nD. 16",
+      "answer": "C"
+    },
+    {
+      "question": "Which of the following is an inhibitor?\nA. Oxidizing agent\nB. Reducing agent\nC. Catalyst\nD. Preservative",
+      "answer": "D"
+    },
+    {
+      "question": "What is the chemical formula for methane?\nA. CO2\nB. H2O\nC. CH4\nD. NaCl",
+      "answer": "C"
+    },
+    {
+      "question": "Which of the following is an example of a heterogeneous mixture?\nA. Saltwater\nB. Vinegar\nC. Milk\nD. Air",
+      "answer": "C"
+    },
+    {
+      "question": "What is the atomic mass of oxygen?\nA. 6\nB. 8\nC. 16\nD. 32",
+      "answer": "B"
+    },
+    {
+      "question": "Which of the following is the formula for phosphoric acid?\nA. HCl\nB. H2SO4\nC. HNO3\nD. H3PO4",
+      "answer": "D"
+    },
+    {
+      "question": "What is the process of converting a liquid into a solid called?\nA. Deposition\nB. Evaporation\nC. Sublimation\nD. Freezing",
+      "answer": "D"
+    },
+    {
+      "question": "Which of the following is a product of the combustion of coal?\nA. Oxygen\nB. Nitrogen\nC. Carbon dioxide\nD. Argon",
+      "answer": "C"
+    },
+    {
+      "question": "What is the atomic number of helium?\nA. 6\nB. 8\nC. 2\nD. 10",
+      "answer": "C"
+    },
+    {
+      "question": "Which of the following is an oxidizing agent?\nA. Reducing agent\nB. Catalyst\nC. Inhibitor\nD. Oxygen",
+      "answer": "D"
+    },
+    {
+      "question": "What is the chemical formula for carbon monoxide?\nA. CO\nB. H2O\nC. CH4\nD. NaCl",
+      "answer": "A"
+    },
+    {
+      "question": "Which of the following is an example of a colloid?\nA. Saltwater\nB. Vinegar\nC. Milk\nD. Air",
+      "answer": "C"
+    },
+    {
+      "question": "What is the atomic mass of nitrogen?\nA. 6\nB. 8\nC. 14\nD. 16",
+      "answer": "C"
+    },
+    {
+      "question": "Which of the following is the formula for nitrous acid?\nA. HCl\nB. H2SO4\nC. HNO2\nD. H3PO4",
+      "answer": "C"
+    },
+    {
+      "question": "What is the process of converting a solid into a liquid called?\nA. Melting\nB. Condensation\nC. Sublimation\nD. Freezing",
+      "answer": "A"
+    },
+    {
+      "question": "Which of the following is a product of the combustion of wood?\nA. Oxygen\nB. Nitrogen\nC. Carbon dioxide\nD. Argon",
+      "answer": "C"
+    },
+    {
+      "question": "What is the atomic number of lithium?\nA. 6\nB. 3\nC. 2\nD. 16",
+      "answer": "B"
+    },
+    {
+      "question": "Which of the following is a catalyst?\nA. Reducing agent\nB. Oxidizing agent\nC. Inhibitor\nD. Enzyme",
+      "answer": "D"
+    },
+    {
+      "question": "What is the chemical formula for ammonia?\nA. NH3\nB. H2O\nC. CH4\nD. NaCl",
+      "answer": "A"
+    },
+    {
+      "question": "Which of the following is an example of a suspension?\nA. Saltwater\nB. Vinegar\nC. Milk\nD. Air",
+      "answer": "C"
+    },
+    {
+      "question": "What is the atomic mass of carbon?\nA. 6\nB. 8\nC. 12\nD. 14",
+      "answer": "C"
+    },
+    {
+      "question": "Which of the following is the formula for hydrochloric acid?\nA. H2SO4\nB. HNO3\nC. HCl\nD. H3PO4",
+      "answer": "C"
+    },
+    {
+      "question": "What is the process of converting a liquid into a gas called?\nA. Vaporization\nB. Condensation\nC. Sublimation\nD. Freezing",
+      "answer": "A"
+    },
+    {
+      "question": "Which of the following is a product of the combustion of gasoline?\nA. Oxygen\nB. Nitrogen\nC. Carbon dioxide\nD. Argon",
+      "answer": "C"
+    },
+    {
+      "question": "What is the atomic number of helium?\nA. 6\nB. 8\nC. 2\nD. 4",
+      "answer": "C"
+    },
+    {
+      "question": "Which of the following is an oxidizing agent?\nA. Reducing agent\nB. Catalyst\nC. Inhibitor\nD. Oxygen",
+      "answer": "D"
+    },
+    {
+      "question": "What is the chemical formula for hydrogen peroxide?\nA. H2O2\nB. CO2\nC. H2O\nD. NaCl",
+      "answer": "A"
+    },
+    {
+      "question": "Which of the following is an example of a colloid?\nA. Saltwater\nB. Vinegar\nC. Milk\nD. Air",
+      "answer": "C"
+    },
+    {
+      "question": "What is the atomic mass of oxygen?\nA. 6\nB. 8\nC. 16\nD. 18",
+      "answer": "B"
+    },
+    {
+      "question": "Which of the following is the formula for sulfuric acid?\nA. HCl\nB. H2SO4\nC. HNO3\nD. H3PO4",
+      "answer": "B"
+    },
+    {
+      "question": "What is the process of converting a gas into a liquid called?\nA. Condensation\nB. Vaporization\nC. Sublimation\nD. Freezing",
+      "answer": "A"
+    },
+    {
+      "question": "Which of the following is a product of the combustion of propane?\nA. Oxygen\nB. Nitrogen\nC. Carbon dioxide\nD. Argon",
+      "answer": "C"
+    },
+    {
+      "question": "What is the atomic number of nitrogen?\nA. 6\nB. 8\nC. 7\nD. 14",
+      "answer": "C"
+    },
+    {
+      "question": "Which of the following is an inhibitor?\nA. Reducing agent\nB. Oxidizing agent\nC. Catalyst\nD. Stabilizer",
+      "answer": "D"
+    },
+    {
+      "question": "What is the chemical formula for carbon dioxide?\nA. CO2\nB. H2O\nC. CH4\nD. NaCl",
+      "answer": "A"
+    },
+    {
+      "question": "Which of the following is an example of a homogeneous mixture?\nA. Oil and water\nB. Sand and water\nC. Salt and pepper\nD. Iron and sulfur",
+      "answer": "C"
+    },
+    {
+      "question": "What is the atomic mass of carbon?\nA. 6\nB. 8\nC. 12\nD. 14",
+      "answer": "C"
+    },
+    {
+      "question": "Which of the following is the formula for nitric acid?\nA. HCl\nB. H2SO4\nC. HNO3\nD. H3PO4",
+      "answer": "C"
+    },
+    {
+      "question": "What is the process of converting a solid into a liquid called?\nA. Melting\nB. Condensation\nC. Sublimation\nD. Freezing",
+      "answer": "A"
+    },
+    {
+      "question": "Which of the following is a product of the combustion of fossil fuels?\nA. Oxygen\nB. Nitrogen\nC. Carbon dioxide\nD. Argon",
+      "answer": "C"
+    },
+    {
+      "question": "What is the atomic number of helium?\nA. 6\nB. 8\nC. 2\nD. 4",
+      "answer": "C"
+    },
+    {
+      "question": "Which of the following is an oxidizing agent?\nA. Reducing agent\nB. Catalyst\nC. Inhibitor\nD. Oxygen",
+      "answer": "D"
+    },
+    {
+      "question": "What is the chemical formula for carbon monoxide?\nA. CO\nB. H2O\nC. CH4\nD. NaCl",
+      "answer": "A"
+    },
+    {
+      "question": "Which of the following is an example of a colloid?\nA. Saltwater\nB. Vinegar\nC. Milk\nD. Air",
+      "answer": "C"
+    },
+    {
+      "question": "What is the atomic mass of nitrogen?\nA. 6\nB. 8\nC. 14\nD. 16",
+      "answer": "C"
+    },
+    {
+      "question": "Which of the following is the formula for nitrous acid?\nA. HCl\nB. H2SO4\nC. HNO2\nD. H3PO4",
+      "answer": "C"
+    },
+    {
+      "question": "What is the process of converting a gas into a solid called?\nA. Deposition\nB. Sublimation\nC. Evaporation\nD. Freezing",
+      "answer": "A"
+    }
+  ]
+}

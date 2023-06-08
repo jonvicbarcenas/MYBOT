@@ -1,0 +1,360 @@
+{
+  "questions": [
+    {
+      "question": "Which of the following is a scalar quantity?\nA. Force\nB. Velocity\nC. Acceleration\nD. Distance",
+      "answer": "D"
+    },
+    {
+      "question": "What is the SI unit of electric current?\nA. Ampere\nB. Volt\nC. Ohm\nD. Watt",
+      "answer": "A"
+    },
+    {
+      "question": "Which of the following is a fundamental force of nature?\nA. Gravity\nB. Friction\nC. Tension\nD. Magnetism",
+      "answer": "A"
+    },
+    {
+      "question": "Which law states that for every action, there is an equal and opposite reaction?\nA. Newton's First Law\nB. Newton's Second Law\nC. Newton's Third Law\nD. Coulomb's Law",
+      "answer": "C"
+    },
+    {
+      "question": "What is the speed of light in a vacuum?\nA. 300,000 km/s\nB. 30,000 km/s\nC. 3,000 km/s\nD. 300 km/s",
+      "answer": "A"
+    },
+    {
+      "question": "What is the SI unit of force?\nA. Kilogram\nB. Newton\nC. Watt\nD. Joule",
+      "answer": "B"
+    },
+    {
+      "question": "Which of the following is an example of a vector quantity?\nA. Mass\nB. Temperature\nC. Time\nD. Displacement",
+      "answer": "D"
+    },
+    {
+      "question": "What does the acronym 'AC' stand for in AC current?\nA. Alternating Current\nB. Analog Current\nC. Ampere Current\nD. Accelerated Current",
+      "answer": "A"
+    },
+    {
+      "question": "What is the unit of measurement for resistance?\nA. Ampere\nB. Ohm\nC. Volt\nD. Watt",
+      "answer": "B"
+    },
+    {
+      "question": "Which scientist proposed the theory of general relativity?\nA. Isaac Newton\nB. Albert Einstein\nC. Galileo Galilei\nD. Niels Bohr",
+      "answer": "B"
+    },
+    {
+      "question": "What is the formula for calculating work?\nA. W = mgh\nB. W = Fd\nC. W = Pt\nD. W = qV",
+      "answer": "B"
+    },
+    {
+      "question": "Which of the following is a unit of power?\nA. Newton\nB. Joule\nC. Pascal\nD. Watt",
+      "answer": "D"
+    },
+    {
+      "question": "What is the law of conservation of energy?\nA. Energy cannot be created or destroyed\nB. Energy always decreases in a system\nC. Energy is always increasing in a system\nD. Energy can only be created",
+      "answer": "A"
+    },
+    {
+      "question": "Which of the following is an example of an insulator?\nA. Copper\nB. Aluminum\nC. Rubber\nD. Silver",
+      "answer": "C"
+    },
+    {
+      "question": "What is the unit of measurement for frequency?\nA. Hertz\nB. Ohm\nC. Ampere\nD. Watt",
+      "answer": "A"
+    },
+    {
+      "question": "Which of the following is a type of electromagnetic radiation?\nA. Sound waves\nB. X-rays\nC. Water waves\nD. Seismic waves",
+      "answer": "B"
+    },
+    {
+      "question": "What is the formula to calculate speed?\nA. s = vt\nB. s = at^2\nC. s = gt^2\nD. s = 1/2at^2",
+      "answer": "A"
+    },
+    {
+      "question": "What is the SI unit of power?\nA. Newton\nB. Watt\nC. Volt\nD. Ampere",
+      "answer": "B"
+    },
+    {
+      "question": "Which of the following is an example of a contact force?\nA. Gravity\nB. Friction\nC. Magnetic force\nD. Electrostatic force",
+      "answer": "B"
+    },
+    {
+      "question": "What is the formula to calculate pressure?\nA. P = F/A\nB. P = mv\nC. P = W/t\nD. P = qV",
+      "answer": "A"
+    },
+    {
+      "question": "What is the acceleration due to gravity on Earth?\nA. 10 m/s\nB. 9.8 m/s\nC. 9.8 km/s\nD. 9.8 cm/s",
+      "answer": "B"
+    },
+    {
+      "question": "Which of the following is a type of energy?\nA. Ampere\nB. Ohm\nC. Volt\nD. Kinetic",
+      "answer": "D"
+    },
+    {
+      "question": "What is the unit of measurement for electric charge?\nA. Ampere\nB. Coulomb\nC. Ohm\nD. Volt",
+      "answer": "B"
+    },
+    {
+      "question": "Which law states that the current flowing through a conductor is directly proportional to the voltage applied across it?\nA. Ohm's Law\nB. Newton's Law\nC. Pascal's Law\nD. Coulomb's Law",
+      "answer": "A"
+    },
+    {
+      "question": "What is the formula for calculating density?\nA. D = mv\nB. D = F/A\nC. D = W/t\nD. D = qV",
+      "answer": "A"
+    },
+    {
+      "question": "Which of the following is an example of a balanced force?\nA. Pushing a car uphill\nB. Jumping off a diving board\nC. Lifting a heavy box\nD. Sitting in a chair",
+      "answer": "D"
+    },
+    {
+      "question": "What is the unit of measurement for voltage?\nA. Ampere\nB. Ohm\nC. Volt\nD. Watt",
+      "answer": "C"
+    },
+    {
+      "question": "Which of the following is an example of a non-renewable energy source?\nA. Solar power\nB. Wind power\nC. Natural gas\nD. Hydroelectric power",
+      "answer": "C"
+    },
+    {
+      "question": "What is the law of conservation of momentum?\nA. Momentum cannot be created or destroyed\nB. Momentum always increases in a system\nC. Momentum is always decreasing in a system\nD. Momentum can only be created",
+      "answer": "A"
+    },
+    {
+      "question": "Which scientist is credited with discovering the laws of planetary motion?\nA. Isaac Newton\nB. Albert Einstein\nC. Galileo Galilei\nD. Johannes Kepler",
+      "answer": "D"
+    },
+    {
+      "question": "What is the formula to calculate power?\nA. P = F/A\nB. P = W/t\nC. P = mv\nD. P = qV",
+      "answer": "B"
+    },
+    {
+      "question": "Which of the following is a unit of electric potential?\nA. Ampere\nB. Volt\nC. Ohm\nD. Watt",
+      "answer": "B"
+    },
+    {
+      "question": "What is the formula to calculate momentum?\nA. p = mv\nB. p = F/A\nC. p = W/t\nD. p = qV",
+      "answer": "A"
+    },
+    {
+      "question": "What is the force experienced by a charged particle moving through a magnetic field?\nA. Electric force\nB. Gravitational force\nC. Tension force\nD. Magnetic force",
+      "answer": "D"
+    },
+    {
+      "question": "Which of the following is an example of a centripetal force?\nA. Friction\nB. Gravity\nC. Tension\nD. Electric force",
+      "answer": "C"
+    },
+    {
+      "question": "What is the unit of measurement for frequency?\nA. Hertz\nB. Ohm\nC. Ampere\nD. Watt",
+      "answer": "A"
+    },
+    {
+      "question": "Which law states that the potential difference across a conductor is directly proportional to the current flowing through it?\nA. Ohm's Law\nB. Newton's Law\nC. Pascal's Law\nD. Coulomb's Law",
+      "answer": "A"
+    },
+    {
+      "question": "What is the formula for calculating work done by a force?\nA. W = Fd\nB. W = Pt\nC. W = qV\nD. W = mgh",
+      "answer": "A"
+    },
+    {
+      "question": "Which of the following is a unit of pressure?\nA. Pascal\nB. Newton\nC. Joule\nD. Watt",
+      "answer": "A"
+    },
+    {
+      "question": "What is the law of universal gravitation?\nA. Every object in the universe attracts every other object with a force\nB. Objects at rest will stay at rest unless acted upon by an external force\nC. For every action, there is an equal and opposite reaction\nD. The force exerted by a fluid is directly proportional to the depth of the fluid",
+      "answer": "A"
+    },
+    {
+      "question": "Which of the following is an example of an elastic collision?\nA. Dropping a ball and letting it bounce\nB. Pushing a box across a floor\nC. Stirring a cup of coffee\nD. Hitting a nail with a hammer",
+      "answer": "A"
+    },
+    {
+      "question": "What is the SI unit of temperature?\nA. Kelvin\nB. Celsius\nC. Fahrenheit\nD. Joule",
+      "answer": "A"
+    },
+    {
+      "question": "Which of the following is an example of a renewable energy source?\nA. Coal\nB. Oil\nC. Natural gas\nD. Solar power",
+      "answer": "D"
+    },
+    {
+      "question": "What is the formula to calculate electric power?\nA. P = F/A\nB. P = mv\nC. P = W/t\nD. P = qV",
+      "answer": "D"
+    },
+    {
+      "question": "Which of the following is a unit of electrical resistance?\nA. Ampere\nB. Ohm\nC. Volt\nD. Watt",
+      "answer": "B"
+    },
+    {
+      "question": "What is the formula for calculating force?\nA. F = ma\nB. F = Pt\nC. F = qV\nD. F = W/t",
+      "answer": "A"
+    },
+    {
+      "question": "Which of the following is an example of a balanced torque?\nA. A wrench turning a bolt\nB. A see-saw balanced at the midpoint\nC. A car accelerating on a straight road\nD. A pendulum swinging back and forth",
+      "answer": "B"
+    },
+    {
+      "question": "What is the unit of measurement for time?\nA. Second\nB. Minute\nC. Hour\nD. Day",
+      "answer": "A"
+    },
+    {
+      "question": "Which law states that the current flowing through a circuit is directly proportional to the voltage and inversely proportional to the resistance?\nA. Ohm's Law\nB. Newton's Law\nC. Pascal's Law\nD. Coulomb's Law",
+      "answer": "A"
+    },
+    {
+      "question": "What is the formula to calculate electrical resistance?\nA. R = V/I\nB. R = Pt\nC. R = W/t\nD. R = qV",
+      "answer": "A"
+    },
+    {
+      "question": "Which of the following is an example of a non-conservative force?\nA. Gravity\nB. Friction\nC. Tension\nD. Normal force",
+      "answer": "B"
+    },
+    {
+      "question": "What is the formula for calculating gravitational potential energy?\nA. PE = mgh\nB. PE = Fd\nC. PE = Pt\nD. PE = qV",
+      "answer": "A"
+    },
+    {
+      "question": "Which of the following is a unit of electrical current?\nA. Ampere\nB. Volt\nC. Ohm\nD. Watt",
+      "answer": "A"
+    },
+    {
+      "question": "What is the force experienced by a charged particle due to an electric field?\nA. Electric force\nB. Gravitational force\nC. Tension force\nD. Magnetic force",
+      "answer": "A"
+    },
+    {
+      "question": "Which of the following is an example of a non-contact force?\nA. Gravity\nB. Friction\nC. Tension\nD. Magnetic force",
+      "answer": "A"
+    },
+    {
+      "question": "What is the formula to calculate acceleration?\nA. a = Δv/Δt\nB. a = F/m\nC. a = W/t\nD. a = qV",
+      "answer": "A"
+    },
+    {
+      "question": "What is the unit of measurement for distance?\nA. Meter\nB. Kilogram\nC. Second\nD. Joule",
+      "answer": "A"
+    },
+    {
+      "question": "Which law states that the pressure exerted by a fluid is directly proportional to the depth of the fluid?\nA. Pascal's Law\nB. Newton's Law\nC. Ohm's Law\nD. Coulomb's Law",
+      "answer": "A"
+    },
+    {
+      "question": "What is the formula for calculating electric potential energy?\nA. PE = qV\nB. PE = Fd\nC. PE = Pt\nD. PE = mgh",
+      "answer": "A"
+    },
+    {
+      "question": "Which of the following is an example of a conservative force?\nA. Friction\nB. Gravity\nC. Tension\nD. Normal force",
+      "answer": "B"
+    },
+    {
+      "question": "What is the unit of measurement for acceleration?\nA. m/s²\nB. m/s\nC. m²/s\nD. m²/s²",
+      "answer": "A"
+    },
+    {
+      "question": "Which of the following is an example of a mechanical wave?\nA. Radio waves\nB. X-rays\nC. Light waves\nD. Sound waves",
+      "answer": "D"
+    },
+    {
+      "question": "What is the formula to calculate electric current?\nA. I = Q/t\nB. I = Pt\nC. I = W/t\nD. I = F/A",
+      "answer": "A"
+    },
+    {
+      "question": "What is the force experienced by a mass due to gravity?\nA. Electric force\nB. Gravitational force\nC. Tension force\nD. Magnetic force",
+      "answer": "B"
+    },
+    {
+      "question": "Which of the following is an example of an action-reaction pair?\nA. Jumping off a diving board\nB. Pushing a car uphill\nC. Lifting a heavy box\nD. Sitting in a chair",
+      "answer": "A"
+    },
+    {
+      "question": "What is the unit of measurement for work?\nA. Joule\nB. Newton\nC. Pascal\nD. Watt",
+      "answer": "A"
+    },
+    {
+      "question": "Which law states that the acceleration of an object is directly proportional to the net force applied to it and inversely proportional to its mass?\nA. Newton's First Law\nB. Newton's Second Law\nC. Newton's Third Law\nD. Coulomb's Law",
+      "answer": "B"
+    },
+    {
+      "question": "What is the formula for calculating electric charge?\nA. Q = It\nB. Q = Pt\nC. Q = W/t\nD. Q = F/A",
+      "answer": "A"
+    },
+    {
+      "question": "Which of the following is an example of a scalar quantity?\nA. Velocity\nB. Displacement\nC. Acceleration\nD. Temperature",
+      "answer": "D"
+    },
+    {
+      "question": "What is the SI unit of energy?\nA. Joule\nB. Newton\nC. Watt\nD. Ampere",
+      "answer": "A"
+    },
+    {
+      "question": "Which of the following is an example of a gravitational potential energy?\nA. A compressed spring\nB. A stretched rubber band\nC. A moving car\nD. A book on a shelf",
+      "answer": "D"
+    },
+    {
+      "question": "What is the unit of measurement for power?\nA. Watt\nB. Joule\nC. Newton\nD. Pascal",
+      "answer": "A"
+    },
+    {
+      "question": "Which law states that the voltage across a circuit is equal to the current multiplied by the resistance?\nA. Ohm's Law\nB. Newton's Law\nC. Pascal's Law\nD. Coulomb's Law",
+      "answer": "A"
+    },
+    {
+      "question": "What is the formula to calculate electric resistance?\nA. R = V/I\nB. R = Pt\nC. R = W/t\nD. R = qV",
+      "answer": "A"
+    },
+    {
+      "question": "Which of the following is an example of a conservative torque?\nA. A wrench turning a bolt\nB. A see-saw balanced at the midpoint\nC. A car accelerating on a straight road\nD. A pendulum swinging back and forth",
+      "answer": "D"
+    },
+    {
+      "question": "What is the unit of measurement for mass?\nA. Kilogram\nB. Newton\nC. Joule\nD. Ampere",
+      "answer": "A"
+    },
+    {
+      "question": "Which law states that the pressure applied to a fluid in a closed container is transmitted equally in all directions?\nA. Pascal's Law\nB. Newton's Law\nC. Ohm's Law\nD. Coulomb's Law",
+      "answer": "A"
+    },
+    {
+      "question": "What is the formula for calculating work?\nA. W = Fd\nB. W = Pt\nC. W = qV\nD. W = mgh",
+      "answer": "A"
+    },
+    {
+      "question": "Which of the following is a unit of pressure?\nA. Pascal\nB. Newton\nC. Joule\nD. Watt",
+      "answer": "A"
+    },
+    {
+      "question": "What is the law of universal gravitation?\nA. Every object in the universe attracts every other object with a force\nB. Objects at rest will stay at rest unless acted upon by an external force\nC. For every action, there is an equal and opposite reaction\nD. The force exerted by a fluid is directly proportional to the depth of the fluid",
+      "answer": "A"
+    },
+    {
+      "question": "Which of the following is an example of an inelastic collision?\nA. Dropping a ball and letting it bounce\nB. Pushing a box across a floor\nC. Stirring a cup of coffee\nD. Hitting a nail with a hammer",
+      "answer": "C"
+    },
+    {
+      "question": "What is the SI unit of temperature?\nA. Kelvin\nB. Celsius\nC. Fahrenheit\nD. Joule",
+      "answer": "A"
+    },
+    {
+      "question": "Which of the following is an example of a non-renewable energy source?\nA. Solar power\nB. Wind power\nC. Natural gas\nD. Hydroelectric power",
+      "answer": "C"
+    },
+    {
+      "question": "What is the formula to calculate electric power?\nA. P = F/A\nB. P = mv\nC. P = W/t\nD. P = qV",
+      "answer": "C"
+    },
+    {
+      "question": "Which of the following is a unit of electric potential?\nA. Ampere\nB. Volt\nC. Ohm\nD. Watt",
+      "answer": "B"
+    },
+    {
+      "question": "What is the formula to calculate momentum?\nA. p = mv\nB. p = F/A\nC. p = W/t\nD. p = qV",
+      "answer": "A"
+    },
+    {
+      "question": "What is the force experienced by a charged particle moving through a magnetic field?\nA. Electric force\nB. Gravitational force\nC. Tension force\nD. Magnetic force",
+      "answer": "D"
+    },
+    {
+      "question": "Which of the following is an example of a centripetal force?\nA. Friction\nB. Gravity\nC. Tension\nD. Electric force",
+      "answer": "C"
+    },
+    {
+      "question": "What is the unit of measurement for frequency?\nA. Hertz\nB. Ohm\nC. Ampere\nD. Watt",
+      "answer": "A"
+    }
+  ]
+}

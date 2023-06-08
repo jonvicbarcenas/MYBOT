@@ -45,6 +45,9 @@
     },
     "addbot": {
       "delayPerGroup": 250
+    },
+    "quiz": {
+      "reward": 1000
     }
   },
   "envEvents": {

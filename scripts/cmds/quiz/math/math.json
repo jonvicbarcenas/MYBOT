@@ -1,0 +1,511 @@
+{
+  "questions":[
+    {
+      "question":"What is the value of pi (π) to two decimal places?\nA. 3.14\nB. 3.16\nC. 3.18\nD. 3.12",
+      "answer":"A"
+    },
+    {
+      "question":"Simplify the expression: 5x - 2(3x + 4).\nA. -7x + 8\nB. -x + 8\nC. 7x - 8\nD. 7x + 8",
+      "answer":"C"
+    },
+    {
+      "question":"Which of the following is a prime number?\nA. 20\nB. 25\nC. 31\nD. 40",
+      "answer":"C"
+    },
+    {
+      "question":"Find the value of x: 2x + 5 = 17.\nA. 6\nB. 7\nC. 8\nD. 9",
+      "answer":"B"
+    },
+    {
+      "question":"Solve the equation: 3(x + 2) = 15.\nA. 3\nB. 4\nC. 5\nD. 6",
+      "answer":"C"
+    },
+    {
+      "question":"What is the square root of 144?\nA. 11\nB. 12\nC. 13\nD. 14",
+      "answer":"B"
+    },
+    {
+      "question":"Evaluate the expression: 2^3 + 4 × 5.\nA. 42\nB. 34\nC. 28\nD. 24",
+      "answer":"D"
+    },
+    {
+      "question":"If a = 3 and b = 5, what is the value of a^2 + 2ab + b^2?\nA. 79\nB. 96\nC. 97\nD. 104",
+      "answer":"C"
+    },
+    {
+      "question":"Find the value of x: 4x + 9 = 33.\nA. 6\nB. 7\nC. 8\nD. 9",
+      "answer":"C"
+    },
+    {
+      "question":"Solve the equation: 2(x - 3) = 10.\nA. 4\nB. 5\nC. 6\nD. 7",
+      "answer":"C"
+    },
+    {
+      "question":"Which of the following is an irrational number?\nA. 0.33333...\nB. 0.625\nC. √25\nD. π",
+      "answer":"D"
+    },
+    {
+      "question":"What is the value of 3! (3 factorial)?\nA. 3\nB. 6\nC. 9\nD. 12",
+      "answer":"B"
+    },
+    {
+      "question":"Simplify the expression: 2x + 3(x - 4).\nA. -x + 12\nB. 5x - 12\nC. 5x + 12\nD. 5x - 3",
+      "answer":"B"
+    },
+    {
+      "question":"Which of the following is a composite number?\nA. 13\nB. 15\nC. 17\nD. 19",
+      "answer":"B"
+    },
+    {
+      "question":"Find the value of x: 5x - 3 = 22.\nA. 3\nB. 5\nC. 6\nD. 7",
+      "answer":"C"
+    },
+    {
+      "question":"Solve the equation: 4(x + 2) = 36.\nA. 7\nB. 8\nC. 9\nD. 10",
+      "answer":"B"
+    },
+    {
+      "question":"What is the square root of 169?\nA. 11\nB. 12\nC. 13\nD. 14",
+      "answer":"C"
+    },
+    {
+      "question":"Evaluate the expression: 3^2 - 4 × 2.\nA. 3\nB. 5\nC. 7\nD. 9",
+      "answer":"C"
+    },
+    {
+      "question":"If a = 4 and b = 6, what is the value of a^2 + 2ab + b^2?\nA. 68\nB. 78\nC. 88\nD. 98",
+      "answer":"C"
+    },
+    {
+      "question":"Find the value of x: 5x + 7 = 42.\nA. 7\nB. 8\nC. 9\nD. 10",
+      "answer":"C"
+    },
+    {
+      "question":"Solve the equation: 3(x - 2) = 15.\nA. 4\nB. 5\nC. 6\nD. 7",
+      "answer":"C"
+    },
+    {
+      "question":"Which of the following is an irrational number?\nA. 0.55555...\nB. 0.625\nC. √16\nD. π",
+      "answer":"D"
+    },
+    {
+      "question":"What is the value of 4! (4 factorial)?\nA. 4\nB. 8\nC. 12\nD. 24",
+      "answer":"D"
+    },
+    {
+      "question":"Simplify the expression: 3x + 2(4x - 5).\nA. 11x - 10\nB. 7x - 8\nC. 11x + 8\nD. 7x + 10",
+      "answer":"A"
+    },
+    {
+      "question":"Which of the following is a composite number?\nA. 11\nB. 13\nC. 17\nD. 19",
+      "answer":"B"
+    },
+    {
+      "question":"Find the value of x: 3x + 4 = 22.\nA. 6\nB. 7\nC. 8\nD. 9",
+      "answer":"C"
+    },
+    {
+      "question":"Solve the equation: 2(x + 3) = 16.\nA. 5\nB. 6\nC. 7\nD. 8",
+      "answer":"D"
+    },
+    {
+      "question":"What is the square root of 196?\nA. 11\nB. 12\nC. 13\nD. 14",
+      "answer":"D"
+    },
+    {
+      "question":"Evaluate the expression: 4^2 - 3 × 5.\nA. 11\nB. 13\nC. 15\nD. 17",
+      "answer":"B"
+    },
+    {
+      "question":"If a = 5 and b = 7, what is the value of a^2 + 2ab + b^2?\nA. 83\nB. 93\nC. 103\nD. 113",
+      "answer":"D"
+    },
+    {
+      "question":"Find the value of x: 6x - 5 = 37.\nA. 6\nB. 7\nC. 8\nD. 9",
+      "answer":"D"
+    },
+    {
+      "question":"Solve the equation: 5(x - 4) = 45.\nA. 7\nB. 8\nC. 9\nD. 10",
+      "answer":"D"
+    },
+    {
+      "question":"Which of the following is an irrational number?\nA. 0.33333...\nB. 0.625\nC. √36\nD. π",
+      "answer":"D"
+    },
+    {
+      "question":"What is the value of 5! (5 factorial)?\nA. 5\nB. 10\nC. 15\nD. 20",
+      "answer":"D"
+    },
+    {
+      "question":"Simplify the expression: 4x + 2(3x - 4).\nA. 10x - 8\nB. 8x - 10\nC. 10x + 8\nD. 8x + 10",
+      "answer":"A"
+    },
+    {
+      "question":"Which of the following is a composite number?\nA. 13\nB. 15\nC. 17\nD. 19",
+      "answer":"B"
+    },
+    {
+      "question":"Find the value of x: 7x - 2 = 25.\nA. 3\nB. 4\nC. 5\nD. 6",
+      "answer":"C"
+    },
+    {
+      "question":"Solve the equation: 2(x + 4) = 22.\nA. 6\nB. 7\nC. 8\nD. 9",
+      "answer":"C"
+    },
+    {
+      "question":"What is the square root of 225?\nA. 11\nB. 12\nC. 13\nD. 15",
+      "answer":"D"
+    },
+    {
+      "question":"Evaluate the expression: 5^2 - 2 × 4.\nA. 17\nB. 21\nC. 23\nD. 27",
+      "answer":"A"
+    },
+    {
+      "question":"If a = 6 and b = 8, what is the value of a^2 + 2ab + b^2?\nA. 140\nB. 160\nC. 180\nD. 200",
+      "answer":"D"
+    },
+    {
+      "question":"Find the value of x: 8x + 3 = 51.\nA. 6\nB. 7\nC. 8\nD. 9",
+      "answer":"C"
+    },
+    {
+      "question":"Solve the equation: 3(x - 5) = 18.\nA. 7\nB. 8\nC. 9\nD. 10",
+      "answer":"B"
+    },
+    {
+      "question":"Which of the following is an irrational number?\nA. 0.55555...\nB. 0.625\nC. √49\nD. π",
+      "answer":"D"
+    },
+    {
+      "question":"What is the value of 6! (6 factorial)?\nA. 6\nB. 12\nC. 24\nD. 720",
+      "answer":"D"
+    },
+    {
+      "question":"Simplify the expression: 5x + 4(2x - 3).\nA. 11x - 8\nB. 7x - 2\nC. 11x + 8\nD. 7x + 2",
+      "answer":"A"
+    },
+    {
+      "question":"Which of the following is a composite number?\nA. 11\nB. 13\nC. 17\nD. 19",
+      "answer":"B"
+    },
+    {
+      "question":"Find the value of x: 4x + 5 = 37.\nA. 7\nB. 8\nC. 9\nD. 10",
+      "answer":"C"
+    },
+    {
+      "question":"Solve the equation: 4(x + 5) = 44.\nA. 7\nB. 8\nC. 9\nD. 10",
+      "answer":"C"
+    },
+    {
+      "question":"What is the square root of 256?\nA. 14\nB. 15\nC. 16\nD. 17",
+      "answer":"C"
+    },
+    {
+      "question":"Evaluate the expression: 6^2 - 5 × 3.\nA. 21\nB. 23\nC. 27\nD. 29",
+      "answer":"A"
+    },
+    {
+      "question":"If a = 7 and b = 9, what is the value of a^2 + 2ab + b^2?\nA. 256\nB. 276\nC. 296\nD. 316",
+      "answer":"B"
+    },
+    {
+      "question":"Find the value of x: 9x - 4 = 68.\nA. 6\nB. 7\nC. 8\nD. 9",
+      "answer":"B"
+    },
+    {
+      "question":"Solve the equation: 5(x - 6) = 55.\nA. 7\nB. 8\nC. 9\nD. 10",
+      "answer":"D"
+    },
+    {
+      "question":"Which of the following is an irrational number?\nA. 0.33333...\nB. 0.625\nC. √64\nD. π",
+      "answer":"D"
+    },
+    {
+      "question":"What is the value of 7! (7 factorial)?\nA. 7\nB. 14\nC. 21\nD. 5040",
+      "answer":"D"
+    },
+    {
+      "question":"Simplify the expression: 6x + 3(4x - 5).\nA. 18x - 12\nB. 12x - 18\nC. 18x + 12\nD. 12x + 18",
+      "answer":"A"
+    },
+    {
+      "question":"Which of the following is a composite number?\nA. 13\nB. 15\nC. 17\nD. 19",
+      "answer":"B"
+    },
+    {
+      "question":"Find the value of x: 8x + 6 = 62.\nA. 7\nB. 8\nC. 9\nD. 10",
+      "answer":"C"
+    },
+    {
+      "question":"Solve the equation: 3(x + 6) = 39.\nA. 7\nB. 8\nC. 9\nD. 10",
+      "answer":"B"
+    },
+    {
+      "question":"What is the square root of 289?\nA. 14\nB. 15\nC. 16\nD. 17",
+      "answer":"D"
+    },
+    {
+      "question":"Evaluate the expression: 7^2 - 4 × 5.\nA. 21\nB. 31\nC. 41\nD. 51",
+      "answer":"C"
+    },
+    {
+      "question":"If a = 8 and b = 10, what is the value of a^2 + 2ab + b^2?\nA. 304\nB. 324\nC. 344\nD. 364",
+      "answer":"B"
+    },
+    {
+      "question":"Find the value of x: 10x - 7 = 83.\nA. 8\nB. 9\nC. 10\nD. 11",
+      "answer":"B"
+    },
+    {
+      "question":"Solve the equation: 6(x - 7) = 72.\nA. 7\nB. 8\nC. 9\nD. 10",
+      "answer":"D"
+    },
+    {
+      "question":"Which of the following is an irrational number?\nA. 0.55555...\nB. 0.625\nC. √81\nD. π",
+      "answer":"D"
+    },
+    {
+      "question":"What is the value of 8! (8 factorial)?\nA. 8\nB. 16\nC. 24\nD. 40320",
+      "answer":"D"
+    },
+    {
+      "question":"Simplify the expression: 7x + 4(5x - 6).\nA. 27x - 24\nB. 17x - 14\nC. 27x + 24\nD. 17x + 14",
+      "answer":"A"
+    },
+    {
+      "question":"Which of the following is a composite number?\nA. 11\nB. 13\nC. 17\nD. 19",
+      "answer":"B"
+    },
+    {
+      "question":"Find the value of x: 9x + 8 = 98.\nA. 9\nB. 10\nC. 11\nD. 12",
+      "answer":"B"
+    },
+    {
+      "question":"Solve the equation: 4(x + 8) = 68.\nA. 7\nB. 8\nC. 9\nD. 10",
+      "answer":"C"
+    },
+    {
+      "question":"What is the square root of 324?\nA. 14\nB. 16\nC. 18\nD. 20",
+      "answer":"C"
+    },
+    {
+      "question":"Evaluate the expression: 8^2 - 6 × 7.\nA. 15\nB. 29\nC. 37\nD. 43",
+      "answer":"C"
+    },
+    {
+      "question":"If a = 9 and b = 11, what is the value of a^2 + 2ab + b^2?\nA. 420\nB. 440\nC. 460\nD. 480",
+      "answer":"C"
+    },
+    {
+      "question":"Find the value of x: 11x - 9 = 99.\nA. 8\nB. 9\nC. 10\nD. 11",
+      "answer":"C"
+    },
+    {
+      "question":"Solve the equation: 5(x - 9) = 65.\nA. 7\nB. 8\nC. 9\nD. 10",
+      "answer":"D"
+    },
+    {
+      "question":"Which of the following is an irrational number?\nA. 0.33333...\nB. 0.625\nC. √100\nD. π",
+      "answer":"D"
+    },
+    {
+      "question":"What is the value of 9! (9 factorial)?\nA. 9\nB. 18\nC. 36\nD. 362880",
+      "answer":"D"
+    },
+    {
+      "question":"Simplify the expression: 8x + 5(3x - 7).\nA. 29x - 35\nB. 23x - 15\nC. 29x + 35\nD. 23x + 15",
+      "answer":"A"
+    },
+    {
+      "question":"Which of the following is a composite number?\nA. 13\nB. 15\nC. 17\nD. 19",
+      "answer":"B"
+    },
+    {
+      "question":"Find the value of x: 10x + 6 = 106.\nA. 9\nB. 10\nC. 11\nD. 12",
+      "answer":"C"
+    },
+    {
+      "question":"Solve the equation: 6(x + 10) = 96.\nA. 7\nB. 8\nC. 9\nD. 10",
+      "answer":"B"
+    },
+    {
+      "question":"What is the square root of 361?\nA. 18\nB. 19\nC. 20\nD. 21",
+      "answer":"C"
+    },
+    {
+      "question":"Evaluate the expression: 9^2 - 7 × 8.\nA. 29\nB. 43\nC. 57\nD. 71",
+      "answer":"C"
+    },
+    {
+      "question":"If a = 10 and b = 12, what is the value of a^2 + 2ab + b^2?\nA. 544\nB. 564\nC. 584\nD. 604",
+      "answer":"B"
+    },
+    {
+      "question":"Find the value of x: 12x - 10 = 110.\nA. 9\nB. 10\nC. 11\nD. 12",
+      "answer":"B"
+    },
+    {
+      "question":"Solve the equation: 7(x - 11) = 133.\nA. 7\nB. 8\nC. 9\nD. 10",
+      "answer":"D"
+    },
+    {
+      "question":"Which of the following is an irrational number?\nA. 0.33333...\nB. 0.625\nC. √121\nD. π",
+      "answer":"D"
+    },
+    {
+      "question":"What is the value of 10! (10 factorial)?\nA. 10\nB. 20\nC. 40\nD. 3628800",
+      "answer":"D"
+    },
+    {
+      "question":"Simplify the expression: 9x + 6(4x - 8).\nA. 33x - 48\nB. 21x - 18\nC. 33x + 48\nD. 21x + 18",
+      "answer":"A"
+    },
+    {
+      "question":"Which of the following is a composite number?\nA. 11\nB. 13\nC. 17\nD. 19",
+      "answer":"B"
+    },
+    {
+      "question":"Find the value of x: 11x + 7 = 147.\nA. 9\nB. 10\nC. 11\nD. 12"
+    },
+    {
+      "answer":"B",
+      "question":"Find the value of x: 11x + 7 = 147.\nA. 9\nB. 10\nC. 11\nD. 12"
+    },
+    {
+      "answer":"D",
+      "question":"Solve the equation: 12(x + 12) = 180.\nA. 7\nB. 8\nC. 9\nD. 10"
+    },
+    {
+      "answer":"C",
+      "question":"What is the square root of 400?\nA. 14\nB. 16\nC. 20\nD. 25"
+    },
+    {
+      "answer":"A",
+      "question":"Evaluate the expression: 10^2 - 8 × 9.\nA. 19\nB. 28\nC. 37\nD. 46"
+    },
+    {
+      "answer":"C",
+      "question":"If a = 11 and b = 13, what is the value of a^2 + 2ab + b^2?\nA. 824\nB. 844\nC. 864\nD. 884"
+    },
+    {
+      "answer":"B",
+      "question":"Find the value of x: 13x - 11 = 143.\nA. 9\nB. 10\nC. 11\nD. 12"
+    },
+    {
+      "answer":"C",
+      "question":"Solve the equation: 8(x - 13) = 72.\nA. 7\nB. 8\nC. 9\nD. 10"
+    },
+    {
+      "answer":"D",
+      "question":"Which of the following is an irrational number?\nA. 0.33333...\nB. 0.625\nC. √144\nD. π"
+    },
+    {
+      "answer":"D",
+      "question":"What is the value of 11! (11 factorial)?\nA. 11\nB. 22\nC. 33\nD. 39916800"
+    },
+    {
+      "answer":"A",
+      "question":"Simplify the expression: 10x + 7(5x - 9).\nA. 55x - 56\nB. 45x - 42\nC. 55x + 56\nD. 45x + 42"
+    },
+    {
+      "answer":"B",
+      "question":"Which of the following is a composite number?\nA. 13\nB. 15\nC. 17\nD. 19"
+    },
+    {
+      "answer":"B",
+      "question":"Find the value of x: 12x + 8 = 128.\nA. 9\nB. 10\nC. 11\nD. 12"
+    },
+    {
+      "answer":"C",
+      "question":"Solve the equation: 9(x + 14) = 180.\nA. 7\nB. 8\nC. 9\nD. 10"
+    },
+    {
+      "answer":"C",
+      "question":"What is the square root of 441?\nA. 14\nB. 19\nC. 21\nD. 25"
+    },
+    {
+      "answer":"B",
+      "question":"Evaluate the expression: 11^2 - 9 × 10.\nA. 19\nB. 91\nC. 109\nD. 119"
+    },
+    {
+      "answer":"C",
+      "question":"If a = 12 and b = 14, what is the value of a^2 + 2ab + b^2?\nA. 968\nB. 988\nC. 1008\nD. 1028"
+    },
+    {
+      "answer":"B",
+      "question":"Find the value of x: 14x - 12 = 152.\nA. 9\nB. 10\nC. 11\nD. 12"
+    },
+    {
+      "answer":"D",
+      "question":"Solve the equation: 10(x - 15) = 130.\nA. 7\nB. 8\nC. 9\nD. 10"
+    },
+    {
+      "answer":"D",
+      "question":"Which of the following is an irrational number?\nA. 0.33333...\nB. 0.625\nC. √169\nD. π"
+    },
+    {
+      "answer":"D",
+      "question":"What is the value of 12! (12 factorial)?\nA. 12\nB. 24\nC. 48\nD. 479001600"
+    },
+    {
+      "answer":"A",
+      "question":"Simplify the expression: 11x + 8(6x - 11).\nA. 65x - 88\nB. 53x - 48\nC. 65x + 88\nD. 53x + 48"
+    },
+    {
+      "answer":"B",
+      "question":"Which of the following is a composite number?\nA. 13\nB. 15\nC. 17\nD. 19"
+    },
+    {
+      "answer":"B",
+      "question":"Find the value of x: 13x + 9 = 169.\nA. 9\nB. 10\nC. 11\nD. 12"
+    },
+    {
+      "answer":"C",
+      "question":"Solve the equation: 11(x + 16) = 242.\nA. 7\nB. 8\nC. 9\nD. 10"
+    },
+    {
+      "answer":"C",
+      "question":"What is the square root of 484?\nA. 14\nB. 20\nC. 22\nD. 26"
+    },
+    {
+      "answer":"A",
+      "question":"Evaluate the expression: 12^2 - 10 × 11.\nA. 44\nB. 104\nC. 144\nD. 204"
+    },
+    {
+      "answer":"C",
+      "question":"If a = 13 and b = 15, what is the value of a^2 + 2ab + b^2?\nA. 1156\nB. 1176\nC. 1196\nD. 1216"
+    },
+    {
+      "answer":"B",
+      "question":"Find the value of x: 15x - 13 = 187.\nA. 9\nB. 10\nC. 11\nD. 12"
+    },
+    {
+      "answer":"D",
+      "question":"Solve the equation: 12(x - 17) = 204.\nA. 7\nB. 8\nC. 9\nD. 10"
+    },
+    {
+      "answer":"D",
+      "question":"Which of the following is an irrational number?\nA. 0.33333...\nB. 0.625\nC. √196\nD. π"
+    },
+    {
+      "answer":"D",
+      "question":"What is the value of 13! (13 factorial)?\nA. 13\nB. 26\nC. 52\nD. 6227020800"
+    },
+    {
+      "answer":"A",
+      "question":"Simplify the expression: 12x + 9(7x - 13).\nA. 99x - 114\nB. 81x - 66\nC. 99x + 114\nD. 81x + 66"
+    },
+    {
+      "answer":"B",
+      "question":"Which of the following is a composite number?\nA. 13\nB. 15\nC. 17\nD. 19"
+    },
+    {
+      "answer":"B",
+      "question":"Find the value of x: 14x + 10 = 210.\nA. 9\nB. 10\nC. 11\nD. 12"
+    },
+    {
+      "answer":"C",
+      "question":"Solve the equation: 13(x + 18) = 312.\nA. 7\nB. 8\nC. 9\nD. 10"
+    }
+  ]
+}
