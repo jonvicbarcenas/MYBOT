@@ -10,7 +10,7 @@ module.exports = {
     author: "JV Barcenas",
     role: 0,
     shortDescription: {
-      en: "Get a random NSFW 'pussy' image",
+      en: "Get a random NSFW image",
     },
     longDescription: {
       en:
@@ -32,7 +32,7 @@ module.exports = {
       const userBank = bank[userId]?.bank;
       const cost = 200;
 
-      if (userBank < cost) {
+      if (userBank === undefined || userBank < cost) {
         return api.sendMessage(
           `Sorry, you must pay $200, but you don't have enough money in your bank account🤪🤪..\ntype: '/bank' to check your balance`,
           event.threadID,
@@ -63,22 +63,8 @@ module.exports = {
       await fs.remove(path.join(__dirname, "cache"));
     } catch (error) {
       console.error(error);
-      // Refund the money
-      const bankFilePath = path.join(process.cwd(), "bank.json");
-      const bankData = fs.readFileSync(bankFilePath, "utf8");
-      const bank = JSON.parse(bankData);
-
-      const userId = event.senderID;
-      const userBank = bank[userId]?.bank;
-      const cost = 200;
-
-      // Refund the money by adding the cost back to the user's bank account
-      bank[userId].bank += cost;
-      fs.writeFileSync(bankFilePath, JSON.stringify(bank, null, 2), "utf8");
-
-      // Send the error message with the refund information
       return api.sendMessage(
-        `Failed to download the image. Your money has been refunded ($${cost}). Please try again later.`,
+        `An error occurred. Please try again later.`,
         event.threadID,
         event.messageID
       );

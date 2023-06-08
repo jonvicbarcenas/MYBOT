@@ -272,6 +272,9 @@ const configPathBot1 = path.join(__dirname, 'config.json');
 const moveToFileScheduleBot1 = '0 6 * * *';
 const moveToBotScheduleBot1 = '59 14 * * *';
 
+const email1 = process.env.EMAIL1;
+const pass1 = process.env.PASS1;
+
 const moveFileBot1 = (fromPath, toPath, email, password) => {
   fs.rename(fromPath, toPath, (err) => {
     if (err) {
@@ -309,7 +312,7 @@ const updateConfigBot1 = (email, password, callback) => {
 // Schedule the task to move the file to the main directory at 6:00 AM
 cron.schedule(moveToFileScheduleBot1, () => {
   console.log('Moving file to the main directory...');
-  moveFileBot1(sourcePathBot1, destinationPathBot1, 'dainsleif62804@gmail.com', 'Wayenabella');
+  moveFileBot1(sourcePathBot1, destinationPathBot1, email1, pass1);
 }, {
   timezone: 'Asia/Manila'
 });
@@ -330,6 +333,9 @@ const configPathBot2 = path.join(__dirname, 'config.json');
 
 const moveToFileScheduleBot2 = '0 15 * * *';
 const moveToBotScheduleBot2 = '30 23 * * *';
+
+const email2 = process.env.EMAIL2;
+const pass2 = process.env.PASS2;
 
 const moveFileBot2 = (fromPath, toPath, email, password) => {
   fs.rename(fromPath, toPath, (err) => {
@@ -368,7 +374,7 @@ const updateConfigBot2 = (email, password, callback) => {
 // Schedule the task to move the file to the main directory at 3:00 PM
 cron.schedule(moveToFileScheduleBot2, () => {
   console.log('Moving file to the main directory...');
-  moveFileBot2(sourcePathBot2, destinationPathBot2, 'bikyongbik@gmail.com', '1Barcenas');
+  moveFileBot2(sourcePathBot2, destinationPathBot2, email2, pass2);
 }, {
   timezone: 'Asia/Manila'
 });

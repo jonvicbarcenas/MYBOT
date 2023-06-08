@@ -127,7 +127,7 @@ module.exports = {
 
       return message.reply(`${amount} converted to the recipient with id ${recipientUID}.`);
     } else {
-      return message.reply("========[Bank]========\nThe following services are available:\n❏ deposit: Put money into the bank.\n❏ Withdraw: withdraw money from the bank from your account.\n❏ show: Show the amount of your bank account.\n❏ interest: You get good interest.\n⭓ use help bank to know how to use.======================");
+      return message.reply("========[Bank]========\nThe following services are available:\n❏/bank deposit: Put money into the bank.\n❏/bank withdraw: withdraw money from the bank from your account.\n❏/bank show: Show the amount of your bank account.\n❏/bank interest: You get good interest.\n⭓ use /help bank to know how to use.======================");
     }
   }
 };

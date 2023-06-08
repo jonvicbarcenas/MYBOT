@@ -9,9 +9,9 @@ module.exports = {
     author: "JV Barcenas",
     countDown: 5,
     role: 0,
-    shortDescription: "sarcasm",
-    longDescription: "Utility",
-    category: "seen",
+    shortDescription: "anime updater",
+    longDescription: "anime updater",
+    category: "Utility",
   },
   lastSentMinute: null,
   messageSent: false, // Flag to track if a message has already been sent
