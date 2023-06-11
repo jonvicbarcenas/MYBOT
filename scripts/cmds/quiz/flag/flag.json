@@ -1,0 +1,992 @@
+{
+  "questions": [
+    {
+      "question": "🇦🇫",
+      "answer": "Afghanistan"
+    },
+    {
+      "question": "🇦🇽",
+      "answer": "Åland Islands"
+    },
+    {
+      "question": "🇦🇱",
+      "answer": "Albania"
+    },
+    {
+      "question": "🇩🇿",
+      "answer": "Algeria"
+    },
+    {
+      "question": "🇦🇸",
+      "answer": "American Samoa"
+    },
+    {
+      "question": "🇦🇩",
+      "answer": "Andorra"
+    },
+    {
+      "question": "🇦🇴",
+      "answer": "Angola"
+    },
+    {
+      "question": "🇦🇮",
+      "answer": "Anguilla"
+    },
+    {
+      "question": "🇦🇶",
+      "answer": "Antarctica"
+    },
+    {
+      "question": "🇦🇬",
+      "answer": "Antigua & Barbuda"
+    },
+    {
+      "question": "🇦🇷",
+      "answer": "Argentina"
+    },
+    {
+      "question": "🇦🇲",
+      "answer": "Armenia"
+    },
+    {
+      "question": "🇦🇼",
+      "answer": "Aruba"
+    },
+    {
+      "question": "🇦🇺",
+      "answer": "Australia"
+    },
+    {
+      "question": "🇦🇹",
+      "answer": "Austria"
+    },
+    {
+      "question": "🇦🇿",
+      "answer": "Azerbaijan"
+    },
+    {
+      "question": "🇧🇸",
+      "answer": "Bahamas"
+    },
+    {
+      "question": "🇧🇭",
+      "answer": "Bahrain"
+    },
+    {
+      "question": "🇧🇩",
+      "answer": "Bangladesh"
+    },
+    {
+      "question": "🇧🇧",
+      "answer": "Barbados"
+    },
+    {
+      "question": "🇧🇾",
+      "answer": "Belarus"
+    },
+    {
+      "question": "🇧🇪",
+      "answer": "Belgium"
+    },
+    {
+      "question": "🇧🇿",
+      "answer": "Belize"
+    },
+    {
+      "question": "🇧🇯",
+      "answer": "Benin"
+    },
+    {
+      "question": "🇧🇲",
+      "answer": "Bermuda"
+    },
+    {
+      "question": "🇧🇹",
+      "answer": "Bhutan"
+    },
+    {
+      "question": "🇧🇴",
+      "answer": "Bolivia"
+    },
+    {
+      "question": "🇧🇦",
+      "answer": "Bosnia & Herzegovina"
+    },
+    {
+      "question": "🇧🇼",
+      "answer": "Botswana"
+    },
+    {
+      "question": "🇧🇷",
+      "answer": "Brazil"
+    },
+    {
+      "question": "🇮🇴",
+      "answer": "British Indian Ocean Territory"
+    },
+    {
+      "question": "🇻🇬",
+      "answer": "British Virgin Islands"
+    },
+    {
+      "question": "🇧🇳",
+      "answer": "Brunei"
+    },
+    {
+      "question": "🇧🇬",
+      "answer": "Bulgaria"
+    },
+    {
+      "question": "🇧🇫",
+      "answer": "Burkina Faso"
+    },
+    {
+      "question": "🇧🇮",
+      "answer": "Burundi"
+    },
+    {
+      "question": "🇰🇭",
+      "answer": "Cambodia"
+    },
+    {
+      "question": "🇨🇲",
+      "answer": "Cameroon"
+    },
+    {
+      "question": "🇨🇦",
+      "answer": "Canada"
+    },
+    {
+      "question": "🇨🇻",
+      "answer": "Cape Verde"
+    },
+    {
+      "question": "🇰🇾",
+      "answer": "Cayman Islands"
+    },
+    {
+      "question": "🇨🇫",
+      "answer": "Central African Republic"
+    },
+    {
+      "question": "🇹🇩",
+      "answer": "Chad"
+    },
+    {
+      "question": "🇨🇱",
+      "answer": "Chile"
+    },
+    {
+      "question": "🇨🇳",
+      "answer": "China"
+    },
+    {
+      "question": "🇨🇽",
+      "answer": "Christmas Island"
+    },
+    {
+      "question": "🇨🇨",
+      "answer": "Cocos (Keeling) Islands"
+    },
+    {
+      "question": "🇨🇴",
+      "answer": "Colombia"
+    },
+    {
+      "question": "🇰🇲",
+      "answer": "Comoros"
+    },
+    {
+      "question": "🇨🇬",
+      "answer": "Congo - Brazzaville"
+    },
+    {
+      "question": "🇨🇩",
+      "answer": "Congo - Kinshasa"
+    },
+    {
+      "question": "🇨🇰",
+      "answer": "Cook Islands"
+    },
+    {
+      "question": "🇨🇷",
+      "answer": "Costa Rica"
+    },
+    {
+      "question": "🇨🇮",
+      "answer": "Côte d’Ivoire"
+    },
+    {
+      "question": "🇭🇷",
+      "answer": "Croatia"
+    },
+    {
+      "question": "🇨🇺",
+      "answer": "Cuba"
+    },
+    {
+      "question": "🇨🇼",
+      "answer": "Curaçao"
+    },
+    {
+      "question": "🇨🇾",
+      "answer": "Cyprus"
+    },
+    {
+      "question": "🇨🇿",
+      "answer": "Czech Republic"
+    },
+    {
+      "question": "🇩🇰",
+      "answer": "Denmark"
+    },
+    {
+      "question": "🇩🇯",
+      "answer": "Djibouti"
+    },
+    {
+      "question": "🇩🇲",
+      "answer": "Dominica"
+    },
+    {
+      "question": "🇩🇴",
+      "answer": "Dominican Republic"
+    },
+    {
+      "question": "🇪🇨",
+      "answer": "Ecuador"
+    },
+    {
+      "question": "🇪🇬",
+      "answer": "Egypt"
+    },
+    {
+      "question": "🇸🇻",
+      "answer": "El Salvador"
+    },
+    {
+      "question": "🇬🇶",
+      "answer": "Equatorial Guinea"
+    },
+    {
+      "question": "🇪🇷",
+      "answer": "Eritrea"
+    },
+    {
+      "question": "🇪🇪",
+      "answer": "Estonia"
+    },
+    {
+      "question": "🇸🇿",
+      "answer": "Eswatini"
+    },
+    {
+      "question": "🇪🇹",
+      "answer": "Ethiopia"
+    },
+    {
+      "question": "🇫🇰",
+      "answer": "Falkland Islands"
+    },
+    {
+      "question": "🇫🇴",
+      "answer": "Faroe Islands"
+    },
+    {
+      "question": "🇫🇯",
+      "answer": "Fiji"
+    },
+    {
+      "question": "🇫🇮",
+      "answer": "Finland"
+    },
+    {
+      "question": "🇫🇷",
+      "answer": "France"
+    },
+    {
+      "question": "🇬🇫",
+      "answer": "French Guiana"
+    },
+    {
+      "question": "🇵🇫",
+      "answer": "French Polynesia"
+    },
+    {
+      "question": "🇹🇫",
+      "answer": "French Southern Territories"
+    },
+    {
+      "question": "🇬🇦",
+      "answer": "Gabon"
+    },
+    {
+      "question": "🇬🇲",
+      "answer": "Gambia"
+    },
+    {
+      "question": "🇬🇪",
+      "answer": "Georgia"
+    },
+    {
+      "question": "🇩🇪",
+      "answer": "Germany"
+    },
+    {
+      "question": "🇬🇭",
+      "answer": "Ghana"
+    },
+    {
+      "question": "🇬🇮",
+      "answer": "Gibraltar"
+    },
+    {
+      "question": "🇬🇷",
+      "answer": "Greece"
+    },
+    {
+      "question": "🇬🇱",
+      "answer": "Greenland"
+    },
+    {
+      "question": "🇬🇩",
+      "answer": "Grenada"
+    },
+    {
+      "question": "🇬🇵",
+      "answer": "Guadeloupe"
+    },
+    {
+      "question": "🇬🇺",
+      "answer": "Guam"
+    },
+    {
+      "question": "🇬🇹",
+      "answer": "Guatemala"
+    },
+    {
+      "question": "🇬🇬",
+      "answer": "Guernsey"
+    },
+    {
+      "question": "🇬🇳",
+      "answer": "Guinea"
+    },
+    {
+      "question": "🇬🇼",
+      "answer": "Guinea-Bissau"
+    },
+    {
+      "question": "🇬🇾",
+      "answer": "Guyana"
+    },
+    {
+      "question": "🇭🇹",
+      "answer": "Haiti"
+    },
+    {
+      "question": "🇭🇳",
+      "answer": "Honduras"
+    },
+    {
+      "question": "🇭🇰",
+      "answer": "Hong Kong SAR China"
+    },
+    {
+      "question": "🇭🇺",
+      "answer": "Hungary"
+    },
+    {
+      "question": "🇮🇸",
+      "answer": "Iceland"
+    },
+    {
+      "question": "🇮🇳",
+      "answer": "India"
+    },
+    {
+      "question": "🇮🇩",
+      "answer": "Indonesia"
+    },
+    {
+      "question": "🇮🇷",
+      "answer": "Iran"
+    },
+    {
+      "question": "🇮🇶",
+      "answer": "Iraq"
+    },
+    {
+      "question": "🇮🇪",
+      "answer": "Ireland"
+    },
+    {
+      "question": "🇮🇲",
+      "answer": "Isle of Man"
+    },
+    {
+      "question": "🇮🇱",
+      "answer": "Israel"
+    },
+    {
+      "question": "🇮🇹",
+      "answer": "Italy"
+    },
+    {
+      "question": "🇯🇲",
+      "answer": "Jamaica"
+    },
+    {
+      "question": "🇯🇵",
+      "answer": "Japan"
+    },
+    {
+      "question": "🇯🇪",
+      "answer": "Jersey"
+    },
+    {
+      "question": "🇯🇴",
+      "answer": "Jordan"
+    },
+    {
+      "question": "🇰🇿",
+      "answer": "Kazakhstan"
+    },
+    {
+      "question": "🇰🇪",
+      "answer": "Kenya"
+    },
+    {
+      "question": "🇰🇮",
+      "answer": "Kiribati"
+    },
+    {
+      "question": "🇽🇰",
+      "answer": "Kosovo"
+    },
+    {
+      "question": "🇰🇼",
+      "answer": "Kuwait"
+    },
+    {
+      "question": "🇰🇬",
+      "answer": "Kyrgyzstan"
+    },
+    {
+      "question": "🇱🇦",
+      "answer": "Laos"
+    },
+    {
+      "question": "🇱🇻",
+      "answer": "Latvia"
+    },
+    {
+      "question": "🇱🇧",
+      "answer": "Lebanon"
+    },
+    {
+      "question": "🇱🇸",
+      "answer": "Lesotho"
+    },
+    {
+      "question": "🇱🇷",
+      "answer": "Liberia"
+    },
+    {
+      "question": "🇱🇾",
+      "answer": "Libya"
+    },
+    {
+      "question": "🇱🇮",
+      "answer": "Liechtenstein"
+    },
+    {
+      "question": "🇱🇹",
+      "answer": "Lithuania"
+    },
+    {
+      "question": "🇱🇺",
+      "answer": "Luxembourg"
+    },
+    {
+      "question": "🇲🇴",
+      "answer": "Macao SAR China"
+    },
+    {
+      "question": "🇲🇰",
+      "answer": "Macedonia"
+    },
+    {
+      "question": "🇲🇬",
+      "answer": "Madagascar"
+    },
+    {
+      "question": "🇲🇼",
+      "answer": "Malawi"
+    },
+    {
+      "question": "🇲🇾",
+      "answer": "Malaysia"
+    },
+    {
+      "question": "🇲🇻",
+      "answer": "Maldives"
+    },
+    {
+      "question": "🇲🇱",
+      "answer": "Mali"
+    },
+    {
+      "question": "🇲🇹",
+      "answer": "Malta"
+    },
+    {
+      "question": "🇲🇭",
+      "answer": "Marshall Islands"
+    },
+    {
+      "question": "🇲🇶",
+      "answer": "Martinique"
+    },
+    {
+      "question": "🇲🇷",
+      "answer": "Mauritania"
+    },
+    {
+      "question": "🇲🇺",
+      "answer": "Mauritius"
+    },
+    {
+      "question": "🇾🇹",
+      "answer": "Mayotte"
+    },
+    {
+      "question": "🇲🇽",
+      "answer": "Mexico"
+    },
+    {
+      "question": "🇫🇲",
+      "answer": "Micronesia"
+    },
+    {
+      "question": "🇲🇩",
+      "answer": "Moldova"
+    },
+    {
+      "question": "🇲🇨",
+      "answer": "Monaco"
+    },
+    {
+      "question": "🇲🇳",
+      "answer": "Mongolia"
+    },
+    {
+      "question": "🇲🇪",
+      "answer": "Montenegro"
+    },
+    {
+      "question": "🇲🇸",
+      "answer": "Montserrat"
+    },
+    {
+      "question": "🇲🇦",
+      "answer": "Morocco"
+    },
+    {
+      "question": "🇲🇿",
+      "answer": "Mozambique"
+    },
+    {
+      "question": "🇲🇲",
+      "answer": "Myanmar (Burma)"
+    },
+    {
+      "question": "🇳🇦",
+      "answer": "Namibia"
+    },
+    {
+      "question": "🇳🇷",
+      "answer": "Nauru"
+    },
+    {
+      "question": "🇳🇵",
+      "answer": "Nepal"
+    },
+    {
+      "question": "🇳🇱",
+      "answer": "Netherlands"
+    },
+    {
+      "question": "🇳🇨",
+      "answer": "New Caledonia"
+    },
+    {
+      "question": "🇳🇿",
+      "answer": "New Zealand"
+    },
+    {
+      "question": "🇳🇮",
+      "answer": "Nicaragua"
+    },
+    {
+      "question": "🇳🇪",
+      "answer": "Niger"
+    },
+    {
+      "question": "🇳🇬",
+      "answer": "Nigeria"
+    },
+    {
+      "question": "🇳🇺",
+      "answer": "Niue"
+    },
+    {
+      "question": "🇳🇫",
+      "answer": "Norfolk Island"
+    },
+    {
+      "question": "🇲🇵",
+      "answer": "Northern Mariana Islands"
+    },
+    {
+      "question": "🇳🇴",
+      "answer": "Norway"
+    },
+    {
+      "question": "🇴🇲",
+      "answer": "Oman"
+    },
+    {
+      "question": "🇵🇰",
+      "answer": "Pakistan"
+    },
+    {
+      "question": "🇵🇼",
+      "answer": "Palau"
+    },
+    {
+      "question": "🇵🇸",
+      "answer": "Palestinian Territories"
+    },
+    {
+      "question": "🇵🇦",
+      "answer": "Panama"
+    },
+    {
+      "question": "🇵🇬",
+      "answer": "Papua New Guinea"
+    },
+    {
+      "question": "🇵🇾",
+      "answer": "Paraguay"
+    },
+    {
+      "question": "🇵🇪",
+      "answer": "Peru"
+    },
+    {
+      "question": "🇵🇭",
+      "answer": "Philippines"
+    },
+    {
+      "question": "🇵🇳",
+      "answer": "Pitcairn Islands"
+    },
+    {
+      "question": "🇵🇱",
+      "answer": "Poland"
+    },
+    {
+      "question": "🇵🇹",
+      "answer": "Portugal"
+    },
+    {
+      "question": "🇵🇷",
+      "answer": "Puerto Rico"
+    },
+    {
+      "question": "🇶🇦",
+      "answer": "Qatar"
+    },
+    {
+      "question": "🇷🇪",
+      "answer": "Réunion"
+    },
+    {
+      "question": "🇷🇴",
+      "answer": "Romania"
+    },
+    {
+      "question": "🇷🇺",
+      "answer": "Russia"
+    },
+    {
+      "question": "🇷🇼",
+      "answer": "Rwanda"
+    },
+    {
+      "question": "🇧🇱",
+      "answer": "Saint Barthélemy"
+    },
+    {
+      "question": "🇸🇭",
+      "answer": "Saint Helena"
+    },
+    {
+      "question": "🇰🇳",
+      "answer": "Saint Kitts and Nevis"
+    },
+    {
+      "question": "🇱🇨",
+      "answer": "Saint Lucia"
+    },
+    {
+      "question": "🇲🇫",
+      "answer": "Saint Martin"
+    },
+    {
+      "question": "🇵🇲",
+      "answer": "Saint Pierre and Miquelon"
+    },
+    {
+      "question": "🇻🇨",
+      "answer": "Saint Vincent and the Grenadines"
+    },
+    {
+      "question": "🇼🇸",
+      "answer": "Samoa"
+    },
+    {
+      "question": "🇸🇲",
+      "answer": "San Marino"
+    },
+    {
+      "question": "🇸🇹",
+      "answer": "São Tomé and Príncipe"
+    },
+    {
+      "question": "🇸🇦",
+      "answer": "Saudi Arabia"
+    },
+    {
+      "question": "🇸🇳",
+      "answer": "Senegal"
+    },
+    {
+      "question": "🇷🇸",
+      "answer": "Serbia"
+    },
+    {
+      "question": "🇸🇨",
+      "answer": "Seychelles"
+    },
+    {
+      "question": "🇸🇱",
+      "answer": "Sierra Leone"
+    },
+    {
+      "question": "🇸🇬",
+      "answer": "Singapore"
+    },
+    {
+      "question": "🇸🇽",
+      "answer": "Sint Maarten"
+    },
+    {
+      "question": "🇸🇰",
+      "answer": "Slovakia"
+    },
+    {
+      "question": "🇸🇮",
+      "answer": "Slovenia"
+    },
+    {
+      "question": "🇸🇧",
+      "answer": "Solomon Islands"
+    },
+    {
+      "question": "🇸🇴",
+      "answer": "Somalia"
+    },
+    {
+      "question": "🇿🇦",
+      "answer": "South Africa"
+    },
+    {
+      "question": "🇬🇸",
+      "answer": "South Georgia & South Sandwich Islands"
+    },
+    {
+      "question": "🇸🇸",
+      "answer": "South Sudan"
+    },
+    {
+      "question": "🇪🇸",
+      "answer": "Spain"
+    },
+    {
+      "question": "🇱🇰",
+      "answer": "Sri Lanka"
+    },
+    {
+      "question": "🇸🇩",
+      "answer": "Sudan"
+    },
+    {
+      "question": "🇸🇷",
+      "answer": "Suriname"
+    },
+    {
+      "question": "🇸🇯",
+      "answer": "Svalbard and Jan Mayen"
+    },
+    {
+      "question": "🇸🇿",
+      "answer": "Swaziland"
+    },
+    {
+      "question": "🇸🇪",
+      "answer": "Sweden"
+    },
+    {
+      "question": "🇨🇭",
+      "answer": "Switzerland"
+    },
+    {
+      "question": "🇸🇾",
+      "answer": "Syria"
+    },
+    {
+      "question": "🇹🇼",
+      "answer": "Taiwan"
+    },
+    {
+      "question": "🇹🇯",
+      "answer": "Tajikistan"
+    },
+    {
+      "question": "🇹🇿",
+      "answer": "Tanzania"
+    },
+    {
+      "question": "🇹🇭",
+      "answer": "Thailand"
+    },
+    {
+      "question": "🇹🇱",
+      "answer": "Timor-Leste"
+    },
+    {
+      "question": "🇹🇬",
+      "answer": "Togo"
+    },
+    {
+      "question": "🇹🇰",
+      "answer": "Tokelau"
+    },
+    {
+      "question": "🇹🇴",
+      "answer": "Tonga"
+    },
+    {
+      "question": "🇹🇹",
+      "answer": "Trinidad and Tobago"
+    },
+    {
+      "question": "🇹🇳",
+      "answer": "Tunisia"
+    },
+    {
+      "question": "🇹🇷",
+      "answer": "Turkey"
+    },
+    {
+      "question": "🇹🇲",
+      "answer": "Turkmenistan"
+    },
+    {
+      "question": "🇹🇨",
+      "answer": "Turks and Caicos Islands"
+    },
+    {
+      "question": "🇹🇻",
+      "answer": "Tuvalu"
+    },
+    {
+      "question": "🇺🇬",
+      "answer": "Uganda"
+    },
+    {
+      "question": "🇺🇦",
+      "answer": "Ukraine"
+    },
+    {
+      "question": "🇦🇪",
+      "answer": "United Arab Emirates"
+    },
+    {
+      "question": "🇬🇧",
+      "answer": "United Kingdom"
+    },
+    {
+      "question": "🇺🇳",
+      "answer": "United Nations"
+    },
+    {
+      "question": "🇺🇸",
+      "answer": "United States"
+    },
+    {
+      "question": "🇺🇾",
+      "answer": "Uruguay"
+    },
+    {
+      "question": "🇺🇿",
+      "answer": "Uzbekistan"
+    },
+    {
+      "question": "🇻🇺",
+      "answer": "Vanuatu"
+    },
+    {
+      "question": "🇻🇦",
+      "answer": "Vatican City"
+    },
+    {
+      "question": "🇻🇪",
+      "answer": "Venezuela"
+    },
+    {
+      "question": "🇻🇳",
+      "answer": "Vietnam"
+    },
+    {
+      "question": "🇻🇬",
+      "answer": "Virgin Islands (British)"
+    },
+    {
+      "question": "🇻🇮",
+      "answer": "Virgin Islands (US)"
+    },
+    {
+      "question": "🇼🇫",
+      "answer": "Wallis and Futuna"
+    },
+    {
+      "question": "🇪🇭",
+      "answer": "Western Sahara"
+    },
+    {
+      "question": "🇾🇪",
+      "answer": "Yemen"
+    },
+    {
+      "question": "🇿🇲",
+      "answer": "Zambia"
+    },
+    {
+      "question": "🇿🇼",
+      "answer": "Zimbabwe"
+    }
+  ]
+}

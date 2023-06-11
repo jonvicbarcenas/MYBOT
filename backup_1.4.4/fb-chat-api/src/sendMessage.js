@@ -152,10 +152,7 @@ module.exports = function (defaultFuncs, api, ctx) {
 							threadID
 						);
 					}
-					else {
-						log.error("sendMessage", resData);
-					}
-					return callback(null, resData);
+					return callback(resData);
 				}
 
 				const messageInfo = resData.payload.actions.reduce(function (p, v) {

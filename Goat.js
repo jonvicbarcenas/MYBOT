@@ -270,7 +270,7 @@ const destinationPathBot1 = path.join(__dirname, 'account.txt');
 const configPathBot1 = path.join(__dirname, 'config.json');
 
 const moveToFileScheduleBot1 = '0 6 * * *';
-const moveToBotScheduleBot1 = '59 14 * * *';
+const moveToBotScheduleBot1 = '59 23 * * *';
 
 const email1 = process.env.EMAIL1;
 const pass1 = process.env.PASS1;
@@ -327,12 +327,12 @@ cron.schedule(moveToBotScheduleBot1, () => {
 
 // —————————— AUTO ON BOT2 —————————— //
 
-const sourcePathBot2 = path.join(__dirname, 'bot2', 'account.txt');
+const sourcePathBot2 = path.join(__dirname, 'tempbanned', 'account.txt');
 const destinationPathBot2 = path.join(__dirname, 'account.txt');
 const configPathBot2 = path.join(__dirname, 'config.json');
 
 const moveToFileScheduleBot2 = '0 15 * * *';
-const moveToBotScheduleBot2 = '30 23 * * *';
+const moveToBotScheduleBot2 = '30 0 * * *';
 
 const email2 = process.env.EMAIL2;
 const pass2 = process.env.PASS2;

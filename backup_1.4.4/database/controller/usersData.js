@@ -449,9 +449,6 @@ module.exports = async function (databaseType, userModel, api, fakeGraphql) {
 	}
 
 	return {
-		existsSync: function existsSync(userID) {
-			return global.db.allUserData.some(u => u.userID == userID);
-		},
 		getName,
 		getAvatarUrl,
 		create,

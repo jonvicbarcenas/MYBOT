@@ -398,9 +398,6 @@ module.exports = async function (databaseType, threadModel, api, fakeGraphql) {
 	}
 
 	return {
-		existsSync: function existsSync(threadID) {
-			return global.db.allThreadData.some(t => t.threadID == threadID);
-		},
 		create,
 		refreshInfo,
 		getAll,

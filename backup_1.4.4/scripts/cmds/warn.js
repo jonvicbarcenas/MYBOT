@@ -3,7 +3,7 @@ const { getTime } = global.utils;
 module.exports = {
 	config: {
 		name: "warn",
-		version: "1.5",
+		version: "1.4",
 		author: "NTKhang",
 		countDown: 5,
 		role: 0,
@@ -247,11 +247,10 @@ module.exports = {
 									const { onEvent } = global.GoatBot;
 									onEvent.push({
 										messageID: info.messageID,
-										onStart: async ({ event }) => {
+										onStart: ({ event }) => {
 											if (event.logMessageType === "log:thread-admins" && event.logMessageData.ADMIN_EVENT == "add_admin") {
 												const { TARGET_ID } = event.logMessageData;
 												if (TARGET_ID == api.getCurrentUserID()) {
-													const warnList = await threadsData.get(event.threadID, "data.warn", []);
 													if ((warnList.find(user => user.uid == uid)?.list.length ?? 0) <= 3)
 														global.GoatBot.onEvent = onEvent.filter(item => item.messageID != info.messageID);
 													else
@@ -303,11 +302,10 @@ module.exports = {
 							const { onEvent } = global.GoatBot;
 							onEvent.push({
 								messageID: info.messageID,
-								onStart: async ({ event }) => {
+								onStart: ({ event }) => {
 									if (event.logMessageType === "log:thread-admins" && event.logMessageData.ADMIN_EVENT == "add_admin") {
 										const { TARGET_ID } = event.logMessageData;
 										if (TARGET_ID == api.getCurrentUserID()) {
-											const warnList = await threadsData.get(event.threadID, "data.warn", []);
 											removeUsers(hasBanned, warnList, api, event, message, getLang);
 											global.GoatBot.onEvent = onEvent.filter(item => item.messageID != info.messageID);
 										}

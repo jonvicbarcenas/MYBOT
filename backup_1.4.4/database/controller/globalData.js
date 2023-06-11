@@ -318,9 +318,6 @@ module.exports = async function (databaseType, globalModel, fakeGraphql) {
 	}
 
 	return {
-		existsSync: function existsSync(key) {
-			return global.db.allGlobalData.some(u => u.key == key);
-		},
 		create,
 		getAll,
 		get,

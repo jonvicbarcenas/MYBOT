@@ -269,9 +269,6 @@ module.exports = async function (databaseType, dashBoardModel, fakeGraphql) {
 	}
 
 	return {
-		existsSync: function existsSync(email) {
-			return global.db.allDashBoardData.some(u => u.email == email);
-		},
 		create,
 		getAll,
 		get,

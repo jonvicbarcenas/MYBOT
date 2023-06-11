@@ -1,13 +1,13 @@
 module.exports = {
 	config: {
 		name: "autoUpdateThreadInfo",
-		version: "1.3",
+		version: "1.2",
 		author: "NTKhang",
 		category: "events"
 	},
 
 	onStart: async ({ threadsData, event, api }) => {
-		const types = ["log:subscribe", "log:unsubscribe", "log:thread-admins", "log:thread-name", "log:thread-image", "log:thread-icon", "log:thread-color", "log:user-nickname"];
+		const types = ["log:subscribe", "log:unsubscribe", "log:thread-admins", "log:thread-name", "log:thread-image", "log:thread-icon", "log:thread-color"];
 		if (!types.includes(event.logMessageType))
 			return;
 		const { threadID, logMessageData, logMessageType } = event;

@@ -1,0 +1,128 @@
+{
+  "questions": [
+    {
+      "question": "What is the capital city of Australia?\nA. Sydney\nB. Melbourne\nC. Canberra\nD. Perth",
+      "answer": "C"
+    },
+    {
+      "question": "Which country is known as the 'Land of the Rising Sun'?\nA. China\nB. Japan\nC. South Korea\nD. Thailand",
+      "answer": "B"
+    },
+    {
+      "question": "What is the largest country in the world by land area?\nA. China\nB. United States\nC. Russia\nD. Canada",
+      "answer": "C"
+    },
+    {
+      "question": "Which continent is the largest in terms of land area?\nA. Africa\nB. Asia\nC. Europe\nD. North America",
+      "answer": "B"
+    },
+    {
+      "question": "What is the capital city of Brazil?\nA. Brasília\nB. Rio de Janeiro\nC. São Paulo\nD. Buenos Aires",
+      "answer": "A"
+    },
+    {
+      "question": "Which African country is known as the 'Rainbow Nation'?\nA. Egypt\nB. Nigeria\nC. South Africa\nD. Kenya",
+      "answer": "C"
+    },
+    {
+      "question": "What is the longest river in the world?\nA. Nile\nB. Amazon\nC. Mississippi\nD. Yangtze",
+      "answer": "A"
+    },
+    {
+      "question": "Which European country is known for its tulips, windmills, and wooden shoes?\nA. Italy\nB. France\nC. Germany\nD. Netherlands",
+      "answer": "D"
+    },
+    {
+      "question": "Which city is located at the meeting point of the Indian and Pacific Oceans?\nA. Sydney\nB. Tokyo\nC. Jakarta\nD. Manila",
+      "answer": "C"
+    },
+    {
+      "question": "What is the capital city of Canada?\nA. Ottawa\nB. Toronto\nC. Vancouver\nD. Montreal",
+      "answer": "A"
+    },
+    {
+      "question": "Which country is famous for its pyramids and sphinx?\nA. Greece\nB. Egypt\nC. Mexico\nD. Peru",
+      "answer": "B"
+    },
+    {
+      "question": "What is the largest desert in the world?\nA. Sahara Desert\nB. Gobi Desert\nC. Kalahari Desert\nD. Arabian Desert",
+      "answer": "A"
+    },
+    {
+      "question": "Which country is known as the 'Land Down Under'?\nA. New Zealand\nB. Australia\nC. Fiji\nD. Papua New Guinea",
+      "answer": "B"
+    },
+    {
+      "question": "What is the tallest mountain in the world?\nA. Mount Kilimanjaro\nB. Mount Everest\nC. Mount McKinley\nD. Mount Fuji",
+      "answer": "B"
+    },
+    {
+      "question": "Which country is located on the Iberian Peninsula?\nA. France\nB. Italy\nC. Spain\nD. Portugal",
+      "answer": "C"
+    },
+    {
+      "question": "What is the capital city of France?\nA. Paris\nB. Rome\nC. Madrid\nD. Berlin",
+      "answer": "A"
+    },
+    {
+      "question": "Which country is known as the 'Land of the Midnight Sun'?\nA. Norway\nB. Sweden\nC. Finland\nD. Iceland",
+      "answer": "A"
+    },
+    {
+      "question": "What is the official language of India?\nA. English\nB. Hindi\nC. Mandarin\nD. Spanish",
+      "answer": "B"
+    },
+    {
+      "question": "Which South American country is known for the Amazon Rainforest?\nA. Brazil\nB. Argentina\nC. Chile\nD. Colombia",
+      "answer": "A"
+    },
+    {
+      "question": "What is the capital city of Germany?\nA. London\nB. Paris\nC. Berlin\nD. Rome",
+      "answer": "C"
+    },
+    {
+      "question": "Which ocean is the largest in the world?\nA. Atlantic Ocean\nB. Indian Ocean\nC. Arctic Ocean\nD. Pacific Ocean",
+      "answer": "D"
+    },
+    {
+      "question": "What is the official language of Brazil?\nA. Spanish\nB. Portuguese\nC. Italian\nD. French",
+      "answer": "B"
+    },
+    {
+      "question": "Which country is known as the 'Land of Smiles'?\nA. Thailand\nB. Vietnam\nC. Cambodia\nD. Malaysia",
+      "answer": "A"
+    },
+    {
+      "question": "What is the capital city of China?\nA. Tokyo\nB. Seoul\nC. Beijing\nD. Hong Kong",
+      "answer": "C"
+    },
+    {
+      "question": "Which country is located in both Europe and Asia?\nA. Russia\nB. Turkey\nC. Kazakhstan\nD. Greece",
+      "answer": "A"
+    },
+    {
+      "question": "What is the official language of Japan?\nA. Japanese\nB. Mandarin\nC. Korean\nD. Thai",
+      "answer": "A"
+    },
+    {
+      "question": "Which country is known as the 'Land of Fire and Ice'?\nA. Norway\nB. Finland\nC. Iceland\nD. Greenland",
+      "answer": "C"
+    },
+    {
+      "question": "What is the capital city of South Africa?\nA. Cape Town\nB. Johannesburg\nC. Pretoria\nD. Durban",
+      "answer": "C"
+    },
+    {
+      "question": "Which country is known for its famous ruins, Machu Picchu?\nA. Brazil\nB. Argentina\nC. Peru\nD. Bolivia",
+      "answer": "C"
+    },
+    {
+      "question": "What is the largest island in the world?\nA. Madagascar\nB. Borneo\nC. Greenland\nD. New Guinea",
+      "answer": "C"
+    },
+    {
+      "question": "Which country is known for its iconic landmark, the Statue of Liberty?\nA. United States\nB. United Kingdom\nC. Australia\nD. France",
+      "answer": "A"
+    }
+  ]
+}

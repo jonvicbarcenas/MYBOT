@@ -1,0 +1,484 @@
+{
+  "questions": [
+    {
+      "question": "What is the largest planet in our solar system?\nA. Jupiter\nB. Saturn\nC. Earth\nD. Mars",
+      "answer": "A"
+    },
+    {
+      "question": "Which celestial body is known as Earth's natural satellite?\nA. Mars\nB. Venus\nC. Moon\nD. Mercury",
+      "answer": "C"
+    },
+    {
+      "question": "What is the closest star to Earth?\nA. Proxima Centauri\nB. Alpha Centauri\nC. Sirius\nD. Sun",
+      "answer": "D"
+    },
+    {
+      "question": "What is a light-year?\nA. A unit of time\nB. A measure of brightness\nC. The distance light travels in a year\nD. The time it takes for light to reach Earth from the Sun",
+      "answer": "C"
+    },
+    {
+      "question": "What causes the seasons on Earth?\nA. Tilt of Earth's axis\nB. Distance from the Sun\nC. Revolution around the Moon\nD. Earth's magnetic field",
+      "answer": "A"
+    },
+    {
+      "question": "What is a galaxy?\nA. A group of planets orbiting a star\nB. A collection of comets\nC. A cluster of asteroids\nD. A large system of stars, gas, and dust held together by gravity",
+      "answer": "D"
+    },
+    {
+      "question": "What is a supernova?\nA. The birth of a star\nB. A dying star that explodes\nC. A black hole\nD. A galaxy outside of the Milky Way",
+      "answer": "B"
+    },
+    {
+      "question": "What is the process by which stars produce energy?\nA. Nuclear fission\nB. Nuclear fusion\nC. Radioactive decay\nD. Chemical reaction",
+      "answer": "B"
+    },
+    {
+      "question": "What is a black hole?\nA. A region in space with no gravity\nB. An empty space in the universe\nC. A collapsed star with extremely strong gravity\nD. A portal to another dimension",
+      "answer": "C"
+    },
+    {
+      "question": "What is the name of our galaxy?\nA. Andromeda\nB. Milky Way\nC. Orion\nD. Triangulum",
+      "answer": "B"
+    },
+    {
+      "question": "What is the study of celestial objects and phenomena?\nA. Astrology\nB. Astronomy\nC. Cosmology\nD. Astrophysics",
+      "answer": "B"
+    },
+    {
+      "question": "What is the redshift?\nA. The change in color of a star due to its temperature\nB. The change in color of a star due to its brightness\nC. The change in wavelength of light from a receding celestial object\nD. The change in wavelength of light from an approaching celestial object",
+      "answer": "C"
+    },
+    {
+      "question": "What is a meteor shower?\nA. The movement of a meteor across the sky\nB. The burning of a meteoroid in Earth's atmosphere\nC. The collision of two meteoroids\nD. The disintegration of a meteoroid in space",
+      "answer": "B"
+    },
+    {
+      "question": "What is a comet?\nA. A planet with a tail\nB. A moon of a planet\nC. A small, icy object that orbits the Sun\nD. A star with a tail",
+      "answer": "C"
+    },
+    {
+      "question": "What is an exoplanet?\nA. A planet located outside of our solar system\nB. A planet with rings\nC. A planet that is not in orbit\nD. A planet made of gas",
+      "answer": "A"
+    },
+    {
+      "question": "What is the name of the largest known dwarf planet in our solar system?\nA. Ceres\nB. Pluto\nC. Eris\nD. Makemake",
+      "answer": "C"
+    },
+    {
+      "question": "What is a solar eclipse?\nA. The blocking of sunlight by the Moon as it passes between the Sun and Earth\nB. The blocking of sunlight by Earth as it passes between the Sun and Moon\nC. The alignment of the Sun, Moon, and Earth in a straight line\nD. The alignment of the Sun, Earth, and a planet in a straight line",
+      "answer": "A"
+    },
+    {
+      "question": "What is a lunar eclipse?\nA. The blocking of sunlight by the Moon as it passes between the Sun and Earth\nB. The blocking of sunlight by Earth as it passes between the Sun and Moon\nC. The alignment of the Sun, Moon, and Earth in a straight line\nD. The alignment of the Sun, Earth, and a planet in a straight line",
+      "answer": "B"
+    },
+    {
+      "question": "What is the name of the first artificial satellite launched into space?\nA. Hubble Space Telescope\nB. International Space Station\nC. Voyager 1\nD. Sputnik 1",
+      "answer": "D"
+    },
+    {
+      "question": "What is the Hubble Space Telescope?\nA. A telescope located on the Moon\nB. A telescope used to observe black holes\nC. A telescope that orbits Earth and captures images of distant galaxies\nD. A telescope used to study the Sun",
+      "answer": "C"
+    },
+    {
+      "question": "What is the Kuiper Belt?\nA. A region of space between Mars and Jupiter\nB. A region of space beyond Neptune where many icy objects are located\nC. A region of space near the center of our galaxy\nD. A region of space where comets originate",
+      "answer": "B"
+    },
+    {
+      "question": "What is the name of the rover currently exploring Mars?\nA. Curiosity\nB. Opportunity\nC. Spirit\nD. Perseverance",
+      "answer": "D"
+    },
+    {
+      "question": "What is the name of the largest volcano in our solar system, located on Mars?\nA. Mount Everest\nB. Olympus Mons\nC. Mount Kilimanjaro\nD. Mauna Kea",
+      "answer": "B"
+    },
+    {
+      "question": "What is the main component of stars?\nA. Oxygen\nB. Nitrogen\nC. Helium\nD. Carbon",
+      "answer": "C"
+    },
+    {
+      "question": "What is the name of the theory that explains the origin of the universe?\nA. Big Bang Theory\nB. Steady State Theory\nC. String Theory\nD. Ptolemaic Theory",
+      "answer": "A"
+    },
+    {
+      "question": "What is the name of the mission that successfully landed humans on the Moon?\nA. Apollo 11\nB. Voyager 2\nC. Mars Pathfinder\nD. Gemini 6",
+      "answer": "A"
+    },
+    {
+      "question": "What is the process by which a star dies?\nA. Stellar nucleosynthesis\nB. Stellar explosion\nC. Stellar fusion\nD. Stellar collapse",
+      "answer": "D"
+    },
+    {
+      "question": "What is the name of the space probe that visited Pluto in 2015?\nA. Voyager 1\nB. New Horizons\nC. Cassini-Huygens\nD. Juno",
+      "answer": "B"
+    },
+    {
+      "question": "What is the name of the galaxy that is expected to collide with the Milky Way in the future?\nA. Andromeda\nB. Triangulum\nC. Centaurus A\nD. Sombrero",
+      "answer": "A"
+    },
+    {
+      "question": "What is the name of the theory that suggests the universe is constantly expanding?\nA. Hubble's Law\nB. Theory of Relativity\nC. String Theory\nD. Quantum Mechanics",
+      "answer": "A"
+    },
+    {
+      "question": "What is the name of the phenomenon where light is bent as it passes through a gravitational field?\nA. Reflection\nB. Refraction\nC. Dispersion\nD. Gravitational lensing",
+      "answer": "D"
+    },
+    {
+      "question": "What is the name of the space telescope that detects infrared radiation?\nA. Hubble Space Telescope\nB. Chandra X-ray Observatory\nC. James Webb Space Telescope\nD. Spitzer Space Telescope",
+      "answer": "D"
+    },
+    {
+      "question": "What is the name of the star system closest to our solar system?\nA. Alpha Centauri\nB. Sirius\nC. Proxima Centauri\nD. Betelgeuse",
+      "answer": "C"
+    },
+    {
+      "question": "What is the name of the mission that successfully landed humans on the Moon?\nA. Apollo 11\nB. Voyager 2\nC. Mars Pathfinder\nD. Gemini 6",
+      "answer": "A"
+    },
+    {
+      "question": "What is the process by which a star dies?\nA. Stellar nucleosynthesis\nB. Stellar explosion\nC. Stellar fusion\nD. Stellar collapse",
+      "answer": "D"
+    },
+    {
+      "question": "What is the name of the space probe that visited Pluto in 2015?\nA. Voyager 1\nB. New Horizons\nC. Cassini-Huygens\nD. Juno",
+      "answer": "B"
+    },
+    {
+      "question": "What is the name of the galaxy that is expected to collide with the Milky Way in the future?\nA. Andromeda\nB. Triangulum\nC. Centaurus A\nD. Sombrero",
+      "answer": "A"
+    },
+    {
+      "question": "What is the name of the theory that suggests the universe is constantly expanding?\nA. Hubble's Law\nB. Theory of Relativity\nC. String Theory\nD. Quantum Mechanics",
+      "answer": "A"
+    },
+    {
+      "question": "What is the name of the phenomenon where light is bent as it passes through a gravitational field?\nA. Reflection\nB. Refraction\nC. Dispersion\nD. Gravitational lensing",
+      "answer": "D"
+    },
+    {
+      "question": "What is the name of the space telescope that detects infrared radiation?\nA. Hubble Space Telescope\nB. Chandra X-ray Observatory\nC. James Webb Space Telescope\nD. Spitzer Space Telescope",
+      "answer": "D"
+    },
+    {
+      "question": "What is the name of the star system closest to our solar system?\nA. Alpha Centauri\nB. Sirius\nC. Proxima Centauri\nD. Betelgeuse",
+      "answer": "C"
+    },
+    {
+      "question": "What is the name of the mission that successfully landed humans on the Moon?\nA. Apollo 11\nB. Voyager 2\nC. Mars Pathfinder\nD. Gemini 6",
+      "answer": "A"
+    },
+    {
+      "question": "What is the process by which a star dies?\nA. Stellar nucleosynthesis\nB. Stellar explosion\nC. Stellar fusion\nD. Stellar collapse",
+      "answer": "D"
+    },
+    {
+      "question": "What is the name of the space probe that visited Pluto in 2015?\nA. Voyager 1\nB. New Horizons\nC. Cassini-Huygens\nD. Juno",
+      "answer": "B"
+    },
+    {
+      "question": "What is the name of the galaxy that is expected to collide with the Milky Way in the future?\nA. Andromeda\nB. Triangulum\nC. Centaurus A\nD. Sombrero",
+      "answer": "A"
+    },
+    {
+      "question": "What is the name of the theory that suggests the universe is constantly expanding?\nA. Hubble's Law\nB. Theory of Relativity\nC. String Theory\nD. Quantum Mechanics",
+      "answer": "A"
+    },
+    {
+      "question": "What is the name of the phenomenon where light is bent as it passes through a gravitational field?\nA. Reflection\nB. Refraction\nC. Dispersion\nD. Gravitational lensing",
+      "answer": "D"
+    },
+    {
+      "question": "What is the name of the space telescope that detects infrared radiation?\nA. Hubble Space Telescope\nB. Chandra X-ray Observatory\nC. James Webb Space Telescope\nD. Spitzer Space Telescope",
+      "answer": "D"
+    },
+    {
+      "question": "What is the name of the star system closest to our solar system?\nA. Alpha Centauri\nB. Sirius\nC. Proxima Centauri\nD. Betelgeuse",
+      "answer": "C"
+    },
+    {
+      "question": "What is the name of the mission that successfully landed humans on the Moon?\nA. Apollo 11\nB. Voyager 2\nC. Mars Pathfinder\nD. Gemini 6",
+      "answer": "A"
+    },
+    {
+      "question": "What is the process by which a star dies?\nA. Stellar nucleosynthesis\nB. Stellar explosion\nC. Stellar fusion\nD. Stellar collapse",
+      "answer": "D"
+    },
+    {
+      "question": "What is the name of the space probe that visited Pluto in 2015?\nA. Voyager 1\nB. New Horizons\nC. Cassini-Huygens\nD. Juno",
+      "answer": "B"
+    },
+    {
+      "question": "What is the name of the galaxy that is expected to collide with the Milky Way in the future?\nA. Andromeda\nB. Triangulum\nC. Centaurus A\nD. Sombrero",
+      "answer": "A"
+    },
+    {
+      "question": "What is the name of the theory that suggests the universe is constantly expanding?\nA. Hubble's Law\nB. Theory of Relativity\nC. String Theory\nD. Quantum Mechanics",
+      "answer": "A"
+    },
+    {
+      "question": "What is the name of the phenomenon where light is bent as it passes through a gravitational field?\nA. Reflection\nB. Refraction\nC. Dispersion\nD. Gravitational lensing",
+      "answer": "D"
+    },
+    {
+      "question": "What is the name of the space telescope that detects infrared radiation?\nA. Hubble Space Telescope\nB. Chandra X-ray Observatory\nC. James Webb Space Telescope\nD. Spitzer Space Telescope",
+      "answer": "D"
+    },
+    {
+      "question": "What is the name of the star system closest to our solar system?\nA. Alpha Centauri\nB. Sirius\nC. Proxima Centauri\nD. Betelgeuse",
+      "answer": "C"
+    },
+    {
+      "question": "What is the name of the mission that successfully landed humans on the Moon?\nA. Apollo 11\nB. Voyager 2\nC. Mars Pathfinder\nD. Gemini 6",
+      "answer": "A"
+    },
+    {
+      "question": "What is the process by which a star dies?\nA. Stellar nucleosynthesis\nB. Stellar explosion\nC. Stellar fusion\nD. Stellar collapse",
+      "answer": "D"
+    },
+    {
+      "question": "What is the name of the space probe that visited Pluto in 2015?\nA. Voyager 1\nB. New Horizons\nC. Cassini-Huygens\nD. Juno",
+      "answer": "B"
+    },
+    {
+      "question": "What is the name of the galaxy that is expected to collide with the Milky Way in the future?\nA. Andromeda\nB. Triangulum\nC. Centaurus A\nD. Sombrero",
+      "answer": "A"
+    },
+    {
+      "question": "What is the name of the theory that suggests the universe is constantly expanding?\nA. Hubble's Law\nB. Theory of Relativity\nC. String Theory\nD. Quantum Mechanics",
+      "answer": "A"
+    },
+    {
+      "question": "What is the name of the phenomenon where light is bent as it passes through a gravitational field?\nA. Reflection\nB. Refraction\nC. Dispersion\nD. Gravitational lensing",
+      "answer": "D"
+    },
+    {
+      "question": "What is the name of the space telescope that detects infrared radiation?\nA. Hubble Space Telescope\nB. Chandra X-ray Observatory\nC. James Webb Space Telescope\nD. Spitzer Space Telescope",
+      "answer": "D"
+    },
+    {
+      "question": "What is the name of the star system closest to our solar system?\nA. Alpha Centauri\nB. Sirius\nC. Proxima Centauri\nD. Betelgeuse",
+      "answer": "C"
+    },
+    {
+      "question": "What is the name of the mission that successfully landed humans on the Moon?\nA. Apollo 11\nB. Voyager 2\nC. Mars Pathfinder\nD. Gemini 6",
+      "answer": "A"
+    },
+    {
+      "question": "What is the process by which a star dies?\nA. Stellar nucleosynthesis\nB. Stellar explosion\nC. Stellar fusion\nD. Stellar collapse",
+      "answer": "D"
+    },
+    {
+      "question": "What is the name of the space probe that visited Pluto in 2015?\nA. Voyager 1\nB. New Horizons\nC. Cassini-Huygens\nD. Juno",
+      "answer": "B"
+    },
+    {
+      "question": "What is the name of the galaxy that is expected to collide with the Milky Way in the future?\nA. Andromeda\nB. Triangulum\nC. Centaurus A\nD. Sombrero",
+      "answer": "A"
+    },
+    {
+      "question": "What is the name of the theory that suggests the universe is constantly expanding?\nA. Hubble's Law\nB. Theory of Relativity\nC. String Theory\nD. Quantum Mechanics",
+      "answer": "A"
+    },
+    {
+      "question": "What is the name of the phenomenon where light is bent as it passes through a gravitational field?\nA. Reflection\nB. Refraction\nC. Dispersion\nD. Gravitational lensing",
+      "answer": "D"
+    },
+    {
+      "question": "What is the name of the space telescope that detects infrared radiation?\nA. Hubble Space Telescope\nB. Chandra X-ray Observatory\nC. James Webb Space Telescope\nD. Spitzer Space Telescope",
+      "answer": "D"
+    },
+    {
+      "question": "What is the name of the star system closest to our solar system?\nA. Alpha Centauri\nB. Sirius\nC. Proxima Centauri\nD. Betelgeuse",
+      "answer": "C"
+    },
+    {
+      "question": "What is the name of the mission that successfully landed humans on the Moon?\nA. Apollo 11\nB. Voyager 2\nC. Mars Pathfinder\nD. Gemini 6",
+      "answer": "A"
+    },
+    {
+      "question": "What is the process by which a star dies?\nA. Stellar nucleosynthesis\nB. Stellar explosion\nC. Stellar fusion\nD. Stellar collapse",
+      "answer": "D"
+    },
+    {
+      "question": "What is the name of the space probe that visited Pluto in 2015?\nA. Voyager 1\nB. New Horizons\nC. Cassini-Huygens\nD. Juno",
+      "answer": "B"
+    },
+    {
+      "question": "What is the name of the galaxy that is expected to collide with the Milky Way in the future?\nA. Andromeda\nB. Triangulum\nC. Centaurus A\nD. Sombrero",
+      "answer": "A"
+    },
+    {
+      "question": "What is the name of the theory that suggests the universe is constantly expanding?\nA. Hubble's Law\nB. Theory of Relativity\nC. String Theory\nD. Quantum Mechanics",
+      "answer": "A"
+    },
+    {
+      "question": "What is the name of the phenomenon where light is bent as it passes through a gravitational field?\nA. Reflection\nB. Refraction\nC. Dispersion\nD. Gravitational lensing",
+      "answer": "D"
+    },
+    {
+      "question": "What is the name of the space telescope that detects infrared radiation?\nA. Hubble Space Telescope\nB. Chandra X-ray Observatory\nC. James Webb Space Telescope\nD. Spitzer Space Telescope",
+      "answer": "D"
+    },
+    {
+      "question": "What is the name of the star system closest to our solar system?\nA. Alpha Centauri\nB. Sirius\nC. Proxima Centauri\nD. Betelgeuse",
+      "answer": "C"
+    },
+    {
+      "question": "What is the name of the mission that successfully landed humans on the Moon?\nA. Apollo 11\nB. Voyager 2\nC. Mars Pathfinder\nD. Gemini 6",
+      "answer": "A"
+    },
+    {
+      "question": "What is the process by which a star dies?\nA. Stellar nucleosynthesis\nB. Stellar explosion\nC. Stellar fusion\nD. Stellar collapse",
+      "answer": "D"
+    },
+    {
+      "question": "What is the name of the space probe that visited Pluto in 2015?\nA. Voyager 1\nB. New Horizons\nC. Cassini-Huygens\nD. Juno",
+      "answer": "B"
+    },
+    {
+      "question": "What is the name of the galaxy that is expected to collide with the Milky Way in the future?\nA. Andromeda\nB. Triangulum\nC. Centaurus A\nD. Sombrero",
+      "answer": "A"
+    },
+    {
+      "question": "What is the name of the theory that suggests the universe is constantly expanding?\nA. Hubble's Law\nB. Theory of Relativity\nC. String Theory\nD. Quantum Mechanics",
+      "answer": "A"
+    },
+    {
+      "question": "What is the name of the phenomenon where light is bent as it passes through a gravitational field?\nA. Reflection\nB. Refraction\nC. Dispersion\nD. Gravitational lensing",
+      "answer": "D"
+    },
+    {
+      "question": "What is the name of the space telescope that detects infrared radiation?\nA. Hubble Space Telescope\nB. Chandra X-ray Observatory\nC. James Webb Space Telescope\nD. Spitzer Space Telescope",
+      "answer": "D"
+    },
+    {
+      "question": "What is the name of the star system closest to our solar system?\nA. Alpha Centauri\nB. Sirius\nC. Proxima Centauri\nD. Betelgeuse",
+      "answer": "C"
+    },
+    {
+      "question": "What is the name of the mission that successfully landed humans on the Moon?\nA. Apollo 11\nB. Voyager 2\nC. Mars Pathfinder\nD. Gemini 6",
+      "answer": "A"
+    },
+    {
+      "question": "What is the process by which a star dies?\nA. Stellar nucleosynthesis\nB. Stellar explosion\nC. Stellar fusion\nD. Stellar collapse",
+      "answer": "D"
+    },
+    {
+      "question": "What is the name of the space probe that visited Pluto in 2015?\nA. Voyager 1\nB. New Horizons\nC. Cassini-Huygens\nD. Juno",
+      "answer": "B"
+    },
+    {
+      "question": "What is the name of the galaxy that is expected to collide with the Milky Way in the future?\nA. Andromeda\nB. Triangulum\nC. Centaurus A\nD. Sombrero",
+      "answer": "A"
+    },
+    {
+      "question": "What is the name of the theory that suggests the universe is constantly expanding?\nA. Hubble's Law\nB. Theory of Relativity\nC. String Theory\nD. Quantum Mechanics",
+      "answer": "A"
+    },
+    {
+      "question": "What is the name of the phenomenon where light is bent as it passes through a gravitational field?\nA. Reflection\nB. Refraction\nC. Dispersion\nD. Gravitational lensing",
+      "answer": "D"
+    },
+    {
+      "question": "What is the name of the space telescope that detects infrared radiation?\nA. Hubble Space Telescope\nB. Chandra X-ray Observatory\nC. James Webb Space Telescope\nD. Spitzer Space Telescope",
+      "answer": "D"
+    },
+    {
+      "question": "What is the name of the star system closest to our solar system?\nA. Alpha Centauri\nB. Sirius\nC. Proxima Centauri\nD. Betelgeuse",
+      "answer": "C"
+    },
+    {
+      "question": "What is the name of the mission that successfully landed humans on the Moon?\nA. Apollo 11\nB. Voyager 2\nC. Mars Pathfinder\nD. Gemini 6",
+      "answer": "A"
+    },
+    {
+      "question": "What is the process by which a star dies?\nA. Stellar nucleosynthesis\nB. Stellar explosion\nC. Stellar fusion\nD. Stellar collapse",
+      "answer": "D"
+    },
+    {
+      "question": "What is the name of the space probe that visited Pluto in 2015?\nA. Voyager 1\nB. New Horizons\nC. Cassini-Huygens\nD. Juno",
+      "answer": "B"
+    },
+    {
+      "question": "What is the name of the galaxy that is expected to collide with the Milky Way in the future?\nA. Andromeda\nB. Triangulum\nC. Centaurus A\nD. Sombrero",
+      "answer": "A"
+    },
+    {
+      "question": "What is the name of the theory that suggests the universe is constantly expanding?\nA. Hubble's Law\nB. Theory of Relativity\nC. String Theory\nD. Quantum Mechanics",
+      "answer": "A"
+    },
+    {
+      "question": "What is the name of the phenomenon where light is bent as it passes through a gravitational field?\nA. Reflection\nB. Refraction\nC. Dispersion\nD. Gravitational lensing",
+      "answer": "D"
+    },
+    {
+      "question": "What is the name of the space telescope that detects infrared radiation?\nA. Hubble Space Telescope\nB. Chandra X-ray Observatory\nC. James Webb Space Telescope\nD. Spitzer Space Telescope",
+      "answer": "D"
+    },
+    {
+      "question": "What is the name of the star system closest to our solar system?\nA. Alpha Centauri\nB. Sirius\nC. Proxima Centauri\nD. Betelgeuse",
+      "answer": "C"
+    },
+    {
+      "question": "What is the name of the mission that successfully landed humans on the Moon?\nA. Apollo 11\nB. Voyager 2\nC. Mars Pathfinder\nD. Gemini 6",
+      "answer": "A"
+    },
+    {
+      "question": "What is the process by which a star dies?\nA. Stellar nucleosynthesis\nB. Stellar explosion\nC. Stellar fusion\nD. Stellar collapse",
+      "answer": "D"
+    },
+    {
+      "question": "What is the name of the space probe that visited Pluto in 2015?\nA. Voyager 1\nB. New Horizons\nC. Cassini-Huygens\nD. Juno",
+      "answer": "B"
+    },
+    {
+      "question": "What is the name of the galaxy that is expected to collide with the Milky Way in the future?\nA. Andromeda\nB. Triangulum\nC. Centaurus A\nD. Sombrero",
+      "answer": "A"
+    },
+    {
+      "question": "What is the name of the theory that suggests the universe is constantly expanding?\nA. Hubble's Law\nB. Theory of Relativity\nC. String Theory\nD. Quantum Mechanics",
+      "answer": "A"
+    },
+    {
+      "question": "What is the name of the phenomenon where light is bent as it passes through a gravitational field?\nA. Reflection\nB. Refraction\nC. Dispersion\nD. Gravitational lensing",
+      "answer": "D"
+    },
+    {
+      "question": "What is the name of the space telescope that detects infrared radiation?\nA. Hubble Space Telescope\nB. Chandra X-ray Observatory\nC. James Webb Space Telescope\nD. Spitzer Space Telescope",
+      "answer": "D"
+    },
+    {
+      "question": "What is the name of the star system closest to our solar system?\nA. Alpha Centauri\nB. Sirius\nC. Proxima Centauri\nD. Betelgeuse",
+      "answer": "C"
+    },
+    {
+      "question": "What is the name of the mission that successfully landed humans on the Moon?\nA. Apollo 11\nB. Voyager 2\nC. Mars Pathfinder\nD. Gemini 6",
+      "answer": "A"
+    },
+    {
+      "question": "What is the process by which a star dies?\nA. Stellar nucleosynthesis\nB. Stellar explosion\nC. Stellar fusion\nD. Stellar collapse",
+      "answer": "D"
+    },
+    {
+      "question": "What is the name of the space probe that visited Pluto in 2015?\nA. Voyager 1\nB. New Horizons\nC. Cassini-Huygens\nD. Juno",
+      "answer": "B"
+    },
+    {
+      "question": "What is the name of the galaxy that is expected to collide with the Milky Way in the future?\nA. Andromeda\nB. Triangulum\nC. Centaurus A\nD. Sombrero",
+      "answer": "A"
+    },
+    {
+      "question": "What is the name of the theory that suggests the universe is constantly expanding?\nA. Hubble's Law\nB. Theory of Relativity\nC. String Theory\nD. Quantum Mechanics",
+      "answer": "A"
+    },
+    {
+      "question": "What is the name of the phenomenon where light is bent as it passes through a gravitational field?\nA. Reflection\nB. Refraction\nC. Dispersion\nD. Gravitational lensing",
+      "answer": "D"
+    },
+    {
+      "question": "What is the name of the space telescope that detects infrared radiation?\nA. Hubble Space Telescope\nB. Chandra X-ray Observatory\nC. James Webb Space Telescope\nD. Spitzer Space Telescope",
+      "answer": "D"
+    }
+  ]
+}

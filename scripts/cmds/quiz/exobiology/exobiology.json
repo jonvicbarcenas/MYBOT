@@ -1,0 +1,308 @@
+{
+  "questions": [
+    {
+      "question": "What is the study of extraterrestrial life called?\nA. Exobiology\nB. Astrobiology\nC. Xenobiology\nD. Ectobiology",
+      "answer": "B"
+    },
+    {
+      "question": "What is the name of the mission that landed the Curiosity rover on Mars?\nA. Opportunity\nB. Spirit\nC. Perseverance\nD. Insight",
+      "answer": "C"
+    },
+    {
+      "question": "Which planet in our solar system is considered the most likely to have the potential for extraterrestrial life?\nA. Mars\nB. Venus\nC. Jupiter\nD. Saturn",
+      "answer": "A"
+    },
+    {
+      "question": "What is the term used to describe the zone around a star where conditions might be suitable for life to exist?\nA. Goldilocks Zone\nB. Habitable Zone\nC. Life Zone\nD. Sustainable Zone",
+      "answer": "B"
+    },
+    {
+      "question": "What is the name of the moon of Jupiter that is believed to have a subsurface ocean?\nA. Europa\nB. Titan\nC. Enceladus\nD. Callisto",
+      "answer": "A"
+    },
+    {
+      "question": "Which of the following is not considered a potential building block for life?\nA. Water\nB. Carbon\nC. Nitrogen\nD. Helium",
+      "answer": "D"
+    },
+    {
+      "question": "What is the term used to describe organisms that can survive and thrive in extreme environments?\nA. Extremophiles\nB. Xenophiles\nC. Astrobiotes\nD. Ectophiles",
+      "answer": "A"
+    },
+    {
+      "question": "What is the process by which simple organic molecules can form complex organic molecules under the right conditions?\nA. Polymerization\nB. Oligomerization\nC. Synthesis\nD. Abiogenesis",
+      "answer": "A"
+    },
+    {
+      "question": "What is the name of the famous equation that attempts to estimate the number of active, communicative extraterrestrial civilizations in our galaxy?\nA. Drake Equation\nB. Fermi Equation\nC. Kepler Equation\nD. Hawking Equation",
+      "answer": "A"
+    },
+    {
+      "question": "What is the name of the spacecraft that successfully landed on the surface of a comet in 2014?\nA. Rosetta\nB. Voyager\nC. Cassini\nD. Galileo",
+      "answer": "A"
+    },
+    {
+      "question": "Which moon of Saturn has a thick atmosphere and hydrocarbon lakes?\nA. Titan\nB. Mimas\nC. Rhea\nD. Dione",
+      "answer": "A"
+    },
+    {
+      "question": "What is the name of the theory that suggests life on Earth may have originated from microorganisms or biochemical compounds transported to Earth from other planets or moons?\nA. Panspermia\nB. Xenogenesis\nC. Astrotransmission\nD. Ectogenesis",
+      "answer": "A"
+    },
+    {
+      "question": "What is the process by which organisms can survive for extended periods of time in a dormant state?\nA. Cryptobiosis\nB. Metabolism\nC. Hibernation\nD. Dormancy",
+      "answer": "A"
+    },
+    {
+      "question": "Which of the following is considered a potential biomarker for the presence of life on other planets?\nA. Oxygen\nB. Carbon dioxide\nC. Water vapor\nD. Methane",
+      "answer": "D"
+    },
+    {
+      "question": "What is the name of the mission that aims to search for signs of past or present life on Mars?\nA. Mars Sample Return\nB. Mars 2020\nC. ExoMars\nD. InSight",
+      "answer": "B"
+    },
+    {
+      "question": "Which of the following is a moon of Neptune that has geysers erupting from its surface?\nA. Triton\nB. Proteus\nC. Nereid\nD. Charon",
+      "answer": "A"
+    },
+    {
+      "question": "What is the term used to describe the hypothetical form of life that is based on a different biochemistry than life as we know it?\nA. Hypothetix\nB. Xenolife\nC. Alternative Life\nD. Nonterrestrial Life",
+      "answer": "B"
+    },
+    {
+      "question": "What is the name of the dwarf planet located in the Kuiper Belt that was visited by the New Horizons spacecraft?\nA. Pluto\nB. Eris\nC. Makemake\nD. Haumea",
+      "answer": "A"
+    },
+    {
+      "question": "Which moon of Jupiter has an extremely thin atmosphere and active volcanoes that erupt icy plumes?\nA. Io\nB. Ganymede\nC. Callisto\nD. Europa",
+      "answer": "A"
+    },
+    {
+      "question": "What is the term used to describe the study of the origin, evolution, and distribution of life in the universe?\nA. Exoplanetology\nB. Alienology\nC. Astrobiology\nD. Extraterrestrialism",
+      "answer": "C"
+    },
+    {
+      "question": "What is the name of the spacecraft that was launched in 1977 and has now entered interstellar space?\nA. Voyager 1\nB. Voyager 2\nC. Pioneer 10\nD. New Horizons",
+      "answer": "A"
+    },
+    {
+      "question": "Which planet in our solar system has the largest number of known moons?\nA. Saturn\nB. Jupiter\nC. Uranus\nD. Neptune",
+      "answer": "B"
+    },
+    {
+      "question": "What is the name of the mission that aims to search for habitable environments and signs of ancient microbial life on Mars?\nA. Mars Express\nB. Mars Odyssey\nC. Mars 2020\nD. Mars Reconnaissance Orbiter",
+      "answer": "C"
+    },
+    {
+      "question": "What is the term used to describe the study of the chemistry of molecules in space and their potential for forming life?\nA. Astrochemistry\nB. Exomolecular Biology\nC. Stellar Biochemistry\nD. Cosmochemical Analysis",
+      "answer": "A"
+    },
+    {
+      "question": "What is the name of the moon of Uranus that is considered to be the most geologically active body in the solar system?\nA. Miranda\nB. Oberon\nC. Titania\nD. Enceladus",
+      "answer": "A"
+    },
+    {
+      "question": "What is the term used to describe the hypothesis that life may have originated multiple times on Earth or other planets?\nA. Polygenesis\nB. Xenogenesis\nC. Multigenesis\nD. Exogenesis",
+      "answer": "A"
+    },
+    {
+      "question": "Which spacecraft discovered geysers erupting from the south pole of Enceladus, a moon of Saturn?\nA. Cassini\nB. Galileo\nC. Juno\nD. Voyager 1",
+      "answer": "A"
+    },
+    {
+      "question": "What is the name of the mission that aims to explore Jupiter's moon Europa and investigate its potential for habitability?\nA. Europa Clipper\nB. Europa Lander\nC. Europa Orbiter\nD. Europa Express",
+      "answer": "A"
+    },
+    {
+      "question": "Which of the following is not considered a potential source of energy for extraterrestrial life?\nA. Sunlight\nB. Geothermal energy\nC. Radioactive decay\nD. Wind power",
+      "answer": "D"
+    },
+    {
+      "question": "What is the term used to describe the hypothetical network of interstellar communication among advanced civilizations?\nA. Galactic Web\nB. Universal Link\nC. Exo-Net\nD. Cosmic Internet",
+      "answer": "A"
+    },
+    {
+      "question": "Which of the following is a moon of Saturn that has a prominent hydrocarbon atmosphere and lakes of liquid methane?\nA. Titan\nB. Dione\nC. Iapetus\nD. Hyperion",
+      "answer": "A"
+    },
+    {
+      "question": "What is the name of the mission that aims to search for signs of life on Mars by drilling beneath the Martian surface?\nA. Mars InSight\nB. Mars Pathfinder\nC. Mars Sample Return\nD. Mars 2020",
+      "answer": "C"
+    },
+    {
+      "question": "Which moon of Saturn is known for its prominent equatorial ridge and is named after a character in Greek mythology?\nA. Iapetus\nB. Mimas\nC. Tethys\nD. Hyperion",
+      "answer": "A"
+    },
+    {
+      "question": "What is the term used to describe the hypothetical form of life that exists within the icy crust of moons or planets?\nA. Cryolife\nB. Subsurface Life\nC. Icelife\nD. Endolife",
+      "answer": "D"
+    },
+    {
+      "question": "Which of the following is not a potential sign of life that astrobiologists look for when studying other planets or moons?\nA. Atmospheric oxygen\nB. Methane emissions\nC. Surface water\nD. Nitrogen-rich atmosphere",
+      "answer": "D"
+    },
+    {
+      "question": "What is the name of the mission that aims to explore the surface of Saturn's moon Titan using a quadcopter-like drone?\nA. Dragonfly\nB. Titan Rover\nC. Huygens\nD. Enceladus Explorer",
+      "answer": "A"
+    },
+    {
+      "question": "Which moon of Jupiter is known for its distinct reddish-brown color and its volcanic activity?\nA. Io\nB. Europa\nC. Ganymede\nD. Callisto",
+      "answer": "A"
+    },
+    {
+      "question": "What is the term used to describe the study of the potential for life to exist on other planets or moons?\nA. Exoplanetology\nB. Xenobiology\nC. Astrobiology\nD. Extraterrestrialism",
+      "answer": "C"
+    },
+    {
+      "question": "What is the name of the mission that aims to study the icy moon Enceladus and search for signs of habitability and life?\nA. Enceladus Explorer\nB. Enceladus Mission\nC. Cassini-Huygens\nD. Enceladus Orbiter",
+      "answer": "C"
+    },
+    {
+      "question": "Which of the following is a potential indicator of past or present life on Mars?\nA. Fossils\nB. Liquid water\nC. Organic molecules\nD. All of the above",
+      "answer": "D"
+    },
+    {
+      "question": "What is the name of the mission that aims to study the atmosphere of Jupiter and its moons, including Ganymede and Europa?\nA. Juno\nB. Galileo\nC. Cassini\nD. Voyager 2",
+      "answer": "A"
+    },
+    {
+      "question": "Which of the following is a moon of Saturn that has a prominent hydrocarbon haze in its upper atmosphere?\nA. Titan\nB. Rhea\nC. Phoebe\nD. Mimas",
+      "answer": "A"
+    },
+    {
+      "question": "What is the term used to describe the study of how life can adapt to survive in extreme environments?\nA. Extremology\nB. Xenobiology\nC. Adaptationism\nD. Astroecology",
+      "answer": "A"
+    },
+    {
+      "question": "Which moon of Uranus has a cracked surface that suggests past geological activity?\nA. Miranda\nB. Oberon\nC. Titania\nD. Ariel",
+      "answer": "A"
+    },
+    {
+      "question": "What is the name of the mission that aims to search for signs of life on Mars by studying its subsurface?\nA. Mars Express\nB. Mars InSight\nC. Mars Pathfinder\nD. Mars 2020",
+      "answer": "B"
+    },
+    {
+      "question": "Which of the following is a potential source of liquid water on the surface of Mars?\nA. Polar ice caps\nB. Subsurface aquifers\nC. Seasonal flows\nD. All of the above",
+      "answer": "D"
+    },
+    {
+      "question": "What is the term used to describe the study of the potential for intelligent life to exist on other planets or communicate with Earth?\nA. Exoplanetology\nB. Xenocommunication\nC. Astrocommunication\nD. Extraterrestrial Intelligence",
+      "answer": "D"
+    },
+    {
+      "question": "Which moon of Jupiter is the largest moon in the solar system?\nA. Ganymede\nB. Callisto\nC. Io\nD. Europa",
+      "answer": "A"
+    },
+    {
+      "question": "What is the name of the mission that aims to study the atmosphere and surface of Saturn's moon Titan?\nA. Titan Explorer\nB. Titan Orbiter\nC. Cassini-Huygens\nD. Enceladus Mission",
+      "answer": "C"
+    },
+    {
+      "question": "Which of the following is a moon of Neptune that exhibits unusual retrograde motion?\nA. Triton\nB. Proteus\nC. Nereid\nD. Charon",
+      "answer": "A"
+    },
+    {
+      "question": "What is the term used to describe the study of how life originated on Earth and the conditions that support its existence?\nA. Originology\nB. Abiogenesis\nC. Life Genesis\nD. Biogenesis",
+      "answer": "B"
+    },
+    {
+      "question": "Which of the following is not a potential location for finding life in our solar system?\nA. Europa\nB. Enceladus\nC. Titan\nD. Io",
+      "answer": "D"
+    },
+    {
+      "question": "What is the name of the mission that aims to search for signs of life on Mars by analyzing samples collected from the Martian surface?\nA. Mars Express\nB. Mars InSight\nC. Mars Sample Return\nD. Mars Pathfinder",
+      "answer": "C"
+    },
+    {
+      "question": "Which of the following is a potential source of energy for microbial life in extreme environments?\nA. Chemical reactions\nB. Radiation\nC. Heat from volcanic activity\nD. All of the above",
+      "answer": "D"
+    },
+    {
+      "question": "What is the term used to describe the study of the potential for life to exist on other planets or moons?\nA. Exoplanetology\nB. Xenobiology\nC. Astrobiology\nD. Extraterrestrialism",
+      "answer": "C"
+    },
+    {
+      "question": "What is the name of the mission that aims to study the icy moon Enceladus and search for signs of habitability and life?\nA. Enceladus Explorer\nB. Enceladus Mission\nC. Cassini-Huygens\nD. Enceladus Orbiter",
+      "answer": "C"
+    },
+    {
+      "question": "Which of the following is a potential indicator of past or present life on Mars?\nA. Fossils\nB. Liquid water\nC. Organic molecules\nD. All of the above",
+      "answer": "D"
+    },
+    {
+      "question": "What is the name of the mission that aims to study the atmosphere of Jupiter and its moons, including Ganymede and Europa?\nA. Juno\nB. Galileo\nC. Cassini\nD. Voyager 2",
+      "answer": "A"
+    },
+    {
+      "question": "Which of the following is a moon of Saturn that has a prominent hydrocarbon haze in its upper atmosphere?\nA. Titan\nB. Rhea\nC. Phoebe\nD. Mimas",
+      "answer": "A"
+    },
+    {
+      "question": "What is the term used to describe the study of how life can adapt to survive in extreme environments?\nA. Extremology\nB. Xenobiology\nC. Adaptationism\nD. Astroecology",
+      "answer": "A"
+    },
+    {
+      "question": "Which moon of Uranus has a cracked surface that suggests past geological activity?\nA. Miranda\nB. Oberon\nC. Titania\nD. Ariel",
+      "answer": "A"
+    },
+    {
+      "question": "What is the name of the mission that aims to search for signs of life on Mars by studying its subsurface?\nA. Mars Express\nB. Mars InSight\nC. Mars Pathfinder\nD. Mars 2020",
+      "answer": "B"
+    },
+    {
+      "question": "Which of the following is a potential source of liquid water on the surface of Mars?\nA. Polar ice caps\nB. Subsurface aquifers\nC. Seasonal flows\nD. All of the above",
+      "answer": "D"
+    },
+    {
+      "question": "What is the term used to describe the study of the potential for intelligent life to exist on other planets or communicate with Earth?\nA. Exoplanetology\nB. Xenocommunication\nC. Astrocommunication\nD. Extraterrestrial Intelligence",
+      "answer": "D"
+    },
+    {
+      "question": "Which moon of Jupiter is the largest moon in the solar system?\nA. Ganymede\nB. Callisto\nC. Io\nD. Europa",
+      "answer": "A"
+    },
+    {
+      "question": "What is the name of the mission that aims to study the atmosphere and surface of Saturn's moon Titan?\nA. Titan Explorer\nB. Titan Orbiter\nC. Cassini-Huygens\nD. Enceladus Mission",
+      "answer": "C"
+    },
+    {
+      "question": "Which of the following is a moon of Neptune that exhibits unusual retrograde motion?\nA. Triton\nB. Proteus\nC. Nereid\nD. Charon",
+      "answer": "A"
+    },
+    {
+      "question": "What is the term used to describe the study of how life originated on Earth and the conditions that support its existence?\nA. Originology\nB. Abiogenesis\nC. Life Genesis\nD. Biogenesis",
+      "answer": "B"
+    },
+    {
+      "question": "Which of the following is a potential method for detecting life on exoplanets?\nA. Observing biosignatures\nB. Analyzing atmospheric composition\nC. Detecting changes in light\nD. All of the above",
+      "answer": "D"
+    },
+    {
+      "question": "What is the name of the mission that aims to study the icy moon Europa and investigate its potential for habitability?\nA. Europa Clipper\nB. Europa Lander\nC. Europa Orbiter\nD. Europa Express",
+      "answer": "A"
+    },
+    {
+      "question": "Which spacecraft discovered geysers erupting from the south pole of Enceladus, a moon of Saturn?\nA. Cassini\nB. Galileo\nC. Juno\nD. Voyager 1",
+      "answer": "A"
+    },
+    {
+      "question": "What is the name of the mission that aims to explore the surface of Saturn's moon Titan using a quadcopter-like drone?\nA. Dragonfly\nB. Titan Rover\nC. Huygens\nD. Enceladus Explorer",
+      "answer": "A"
+    },
+    {
+      "question": "Which moon of Jupiter is known for its distinct reddish-brown color and its volcanic activity?\nA. Io\nB. Europa\nC. Ganymede\nD. Callisto",
+      "answer": "A"
+    },
+    {
+      "question": "What is the term used to describe the study of the potential for life to exist in other star systems?\nA. Exoplanetology\nB. Astrobiology\nC. Xenobiology\nD. Stellar Life",
+      "answer": "A"
+    },
+    {
+      "question": "Which moon of Saturn is known for its prominent equatorial ridge and is named after a character in Greek mythology?\nA. Iapetus\nB. Mimas\nC. Tethys\nD. Hyperion",
+      "answer": "A"
+    },
+    {
+      "question": "What is the term used to describe the hypothetical form of life that exists within the icy crust of moons or planets?\nA. Cryolife\nB. Subsurface Life\nC. Icelife\nD. Endolife",
+      "answer": "D"
+    }
+  ]
+}

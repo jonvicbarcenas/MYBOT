@@ -2,113 +2,169 @@
   {
     "time": "12:00 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Kono Subarashii Sekai ni Bakuen wo!",
+    "animeTitle": "Otonari ni Ginga",
     "episode": "10",
-    "status": "already updated"
-  },
-  {
-    "time": "12:00 AM",
-    "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Niehime to Kemono no Ou",
-    "episode": "8",
-    "status": "already updated"
-  },
-  {
-    "time": "12:00 AM",
-    "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "THE IDOLM@STER CINDERELLA GIRLS U149",
-    "episode": "9",
     "status": "already updated"
   },
   {
     "time": "12:30 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Kaminaki Sekai no Kamisama Katsudou",
-    "episode": "9",
+    "animeTitle": "Yamada-kun to Lv999 no Koi wo Suru",
+    "episode": "11",
     "status": "already updated"
   },
   {
-    "time": "1:35 AM",
+    "time": "12:45 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Den Den no Denno Densha",
-    "episode": "9",
+    "animeTitle": "BASTIONS",
+    "episode": "5",
     "status": "already updated"
   },
   {
-    "time": "6:40 AM",
+    "time": "12:55 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Ojarumaru",
-    "episode": "2017",
+    "animeTitle": "EDENS ZERO Season 2",
+    "episode": "11",
     "status": "already updated"
   },
   {
-    "time": "9:50 AM",
+    "time": "1:30 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Bosanimal",
-    "episode": "40",
+    "animeTitle": "Boku no Kokoro no Yabai Yatsu",
+    "episode": "11",
+    "status": "already updated"
+  },
+  {
+    "time": "2:00 AM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Isekai Shoukan wa Nidome desu",
+    "episode": "10",
+    "status": "already updated"
+  },
+  {
+    "time": "7:30 AM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Yu☆Gi☆Oh! GO RUSH!!",
+    "episode": "62",
+    "status": "already updated"
+  },
+  {
+    "time": "8:30 AM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Duel Masters Win: Duel Wars",
+    "episode": "10",
+    "status": "already updated"
+  },
+  {
+    "time": "8:30 AM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Hirogaru Sky! Precure",
+    "episode": "19",
+    "status": "already updated"
+  },
+  {
+    "time": "9:00 AM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Tousouchuu: Great Mission",
+    "episode": "10",
+    "status": "already updated"
+  },
+  {
+    "time": "9:30 AM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "One Piece",
+    "episode": "1065",
     "status": "already updated"
   },
   {
     "time": "11:00 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Biao Ren: Blades of the Guardians",
-    "episode": "3",
+    "animeTitle": "Doupo Cangqiong: Nian Fan",
+    "episode": "48",
     "status": "already updated"
   },
   {
-    "time": "1:00 PM",
+    "time": "4:55 PM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Aishang Ta de Liyou",
-    "episode": "9",
-    "status": "already updated"
+    "animeTitle": "Ao no Orchestra: 5-bu de Tanoshii Classic",
+    "episode": "8",
+    "status": "upcoming"
   },
   {
-    "time": "6:00 PM",
+    "time": "5:00 PM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Niehime to Kemono no Ou Mini Anime",
-    "episode": "18",
-    "status": "already updated"
-  },
-  {
-    "time": "6:00 PM",
-    "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Shuumatsu no Walküre II Mini Anime",
+    "animeTitle": "Ao no Orchestra",
     "episode": "10",
-    "status": "already updated"
+    "status": "upcoming"
   },
   {
-    "time": "6:50 PM",
+    "time": "5:00 PM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Nintama Rantarou",
-    "episode": "2446",
-    "status": "already updated"
+    "animeTitle": "Mobile Suit Gundam: Suisei no Majo Season 2",
+    "episode": "9",
+    "status": "upcoming"
   },
   {
-    "time": "8:00 PM",
+    "time": "6:00 PM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Petit! Tokyo Mew Mew New~♡",
-    "episode": "22",
-    "status": "already updated"
+    "animeTitle": "Chibi Maruko-chan (1995)",
+    "episode": "1392",
+    "status": "upcoming"
+  },
+  {
+    "time": "6:00 PM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Holo no Graffiti",
+    "episode": "212",
+    "status": "upcoming"
+  },
+  {
+    "time": "6:00 PM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Puzzle & Dragon",
+    "episode": "259",
+    "status": "upcoming"
+  },
+  {
+    "time": "6:30 PM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Sazae-san",
+    "episode": "2686",
+    "status": "upcoming"
+  },
+  {
+    "time": "9:00 PM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Tensei Kizoku no Isekai Boukenroku: Jichou wo Shiranai Kamigami no Shito",
+    "episode": "11",
+    "status": "upcoming"
   },
   {
     "time": "10:00 PM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Mahou Tsukai no Yome Season 2",
+    "animeTitle": "Jijou wo Shiranai Tenkousei ga Guigui Kuru.",
+    "episode": "11",
+    "status": "upcoming"
+  },
+  {
+    "time": "11:00 PM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "World Dai Star",
     "episode": "10",
     "status": "upcoming"
   },
   {
-    "time": "10:30 PM",
+    "time": "11:15 PM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Dr. STONE Season 3",
+    "animeTitle": "Kimetsu no Yaiba: Katanakaji no Sato-hen",
     "episode": "10",
     "status": "upcoming"
   },
   {
-    "time": "10:30 PM",
+    "time": "11:30 PM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Watashi no Yuri wa Oshigoto Desu!",
-    "episode": "10",
+    "animeTitle": "My Home Hero",
+    "episode": "11",
     "status": "upcoming"
   }
 ]
