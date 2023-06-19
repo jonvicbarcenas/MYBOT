@@ -30,11 +30,11 @@ module.exports = {
 
       const userId = event.senderID;
       const userBank = bank[userId]?.bank;
-      const cost = 200;
+      const cost = 1890;
 
       if (userBank === undefined || userBank < cost) {
         return api.sendMessage(
-          `Sorry, you must pay $200, but you don't have enough money in your bank account🤪🤪..\ntype: '/bank' to check your balance`,
+          `Sorry, you must pay $1890, but you don't have enough money in your bank account🤪🤪..\ntype: '/bank' to check your balance`,
           event.threadID,
           event.messageID
         );

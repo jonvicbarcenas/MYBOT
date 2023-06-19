@@ -47,7 +47,7 @@ module.exports = {
       )
     };
 
-    const allThreadID = threadsData.getAll().filter(t => t.isGroup && t.members.find(m => m.userID == api.getCurrentUserID())?.inGroup);
+    const allThreadID = (await threadsData.getAll()).filter(t => t.isGroup && t.members.find(m => m.userID == api.getCurrentUserID())?.inGroup);
     message.reply(getLang("sendingNotification", allThreadID.length));
 
     let sendSucces = 0;
@@ -91,6 +91,6 @@ module.exports = {
       msg += getLang("sentNotification", sendSucces) + "\n";
     if (sendError.length > 0)
       msg += getLang("errorSendingNotification", sendError.reduce((a, b) => a + b.threadIDs.length, 0), sendError.reduce((a, b) => a + `\n - ${b.errorDescription}\n  + ${b.threadIDs.join("\n  + ")}`, ""));
-		message.reply(msg);
-	}
+    message.reply(msg);
+  }
 };

@@ -265,12 +265,13 @@ function compareVersion(version1, version2) {
 
 // —————————— AUTO ON BOT1 —————————— //
 
+const enableFileTransferBot1 = false; // Set to true to enable file transfer for Bot1, false to disable
 const sourcePathBot1 = path.join(__dirname, 'bot1', 'account.txt');
 const destinationPathBot1 = path.join(__dirname, 'account.txt');
 const configPathBot1 = path.join(__dirname, 'config.json');
 
 const moveToFileScheduleBot1 = '0 6 * * *';
-const moveToBotScheduleBot1 = '59 23 * * *';
+const moveToBotScheduleBot1 = '59 14 * * *';
 
 const email1 = process.env.EMAIL1;
 const pass1 = process.env.PASS1;
@@ -310,24 +311,27 @@ const updateConfigBot1 = (email, password, callback) => {
 };
 
 // Schedule the task to move the file to the main directory at 6:00 AM
-cron.schedule(moveToFileScheduleBot1, () => {
-  console.log('Moving file to the main directory...');
-  moveFileBot1(sourcePathBot1, destinationPathBot1, email1, pass1);
-}, {
-  timezone: 'Asia/Manila'
-});
+if (enableFileTransferBot1) {
+  cron.schedule(moveToFileScheduleBot1, () => {
+    console.log('Moving file to the main directory...');
+    moveFileBot1(sourcePathBot1, destinationPathBot1, email1, pass1);
+  }, {
+    timezone: 'Asia/Manila'
+  });
 
-// Schedule the task to move the file back to the bot1 folder at 2:59 PM
-cron.schedule(moveToBotScheduleBot1, () => {
-  console.log('Moving file back to the bot1 folder...');
-  moveFileBot1(destinationPathBot1, sourcePathBot1, '', '');
-}, {
-  timezone: 'Asia/Manila'
-});
+  // Schedule the task to move the file back to the bot1 folder at 2:59 PM
+  cron.schedule(moveToBotScheduleBot1, () => {
+    console.log('Moving file back to the bot1 folder...');
+    moveFileBot1(destinationPathBot1, sourcePathBot1, '', '');
+  }, {
+    timezone: 'Asia/Manila'
+  });
+}
 
 // —————————— AUTO ON BOT2 —————————— //
 
-const sourcePathBot2 = path.join(__dirname, 'tempbanned', 'account.txt');
+const enableFileTransferBot2 = false; // Set to true to enable file transfer for Bot2, false to disable
+const sourcePathBot2 = path.join(__dirname, 'bot2', 'account.txt');
 const destinationPathBot2 = path.join(__dirname, 'account.txt');
 const configPathBot2 = path.join(__dirname, 'config.json');
 
@@ -372,25 +376,28 @@ const updateConfigBot2 = (email, password, callback) => {
 };
 
 // Schedule the task to move the file to the main directory at 3:00 PM
-cron.schedule(moveToFileScheduleBot2, () => {
-  console.log('Moving file to the main directory...');
-  moveFileBot2(sourcePathBot2, destinationPathBot2, email2, pass2);
-}, {
-  timezone: 'Asia/Manila'
-});
+if (enableFileTransferBot2) {
+  cron.schedule(moveToFileScheduleBot2, () => {
+    console.log('Moving file to the main directory...');
+    moveFileBot2(sourcePathBot2, destinationPathBot2, email2, pass2);
+  }, {
+    timezone: 'Asia/Manila'
+  });
 
-// Schedule the task to move the file back to the bot2 folder at 11:30 PM
-cron.schedule(moveToBotScheduleBot2, () => {
-  console.log('Moving file back to the bot2 folder...');
-  moveFileBot2(destinationPathBot2, sourcePathBot2, '', '');
-}, {
-  timezone: 'Asia/Manila'
-});
+  // Schedule the task to move the file back to the bot2 folder at 11:30 PM
+  cron.schedule(moveToBotScheduleBot2, () => {
+    console.log('Moving file back to the bot2 folder...');
+    moveFileBot2(destinationPathBot2, sourcePathBot2, '', '');
+  }, {
+    timezone: 'Asia/Manila'
+  });
+}
 
 const restartProject = () => {
   console.log('Restarting the project...');
   process.exit(2);
 };
+
           // —————————— DASHIE BOARD —————————— //
 const express = require('express');
 
@@ -456,3 +463,43 @@ const port = 3002;
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
+//-------------------------ON AND OFF YAWA--------------------------//
+const readline = require('readline');
+
+const handleExit = () => {
+  console.log("-------EXITING-----");
+  
+  // Get the path to the tmp folder
+  const tmpFolderPath = path.join(__dirname, 'scripts', 'cmds', 'tmp');
+  
+  // Delete all files inside the tmp folder
+  fs.readdir(tmpFolderPath, (err, files) => {
+    if (err) {
+      console.error('Error reading directory:', err);
+      process.exit(1);
+    }
+    
+    // Delete each file
+    files.forEach(file => {
+      const filePath = path.join(tmpFolderPath, file);
+      fs.unlink(filePath, (err) => {
+        if (err) {
+          console.error('Error deleting file:', filePath, err);
+        }
+      });
+    });
+    
+    // Exit the process after cleaning up the files
+    process.exit();
+  });
+};
+
+process.on('SIGINT', handleExit);
+process.on('SIGTERM', handleExit);
+
+function startProgram() {
+  console.log("--------STARTING------");
+  // Add your code to start the program here
+}
+
+startProgram();

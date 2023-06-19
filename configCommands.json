@@ -59,6 +59,8 @@
     "pickupline.js",
     "ask.js",
     "time.js",
-    "zautoseen.js"
+    "bard2.js",
+    "bard1.js",
+    "askv1.js"
   ]
 }

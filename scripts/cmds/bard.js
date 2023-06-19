@@ -1,141 +1,114 @@
-const axios = require('axios');
-const sqlite3 = require('sqlite3').verbose();
+const axios = require("axios");
+const fs = require("fs");
 
-// Function to get the sender's name from the database using their ID
-async function getSenderName(senderID) {
-  return new Promise((resolve, reject) => {
-    const db = new sqlite3.Database("database/data/data.sqlite");
-
-    db.get(`SELECT name FROM users WHERE userID = ?`, senderID, (err, row) => {
-      db.close();
-
-      if (err) {
-        console.error(`Error getting sender name for userID: ${senderID}`, err);
-        reject(err);
-      } else {
-        const senderName = row ? row.name : "Unknown User";
-        resolve(senderName);
-      }
-    });
-  });
-}
-
+// Define the prefixes that trigger the module
 const Prefixes = [
   'bard',
   '/bard',
-  '.bard',
-  '*bard',
-  'venti'
+  'ask',
+  '.chi',
+  '¶sammy',
+  '_nano',
+  'nano',
+  'ai',
+  '.ask',
+  '/ask',
+  '!ask',
+  '@ask',
+  '#ask',
+  '$ask',
+  '%ask',
+  '^ask',
+  '*ask',
+  '.ai',
+  '/ai',
+  '!ai',
+  '@ai',
+  '#ai',
+  '$ai',
+  '%ai',
+  '^ai',
+  '*ai',
 ];
-
-const API_BASE_URL = 'https://ventithebard.marok85067.repl.co';
 
 module.exports = {
   config: {
-    name: 'bard',
-    aliases: ['venti'],
-    version: '2.5',
-    author: 'JV Barcenas',
+    name: "bard",
+    version: "1.0",
+    author: "jvbarcenas",
+    countDown: 5,
     role: 0,
-    category: 'utility',
     shortDescription: {
-      en: 'Asks an AI for an answer.'
+      vi: "",
+      en: "lol"
     },
     longDescription: {
-      en: 'Asks an AI for an answer based on the user prompt.'
+      vi: "",
+      en: ""
     },
-    guide: {
-      en: '{pn} [prompt]'
-    }
+    category: "Bard"
   },
+
   onStart: async function() {},
-  onChat: async function ({ api, event, args, message }) {
-    try {
-      const prefix = Prefixes.find(p => event.body && event.body.toLowerCase().startsWith(p));
+  onChat: async function ({ api, event }) {
+    let { threadID, messageID } = event;
 
-      // Check if the prefix is valid
-      if (!prefix) {
-        return; // Invalid prefix, ignore the command
-      }
-
-      // Remove the prefix from the message body
-      const prompt = event.body.substring(prefix.length).trim();
-
-      // Check if prompt is empty
-      if (prompt === '') {
-        await message.reply("Please state your query, and I will provide you with a response.");
-        return;
-      }
-
-      // Send a message indicating that the question is being answered
-      const responseMessages = [
-        `One moment, ${await getSenderName(event.senderID)}. I am answering your question.`,
-        `Just a moment, ${await getSenderName(event.senderID)}. I am gathering my thoughts.`,
-        `Please bear with me, ${await getSenderName(event.senderID)}. I am searching my vast knowledge for the answer.`,
-        `I apologize for the wait, ${await getSenderName(event.senderID)}, but I am almost finished.`,
-        `I promise I will answer your question, ${await getSenderName(event.senderID)}. Just give me a moment.`,
-        `I am almost there, ${await getSenderName(event.senderID)}. Just hold on.`,
-        `I am working on it, ${await getSenderName(event.senderID)}. Please be patient.`,
-        `I will answer your question as soon as I can, ${await getSenderName(event.senderID)}.`,
-        `I am doing my best, ${await getSenderName(event.senderID)}. Please wait a little longer.`,
-        `I will not forget your question, ${await getSenderName(event.senderID)}. I will answer it as soon as possible.`
-      ];
-      
-      const responseMessage = responseMessages[Math.floor(Math.random() * responseMessages.length)];
-      await message.reply(responseMessage);
-      // Get the sender's name using their ID
-      const senderName = await getSenderName(event.senderID);
-
-      // Generate a random prompt ID
-      const promptId = generatePromptId();
-
-      // Make the request to the API with prompt, sender name, sender ID, and prompt ID
-      const requestData = {
-        bard: encodeURIComponent(prompt),
-        name: encodeURIComponent(senderName),
-        uid: event.senderID,
-        promptId
-      };
-
-      await axios.get(`${API_BASE_URL}/bard`, { params: requestData });
-
-      // Fetch the answer using the prompt ID
-      const response = await axios.get(`${API_BASE_URL}/data`, { params: { promptId } });
-
-      if (response.status !== 200 || !response.data) {
-        throw new Error('Invalid or missing response from API');
-      }
-
-      const answerData = response.data;
-
-      // Send the answer to the user
-      await message.reply(`${answerData.answer}`);
-
-      console.log('Sent answer as a reply to user');
-    } catch (error) {
-      console.error(`Failed to get answer: ${error.message}`);
-      api.sendMessage(
-        `${error.message}.\n\nYou can try typing your question again or resending it, as there might be a bug from the server that's causing the problem. It might resolve the issue.`,
-        event.threadID
-      );
+    // Check if the message starts with one of the defined prefixes
+    const prefix = Prefixes.find(p => event.body && event.body.toLowerCase().startsWith(p));
+    if (!prefix) {
+      return; // Return early if the prefix is not found
     }
-  },
-};
 
-// Helper function to generate a random prompt ID
-function generatePromptId() {
-  const characters = 'abcdefghijklmnopqrstuvwxyz0123456789';
-  let promptId = '';
+    const response = event.body.slice(prefix.length).trim();
 
-  for (let i = 0; i < 5; i++) {
-    const randomIndex = Math.floor(Math.random() * characters.length);
-    promptId += characters[randomIndex];
+    if (!response) {
+      api.sendMessage("Please provide a question or query", threadID, messageID);
+      return;
+    }
+
+    api.sendMessage("Searching for an answer, please wait...", threadID, messageID);
+
+    try {
+      const res = await axios.get(`https://barbatos.corpselaugh.repl.co/ask?question=${response}`);
+      const responseData = res.data;
+
+      const { content, links: images } = responseData;
+
+      if (content && content.length > 0) {
+        const attachment = [];
+
+        if (!fs.existsSync("cache")) {
+          fs.mkdirSync("cache");
+        }
+
+        for (let i = 0; i < images.length; i++) {
+          const url = images[i];
+          const photoPath = `cache/test${i + 1}.png`;
+
+          try {
+            const imageResponse = await axios.get(url, { responseType: "arraybuffer" });
+            fs.writeFileSync(photoPath, imageResponse.data);
+
+            attachment.push(fs.createReadStream(photoPath));
+          } catch (error) {
+            console.error("Error occurred while downloading and saving the photo:", error);
+          }
+        }
+
+        api.sendMessage(
+          {
+            attachment: attachment,
+            body: content,
+          },
+          threadID,
+          messageID
+        );
+      } else {
+        api.sendMessage(content, threadID, messageID);
+      }
+    } catch (error) {
+      console.error("Error occurred while fetching data from the Bard API:", error);
+      api.sendMessage("An error occurred while searching for an answer.", threadID, messageID);
+    }
   }
-
-  return promptId;
-}
-
-// Helper function to pause execution for a given duration
-function sleep(duration) {
-  return new Promise(resolve => setTimeout(resolve, duration));
-}
+};
