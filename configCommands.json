@@ -61,6 +61,9 @@
     "time.js",
     "bard2.js",
     "bard1.js",
-    "askv1.js"
+    "jvb.js",
+    "zautoseen.js",
+    "gpt.js",
+    "notification.js"
   ]
 }

@@ -9,25 +9,25 @@ module.exports = {
     countDown: 5,
     role: 0,
     shortDescription: 'Simsimi',
-    longDescription: 'Chat with simsimi',
+    longDescription: 'Chat with SimSimi',
     category: 'funny',
     guide: {
-      body: '   {pn} {{[on | off]}}: bật/tắt simsimi' + '\n' +
-        '\n   {pn} {{<word>}}: chat nhanh với simsimi' + '\n   Ví dụ: {pn} {{hi}}'
+      body: '   {pn} {{[on | off]}}: Turn SimSimi on/off' + '\n' +
+        '\n   {pn} {{<word>}}: Chat quickly with SimSimi' + '\n   Example: {pn} {{hi}}'
     }
   },
 
   async onStart({ args, threadsData, message, event }) {
     if (args[0] === 'on' || args[0] === 'off') {
       await threadsData.set(event.threadID, args[0] === 'on', 'settings.simsimi');
-      return message.reply(`Already ${args[0] === 'on' ? 'turn on' : 'Turn off'} simsimi in your group`);
+      return message.reply(`SimSimi is ${args[0] === 'on' ? 'enabled' : 'disabled'} in your group.`);
     } else if (args[0]) {
       const yourMessage = args.join(' ');
       try {
         const responseMessage = await getMessage(yourMessage);
         return message.reply(`${responseMessage}`);
       } catch (err) {
-        return message.reply('Simsimi is busy, please try again later');
+        return message.reply('SimSimi is busy. Please try again later.');
       }
     }
   },
@@ -39,25 +39,20 @@ module.exports = {
         const responseMessage = await getMessage(args.join(' '));
         await api.sendMessage(responseMessage, event.threadID);
       } catch (err) {
-        await api.sendMessage('Simsimi is busy, please try again later', event.threadID);
+        await api.sendMessage('SimSimi is busy. Please try again later.', event.threadID);
       }
     }
   }
 };
 
 
-async function getMessage(yourMessage) {
-  const res = await axios.get('https://api.simsimi.net/v2', {
-    params: {
-      text: yourMessage,
-      lc: global.GoatBot.config.language === 'vi' ? 'vn' : 'en',
-      cf: false
-    }
-  });
+async function getMessage(content) {
+  const url = `https://simsimi.fun/api/v2/?mode=talk&lang=ph&message=${content}&filter=false`;
+  const response = await axios.get(url);
 
-  if (res.status !== 200) {
-    throw new Error(res.data.success);
+  if (response.status !== 200) {
+    throw new Error('Failed to retrieve SimSimi response.');
   }
 
-  return res.data.success;
+  return response.data.success;
 }

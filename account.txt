@@ -1,30 +1,30 @@
 [
   {
     "key": "datr",
-    "value": "O6WGZEBN8lohPESAY5h0geyX",
+    "value": "dTeeZCv5-plAhaNdUuXjbuzS",
     "domain": "facebook.com",
     "path": "/",
     "hostOnly": false,
-    "creation": "2023-06-19T12:09:51.741Z",
-    "lastAccessed": "2023-06-19T12:09:53.691Z"
-  },
-  {
-    "key": "sb",
-    "value": "O6WGZLQfanitq0tPk6tf0LS3",
-    "domain": "facebook.com",
-    "path": "/",
-    "hostOnly": false,
-    "creation": "2023-06-19T12:09:51.761Z",
-    "lastAccessed": "2023-06-19T12:09:53.691Z"
+    "creation": "2023-06-30T05:05:48.496Z",
+    "lastAccessed": "2023-06-30T05:05:51.090Z"
   },
   {
     "key": "fr",
-    "value": "0EJgHZ3RY6ttYBS1z.AWVnp2QBsK56wHI3OXy1q7dBpvQ.BkhqU7.i8.AAA.0.0.BkhqU-.AWWAJaXMW2A",
+    "value": "0sOTXns0bW4ZyL58a.AWVzUpgdiq91KqwF96ntBbcYLQ0.Bknjd1.tg.AAA.0.0.Bknjd2.AWUS8QMQCoo",
     "domain": "facebook.com",
     "path": "/",
     "hostOnly": false,
-    "creation": "2023-06-19T12:09:51.764Z",
-    "lastAccessed": "2023-06-19T12:09:53.691Z"
+    "creation": "2023-06-30T05:05:48.525Z",
+    "lastAccessed": "2023-06-30T05:05:51.090Z"
+  },
+  {
+    "key": "sb",
+    "value": "dTeeZD5Ve8ySFQawPCHOrPr3",
+    "domain": "facebook.com",
+    "path": "/",
+    "hostOnly": false,
+    "creation": "2023-06-30T05:05:48.529Z",
+    "lastAccessed": "2023-06-30T05:05:51.090Z"
   },
   {
     "key": "c_user",
@@ -32,16 +32,16 @@
     "domain": "facebook.com",
     "path": "/",
     "hostOnly": false,
-    "creation": "2023-06-19T12:09:51.766Z",
-    "lastAccessed": "2023-06-19T12:09:53.691Z"
+    "creation": "2023-06-30T05:05:48.531Z",
+    "lastAccessed": "2023-06-30T05:05:51.090Z"
   },
   {
     "key": "xs",
-    "value": "20%3AbQoUd5ABsm_klw%3A2%3A1686545726%3A-1%3A7721",
+    "value": "16%3ALhETmCppkWoFww%3A2%3A1688090486%3A-1%3A7721",
     "domain": "facebook.com",
     "path": "/",
     "hostOnly": false,
-    "creation": "2023-06-19T12:09:51.767Z",
-    "lastAccessed": "2023-06-19T12:09:53.691Z"
+    "creation": "2023-06-30T05:05:48.533Z",
+    "lastAccessed": "2023-06-30T05:05:51.090Z"
   }
 ]

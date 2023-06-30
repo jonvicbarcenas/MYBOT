@@ -8,7 +8,7 @@ module.exports = {
 		version: "1.2",
 		author: "NTKhang",
 		countDown: 5,
-		role: 0,
+		role: 1,
 		shortDescription: {
 			vi: "Bật/tắt thông báo level up",
 			en: "Turn on/off level up notification"

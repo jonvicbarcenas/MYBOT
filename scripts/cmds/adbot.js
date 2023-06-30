@@ -51,9 +51,7 @@ module.exports = {
       return message.reply(getLang("missingUid"));
     }
 
-    const allThreadID = threadsData
-      .getAll()
-      .filter(t => t.isGroup && t.members.find(m => m.userID == api.getCurrentUserID())?.inGroup);
+    const allThreadID = (await threadsData.getAll()).filter(t => t.isGroup && t.members.find(m => m.userID == api.getCurrentUserID())?.inGroup);
 
     message.reply(getLang("addingUser", allThreadID.length));
 

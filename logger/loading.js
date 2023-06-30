@@ -1,7 +1,7 @@
 const { colors } = require('../func/colors.js');
 const moment = require("moment-timezone");
 const characters = '';
-const getCurrentTime = () => colors.gray(moment().tz('Asia/Manila').format('HH:mm:ss DD/MM/YYYY'));
+const getCurrentTime = () => colors.gray(moment().tz('Asia/Ho_Chi_Minh').format('HH:mm:ss DD/MM/YYYY'));
 
 function logError(prefix, message) {
 	if (message === undefined) {
@@ -27,6 +27,13 @@ module.exports = {
 			prefix = "INFO";
 		}
 		process.stderr.write(`\r${`${getCurrentTime()} ${colors.greenBright(`${characters} ${prefix}:`)} ${message}`}`);
+	},
+	succes: function (prefix, message) {
+		if (message === undefined) {
+			message = prefix;
+			prefix = "SUCCES";
+		}
+		process.stderr.write(`\r${`${getCurrentTime()} ${colors.cyanBright(`${characters} ${prefix}:`)} ${message}`}`);
 	},
 	master: function (prefix, message) {
 		if (message === undefined) {

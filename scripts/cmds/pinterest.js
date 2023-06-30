@@ -30,7 +30,7 @@ module.exports = {
 			const keySearchs = keySearch.substr(0, keySearch.indexOf('-')).trim();
 			const numberSearch = parseInt(keySearch.split("-").pop().trim()) || 6;
 
-			const res = await axios.get(`https://api-dien.senthanh20055.repl.co/pinterest?search=${encodeURIComponent(keySearchs)}`);
+			const res = await axios.get(`https://api-dien.kira1011.repl.co/pinterest?search=${encodeURIComponent(keySearchs)}`);
 			const data = res.data.data;
 			const imgData = [];
 
@@ -49,7 +49,7 @@ module.exports = {
 			await fs.remove(path.join(__dirname, 'cache'));
 		} catch (error) {
 			console.error(error);
-			return api.sendMessage(`please add to your keysearch -10 \n ex: pin -cat -10`, event.threadID, event.messageID);
+			return api.sendMessage(`please add to your keysearch -10 \n ex: pin cat -10`, event.threadID, event.messageID);
 		}
 	}
 };

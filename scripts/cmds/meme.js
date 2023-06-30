@@ -3,7 +3,7 @@ const axios = require('axios');
 module.exports = {
   config: {
     name: 'meme',
-    aliases: ['funnymeme', 'memepic'],
+    aliases: ['funnymeme', 'memepic', 'memes'],
     version: '1.0',
     author: 'JV',
     role: 0,

@@ -1,6 +1,6 @@
 const axios = require('axios');
 
-const Prefixes = [
+const Prefixesjv = [
   'ask',
   '.chi',
   '¶sammy',
@@ -27,10 +27,16 @@ const Prefixes = [
   '*ai',
 ];
 
+const Prefixes = [
+  'gpt',
+  '/gpt',
+];
+
+
 module.exports = {
   config: {
     name: 'ask',
-    aliases: ['ai'],
+    aliases: ['aiS'],
     version: '2.5',
     author: 'JV Barcenas',
     role: 0,
