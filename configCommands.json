@@ -11,7 +11,7 @@
       }
     },
     "notification": {
-      "delayPerGroup": 250
+      "delayPerGroup": 550
     },
     "rank": {
       "deltaNext": 5
@@ -62,8 +62,10 @@
     "bard2.js",
     "bard1.js",
     "jvb.js",
-    "zautoseen.js",
     "gpt.js",
-    "notification.js"
+    "nsfw.js",
+    "zautoseen.js",
+    "zpossie.js",
+    "zhentai.js"
   ]
 }

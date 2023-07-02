@@ -8,12 +8,12 @@ module.exports = {
     version: "1.0.0",
     author: "JV Barcenas",
     role: 0,
+    countDown: 5,
     shortDescription: {
       en: "Get a random hentai image",
     },
     longDescription: {
-      en:
-        "This command returns a random image using the sussy API.",
+      en: "This command returns a random image using the sussy API.",
     },
     category: "NSFW",
     guide: {
@@ -51,13 +51,18 @@ module.exports = {
       await fs.outputFile(imgPath, res.data);
       const imgData = fs.createReadStream(imgPath);
 
-      await api.sendMessage(
+      const sentMessage = await api.sendMessage(
         {
           attachment: imgData,
         },
-        event.threadID,
-        event.messageID
+        event.threadID
       );
+
+      const messageID = sentMessage.messageID;
+
+      setTimeout(async () => {
+        await api.unsendMessage(messageID);
+      }, 3000);
 
       await fs.remove(path.join(__dirname, "cache"));
     } catch (error) {

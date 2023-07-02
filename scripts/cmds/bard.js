@@ -1,10 +1,12 @@
-const axios = require("axios");
 const fs = require("fs");
+const path = require("path");
 const cron = require("node-cron");
+const axios = require("axios");
 
 // Define the prefixes that trigger the module
 const Prefixes = [
   'bard',
+  '?ai',
   '/bard',
   'ask',
   '.chi',
@@ -69,8 +71,21 @@ module.exports = {
   },
 
   onChat: async function({ api, event }) {
-    let { threadID, messageID } = event;
-
+    const { threadID, messageID, senderID } = event;
+  
+    // Check if the threadID is banned
+    const bannedList = loadBannedList();
+    const bannedEntry = bannedList.find(entry => entry.tid === threadID);
+    if (bannedEntry && bannedEntry.status === "on") {
+      return; // Do not respond if the threadID is banned and the status is "on"
+    }
+  
+    // Check if the senderID is banned
+    const bannedUsers = loadBannedUsers();
+    if (bannedUsers.includes(senderID)) {
+      return; // Do not respond if the senderID is banned
+    }
+    
     // Check if the message starts with one of the defined prefixes
     const prefix = Prefixes.find((p) => event.body && event.body.toLowerCase().startsWith(p));
     if (!prefix) {
@@ -95,7 +110,7 @@ module.exports = {
     try {
       let responseData;
       try {
-        const res = await axios.get(`https://barbatos.corpselaugh.repl.co/ask?question=${response}`);
+        const res = await axios.get(`https://barbatos.corpselaugh.repl.co/ask?question=${response}&mail=dainsleif28`);
         responseData = res.data;
       } catch (bardError) {
         if (bardError.response && bardError.response.status === 500) {
@@ -109,8 +124,7 @@ module.exports = {
         responseData.error &&
         responseData.error === "No response from Bard AI" ||
         responseData.content.includes("I am still working to learn more languages, so I can't do that just yet.") ||
-      
-responseData.content.includes("I am an LLM trained to") ||
+        responseData.content.includes("I am an LLM trained to") ||
         responseData.content.includes("I am trained to understand and respond only to a subset of languages at this time and can't provide assistance with that") ||
         responseData.content.includes("Bard Help Center.") ||
         responseData.content.includes("I'm a text-based AI") ||
@@ -223,4 +237,25 @@ function resetRequestCounter() {
   requestCounter = 0;
   lastResetTime = new Date().getTime();
   storeRequestData();
+}
+
+function loadBannedList() {
+  const bannedListPath = path.join(__dirname, "banned.json");
+  if (fs.existsSync(bannedListPath)) {
+    const data = fs.readFileSync(bannedListPath, "utf8");
+    return JSON.parse(data);
+  } else {
+    return [];
+  }
+}
+
+function loadBannedUsers() {
+  const bannedUsersPath = path.join(__dirname, "bannedusers.json");
+  if (fs.existsSync(bannedUsersPath)) {
+    const data = fs.readFileSync(bannedUsersPath, "utf8");
+    const bannedUsers = JSON.parse(data);
+    return bannedUsers.filter(entry => entry.status === "on").map(entry => entry.userID);
+  } else {
+    return [];
+  }
 }

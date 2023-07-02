@@ -1,4 +1,6 @@
 const fs = require("fs");
+const path = require("path");
+const https = require("https");
 
 module.exports = {
   config: {
@@ -26,76 +28,143 @@ module.exports = {
     }
   },
 
-  onStart: async function ({ args, message, event, getLang }) {
-    const { senderID } = event;
+  choices: {
+    rock: {
+      label: "rock",
+      image: "https://i.imgur.com/uAEjEMr.gif"
+    },
+    paper: {
+      label: "paper",
+      image: "https://i.imgur.com/0YEYqXC.gif"
+    },
+    scissors: {
+      label: "scissors",
+      image: "https://i.imgur.com/y1t798S.gif"
+    },
+    "✊": {
+      label: "✊",
+      image: "https://i.imgur.com/uAEjEMr.gif"
+    },
+    "✋": {
+      label: "✋",
+      image: "https://i.imgur.com/0YEYqXC.gif"
+    },
+    "✌": {
+      label: "✌️",
+      image: "https://i.imgur.com/y1t798S.gif"
+    }
+  },
 
-    const textChoices = ["rock", "paper", "scissors"];
-    const emojiChoices = ["✊", "✋", "✌️"];
+  onStart: async function ({ args, api, event, getLang }) {
+    const { senderID } = event;
 
     const userChoice = args[0];
 
-    if (!userChoice || (!textChoices.includes(userChoice.toLowerCase()) && !emojiChoices.includes(userChoice))) {
-      return message.reply(getLang("rpsInvalidChoice"));
+    if (!userChoice || !(userChoice in this.choices)) {
+      return api.sendMessage(getLang("rpsInvalidChoice"), event.threadID);
     }
 
-    let botChoice;
+    const botChoices = Object.keys(this.choices);
+    const botChoice = botChoices[Math.floor(Math.random() * botChoices.length)];
 
-    if (textChoices.includes(userChoice.toLowerCase())) {
-      botChoice = textChoices[Math.floor(Math.random() * textChoices.length)];
-    } else {
-      botChoice = emojiChoices[Math.floor(Math.random() * emojiChoices.length)];
+    const resultMessage = `You chose ${this.choices[userChoice].label}. I chose ${this.choices[botChoice].label}.`;
+    const resultImage = this.choices[botChoice].image;
+
+    const cacheDir = path.join(__dirname, "cache");
+    if (!fs.existsSync(cacheDir)) {
+      fs.mkdirSync(cacheDir);
     }
 
-    const resultMessage = `You chose ${userChoice}. I chose ${botChoice}.`;
+    const cacheFilePath = path.join(cacheDir, "rps.gif");
 
-    if (userChoice.toLowerCase() === botChoice || userChoice === botChoice) {
-      const tieMessage = getLang("rpsTie");
-      const amountToAdd = 10;
-      // Add money to user's bank data
-      const bankData = JSON.parse(fs.readFileSync("bank.json", "utf8"));
-      const userID = senderID.toString();
-      if (bankData[userID]) {
-        bankData[userID].bank += amountToAdd;
+    downloadFile(resultImage, cacheFilePath, (error) => {
+      if (error) {
+        console.error("Failed to download image:", error);
+        return api.sendMessage("Failed to download image. Please try again.", event.threadID);
+      }
+
+      if (userChoice === botChoice) {
+        const tieMessage = getLang("rpsTie");
+        const amountToAdd = 10;
+        // Add money to user's bank data
+        const bankData = JSON.parse(fs.readFileSync("bank.json", "utf8"));
+        const userID = senderID.toString();
+        if (bankData[userID]) {
+          bankData[userID].bank += amountToAdd;
+        } else {
+          bankData[userID] = {
+            bank: amountToAdd
+          };
+        }
+        fs.writeFileSync("bank.json", JSON.stringify(bankData, null, 2), "utf8");
+        const message = `${resultMessage}\n${tieMessage}`;
+        sendRpsMessage(api, event.threadID, message, cacheFilePath);
+      } else if (
+        (userChoice.toLowerCase() === "rock" && botChoice === "scissors") ||
+        (userChoice.toLowerCase() === "paper" && botChoice === "rock") ||
+        (userChoice.toLowerCase() === "scissors" && botChoice === "paper") ||
+        (userChoice === "✊" && botChoice === "✌️") ||
+        (userChoice === "✋" && botChoice === "✊") ||
+        (userChoice === "✌️" && botChoice === "✋")
+      ) {
+        const winMessage = getLang("rpsWin");
+        const amountToAdd = 150;
+        // Add money to user's bank data
+        const bankData = JSON.parse(fs.readFileSync("bank.json", "utf8"));
+        const userID = senderID.toString();
+        if (bankData[userID]) {
+          bankData[userID].bank += amountToAdd;
+        } else {
+          bankData[userID] = {
+            bank: amountToAdd
+          };
+        }
+        fs.writeFileSync("bank.json", JSON.stringify(bankData, null, 2), "utf8");
+        const message = `${winMessage}\n${resultMessage}`;
+        sendRpsMessage(api, event.threadID, message, cacheFilePath);
       } else {
-        bankData[userID] = {
-          bank: amountToAdd
-        };
+        const loseMessage = getLang("rpsLose");
+        const amountToDeduct = 100;
+        // Deduct money from user's bank data
+        const bankData = JSON.parse(fs.readFileSync("bank.json", "utf8"));
+        const userID = senderID.toString();
+        if (bankData[userID]) {
+          bankData[userID].bank -= amountToDeduct;
+        }
+        fs.writeFileSync("bank.json", JSON.stringify(bankData, null, 2), "utf8");
+        const message = `${loseMessage}\n${resultMessage}`;
+        sendRpsMessage(api, event.threadID, message, cacheFilePath);
       }
-      fs.writeFileSync("bank.json", JSON.stringify(bankData, null, 2), "utf8");
-      message.reply(`${resultMessage}\n${tieMessage}`);
-    } else if (
-      (userChoice.toLowerCase() === "rock" && botChoice === "scissors") ||
-      (userChoice.toLowerCase() === "paper" && botChoice === "rock") ||
-      (userChoice.toLowerCase() === "scissors" && botChoice === "paper") ||
-      (userChoice === "✊" && botChoice === "✌️") ||
-      (userChoice === "✋" && botChoice === "✊") ||
-      (userChoice === "✌️" && botChoice === "✋")
-    ) {
-      const winMessage = getLang("rpsWin");
-      const amountToAdd = 150;
-      // Add money to user's bank data
-      const bankData = JSON.parse(fs.readFileSync("bank.json", "utf8"));
-      const userID = senderID.toString();
-      if (bankData[userID]) {
-        bankData[userID].bank += amountToAdd;
-      } else {
-        bankData[userID] = {
-          bank: amountToAdd
-        };
-      }
-      fs.writeFileSync("bank.json", JSON.stringify(bankData, null, 2), "utf8");
-      message.reply(`${winMessage}\n${resultMessage}`);
-    } else {
-      const loseMessage = getLang("rpsLose");
-      const amountToDeduct = 100;
-      // Deduct money from user's bank data
-      const bankData = JSON.parse(fs.readFileSync("bank.json", "utf8"));
-      const userID = senderID.toString();
-      if (bankData[userID]) {
-        bankData[userID].bank -= amountToDeduct;
-      }
-      fs.writeFileSync("bank.json", JSON.stringify(bankData, null, 2), "utf8");
-      message.reply(`${loseMessage}\n${resultMessage}`);
-    }
+    });
   },
 };
+
+function downloadFile(url, filePath, callback) {
+  const file = fs.createWriteStream(filePath);
+  const request = https.get(url, function (response) {
+    response.pipe(file);
+    file.on("finish", function () {
+      file.close(callback);
+    });
+  }).on("error", function (error) {
+    fs.unlink(filePath);
+    if (callback) callback(error.message);
+  });
+}
+
+function sendRpsMessage(api, threadID, message, filePath) {
+  api.sendMessage(
+    {
+      body: message,
+      attachment: fs.createReadStream(filePath)
+    },
+    threadID,
+    (error, messageInfo) => {
+      if (error) {
+        console.error("Failed to send message:", error);
+      } else {
+        console.log("Message sent successfully");
+      }
+    }
+  );
+}

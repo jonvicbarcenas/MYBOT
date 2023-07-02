@@ -2,50 +2,155 @@
   {
     "time": "12:00 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Bishoujo Senshi Sailor Moon Cosmos Movie 2",
+    "animeTitle": "Ryza no Atelier: Tokoyami no Joou to Himitsu no Kakurega",
     "episode": "1",
     "status": "already updated"
   },
   {
-    "time": "12:00 AM",
+    "time": "12:55 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Sore Ike! Anpanman Roboly to Pokapoka Present",
+    "animeTitle": "EDENS ZERO Season 2",
+    "episode": "14",
+    "status": "already updated"
+  },
+  {
+    "time": "1:00 AM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "AYAKA",
     "episode": "1",
     "status": "already updated"
   },
   {
-    "time": "12:00 AM",
+    "time": "1:30 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Tenchi Muyou! GXP: Paradise Shidou-hen",
-    "episode": "2",
+    "animeTitle": "Uchi no Kaisha no Chiisai Senpai no Hanashi",
+    "episode": "1",
     "status": "already updated"
   },
   {
-    "time": "7:40 AM",
+    "time": "2:00 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Chiikawa",
-    "episode": "78",
+    "animeTitle": "Jitsu wa Ore, Saikyou deshita?",
+    "episode": "1",
     "status": "already updated"
   },
   {
-    "time": "10:55 AM",
+    "time": "7:30 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Sore Ike! Anpanman",
-    "episode": "1626",
+    "animeTitle": "Yu☆Gi☆Oh! GO RUSH!!",
+    "episode": "65",
     "status": "already updated"
   },
   {
-    "time": "6:40 PM",
+    "time": "8:30 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Fushigi Dagashiya Zenitendou",
-    "episode": "95",
+    "animeTitle": "Duel Masters Win: Duel Wars",
+    "episode": "13",
+    "status": "already updated"
+  },
+  {
+    "time": "8:30 AM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Hirogaru Sky! Precure",
+    "episode": "22",
+    "status": "already updated"
+  },
+  {
+    "time": "9:00 AM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Tousouchuu: Great Mission",
+    "episode": "13",
+    "status": "already updated"
+  },
+  {
+    "time": "9:30 AM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "One Piece",
+    "episode": "1067",
+    "status": "already updated"
+  },
+  {
+    "time": "11:00 AM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Doupo Cangqiong: Nian Fan",
+    "episode": "51",
+    "status": "already updated"
+  },
+  {
+    "time": "3:30 PM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Rhapsody",
+    "episode": "1",
     "status": "upcoming"
   },
   {
-    "time": "7:19 PM",
+    "time": "4:55 PM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Ao no Orchestra: 5-bu de Tanoshii Classic",
+    "episode": "11",
+    "status": "upcoming"
+  },
+  {
+    "time": "5:00 PM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Ao no Orchestra",
+    "episode": "13",
+    "status": "upcoming"
+  },
+  {
+    "time": "5:00 PM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Kidou Senshi Gundam: Suisei no Majo Season 2",
+    "episode": "12",
+    "status": "upcoming"
+  },
+  {
+    "time": "6:00 PM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Chibi Maruko-chan (1995)",
+    "episode": "1395",
+    "status": "upcoming"
+  },
+  {
+    "time": "6:00 PM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Holo no Graffiti",
+    "episode": "215",
+    "status": "upcoming"
+  },
+  {
+    "time": "6:00 PM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Puzzle & Dragon",
+    "episode": "262",
+    "status": "upcoming"
+  },
+  {
+    "time": "6:30 PM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Sazae-san",
+    "episode": "2689",
+    "status": "upcoming"
+  },
+  {
+    "time": "7:00 PM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Fate/strange Fake -Whispers of Dawn-",
+    "episode": "1",
+    "status": "upcoming"
+  },
+  {
+    "time": "7:27 PM",
     "cronExpression": "Invalid DateTime * * *",
     "animeTitle": "Okashi na Tensei Mini Anime",
-    "episode": "8",
+    "episode": "10",
+    "status": "upcoming"
+  },
+  {
+    "time": "11:00 PM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Genjitsu no Yohane -SUNSHINE in the MIRROR-",
+    "episode": "2",
     "status": "upcoming"
   }
 ]

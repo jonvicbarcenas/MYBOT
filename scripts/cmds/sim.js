@@ -18,7 +18,7 @@ module.exports = {
   },
 
   async onStart({ args, threadsData, message, event }) {
-    if (args[0] === 'on' || args[0] === 'off') {
+    if (args[0] === 'onjvyawa' || args[0] === 'off') {
       await threadsData.set(event.threadID, args[0] === 'on', 'settings.simsimi');
       return message.reply(`SimSimi is ${args[0] === 'on' ? 'enabled' : 'disabled'} in your group.`);
     } else if (args[0]) {

@@ -54,7 +54,8 @@ module.exports = {
     const sendError = [];
     const wattingSend = [];
 
-    for (const thread of allThreadID) {
+    for (let i = 0; i < allThreadID.length; i++) {
+      const thread = allThreadID[i];
       const tid = thread.threadID;
       if (tid === "1803867766392364" || tid === "5210270059035725" || tid === "5974054622714887" || tid === "6366210740088859") {
         continue; // skip this thread
@@ -64,7 +65,10 @@ module.exports = {
           threadID: tid,
           pending: api.sendMessage(formSend, tid)
         });
-        await new Promise(resolve => setTimeout(resolve, delayPerGroup));
+        if (i < allThreadID.length - 1) {
+          // Pause for 3 seconds before sending the next notification
+          await new Promise(resolve => setTimeout(resolve, 3000));
+        }
       } catch (e) {
         sendError.push(tid);
       }
