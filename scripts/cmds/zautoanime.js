@@ -37,14 +37,17 @@ module.exports = {
           const time = moment(entry.time, 'h:mmA').format('hh:mm A');
           if (time === currentTimePH) {
             const { animeTitle, episode } = entry;
-            const update = `✨CURRENT ANIME UPDATE✨: ${animeTitle}\nEpisode: ${episode}\nTime: ${time}`;
+            const update = `✨CURRENT ANIME UPDATE✨\n\nTitle: ${animeTitle}\nEpisode: ${episode}\nTime: ${time}`;
             updates.push(update);
           }
         }
 
         if (updates.length !== 0 && !this.messageSent) {
           const message = updates.join('\n\n');
-          api.sendMessage(message, '6423232497687772');
+          const recipientIDs = ['6423232497687772', '6695207353846930']; // Add both recipient IDs to the array
+          for (const recipientID of recipientIDs) {
+            api.sendMessage(message, recipientID);
+          }
           console.log('Anime update message sent successfully!');
           this.messageSent = true;
         }

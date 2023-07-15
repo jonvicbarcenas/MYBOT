@@ -3,7 +3,7 @@ const moment = require("moment-timezone");
 module.exports = {
 	config: {
 		name: "daily",
-		version: "1.0",
+		version: "1.1",
 		author: "NTKhang",
 		countDown: 5,
 		role: 0,
@@ -74,13 +74,12 @@ module.exports = {
 			return message.reply(msg);
 		}
 
-		const dateTime = moment.tz("Asia/Manila").format("DD/MM/YYYY");
+		const dateTime = moment.tz("Asia/Ho_Chi_Minh").format("DD/MM/YYYY");
 		const date = new Date();
 		const currentDay = date.getDay(); // 0: sunday, 1: monday, 2: tuesday, 3: wednesday, 4: thursday, 5: friday, 6: saturday
 		const { senderID } = event;
 
 		const userData = await usersData.get(senderID);
-		console.log(userData);
 		if (userData.data.lastTimeGetReward === dateTime)
 			return message.reply(getLang("alreadyReceived"));
 

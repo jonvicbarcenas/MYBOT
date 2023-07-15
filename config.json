@@ -1,7 +1,7 @@
 {
   "facebookAccount": {
     "email": "dainsleif28",
-    "password": "Huayinabella",
+    "password": "Huayinabellat",
     "2FASecret": "",
     "proxy": null,
     "userAgent": "Mozilla/5.0 (Linux; Android 12; M2102J20SG) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.0.0 Mobile Safari/537.36",
@@ -21,9 +21,9 @@
     "100065473935277",
     "100081066604344",
     "100035299490392",
-    "100028282475801",
     "100072230268215",
-    "100083660477552"
+    "100083660477552",
+    "100028282475801"
   ],
   "nickNameBot": "Dainsleif",
   "prefix": "/",
@@ -141,7 +141,7 @@
     "waitingForCommand": true,
     "adminOnly": false,
     "threadBanned": false,
-    "userBanned": false,
+    "userBanned": true,
     "needRoleToUseCmd": false
   }
 }

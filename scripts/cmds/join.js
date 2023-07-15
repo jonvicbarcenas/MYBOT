@@ -3,7 +3,7 @@ module.exports = {
     name: "joinbotgroup",
     aliases: ['joingp', 'joingroup', 'join', 'joinbotgp'],
     version: "1.4",
-    author: "NTKhang",
+    author: "jvb",
     countDown: 5,
     role: 0,
     shortDescription: {

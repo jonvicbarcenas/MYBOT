@@ -26,7 +26,8 @@ module.exports = {
       missingNickname: "Please enter the new nickname for the bot",
       changingNickname: "Start changing bot nickname to '%1' in %2 group chats",
       errorChangingNickname: "An error occurred while changing nickname in %1 groups:\n%2",
-      successMessage: "✅ Successfully changed nickname in all group chats to '%1'"
+      successMessage: "✅ Successfully changed nickname in all group chats to '%1'",
+      sendingNotification: "Sending notification to %1 group chats."
     }
   },
 
@@ -37,8 +38,8 @@ module.exports = {
       return message.reply(getLang("invalidInput"));
     }
 
-    const allGroupThreads = threadsData.getAll().filter(thread => thread.isGroup);
-    const threadIds = allGroupThreads.map(thread => thread.threadID);
+    const allThreadID = (await threadsData.getAll()).filter(t => t.isGroup && t.members.find(m => m.userID == api.getCurrentUserID())?.inGroup);
+    const threadIds = allThreadID.map(thread => thread.threadID);
 
     const nicknameChangePromises = threadIds.map(async threadId => {
       try {
@@ -59,5 +60,6 @@ module.exports = {
     } else {
       message.reply(getLang("partialSuccessMessage", newNickname, failedThreads.join(", ")));
     }
+    message.reply(getLang("sendingNotification", allThreadID.length));
   }
 };

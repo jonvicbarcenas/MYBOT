@@ -1,7 +1,8 @@
 {
   "commandBanned": {},
   "envGlobal": {
-    "weatherApiKey": "d7e795ae6a0d44aaa8abb1a0a7ac19e4"
+    "weatherApiKey": "d7e795ae6a0d44aaa8abb1a0a7ac19e4",
+    "goatbotApikey": ""
   },
   "envCommands": {
     "daily": {
@@ -48,6 +49,13 @@
     },
     "quiz": {
       "reward": 1000
+    },
+    "acp": {},
+    "animequiz": {
+      "reward": 1000
+    },
+    "bbbquiz": {
+      "reward": 1000
     }
   },
   "envEvents": {
@@ -63,9 +71,11 @@
     "bard1.js",
     "jvb.js",
     "gpt.js",
-    "nsfw.js",
+    "draw.js",
+    "pastel.js",
     "zautoseen.js",
-    "zpossie.js",
-    "zhentai.js"
+    "wayen.js",
+    "adbot.js",
+    "zfilswear.js"
   ]
 }

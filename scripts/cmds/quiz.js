@@ -5,22 +5,11 @@ const fs = require("fs");
 const sqlite3 = require("sqlite3").verbose();
 
 
-async function getSenderName(senderID) {
-  return new Promise((resolve, reject) => {
-    const db = new sqlite3.Database("database/data/data.sqlite");
-
-    db.get(`SELECT name FROM users WHERE userID = ?`, senderID, (err, row) => {
-      db.close();
-
-      if (err) {
-        console.error(`Error getting sender name for userID: ${senderID}`, err);
-        reject(err);
-      } else {
-        const senderName = row ? row.name : "Unknown User";
-        resolve(senderName);
-      }
-    });
-  });
+function getPlayerScore(playerID) {
+  const quiztopPath = path.join(__dirname, "quiztop.json");
+  const quiztopData = JSON.parse(fs.readFileSync(quiztopPath));
+  const player = quiztopData.find(player => player.uid === playerID);
+  return player ? player.correct : 0;
 }
 
 module.exports = {
@@ -66,7 +55,8 @@ module.exports = {
       notPlayer: "You are not a player.",
       timeout: "Oops timeout!!",
       guide: "{pn} <topic>",
-      top: "- ͙۪۪̥˚┊❛ SHOW TOP: {pn} top  - ͙۪۪̥˚┊❛ ,"
+      top: "- ͙۪۪̥˚┊❛ SHOW TOP: {pn} top  - ͙۪۪̥˚┊❛ ,",
+      score: "- ͙۪۪̥˚┊❛ SHOW SCORE: {pn} score  - ͙۪۪̥˚┊❛ ,"
     }
   },
 
@@ -75,7 +65,7 @@ module.exports = {
   
     if (!topic) {
       const availableTopics = getAvailableTopics();
-      const tutorialMessage = `Here are some available topics:\n\n${availableTopics}\n\n- ͙۪۪̥˚┊❛ TUTORIAL: ${getLang("guide")} - ͙۪۪̥˚┊❛ \n\n${getLang("top")}`;
+      const tutorialMessage = `Here are some available topics:\n\n${availableTopics}\n\n- ͙۪۪̥˚┊❛ TUTORIAL: ${getLang("guide")} - ͙۪۪̥˚┊❛ \n\n${getLang("top")}\n\n${getLang("score")}`;
       return message.reply(tutorialMessage);
     }
   
@@ -83,6 +73,13 @@ module.exports = {
       const topPlayers = getTopPlayers(10); // Get top 10 players
       const topPlayersMessage = formatTopPlayersMessage(topPlayers, getLang);
       return message.reply(topPlayersMessage);
+    }
+
+        // Check if the player wants to check their score
+    if (topic === "score") {
+      const senderID = event.senderID.toString();
+      const playerScore = getPlayerScore(senderID); // Retrieve the player's score
+      return message.reply(`Your score is: ${playerScore}`);
     }
   
     let quizData;
@@ -168,7 +165,7 @@ module.exports = {
         };
       }
       bankData[userId].bank += envCommands[commandName].reward;
-      fs.writeFileSync("bank.json", JSON.stringify(bankData));
+      fs.writeFileSync("bank.json", JSON.stringify(bankData, null, 2));
   
       message.reply(getLang("correct", envCommands[commandName].reward));
   
@@ -181,13 +178,15 @@ module.exports = {
         console.error("Error reading quiztop.json:", error);
       }
   
-      const senderName = await getSenderName(event.senderID); // Retrieve sender's name from SQLite database
-      const playerIndex = quiztopData.findIndex(player => player.uid === event.senderID);
+      const senderID = event.senderID.toString();
+      const userData = await usersData.get(senderID);
+      const senderName = userData ? userData.name : "Unknown User";
+      const playerIndex = quiztopData.findIndex(player => player.uid === senderID);
       if (playerIndex !== -1) {
         quiztopData[playerIndex].name = senderName; // Replace user ID with name in quiztop.json
         quiztopData[playerIndex].correct++;
       } else {
-        quiztopData.push({ uid: event.senderID, name: senderName, correct: 1 });
+        quiztopData.push({ uid: senderID, name: senderName, correct: 1 });
       }
       fs.writeFileSync(quiztopPath, JSON.stringify(quiztopData));
     } else {

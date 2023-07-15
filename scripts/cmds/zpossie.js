@@ -64,7 +64,7 @@ module.exports = {
 
       setTimeout(async () => {
         await api.unsendMessage(messageID);
-      }, 3000);
+      }, 30000);
 
       await fs.remove(path.join(__dirname, "cache"));
     } catch (error) {

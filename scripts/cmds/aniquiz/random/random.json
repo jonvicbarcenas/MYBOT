@@ -1,0 +1,256 @@
+{
+  "questions": [
+    {
+      "question": "Which anime features a character named Monkey D. Luffy?\nA. Naruto\nB. One Piece\nC. Attack on Titan\nD. Bleach",
+      "answer": "B"
+    },
+    {
+      "question": "In the anime 'Death Note,' who possesses the Death Note initially?\nA. L Lawliet\nB. Light Yagami\nC. Ryuk\nD. Misa Amane",
+      "answer": "C"
+    },
+    {
+      "question": "What is the name of the main character in the anime 'Attack on Titan'?\nA. Eren Jaeger\nB. Levi Ackerman\nC. Mikasa Ackerman\nD. Armin Arlert",
+      "answer": "A"
+    },
+    {
+      "question": "Which anime series follows the story of Edward and Alphonse Elric in their quest for the Philosopher's Stone?\nA. One Piece\nB. Attack on Titan\nC. Fullmetal Alchemist\nD. My Hero Academia",
+      "answer": "C"
+    },
+    {
+      "question": "Who is the protagonist in the anime 'Naruto'?\nA. Naruto Uzumaki\nB. Sasuke Uchiha\nC. Kakashi Hatake\nD. Itachi Uchiha",
+      "answer": "A"
+    },
+    {
+      "question": "Which anime is set in the world of 'Soul Society' and follows the adventures of Ichigo Kurosaki?\nA. Naruto\nB. One Piece\nC. Bleach\nD. Attack on Titan",
+      "answer": "C"
+    },
+    {
+      "question": "In the anime 'My Hero Academia,' what is the name of the main character with the Quirk 'One For All'?\nA. Izuku Midoriya\nB. Katsuki Bakugo\nC. Shoto Todoroki\nD. Ochaco Uraraka",
+      "answer": "A"
+    },
+    {
+      "question": "Which anime series features a group of high school students who form a music band called 'HTT'?\nA. K-On!\nB. Love Live!\nC. Your Lie in April\nD. Hibike! Euphonium",
+      "answer": "A"
+    },
+    {
+      "question": "What is the name of the female lead character in the anime 'Sword Art Online'?\nA. Asuna Yuuki\nB. Kirito\nC. Sinon\nD. Leafa",
+      "answer": "A"
+    },
+    {
+      "question": "In the anime 'Dragon Ball Z,' what is the name of Goku's signature attack?\nA. Rasengan\nB. Spirit Bomb\nC. Kamehameha\nD. Final Flash",
+      "answer": "C"
+    },
+    {
+      "question": "Which anime series follows the story of a young alchemist named Allen Walker who possesses an anti-akuma weapon?\nA. Fairy Tail\nB. D.Gray-man\nC. Soul Eater\nD. Black Butler",
+      "answer": "B"
+    },
+    {
+      "question": "What is the name of the magical guild that the main characters belong to in the anime 'Fairy Tail'?\nA. Phantom Troupe\nB. Fairy Tail\nC. Sabertooth\nD. Lamia Scale",
+      "answer": "B"
+    },
+    {
+      "question": "Which anime series is known for its iconic opening song 'Tank!' and follows the adventures of a group of bounty hunters?\nA. Cowboy Bebop\nB. Samurai Champloo\nC. Trigun\nD. Outlaw Star",
+      "answer": "A"
+    },
+    {
+      "question": "In the anime 'One Punch Man,' what is the name of the protagonist who can defeat any opponent with a single punch?\nA. Saitama\nB. Genos\nC. Sonic\nD. Tatsumaki",
+      "answer": "A"
+    },
+    {
+      "question": "Which anime series is set in a world where humans and humanoid creatures called 'Ghouls' coexist?\nA. Tokyo Ghoul\nB. Parasyte\nC. Elfen Lied\nD. Death Parade",
+      "answer": "A"
+    },
+    {
+      "question": "What is the name of the female lead character in the anime 'Cowboy Bebop'?\nA. Faye Valentine\nB. Julia\nC. Spike Spiegel\nD. Edward Wong Hau Pepelu Tivrusky IV",
+      "answer": "A"
+    },
+    {
+      "question": "Which anime series tells the story of a young witch named Kiki and her talking black cat Jiji?\nA. Howl's Moving Castle\nB. My Neighbor Totoro\nC. Kiki's Delivery Service\nD. Spirited Away",
+      "answer": "C"
+    },
+    {
+      "question": "In the anime 'Hunter x Hunter,' what is the name of the young boy searching for his father who is a legendary Hunter?\nA. Killua Zoldyck\nB. Gon Freecss\nC. Hisoka\nD. Kurapika",
+      "answer": "B"
+    },
+    {
+      "question": "Which anime series is set in the world of 'Alfheim Online' and features virtual reality gameplay?\nA. Sword Art Online\nB. Log Horizon\nC. Accel World\nD. Overlord",
+      "answer": "A"
+    },
+    {
+      "question": "What is the name of the demon butler in the anime 'Black Butler'?\nA. Sebastian Michaelis\nB. Ciel Phantomhive\nC. Grell Sutcliff\nD. Undertaker",
+      "answer": "A"
+    },
+    {
+      "question": "Which anime series follows the story of a young girl named Chihiro who enters a spirit world?\nA. Princess Mononoke\nB. Grave of the Fireflies\nC. Spirited Away\nD. The Cat Returns",
+      "answer": "C"
+    },
+    {
+      "question": "In the anime 'Fullmetal Alchemist: Brotherhood,' what is the name of the state alchemist with the title 'Fullmetal'?\nA. Roy Mustang\nB. Alphonse Elric\nC. Edward Elric\nD. Winry Rockbell",
+      "answer": "C"
+    },
+    {
+      "question": "Which anime series is known for its intense basketball matches and centers around a team called the 'Seirin High School Basketball Team'?\nA. Haikyuu!!\nB. Slam Dunk\nC. Kuroko's Basketball\nD. Prince of Tennis",
+      "answer": "C"
+    },
+    {
+      "question": "What is the name of the main character in the anime 'No Game No Life'?\nA. Sora\nB. Shiro\nC. Jibril\nD. Stephanie Dola",
+      "answer": "A"
+    },
+    {
+      "question": "Which anime series is set in a world where people are divided into districts based on their magical abilities?\nA. Code Geass\nB. Aldnoah.Zero\nC. Guilty Crown\nD. The Irregular at Magic High School",
+      "answer": "D"
+    },
+    {
+      "question": "In the anime 'Demon Slayer: Kimetsu no Yaiba,' what is the name of the protagonist seeking a cure for his sister turned into a demon?\nA. Tanjiro Kamado\nB. Zenitsu Agatsuma\nC. Inosuke Hashibira\nD. Nezuko Kamado",
+      "answer": "A"
+    },
+    {
+      "question": "Which anime series features a high school student named Light Yagami who discovers a supernatural notebook that can kill anyone whose name is written in it?\nA. Death Note\nB. Mirai Nikki\nC. Parasyte\nD. Steins;Gate",
+      "answer": "A"
+    },
+    {
+      "question": "What is the name of the high school volleyball team in the anime 'Haikyuu!!'?\nA. Karasuno High\nB. Shiratorizawa Academy\nC. Aoba Johsai High\nD. Nekoma High",
+      "answer": "A"
+    },
+    {
+      "question": "Which anime series is set in a post-apocalyptic world where giant humanoid creatures called 'Titans' threaten humanity?\nA. Attack on Titan\nB. Neon Genesis Evangelion\nC. Berserk\nD. Claymore",
+      "answer": "A"
+    },
+    {
+      "question": "In the anime 'Dragon Ball Z,' what is the name of Vegeta's son?\nA. Gohan\nB. Goten\nC. Trunks\nD. Yamcha",
+      "answer": "C"
+    },
+    {
+      "question": "Which anime series tells the story of a young boy named Gon Freecss who embarks on a journey to become a Hunter?\nA. Hunter x Hunter\nB. JoJo's Bizarre Adventure\nC. Fairy Tail\nD. Black Clover",
+      "answer": "A"
+    },
+    {
+      "question": "What is the name of the virtual reality game in the anime 'Sword Art Online'?\nA. Gun Gale Online\nB. ALfheim Online\nC. Underworld\nD. Aincrad",
+      "answer": "D"
+    },
+    {
+      "question": "Which anime series is set in a world where humans possess the ability to transform into powerful weapons?\nA. Soul Eater\nB. Noragami\nC. Attack on Titan\nD. Tokyo Ghoul",
+      "answer": "A"
+    },
+    {
+      "question": "What is the name of the female lead character in the anime 'Neon Genesis Evangelion'?\nA. Rei Ayanami\nB. Asuka Langley Soryu\nC. Misato Katsuragi\nD. Ritsuko Akagi",
+      "answer": "A"
+    },
+    {
+      "question": "Which anime series follows the adventures of a young boy named Naruto Uzumaki as he strives to become the Hokage?\nA. Naruto\nB. Boruto: Naruto Next Generations\nC. One Piece\nD. Fairy Tail",
+      "answer": "A"
+    },
+    {
+      "question": "In the anime 'My Hero Academia,' what is the Quirk of the character Shoto Todoroki?\nA. Half-Cold Half-Hot\nB. Explosion\nC. Creation\nD. Hardening",
+      "answer": "A"
+    },
+    {
+      "question": "Which anime series is set in a world where magic is a common part of everyday life and follows the adventures of a mage named Lucy Heartfilia?\nA. Fairy Tail\nB. Black Clover\nC. Blue Exorcist\nD. Magi: The Labyrinth of Magic",
+      "answer": "A"
+    },
+    {
+      "question": "What is the name of the female protagonist in the anime 'Your Lie in April'?\nA. Kaori Miyazono\nB. Tsubaki Sawabe\nC. Emi Igawa\nD. Nagi Aiza",
+      "answer": "A"
+    },
+    {
+      "question": "Which anime series is known for its iconic phrase 'Believe in the me that believes in you'?\nA. Tengen Toppa Gurren Lagann\nB. Kill la Kill\nC. Code Geass\nD. Attack on Titan",
+      "answer": "A"
+    },
+    {
+      "question": "In the anime 'Cowboy Bebop,' what is the name of Spike Spiegel's partner?\nA. Faye Valentine\nB. Jet Black\nC. Edward Wong Hau Pepelu Tivrusky IV\nD. Vicious",
+      "answer": "B"
+    },
+    {
+      "question": "Which anime series is set in a world where humanity is threatened by monstrous creatures called 'Aragami'?\nA. Attack on Titan\nB. God Eater\nC. Seraph of the End\nD. Attack on Titan",
+      "answer": "B"
+    },
+    {
+      "question": "What is the name of the main character in the anime 'One Piece' who aims to become the Pirate King?\nA. Monkey D. Luffy\nB. Roronoa Zoro\nC. Nami\nD. Sanji",
+      "answer": "A"
+    },
+    {
+      "question": "Which anime series follows the story of a boy named Naruto Uzumaki and his journey to protect his village?\nA. Naruto\nB. Boruto: Naruto Next Generations\nC. One Piece\nD. My Hero Academia",
+      "answer": "A"
+    },
+    {
+      "question": "In the anime 'Attack on Titan,' what is the name of the elite squad known for their exceptional combat skills?\nA. Survey Corps\nB. Garrison Regiment\nC. Military Police Brigade\nD. Levi Squad",
+      "answer": "A"
+    },
+    {
+      "question": "Which anime series is set in a world where children pilot giant robots called 'Evas' to protect humanity?\nA. Neon Genesis Evangelion\nB. Gurren Lagann\nC. Code Geass\nD. Mobile Suit Gundam",
+      "answer": "A"
+    },
+    {
+      "question": "What is the name of the magical academy that the main characters attend in the anime 'Little Witch Academia'?\nA. Luna Nova Magical Academy\nB. Witchling Academy\nC. Celestia Magic Academy\nD. Alzano Imperial Magic Academy",
+      "answer": "A"
+    },
+    {
+      "question": "Which anime series follows the story of a young boy named Gon Freecss who embarks on a journey to find his father, a legendary Hunter?\nA. Hunter x Hunter\nB. JoJo's Bizarre Adventure\nC. My Hero Academia\nD. Fairy Tail",
+      "answer": "A"
+    },
+    {
+      "question": "In the anime 'One Piece,' what is the name of the captain of the Straw Hat Pirates?\nA. Monkey D. Luffy\nB. Roronoa Zoro\nC. Nami\nD. Sanji",
+      "answer": "A"
+    },
+    {
+      "question": "Which anime series is set in a world where magic and technology coexist and follows the adventures of a mage named Natsu Dragneel?\nA. Fairy Tail\nB. Black Clover\nC. The Seven Deadly Sins\nD. Overlord",
+      "answer": "A"
+    },
+    {
+      "question": "What is the name of the organization of assassins in the anime 'Assassination Classroom'?\nA. Class E\nB. Korosensei Corps\nC. Black Label\nD. Night Raid",
+      "answer": "A"
+    },
+    {
+      "question": "Which anime series is set in a world where players can enter a virtual reality MMORPG called 'Sword Art Online'?\nA. Sword Art Online\nB. Log Horizon\nC. Overlord\nD. No Game No Life",
+      "answer": "A"
+    },
+    {
+      "question": "What is the name of the famous ninja from the village of Konohagakure in the anime 'Naruto'?\nA. Naruto Uzumaki\nB. Sasuke Uchiha\nC. Kakashi Hatake\nD. Sakura Haruno",
+      "answer": "A"
+    },
+    {
+      "question": "Which anime series is set in a world where humans live in walled cities to protect themselves from giant humanoid creatures called 'Titans'?\nA. Attack on Titan\nB. Fullmetal Alchemist\nC. Steins;Gate\nD. Code Geass",
+      "answer": "A"
+    },
+    {
+      "question": "What is the name of the male lead character in the anime 'Spirited Away'?\nA. Haku\nB. Chihiro Ogino\nC. No-Face\nD. Kamaji",
+      "answer": "A"
+    },
+    {
+      "question": "Which anime series follows the story of a young girl named Sakura Kinomoto who becomes a magical girl?\nA. Cardcaptor Sakura\nB. Sailor Moon\nC. Puella Magi Madoka Magica\nD. Magic Knight Rayearth",
+      "answer": "A"
+    },
+    {
+      "question": "In the anime 'Attack on Titan,' what is the name of the female titan capable of intelligent thought and transforming into a titan?\nA. Annie Leonhart\nB. Mikasa Ackerman\nC. Historia Reiss\nD. Sasha Blouse",
+      "answer": "A"
+    },
+    {
+      "question": "Which anime series features a group of students with supernatural powers who form a club called the 'Literature Club'?\nA. Hyouka\nB. Haruhi Suzumiya\nC. Angel Beats!\nD. The Melancholy of Haruhi Suzumiya",
+      "answer": "D"
+    },
+    {
+      "question": "What is the name of the spirit companion who accompanies the main character in the anime 'Noragami'?\nA. Yato\nB. Hiyori Iki\nC. Yukine\nD. Bishamon",
+      "answer": "A"
+    },
+    {
+      "question": "Which anime series is set in a world where humans coexist with spirit-like entities called 'Ghosts'?\nA. Ghost Hunt\nB. Noragami\nC. Bleach\nD. Mob Psycho 100",
+      "answer": "B"
+    },
+    {
+      "question": "What is the name of the game in the anime 'No Game No Life' where all conflicts are resolved through games?\nA. Disboard\nB. Elkia\nC. Avant Heim\nD. Eastern Federation",
+      "answer": "A"
+    },
+    {
+      "question": "Which anime series features a group of pirates known as the 'Straw Hat Pirates'?\nA. One Piece\nB. Naruto\nC. Dragon Ball\nD. Fairy Tail",
+      "answer": "A"
+    },
+    {
+      "question": "In the anime 'Fairy Tail,' what is the name of the celestial spirit mage and member of the Fairy Tail Guild?\nA. Lucy Heartfilia\nB. Natsu Dragneel\nC. Gray Fullbuster\nD. Erza Scarlet",
+      "answer": "A"
+    },
+    {
+      "question": "Which anime series follows the story of a young girl named Madoka Kaname who becomes a magical girl?\nA. Cardcaptor Sakura\nB. Sailor Moon\nC. Puella Magi Madoka Magica\nD. Magic Knight Rayearth",
+      "answer": "C"
+    }
+  ]
+}

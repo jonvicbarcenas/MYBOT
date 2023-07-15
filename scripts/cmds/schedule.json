@@ -1,156 +1,142 @@
 [
   {
-    "time": "12:00 AM",
+    "time": "12:30 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Ryza no Atelier: Tokoyami no Joou to Himitsu no Kakurega",
-    "episode": "1",
+    "animeTitle": "Nanatsu no Maken ga Shihai suru",
+    "episode": "2",
     "status": "already updated"
   },
   {
-    "time": "12:55 AM",
+    "time": "1:38 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "EDENS ZERO Season 2",
-    "episode": "14",
+    "animeTitle": "Kanojo, Okarishimasu 3rd Season",
+    "episode": "2",
     "status": "already updated"
   },
   {
-    "time": "1:00 AM",
+    "time": "2:05 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "AYAKA",
-    "episode": "1",
+    "animeTitle": "Ikimono-san",
+    "episode": "2",
     "status": "already updated"
   },
   {
-    "time": "1:30 AM",
+    "time": "2:08 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Uchi no Kaisha no Chiisai Senpai no Hanashi",
-    "episode": "1",
+    "animeTitle": "AI no Idenshi",
+    "episode": "2",
     "status": "already updated"
   },
   {
-    "time": "2:00 AM",
+    "time": "2:38 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Jitsu wa Ore, Saikyou deshita?",
-    "episode": "1",
+    "animeTitle": "Dekiru Neko wa Kyou mo Yuuutsu",
+    "episode": "2",
     "status": "already updated"
   },
   {
-    "time": "7:30 AM",
+    "time": "5:22 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Yu☆Gi☆Oh! GO RUSH!!",
-    "episode": "65",
+    "animeTitle": "Bonobono",
+    "episode": "367",
+    "status": "already updated"
+  },
+  {
+    "time": "8:00 AM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "CARDFIGHT!! VANGUARD will+Dress Season 3",
+    "episode": "2",
     "status": "already updated"
   },
   {
     "time": "8:30 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Duel Masters Win: Duel Wars",
-    "episode": "13",
-    "status": "already updated"
-  },
-  {
-    "time": "8:30 AM",
-    "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Hirogaru Sky! Precure",
-    "episode": "22",
-    "status": "already updated"
-  },
-  {
-    "time": "9:00 AM",
-    "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Tousouchuu: Great Mission",
-    "episode": "13",
+    "animeTitle": "Shimajirou no Wow!",
+    "episode": "574",
     "status": "already updated"
   },
   {
     "time": "9:30 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "One Piece",
-    "episode": "1067",
+    "animeTitle": "Shadowverse Flame: Seven Shadows-hen",
+    "episode": "2",
     "status": "already updated"
   },
   {
-    "time": "11:00 AM",
+    "time": "10:00 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Doupo Cangqiong: Nian Fan",
-    "episode": "51",
+    "animeTitle": "Ninjala",
+    "episode": "77",
     "status": "already updated"
   },
   {
-    "time": "3:30 PM",
+    "time": "12:00 PM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Rhapsody",
-    "episode": "1",
-    "status": "upcoming"
-  },
-  {
-    "time": "4:55 PM",
-    "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Ao no Orchestra: 5-bu de Tanoshii Classic",
-    "episode": "11",
-    "status": "upcoming"
-  },
-  {
-    "time": "5:00 PM",
-    "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Ao no Orchestra",
+    "animeTitle": "Huo Feng Liao Yuan",
     "episode": "13",
+    "status": "already updated"
+  },
+  {
+    "time": "4:30 PM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Crayon Shin-chan",
+    "episode": "1190",
     "status": "upcoming"
   },
   {
     "time": "5:00 PM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Kidou Senshi Gundam: Suisei no Majo Season 2",
-    "episode": "12",
+    "animeTitle": "Doraemon (2005)",
+    "episode": "684",
+    "status": "upcoming"
+  },
+  {
+    "time": "5:30 PM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "MIX MEISEI STORY Season2",
+    "episode": "15",
     "status": "upcoming"
   },
   {
     "time": "6:00 PM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Chibi Maruko-chan (1995)",
-    "episode": "1395",
+    "animeTitle": "Meitantei Conan",
+    "episode": "1090",
     "status": "upcoming"
   },
   {
-    "time": "6:00 PM",
+    "time": "9:00 PM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Holo no Graffiti",
-    "episode": "215",
+    "animeTitle": "Youjo Shachou R",
+    "episode": "3",
     "status": "upcoming"
   },
   {
-    "time": "6:00 PM",
+    "time": "10:00 PM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Puzzle & Dragon",
-    "episode": "262",
-    "status": "upcoming"
-  },
-  {
-    "time": "6:30 PM",
-    "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Sazae-san",
-    "episode": "2689",
-    "status": "upcoming"
-  },
-  {
-    "time": "7:00 PM",
-    "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Fate/strange Fake -Whispers of Dawn-",
-    "episode": "1",
-    "status": "upcoming"
-  },
-  {
-    "time": "7:27 PM",
-    "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Okashi na Tensei Mini Anime",
-    "episode": "10",
+    "animeTitle": "Level 1 dakedo Unique Skill de Saikyou desu",
+    "episode": "2",
     "status": "upcoming"
   },
   {
     "time": "11:00 PM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Genjitsu no Yohane -SUNSHINE in the MIRROR-",
+    "animeTitle": "Liar, Liar",
+    "episode": "3",
+    "status": "upcoming"
+  },
+  {
+    "time": "11:30 PM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "BLEACH: Sennen Kessen-hen - Ketsubetsu-tan -",
     "episode": "2",
+    "status": "upcoming"
+  },
+  {
+    "time": "11:30 PM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Horimiya -piece-",
+    "episode": "3",
     "status": "upcoming"
   }
 ]

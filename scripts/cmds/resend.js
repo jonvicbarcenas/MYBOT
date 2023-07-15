@@ -8,29 +8,6 @@ const data = {
   messageMap: new Map()
 };
 
-// Load and parse the users data JSON file
-const usersData = JSON.parse(fs.readFileSync("database/data/usersData.json"));
-
-// Load and parse the threads data JSON file
-const threadsData = JSON.parse(fs.readFileSync("database/data/threadsData.json"));
-
-async function getSenderName(senderID) {
-  return new Promise((resolve, reject) => {
-    const db = new sqlite3.Database("database/data/data.sqlite");
-
-    db.get(`SELECT name FROM users WHERE userID = ?`, senderID, (err, row) => {
-      db.close();
-
-      if (err) {
-        console.error(`Error getting sender name for userID: ${senderID}`, err);
-        reject(err);
-      } else {
-        const senderName = row ? row.name : "Unknown User";
-        resolve(senderName);
-      }
-    });
-  });
-}
 
 async function downloadFile(url, filePath) {
   const writer = fs.createWriteStream(filePath);
@@ -73,11 +50,26 @@ module.exports = {
   },
 
   onStart: async function () {},
-  onChat: async function ({ api, event }) {
+  onChat: async function ({ api, event, usersData }) {
+    const { config } = global.GoatBot;
+    const { senderID, threadID, isGroup } = event;
+  
+    // Check if the sender is an admin user
+    const isAdmin = config.adminBot.includes(senderID);
+  
+    // Don't resend if the sender is an admin
+    if (isAdmin) {
+      return;
+    }
     if (event.type === "message" || event.type === "message_unsend" || event.type === "message_reply") {
       const { type, senderID, body, threadID, messageID, attachments, mentions, timestamp, isGroup, deletionTimestamp } = event;
 
-      let senderName = await getSenderName(senderID);
+      let senderName = "Unknown User";
+    
+      const userData = await usersData.get(senderID);
+      if (userData && userData.name) {
+        senderName = userData.name;
+      }
 
       if (type === "message_unsend" && data.messageMap.has(messageID)) {
         const previousMessageData = data.messageMap.get(messageID);

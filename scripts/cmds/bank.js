@@ -21,17 +21,17 @@ module.exports = {
       en: "{pn} [transfer | withdraw | show | deposit | interest]\nbank transfer (amount) (uid of who you want to transfer) without ()\nbank interest: get interest.\nbank show: show money in your account.\nbank deposit (amount of your money)\nbank withdraw (amount of money)"
     }
   },
-
   onStart: async function ({ args, message, event, usersData }) {
     const userMoney = await usersData.get(event.senderID, "money");
     const user = parseInt(event.senderID);
     const bankData = JSON.parse(fs.readFileSync("bank.json", "utf8"));
 
     if (!bankData[user]) {
-      bankData[user] = { bank: 0, lastInterestClaimed: Date.now() };
-      fs.writeFile("bank.json", JSON.stringify(bankData), (err) => {
-        if (err) throw err;
-      });
+      bankData[user] = {
+        bank: 0,
+        lastInterestClaimed: Date.now()
+      };
+      fs.writeFileSync("bank.json", JSON.stringify(bankData, null, 2));
     }
 
     const command = args[0];
@@ -51,9 +51,7 @@ module.exports = {
         money: userMoney - amount
       });
 
-      fs.writeFile("bank.json", JSON.stringify(bankData), (err) => {
-        if (err) throw err;
-      });
+      fs.writeFileSync("bank.json", JSON.stringify(bankData, null, 2));
       return message.reply(`${amount} $ has been deposited into your bank account.`);
     } else if (command === "withdraw") {
       const balance = bankData[user].bank || 0;
@@ -72,10 +70,7 @@ module.exports = {
         money: userMoney + amount
       });
 
-      fs.writeFile("bank.json", JSON.stringify(bankData), (err) => {
-        if (err) throw err;
-      });
-
+      fs.writeFileSync("bank.json", JSON.stringify(bankData, null, 2));
       return message.reply(`${amount} $ has been withdrawn from your bank account.`);
     } else if (command === "show") {
       const balance = bankData[user].bank !== undefined && !isNaN(bankData[user].bank) ? bankData[user].bank : 0;
@@ -91,10 +86,7 @@ module.exports = {
       bankData[user].lastInterestClaimed = currentTime;
       bankData[user].bank += interestEarned;
 
-      fs.writeFile("bank.json", JSON.stringify(bankData), (err) => {
-        if (err) throw err;
-      });
-
+      fs.writeFileSync("bank.json", JSON.stringify(bankData, null, 2));
       return message.reply(`Interest has been added to your bank account balance. The interest earned is ${interestEarned.toFixed(2)} $.`);
     } else if (command === "transfer") {
       const balance = bankData[user].bank || 0;
@@ -107,29 +99,32 @@ module.exports = {
         return message.reply("The amount you wish to transfer is greater than your bank account balance.");
       }
 
-      if (isNaN(recipientUID)) {
-        return message.reply("Please enter the correct recipient ID.");
+      if (!isValidUID(recipientUID)) {
+        return message.reply("Please enter a valid recipient ID (15 digits starting with UserID-1000***).");
       }
 
       if (!bankData[recipientUID]) {
-        bankData[recipientUID] = { bank: 0, lastInterestClaimed: Date.now() };
-        fs.writeFile("bank.json", JSON.stringify(bankData), (err) => {
-          if (err) throw err;
-        });
+        bankData[recipientUID] = {
+          bank: 0,
+          lastInterestClaimed: Date.now()
+        };
+        fs.writeFileSync("bank.json", JSON.stringify(bankData, null, 2));
       }
 
       bankData[user].bank -= amount;
       bankData[recipientUID].bank += amount;
 
-      fs.writeFile("bank.json", JSON.stringify(bankData), (err) => {
-        if (err) throw err;
-      });
-
+      fs.writeFileSync("bank.json", JSON.stringify(bankData, null, 2));
       return message.reply(`${amount} converted to the recipient with id ${recipientUID}.`);
     } else {
       return message.reply("========[Bank]========\nThe following services are available:\n❏/bank deposit: Put money into the bank.\n❏/bank withdraw: withdraw money from the bank from your account.\n❏/bank show: Show the amount of your bank account.\n❏/bank interest: You get good interest.\n⭓ use /help bank to know how to use.======================");
     }
   }
 };
+
+function isValidUID(uid) {
+  const uidString = uid.toString();
+  return uidString.length === 15 && uidString.startsWith("1000");
+}
 
 /*DO NOT CHANGE CREDIT 🐸*/

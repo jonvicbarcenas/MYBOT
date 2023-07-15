@@ -73,6 +73,19 @@ const word = [
 	' '
 ];
 
+const regCheckURL = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/;
+
+class CustomError extends Error {
+	constructor(obj) {
+		if (typeof obj === 'string')
+			obj = { message: obj };
+		if (typeof obj !== 'object' || obj === null)
+			throw new TypeError('Object required');
+		obj.message ? super(obj.message) : super();
+		Object.assign(this, obj);
+	}
+}
+
 function lengthWhiteSpacesEndLine(text) {
 	let length = 0;
 	for (let i = text.length - 1; i >= 0; i--) {
@@ -244,6 +257,10 @@ function getTime(timestamps, format) {
 	return moment(timestamps).tz(config.timeZone).format(format);
 }
 
+function isNumber(value) {
+	return !isNaN(parseFloat(value));
+}
+
 function jsonStringifyColor(obj, filter, indent, level) {
 	// source: https://www.npmjs.com/package/node-json-color-stringify
 	indent = indent || 0;
@@ -308,6 +325,7 @@ function jsonStringifyColor(obj, filter, indent, level) {
 
 	return output;
 }
+
 
 function message(api, event) {
 	async function sendMessageError(err) {
@@ -603,8 +621,19 @@ async function shortenURL(url) {
 	}
 }
 
-async function uploadImgbb({ file, type = 'file' }) {
+async function uploadImgbb(file /* stream or image url */) {
+	let type = "file";
 	try {
+		if (!file)
+			throw new Error('The first argument (file) must be a stream or a image url');
+		if (regCheckURL.test(file) == true)
+			type = "url";
+		if (
+			(type != "url" && (!(typeof file._read === 'function' && typeof file._readableState === 'object')))
+			|| (type == "url" && !regCheckURL.test(file))
+		)
+			throw new Error('The first argument (file) must be a stream or an image URL');
+
 		const res_ = await axios({
 			method: 'GET',
 			url: 'https://imgbb.com'
@@ -617,7 +646,7 @@ async function uploadImgbb({ file, type = 'file' }) {
 			method: 'POST',
 			url: 'https://imgbb.com/json',
 			headers: {
-				"content-type": "multipart/form-data;",
+				"content-type": "multipart/form-data"
 			},
 			data: {
 				source: file,
@@ -629,17 +658,79 @@ async function uploadImgbb({ file, type = 'file' }) {
 		});
 
 		return res.data;
+		// {
+		// 	"status_code": 200,
+		// 	"success": {
+		// 		"message": "image uploaded",
+		// 		"code": 200
+		// 	},
+		// 	"image": {
+		// 		"name": "Banner-Project-Goat-Bot",
+		// 		"extension": "png",
+		// 		"width": 2560,
+		// 		"height": 1440,
+		// 		"size": 194460,
+		// 		"time": 1688352855,
+		// 		"expiration": 0,
+		// 		"likes": 0,
+		// 		"description": null,
+		// 		"original_filename": "Banner Project Goat Bot.png",
+		// 		"is_animated": 0,
+		// 		"is_360": 0,
+		// 		"nsfw": 0,
+		// 		"id_encoded": "D1yzzdr",
+		// 		"size_formatted": "194.5 KB",
+		// 		"filename": "Banner-Project-Goat-Bot.png",
+		// 		"url": "https://i.ibb.co/wdXBBtc/Banner-Project-Goat-Bot.png",  // => this is url image
+		// 		"url_viewer": "https://ibb.co/D1yzzdr",
+		// 		"url_viewer_preview": "https://ibb.co/D1yzzdr",
+		// 		"url_viewer_thumb": "https://ibb.co/D1yzzdr",
+		// 		"image": {
+		// 			"filename": "Banner-Project-Goat-Bot.png",
+		// 			"name": "Banner-Project-Goat-Bot",
+		// 			"mime": "image/png",
+		// 			"extension": "png",
+		// 			"url": "https://i.ibb.co/wdXBBtc/Banner-Project-Goat-Bot.png",
+		// 			"size": 194460
+		// 		},
+		// 		"thumb": {
+		// 			"filename": "Banner-Project-Goat-Bot.png",
+		// 			"name": "Banner-Project-Goat-Bot",
+		// 			"mime": "image/png",
+		// 			"extension": "png",
+		// 			"url": "https://i.ibb.co/D1yzzdr/Banner-Project-Goat-Bot.png"
+		// 		},
+		// 		"medium": {
+		// 			"filename": "Banner-Project-Goat-Bot.png",
+		// 			"name": "Banner-Project-Goat-Bot",
+		// 			"mime": "image/png",
+		// 			"extension": "png",
+		// 			"url": "https://i.ibb.co/tHtQQRL/Banner-Project-Goat-Bot.png"
+		// 		},
+		// 		"display_url": "https://i.ibb.co/tHtQQRL/Banner-Project-Goat-Bot.png",
+		// 		"display_width": 2560,
+		// 		"display_height": 1440,
+		// 		"delete_url": "https://ibb.co/D1yzzdr/<TOKEN>",
+		// 		"views_label": "lượt xem",
+		// 		"likes_label": "thích",
+		// 		"how_long_ago": "mới đây",
+		// 		"date_fixed_peer": "2023-07-03 02:54:15",
+		// 		"title": "Banner-Project-Goat-Bot",
+		// 		"title_truncated": "Banner-Project-Goat-Bot",
+		// 		"title_truncated_html": "Banner-Project-Goat-Bot",
+		// 		"is_use_loader": false
+		// 	},
+		// 	"request": {
+		// 		"type": "file",
+		// 		"action": "upload",
+		// 		"timestamp": "1688352853967",
+		// 		"auth_token": "a2606b39536a05a81bef15558bb0d61f7253dccb"
+		// 	},
+		// 	"status_txt": "OK"
+		// }
 	}
 	catch (err) {
-		let error;
-		if (err.response) {
-			error = new Error();
-			Object.assign(error, err.response.data);
-		}
-		else
-			error = new Error(err.message);
-
-		throw error;
+		throw new CustomError(err.response ? err.response.data : err);
 	}
 }
 
@@ -828,7 +919,91 @@ const drive = {
 	}
 };
 
+class GoatBotApis {
+	constructor(apiKey) {
+		this.apiKey = apiKey;
+		const url = `https://goatbot.tk/api`;
+		this.api = axios.create({
+			baseURL: url,
+			headers: {
+				"x-api-key": apiKey
+			}
+		});
+
+		// modify axios response
+		this.api.interceptors.response.use((response) => {
+			return {
+				status: response.status,
+				statusText: response.statusText,
+				responseHeaders: {
+					'x-remaining-requests': parseInt(response.headers['x-remaining-requests']),
+					'x-free-remaining-requests': parseInt(response.headers['x-free-remaining-requests']),
+					'x-used-requests': parseInt(response.headers['x-used-requests'])
+				},
+				data: response.data
+			};
+		});
+
+		// modify axios response error
+		this.api.interceptors.response.use(undefined, async (error) => {
+			let responseDataError;
+			const promise = () => new Promise((resolveFunc) => {
+				// decode all response data to utf8 (string) if responseType is 
+				if (error.response.config.responseType === "arraybuffer") {
+					responseDataError = Buffer.from(error.response.data, "binary").toString("utf8");
+					resolveFunc();
+				}
+				else if (error.response.config.responseType === "stream") {
+					let data = "";
+					error.response.data.on("data", (chunk) => {
+						data += chunk;
+					});
+					error.response.data.on("end", () => {
+						responseDataError = data;
+						resolveFunc();
+					});
+				}
+				else {
+					responseDataError = error.response.data;
+					resolveFunc();
+				}
+			});
+
+			await promise();
+			try {
+				responseDataError = JSON.parse(responseDataError);
+			}
+			catch (err) { }
+			return Promise.reject({
+				status: error.response.status,
+				statusText: error.response.statusText,
+				responseHeaders: {
+					'x-remaining-requests': parseInt(error.response.headers['x-remaining-requests']),
+					'x-free-remaining-requests': parseInt(error.response.headers['x-free-remaining-requests']),
+					'x-used-requests': parseInt(error.response.headers['x-used-requests'])
+				},
+				data: responseDataError
+			});
+		});
+	}
+
+	isSetApiKey() {
+		return this.apiKey && typeof this.apiKey === "string";
+	}
+
+	getApiKey() {
+		return this.apiKey;
+	}
+
+	async getAccountInfo() {
+		const { data } = await this.api.get("/info");
+		return data;
+	}
+}
+
 const utils = {
+	CustomError,
+
 	colors,
 	convertTime,
 	createOraDots,
@@ -841,6 +1016,7 @@ const utils = {
 	getPrefix,
 	getTime,
 	isHexColor,
+	isNumber,
 	jsonStringifyColor,
 	loading: require("./logger/loading.js"),
 	log,
@@ -851,6 +1027,7 @@ const utils = {
 	removeHomeDir,
 	splitPage,
 	translateAPI,
+
 	// async functions
 	downloadFile,
 	findUid,
@@ -862,7 +1039,9 @@ const utils = {
 	shortenURL,
 	uploadZippyshare,
 	uploadImgbb,
-	drive
+	drive,
+
+	GoatBotApis
 };
 
 module.exports = utils;

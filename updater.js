@@ -2,7 +2,6 @@ const axios = require('axios');
 const _ = require('lodash');
 const fs = require('fs-extra');
 const path = require('path');
-const cheerio = require('cheerio');
 const log = require('./logger/log.js');
 let chalk;
 try {
@@ -121,7 +120,16 @@ fs.copyFileSync = function (src, dest) {
 		}
 	}
 
-	const folderBackup = `${process.cwd()}/backup_${currentVersion}`;
+	const backupsPath = `${process.cwd()}/backups`;
+	if (!fs.existsSync(backupsPath))
+		fs.mkdirSync(backupsPath);
+	const folderBackup = `${backupsPath}/backup_${currentVersion}`;
+
+	// find all folders start with "backup_" (these folders are created by updater in old version), and move to backupsPath
+	const foldersBackup = fs.readdirSync(process.cwd())
+		.filter(folder => folder.startsWith("backup_") && fs.lstatSync(folder).isDirectory());
+	for (const folder of foldersBackup)
+		fs.moveSync(folder, `${backupsPath}/${folder}`);
 
 	log.info("UPDATE", `Update to version ${chalk.yellow(createUpdate.version)}`);
 	const { files, deleteFiles, reinstallDependencies } = createUpdate;
@@ -140,8 +148,8 @@ fs.copyFileSync = function (src, dest) {
 			continue;
 		}
 
-		if (filePath === "config.json") {
-			const currentConfig = require('./config.json');
+		if (["config.json", "configCommands.json"].includes(filePath)) {
+			const currentConfig = JSON.parse(fs.readFileSync(fullPath, "utf-8"));
 			const configValueUpdate = files[filePath];
 
 			for (const key in configValueUpdate) {
@@ -154,16 +162,18 @@ fs.copyFileSync = function (src, dest) {
 					_.set(currentConfig, key, value);
 			}
 
+			if (fs.existsSync(fullPath))
+				fs.copyFileSync(fullPath, `${folderBackup}/${filePath}`);
 			fs.writeFileSync(fullPath, JSON.stringify(currentConfig, null, 2));
-			console.log(chalk.bold.blue('[↑]'), `${filePath}`);
-			// warning config.json is changed
-			console.log(chalk.bold.yellow('[!]'), getText("updater", "configChanged"));
-		}
 
-		if (fs.existsSync(fullPath))
-			fs.copyFileSync(fullPath, `${folderBackup}/${filePath}`);
-		if (filePath != "config.json")
+			console.log(chalk.bold.blue('[↑]'), filePath);
+			console.log(chalk.bold.yellow('[!]'), getText("updater", "configChanged", chalk.yellow(filePath)));
+		}
+		else {
+			if (fs.existsSync(fullPath))
+				fs.copyFileSync(fullPath, `${folderBackup}/${filePath}`);
 			fs.writeFileSync(fullPath, Buffer.from(getFile));
+		}
 
 		console.log(chalk.bold.blue('[↑]'), `${filePath}:`, chalk.hex('#858585')(typeof description == "string" ? description : typeof description == "object" ? JSON.stringify(description, null, 2) : description));
 	}
@@ -184,9 +194,8 @@ fs.copyFileSync = function (src, dest) {
 
 	// fixes package.json not updating content by itself
 	const { data: packageHTML5 } = await axios.get("https://github.com/ntkhang03/Goat-Bot-V2/blob/main/package.json");
-	const $ = cheerio.load(packageHTML5);
-	const content = $('td.blob-code-inner').text();
-	fs.writeFileSync(`${process.cwd()}/package.json`, JSON.stringify(JSON.parse(content), null, 2));
+	const content = packageHTML5.split(',"blob":{"rawBlob":')[1].split(',"colorizedLines"')[0];
+	fs.writeFileSync(`${process.cwd()}/package.json`, JSON.stringify(JSON.parse(JSON.parse(content)), null, 2));
 	log.info("UPDATE", getText("updater", "updateSuccess", !reinstallDependencies ? getText("updater", "restartToApply") : ""));
 
 	// npm install

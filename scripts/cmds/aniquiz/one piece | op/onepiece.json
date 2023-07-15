@@ -1,0 +1,240 @@
+{
+  "questions": [
+    {
+      "question": "What is the name of the protagonist in 'One Piece'?\n\nA. Monkey D. Luffy\nB. Roronoa Zoro\nC. Nami\nD. Sanji",
+      "answer": "A"
+    },
+    {
+      "question": "Who is the swordsman with a three-sword style in 'One Piece'?\n\nA. Monkey D. Luffy\nB. Roronoa Zoro\nC. Nami\nD. Usopp",
+      "answer": "B"
+    },
+    {
+      "question": "What is the name of the ship in 'One Piece' that serves as the main crew's primary mode of transportation?\n\nA. Merry Go\nB. Going Merry\nC. Thousand Sunny\nD. Blackbeard",
+      "answer": "C"
+    },
+    {
+      "question": "Who is the navigator of the Straw Hat Pirates in 'One Piece'?\n\nA. Monkey D. Luffy\nB. Roronoa Zoro\nC. Nami\nD. Usopp",
+      "answer": "C"
+    },
+    {
+      "question": "What is the name of the rubber-based Devil Fruit that Monkey D. Luffy ate in 'One Piece'?\n\nA. Gum-Gum Fruit\nB. Flame-Flame Fruit\nC. Chop-Chop Fruit\nD. Barrier-Barrier Fruit",
+      "answer": "A"
+    },
+    {
+      "question": "Who is the chef of the Straw Hat Pirates in 'One Piece'?\n\nA. Monkey D. Luffy\nB. Roronoa Zoro\nC. Nami\nD. Sanji",
+      "answer": "D"
+    },
+    {
+      "question": "What is the name of the archaeologist and historian in 'One Piece'?\n\nA. Nico Robin\nB. Tony Tony Chopper\nC. Franky\nD. Brook",
+      "answer": "A"
+    },
+    {
+      "question": "Who is the cyborg shipwright of the Straw Hat Pirates in 'One Piece'?\n\nA. Monkey D. Luffy\nB. Roronoa Zoro\nC. Franky\nD. Brook",
+      "answer": "C"
+    },
+    {
+      "question": "What is the name of the reindeer who ate the Human-Human Fruit and joined the Straw Hat Pirates in 'One Piece'?\n\nA. Tony Tony Chopper\nB. Nico Robin\nC. Brook\nD. Jinbe",
+      "answer": "A"
+    },
+    {
+      "question": "Who is the musician and swordsman who joined the Straw Hat Pirates in 'One Piece'?\n\nA. Monkey D. Luffy\nB. Roronoa Zoro\nC. Usopp\nD. Brook",
+      "answer": "D"
+    },
+    {
+      "question": "What is the name of the fish-man who became the helmsman of the Straw Hat Pirates in 'One Piece'?\n\nA. Tony Tony Chopper\nB. Jinbe\nC. Franky\nD. Brook",
+      "answer": "B"
+    },
+    {
+      "question": "Who is the sniper of the Straw Hat Pirates in 'One Piece'?\n\nA. Monkey D. Luffy\nB. Roronoa Zoro\nC. Nami\nD. Usopp",
+      "answer": "D"
+    },
+    {
+      "question": "What is the name of the captain of the Blackbeard Pirates in 'One Piece'?\n\nA. Monkey D. Luffy\nB. Roronoa Zoro\nC. Marshall D. Teach\nD. Gol D. Roger",
+      "answer": "C"
+    },
+    {
+      "question": "Who is the captain of the Heart Pirates and a member of the Worst Generation in 'One Piece'?\n\nA. Trafalgar D. Water Law\nB. Eustass Kid\nC. Capone Bege\nD. Scratchmen Apoo",
+      "answer": "A"
+    },
+    {
+      "question": "What is the name of the pirate crew led by Trafalgar D. Water Law in 'One Piece'?\n\nA. Heart Pirates\nB. Kid Pirates\nC. Fire Tank Pirates\nD. Hawkins Pirates",
+      "answer": "A"
+    },
+    {
+      "question": "Who is the captain of the Kid Pirates and a member of the Worst Generation in 'One Piece'?\n\nA. Trafalgar D. Water Law\nB. Eustass Kid\nC. Capone Bege\nD. Scratchmen Apoo",
+      "answer": "B"
+    },
+    {
+      "question": "What is the name of the pirate crew led by Eustass Kid in 'One Piece'?\n\nA. Heart Pirates\nB. Kid Pirates\nC. Fire Tank Pirates\nD. Hawkins Pirates",
+      "answer": "B"
+    },
+    {
+      "question": "Who is the captain of the Fire Tank Pirates and a member of the Worst Generation in 'One Piece'?\n\nA. Trafalgar D. Water Law\nB. Eustass Kid\nC. Capone Bege\nD. Scratchmen Apoo",
+      "answer": "C"
+    },
+    {
+      "question": "What is the name of the pirate crew led by Capone Bege in 'One Piece'?\n\nA. Heart Pirates\nB. Kid Pirates\nC. Fire Tank Pirates\nD. Hawkins Pirates",
+      "answer": "C"
+    },
+    {
+      "question": "Who is the captain of the Hawkins Pirates and a member of the Worst Generation in 'One Piece'?\n\nA. Trafalgar D. Water Law\nB. Eustass Kid\nC. Capone Bege\nD. Basil Hawkins",
+      "answer": "D"
+    },
+    {
+      "question": "What is the name of the pirate crew led by Basil Hawkins in 'One Piece'?\n\nA. Heart Pirates\nB. Kid Pirates\nC. Fire Tank Pirates\nD. Hawkins Pirates",
+      "answer": "D"
+    },
+    {
+      "question": "Who is the captain of the Red Hair Pirates and one of the Yonko in 'One Piece'?\n\nA. Shanks\nB. Kaido\nC. Big Mom\nD. Blackbeard",
+      "answer": "A"
+    },
+    {
+      "question": "Who is the captain of the Whitebeard Pirates and one of the Yonko in 'One Piece'?\n\nA. Shanks\nB. Kaido\nC. Big Mom\nD. Edward Newgate",
+      "answer": "D"
+    },
+    {
+      "question": "Who is the captain of the Big Mom Pirates and one of the Yonko in 'One Piece'?\n\nA. Shanks\nB. Kaido\nC. Big Mom\nD. Charlotte Linlin",
+      "answer": "C"
+    },
+    {
+      "question": "Who is the captain of the Beasts Pirates and one of the Yonko in 'One Piece'?\n\nA. Shanks\nB. Kaido\nC. Big Mom\nD. Blackbeard",
+      "answer": "B"
+    },
+    {
+      "question": "Who is the captain of the Blackbeard Pirates and one of the Yonko in 'One Piece'?\n\nA. Shanks\nB. Kaido\nC. Big Mom\nD. Marshall D. Teach",
+      "answer": "D"
+    },
+    {
+      "question": "What is the name of the legendary pirate who was the captain of the Roger Pirates in 'One Piece'?\n\nA. Gol D. Roger\nB. Monkey D. Dragon\nC. Gol D. Ace\nD. Monkey D. Garp",
+      "answer": "A"
+    },
+    {
+      "question": "Who is the father of the protagonist Monkey D. Luffy in 'One Piece'?\n\nA. Gol D. Roger\nB. Monkey D. Dragon\nC. Gol D. Ace\nD. Monkey D. Garp",
+      "answer": "B"
+    },
+    {
+      "question": "Who is the brother of the protagonist Monkey D. Luffy in 'One Piece'?\n\nA. Gol D. Roger\nB. Monkey D. Dragon\nC. Gol D. Ace\nD. Monkey D. Garp",
+      "answer": "C"
+    },
+    {
+      "question": "Who is the grandfather of the protagonist Monkey D. Luffy in 'One Piece'?\n\nA. Gol D. Roger\nB. Monkey D. Dragon\nC. Gol D. Ace\nD. Monkey D. Garp",
+      "answer": "D"
+    },
+    {
+      "question": "Who is the marine admiral known as the 'Strongest Swordsman in the World' in 'One Piece'?\n\nA. Kizaru\nB. Aokiji\nC. Fujitora\nD. Mihawk",
+      "answer": "D"
+    },
+    {
+      "question": "Who is the marine admiral known as 'Borsalino' or 'Yellow Monkey' in 'One Piece'?\n\nA. Kizaru\nB. Aokiji\nC. Fujitora\nD. Mihawk",
+      "answer": "A"
+    },
+    {
+      "question": "Who is the marine admiral known as 'Ice Witch' or 'Blue Pheasant' in 'One Piece'?\n\nA. Kizaru\nB. Aokiji\nC. Fujitora\nD. Mihawk",
+      "answer": "B"
+    },
+    {
+      "question": "Who is the marine admiral known as 'Fujitora' or 'Purple Tiger' in 'One Piece'?\n\nA. Kizaru\nB. Aokiji\nC. Fujitora\nD. Mihawk",
+      "answer": "C"
+    },
+    {
+      "question": "Who is the captain of the Buggy Pirates and a former apprentice of Gol D. Roger in 'One Piece'?\n\nA. Buggy\nB. Shanks\nC. Crocodile\nD. Donquixote Doflamingo",
+      "answer": "A"
+    },
+    {
+      "question": "Who is the captain of the Red Hair Pirates and a former member of the Roger Pirates in 'One Piece'?\n\nA. Buggy\nB. Shanks\nC. Crocodile\nD. Donquixote Doflamingo",
+      "answer": "B"
+    },
+    {
+      "question": "Who is the captain of the Baroque Works and a former member of the Seven Warlords of the Sea in 'One Piece'?\n\nA. Buggy\nB. Shanks\nC. Crocodile\nD. Donquixote Doflamingo",
+      "answer": "C"
+    },
+    {
+      "question": "Who is the captain of the Donquixote Pirates and a former member of the Seven Warlords of the Sea in 'One Piece'?\n\nA. Buggy\nB. Shanks\nC. Crocodile\nD. Donquixote Doflamingo",
+      "answer": "D"
+    },
+    {
+      "question": "Who is the captain of the Whitebeard Pirates and one of the Four Emperors in 'One Piece'?\n\nA. Shanks\nB. Kaido\nC. Big Mom\nD. Edward Newgate",
+      "answer": "D"
+    },
+    {
+      "question": "Who is the captain of the Blackbeard Pirates and one of the Four Emperors in 'One Piece'?\n\nA. Shanks\nB. Kaido\nC. Big Mom\nD. Marshall D. Teach",
+      "answer": "D"
+    },
+    {
+      "question": "Who is the captain of the Heart Pirates and one of the Worst Generation in 'One Piece'?\n\nA. Trafalgar D. Water Law\nB. Eustass Kid\nC. Capone Bege\nD. Basil Hawkins",
+      "answer": "A"
+    },
+    {
+      "question": "Who is the captain of the Kid Pirates and one of the Worst Generation in 'One Piece'?\n\nA. Trafalgar D. Water Law\nB. Eustass Kid\nC. Capone Bege\nD. Scratchmen Apoo",
+      "answer": "B"
+    },
+    {
+      "question": "Who is the captain of the Fire Tank Pirates and one of the Worst Generation in 'One Piece'?\n\nA. Trafalgar D. Water Law\nB. Eustass Kid\nC. Capone Bege\nD. Scratchmen Apoo",
+      "answer": "C"
+    },
+    {
+      "question": "Who is the captain of the Hawkins Pirates and one of the Worst Generation in 'One Piece'?\n\nA. Trafalgar D. Water Law\nB. Eustass Kid\nC. Capone Bege\nD. Basil Hawkins",
+      "answer": "D"
+    },
+    {
+      "question": "Who is the captain of the Straw Hat Grand Fleet and the captain of the Beautiful Pirates in 'One Piece'?\n\nA. Cavendish\nB. Bartolomeo\nC. Bellamy\nD. Hajrudin",
+      "answer": "A"
+    },
+    {
+      "question": "Who is the captain of the Barto Club and a huge fan of Monkey D. Luffy in 'One Piece'?\n\nA. Cavendish\nB. Bartolomeo\nC. Bellamy\nD. Hajrudin",
+      "answer": "B"
+    },
+    {
+      "question": "Who is the captain of the Bellamy Pirates and a former member of the Donquixote Pirates in 'One Piece'?\n\nA. Cavendish\nB. Bartolomeo\nC. Bellamy\nD. Hajrudin",
+      "answer": "C"
+    },
+    {
+      "question": "Who is the captain of the New Giant Warrior Pirates and a former captain of the Pirate Dispatch Society in 'One Piece'?\n\nA. Cavendish\nB. Bartolomeo\nC. Bellamy\nD. Hajrudin",
+      "answer": "D"
+    },
+    {
+      "question": "What is the name of the legendary treasure that is said to be located at the end of the Grand Line in 'One Piece'?\n\nA. One Piece\nB. Devil Fruit\nC. Pirate King's Treasure\nD. Treasure of the Sea",
+      "answer": "A"
+    },
+    {
+      "question": "What is the name of the government organization that enforces law and order in 'One Piece'?\n\nA. Marines\nB. Pirates\nC. Revolutionaries\nD. Cipher Pol",
+      "answer": "A"
+    },
+    {
+      "question": "What is the name of the group of pirates who oppose the World Government and seek to overthrow it in 'One Piece'?\n\nA. Marines\nB. Pirates\nC. Revolutionaries\nD. Cipher Pol",
+      "answer": "C"
+    },
+    {
+      "question": "What is the name of the secret government intelligence agency in 'One Piece'?\n\nA. Marines\nB. Pirates\nC. Revolutionaries\nD. Cipher Pol",
+      "answer": "D"
+    },
+    {
+      "question": "What is the name of the country ruled by the World Government in 'One Piece'?\n\nA. Alabasta\nB. Dressrosa\nC. Skypiea\nD. Mariejois",
+      "answer": "D"
+    },
+    {
+      "question": "What is the name of the kingdom ruled by the Nefertari family in 'One Piece'?\n\nA. Alabasta\nB. Dressrosa\nC. Skypiea\nD. Mariejois",
+      "answer": "A"
+    },
+    {
+      "question": "What is the name of the kingdom ruled by the Riku family in 'One Piece'?\n\nA. Alabasta\nB. Dressrosa\nC. Skypiea\nD. Mariejois",
+      "answer": "B"
+    },
+    {
+      "question": "What is the name of the floating island inhabited by the Skypieans in 'One Piece'?\n\nA. Alabasta\nB. Dressrosa\nC. Skypiea\nD. Mariejois",
+      "answer": "C"
+    },
+    {
+      "question": "What is the name of the kingdom ruled by the Donquixote family in 'One Piece'?\n\nA. Alabasta\nB. Dressrosa\nC. Skypiea\nD. Mariejois",
+      "answer": "B"
+    },
+    {
+      "question": "Who is the captain of the Kuja Pirates and the empress of the Kuja tribe in 'One Piece'?\n\nA. Boa Hancock\nB. Nami\nC. Robin\nD. Vivi",
+      "answer": "A"
+    },
+    {
+      "question": "Who is the captain of the Blackbeard Pirates and one of the Four Emperors in 'One Piece'?\n\nA. Shanks\nB. Kaido\nC. Big Mom\nD. Marshall D. Teach",
+      "answer": "D"
+    }
+  ]
+}

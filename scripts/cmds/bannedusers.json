@@ -1,72 +1,247 @@
 [
   {
-    "userID": "100011615050902",
-    "name": "Cyron John Tabasa",
-    "reason": "spamming",
-    "date": "30/06/2023 15:42:17",
-    "status": "on"
-  },
-  {
-    "userID": "100090973220027",
-    "name": "Sakeyeezy Valentino FutureFamily",
-    "reason": "lol?",
-    "date": "30/06/2023 19:45:33",
-    "status": "on"
-  },
-  {
-    "userID": "100052285417441",
-    "name": "Farrah Tsurugi",
-    "reason": "ito horni",
-    "date": "30/06/2023 20:24:02",
-    "status": "on"
-  },
-  {
     "userID": "100040691924027",
     "name": "Johnphil Veloso",
     "reason": "ara ay giti",
     "date": "01/07/2023 11:04:43",
-    "status": "on"
+    "status": "off"
   },
   {
     "userID": "100087734066105",
     "name": "テンペスト リムル",
     "reason": "gusto nya ehh",
     "date": "01/07/2023 11:09:17",
-    "status": "on"
+    "status": "off"
   },
   {
     "userID": "100089159086547",
     "name": "Zahara Shanin",
     "reason": "ito fuck you! Kantunin ko mama mo e",
     "date": "01/07/2023 11:16:40",
-    "status": "on"
+    "status": "off"
   },
   {
     "userID": "100087403062635",
     "name": "Oratile Khumalo",
     "reason": "ito sayo ahahah🖕🏻",
     "date": "01/07/2023 16:00:31",
-    "status": "on"
+    "status": "off"
   },
   {
     "userID": "100075202957845",
     "name": "Francine",
     "reason": "sabing maya maya muna kinick ano yun?",
     "date": "01/07/2023 19:28:36",
-    "status": "on"
+    "status": "off"
   },
   {
     "userID": "100089918530539",
     "name": "Yuri Ok",
     "reason": "spam",
     "date": "02/07/2023 07:58:02",
-    "status": "on"
+    "status": "off"
   },
   {
     "userID": "100092700111360",
     "name": "Kyle Ksk Ksks",
     "reason": "ito sayo ulet 🖕🏻",
     "date": "02/07/2023 08:53:46",
+    "status": "off"
+  },
+  {
+    "userID": "100013409137813",
+    "name": "Eljon John Castor Magpusao",
+    "reason": "unethical question.",
+    "date": "02/07/2023 14:37:04",
+    "status": "off"
+  },
+  {
+    "userID": "100086590233782",
+    "name": "John Mark Castillo",
+    "reason": "spamming fuckk off",
+    "date": "02/07/2023 17:54:27",
+    "status": "off"
+  },
+  {
+    "userID": "100003025419875",
+    "name": "Frezzy Mae Simbahon Bamboa",
+    "reason": "bat moto ginawa frezzy 🥺😢 -Ghelo",
+    "date": "03/07/2023 11:45:08",
+    "status": "off"
+  },
+  {
+    "userID": "100002328183721",
+    "name": "Giestine Roe",
+    "reason": "hakdog",
+    "date": "03/07/2023 19:48:43",
+    "status": "off"
+  },
+  {
+    "userID": "100026070889806",
+    "name": "Prince Niño Go",
+    "reason": "tang ina mo pasikat ito sayo🖕🏻🖕🏻",
+    "date": "04/07/2023 12:02:48",
+    "status": "off"
+  },
+  {
+    "userID": "100093070965095",
+    "name": "Jø Hñ",
+    "reason": "ito mother fucker 🖕",
+    "date": "04/07/2023 13:04:00",
+    "status": "off"
+  },
+  {
+    "userID": "100086318194672",
+    "name": "Kent Cutab",
+    "reason": "pabida fuck you shit too jejemon",
+    "date": "04/07/2023 15:41:54",
+    "status": "off"
+  },
+  {
+    "userID": "100055930192166",
+    "name": "Andrei Jainan",
+    "reason": "gago ka bastos mo",
+    "date": "04/07/2023 18:26:55",
+    "status": "off"
+  },
+  {
+    "userID": "100088882313432",
+    "name": "Kyla Quijano",
+    "reason": "maybe ur angry that u will spam bot",
+    "date": "04/07/2023 18:54:44",
+    "status": "off"
+  },
+  {
+    "userID": "100094305739084",
+    "name": "Elle Yuri Dump",
+    "reason": "🖕",
+    "date": "11/07/2023 10:59:23",
+    "status": "on"
+  },
+  {
+    "userID": "100091819572948",
+    "name": "Christian Oxford",
+    "reason": "papansin jejemon kase mga rp'ier mabaho",
+    "date": "11/07/2023 18:06:30",
+    "status": "on"
+  },
+  {
+    "userID": "100080486824321",
+    "name": "Bj Deimos",
+    "reason": "kolera kang dako inataya ka",
+    "date": "12/07/2023 20:40:46",
+    "status": "on"
+  },
+  {
+    "userID": "100071760017086",
+    "name": "Chloe Marqueses",
+    "reason": "fuck u",
+    "date": "12/07/2023 22:32:03",
+    "status": "on"
+  },
+  {
+    "userID": "100079887761927",
+    "name": "Pepito Alfred",
+    "reason": "admin abuse",
+    "date": "13/07/2023 08:18:52",
+    "status": "on"
+  },
+  {
+    "userID": "100022717780260",
+    "name": "Ledzepp Raven Magsino",
+    "reason": "spamming",
+    "date": "13/07/2023 10:46:01",
+    "status": "on"
+  },
+  {
+    "userID": "100091678788344",
+    "name": "Gaban",
+    "reason": "Banban palayaw mo tas na ban ka",
+    "date": "13/07/2023 13:14:27",
+    "status": "on"
+  },
+  {
+    "userID": "100091678788344",
+    "name": "Gaban",
+    "reason": "Banban palayaw mo tas na ban ka",
+    "date": "13/07/2023 13:14:27",
+    "status": "on"
+  },
+  {
+    "userID": "100079518435534",
+    "name": "Prince Allen Villareal",
+    "reason": "fuck you spammer",
+    "date": "13/07/2023 17:27:45",
+    "status": "on"
+  },
+  {
+    "userID": "100088904926594",
+    "name": "Zy",
+    "reason": "ito have you \"oten\" kainin mo tite ko",
+    "date": "13/07/2023 18:00:52",
+    "status": "on"
+  },
+  {
+    "userID": "100080250956043",
+    "name": "Rotsenn Bautista Nugpo",
+    "reason": "spamming",
+    "date": "14/07/2023 09:07:44",
+    "status": "on"
+  },
+  {
+    "userID": "100092630837826",
+    "name": "John Cris",
+    "reason": "shit",
+    "date": "14/07/2023 12:44:49",
+    "status": "on"
+  },
+  {
+    "userID": "100079107552038",
+    "name": "Charlotte Chan",
+    "reason": "spamming ang yudi punggol",
+    "date": "14/07/2023 13:26:27",
+    "status": "on"
+  },
+  {
+    "userID": "100084943917212",
+    "name": "Dump Philip",
+    "reason": "e ban kadaw",
+    "date": "14/07/2023 13:31:49",
+    "status": "on"
+  },
+  {
+    "userID": "100073074288172",
+    "name": "Chris Bickle Schizophrenic",
+    "reason": "taninamo kadiri ka",
+    "date": "14/07/2023 18:01:43",
+    "status": "on"
+  },
+  {
+    "userID": "100029702719593",
+    "name": "Jøsēph Bëñtøy",
+    "reason": "mas bobo ka",
+    "date": "15/07/2023 10:04:50",
+    "status": "on"
+  },
+  {
+    "userID": "100055014023958",
+    "name": "Nora Ga Mi Josh",
+    "reason": "tang ina mo man",
+    "date": "15/07/2023 10:05:27",
+    "status": "on"
+  },
+  {
+    "userID": "100074292343354",
+    "name": "Sean",
+    "reason": "Nag jajakol sabi ni denzell",
+    "date": "15/07/2023 11:48:32",
+    "status": "on"
+  },
+  {
+    "userID": "100094121207591",
+    "name": "Ace Bot",
+    "reason": "spam /p",
+    "date": "15/07/2023 13:06:32",
     "status": "on"
   }
 ]

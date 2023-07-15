@@ -10,7 +10,7 @@ module.exports = {
 		version: "1.0.2", 
 		author: "JVB", 
 		role: 0,
-		countDown: 5,
+		countDown: 50,
 		shortDescription:{
 			en: "Search for images on Pinterest"}, 
 		longDescription:{

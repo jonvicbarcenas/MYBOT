@@ -6,6 +6,7 @@ const axios = require("axios");
 // Define the prefixes that trigger the module
 const Prefixes = [
   'bard',
+  '/rey',
   '?ai',
   '/bard',
   'ask',
@@ -35,7 +36,7 @@ const Prefixes = [
 ];
 
 const limitDuration = 60 * 60 * 1000; // 1 hour in milliseconds
-const requestLimit = 100;
+const requestLimit = 120;
 const dataFilePath = "requestLimit.json";
 
 let requestCounter = 0;
@@ -92,9 +93,20 @@ module.exports = {
       return; // Return early if the prefix is not found
     }
 
-    // Check if the request limit has been reached
+  // Check if the request limit has been reached
     if (requestCounter >= requestLimit) {
-      api.sendMessage("Request limit exceeded. Please try again later.\n\n(100 requests per hour to avoid being muted by excessive requests)", threadID, messageID);
+      const currentTime = Date.now();
+      const timeSinceReset = currentTime - lastResetTime;
+      const timeRemaining = limitDuration - timeSinceReset;
+  
+      // Calculate remaining time in minutes and seconds
+      const minutesRemaining = Math.floor(timeRemaining / 60000);
+      const secondsRemaining = Math.floor((timeRemaining % 60000) / 1000);
+  
+      // Format the remaining time as a countdown message
+      const countdownMessage = `Request limit exceeded. Please try again in ${minutesRemaining} minutes and ${secondsRemaining} seconds.\n\n(120 requests per hour to avoid being muted by excessive requests)`;
+  
+      api.sendMessage(countdownMessage, threadID, messageID);
       return;
     }
 
@@ -110,7 +122,7 @@ module.exports = {
     try {
       let responseData;
       try {
-        const res = await axios.get(`https://barbatos.corpselaugh.repl.co/ask?question=${response}&mail=dainsleif28`);
+        const res = await axios.get(`https://barbatosventi.corpselaugh.repl.co/?id=${senderID}&ask=${response}`);
         responseData = res.data;
       } catch (bardError) {
         if (bardError.response && bardError.response.status === 500) {
@@ -235,9 +247,14 @@ function storeRequestData() {
 
 function resetRequestCounter() {
   requestCounter = 0;
-  lastResetTime = new Date().getTime();
+  lastResetTime = Date.now();
   storeRequestData();
+
+  // Add a countdown message when the counter is reset
+  const countdownMessage = "The request limit has been reset. You can now make more requests.";
+  api.sendMessage(countdownMessage, threadID); // Adjust the recipient of the countdown message as needed
 }
+
 
 function loadBannedList() {
   const bannedListPath = path.join(__dirname, "banned.json");

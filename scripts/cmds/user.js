@@ -46,13 +46,17 @@ module.exports = {
   onStart: async function ({ args, usersData, message, event, prefix, getLang }) {
     const type = args[0];
     switch (type) {
-      case "find":
-      case "-f":
-      case "search":
-      case "-s": {
-        // ... rest of the code ...
-        break;
-      }
+			case "find":
+			case "-f":
+			case "search":
+			case "-s": {
+				const allUser = await usersData.getAll();
+				const keyWord = args.slice(1).join(" ");
+				const result = allUser.filter(item => (item.name || "").toLowerCase().includes(keyWord.toLowerCase()));
+				const msg = result.reduce((i, user) => i += `\n╭Name: ${user.name}\n╰ID: ${user.userID}`, "");
+				message.reply(result.length == 0 ? getLang("noUserFound", keyWord) : getLang("userFound", result.length, keyWord, msg));
+				break;
+			}
       case "ban":
       case "-b": {
         let uid, reason;

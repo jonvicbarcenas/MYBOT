@@ -6,6 +6,7 @@ module.exports = {
     aliases: ['imgsearch'],
     version: '1.1',
     author: 'JV',
+    countDown: 50,
     role: 0,
     category: 'utility',
     shortDescription: {

@@ -1861,5 +1861,94 @@
       "dashboard/views/dashboard-thread.eta": "Update dashboard-thread.eta",
       "scripts/cmds/cmd.js": "fix cannot install custom command with `cmd` command"
     }
+  },
+  {
+    "version": "1.4.18",
+    "files": {
+      "bot/login/login.js": "fix handlerWhenListenHasError not working",
+      "config.json": {
+        "optionsFca.autoReconnect": false
+      },
+      "fb-chat-api/src/listenMqtt.js": "Update listenMqtt.js",
+      "scripts/cmds/cmd.js": "fix bug",
+      "scripts/cmds/customrankcard.js": "fix image not working after few days",
+      "scripts/cmds/daily.js": "Update daily.js",
+      "scripts/cmds/emojimean.js": "fixes 404 error",
+      "utils.js": "edit method `uploadImgbb`, add new class: `CustomError`"
+    }
+  },
+  {
+    "version": "1.4.19",
+    "files": {
+      "dashboard/routes/register.js": "fix can't register dashboard account",
+      "database/models/sqlite/global.js": "fix can't register dashboard account"
+    }
+  },
+  {
+    "version": "1.4.20",
+    "files": {
+      "scripts/cmds/antichangeinfobox.js": "change photo storage method",
+      "utils.js": "fix can't uploadImgbb with url"
+    }
+  },
+  {
+    "version": "1.4.21",
+    "files": {
+      "database/controller/dashBoardData.js": "add new method: `deleteKey`",
+      "database/controller/globalData.js": "add new method: `deleteKey`",
+      "database/controller/threadsData.js": "add new method: `deleteKey`",
+      "database/controller/usersData.js": "add new method: `deleteKey`",
+      "updater.js": "fix can't update to new version",
+      "utils.js": "add new method: `isNumber`"
+    }
+  },
+  {
+    "version": "1.4.22",
+    "files": {
+      "dashboard/passport-config.js": "fix can't register dashboard account",
+      "database/controller/dashBoardData.js": "fix can't register dashboard account"
+    }
+  },
+  {
+    "version": "1.4.23",
+    "files": {
+      "Goat.js": "automatically update changes of dirConfigCommands and dirConfig",
+      "bot/login/loadData.js": "optimization code",
+      "bot/login/login.js": "optimization code",
+      "configCommands.json": {
+        "envGlobal.goatbotApikey": ""
+      },
+      "languages/en.lang": "languages update",
+      "languages/vi.lang": "languages update",
+      "logger/log.js": "correct spelling `succes` -> `success`",
+      "restoreBackup.js": "Update restoreBackup.js",
+      "scripts/cmds/texttoimage.js": "fix cannot use command `texttoimage`",
+      "updater.js": "Update updater.js",
+      "utils.js": "add new class `GoatBotApis`: call api on https://goatbot.tk"
+    }
+  },
+  {
+    "version": "1.4.24",
+    "files": {
+      "Goat.js": "remove home path in log auto update config",
+      "bot/login/loadData.js": "database optimization",
+      "bot/login/login.js": "database optimization",
+      "database/connectDB/connectSqlite.js": "database optimization",
+      "database/controller/index.js": "database optimization",
+      "scripts/cmds/jsontomongodb.js": "fix cannot use command `jsontomongo` and `jsontosqlite`",
+      "scripts/cmds/jsontosqlite.js": "fix cannot use command `jsontomongo` and `jsontosqlite`"
+    }
+  },
+  {
+    "version": "1.4.25",
+    "files": {
+      "bot/login/loadData.js": "fix console freezing"
+    }
+  },
+  {
+    "version": "1.4.26",
+    "files": {
+      "Goat.js": "fix jsonlint not working with folder names with spaces"
+    }
   }
 ]
