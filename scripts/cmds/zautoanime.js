@@ -11,11 +11,17 @@ module.exports = {
     role: 0,
     shortDescription: "anime updater",
     longDescription: "anime updater",
-    category: "Utility",
+    category: "NOT COMMANDS",
   },
   lastSentMinute: null,
   messageSent: false, // Flag to track if a message has already been sent
-  onStart: async function() {},
+  onStart: async function ({ api, event }) {
+    return api.sendMessage(
+      `Automatically update anime to admin group`,
+      event.threadID,
+      event.messageID
+    );
+  },
   onLoad: async function({
     api,
     event,

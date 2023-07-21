@@ -24,8 +24,17 @@ module.exports = {
   onStart: function ({ api, event }) {
     const commandFiles = fs.readdirSync(__dirname);
 
+    const thisFileName = path.basename(__filename); // Get the current filename
+    const unloadedCommands =
+      global.GoatBot.configCommands.commandUnload || [];
+
     const nsfwCommands = commandFiles
-      .filter((file) => file.endsWith(".js"))
+      .filter(
+        (file) =>
+          file.endsWith(".js") &&
+          file !== thisFileName &&
+          !unloadedCommands.includes(file)
+      )
       .map((file) => {
         const commandPath = path.join(__dirname, file);
         const commandData = require(commandPath);

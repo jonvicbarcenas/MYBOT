@@ -122,7 +122,6 @@ module.exports = {
       }
       formData.input.audience.privacy.base_state =
         body === "1" ? "EVERYONE" : body === "2" ? "FRIENDS" : "SELF";
-      api.unsendMessage(messageID);
       api.sendMessage(
         `Reply to this message with the content of the article. If you want to leave it blank, please reply with 0`,
         threadID,
@@ -140,7 +139,6 @@ module.exports = {
       if (body !== "0") {
         formData.input.message.text = body;
       }
-      api.unsendMessage(messageID);
       api.sendMessage(
         `Reply to this message with a photo. You can send multiple photos. If you don't want to post pictures, please reply with 0`,
         threadID,
@@ -181,33 +179,44 @@ module.exports = {
         variables: JSON.stringify(formData),
       };
 
-      const response = await axios.post(
-        "https://www.facebook.com/api/graphql/",
-        new URLSearchParams(form).toString(),
-        {
-          headers: {
-            "Content-Type": "application/x-www-form-urlencoded",
-          },
-        }
-      );
-
-      api.unsendMessage(messageID);
-
       try {
-        const responseData = response.data.replace("for (;;);", "");
-        const info = JSON.parse(responseData);
-        const postID = info.data.story_create.story.legacy_story_hideable_id;
-        const urlPost = info.data.story_create.story.url;
-        if (postID) {
-          return api.sendMessage(
-            `» Post created successfully\n» postID: ${postID}\n» urlPost: ${urlPost}`,
-            threadID
-          );
+        const response = await axios.post(
+          "https://www.facebook.com/api/graphql/",
+          new URLSearchParams(form).toString(),
+          {
+            headers: {
+              "Content-Type": "application/x-www-form-urlencoded",
+            },
+          }
+        );
+
+        // Check if the response data is an object
+        if (typeof response.data === "object") {
+          const info = response.data;
+
+          // Check if the necessary fields are present in the response
+          if (
+            info &&
+            info.data &&
+            info.data.story_create &&
+            info.data.story_create.story &&
+            info.data.story_create.story.legacy_story_hideable_id
+          ) {
+            const postID = info.data.story_create.story.legacy_story_hideable_id;
+            const urlPost = info.data.story_create.story.url;
+            api.sendMessage(
+              `» Post created successfully\n» postID: ${postID}\n» urlPost: ${urlPost}`,
+              threadID
+            );
+          } else {
+            throw new Error("Post creation failed: Unexpected API response.");
+          }
         } else {
-          throw new Error("Post creation failed.");
+          throw new Error("Post creation failed: Invalid API response.");
         }
       } catch (error) {
-        return api.sendMessage(
+        console.error("Post creation failed. Error:", error);
+        api.sendMessage(
           `Post creation failed. Please try again later.`,
           threadID,
           messageID

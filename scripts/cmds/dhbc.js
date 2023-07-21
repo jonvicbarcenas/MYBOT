@@ -16,7 +16,7 @@ module.exports = {
 			vi: "chơi game đuổi hình bắt chữ",
 			en: "play game catch the word"
 		},
-		category: "game",
+		category: "games",
 		guide: {
 			en: "{pn}"
 		},

@@ -72,10 +72,16 @@
     "jvb.js",
     "gpt.js",
     "draw.js",
-    "pastel.js",
     "zautoseen.js",
     "wayen.js",
+    "zfilswear.js",
+    "setmoney.js",
+    "resmoney.js",
+    "imgsearch.js",
+    "thesetmoney.js",
     "adbot.js",
-    "zfilswear.js"
+    "resend.js",
+    "approve.js",
+    "pastel.js"
   ]
 }

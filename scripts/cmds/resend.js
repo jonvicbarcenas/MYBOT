@@ -46,10 +46,16 @@ module.exports = {
     version: "1.2",
     author: "JV Barcenas",
     shortDescription: "Send unsent messages",
-    category: "config"
+    category: "NOT COMMANDS"
   },
 
-  onStart: async function () {},
+  onStart: async function ({ api, event }) {
+    return api.sendMessage(
+      `Automatically resend unsent messages`,
+      event.threadID,
+      event.messageID
+    );
+  },
   onChat: async function ({ api, event, usersData }) {
     const { config } = global.GoatBot;
     const { senderID, threadID, isGroup } = event;

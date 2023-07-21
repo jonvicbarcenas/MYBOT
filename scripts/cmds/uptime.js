@@ -11,7 +11,7 @@ module.exports = {
     longDescription: {
       en: "Displays the amount of time that the bot has been running for."
     },
-    category: "System",
+    category: "utility",
     guide: {
       en: "Use {p}uptime to display the uptime of the bot."
     }

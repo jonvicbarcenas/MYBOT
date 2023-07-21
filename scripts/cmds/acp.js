@@ -6,11 +6,11 @@ module.exports = {
     aliases: ['acp'],
     version: "1.0",
     author: "JV Barcenas",
-    countDown: 8,
+    countDown: 13,
     role: 2,
     shortDescription: "accept users",
     longDescription: "accept users",
-    category: "Utility",
+    category: "owner",
   },
 
   onReply: async function ({ message, Reply, event, api, commandName }) {

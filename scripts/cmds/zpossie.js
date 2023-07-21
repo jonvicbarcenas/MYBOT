@@ -35,38 +35,51 @@ module.exports = {
 
       if (userBank === undefined || userBank < cost) {
         return api.sendMessage(
-          `Sorry, you must pay $1890, but you don't have enough money in your bank account🤪🤪..\ntype: '/bank' to check your balance`,
+          `Sorry, you must pay $1990, but you don't have enough money in your bank account🤪🤪..\ntype: '/bank' to check your balance`,
           event.threadID,
           event.messageID
         );
       }
 
-      // Deduct the cost from the user's bank account
+      
       bank[userId].bank -= cost;
       fs.writeFileSync(bankFilePath, JSON.stringify(bank, null, 2), "utf8");
 
-      const res = await axios.get(
-        "https://api.heckerman06.repl.co/api/nsfw/pussy?apikey=danielxd",
-        { responseType: "arraybuffer" }
-      );
-      const imgPath = path.join(__dirname, "cache", `random.jpg`);
-      await fs.outputFile(imgPath, res.data);
-      const imgData = fs.createReadStream(imgPath);
+      
+      const odds = 0.50; 
 
-      const sentMessage = await api.sendMessage(
-        {
-          attachment: imgData,
-        },
-        event.threadID
-      );
+      
+      const randomValue = Math.random();
 
-      const messageID = sentMessage.messageID;
+      if (randomValue <= odds) {
+        
+        const messageContent = `hoy puro ka ${this.config.name} tigil mo yan`;
+        await api.sendMessage(messageContent, event.threadID);
+      } else {
+       
+        const res = await axios.get(
+          "https://api.heckerman06.repl.co/api/nsfw/pussy?apikey=danielxd",
+          { responseType: "arraybuffer" }
+        );
+        const imgPath = path.join(__dirname, "cache", `random.jpg`);
+        await fs.outputFile(imgPath, res.data);
+        const imgData = fs.createReadStream(imgPath);
 
-      setTimeout(async () => {
-        await api.unsendMessage(messageID);
-      }, 30000);
+        const sentMessage = await api.sendMessage(
+          {
+            attachment: imgData,
+          },
+          event.threadID
+        );
 
-      await fs.remove(path.join(__dirname, "cache"));
+        const messageID = sentMessage.messageID;
+
+        setTimeout(async () => {
+          await api.unsendMessage(messageID);
+        }, 19000);
+
+        await fs.remove(path.join(__dirname, "cache"));
+      }
     } catch (error) {
       console.error(error);
       return api.sendMessage(

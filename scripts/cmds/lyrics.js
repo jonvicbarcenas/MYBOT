@@ -14,7 +14,7 @@ module.exports = {
  longDescription: {
  en: "This command allows you to get the lyrics for a song. Usage: !lyrics <song name>",
  },
- category: "music",
+ category: "media",
  guide: {
  en: "{prefix}lyrics <song name>",
  },

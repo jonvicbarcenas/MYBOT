@@ -9,7 +9,7 @@ module.exports = {
     author: "JV BARCENAS",
     countDown: 10,
     shortDescription: "Play rock-paper-scissors game with the bot.",
-    category: "fun",
+    category: "games",
     guide: "{prefix}rps <rock|paper|scissors|✊|✋|✌️>"
   },
 

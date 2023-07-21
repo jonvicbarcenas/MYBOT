@@ -18,7 +18,7 @@ module.exports = {
 			en: "   {pn} <emoji1> <emoji2>"
 				+ "\n   Example:  {pn} 🤣 🥰"
 		},
-		category: "fun"
+		category: "funny"
 	},
 
 	langs: {

@@ -27,7 +27,7 @@ module.exports = {
       vi: "chơi trò chơi câu hỏi",
       en: "play quiz game"
     },
-    category: "game",
+    category: "games",
     guide: {
       en: "{pn} <topic>"
     },

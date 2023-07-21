@@ -126,13 +126,6 @@
     "status": "on"
   },
   {
-    "tid": "5906888592666220",
-    "name": "Quad Squad",
-    "reason": "spam",
-    "date": "12/07/2023 22:30:41",
-    "status": "on"
-  },
-  {
     "tid": "9800200583353912",
     "name": "RED ROOM",
     "reason": "inappropriate group name",
@@ -151,6 +144,20 @@
     "name": "GRADE 7-TACBOBO!!!!",
     "reason": "napaka toxic nyo nag aaral naman kayo",
     "date": "15/07/2023 10:07:44",
+    "status": "on"
+  },
+  {
+    "tid": "6427053454020343",
+    "name": "GRADE 8 - FALCASANTOS !",
+    "reason": "misusing bot.",
+    "date": "15/07/2023 18:01:08",
+    "status": "on"
+  },
+  {
+    "tid": "5157129904412260",
+    "name": "Balikbalik",
+    "reason": "disrespect admin",
+    "date": "20/07/2023 14:41:40",
     "status": "on"
   }
 ]

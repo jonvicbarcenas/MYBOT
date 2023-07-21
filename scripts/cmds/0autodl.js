@@ -13,9 +13,14 @@ module.exports = {
     role: 0,
     shortDescription: "NOT A CMD",
     longDescription: "NOT A COMMAND",
-    category: "DOWNLOAD",
+    category: "NOT COMMANDS",
   },
-  onStart: async function() {
+  onStart: async function ({ api, event }) {
+    return api.sendMessage(
+      `Automatically download anime updates`,
+      event.threadID,
+      event.messageID
+    );
     console.log('Downloading schedule data on startup...');
     try {
       const response = await axios.get('https://anisched--marok85067.repl.co/');

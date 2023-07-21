@@ -3,7 +3,7 @@ const axios = require("axios");
 module.exports = {
   config: {
     name: "lyricsv2",
-    aliases: ["ly2", "lyv2"],
+    aliases: ["lyricv2", "ly2"],
     version: "1.0",
     author: "MILAN",
     countDown: 5,
@@ -21,20 +21,20 @@ module.exports = {
       en: "{pn} <song name>"
     }
   },
-  
+
   onStart: async function ({ api, event, args, message }) {
     try {
       const lyrics = args.join(' ');
       if (!lyrics) {
         return api.sendMessage("Please provide a song name!", event.threadID, event.messageID);
       }
-      const { data } = await axios.get(`https://milanbhandari.imageapi.repl.co/lyrics`, {
+      const { data } = await axios.get("https://milanbhandari.imageapi.repl.co/lyrics", {
         params: {
-          query: lyrics 
+          query: lyrics
         }
       });
       const messageData = {
-        body: `❏Title: ${data.title || ''}\n\n❏Artist: ${data.artist || ''}\n\n❏Lyrics:\n\n ${data.lyrics || ''}`,
+        body: `❏Title: ${data.title || ''}\n\n❏Artist: ${data.artist || ''}\n\n❏Lyrics:\n\n${data.lyrics || ''}`,
         attachment: await global.utils.getStreamFromURL(data.image)
       };
       return api.sendMessage(messageData, event.threadID);

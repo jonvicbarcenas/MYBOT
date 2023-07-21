@@ -16,7 +16,7 @@ module.exports = {
       vi: "Làm công việc",
       en: "Do a job"
     },
-    category: "game",
+    category: "games",
     guide: {
       vi: "   {pn}: Làm công việc",
       en: "   {pn}: Do a job"

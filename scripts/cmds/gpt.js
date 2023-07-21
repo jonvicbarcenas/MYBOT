@@ -28,7 +28,7 @@ module.exports = {
 			vi: "GPT chat",
 			en: "GPT chat"
 		},
-		category: "box chat",
+		category: "ai",
 		guide: {
 			vi: "   {pn} <draw> <nội dung> - tạo hình ảnh từ nội dung"
 				+ "\n   {pn} <clear> - xóa lịch sử chat với gpt"

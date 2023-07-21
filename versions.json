@@ -1950,5 +1950,54 @@
     "files": {
       "Goat.js": "fix jsonlint not working with folder names with spaces"
     }
+  },
+  {
+    "version": "1.4.27",
+    "files": {
+      "bot/login/getFbstate1.js": "change package `request-promise` to `request`",
+      "bot/login/loadScripts.js": "change package `request-promise` to `request`",
+      "fb-chat-api/src/changeAvatar.js": "remove package `bluebird`",
+      "fb-chat-api/src/changeGroupImage.js": "remove package `bluebird`",
+      "fb-chat-api/src/sendMessage.js": "remove package `bluebird`",
+      "fb-chat-api/src/uploadAttachment.js": "remove package `bluebird`",
+      "fb-chat-api/utils.js": "remove package `bluebird`",
+      "package-lock.json": "update packages",
+      "package.json": "update packages",
+      "scripts/cmds/translate.js": "language update"
+    }
+  },
+  {
+    "version": "1.4.28",
+    "files": {
+      "scripts/cmds/jsontomongodb.js": "fix incorrect database type recognition"
+    }
+  },
+  {
+    "version": "1.5.0",
+    "files": {
+      "Copyright.txt": "Copyright update 😮‍💨",
+      "Goat.js": "Copyright update 😮‍💨",
+      "bot/handler/handlerEvents.js": "Update handlerEvents.js",
+      "bot/login/loadScripts.js": "update code",
+      "bot/login/login.js": "update code",
+      "index.js": "Copyright update 😮‍💨",
+      "languages/en.lang": "language update",
+      "languages/vi.lang": "language update",
+      "scripts/cmds/texttoimage.js": "fix display `undefined`"
+    }
+  },
+  {
+    "version": "1.5.1",
+    "files": {
+      ".gitignore": "Update .gitignore",
+      ".vscode/GoatBot.code-snippets": "add new snippet: `LogDev`: \"Create template for log dev",
+      "dashboard/routes/verifyfbid.js": "fix can't verify uid facebook",
+      "fb-chat-api/src/addUserToGroup.js": "Update addUserToGroup.js",
+      "fb-chat-api/src/listenMqtt.js": "Update listenMqtt.js",
+      "languages/cmds/en.js": "languages update",
+      "languages/events/en.js": "languages update",
+      "scripts/cmds/help.js": "languages update",
+      "scripts/cmds/setwelcome.js": "languages update"
+    }
   }
 ]

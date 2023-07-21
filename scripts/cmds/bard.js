@@ -52,13 +52,13 @@ module.exports = {
     role: 0,
     shortDescription: {
       vi: "",
-      en: "lol",
+      en: "ask bard",
     },
     longDescription: {
       vi: "",
       en: "",
     },
-    category: "Bard",
+    category: "ai",
   },
 
   onStart: async function() {},
@@ -91,6 +91,15 @@ module.exports = {
     const prefix = Prefixes.find((p) => event.body && event.body.toLowerCase().startsWith(p));
     if (!prefix) {
       return; // Return early if the prefix is not found
+    }
+
+    // Check if the user's message contains the word "lyrics" or "lyric"
+    const messageContainsLyrics = event.body && event.body.toLowerCase().includes("lyrics") || event.body.toLowerCase().includes("lyric");
+    if (messageContainsLyrics) {
+      // Respond with a message suggesting the use of "/ly" or "/ly2" commands
+      const replyMessage = "To get song lyrics, you can try using the commands /ly or /ly2.";
+      api.sendMessage(replyMessage, threadID, messageID);
+      return;
     }
 
   // Check if the request limit has been reached

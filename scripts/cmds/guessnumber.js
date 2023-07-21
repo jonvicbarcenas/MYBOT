@@ -34,7 +34,7 @@ module.exports = {
 			vi: "Game đoán số",
 			en: "Guess number game"
 		},
-		category: "game",
+		category: "games",
 		guide: {
 			vi: "  {pn} [4 | 5 | 6] [single | multi]: tạo một bàn chơi mới, với:\n    4 5 6 là số chữ số của số cần đoán, mặc định là 4.\n    single | multi là chế độ chơi, single là 1 người chơi, multi là nhiều người chơi, mặc định là single.\n   Ví dụ:\n    {pn}\n    {pn} 4 single\n\n   Cách chơi: người chơi trả lời tin nhắn của bot theo quy tắc sau:\n   Bạn có 10 lần đoán (4 số), 12 lần (5 số), 15 lần (6 số).\n   Sau mỗi lần đoán, bạn sẽ nhận được thêm gợi ý là số lượng chữ số đúng (hiển thị bên trái) và số lượng chữ số đúng vị trí (hiển thị bên phải).\n   Lưu ý: Số được hình thành với các chữ số từ 0 đến 9, mỗi chữ số xuất hiện duy nhất một lần và số có thể đứng đầu là 0."
 				+ "\n\n   {pn} rank <trang>: xem bảng xếp hạng."

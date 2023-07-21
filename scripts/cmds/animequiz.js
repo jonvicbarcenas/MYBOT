@@ -26,7 +26,7 @@ module.exports = {
     longDescription: {
       en: "play anime quiz game for weebs"
     },
-    category: "game",
+    category: "games",
     guide: {
       en: "{pn} <topic>"
     },
@@ -64,7 +64,8 @@ module.exports = {
 
     if (!topic) {
       const availableTopics = getAvailableTopics();
-      const tutorialMessage = `Here are some available anime topics:\n\n${availableTopics}\n\n ◦ ≫ TUTORIAL: ${getLang("guide")} \n\n${getLang("top")}\n\n${getLang("score")}`;
+      const formattedTopics = availableTopics.map(topic => `⪢${topic}`).join("\n");
+      const tutorialMessage = `Here are some available anime topics:\n\n◤━━━━━━━━━◥\n${formattedTopics}\n◣━━━━━━━━━◢\n\n ◦ ≫ TUTORIAL: ${getLang("guide")} \n\n${getLang("top")}\n\n${getLang("score")}`;
       return message.reply(tutorialMessage);
     }
 
@@ -220,7 +221,7 @@ function formatText(text) {
 function getAvailableTopics() {
   const quizPath = path.join(__dirname, "aniquiz");
   const topics = fs.readdirSync(quizPath);
-  return topics.map(topic => topic.replace(".json", "")).join("\n");
+  return topics.map(topic => topic.replace(".json", ""));
 }
 
 function getTopPlayers(count) {

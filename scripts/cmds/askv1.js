@@ -11,7 +11,7 @@ module.exports = {
     version: '2.5',
     author: 'JV Barcenas',
     role: 0,
-    category: 'utility',
+    category: 'ai',
     shortDescription: {
       en: 'Asks an AI for an answer.',
     },
