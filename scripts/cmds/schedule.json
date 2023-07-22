@@ -1,93 +1,142 @@
 [
   {
-    "time": "12:00 AM",
+    "time": "12:30 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Higeki no Genkyou to Naru Saikyou Gedou Last Boss Joou wa Tami no Tame ni Tsukushimasu.",
+    "animeTitle": "Nanatsu no Maken ga Shihai suru",
     "episode": "3",
     "status": "already updated"
   },
   {
-    "time": "12:00 AM",
+    "time": "1:23 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Osomatsu-san: Tamashii no Takoyaki Party to Densetsu no Otomarikai",
-    "episode": "1",
-    "status": "already updated"
-  },
-  {
-    "time": "1:10 AM",
-    "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Rurouni Kenshin -Meiji Kenkaku Romantan- (2023)",
+    "animeTitle": "Kanojo, Okarishimasu 3rd Season",
     "episode": "3",
     "status": "already updated"
   },
   {
-    "time": "2:00 AM",
+    "time": "1:50 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Seija Musou: Salaryman, Isekai de Ikinokoru Tame ni Ayumu Michi",
+    "animeTitle": "Ikimono-san",
     "episode": "3",
     "status": "already updated"
   },
   {
-    "time": "7:40 AM",
+    "time": "1:53 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Chiikawa",
-    "episode": "84",
+    "animeTitle": "AI no Idenshi",
+    "episode": "3",
     "status": "already updated"
   },
   {
-    "time": "10:55 AM",
+    "time": "2:23 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Sore Ike! Anpanman",
-    "episode": "1629",
+    "animeTitle": "Dekiru Neko wa Kyou mo Yuuutsu",
+    "episode": "3",
     "status": "already updated"
   },
   {
-    "time": "11:00 AM",
+    "time": "5:22 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Bai Lian Cheng Shen",
-    "episode": "39",
+    "animeTitle": "Bonobono",
+    "episode": "368",
     "status": "already updated"
   },
   {
-    "time": "11:00 AM",
+    "time": "8:00 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Quanzhi Fashi VI",
-    "episode": "9",
+    "animeTitle": "CARDFIGHT!! VANGUARD will+Dress Season 3",
+    "episode": "3",
+    "status": "already updated"
+  },
+  {
+    "time": "8:30 AM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Shimajirou no Wow!",
+    "episode": "575",
+    "status": "already updated"
+  },
+  {
+    "time": "9:30 AM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Shadowverse Flame: Seven Shadows-hen",
+    "episode": "3",
+    "status": "already updated"
+  },
+  {
+    "time": "10:00 AM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Ninjala",
+    "episode": "78",
     "status": "already updated"
   },
   {
     "time": "12:00 PM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Shiguang Dailiren 2nd Season",
-    "episode": "3",
+    "animeTitle": "Huo Feng Liao Yuan",
+    "episode": "14",
     "status": "already updated"
   },
   {
-    "time": "6:40 PM",
+    "time": "4:30 PM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Fushigi Dagashiya Zenitendou",
-    "episode": "97",
+    "animeTitle": "Crayon Shin-chan",
+    "episode": "1191",
+    "status": "already updated"
+  },
+  {
+    "time": "5:00 PM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Doraemon (2005)",
+    "episode": "685",
+    "status": "already updated"
+  },
+  {
+    "time": "5:30 PM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "MIX MEISEI STORY Season2",
+    "episode": "16",
+    "status": "already updated"
+  },
+  {
+    "time": "6:00 PM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Meitantei Conan",
+    "episode": "1091",
+    "status": "already updated"
+  },
+  {
+    "time": "9:00 PM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Youjo Shachou R",
+    "episode": "4",
     "status": "upcoming"
   },
   {
-    "time": "6:55 PM",
+    "time": "10:00 PM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Pocket Monsters (2023)",
-    "episode": "14",
-    "status": "upcoming"
-  },
-  {
-    "time": "9:30 PM",
-    "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Sugar Apple Fairy Tale 2nd Cour",
+    "animeTitle": "Level 1 dakedo Unique Skill de Saikyou desu",
     "episode": "3",
     "status": "upcoming"
   },
   {
-    "time": "9:54 PM",
+    "time": "11:00 PM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Hyakushou Kizoku",
+    "animeTitle": "BLEACH: Sennen Kessen-hen - Ketsubetsu-tan -",
     "episode": "3",
+    "status": "upcoming"
+  },
+  {
+    "time": "11:00 PM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Liar, Liar",
+    "episode": "4",
+    "status": "upcoming"
+  },
+  {
+    "time": "11:30 PM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Horimiya -piece-",
+    "episode": "4",
     "status": "upcoming"
   }
 ]

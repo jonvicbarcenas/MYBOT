@@ -12,7 +12,7 @@ module.exports = {
     version: "1.0",
     author: "NIB",
     countDown: 5,
-    role: 1,
+    role: 0,
     shortDescription: {
       en: "remove picture background"
     },

@@ -7,7 +7,7 @@ module.exports = {
     name: "logo",
     version: "1.4",
     author: "JV Barcenas", //goat modified
-    countDown: 5,
+    countDown: 25,
     role: 0,
     shortDescription: {
       en: "logo maker"

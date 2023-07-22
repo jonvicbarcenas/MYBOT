@@ -37,6 +37,11 @@ module.exports = {
       '¶sammy',
       '_nano',
       'nano',
+      'dain',
+      'dainsleif',
+      'bot',
+      'Bot',
+      '@dainsleif',
       'ai',
       '.ask',
       '!ask',
@@ -57,9 +62,13 @@ module.exports = {
       '?ai',
     ];
 
-    const allPrefixes = [prefix, ...otherPrefix]; // Combine the original prefix and otherPrefix arrays
+    // Convert the original prefix and otherPrefix arrays to lowercase
+    const allPrefixes = [prefix, ...otherPrefix].map(p => p.toLowerCase());
 
-    // Check if the message starts with any of the prefixes
+    // Convert the incoming message to lowercase
+    body = body.toLowerCase();
+
+    // Check if the message starts with any of the prefixes (case-insensitive)
     if (!body || allPrefixes.every(p => body.indexOf(p) !== 0)) return;
 
     if (!threadSpamData[threadID]) {
@@ -69,7 +78,7 @@ module.exports = {
       };
     }
 
-    const timee = 20; // During `timee` seconds, if spam occurs `num` times, the bot will leave the chat
+    const timee = 35; // During `timee` seconds, if spam occurs `num` times, the bot will leave the chat
     const num = 8; // Number of times spam gets detected -1, for example, 5 times 6 times will trigger the auto leave
 
     const currentTime = Date.now();

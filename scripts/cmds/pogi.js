@@ -9,12 +9,15 @@ module.exports = {
         longDescription: "auto reply, not cmd",
         category: "reply",
     },
-onStart: async function(){}, 
-onChat: async function({
-    event,
-    message,
-    getLang
-}) {
-    if (event.body && event.body.toLowerCase() == "pogi") return message.reply("Oo ampogi mo gago naiinis na ako sa kapogian mo gagstik kaba? inutil ka pala e");
-}
+    onStart: async function(){}, 
+    onChat: async function({
+        event,
+        message,
+        getLang
+    }) {
+        const userInput = event.body.toLowerCase();
+        if (userInput.includes("pogi")) {
+            return message.reply("Oo ampogi mo gago naiinis na ako sa kapogian mo gagstik kaba? inutil ka pala e");
+        }
+    }
 };
