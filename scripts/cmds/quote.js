@@ -3,7 +3,7 @@ const axios = require('axios');
 module.exports = {
   config: {
     name: 'quote',
-    aliases: ['randomquote', 'inspire'],
+    aliases: ['randomquote', 'inspire', 'quotes'],
     version: '1.0',
     author: 'JV',
     role: 0,
@@ -29,7 +29,7 @@ module.exports = {
       const quote = response.data[0].q;
       const author = response.data[0].a;
 
-      const message = `Here's a quote for you:\n\n"${quote}"\n- ${author}`;
+      const message = `"${quote}"\n- ${author}`;
 
       const messageID = await api.sendMessage(message, event.threadID);
 

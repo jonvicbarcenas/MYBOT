@@ -5,7 +5,7 @@ module.exports = {
     name: "richest",
     aliases: ["rich"],
     version: "1.0",
-    author: "JON VIC BARCENAS",
+    author: "JV BARCENAS",
     countDown: 5,
     role: 0,
     shortDescription: {

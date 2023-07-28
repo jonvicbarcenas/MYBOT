@@ -65,12 +65,22 @@ module.exports = {
     // Convert the original prefix and otherPrefix arrays to lowercase
     const allPrefixes = [prefix, ...otherPrefix].map(p => p.toLowerCase());
 
+    // Check if the event object has a `body` property
+    if (!body) {
+      return;
+    }
+  
     // Convert the incoming message to lowercase
     body = body.toLowerCase();
 
-    // Check if the message starts with any of the prefixes (case-insensitive)
-    if (!body || allPrefixes.every(p => body.indexOf(p) !== 0)) return;
-
+    // Get the customized prefixes for the current thread
+    const threadPrefixes = global.utils.getPrefix(threadID);
+    const threadPrefixArray = Array.from(threadPrefixes).map(p => p.toLowerCase());
+    const allCombinedPrefixes = [...allPrefixes, ...threadPrefixArray];
+  
+    // Check if the message starts with any of the combined prefixes (case-insensitive)
+    if (!body || allCombinedPrefixes.every(p => body.indexOf(p) !== 0)) return;
+  
     if (!threadSpamData[threadID]) {
       threadSpamData[threadID] = {
         timeStart: 0,
@@ -110,6 +120,8 @@ Event: Spam Bot Leave
         api.removeUserFromGroup(api.getCurrentUserID(), threadID);
 
         threadSpamData[threadID].count = 0;
+      } else if (threadSpamData[threadID].count === num - 2) {
+        api.sendMessage("⚠️ Refrain from any more requests, I'm avoiding spam! ⚠️", threadID);
       }
     }
   }

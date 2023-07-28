@@ -56,6 +56,12 @@
     },
     "bbbquiz": {
       "reward": 1000
+    },
+    "riddle": {
+      "reward": 1000
+    },
+    "riddles": {
+      "reward": 1000
     }
   },
   "envEvents": {
@@ -72,7 +78,6 @@
     "jvb.js",
     "gpt.js",
     "draw.js",
-    "zautoseen.js",
     "wayen.js",
     "zfilswear.js",
     "setmoney.js",
@@ -80,9 +85,11 @@
     "imgsearch.js",
     "thesetmoney.js",
     "adbot.js",
-    "resend.js",
     "pastel.js",
-    "approve.js",
-    "pinterest.js"
+    "pogi.js",
+    "gpt2.js",
+    "zpossie.js",
+    "resend.js",
+    "dain.js"
   ]
 }

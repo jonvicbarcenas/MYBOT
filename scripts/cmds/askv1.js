@@ -9,7 +9,7 @@ module.exports = {
   config: {
     name: 'gpt',
     version: '2.5',
-    author: 'JV Barcenas',
+    author: 'JV Barcenas', // do not change
     role: 0,
     category: 'ai',
     shortDescription: {
@@ -27,15 +27,12 @@ module.exports = {
     try {
       const prefix = Prefixes.find((p) => event.body && event.body.toLowerCase().startsWith(p));
 
-      // Check if the prefix is valid
       if (!prefix) {
-        return; // Invalid prefix, ignore the command
+        return; 
       }
 
-      // Remove the prefix from the message body
       const prompt = event.body.substring(prefix.length).trim();
 
-      // Check if prompt is empty
       if (prompt === '') {
         await message.reply(
           "Kindly provide the question at your convenience and I shall strive to deliver an effective response. Your satisfaction is my top priority."
@@ -43,7 +40,7 @@ module.exports = {
         return;
       }
 
-      // Send a message indicating that the question is being answered
+
       await message.reply("Answering your question. Please wait a moment...");
 
       const response = await axios.get(`https://chatgayfeyti.archashura.repl.co?gpt=${encodeURIComponent(prompt)}`);

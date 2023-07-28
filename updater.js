@@ -11,13 +11,14 @@ catch (e) {
 	chalk = require("chalk");
 }
 
+const sep = path.sep;
 const currentConfig = require('./config.json');
 const langCode = currentConfig.language;
 const execSync = require('child_process').execSync;
 
 let pathLanguageFile = `${process.cwd()}/languages/${langCode}.lang`;
 if (!fs.existsSync(pathLanguageFile)) {
-	log.warn("LANGUAGE", `Can't find language file ${langCode}.lang, using default language file "${process.cwd()}/languages/en.lang"`);
+	log.warn("LANGUAGE", `Can't find language file ${langCode}, using default language file "${path.normalize(`${process.cwd()}/languages/en.lang`)}"`);
 	pathLanguageFile = `${process.cwd()}/languages/en.lang`;
 }
 const readLanguage = fs.readFileSync(pathLanguageFile, "utf-8");
@@ -51,31 +52,32 @@ const defaultWriteFileSync = fs.writeFileSync;
 const defaulCopyFileSync = fs.copyFileSync;
 
 function checkAndAutoCreateFolder(pathFolder) {
-	const splitPath = path.normalize(pathFolder).replace(/\\/g, '/').split('/');
+	const splitPath = path.normalize(pathFolder).split(sep);
 	let currentPath = '';
 	for (const i in splitPath) {
-		currentPath += splitPath[i] + '/';
+		currentPath += splitPath[i] + sep;
 		if (!fs.existsSync(currentPath))
 			fs.mkdirSync(currentPath);
 	}
 }
 
+// override fs.writeFileSync and fs.copyFileSync to auto create folder if not exist
 fs.writeFileSync = function (fullPath, data) {
-	fullPath = path.normalize(fullPath).replace(/\\/g, '/');
-	const pathFolder = fullPath.split('/');
+	fullPath = path.normalize(fullPath);
+	const pathFolder = fullPath.split(sep);
 	if (pathFolder.length > 1)
 		pathFolder.pop();
-	checkAndAutoCreateFolder(pathFolder.join('/'));
+	checkAndAutoCreateFolder(pathFolder.join(path.sep));
 	defaultWriteFileSync(fullPath, data);
 };
 
 fs.copyFileSync = function (src, dest) {
 	src = path.normalize(src);
-	dest = path.normalize(dest).replace(/\\/g, '/');
-	const pathFolder = dest.split('/');
+	dest = path.normalize(dest);
+	const pathFolder = dest.split(sep);
 	if (pathFolder.length > 1)
 		pathFolder.pop();
-	checkAndAutoCreateFolder(pathFolder.join('/'));
+	checkAndAutoCreateFolder(pathFolder.join(path.sep));
 	defaulCopyFileSync(src, dest);
 };
 
@@ -170,9 +172,22 @@ fs.copyFileSync = function (src, dest) {
 			console.log(chalk.bold.yellow('[!]'), getText("updater", "configChanged", chalk.yellow(filePath)));
 		}
 		else {
-			if (fs.existsSync(fullPath))
+			const contentsSkip = ["DO NOT UPDATE", "SKIP UPDATE", "DO NOT UPDATE THIS FILE"];
+
+			if (fs.existsSync(fullPath)) {
 				fs.copyFileSync(fullPath, `${folderBackup}/${filePath}`);
-			fs.writeFileSync(fullPath, Buffer.from(getFile));
+
+				// check first line of file, if it contains any contentsSkip, skip update this file
+				const firstLine = fs.readFileSync(fullPath, "utf-8").trim().split(/\r?\n|\r/)[0];
+				const indexSkip = contentsSkip.findIndex(c => firstLine.includes(c));
+				if (indexSkip !== -1) {
+					console.log(chalk.bold.yellow('[!]'), getText("updater", "skipFile", chalk.yellow(filePath), chalk.yellow(contentsSkip[indexSkip])));
+					continue;
+				}
+				else {
+					fs.writeFileSync(fullPath, Buffer.from(getFile));
+				}
+			}
 		}
 
 		console.log(chalk.bold.blue('[↑]'), `${filePath}:`, chalk.hex('#858585')(typeof description == "string" ? description : typeof description == "object" ? JSON.stringify(description, null, 2) : description));
@@ -192,10 +207,11 @@ fs.copyFileSync = function (src, dest) {
 		}
 	}
 
-	// fixes package.json not updating content by itself
-	const { data: packageHTML5 } = await axios.get("https://github.com/ntkhang03/Goat-Bot-V2/blob/main/package.json");
-	const content = packageHTML5.split(',"blob":{"rawBlob":')[1].split(',"colorizedLines"')[0];
-	fs.writeFileSync(`${process.cwd()}/package.json`, JSON.stringify(JSON.parse(JSON.parse(content)), null, 2));
+	const { data: packageHTML } = await axios.get("https://github.com/ntkhang03/Goat-Bot-V2/blob/main/package.json");
+	const json = packageHTML.split('data-target="react-app.embeddedData">')[1].split('</script>')[0];
+	const packageJSON = JSON.parse(json).payload.blob.rawLines.join('\n');
+
+	fs.writeFileSync(`${process.cwd()}/package.json`, JSON.stringify(JSON.parse(packageJSON), null, 2));
 	log.info("UPDATE", getText("updater", "updateSuccess", !reinstallDependencies ? getText("updater", "restartToApply") : ""));
 
 	// npm install

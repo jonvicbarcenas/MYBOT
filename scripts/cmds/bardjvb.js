@@ -6,6 +6,7 @@ const axios = require("axios");
 // Define the prefixes that trigger the module
 const Prefixes = [
   'bard',
+  'mj',
   '/rey',
   '?ai',
   '/bard',
@@ -41,6 +42,7 @@ const dataFilePath = "requestLimit.json";
 
 let requestCounter = 0;
 let lastResetTime = null;
+
 
 module.exports = {
   config: {
@@ -203,7 +205,7 @@ module.exports = {
     } catch (error) {
       if (error.message === "Fallback to the second API") {
         try {
-          const res = await axios.get(`https://gptextra.corpselaugh.repl.co/?gpt=${response}`);
+          const res = await axios.get(`https://gptextra.corpselaugh.repl.co/?gpt=${response}`); //https://gptextra.corpselaugh.repl.co/?gpt=${response} 
           const responseData = res.data;
 
           // Handle the response from the second API

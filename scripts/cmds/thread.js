@@ -44,9 +44,10 @@ module.exports = {
     }
   },
 
+
   onStart: async function ({ args, threadsData, message, role, event, getLang }) {
     const type = args[0];
-
+  
     switch (type) {
       case 'find':
       case 'search':
@@ -54,22 +55,47 @@ module.exports = {
       case '-s': {
         if (role < 2)
           return message.reply(getLang("noPermission"));
-        let allThread = await threadsData.getAll();
-        let keyword = args.slice(1).join(" ");
-        if (['-j', '-join'].includes(args[1])) {
-          allThread = allThread.filter(thread => thread.members.some(member => member.userID == global.GoatBot.botID && member.inGroup));
-          keyword = args.slice(2).join(" ");
+  
+        let page = 1;
+        let pageArgIndex = args.findIndex(arg => arg.startsWith('-page') || arg.startsWith('-p'));
+        if (pageArgIndex !== -1) {
+          const pageNumber = parseInt(args[pageArgIndex].substr(5));
+          if (!isNaN(pageNumber) && pageNumber > 0) {
+            page = pageNumber;
+            args.splice(pageArgIndex, 1); // Remove the page argument from the search keywords
+          }
         }
-        const result = allThread.filter(item => item.threadID.length > 15 && (item.threadName || "").toLowerCase().includes(keyword.toLowerCase()));
-        const resultText = result.reduce((i, thread) => i += `\n╭Name: ${thread.threadName}\n╰ID: ${thread.threadID}`, "");
+  
+        const allThread = await threadsData.getAll();
+        const keyword = args.slice(1).join(" ");
+        let filteredThreads = allThread.filter(thread => thread.threadID.length > 15 && (thread.threadName || "").toLowerCase().includes(keyword.toLowerCase()));
+  
+        if (['-j', '-join'].includes(args[1])) {
+          filteredThreads = filteredThreads.filter(thread => thread.members.some(member => member.userID == global.GoatBot.botID && member.inGroup));
+        }
+  
+        const threadsPerPage = 10;
+        const startIndex = (page - 1) * threadsPerPage;
+        const endIndex = startIndex + threadsPerPage;
+        const paginatedThreads = filteredThreads.slice(startIndex, endIndex);
+  
         let msg = "";
-        if (result.length > 0)
-          msg += getLang("found", result.length, keyword, resultText);
-        else
+        if (paginatedThreads.length > 0) {
+          const resultText = paginatedThreads.reduce((i, thread) => i += `\n╭Name: ${thread.threadName}\n╰ID: ${thread.threadID}`, "");
+          msg += getLang("found", filteredThreads.length, keyword, resultText);
+  
+          if (filteredThreads.length > threadsPerPage) {
+            const totalPages = Math.ceil(filteredThreads.length / threadsPerPage);
+            msg += `\n\nPage ${page}/${totalPages}\nUse page thread -f -page<pageN> to view other pages.`;
+          }
+        } else {
           msg += getLang("notFound", keyword);
+        }
+  
         message.reply(msg);
         break;
       }
+
 
       case 'ban':
       case '-b': {

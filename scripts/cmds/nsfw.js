@@ -28,30 +28,29 @@ module.exports = {
     const unloadedCommands =
       global.GoatBot.configCommands.commandUnload || [];
 
-    const nsfwCommands = commandFiles
-      .filter(
-        (file) =>
-          file.endsWith(".js") &&
-          file !== thisFileName &&
-          !unloadedCommands.includes(file)
-      )
-      .map((file) => {
+    const nsfwCommands = [];
+    const unloadedNsfwCommands = [];
+
+    commandFiles.forEach((file) => {
+      if (file.endsWith(".js") && file !== thisFileName) {
         const commandPath = path.join(__dirname, file);
         const commandData = require(commandPath);
 
         if (commandData.config.category === "NSFW") {
-          return {
-            name: commandData.config.name,
-            shortDescription: commandData.config.shortDescription.en,
-            longDescription: commandData.config.longDescription.en,
-          };
-        } else {
-          return null; // Return null for non-NSFW commands
+          if (unloadedCommands.includes(file)) {
+            unloadedNsfwCommands.push(commandData.config.name);
+          } else {
+            nsfwCommands.push({
+              name: commandData.config.name,
+              shortDescription: commandData.config.shortDescription.en,
+              longDescription: commandData.config.longDescription.en,
+            });
+          }
         }
-      })
-      .filter(Boolean);
+      }
+    });
 
-    if (nsfwCommands.length === 0) {
+    if (nsfwCommands.length === 0 && unloadedNsfwCommands.length === 0) {
       return api.sendMessage(
         "No NSFW commands available.",
         event.threadID,
@@ -59,15 +58,24 @@ module.exports = {
       );
     }
 
-    const commandInfo = nsfwCommands
-      .map(
-        (command) =>
-          `𝐍𝐚𝐦𝐞: /${command.name}\n𝐃𝐞𝐬𝐜𝐫𝐢𝐩𝐭𝐢𝐨𝐧: ${command.shortDescription}\n`
-      )
-      .join("\n");
+    let message = "𝐇𝐄𝐑𝐄 𝐀𝐑𝐄 𝐒𝐎𝐌𝐄 𝐍𝐒𝐅𝐖 𝐂𝐎𝐌𝐌𝐀𝐍𝐃𝐒\n\n";
 
-    const header = "𝐇𝐄𝐑𝐄 𝐀𝐑𝐄 𝐒𝐎𝐌𝐄 𝐍𝐒𝐅𝐖 𝐂𝐎𝐌𝐌𝐀𝐍𝐃𝐒";
-    const message = `${header}\n\n${commandInfo}`;
+    if (nsfwCommands.length > 0) {
+      const commandInfo = nsfwCommands
+        .map(
+          (command) =>
+            `𝐍𝐚𝐦𝐞: /${command.name}\n𝐃𝐞𝐬𝐜𝐫𝐢𝐩𝐭𝐢𝐨𝐧: ${command.shortDescription}\n`
+        )
+        .join("\n");
+      message += `𝐀𝐯𝐚𝐢𝐥𝐚𝐛𝐥𝐞 𝐍𝐒𝐅𝐖 𝐂𝐨𝐦𝐦𝐚𝐧𝐝𝐬:\n${commandInfo}\n`;
+    }
+
+    if (unloadedNsfwCommands.length > 0) {
+      const unloadedCommandsList = unloadedNsfwCommands
+        .map((command) => `- ${command}`)
+        .join("\n");
+      message += `𝐔𝐧𝐥𝐨𝐚𝐝𝐞𝐝 𝐍𝐒𝐅𝐖 𝐜𝐦𝐝 𝐛𝐲 𝐭𝐡𝐞 𝐀𝐝𝐦𝐢𝐧𝐬\n${unloadedCommandsList}\n`;
+    }
 
     api.sendMessage(message, event.threadID, event.messageID);
   },

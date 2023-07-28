@@ -131,7 +131,7 @@ const responses = [
 
 module.exports = {
     config: {
-        name: "dain",
+        name: "dainz",
         version: "1.0",
         author: "dainsleif",
         countDown: 5,
