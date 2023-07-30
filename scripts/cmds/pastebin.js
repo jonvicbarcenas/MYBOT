@@ -24,7 +24,7 @@ module.exports = {
   onStart: async function({ api, event, args }) {
     const pastebin = new PastebinAPI({
       api_dev_key: 'Mai5oU26abGZe62u2cJF63AAoilm-SlU',
-      api_user_key: '33c599b781a2c27b1170e0864b46192d',
+      api_user_key: '',
     });
 
     const fileName = args[0];
@@ -40,20 +40,24 @@ module.exports = {
     fs.readFile(filePath, 'utf8', async (err, data) => {
       if (err) throw err;
 
-      const paste = await pastebin
-        .createPaste({
+      try {
+        const paste = await pastebin.createPaste({
           text: data,
           title: fileName,
           format: null,
           privacy: 0,
-        })
-        .catch((error) => {
-          console.error(error);
         });
 
-      const rawPaste = paste.replace("pastebin.com", "pastebin.com/raw");
-
-      api.sendMessage(`File uploaded to Pastebin: ${rawPaste}`, event.threadID);
+        if (paste) {
+          const rawPaste = paste.replace("pastebin.com", "pastebin.com/raw");
+          api.sendMessage(`File uploaded to Pastebin: ${rawPaste}`, event.threadID);
+        } else {
+          api.sendMessage('Error occurred while uploading to Pastebin.', event.threadID);
+        }
+      } catch (error) {
+        console.error('Error uploading to Pastebin:', error);
+        api.sendMessage('Error occurred while uploading to Pastebin.', event.threadID);
+      }
     });
   },
 };

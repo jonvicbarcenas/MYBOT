@@ -5,6 +5,7 @@ const moment = require("moment-timezone");
 module.exports = {
   config: {
     name: "rest",
+    aliases: ['sleep'],
     version: "1.0",
     author: "JVB",
     role: 2,

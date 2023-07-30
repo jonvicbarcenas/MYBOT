@@ -13,7 +13,7 @@ module.exports = {
     longDescription: {
       en: "This command searches chrome for a given query and returns the top 5 results."
     },
-    category: "utility",
+    category: "search",
     guide: {
       en: "To use this command, type !google <query>."
     }

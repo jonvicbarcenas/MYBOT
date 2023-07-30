@@ -2,15 +2,15 @@ const axios = require("axios");
 
 module.exports = {
   config: {
-    name: "jv",
-    aliases: ["test"],
+    name: "aimoji",
+    aliases: ["moji"],
     version: "1.15.0",
-    author: "JVBarcenas",
+    author: "Dainsleif",
     countDown: 5,
     role: 0,
-    shortDescription: "ASK JV AI",
+    shortDescription: "ASK AImoji",
     longDescription: {
-      en: "ASK JV AI",
+      en: "ASK AImoji",
     },
     category: "ai",
     guide: {

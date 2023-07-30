@@ -1,0 +1,642 @@
+[
+  {
+    "userID": "100040691924027",
+    "name": "Johnphil Veloso",
+    "reason": "ara ay giti",
+    "date": "01/07/2023 11:04:43",
+    "status": "off"
+  },
+  {
+    "userID": "100087734066105",
+    "name": "テンペスト リムル",
+    "reason": "gusto nya ehh",
+    "date": "01/07/2023 11:09:17",
+    "status": "off"
+  },
+  {
+    "userID": "100089159086547",
+    "name": "Zahara Shanin",
+    "reason": "ito fuck you! Kantunin ko mama mo e",
+    "date": "01/07/2023 11:16:40",
+    "status": "off"
+  },
+  {
+    "userID": "100087403062635",
+    "name": "Oratile Khumalo",
+    "reason": "ito sayo ahahah🖕🏻",
+    "date": "01/07/2023 16:00:31",
+    "status": "off"
+  },
+  {
+    "userID": "100075202957845",
+    "name": "Francine",
+    "reason": "sabing maya maya muna kinick ano yun?",
+    "date": "01/07/2023 19:28:36",
+    "status": "off"
+  },
+  {
+    "userID": "100089918530539",
+    "name": "Yuri Ok",
+    "reason": "spam",
+    "date": "02/07/2023 07:58:02",
+    "status": "off"
+  },
+  {
+    "userID": "100092700111360",
+    "name": "Kyle Ksk Ksks",
+    "reason": "ito sayo ulet 🖕🏻",
+    "date": "02/07/2023 08:53:46",
+    "status": "off"
+  },
+  {
+    "userID": "100013409137813",
+    "name": "Eljon John Castor Magpusao",
+    "reason": "unethical question.",
+    "date": "02/07/2023 14:37:04",
+    "status": "off"
+  },
+  {
+    "userID": "100086590233782",
+    "name": "John Mark Castillo",
+    "reason": "spamming fuckk off",
+    "date": "02/07/2023 17:54:27",
+    "status": "off"
+  },
+  {
+    "userID": "100003025419875",
+    "name": "Frezzy Mae Simbahon Bamboa",
+    "reason": "bat moto ginawa frezzy 🥺😢 -Ghelo",
+    "date": "03/07/2023 11:45:08",
+    "status": "off"
+  },
+  {
+    "userID": "100002328183721",
+    "name": "Giestine Roe",
+    "reason": "hakdog",
+    "date": "03/07/2023 19:48:43",
+    "status": "off"
+  },
+  {
+    "userID": "100026070889806",
+    "name": "Prince Niño Go",
+    "reason": "tang ina mo pasikat ito sayo🖕🏻🖕🏻",
+    "date": "04/07/2023 12:02:48",
+    "status": "off"
+  },
+  {
+    "userID": "100093070965095",
+    "name": "Jø Hñ",
+    "reason": "ito mother fucker 🖕",
+    "date": "04/07/2023 13:04:00",
+    "status": "off"
+  },
+  {
+    "userID": "100086318194672",
+    "name": "Kent Cutab",
+    "reason": "pabida fuck you shit too jejemon",
+    "date": "04/07/2023 15:41:54",
+    "status": "off"
+  },
+  {
+    "userID": "100088882313432",
+    "name": "Kyla Quijano",
+    "reason": "maybe ur angry that u will spam bot",
+    "date": "04/07/2023 18:54:44",
+    "status": "off"
+  },
+  {
+    "userID": "100094305739084",
+    "name": "Elle Yuri Dump",
+    "reason": "🖕",
+    "date": "11/07/2023 10:59:23",
+    "status": "on"
+  },
+  {
+    "userID": "100091819572948",
+    "name": "Christian Oxford",
+    "reason": "papansin jejemon kase mga rp'ier mabaho",
+    "date": "11/07/2023 18:06:30",
+    "status": "on"
+  },
+  {
+    "userID": "100080486824321",
+    "name": "Bj Deimos",
+    "reason": "kolera kang dako inataya ka",
+    "date": "12/07/2023 20:40:46",
+    "status": "on"
+  },
+  {
+    "userID": "100071760017086",
+    "name": "Chloe Marqueses",
+    "reason": "fuck u",
+    "date": "12/07/2023 22:32:03",
+    "status": "on"
+  },
+  {
+    "userID": "100079887761927",
+    "name": "Pepito Alfred",
+    "reason": "admin abuse",
+    "date": "13/07/2023 08:18:52",
+    "status": "on"
+  },
+  {
+    "userID": "100022717780260",
+    "name": "Ledzepp Raven Magsino",
+    "reason": "spamming",
+    "date": "13/07/2023 10:46:01",
+    "status": "on"
+  },
+  {
+    "userID": "100091678788344",
+    "name": "Gaban",
+    "reason": "Banban palayaw mo tas na ban ka",
+    "date": "13/07/2023 13:14:27",
+    "status": "on"
+  },
+  {
+    "userID": "100091678788344",
+    "name": "Gaban",
+    "reason": "Banban palayaw mo tas na ban ka",
+    "date": "13/07/2023 13:14:27",
+    "status": "on"
+  },
+  {
+    "userID": "100088904926594",
+    "name": "Zy",
+    "reason": "ito have you \"oten\" kainin mo tite ko",
+    "date": "13/07/2023 18:00:52",
+    "status": "on"
+  },
+  {
+    "userID": "100080250956043",
+    "name": "Rotsenn Bautista Nugpo",
+    "reason": "spamming",
+    "date": "14/07/2023 09:07:44",
+    "status": "on"
+  },
+  {
+    "userID": "100092630837826",
+    "name": "John Cris",
+    "reason": "shit",
+    "date": "14/07/2023 12:44:49",
+    "status": "on"
+  },
+  {
+    "userID": "100079107552038",
+    "name": "Charlotte Chan",
+    "reason": "spamming ang yudi punggol",
+    "date": "14/07/2023 13:26:27",
+    "status": "on"
+  },
+  {
+    "userID": "100073074288172",
+    "name": "Chris Bickle Schizophrenic",
+    "reason": "taninamo kadiri ka",
+    "date": "14/07/2023 18:01:43",
+    "status": "on"
+  },
+  {
+    "userID": "100029702719593",
+    "name": "Jøsēph Bëñtøy",
+    "reason": "mas bobo ka",
+    "date": "15/07/2023 10:04:50",
+    "status": "on"
+  },
+  {
+    "userID": "100055014023958",
+    "name": "Nora Ga Mi Josh",
+    "reason": "tang ina mo man",
+    "date": "15/07/2023 10:05:27",
+    "status": "on"
+  },
+  {
+    "userID": "100074292343354",
+    "name": "Sean",
+    "reason": "Nag jajakol sabi ni denzell",
+    "date": "15/07/2023 11:48:32",
+    "status": "on"
+  },
+  {
+    "userID": "100088725736751",
+    "name": "Eduard",
+    "reason": "Spam, Racist",
+    "date": "15/07/2023 17:22:40",
+    "status": "on"
+  },
+  {
+    "userID": "100089250402995",
+    "name": "Entoy Thrivz",
+    "reason": "proud spammer palamunin pabigat sa bahay no future and probably no girlfriend. Panget kase",
+    "date": "16/07/2023 06:28:09",
+    "status": "on"
+  },
+  {
+    "userID": "100084943917212",
+    "name": "Dump Philip",
+    "reason": "baho asngod kag Babaedor simo katama ara ban lamona",
+    "date": "16/07/2023 12:26:44",
+    "status": "on"
+  },
+  {
+    "userID": "100066549994021",
+    "name": "Jeniele",
+    "reason": "spam",
+    "date": "16/07/2023 13:47:39",
+    "status": "on"
+  },
+  {
+    "userID": "100090157151052",
+    "name": "Rari Thrivz",
+    "reason": "tanginamo spammer",
+    "date": "16/07/2023 15:06:28",
+    "status": "on"
+  },
+  {
+    "userID": "100055930192166",
+    "name": "Andrei Jainan",
+    "reason": "mas pinakapogi si jv",
+    "date": "17/07/2023 13:10:07",
+    "status": "on"
+  },
+  {
+    "userID": "100081611043264",
+    "name": "Icé Wallow Comé",
+    "reason": "Abusing",
+    "date": "17/07/2023 18:09:19",
+    "status": "on"
+  },
+  {
+    "userID": "100063703510957",
+    "name": "Haru Suzuya",
+    "reason": "pak yu",
+    "date": "21/07/2023 12:52:55",
+    "status": "on"
+  },
+  {
+    "userID": "100049190597639",
+    "name": "Dainsleif",
+    "reason": "100063703510957 fuck you",
+    "date": "21/07/2023 12:53:51",
+    "status": "on"
+  },
+  {
+    "userID": "100041839920592",
+    "name": "James Pagsuguiron",
+    "reason": "...",
+    "date": "21/07/2023 15:44:02",
+    "status": "on"
+  },
+  {
+    "userID": "100025648276658",
+    "name": "Jafelle Aron Madero",
+    "reason": "🖕",
+    "date": "22/07/2023 17:01:56",
+    "status": "on"
+  },
+  {
+    "userID": "100078906541992",
+    "name": "Joshua Adrian P. Leano",
+    "reason": "🖕🖕",
+    "date": "22/07/2023 17:18:45",
+    "status": "on"
+  },
+  {
+    "userID": "100087413136779",
+    "name": "Fazesito Nethan",
+    "reason": "goofy ahh spammer",
+    "date": "23/07/2023 13:56:04",
+    "status": "on"
+  },
+  {
+    "userID": "100010102694082",
+    "name": "John Russell Bongalon",
+    "reason": "spam",
+    "date": "23/07/2023 16:41:29",
+    "status": "on"
+  },
+  {
+    "userID": "100082288901557",
+    "name": "Kenzo Batmanlover",
+    "reason": "in iniiyak mong bata ka nag susuggest ka na nga ijujudge mo pa palamunin ka pa",
+    "date": "23/07/2023 17:45:02",
+    "status": "on"
+  },
+  {
+    "userID": "100090160017856",
+    "name": "Notch Matlou",
+    "reason": "spam 💀",
+    "date": "24/07/2023 12:01:35",
+    "status": "on"
+  },
+  {
+    "userID": "100049206518419",
+    "name": "Aldrix Lar",
+    "reason": "ignorant use of command, spam.",
+    "date": "24/07/2023 15:22:11",
+    "status": "on"
+  },
+  {
+    "userID": "100089480355877",
+    "name": "ۦۦ ۦۦ ۦۦ ۦۦ",
+    "reason": "spam 💀",
+    "date": "24/07/2023 15:59:28",
+    "status": "on"
+  },
+  {
+    "userID": "100067752075661",
+    "name": "Cyril Alonso",
+    "reason": "Shut the fuck up, stop sexually harassing ai. Retarded Bastard.",
+    "date": "24/07/2023 18:25:43",
+    "status": "on"
+  },
+  {
+    "userID": "100035968904139",
+    "name": "Herobrine Anayron Quipanes",
+    "reason": "tanginamo spam pa dapat sayo pinutok ka sa kumot",
+    "date": "25/07/2023 10:50:23",
+    "status": "on"
+  },
+  {
+    "userID": "100075145711893",
+    "name": "Zensu Crimson Vøid",
+    "reason": "dahil nagspam ka ban ka sakin",
+    "date": "25/07/2023 18:16:42",
+    "status": "on"
+  },
+  {
+    "userID": "100093698028301",
+    "name": "Shimori",
+    "reason": "spam",
+    "date": "25/07/2023 18:40:46",
+    "status": "on"
+  },
+  {
+    "userID": "100002687688619",
+    "name": "Chd Ignacio",
+    "reason": "Violation of rules in Ai community, Violence that you commit: Toxicity Unrelated Topics 18+ contents Don't have any courtesy while talking to Admin \"Permanently Ban\" -Admin Ghe",
+    "date": "26/07/2023 09:45:06",
+    "status": "on"
+  },
+  {
+    "userID": "100023640591886",
+    "name": "Frost Arjum",
+    "reason": "spam",
+    "date": "27/07/2023 08:44:18",
+    "status": "on"
+  },
+  {
+    "userID": "100083399124822",
+    "name": "Marcus Ryan",
+    "reason": "spammer",
+    "date": "27/07/2023 23:55:10",
+    "status": "on"
+  },
+  {
+    "userID": "100092495680864",
+    "name": "Rodell Lopezz",
+    "reason": "spam",
+    "date": "28/07/2023 10:02:34",
+    "status": "on"
+  },
+  {
+    "userID": "100033880493207",
+    "name": "John Reyven",
+    "reason": "spam",
+    "date": "28/07/2023 10:18:10",
+    "status": "on"
+  },
+  {
+    "userID": "100076592101257",
+    "name": "Reynaldo Ting",
+    "reason": "spam ai",
+    "date": "28/07/2023 10:19:07",
+    "status": "on"
+  },
+  {
+    "userID": "100084943718885",
+    "name": "Christian Dave Dela Cruz",
+    "reason": "spam",
+    "date": "28/07/2023 17:08:36",
+    "status": "on"
+  },
+  {
+    "userID": "100076656484670",
+    "name": "Prince Mh",
+    "reason": "bully",
+    "date": "28/07/2023 19:15:13",
+    "status": "on"
+  },
+  {
+    "userID": "100070376103753",
+    "name": "France Gerald A. Manaba",
+    "reason": ".",
+    "date": "28/07/2023 20:05:04",
+    "status": "on"
+  },
+  {
+    "userID": "100049150982572",
+    "name": "Jerald Jimenea",
+    "reason": "spam 💀",
+    "date": "29/07/2023 15:14:53",
+    "status": "on"
+  }
+]
+
+[
+  {
+    "tid": "6076315422451852",
+    "name": "•| Warden SMP |• SEASON2•",
+    "reason": "spam sim",
+    "date": "30/06/2023 14:23:06",
+    "status": "on"
+  },
+  {
+    "tid": "5681156185305089",
+    "name": "🛡️Terraria Guardian🛡️",
+    "reason": "swearing",
+    "date": "30/06/2023 15:43:55",
+    "status": "on"
+  },
+  {
+    "tid": "5606979772715189",
+    "name": "11-SIRIUS GAS A STUDENTS ONLY",
+    "reason": "imong mama otenan",
+    "date": "01/07/2023 11:08:31",
+    "status": "on"
+  },
+  {
+    "tid": "6561453723869312",
+    "name": "Pr1 10",
+    "reason": "ana 🖕 kayka",
+    "date": "01/07/2023 11:10:41",
+    "status": "on"
+  },
+  {
+    "tid": "5090640404344959",
+    "name": "ATTC",
+    "reason": "papansin",
+    "date": "01/07/2023 11:11:52",
+    "status": "on"
+  },
+  {
+    "tid": "100028282475801",
+    "name": null,
+    "reason": "4406406086152612 Reason:Pahinga Muna 1 Hour Spam sa ibang gc eh",
+    "date": "01/07/2023 16:11:17",
+    "status": "on"
+  },
+  {
+    "tid": "6571947029523636",
+    "name": "Lato-lato",
+    "reason": "spam",
+    "date": "02/07/2023 07:01:47",
+    "status": "on"
+  },
+  {
+    "tid": "6307077119413732",
+    "name": "FUNNY CLUB<333",
+    "reason": "ito sayo 🖕🏻",
+    "date": "02/07/2023 08:52:34",
+    "status": "on"
+  },
+  {
+    "tid": "5932638116835184",
+    "name": "❤️ Gc makulit ❤️",
+    "reason": "bobo kase sofia",
+    "date": "02/07/2023 14:46:17",
+    "status": "on"
+  },
+  {
+    "tid": "6158222044206370",
+    "name": "OTENCIANO MAUTGANON JR",
+    "reason": "....",
+    "date": "02/07/2023 16:01:39",
+    "status": "on"
+  },
+  {
+    "tid": "6232662773496321",
+    "name": "Pornhub",
+    "reason": "bastos gc nato ito sainyo 🖕🏻",
+    "date": "02/07/2023 16:20:56",
+    "status": "on"
+  },
+  {
+    "tid": "6931937583488683",
+    "name": "Send GOLD",
+    "reason": "unethical questions",
+    "date": "02/07/2023 16:50:47",
+    "status": "on"
+  },
+  {
+    "tid": "6466569393431129",
+    "name": "NebulaCraftSMP",
+    "reason": "palamunin bano gago inutil si christian colangenge bobo",
+    "date": "04/07/2023 09:52:17",
+    "status": "on"
+  },
+  {
+    "tid": "9168215253221050",
+    "name": "The 1% people",
+    "reason": "ang babastos nyo ito sainyo 🖕🏻🖕🏻🖕🏻🖕🏻",
+    "date": "04/07/2023 12:33:41",
+    "status": "on"
+  },
+  {
+    "tid": "6488023267907995",
+    "name": "Dragon SMP Season 2",
+    "reason": "UNUSED",
+    "date": "10/07/2023 15:27:25",
+    "status": "on"
+  },
+  {
+    "tid": "9545080365564957",
+    "name": "ㅡ𝖡𝗈𝗍 𝖢𝗈𝗆𝗆𝗎𝗇𝗂𝗍𝗒",
+    "reason": "ito kayo oh 🖕🖕",
+    "date": "11/07/2023 18:09:57",
+    "status": "on"
+  },
+  {
+    "tid": "6386682311423107",
+    "name": "𝐎𝐍𝐄𝟐𝐏 𝐒𝟑",
+    "reason": "spam /say",
+    "date": "11/07/2023 23:08:11",
+    "status": "on"
+  },
+  {
+    "tid": "9800200583353912",
+    "name": "RED ROOM",
+    "reason": "inappropriate group name",
+    "date": "13/07/2023 17:44:39",
+    "status": "on"
+  },
+  {
+    "tid": "5500316670071791",
+    "name": "Volleyball ",
+    "reason": "spam ai",
+    "date": "14/07/2023 12:42:12",
+    "status": "on"
+  },
+  {
+    "tid": "5005774382862228",
+    "name": "GRADE 7-TACBOBO!!!!",
+    "reason": "napaka toxic nyo nag aaral naman kayo",
+    "date": "15/07/2023 10:07:44",
+    "status": "on"
+  },
+  {
+    "tid": "6427053454020343",
+    "name": "GRADE 8 - FALCASANTOS !",
+    "reason": "misusing bot.",
+    "date": "15/07/2023 18:01:08",
+    "status": "on"
+  },
+  {
+    "tid": "5157129904412260",
+    "name": "Balikbalik",
+    "reason": "disrespect admin",
+    "date": "20/07/2023 14:41:40",
+    "status": "on"
+  },
+  {
+    "tid": "24230258663240251",
+    "name": "Minecraft Mc",
+    "reason": "spam😠",
+    "date": "24/07/2023 13:05:53",
+    "status": "on"
+  },
+  {
+    "tid": "5927128530633291",
+    "name": "GAMERS HUB",
+    "reason": "amoy utot mga gago",
+    "date": "24/07/2023 19:37:10",
+    "status": "on"
+  },
+  {
+    "tid": "6815268525173394",
+    "name": "👑Campus family 0.5",
+    "reason": "misuse of ai",
+    "date": "25/07/2023 10:14:06",
+    "status": "on"
+  },
+  {
+    "tid": "9343402432397147",
+    "name": "Trio Greatest",
+    "reason": "spam pinterest, stoopids made the bot banned.",
+    "date": "27/07/2023 08:40:03",
+    "status": "on"
+  },
+  {
+    "tid": "6329550657100698",
+    "name": "🤸‍♀beshy🤸‍♀",
+    "reason": "spam pa mga tanga",
+    "date": "27/07/2023 10:06:38",
+    "status": "on"
+  },
+  {
+    "tid": "6212058878847146",
+    "name": "NIGGAS GC",
+    "reason": "racist gc",
+    "date": "27/07/2023 18:13:39",
+    "status": "on"
+  }
+]

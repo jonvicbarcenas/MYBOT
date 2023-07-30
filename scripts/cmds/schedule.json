@@ -2,99 +2,190 @@
   {
     "time": "12:00 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Higeki no Genkyou to Naru Saikyou Gedou Last Boss Joou wa Tami no Tame ni Tsukushimasu.",
-    "episode": "4",
+    "animeTitle": "Ryza no Atelier: Tokoyami no Joou to Himitsu no Kakurega",
+    "episode": "5",
     "status": "already updated"
   },
   {
     "time": "12:00 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Tenchi Muyou! GXP: Paradise Shidou-hen",
-    "episode": "3",
-    "status": "already updated"
-  },
-  {
-    "time": "12:00 AM",
-    "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Tensei Shitara Slime Datta Ken Movie: Guren no Kizuna-hen",
-    "episode": "1",
-    "status": "already updated"
-  },
-  {
-    "time": "1:05 AM",
-    "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Rurouni Kenshin -Meiji Kenkaku Romantan- (2023)",
+    "animeTitle": "Temple",
     "episode": "4",
     "status": "already updated"
   },
   {
-    "time": "2:00 AM",
+    "time": "12:55 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Seija Musou: Salaryman, Isekai de Ikinokoru Tame ni Ayumu Michi",
+    "animeTitle": "EDENS ZERO Season 2",
+    "episode": "18",
+    "status": "already updated"
+  },
+  {
+    "time": "1:00 AM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "AYAKA",
+    "episode": "5",
+    "status": "already updated"
+  },
+  {
+    "time": "1:50 AM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Uchi no Kaisha no Chiisai Senpai no Hanashi",
     "episode": "4",
     "status": "already updated"
   },
   {
-    "time": "7:40 AM",
+    "time": "2:20 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Chiikawa",
-    "episode": "86",
+    "animeTitle": "Jitsu wa Ore, Saikyou deshita?",
+    "episode": "4",
     "status": "already updated"
   },
   {
-    "time": "10:55 AM",
+    "time": "7:30 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Sore Ike! Anpanman",
-    "episode": "1630",
+    "animeTitle": "Yu☆Gi☆Oh! GO RUSH!!",
+    "episode": "69",
     "status": "already updated"
   },
   {
-    "time": "11:00 AM",
+    "time": "8:30 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Bai Lian Cheng Shen",
-    "episode": "40",
+    "animeTitle": "Duel Masters Win: Duel Wars",
+    "episode": "17",
     "status": "already updated"
   },
   {
-    "time": "11:00 AM",
+    "time": "8:30 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Quanzhi Fashi VI",
-    "episode": "10",
+    "animeTitle": "Hirogaru Sky! Precure",
+    "episode": "26",
+    "status": "already updated"
+  },
+  {
+    "time": "9:00 AM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Tousouchuu: Great Mission",
+    "episode": "16",
+    "status": "already updated"
+  },
+  {
+    "time": "9:30 AM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "One Piece",
+    "episode": "1070",
+    "status": "already updated"
+  },
+  {
+    "time": "10:45 AM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Fate/Grand Order: Fujimaru Ritsuka wa Wakaranai",
+    "episode": "31",
     "status": "already updated"
   },
   {
     "time": "12:00 PM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Shiguang Dailiren 2nd Season",
+    "animeTitle": "Kimberly Mahou Gakkou Tsuushin",
     "episode": "4",
     "status": "already updated"
   },
   {
-    "time": "6:40 PM",
+    "time": "3:00 PM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Fushigi Dagashiya Zenitendou",
-    "episode": "98",
+    "animeTitle": "Fate/Grand Order: Fujimaru Ritsuka wa Wakaranai",
+    "episode": "32",
     "status": "already updated"
   },
   {
-    "time": "6:55 PM",
+    "time": "3:05 PM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Pocket Monsters (2023)",
+    "animeTitle": "Fate/Grand Order: Fujimaru Ritsuka wa Wakaranai",
+    "episode": "33",
+    "status": "already updated"
+  },
+  {
+    "time": "4:55 PM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Ao no Orchestra: 5-bu de Tanoshii Classic",
     "episode": "15",
     "status": "already updated"
   },
   {
-    "time": "9:30 PM",
+    "time": "5:00 PM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Sugar Apple Fairy Tale 2nd Cour",
+    "animeTitle": "Ao no Orchestra",
+    "episode": "17",
+    "status": "already updated"
+  },
+  {
+    "time": "5:00 PM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Zom 100: Zombie ni Naru made ni Shitai 100 no Koto",
+    "episode": "4",
+    "status": "already updated"
+  },
+  {
+    "time": "6:00 PM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Chibi Maruko-chan (1995)",
+    "episode": "1398",
+    "status": "already updated"
+  },
+  {
+    "time": "6:00 PM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Chiichai! Maou-sama!!",
+    "episode": "15",
+    "status": "already updated"
+  },
+  {
+    "time": "6:00 PM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Higeki no Genkyou to Naru Saikyou Gedou Last Boss Joou wa Tami no Tame ni Tsukushimasu. Mini",
+    "episode": "4",
+    "status": "already updated"
+  },
+  {
+    "time": "6:00 PM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Holo no Graffiti",
+    "episode": "219",
+    "status": "already updated"
+  },
+  {
+    "time": "6:00 PM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Puzzle & Dragon",
+    "episode": "266",
+    "status": "already updated"
+  },
+  {
+    "time": "6:30 PM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Sazae-san",
+    "episode": "2692",
+    "status": "already updated"
+  },
+  {
+    "time": "10:00 PM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Shinigami Bocchan to Kuro Maid 2nd Season",
     "episode": "4",
     "status": "upcoming"
   },
   {
-    "time": "9:54 PM",
+    "time": "11:00 PM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Hyakushou Kizoku",
+    "animeTitle": "Eiyuu Kyoushitsu",
     "episode": "4",
+    "status": "upcoming"
+  },
+  {
+    "time": "11:00 PM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Genjitsu no Yohane -SUNSHINE in the MIRROR-",
+    "episode": "6",
     "status": "upcoming"
   }
 ]

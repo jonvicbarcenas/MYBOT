@@ -19,13 +19,6 @@ module.exports = {
     },
     category: "ai"
   },
-  //onStart: async function ({ api, event, args, message, threadsData, usersData }) {
-    //return api.sendMessage(
-      //`testing`,
-     // event.threadID,
-      //event.messageID
-    //);
-  //},
   onStart: async function({ message, event, args, commandName, api, threadsData, usersData }) {
     const id = event.senderID;
     const prompt = args.join(" ");

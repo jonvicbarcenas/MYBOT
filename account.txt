@@ -1,47 +1,52 @@
 [
   {
     "key": "datr",
-    "value": "J2fDZMmXQ0ezs3x09cQRUKDd",
+    "value": "HlnGZGbIzJ3I1jmNtyJP9djg",
+    "expires": "2024-09-02T12:35:42.000Z",
     "domain": "facebook.com",
     "path": "/",
     "hostOnly": false,
-    "creation": "2023-07-28T12:00:06.848Z",
-    "lastAccessed": "2023-07-28T12:00:12.732Z"
+    "creation": "2023-07-30T12:35:45.947Z",
+    "lastAccessed": "2023-07-30T12:35:48.379Z"
   },
   {
     "key": "fr",
-    "value": "0WLVStNi8uQO5s04e.AWWPtDGpUFrFDr2B-8q6LBpzXPE.Bkw2cn.s5.AAA.0.0.Bkw2dx.AWUV1lokyY4",
+    "value": "0H7N6tDq5tVM4Z30l.AWUZ2zgYW8NUk2_MOBfeaP7SCy4.Bkxlke.2q.AAA.0.0.Bkxlke.AWXee_jFIAA",
+    "expires": "2023-10-28T12:35:42.000Z",
     "domain": "facebook.com",
     "path": "/",
     "hostOnly": false,
-    "creation": "2023-07-28T12:00:06.930Z",
-    "lastAccessed": "2023-07-28T12:00:12.732Z"
+    "creation": "2023-07-30T12:35:45.948Z",
+    "lastAccessed": "2023-07-30T12:35:48.379Z"
   },
   {
-    "key": "xs",
-    "value": "4%3A7N4mjxATwAc6hw%3A2%3A1690527602%3A-1%3A7721",
+    "key": "sb",
+    "value": "HlnGZAmdGnvbxbutuvgc89Ex",
+    "expires": "2024-09-02T12:35:42.000Z",
     "domain": "facebook.com",
     "path": "/",
     "hostOnly": false,
-    "creation": "2023-07-28T12:00:06.941Z",
-    "lastAccessed": "2023-07-28T12:00:12.732Z"
+    "creation": "2023-07-30T12:35:45.949Z",
+    "lastAccessed": "2023-07-30T12:35:48.379Z"
   },
   {
     "key": "c_user",
     "value": "100049190597639",
+    "expires": "2024-07-29T12:35:40.000Z",
     "domain": "facebook.com",
     "path": "/",
     "hostOnly": false,
-    "creation": "2023-07-28T12:00:06.942Z",
-    "lastAccessed": "2023-07-28T12:00:12.732Z"
+    "creation": "2023-07-30T12:35:45.950Z",
+    "lastAccessed": "2023-07-30T12:35:48.379Z"
   },
   {
-    "key": "sb",
-    "value": "J2fDZMVZ9da8Nm3Cf2oICM8S",
+    "key": "xs",
+    "value": "39%3Acp_FvKFmnpuRHw%3A2%3A1690720542%3A-1%3A7721",
+    "expires": "2024-07-29T12:35:40.000Z",
     "domain": "facebook.com",
     "path": "/",
     "hostOnly": false,
-    "creation": "2023-07-28T12:00:06.943Z",
-    "lastAccessed": "2023-07-28T12:00:12.732Z"
+    "creation": "2023-07-30T12:35:45.951Z",
+    "lastAccessed": "2023-07-30T12:35:48.379Z"
   }
 ]
