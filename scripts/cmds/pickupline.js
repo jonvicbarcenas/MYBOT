@@ -8,6 +8,7 @@ module.exports = {
     aliases: ['tellpickupline', 'rizz'],
     version: '1.5',
     author: 'JV Barcenas',
+    countDown: 8,
     role: 0,
     category: 'utility',
     shortDescription: {
@@ -30,7 +31,7 @@ module.exports = {
 
       const pickupline = response.data.pickup;
 
-      const res = await axios.get('https://koree-antonio.goldendreamcorps.repl.co/random-image.php', { responseType: 'arraybuffer' });
+      const res = await axios.get('https://koree-antonio-api.dreamcorps.repl.co/random-image', { responseType: 'arraybuffer' });
       const imgPath = path.join(__dirname, 'cache', `random-koree.jpg`);
       await fs.outputFile(imgPath, res.data);
 

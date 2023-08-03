@@ -2,4 +2,4 @@
 
 
 language="nodejs"
-run="npm starst"
+run="npm start"

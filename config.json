@@ -23,7 +23,8 @@
     "100035299490392",
     "100072230268215",
     "100083660477552",
-    "100028282475801"
+    "100028282475801",
+    "100095038779337"
   ],
   "nickNameBot": "Dainsleif",
   "prefix": "/",
@@ -135,7 +136,7 @@
     "enable": false,
     "whiteListIds": [
       "100007150668975",
-      "6695207353846930"
+      "100090595705401"
     ],
     "notes": "if you enable this feature, only the ids in the whiteListIds section can use the bot"
   },

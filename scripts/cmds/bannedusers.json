@@ -2,8 +2,78 @@
   {
     "userID": "100061911080862",
     "name": "Michael Bonafus",
-    "reason": "disrespectful",
-    "date": "29/07/2023 20:35:19",
+    "reason": "spam spam spam spam spam",
+    "date": "31/07/2023 13:58:43",
+    "status": "on"
+  },
+  {
+    "userID": "100094344595044",
+    "name": "Datu Hashim Ali",
+    "reason": "spam",
+    "date": "31/07/2023 15:25:35",
+    "status": "on"
+  },
+  {
+    "userID": "100095300314291",
+    "name": "Norman Palshanovar",
+    "reason": "so you cant use ai hahah",
+    "date": "02/08/2023 08:45:24",
+    "status": "on"
+  },
+  {
+    "userID": "100088919893942",
+    "name": "Mark Andrei Frias",
+    "reason": "tsk",
+    "date": "02/08/2023 15:26:11",
+    "status": "on"
+  },
+  {
+    "userID": "100083399124822",
+    "name": "Marcus Ryan",
+    "reason": "Permanent",
+    "date": "02/08/2023 20:11:07",
+    "status": "on"
+  },
+  {
+    "userID": "100092505884836",
+    "name": "Saitama Kalbo",
+    "reason": "permanent Bad to owner",
+    "date": "03/08/2023 11:14:42",
+    "status": "on"
+  },
+  {
+    "userID": "100049190597639",
+    "name": "Dainsleif",
+    "reason": "100070376103753 bad to admins",
+    "date": "03/08/2023 12:01:27",
+    "status": "on"
+  },
+  {
+    "userID": "100057919087921",
+    "name": "John Walks",
+    "reason": ".",
+    "date": "03/08/2023 13:17:36",
+    "status": "on"
+  },
+  {
+    "userID": "100092475270640",
+    "name": "Nix Smith",
+    "reason": "spam",
+    "date": "03/08/2023 14:19:21",
+    "status": "on"
+  },
+  {
+    "userID": "100007862052078",
+    "name": "Joricson Gerson",
+    "reason": "spam",
+    "date": "03/08/2023 14:19:28",
+    "status": "on"
+  },
+  {
+    "userID": "100052465060669",
+    "name": "Asani Laxamanna",
+    "reason": "racist group griefer",
+    "date": "03/08/2023 14:21:21",
     "status": "on"
   }
 ]

@@ -90,5 +90,5 @@ const ReplicateUtils = {
 	}
 };
 
-const model = "tstramer/waifu-diffusion:aa5fb9fd23155d7f3a9ff57cece2d46d0cea9563ad5e8be6c752f565d847b01c";
+const model = "stability-ai/stable-diffusion:ac732df83cea7fff18b8472768c88ad041fa750ff7682a21affe81863cbe77e4";
 const midJourney = async (prompt, parameters = {}) => await ReplicateUtils.run(model, { prompt, ...parameters });

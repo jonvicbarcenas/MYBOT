@@ -70,7 +70,6 @@
     }
   },
   "commandUnload": [
-    "pickupline.js",
     "ask.js",
     "time.js",
     "bard2.js",
@@ -79,17 +78,14 @@
     "gpt.js",
     "draw.js",
     "wayen.js",
-    "zfilswear.js",
     "setmoney.js",
     "resmoney.js",
     "imgsearch.js",
-    "thesetmoney.js",
+    "gpt2.js",
     "adbot.js",
     "pastel.js",
     "pogi.js",
-    "gpt2.js",
-    "zpossie.js",
-    "dain.js",
-    "resend.js"
+    "thesetmoney.js",
+    "zfilswear.js"
   ]
 }

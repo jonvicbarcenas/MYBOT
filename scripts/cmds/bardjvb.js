@@ -3,6 +3,7 @@ const path = require("path");
 const cron = require("node-cron");
 const axios = require("axios");
 
+const bannedTimeFilePath = path.join(__dirname, "bannedtime.json");
 // Define the prefixes that trigger the module
 const Prefixes = [
   'bard',
@@ -89,10 +90,29 @@ module.exports = {
       return; // Do not respond if the senderID is banned
     }
     
+
     // Check if the message starts with one of the defined prefixes
     const prefix = Prefixes.find((p) => event.body && event.body.toLowerCase().startsWith(p));
     if (!prefix) {
       return; // Return early if the prefix is not found
+    }
+
+    // Check if the senderID is banned with countdown
+    const bannedUsersWithTime = loadBannedUsersWithTime();
+    const bannedUserEntry = bannedUsersWithTime.find(entry => entry.id === senderID);
+    if (bannedUserEntry && bannedUserEntry.status === true) {
+      const currentTime = Date.now();
+      const remainingTime = bannedUserEntry.countdown - currentTime;
+  
+      if (remainingTime > 0) {
+        const minutesRemaining = Math.floor(remainingTime / (60 * 1000));
+        const secondsRemaining = Math.floor((remainingTime % (60 * 1000)) / 1000);
+  
+        const countdownMessage = `You are currently banned because of using swear words. You cannot send messages for ${minutesRemaining} minutes and ${secondsRemaining} seconds.`;
+  
+        api.sendMessage(countdownMessage, threadID, messageID);
+        return;
+      }
     }
 
     // Check if the user's message contains the word "lyrics" or "lyric"
@@ -283,6 +303,16 @@ function loadBannedUsers() {
     const data = fs.readFileSync(bannedUsersPath, "utf8");
     const bannedUsers = JSON.parse(data);
     return bannedUsers.filter(entry => entry.status === "on").map(entry => entry.userID);
+  } else {
+    return [];
+  }
+}
+
+function loadBannedUsersWithTime() {
+  if (fs.existsSync(bannedTimeFilePath)) {
+    const data = fs.readFileSync(bannedTimeFilePath, "utf8");
+    const jsonData = JSON.parse(data);
+    return jsonData.data || [];
   } else {
     return [];
   }

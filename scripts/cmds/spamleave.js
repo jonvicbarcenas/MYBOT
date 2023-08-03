@@ -89,7 +89,7 @@ module.exports = {
     }
 
     const timee = 35; // During `timee` seconds, if spam occurs `num` times, the bot will leave the chat
-    const num = 8; // Number of times spam gets detected -1, for example, 5 times 6 times will trigger the auto leave
+    const num = 10; // Number of times spam gets detected -1, for example, 5 times 6 times will trigger the auto leave
 
     const currentTime = Date.now();
 

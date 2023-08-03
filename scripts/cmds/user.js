@@ -5,6 +5,9 @@ const { getTime } = global.utils;
 // Get the absolute file path for "bannedusers.json"
 const bannedUsersFilePath = path.join(__dirname, 'bannedusers.json');
 
+// Get the absolute file path for "bannedtime.json"
+const bannedTimeFilePath = path.join(__dirname, 'bannedtime.json')
+
 module.exports = {
   config: {
     name: "user",
@@ -143,45 +146,77 @@ module.exports = {
         } else {
           return message.SyntaxError();
         }
-
-        if (!uid)
+      
+        if (!uid) {
           return message.reply(getLang("uidRequiredUnban"));
+        }
+      
         const userData = await usersData.get(uid);
         const name = userData.name;
         const status = userData.banned.status;
-        if (!status)
+        
+        if (!status) {
           return message.reply(getLang("userNotBanned", uid, name));
-
+        }
+      
         // Remove banned user data from "bannedusers.json" file
         fs.readFile(bannedUsersFilePath, 'utf8', (err, data) => {
           if (err) {
             console.error(err);
             return;
           }
-
+      
           let bannedUsers = [];
           if (data) {
             bannedUsers = JSON.parse(data);
           }
-
+      
           const index = bannedUsers.findIndex(user => user.userID === uid);
           if (index !== -1) {
             bannedUsers.splice(index, 1);
-
+      
             fs.writeFile(bannedUsersFilePath, JSON.stringify(bannedUsers, null, 2), 'utf8', err => {
               if (err) {
                 console.error(err);
                 return;
               }
-
+      
               console.log("Banned user data removed successfully.");
             });
           }
         });
-
+      
+        // Update user status in "bannedtime.json" file
+        fs.readFile(bannedTimeFilePath, 'utf8', (err, data) => {
+          if (err) {
+            console.error(err);
+            return;
+          }
+      
+          let bannedTimeData = { data: [] };
+          if (data) {
+            bannedTimeData = JSON.parse(data);
+          }
+      
+          const index = bannedTimeData.data.findIndex(user => user.id === uid);
+          if (index !== -1) {
+            bannedTimeData.data.splice(index, 1);
+      
+            fs.writeFile(bannedTimeFilePath, JSON.stringify(bannedTimeData, null, 2), 'utf8', err => {
+              if (err) {
+                console.error(err);
+                return;
+              }
+      
+              console.log("Banned time data updated successfully.");
+            });
+          }
+        });
+      
         await usersData.set(uid, {
           banned: {}
         });
+        
         message.reply(getLang("userUnbanned", uid, name));
         break;
       }
