@@ -21,31 +21,10 @@
     "status": "on"
   },
   {
-    "userID": "100088919893942",
-    "name": "Mark Andrei Frias",
-    "reason": "tsk",
-    "date": "02/08/2023 15:26:11",
-    "status": "on"
-  },
-  {
     "userID": "100083399124822",
     "name": "Marcus Ryan",
     "reason": "Permanent",
     "date": "02/08/2023 20:11:07",
-    "status": "on"
-  },
-  {
-    "userID": "100092505884836",
-    "name": "Saitama Kalbo",
-    "reason": "permanent Bad to owner",
-    "date": "03/08/2023 11:14:42",
-    "status": "on"
-  },
-  {
-    "userID": "100049190597639",
-    "name": "Dainsleif",
-    "reason": "100070376103753 bad to admins",
-    "date": "03/08/2023 12:01:27",
     "status": "on"
   },
   {
@@ -56,24 +35,59 @@
     "status": "on"
   },
   {
-    "userID": "100092475270640",
-    "name": "Nix Smith",
-    "reason": "spam",
-    "date": "03/08/2023 14:19:21",
-    "status": "on"
-  },
-  {
-    "userID": "100007862052078",
-    "name": "Joricson Gerson",
-    "reason": "spam",
-    "date": "03/08/2023 14:19:28",
-    "status": "on"
-  },
-  {
     "userID": "100052465060669",
     "name": "Asani Laxamanna",
     "reason": "racist group griefer",
     "date": "03/08/2023 14:21:21",
+    "status": "on"
+  },
+  {
+    "userID": "100092475270640",
+    "name": "Nix Smith",
+    "reason": "talking shit",
+    "date": "04/08/2023 14:47:53",
+    "status": "on"
+  },
+  {
+    "userID": "100049188526736",
+    "name": "Ofelia Montoya Penuela",
+    "reason": "spam",
+    "date": "04/08/2023 16:52:31",
+    "status": "on"
+  },
+  {
+    "userID": "100094457481399",
+    "name": "Calvin Dhrix Bacaoco",
+    "reason": "nyahahaha",
+    "date": "05/08/2023 13:37:58",
+    "status": "on"
+  },
+  {
+    "userID": "100036741102664",
+    "name": "John John",
+    "reason": "spam pa prefix",
+    "date": "05/08/2023 14:38:39",
+    "status": "on"
+  },
+  {
+    "userID": "100025648276658",
+    "name": "Jafelle Aron Madero",
+    "reason": "tsk you make me laugh",
+    "date": "05/08/2023 15:50:09",
+    "status": "on"
+  },
+  {
+    "userID": "100018610846345",
+    "name": "James Kenneth Banaag",
+    "reason": "SPAMMER FULL FULL BAN",
+    "date": "16/08/2023 00:50:12",
+    "status": "on"
+  },
+  {
+    "userID": "100007180727421",
+    "name": "Austin James Villas Balajadia",
+    "reason": "spammer",
+    "date": "17/08/2023 12:57:49",
     "status": "on"
   }
 ]

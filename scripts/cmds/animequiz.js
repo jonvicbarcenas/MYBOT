@@ -232,7 +232,7 @@ function getTopPlayers(count) {
 }
 
 function formatTopPlayersMessage(players, getLang) {
-  let message = "🏆 Quiz Top Players 🏆\n\n";
+  let message = "🏆 Anime-quiz Top Players 🏆\n\n";
   players.forEach((player, index) => {
     const { name, correct } = player;
     message += `${index + 1}. ${name} - ${correct}\n`;

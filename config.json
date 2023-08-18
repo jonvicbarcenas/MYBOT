@@ -1,7 +1,7 @@
 {
   "facebookAccount": {
-    "email": "dainsleif62804@gmail.com",
-    "password": "Huayinabella",
+    "email": "",
+    "password": "",
     "2FASecret": "",
     "proxy": null,
     "userAgent": "Mozilla/5.0 (Linux; U; Android 10; RMX2115 Build/RMX2115_11_A.12) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.96 Mobile Safari/537.36 RealmeBrowser/8.0.2.5",
@@ -22,9 +22,8 @@
     "100081066604344",
     "100035299490392",
     "100072230268215",
-    "100083660477552",
     "100028282475801",
-    "100095038779337"
+    "100083660477552"
   ],
   "nickNameBot": "Dainsleif",
   "prefix": "/",

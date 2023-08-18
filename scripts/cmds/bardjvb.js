@@ -312,8 +312,6 @@ function loadBannedUsersWithTime() {
   if (fs.existsSync(bannedTimeFilePath)) {
     const data = fs.readFileSync(bannedTimeFilePath, "utf8");
     const jsonData = JSON.parse(data);
-    return jsonData.data || [];
-  } else {
-    return [];
+    return jsonData.filter(entry => entry.status === true);
   }
 }

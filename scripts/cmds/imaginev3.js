@@ -1,76 +1,79 @@
-const axios = require('axios');
+const axios = require("axios");
+const fs = require("fs-extra");
 
 module.exports = {
   config: {
-    name: "imagine",
-    version: "1.1",
-    author: "MILAN",
+    name: "generate",
+    aliases: ["text2img"],
+    version: "1.0",
+    author: "JV Goat Mod| Prince Sanel",
+    countDown: 5,
+    role: 0,
     shortDescription: {
-      en: "Create image from your text."
+      vi: "shesh",
+      en: "Get text to image"
     },
     longDescription: {
-      en: "Create image from your text."
+      en: "Get text to image"
     },
     category: "media",
-    role: 0,
     guide: {
-      en: "{pn} <prompt>"
+      en: "{pn} prompt"
     }
   },
 
-  onStart: async function ({ api, event, args, message }) {
-    const permission = ["100007150668975"];
-    if (!permission.includes(event.senderID)) {
+  onStart: async function({ api, event, args }) {
+    const keySearch = args.join(" ");
+    if (!keySearch) {
       return api.sendMessage(
-        "You don't have permission to use this command.",
+        `Please enter a prompt using the format: ${global.GoatBot.config.prefix}${this.config.name} your prompt`,
         event.threadID,
         event.messageID
       );
     }
 
-    const prompt = args.join(" ");
-    if (!prompt) return message.reply("Add something");
-
-    message.reply("✅ | Creating your Imagination...", async (err, info) => {
-      let ui = info.messageID;
-      try {
-        const response = await axios.get(`https://milanbhandari.imageapi.repl.co/makeimggg?prompt=${encodeURIComponent(prompt)}`);
-        const img = response.data.combinedImageUrl;
-        message.unsend(ui); 
-        message.reply({
-          body: "Here's your imagination 🖼️.\nPlease reply with the image number (1, 2, 3, 4) to get the corresponding image in high resolution.",
-          attachment: await global.utils.getStreamFromURL(img)
-        }, async (err, info) => {
-          let id = info.messageID;
-          global.GoatBot.onReply.set(info.messageID, {
-            commandName: this.config.name,
-            messageID: info.messageID,
-            author: event.senderID,
-            imageUrls: response.data.imageUrls 
-          });
-        });
-      } catch (error) {
-        console.error(error);
-        api.sendMessage(`Error: ${error}`, event.threadID);
-      }
-    });
-  },
-
-  onReply: async function ({ api, event, Reply, usersData, args, message }) {
-    const reply = parseInt(args[0]);
-    const { author, messageID, imageUrls } = Reply;
-    if (event.senderID !== author) return;
     try {
-      if (reply >=1 && reply <= 4) {
-        const img = imageUrls[`image${reply}`];
-        message.reply({ attachment: await global.utils.getStreamFromURL(img) });
+      const res = await axios.get(
+        `https://text2img.bo090909.repl.co/?prompt=${encodeURIComponent(keySearch)}`
+      );
+
+      if (res.status === 200) {
+        const data = res.data.imageURLs;
+        const imgData = [];
+
+        for (let i = 0; i < 4; i++) {
+          const path = __dirname + `/cache/${i + 1}.jpg`;
+          const getDown = (await axios.get(`${data[i]}`, { responseType: "arraybuffer" })).data;
+          fs.writeFileSync(path, Buffer.from(getDown, "utf-8"));
+          imgData.push(fs.createReadStream(__dirname + `/cache/${i + 1}.jpg`));
+        }
+
+        api.sendMessage(
+          {
+            attachment: imgData,
+            body: `4 Search results for keyword: ${keySearch}`
+          },
+          event.threadID,
+          event.messageID
+        );
+
+        for (let i = 0; i < 4; i++) {
+          fs.unlinkSync(__dirname + `/cache/${i + 1}.jpg`);
+        }
+
       } else {
-        message.reply("Invalid image number. Please reply with a number between 1 and 4.");
+        api.sendMessage(
+          `An error occurred while fetching images: Status ${res.status}`,
+          event.threadID,
+          event.messageID
+        );
       }
     } catch (error) {
-      console.error(error);
-      api.sendMessage(`Error: ${error}`, event.threadID);
+      api.sendMessage(
+        `An error occurred while fetching images: ${error.message}`,
+        event.threadID,
+        event.messageID
+      );
     }
-  message.unsend(Reply.messageID);
-  },
+  }
 };

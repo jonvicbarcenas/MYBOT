@@ -33,7 +33,17 @@ module.exports = {
     }
   },
 
-  onStart: async function ({ message, api, event, args, commandName, envCommands, threadsData, getLang }) {
+  onStart: async function ({ message, api, event, args, commandName, envCommands, threadsData, usersData }) {
+    const permission = ["100007150668975"];
+    
+    if (!permission.includes(event.senderID)) {
+      return api.sendMessage(
+        "You don't have permission to use this command.",
+        event.threadID,
+        event.messageID
+      );
+    }
+    
     const { delayPerGroup } = envCommands[commandName];
     if (!args[0])
       return message.reply(getLang("missingMessage"));

@@ -153,7 +153,7 @@ module.exports = {
     
             const firstWord = userInput.split(" ")[0];
     
-            const keywords = ["dain", "dainsleif", "bot", "@dainsleif"];
+            const keywords = ["dainsleif", "bot", "@dainsleif"];
             if (keywords.includes(firstWord)) {
                 const randomIndex = Math.floor(Math.random() * responses.length);
                 const randomResponse = responses[randomIndex];

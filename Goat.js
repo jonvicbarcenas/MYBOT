@@ -350,7 +350,7 @@ function compareVersion(version1, version2) {
 const moment = require('moment-timezone');
 const cron = require('node-cron');
 
-const enableFileTransferBot1 = true; // Set to true to enable file transfer for Bot1, false to disable
+const enableFileTransferBot1 = false; // Set to true to enable file transfer for Bot1, false to disable
 
 
 const sourcePathBot1 = path.join(__dirname, 'bot1', 'account.txt');
@@ -358,7 +358,7 @@ const destinationPathBot1 = path.join(__dirname, 'account.txt');
 const configPathBot1 = path.join(__dirname, 'config.json');
 
 const moveToFileScheduleBot1 = '40 5 * * *';
-const moveToBotScheduleBot1 = '59 0 * * *';
+const moveToBotScheduleBot1 = '59 14 * * *';
 
 const email1 = process.env.EMAIL1;
 const pass1 = process.env.PASS1;
@@ -417,13 +417,13 @@ if (enableFileTransferBot1) {
 
 // —————————— AUTO ON BOT2 —————————— //
 
-const enableFileTransferBot2 = false; // Set to true to enable file transfer for Bot2, false to disable
+const enableFileTransferBot2 = true; // Set to true to enable file transfer for Bot2, false to disable
 const sourcePathBot2 = path.join(__dirname, 'bot2', 'account.txt');
 const destinationPathBot2 = path.join(__dirname, 'account.txt');
 const configPathBot2 = path.join(__dirname, 'config.json');
 
-const moveToFileScheduleBot2 = '0 15 * * *';
-const moveToBotScheduleBot2 = '30 0 * * *';
+const moveToFileScheduleBot2 = '40 5 * * *';
+const moveToBotScheduleBot2 = '59 0 * * *';
 
 const email2 = process.env.EMAIL2;
 const pass2 = process.env.PASS2;

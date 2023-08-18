@@ -63,7 +63,7 @@ module.exports = {
     ];
 
     // Convert the original prefix and otherPrefix arrays to lowercase
-    const allPrefixes = [prefix, ...otherPrefix].map(p => p.toLowerCase());
+    const allPrefixes = otherPrefix.map(p => p.toLowerCase());
 
     // Check if the event object has a `body` property
     if (!body) {
@@ -80,7 +80,19 @@ module.exports = {
   
     // Check if the message starts with any of the combined prefixes (case-insensitive)
     if (!body || allCombinedPrefixes.every(p => body.indexOf(p) !== 0)) return;
-  
+
+    // Check if a thread-specific prefix exists
+    let usedPrefix = null;
+    for (const prefix of threadPrefixArray) {
+      if (body.startsWith(prefix)) {
+        usedPrefix = prefix;
+        break;
+      }
+    }
+
+    // If a thread-specific prefix exists, use it; otherwise, use the default global prefix
+    const effectivePrefix = usedPrefix || prefix;
+
     if (!threadSpamData[threadID]) {
       threadSpamData[threadID] = {
         timeStart: 0,
