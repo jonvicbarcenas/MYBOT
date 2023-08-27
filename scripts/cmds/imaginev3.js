@@ -4,9 +4,9 @@ const fs = require("fs-extra");
 module.exports = {
   config: {
     name: "generate",
-    aliases: ["text2img"],
+    aliases: ["gen"],
     version: "1.0",
-    author: "JV Goat Mod| Prince Sanel",
+    author: "JV Barcenas",
     countDown: 5,
     role: 0,
     shortDescription: {
@@ -32,48 +32,54 @@ module.exports = {
       );
     }
 
+    // Send the "Processing your request" message
+    const processingMessage = await api.sendMessage(
+      "Processing your request...",
+      event.threadID
+    );
+
     try {
       const res = await axios.get(
-        `https://text2img.bo090909.repl.co/?prompt=${encodeURIComponent(keySearch)}`
+        `https://midjourneyrepli.archashura.repl.co/?prompt=${encodeURIComponent(keySearch)}`
       );
 
       if (res.status === 200) {
-        const data = res.data.imageURLs;
-        const imgData = [];
+        const imageURL = res.data.result[0];
 
-        for (let i = 0; i < 4; i++) {
-          const path = __dirname + `/cache/${i + 1}.jpg`;
-          const getDown = (await axios.get(`${data[i]}`, { responseType: "arraybuffer" })).data;
-          fs.writeFileSync(path, Buffer.from(getDown, "utf-8"));
-          imgData.push(fs.createReadStream(__dirname + `/cache/${i + 1}.jpg`));
-        }
+        const path = __dirname + `/cache/1.png`;
+        const getDown = (await axios.get(`${imageURL}`, { responseType: "arraybuffer" })).data;
+        fs.writeFileSync(path, Buffer.from(getDown, "utf-8"));
 
-        api.sendMessage(
-          {
-            attachment: imgData,
-            body: `4 Search results for keyword: ${keySearch}`
-          },
-          event.threadID,
-          event.messageID
-        );
+        const message = {
+          body: `Generated image: ${keySearch}`,
+          attachment: fs.createReadStream(path)
+        };
 
-        for (let i = 0; i < 4; i++) {
-          fs.unlinkSync(__dirname + `/cache/${i + 1}.jpg`);
-        }
+        // Reply to the processing message with the image attachment
+        api.sendMessage(message, event.threadID, (error, messageInfo) => {
+          // Delete the image file from the folder after sending
+          fs.unlinkSync(path);
 
+          if (!error) {
+            // Delete the processing message
+            api.deleteMessage(processingMessage.messageID);
+          }
+        });
       } else {
         api.sendMessage(
-          `An error occurred while fetching images: Status ${res.status}`,
+          `An error occurred while fetching the image: Status ${res.status}`,
           event.threadID,
           event.messageID
         );
+        api.deleteMessage(processingMessage.messageID);
       }
     } catch (error) {
       api.sendMessage(
-        `An error occurred while fetching images: ${error.message}`,
+        `An error occurred while fetching the image: ${error.message}`,
         event.threadID,
         event.messageID
       );
+      api.deleteMessage(processingMessage.messageID);
     }
   }
 };

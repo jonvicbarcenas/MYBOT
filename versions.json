@@ -2053,5 +2053,31 @@
       "bot/login/login.js": "Update login.js",
       "scripts/cmds/setalias.js": "fix not applicable to the whole system"
     }
+  },
+  {
+    "version": "1.5.8",
+    "files": {
+      "scripts/cmds/warn.js": "language update, Fixed a bug that occurred when warning more than 3 times"
+    }
+  },
+  {
+    "version": "1.5.9",
+    "files": {
+      "fb-chat-api/src/sendMessage.js": "add function `removeSpecialChar`: remove forbidden characters sent via facebook messages",
+      "scripts/cmds/callad.js": "language update, log update",
+      "scripts/cmds/gpt.js": "fix cannot use gpt chat when there is only one character"
+    }
+  },
+  {
+    "version": "1.5.10",
+    "files": {
+      "bot/login/login.js": "fix `TypeError: Cannot read properties of null (reading '_host')`"
+    }
+  },
+  {
+    "version": "1.5.11",
+    "files": {
+      "bot/login/loadScripts.js": "fix `TypeError: Cannot read properties of null (reading '_host')` (2)"
+    }
   }
 ]

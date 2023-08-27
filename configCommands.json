@@ -76,7 +76,6 @@
     "bard1.js",
     "jvb.js",
     "gpt.js",
-    "draw.js",
     "wayen.js",
     "setmoney.js",
     "resmoney.js",
@@ -89,9 +88,14 @@
     "zfilswear.js",
     "generate.js",
     "resend.js",
-    "moti.js",
     "logo.js",
     "anivid.js",
-    "rich.js"
+    "zautoanime.js",
+    "anon.js",
+    "zhentai.js",
+    "zfemdom.js",
+    "zpossie.js",
+    "moti.js",
+    "thesetname.js"
   ]
 }

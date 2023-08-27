@@ -29,78 +29,67 @@ module.exports = {
     }
   },
 
-  onStart: async function ({ api, event, usersData }) {
+  onStart: async function ({ api, event, args, usersData }) {
     try {
-      const motiFilePath = path.join(__dirname, 'moti.json');
-      let motiData = [];
+      const userID = event.senderID;
 
-      try {
-        const motiFileContent = await fs.readFile(motiFilePath, 'utf8');
-        motiData = JSON.parse(motiFileContent);
-      } catch (readError) {
-        console.error(`Error reading moti.json: ${readError.message}`);
+      if (!pinterestData[userID]) {
+        pinterestData[userID] = {
+          name: await usersData.getName(userID),
+          searches: [],
+          cooldowntime: 0 // Initialize cooldown time
+        };
       }
 
-      const senderData = motiData.find(data => data.userID === event.senderID);
-
-      if (senderData && senderData.futureEpochTime > Math.floor(Date.now() / 1000)) {
-        const remainingTime = senderData.futureEpochTime - Math.floor(Date.now() / 1000);
-        const name = senderData.name;
-
-        api.sendMessage(`Sorry, you are on cooldown. Please wait ${remainingTime} seconds before using this command again.\nLast triggered by: ${name}`, event.threadID);
-        return;
+      const currentTime = Date.now();
+      if (pinterestData[userID].cooldowntime > currentTime) {
+        const remainingTime = Math.ceil((pinterestData[userID].cooldowntime - currentTime) / 1000);
+        return api.sendMessage(
+          `Sorry, you are on cooldown. Please wait ${remainingTime} seconds before using this command again.\nLast triggered by: ${pinterestData[userID].name}`,
+          event.threadID,
+          event.messageID
+        );
       }
 
-      const res = await axios.get('https://panda.dreamcorps.repl.co/', { responseType: 'arraybuffer' });
-      const imgPath = path.join(__dirname, 'cache', `random-image.jpg`);
-      await fs.outputFile(imgPath, res.data);
+      pinterestData[userID].cooldowntime = currentTime + 30000;
 
-      const attachmentImage = await api.sendMessage({
-        attachment: fs.createReadStream(imgPath),
-      }, event.threadID);
+      fs.writeFileSync(pinterestDataPath, JSON.stringify(pinterestData, null, 2));
 
-      if (!attachmentImage || !attachmentImage.messageID) {
-        throw new Error('Failed to send message with image');
+      const keySearch = args.join(" ");
+      if (!keySearch.includes("-")) {
+        return api.sendMessage(`Please enter the search query and number of images to return in the format: ${this.config.guide.en}`, event.threadID, event.messageID);
+      }
+      const keySearchs = keySearch.substr(0, keySearch.indexOf('-')).trim();
+      const numberSearch = parseInt(keySearch.split("-").pop().trim()) || 6;
+
+      const res = await axios.get(`https://api-dien.kira1011.repl.co/pinterest?search=${encodeURIComponent(keySearchs)}`);
+      const data = res.data.data;
+      const imgData = [];
+
+      for (let i = 0; i < Math.min(numberSearch, data.length); i++) {
+        const imgResponse = await axios.get(data[i], { responseType: 'arraybuffer' });
+        const imgPath = path.join(__dirname, 'cache', `${i + 1}.jpg`);
+        await fs.outputFile(imgPath, imgResponse.data);
+        imgData.push(fs.createReadStream(imgPath));
       }
 
-      console.log(`Sent image with message ID ${attachmentImage.messageID}`);
+      pinterestData[userID].searches.push({
+        query: keySearchs,
+        number: numberSearch,
+        cooldown: currentTime
+      });
 
-      await fs.remove(imgPath);
+      fs.writeFileSync(pinterestDataPath, JSON.stringify(pinterestData, null, 2));
 
-      const audioPath = path.join(__dirname, 'assets', 'po.mp3');
+      await api.sendMessage({
+        attachment: imgData,
+        body: `Here are the top ${imgData.length} image results for "${keySearchs}":`
+      }, event.threadID, event.messageID);
 
-      const attachmentAudio = await api.sendMessage({
-        attachment: fs.createReadStream(audioPath),
-      }, event.threadID);
-
-      if (!attachmentAudio || !attachmentAudio.messageID) {
-        throw new Error('Failed to send message with audio');
-      }
-
-      console.log(`Sent audio with message ID ${attachmentAudio.messageID}`);
-
-      // Update moti.json with user data
-      const senderName = await usersData.getName(event.senderID);
-      const currentTime = Math.floor(Date.now() / 1000); // Current epoch time in seconds
-      const futureTime = currentTime + 180; // Current time + 3 minutes
-
-      const userData = {
-        userID: event.senderID,
-        name: senderName,
-        futureEpochTime: futureTime
-      };
-
-      motiData.push(userData);
-
-      try {
-        await fs.writeFile(motiFilePath, JSON.stringify(motiData, null, 2), 'utf8');
-        console.log('Updated moti.json with user data');
-      } catch (writeError) {
-        console.error(`Error writing moti.json: ${writeError.message}`);
-      }
+      await fs.remove(path.join(__dirname, 'cache'));
     } catch (error) {
-      console.error(`Failed to send image, audio, and update moti.json: ${error.message}`);
-      api.sendMessage('Sorry, something went wrong while trying to send an image, audio, and update moti.json. Please try again later.', event.threadID);
+      console.error(error);
+      return api.sendMessage(`An error occurred. Please try again later.`, event.threadID, event.messageID);
     }
   }
 };

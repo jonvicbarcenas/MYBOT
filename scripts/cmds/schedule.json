@@ -2,85 +2,106 @@
   {
     "time": "4:00 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Niehime to Kemono no Ou Mini Anime",
-    "episode": "30",
+    "animeTitle": "Ao no Orchestra",
+    "episode": "18",
     "status": "already updated"
   },
   {
-    "time": "5:22 AM",
+    "time": "4:00 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Sylvanian Families: Freya no Go for Dream!",
-    "episode": "7",
+    "animeTitle": "Zom 100: Zombie ni Naru made ni Shitai 100 no Koto",
+    "episode": "6",
     "status": "already updated"
   },
   {
-    "time": "8:30 AM",
+    "time": "5:00 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "BanG Dream! It's MyGO!!!!!",
+    "animeTitle": "Chibi Maruko-chan (1995)",
+    "episode": "1402",
+    "status": "already updated"
+  },
+  {
+    "time": "5:00 AM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Chiichai! Maou-sama!!",
+    "episode": "19",
+    "status": "already updated"
+  },
+  {
+    "time": "5:00 AM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Higeki no Genkyou to Naru Saikyou Gedou Last Boss Joou wa Tami no Tame ni Tsukushimasu. Mini",
+    "episode": "8",
+    "status": "already updated"
+  },
+  {
+    "time": "5:00 AM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Holo no Graffiti",
+    "episode": "223",
+    "status": "already updated"
+  },
+  {
+    "time": "5:00 AM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Puzzle & Dragon",
+    "episode": "270",
+    "status": "already updated"
+  },
+  {
+    "time": "5:30 AM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Sazae-san",
+    "episode": "2696",
+    "status": "already updated"
+  },
+  {
+    "time": "9:00 AM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Shinigami Bocchan to Kuro Maid 2nd Season",
+    "episode": "8",
+    "status": "already updated"
+  },
+  {
+    "time": "10:00 AM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Eiyuu Kyoushitsu",
+    "episode": "8",
+    "status": "already updated"
+  },
+  {
+    "time": "10:00 AM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Genjitsu no Yohane -SUNSHINE in the MIRROR-",
     "episode": "10",
     "status": "already updated"
   },
   {
-    "time": "8:30 AM",
+    "time": "11:00 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Spy Kyoushitsu 2nd Season",
-    "episode": "6",
+    "animeTitle": "Mushoku Tensei Ⅱ: Isekai Ittara Honki Dasu",
+    "episode": "8",
     "status": "already updated"
   },
   {
-    "time": "9:30 AM",
+    "time": "12:05 PM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Hataraku Maou-sama!! 2nd Season",
-    "episode": "6",
+    "animeTitle": "Dark Gathering",
+    "episode": "8",
     "status": "already updated"
   },
   {
-    "time": "10:00 AM",
+    "time": "1:35 PM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Higeki no Genkyou to Naru Saikyou Gedou Last Boss Joou wa Tami no Tame ni Tsukushimasu.",
-    "episode": "7",
+    "animeTitle": "Yami Shibai 11",
+    "episode": "8",
     "status": "already updated"
   },
   {
-    "time": "10:00 AM",
+    "time": "8:50 PM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "SAND LAND",
-    "episode": "1",
-    "status": "already updated"
-  },
-  {
-    "time": "10:55 AM",
-    "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Rurouni Kenshin -Meiji Kenkaku Romantan- (2023)",
-    "episode": "7",
-    "status": "upcoming"
-  },
-  {
-    "time": "5:40 PM",
-    "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Chiikawa",
-    "episode": "92",
-    "status": "upcoming"
-  },
-  {
-    "time": "8:55 PM",
-    "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Sore Ike! Anpanman",
-    "episode": "1633",
-    "status": "upcoming"
-  },
-  {
-    "time": "9:00 PM",
-    "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Bai Lian Cheng Shen",
-    "episode": "43",
-    "status": "upcoming"
-  },
-  {
-    "time": "10:00 PM",
-    "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Shiguang Dailiren 2nd Season",
-    "episode": "7",
+    "animeTitle": "Bosanimal",
+    "episode": "85",
     "status": "upcoming"
   }
 ]

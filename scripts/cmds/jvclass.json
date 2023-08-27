@@ -1,0 +1,97 @@
+{
+  "MONDAY": [
+    {
+      "time": "[08:30 AM-10:30 AM]",
+      "course": "CSIT121",
+      "location": "G1-AP4",
+      "room": "RTL304"
+    },
+    {
+      "time": "[12:00 PM-01:30 PM]",
+      "course": "ENGL031",
+      "location": "G1-AP4",
+      "room": "RTL200"
+    },
+    {
+      "time": "[01:30 PM-02:59 PM]",
+      "course": "PHILO031",
+      "location": "G1/G8-AP4",
+      "room": "G-PHYLAB3"
+    }
+  ],
+  "TUESDAY": [
+    {
+      "time": "[07:30 AM-08:59 AM]",
+      "course": "MATH031",
+      "location": "G1-AP4",
+      "room": "online"
+    },
+    {
+      "time": "[09:00 AM-10:30 AM]",
+      "course": "CSIT111",
+      "location": "G1-AP4",
+      "room": "RTL302"
+    },
+    {
+      "time": "[12:00 PM-01:30 PM]",
+      "course": "PSYCH031",
+      "location": "G1-AP4",
+      "room": "online"
+    },
+    {
+      "time": "[03:00 PM-04:59 PM]",
+      "course": "PE103",
+      "location": "G1-AP4",
+      "room": "PE-COVEREDCOURT"
+    }
+  ],
+  "WEDNESDAY": "NO SCHEDULE",
+  "THURSDAY": [
+    {
+      "time": "[07:30 AM-08:59 AM]",
+      "course": "MATH031",
+      "location": "G1-AP4",
+      "room": "RTL314"
+    },
+    {
+      "time": "[12:00 PM-01:30 PM]",
+      "course": "PSYCH031",
+      "location": "G1-AP4",
+      "room": "RTL314"
+    },
+    {
+      "time": "[07:30 PM-08:59 PM]",
+      "course": "CSIT111",
+      "location": "G1-AP4",
+      "room": "online"
+    }
+  ],
+  "FRIDAY": [
+    {
+      "time": "[07:30 AM-10:30 AM]",
+      "course": "CSIT121",
+      "location": "G1-AP4",
+      "room": "NGE103"
+    },
+    {
+      "time": "[12:00 PM-01:30 PM]",
+      "course": "ENGL031",
+      "location": "G1-AP4",
+      "room": "online"
+    },
+    {
+      "time": "[01:30 PM-02:59 PM]",
+      "course": "PHILO031",
+      "location": "G1/G8-AP4",
+      "room": "online"
+    }
+  ],
+  "SATURDAY": [
+    {
+      "time": "[08:00 AM-11:59 AM]",
+      "course": "NSTP111",
+      "location": "SATURDAY-AM8-AP4",
+      "room": "TBA"
+    }
+  ]
+}

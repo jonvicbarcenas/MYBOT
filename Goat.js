@@ -522,7 +522,7 @@ function startProgram() {
     }
 
     files.forEach(file => {
-      if (file === 'restart.txt' || file === 'rest.txt') {
+      if (file === 'restart.txt' || file === 'rest.txt' || file === 'switch.txt') {
         return;
       }
 

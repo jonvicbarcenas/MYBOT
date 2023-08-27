@@ -1,6 +1,9 @@
 const axios = require('axios');
 const fs = require('fs-extra');
 const path = require('path');
+const moment = require('moment-timezone');
+
+const sentMessages = {};
 
 module.exports = {
   config: {
@@ -19,40 +22,63 @@ module.exports = {
     },
     guide: {
       en: '{pn}'
-    }
+    },
   },
-  onStart: async function ({ api, event }) {
+  onStart: async function () {},
+  onLoad: async function () {},
+  onChat: async function ({ api, event, threadsData }) {
     try {
-      const res = await axios.get('https://panda.dreamcorps.repl.co/', { responseType: 'arraybuffer' });
-      const imgPath = path.join(__dirname, 'cache', `random-image.jpg`);
-      await fs.outputFile(imgPath, res.data);
+      const currentTimePH = moment().tz('Asia/Manila').format('HH:mm');
 
-      const attachmentImage = await api.sendMessage({
-        attachment: fs.createReadStream(imgPath),
-      }, event.threadID);
+      // Check if the current time ends with ":00" (beginning of a new hour)
+      if (event.isGroup && currentTimePH.endsWith(':00')) {
+        const groupId = event.threadID;
 
-      if (!attachmentImage || !attachmentImage.messageID) {
-        throw new Error('Failed to send message with image');
+        if (!sentMessages[groupId]) {
+          const sendImageAndAudio = Math.random() < 0.5;
+
+          if (sendImageAndAudio) {
+            const res = await axios.get('https://panda.dreamcorps.repl.co/', { responseType: 'arraybuffer' });
+            const imgPath = path.join(__dirname, 'cache', `random-image.jpg`);
+            await fs.outputFile(imgPath, res.data);
+
+            const attachmentImage = await api.sendMessage({
+              attachment: fs.createReadStream(imgPath),
+              body: 'Daily Panda Quote:'
+            }, groupId);
+
+            if (!attachmentImage || !attachmentImage.messageID) {
+              throw new Error('Failed to send message with image');
+            }
+
+            await fs.remove(imgPath);
+          }
+
+          const audioPath = path.join(__dirname, 'assets', 'po.mp3');
+          const audioAttachment = fs.createReadStream(audioPath);
+
+          if (sendImageAndAudio) {
+            await api.sendMessage({
+              attachment: audioAttachment
+            }, groupId);
+          } else {
+            const res = await axios.get('https://zeenquotes.dreamcorps.repl.co/random-motivation');
+            const quote = res.data.quote;
+            const author = res.data.author;
+
+            const messageText = `Daily Quote:\n\n"${quote}"\n- ${author}`;
+
+            await api.sendMessage({
+              body: messageText,
+              attachment: audioAttachment
+            }, groupId);
+          }
+
+          sentMessages[groupId] = true;
+        }
       }
-
-      console.log(`Sent image with message ID ${attachmentImage.messageID}`);
-
-      await fs.remove(imgPath);
-
-      const audioPath = path.join(__dirname, 'assets', 'po.mp3');
-
-      const attachmentAudio = await api.sendMessage({
-        attachment: fs.createReadStream(audioPath),
-      }, event.threadID);
-
-      if (!attachmentAudio || !attachmentAudio.messageID) {
-        throw new Error('Failed to send message with audio');
-      }
-
-      console.log(`Sent audio with message ID ${attachmentAudio.messageID}`);
     } catch (error) {
-      console.error(`Failed to send image and audio: ${error.message}`);
-      api.sendMessage('Sorry, something went wrong while trying to send an image and audio. Please try again later.', event.threadID);
+      console.error(`Failed to send message: ${error.message}`);
     }
   }
 };

@@ -1,7 +1,7 @@
 const axios = require('axios');
 
 // config 
-const apiKey = "";
+const apiKey = "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";
 const maxTokens = 500;
 const numberGenerateImage = 4;
 const maxStorageMessage = 4;
@@ -16,10 +16,10 @@ const { openAIUsing, openAIHistory } = global.temp;
 module.exports = {
 	config: {
 		name: "gpt",
-		version: "1.3",
+		version: "1.2",
 		author: "NTKhang",
 		countDown: 5,
-		role: 0,
+		role: 2,
 		shortDescription: {
 			vi: "GPT chat",
 			en: "GPT chat"
@@ -28,7 +28,7 @@ module.exports = {
 			vi: "GPT chat",
 			en: "GPT chat"
 		},
-		category: "box chat",
+		category: "ai",
 		guide: {
 			vi: "   {pn} <draw> <nội dung> - tạo hình ảnh từ nội dung"
 				+ "\n   {pn} <clear> - xóa lịch sử chat với gpt"
@@ -117,7 +117,7 @@ module.exports = {
 				return message.reply(getLang('clearHistory'));
 			}
 			default: {
-				if (!args[0])
+				if (!args[1])
 					return message.reply(getLang('invalidContent'));
 
 				handleGpt(event, message, args, getLang, commandName);

@@ -1,91 +1,70 @@
 const axios = require('axios');
-const { getStreamFromURL } = global.utils;
+
+
+const badWords = ["gay", "pussy", "dick","nude"," without","clothes","sugar","fuck","fucked","step","🤭","🍼","shit","bitch","hentai","🥵","clothes","sugar","fuck","fucked","step","?","?","shit","bitch","hentai","?","sex","fuck","boobs","cute girl undressed","undressed", "nude","without clothes", "without cloth", "nsfw", "nsFw"];
+//Bad Words And CMD BY Ohio03//
 
 module.exports = {
   config: {
-    name: "draw",
-    aliases: [],
-    author: "munem",
-    version: "1.0",
-    countDown: 10,
+    name: 'draw',
+    aliases: ["sketch"],
+    version: '1.0',
+    author: 'JARiF × Ohio03',
+    countDown: 15,
     role: 0,
-    shortDescription: "Generates an image from a text description",
-    longDescription: "Generates an image from a text description",
-    category: "ai",
-    guide: {
-      en: "{pn} <text>"
-    }
+    longDescription: {
+      vi: 'Draw an image based on a prompt using an AI model',
+      en: 'Draw an image based on a prompt using an AI model'
+    },
+    category: 'image',
+   guide: {
+        en: ' {pn} Your Prompt | Model' +
+          '\n──『 Model 』' +
+          '\n1. Anime_Meina-V9' +
+          '\n2. Anime_Orangemix' +
+          '\n3. Anime_Meinamix-V11'
+      }
   },
 
-  langs: {
-    en: {
-      loading: "Generating image, please wait...",
-      error: "An error occurred, please try again later",
-      approve_success: "The imagine command has been approved!",
-      approve_error: "Only administrators can approve the imagine command",
-      disapprove_success: "The imagine command has been disapproved!",
-      disapprove_error: "Only administrators can disapprove the imagine command",
-      already_approved: "imagine command has already been approved",
-      already_disapproved: "The imagine command has already been disapproved",
-      group_not_approved: "imagine is paid command.Donate to my admin to use it"
-    }
-  },
-
-  onStart: async function ({ event, message, getLang, threadsData, api, args }) {
-    const { threadID } = event;
-
-    if (args[0] === "approve") {
-      if (global.GoatBot.config.adminBot.includes(event.senderID)) {
-        const approved = await threadsData.get(threadID, "settings.imagine_approved");
-        if (approved) {
-          return message.reply(getLang("already_approved"));
-        }
-        await threadsData.set(threadID, true, "settings.imagine_approved");
-        return message.reply(getLang("approve_success"));
-      }
-      return message.reply(getLang("approve_error"));
-    } else if (args[0] === "disapprove") {
-      if (global.GoatBot.config.adminBot.includes(event.senderID)) {
-        const approved = await threadsData.get(threadID, "settings.imagine_approved");
-        if (!approved) {
-          return message.reply(getLang("already_disapproved"));
-        }
-        await threadsData.set(threadID, false, "settings.imagine_approved");
-        return message.reply(getLang("disapprove_success"));
-      }
-      return message.reply(getLang("disapprove_error"));
-    }
-
-    const approved = await threadsData.get(threadID, "settings.imagine_approved");
-    if (!approved) {
-      return message.reply(getLang("group_not_approved"));
-    }
-
-    message.reply(getLang("loading"));
-    const text = args.join(' ');
-
+  onStart: async function ({ message, args }) {
     try {
-      const { data } = await axios.post(
-        'https://api.openai.com/v1/images/generations',
-        {
-          model: 'image-alpha-001',
-          prompt: text,
-          num_images: 1
-        },
-        {
-          headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer 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`
-          }
-        }
-      );
-      const imageURL = data.data[0].url;
-      const image = await getStreamFromURL(imageURL);
-      return message.reply({
-        attachment: image
-      });
-    } catch (err) {
-      return message.reply(getLang("error"));
+      const info = args.join(' ');
+      const [prompt, model] = info.split('|').map(item => item.trim());
+      const text = args.join ("");
+          if (!text) {
+      return message.reply("❌ | Please Provide a Prompt");
+    }
+
+     
+      if (containsBadWords(prompt)) {
+        return message.reply('❌ | NSFW Prompt Detected');
+      }
+
+      const apiKey = 'upol-motherfucker'; //API KEY BY JARiF//
+
+     
+      const modelParam = model || '3';//Default Model Is 3//
+
+      const apiUrl = `https://jarif-draw.gadhaame.repl.co/imagine?model=${modelParam}&prompt=${encodeURIComponent(prompt)}&apikey=${apiKey}`;//API BY JARiF//
+
+      await message.reply('Please Wait...⏳');
+
+      const form = {
+        body: "Here's Your Drawing 🎨",
+      };
+
+      form.attachment = [];
+      form.attachment[0] = await global.utils.getStreamFromURL(apiUrl);
+
+      message.reply(form);
+    } catch (error) {
+      console.error(error);
+      await message.reply('Sorry, API Have Skill Issue');
     }
   }
 };
+
+function containsBadWords(prompt) {
+  const promptLower = prompt.toLowerCase();
+  return badWords.some(badWord => promptLower.includes(badWord));
+}

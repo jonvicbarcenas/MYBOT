@@ -38,6 +38,12 @@ module.exports = {
     const song = data.join(" ");
 
     try {
+      // Create cache folder if it doesn't exist
+      const cacheFolderPath = __dirname + '/cache';
+      if (!fs.existsSync(cacheFolderPath)) {
+        fs.mkdirSync(cacheFolderPath);
+      }
+
       api.sendMessage(`Finding lyrics for "${song}". Please wait...`, event.threadID);
 
       const res = await axios.get(`https://api.heckerman06.repl.co/api/other/lyrics2?song=${encodeURIComponent(song)}`);
@@ -56,7 +62,7 @@ module.exports = {
       const stream = ytdl(videoUrl, { filter: "audioonly" });
 
       const fileName = `${event.senderID}.mp3`;
-      const filePath = __dirname + `/cache/${fileName}`;
+      const filePath = cacheFolderPath + `/${fileName}`;
 
       stream.pipe(fs.createWriteStream(filePath));
 

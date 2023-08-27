@@ -4,7 +4,7 @@ module.exports = {
   config: {
     name: "bank",
     version: "1.9",
-    author: "LøüFï/alrulex", /*don't change my credit please 😠*/
+    author: "LøüFï/alrulex | JV",
     countDown: 5,
     role: 0,
     shortDescription: {
@@ -13,7 +13,7 @@ module.exports = {
     },
     longDescription: {
       vi: "",
-      en: "full bank system 😊💗 I'll upgrade it later (by løüfï)"
+      en: "Bank system updated by jv"
     },
     category: "banking",
     guide: {
@@ -77,7 +77,7 @@ module.exports = {
 
       return message.reply(`Your bank account balance is ${balance} $.`);
     } else if (command === "interest") {
-      const interestRate = 0.001;
+      const interestRate = 0.0001;
       const lastInterestClaimed = bankData[user].lastInterestClaimed || Date.now();
       const currentTime = Date.now();
       const timeDiffInSeconds = (currentTime - lastInterestClaimed) / 1000;
