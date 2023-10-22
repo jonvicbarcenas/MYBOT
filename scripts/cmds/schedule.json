@@ -1,107 +1,205 @@
 [
   {
-    "time": "4:00 AM",
+    "time": "2:30 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Ao no Orchestra",
-    "episode": "18",
+    "animeTitle": "Crayon Shin-chan",
+    "episode": "1204",
+    "status": "already updated"
+  },
+  {
+    "time": "3:00 AM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Doraemon (2005)",
+    "episode": "698",
+    "status": "already updated"
+  },
+  {
+    "time": "3:30 AM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Megumi no Daigo: Kyuukoku no Orange",
+    "episode": "4",
+    "status": "already updated"
+  },
+  {
+    "time": "3:55 AM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Zenryoku Usagi (2023)",
+    "episode": "3",
     "status": "already updated"
   },
   {
     "time": "4:00 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Zom 100: Zombie ni Naru made ni Shitai 100 no Koto",
-    "episode": "6",
+    "animeTitle": "Meitantei Conan",
+    "episode": "1101",
     "status": "already updated"
   },
   {
-    "time": "5:00 AM",
+    "time": "4:25 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Chibi Maruko-chan (1995)",
-    "episode": "1402",
+    "animeTitle": "Kibo no Chikara ~Otona Precure 23~",
+    "episode": "3",
     "status": "already updated"
   },
   {
-    "time": "5:00 AM",
+    "time": "6:02 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Chiichai! Maou-sama!!",
-    "episode": "19",
+    "animeTitle": "Journey to Bloom",
+    "episode": "4",
     "status": "already updated"
   },
   {
-    "time": "5:00 AM",
+    "time": "7:00 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Higeki no Genkyou to Naru Saikyou Gedou Last Boss Joou wa Tami no Tame ni Tsukushimasu. Mini",
-    "episode": "8",
+    "animeTitle": "Tearmoon Teikoku Monogatari: Dantoudai kara Hajimaru, Hime no Tensei Gyakuten Story Mini Anime",
+    "episode": "2",
     "status": "already updated"
   },
   {
-    "time": "5:00 AM",
+    "time": "8:00 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Holo no Graffiti",
-    "episode": "223",
+    "animeTitle": "Saihate no Paladin: Tetsusabi no Yama no Ou",
+    "episode": "3",
     "status": "already updated"
   },
   {
-    "time": "5:00 AM",
+    "time": "8:30 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Puzzle & Dragon",
-    "episode": "270",
-    "status": "already updated"
-  },
-  {
-    "time": "5:30 AM",
-    "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Sazae-san",
-    "episode": "2696",
-    "status": "already updated"
+    "animeTitle": "Hikikomari Kyuuketsuki no Monmon",
+    "episode": "3",
+    "status": "upcoming"
   },
   {
     "time": "9:00 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Shinigami Bocchan to Kuro Maid 2nd Season",
-    "episode": "8",
-    "status": "already updated"
+    "animeTitle": "SPY x FAMILY Season 2",
+    "episode": "3",
+    "status": "upcoming"
+  },
+  {
+    "time": "9:30 AM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Atarashii Joushi wa Do Tennen",
+    "episode": "3",
+    "status": "upcoming"
   },
   {
     "time": "10:00 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Eiyuu Kyoushitsu",
-    "episode": "8",
-    "status": "already updated"
+    "animeTitle": "Kikansha no Mahou wa Tokubetsu desu",
+    "episode": "3",
+    "status": "upcoming"
   },
   {
     "time": "10:00 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Genjitsu no Yohane -SUNSHINE in the MIRROR-",
-    "episode": "10",
-    "status": "already updated"
+    "animeTitle": "Ochibi-san",
+    "episode": "2",
+    "status": "upcoming"
+  },
+  {
+    "time": "10:00 AM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Ragna Crimson",
+    "episode": "4",
+    "status": "upcoming"
+  },
+  {
+    "time": "10:30 AM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Buta no Liver wa Kanetsu Shiro",
+    "episode": "3",
+    "status": "upcoming"
   },
   {
     "time": "11:00 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Mushoku Tensei Ⅱ: Isekai Ittara Honki Dasu",
-    "episode": "8",
-    "status": "already updated"
+    "animeTitle": "Tearmoon Teikoku Monogatari: Dantoudai kara Hajimaru, Hime no Tensei Gyakuten Story",
+    "episode": "3",
+    "status": "upcoming"
   },
   {
-    "time": "12:05 PM",
+    "time": "11:05 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Dark Gathering",
-    "episode": "8",
-    "status": "already updated"
+    "animeTitle": "Kusuriya no Hitorigoto",
+    "episode": "1",
+    "status": "upcoming"
   },
   {
-    "time": "1:35 PM",
+    "time": "11:05 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Yami Shibai 11",
-    "episode": "8",
-    "status": "already updated"
+    "animeTitle": "Kusuriya no Hitorigoto",
+    "episode": "2",
+    "status": "upcoming"
   },
   {
-    "time": "8:50 PM",
+    "time": "11:05 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Bosanimal",
-    "episode": "85",
+    "animeTitle": "Kusuriya no Hitorigoto",
+    "episode": "3",
+    "status": "upcoming"
+  },
+  {
+    "time": "11:30 AM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Bokura no Ame-iro Protocol",
+    "episode": "3",
+    "status": "upcoming"
+  },
+  {
+    "time": "12:00 PM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Potion-danomi de Ikinobimasu!",
+    "episode": "3",
+    "status": "upcoming"
+  },
+  {
+    "time": "5:30 PM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Yu☆Gi☆Oh! GO RUSH!!",
+    "episode": "81",
+    "status": "upcoming"
+  },
+  {
+    "time": "6:30 PM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Duel Masters Win: Duel Wars",
+    "episode": "28",
+    "status": "upcoming"
+  },
+  {
+    "time": "6:30 PM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Hirogaru Sky! Precure",
+    "episode": "38",
+    "status": "upcoming"
+  },
+  {
+    "time": "7:00 PM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Tousouchuu: Great Mission",
+    "episode": "28",
+    "status": "upcoming"
+  },
+  {
+    "time": "7:30 PM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "One Piece",
+    "episode": "1080",
+    "status": "upcoming"
+  },
+  {
+    "time": "8:30 PM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "THE IDOLM@STER Million Live!",
+    "episode": "3",
+    "status": "upcoming"
+  },
+  {
+    "time": "9:00 PM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Doupo Cangqiong: Nian Fan",
+    "episode": "67",
     "status": "upcoming"
   }
 ]

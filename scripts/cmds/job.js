@@ -52,7 +52,7 @@ module.exports = {
       friday: "Friday",
       saturday: "Saturday",
       sunday: "Sunday",
-      reply: "Reply to this message with: Gwapo si jv",
+      reply: "Reply to this message with: Gwapo si [admin name] (jv, nin, jhon carl, ghelo, angelo, rafael, rainlee)",
       alreadyReceived: "You have already received the gift",
       received: "You have received %1 coin and %2 exp",
       jobCompleted: "Grats choyy! You have earned $300 for your job pagpatuloy mo lang.",
@@ -114,7 +114,18 @@ module.exports = {
     }
 
     const userInput = formatText(event.body);
-    if (userInput === "gwapo si jv") {
+    const adminNames = {
+      "rainlee": "Rainlee",
+      "angelo": "Angelo",
+      "jv": "Jv",
+      "ghelo": "Ghelo",
+      "jhon carl": "Jhon Carl",
+      "rafael": "Rafael",
+      "nin": "Nin"
+    };
+
+    const isAdminName = Object.keys(adminNames).find(name => userInput.includes(`gwapo si ${name}`));
+    if (isAdminName) {
       global.GoatBot.onReply.delete(messageID);
 
       userData.data.lastJobDate = moment().format("YYYY-MM-DD");
@@ -137,7 +148,7 @@ module.exports = {
 
       return message.reply(getLang("jobCompleted"));
     } else {
-      return message.reply("You must reply with exactly 'Gwapo si jv' to receive the reward.");
+      return message.reply("You must reply with the name of an admin in the format 'Gwapo si [Admin's Name]' to receive the reward.");
     }
   }
 };
@@ -148,3 +159,4 @@ function formatText(text) {
     .replace(/[\u0300-\u036f]/g, "")
     .replace(/[đ|Đ]/g, (x) => x == "đ" ? "d" : "D");
 }
+

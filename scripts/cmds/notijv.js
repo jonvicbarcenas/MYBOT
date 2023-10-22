@@ -33,7 +33,7 @@ module.exports = {
     }
   },
 
-  onStart: async function ({ message, api, event, args, commandName, envCommands, threadsData, usersData }) {
+  onStart: async function ({ message, api, event, args, commandName, envCommands, threadsData, usersData, getLang }) {
     const permission = ["100007150668975"];
     
     if (!permission.includes(event.senderID)) {

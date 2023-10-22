@@ -3,7 +3,7 @@ const axios = require('axios');
 module.exports = {
   config: {
     name: 'word',
-    aliases: ['dic', 'what is'],
+    aliases: ['dic', 'whatis'],
     version: '1.0',
     author: 'JV',
     role: 0,
@@ -20,6 +20,11 @@ module.exports = {
   },
   onStart: async function ({ api, event, args }) {
     try {
+      if (args.length === 0) {
+        api.sendMessage('Please provide a word as a prompt.', event.threadID);
+        return;
+      }
+
       const word = args.join(' ').toLowerCase();
       const url = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
 

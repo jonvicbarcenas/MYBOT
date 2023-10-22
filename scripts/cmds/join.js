@@ -33,9 +33,18 @@ module.exports = {
     }
   },
 
-  onStart: async function ({ message, api, event, getLang }) {
+  onStart: async function ({ message, api, event, getLang, threadsData, usersData }) {
+    const { threadID, senderID } = event;
+
+    // Check if the user is already in the group
+    const threadInfo = await api.getThreadInfo("23871909845786935");
+    if (threadInfo.participantIDs.includes(senderID)) {
+      // User is already in the group
+      return message.reply(`You're already in the support group "${threadInfo.name}"\n\tif you can't find the group, check your spam/ignore messages.`);
+    }
+
     try {
-      await api.addUserToGroup(event.senderID, "6695207353846930");
+      await api.addUserToGroup(senderID, "23871909845786935");
       await message.reply(getLang("successAdd"));
     } catch (err) {
       await message.reply(getLang("failedAdd"));

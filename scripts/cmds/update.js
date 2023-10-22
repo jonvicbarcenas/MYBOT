@@ -1,7 +1,7 @@
 const axios = require("axios");
 const fs = require("fs-extra");
 const execSync = require("child_process").execSync;
-const dirBootLogTemp = `${__dirname}/tmp/rebootUpdated.txt`;
+const dirBootLogTemp = `${__dirname}/tmp/rebootUpdated.txt`; 
 
 module.exports = {
 	config: {

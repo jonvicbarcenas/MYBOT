@@ -30,7 +30,7 @@ module.exports = {
 
       const message = `Here's a Bible verse for you: \n\n${response.data}`;
 
-      const messageID = await api.sendMessage(message, event.threadID);
+      const messageID = await api.sendMessage(message, event.threadID, event.messageID);
 
       if (!messageID) {
         throw new Error('Failed to send message with Bible verse');

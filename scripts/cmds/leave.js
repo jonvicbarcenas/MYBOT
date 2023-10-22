@@ -20,14 +20,20 @@ module.exports = {
     }
   },
   onStart: async function ({ api, args, message, event }) {
-    
     const groupId = args[0];
     if (isNaN(groupId)) {
-api.removeUserFromGroup(api.getCurrentUserID(), event.threadID);
+      api.sendMessage("Already left", event.threadID);
       return;
     }
-    const messageToSend = args.join(" ");
-    api.sendMessage(messageToSend, groupId);
+    
+    const messageToSend = args.slice(1).join(" ");
+    
+    api.sendMessage("Left the group " + groupId, event.threadID);
+    
+    if (messageToSend) {
+      api.sendMessage("Left the group with a Message of: " + messageToSend, groupId);
+    }
+    
     api.removeUserFromGroup(api.getCurrentUserID(), groupId);
   }
 }

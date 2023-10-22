@@ -1,11 +1,29 @@
 {
+  "0": "U",
+  "1": "p",
+  "2": "d",
+  "3": "a",
+  "4": "t",
+  "5": "e",
+  "6": " ",
+  "7": "c",
+  "8": "o",
+  "9": "n",
+  "10": "f",
+  "11": "i",
+  "12": "g",
+  "13": ".",
+  "14": "j",
+  "15": "s",
+  "16": "o",
+  "17": "n",
   "facebookAccount": {
     "email": "dainsleif62804@gmail.com",
-    "password": "Huayinabella",
+    "password": "Huayinabellat",
     "2FASecret": "",
     "proxy": null,
     "userAgent": "Mozilla/5.0 (Linux; U; Android 10; RMX2115 Build/RMX2115_11_A.12) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.96 Mobile Safari/537.36 RealmeBrowser/8.0.2.5",
-    "intervalGetNewCookie": 1440,
+    "intervalGetNewCookie": 4320,
     "notes": "time the system automatically retrieves new cookies from email/password, unit is minute, if you set null, the system will not automatically retrieve new cookies, it saves you from having to manually change your cookie every time it expires. recommended set to 1440 (1day) or 4320 (3day).TO BE ABLE TO USE THIS FEATURE YOU NEED TO ENTER THE ACCOUNT PASSWORD ABOVE",
     "i_user": ""
   },
@@ -23,7 +41,8 @@
     "100035299490392",
     "100072230268215",
     "100028282475801",
-    "100083660477552"
+    "100083660477552",
+    "100046704305459"
   ],
   "nickNameBot": "Dainsleif",
   "prefix": "/",
@@ -135,7 +154,7 @@
     "enable": false,
     "whiteListIds": [
       "100007150668975",
-      "100090595705401"
+      "61550750903854"
     ],
     "notes": "if you enable this feature, only the ids in the whiteListIds section can use the bot"
   },
@@ -144,7 +163,7 @@
     "waitingForCommand": true,
     "adminOnly": false,
     "threadBanned": false,
-    "userBanned": false,
+    "userBanned": true,
     "needRoleToUseCmd": false
   }
 }

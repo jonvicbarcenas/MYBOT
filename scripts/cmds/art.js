@@ -1,95 +1,47 @@
-const fs = require("fs");
-const axios = require("axios");
-const path = require("path");
-const FormData = require("form-data");
-
-async function saveArrayBufferToFile(arrayBuffer, filePath) {
-  return new Promise((resolve, reject) => {
-    fs.writeFile(filePath, Buffer.from(arrayBuffer), (err) => {
-      if (err) {
-        reject(err);
-      } else {
-        resolve();
-      }
-    });
-  });
-}
+const axios = require('axios');
+const fs = require('fs-extra');
 
 module.exports = {
   config: {
     name: "art",
-    aliases: ["2"],
-    version: "1.1",
-    author: "JARiF | Fuck Vortex",
-    countDown: 5,
+    aliases: [],
+    version: "1.0",
+    author: "kshitiz",
+    countDown: 2,
     role: 0,
-    category: "ddfd",
+    shortDescription: "convert pic into anime style",
+    longDescription: "convert pic into anime style",
+    category: "anime",
+    guide: "{pn} anime {on img reply}"
   },
 
-  onStart: async function ({ event, api, args }) {
+  onStart: async function ({ api, event, args }) {
+    const { threadID, messageID } = event;
+
+   
+    const imageUrl = event.messageReply && event.messageReply.attachments[0].url ? event.messageReply.attachments[0].url : args.join(" ");
+
     try {
-      if (
-        args.length >= 2 ||
-        (event.type === "message_reply" &&
-          event.messageReply.attachments.length > 0 &&
-          event.messageReply.attachments[0].type === "photo")
-      ) {
-        const message = event.body;
-        api.sendMessage(
-          { body: "Please wait....", mentions: [{ tag: message.senderID, id: message.senderID }] },
-          event.threadID
-        );
 
-        const imageUrl =
-          event.type === "message_reply"
-            ? event.messageReply.attachments[0].url
-            : args[0];
-        const prompt =
-          event.type === "message_reply" ? "same pose, same person, same environment, all same just add anime effect,anime look,boy will be a boy,girl will be a girl" : args.slice(1).join(" ");
+      const response = await axios.get(`https://animeify.shinoyama.repl.co/convert-to-anime?imageUrl=${encodeURIComponent(imageUrl)}`);
+      const image = response.data.urls[1];
 
-        const formData = new FormData();
-        formData.append("key", "6ac6780f27041c31be2da98f4f55704e");
-        formData.append("image", imageUrl);
+      
+      const imgResponse = await axios.get(`https://www.drawever.com${image}`, { responseType: "arraybuffer" });
+      const img = Buffer.from(imgResponse.data, 'binary');
 
-        const imgbbResponse = await axios.post(
-          "https://api.imgbb.com/1/upload",
-          formData,
-          {
-            headers: formData.getHeaders(),
-          }
-        );
-        const imgbbImageUrl = imgbbResponse.data.data.url;
+     
+      const pathie = __dirname + `/cache/animefy.jpg`;
+      fs.writeFileSync(pathie, img);
 
-        const response = await axios.get(
-          `https://jarif-art.blackxlegend1.repl.co/transform?imgurl=${imgbbImageUrl}&prompt=${prompt}&apikey=upol-vai-pro`,
-          {
-            responseType: "arraybuffer",
-          }
-        );
+     
+      api.sendMessage({
+        body: "Here's your animefied image:",
+        attachment: fs.createReadStream(pathie)
+      }, threadID, () => fs.unlinkSync(pathie), messageID);
 
-        const imageBuffer = Buffer.from(response.data);
-        const pathSave = path.join(__dirname, "art.png");
-
-        await saveArrayBufferToFile(imageBuffer, pathSave);
-
-        api.sendMessage(
-          { body: "Here is your generated image:", attachment: fs.createReadStream(pathSave) },
-          event.threadID,
-          () => {
-            fs.unlinkSync(pathSave);
-          }
-        );
-      } else if (event.type === "message_reply") {
-        api.sendMessage({ body: "Reply with an image." }, event.threadID);
-      } else {
-        api.sendMessage(
-          { body: "Please provide an image link and a prompt, or reply with an image." },
-          event.threadID
-        );
-      }
     } catch (e) {
-      console.error(e);
-      api.sendMessage({ body: "❌ | Something went wrong." }, event.threadID);
+      api.sendMessage(`Error occurred:\n\n${e}`, threadID, messageID);
     }
-  },
+  }
 };

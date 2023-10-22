@@ -4,7 +4,7 @@ const https = require("https");
 
 module.exports = {
   config: {
-    name: "setname",
+    name: "settitle",
     version: "1.0",
     author: "JV BARCENAS",
     shortDescription: "Set the name of the user data for the sender.",

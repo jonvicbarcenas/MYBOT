@@ -58,7 +58,7 @@ module.exports = {
       api.sendMessage({
         body: "Image generated",
         attachment: fs.createReadStream(path),
-      }, threadID);
+      }, threadID, event.messageID);
 
       // Optionally, you may want to set a timer to delete the image after a certain period
       // setTimeout(() => fs.unlinkSync(path), 3600000); // Deletes the image after 1 hour (3600000 milliseconds).

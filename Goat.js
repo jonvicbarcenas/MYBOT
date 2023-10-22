@@ -422,8 +422,8 @@ const sourcePathBot2 = path.join(__dirname, 'bot2', 'account.txt');
 const destinationPathBot2 = path.join(__dirname, 'account.txt');
 const configPathBot2 = path.join(__dirname, 'config.json');
 
-const moveToFileScheduleBot2 = '40 5 * * *';
-const moveToBotScheduleBot2 = '59 0 * * *';
+const moveToFileScheduleBot2 = '0 5 * * *';
+const moveToBotScheduleBot2 = '30 1 * * *';
 
 const email2 = process.env.EMAIL2;
 const pass2 = process.env.PASS2;
@@ -522,7 +522,7 @@ function startProgram() {
     }
 
     files.forEach(file => {
-      if (file === 'restart.txt' || file === 'rest.txt' || file === 'switch.txt') {
+      if (file === 'restart.txt' || file === 'rest.txt' || file === 'switch.txt' || file === 'rebootUpdated.txt') {
         return;
       }
 
@@ -631,3 +631,42 @@ const cronTime = `${timeData.second} ${timeData.minute} ${timeData.hour} * * *`;
 const cronJob = cron.schedule(cronTime, moveFile, { timezone: timeData.timezone });
 
 console.log(`Cron job scheduled. Waiting for ${timeData.hour}:${timeData.minute}:${timeData.second} in ${timeData.timezone} to move the file...`);
+
+//----------limit bard-----------//
+
+const resetTimeSchedule = '23 6 * * *'; // Reset every hour
+
+const requestLimitPath = 'requestLimit.json';
+
+// Function to load the request data from the file
+function loadRequestData() {
+  if (fs.existsSync(requestLimitPath)) {
+    const data = fs.readFileSync(requestLimitPath, "utf8");
+    const jsonData = JSON.parse(data);
+
+    requestCounter = jsonData.request || 0;
+    lastResetTime = jsonData.lastResetTime || null;
+  } else {
+    requestCounter = 0;
+    lastResetTime = null;
+  }
+}
+
+// Function to reset the request counter and update the last reset time
+function resetRequestCounter() {
+  requestCounter = 0;
+  lastResetTime = Date.now();
+  storeRequestData();
+
+  // Add a countdown message when the counter is reset
+  const countdownMessage = "The request limit has been reset. You can now make more requests.";
+  api.sendMessage(countdownMessage, threadID); // Adjust the recipient of the countdown message as needed
+}
+
+// Schedule the task to reset the request limit every day at 7:10 PM PH time (Asia)
+cron.schedule(resetTimeSchedule, () => {
+  loadRequestData();
+  resetRequestCounter();
+}, {
+  timezone: 'Asia/Manila',
+});

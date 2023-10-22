@@ -62,6 +62,11 @@
     },
     "riddles": {
       "reward": 1000
+    },
+    "claim": {
+      "rewardFirstDay": {
+        "coin": 2
+      }
     }
   },
   "envEvents": {
@@ -87,15 +92,22 @@
     "thesetmoney.js",
     "zfilswear.js",
     "generate.js",
-    "resend.js",
     "logo.js",
     "anivid.js",
     "zautoanime.js",
-    "anon.js",
-    "zhentai.js",
     "zfemdom.js",
-    "zpossie.js",
     "moti.js",
-    "thesetname.js"
+    "123test.js",
+    "draw.js",
+    "pinterest.js",
+    "anon.js",
+    "resend.js",
+    "zhentai.js",
+    "imganime.js",
+    "autoaccept.js",
+    "badwords.js",
+    "thesetname.js",
+    "fight.js",
+    "zpossie.js"
   ]
 }

@@ -113,7 +113,7 @@ module.exports = {
   
           if (!hasPrefix || words.length <= 1) {
               if (hasPrefix) {
-                  return api.sendMessage("Please provide a question or query.", event.threadID);
+                  return api.sendMessage("Please provide a question or query.", event.threadID, event.messageID);
               } else {
                   return; // Do not respond if the first word is not a prefix.
               }
@@ -145,7 +145,7 @@ module.exports = {
               }
           }
   
-          api.sendMessage("Searching for an answer, please wait...", event.threadID);
+          api.sendMessage("Searching for an answer, please wait...", event.threadID, event.messageID);
   
           const query = args.join(" ").slice(words[0].length + 1).trim();
           const userName = userData.name || "Unknown"; // Fallback to "Unknown" if name is not available
@@ -173,9 +173,9 @@ module.exports = {
       } catch (error) {
           console.error(error);
           if (error.response && error.response.data) {
-              return api.sendMessage(error.response.data, event.threadID, event.messageID);
+              return api.sendMessage(error.response.data, event.threadID, event.messageID, event.messageID);
           } else {
-              return api.sendMessage("An error occurred", event.threadID, event.messageID);
+              return api.sendMessage("An error occurred", event.threadID, event.messageID, event.messageID);
           }
       }
   },  

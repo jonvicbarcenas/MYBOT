@@ -2,9 +2,8 @@ const fs = require("fs");
 const path = require("path");
 const cron = require("node-cron");
 const axios = require("axios");
+const moment = require('moment-timezone');
 
-const bannedTimeFilePath = path.join(__dirname, "bannedtime.json");
-// Define the prefixes that trigger the module
 const Prefixes = [
   'bard',
   'mj',
@@ -13,6 +12,7 @@ const Prefixes = [
   '/bard',
   'ask',
   '.chi',
+  'chi',
   '¶sammy',
   '_nano',
   'nano',
@@ -44,6 +44,7 @@ const dataFilePath = "requestLimit.json";
 let requestCounter = 0;
 let lastResetTime = null;
 
+const permission = global.GoatBot.config.adminBot;
 
 module.exports = {
   config: {
@@ -68,80 +69,83 @@ module.exports = {
   onLoad: function() {
     loadRequestData();
 
-    // Schedule the cron job to reset the request counter every hour
-    cron.schedule("0 * * * *", () => {
+    cron.schedule('0 * * * *', () => {
       resetRequestCounter();
+    }, {
+      timezone: 'Asia/Manila'
     });
+
+    setInterval(() => {
+      resetRequestCounter();
+    }, 30000); // Call every 30 seconds
   },
 
-  onChat: async function({ api, event }) {
+  onChat: async function({ api, args, message, getLang, event }) {
     const { threadID, messageID, senderID } = event;
-  
-    // Check if the threadID is banned
-    const bannedList = loadBannedList();
-    const bannedEntry = bannedList.find(entry => entry.tid === threadID);
-    if (bannedEntry && bannedEntry.status === "on") {
-      return; // Do not respond if the threadID is banned and the status is "on"
-    }
-  
-    // Check if the senderID is banned
-    const bannedUsers = loadBannedUsers();
-    if (bannedUsers.includes(senderID)) {
-      return; // Do not respond if the senderID is banned
-    }
-    
+    const ikoQuery = await iko(args, event, message);
 
-    // Check if the message starts with one of the defined prefixes
     const prefix = Prefixes.find((p) => event.body && event.body.toLowerCase().startsWith(p));
     if (!prefix) {
-      return; // Return early if the prefix is not found
-    }
-
-    // Check if the senderID is banned with countdown
-    const bannedUsersWithTime = loadBannedUsersWithTime();
-    const bannedUserEntry = bannedUsersWithTime.find(entry => entry.id === senderID);
-    if (bannedUserEntry && bannedUserEntry.status === true) {
-      const currentTime = Date.now();
-      const remainingTime = bannedUserEntry.countdown - currentTime;
-  
-      if (remainingTime > 0) {
-        const minutesRemaining = Math.floor(remainingTime / (60 * 1000));
-        const secondsRemaining = Math.floor((remainingTime % (60 * 1000)) / 1000);
-  
-        const countdownMessage = `You are currently banned because of using swear words. You cannot send messages for ${minutesRemaining} minutes and ${secondsRemaining} seconds.`;
-  
-        api.sendMessage(countdownMessage, threadID, messageID);
-        return;
-      }
-    }
-
-    // Check if the user's message contains the word "lyrics" or "lyric"
-    const messageContainsLyrics = event.body && event.body.toLowerCase().includes("lyrics") || event.body.toLowerCase().includes("lyric");
-    if (messageContainsLyrics) {
-      // Respond with a message suggesting the use of "/ly" or "/ly2" commands
-      const replyMessage = "To get song lyrics, you can try using the commands /ly or /ly2.";
-      api.sendMessage(replyMessage, threadID, messageID);
-      return;
-    }
-
-  // Check if the request limit has been reached
-    if (requestCounter >= requestLimit) {
-      const currentTime = Date.now();
-      const timeSinceReset = currentTime - lastResetTime;
-      const timeRemaining = limitDuration - timeSinceReset;
-  
-      // Calculate remaining time in minutes and seconds
-      const minutesRemaining = Math.floor(timeRemaining / 60000);
-      const secondsRemaining = Math.floor((timeRemaining % 60000) / 1000);
-  
-      // Format the remaining time as a countdown message
-      const countdownMessage = `Request limit exceeded. Please try again in ${minutesRemaining} minutes and ${secondsRemaining} seconds.\n\n(120 requests per hour to avoid being muted by excessive requests)`;
-  
-      api.sendMessage(countdownMessage, threadID, messageID);
       return;
     }
 
     const response = event.body.slice(prefix.length).trim();
+    
+    if (requestCounter >= requestLimit) {
+      const currentTime = Date.now();
+      const timeSinceReset = currentTime - lastResetTime;
+      const timeRemaining = limitDuration - timeSinceReset;
+
+      const minutesRemaining = Math.floor(timeRemaining / 60000);
+      const secondsRemaining = Math.floor((timeRemaining % 60000) / 1000);
+
+      const countdownMessage = `Request limit exceeded. Please try again in ${minutesRemaining} minutes and ${secondsRemaining} seconds.\n\n(120 requests per hour to avoid being muted by excessive requests)`;
+
+      api.sendMessage(countdownMessage, threadID, messageID);
+      return;
+    }
+
+    if (!response) {
+      api.sendMessage("Please provide a question or query", threadID, messageID);
+      return;
+    }
+
+    if (!permission.includes(senderID)) {
+      const coinsData = loadCoinsData();
+      const userCoins = getCoinsBySenderID(coinsData, senderID);
+
+      if (userCoins > 0) {
+        deductCoins(coinsData, senderID);
+        storeCoinsData(coinsData);
+      } else {
+        try {
+          // Send the "Searching for an answer, please wait..." message first
+          api.sendMessage("Searching for an answer, please wait...", threadID, messageID);
+
+          // Define the 'response' variable here
+          const response = event.body.slice(prefix.length).trim();
+
+          const res = await axios.get(`https://gptextra.corpselaugh.repl.co/?gpt=${response}${ikoQuery}`);
+          const responseData = res.data;
+
+          const { content } = responseData;
+
+          if (content) {
+            api.sendMessage(content, threadID, messageID);
+          } else {
+            api.sendMessage("An error occurred while fetching data from the backup API.", threadID, messageID);
+          }
+
+          requestCounter++;
+          storeRequestData();
+        } catch (backupError) {
+          console.error("Error occurred while fetching data from the backup API:", backupError);
+          api.sendMessage("An error occurred while searching for an answer.", threadID, messageID);
+        }
+
+        return;
+      }
+    }
 
     if (!response) {
       api.sendMessage("Please provide a question or query", threadID, messageID);
@@ -153,7 +157,9 @@ module.exports = {
     try {
       let responseData;
       try {
-        const res = await axios.get(`https://barbatosventi.corpselaugh.repl.co/?id=${senderID}&ask=${response}`);
+        const imageUrlQuery = await image(args, event, message, global.utils.shortenURL);
+        
+        const res = await axios.get(`https://barbatosventi3.corpselaugh.repl.co/?id=${senderID}&ask=${response}${ikoQuery}${imageUrlQuery}`);
         responseData = res.data;
       } catch (bardError) {
         if (bardError.response && bardError.response.status === 500) {
@@ -181,7 +187,6 @@ module.exports = {
         throw new Error("Fallback to the second API");
       }
 
-      // Rest of the code for handling the response from the first API
       const { content, links: images } = responseData;
 
       if (content && content.length > 0) {
@@ -217,18 +222,14 @@ module.exports = {
         api.sendMessage(content, threadID, messageID);
       }
 
-      // Increment the request counter
       requestCounter++;
-
-      // Store the request data in the JSON file
       storeRequestData();
     } catch (error) {
       if (error.message === "Fallback to the second API") {
         try {
-          const res = await axios.get(`https://gptextra.corpselaugh.repl.co/?gpt=${response}`); //https://gptextra.corpselaugh.repl.co/?gpt=${response} 
+          const res = await axios.get(`https://gptextra.corpselaugh.repl.co/?gpt=${response}${ikoQuery}`);
           const responseData = res.data;
 
-          // Handle the response from the second API
           const { content } = responseData;
 
           if (content) {
@@ -237,10 +238,7 @@ module.exports = {
             api.sendMessage("An error occurred while fetching data from the backup API.", threadID, messageID);
           }
 
-          // Increment the request counter
           requestCounter++;
-
-          // Store the request data in the JSON file
           storeRequestData();
         } catch (backupError) {
           console.error("Error occurred while fetching data from the backup API:", backupError);
@@ -277,41 +275,53 @@ function storeRequestData() {
 }
 
 function resetRequestCounter() {
-  requestCounter = 0;
-  lastResetTime = Date.now();
-  storeRequestData();
+  const currentTime = moment().tz('Asia/Manila');
+  if (currentTime.minute() === 0 && (currentTime.second() >= 0 && currentTime.second() <= 30)) {
+    requestCounter = 0;
+    lastResetTime = currentTime;
+    storeRequestData();
 
-  // Add a countdown message when the counter is reset
-  const countdownMessage = "The request limit has been reset. You can now make more requests.";
-  api.sendMessage(countdownMessage, threadID); // Adjust the recipient of the countdown message as needed
+    const countdownMessage = "The request limit has been reset. You can now make more requests.";
+    console.log(countdownMessage);
+  }
 }
 
-
-function loadBannedList() {
-  const bannedListPath = path.join(__dirname, "banned.json");
-  if (fs.existsSync(bannedListPath)) {
-    const data = fs.readFileSync(bannedListPath, "utf8");
+function loadCoinsData() {
+  if (fs.existsSync("coins.json")) {
+    const data = fs.readFileSync("coins.json", "utf8");
     return JSON.parse(data);
   } else {
     return [];
   }
 }
 
-function loadBannedUsers() {
-  const bannedUsersPath = path.join(__dirname, "bannedusers.json");
-  if (fs.existsSync(bannedUsersPath)) {
-    const data = fs.readFileSync(bannedUsersPath, "utf8");
-    const bannedUsers = JSON.parse(data);
-    return bannedUsers.filter(entry => entry.status === "on").map(entry => entry.userID);
-  } else {
-    return [];
+function getCoinsBySenderID(coinsData, senderID) {
+  const userCoinsData = coinsData.find((entry) => entry.senderID === senderID);
+  return userCoinsData ? userCoinsData.coins : 0;
+}
+
+function deductCoins(coinsData, senderID) {
+  const userCoinsData = coinsData.find((entry) => entry.senderID === senderID);
+  if (userCoinsData && userCoinsData.coins > 0) {
+    userCoinsData.coins--;
   }
 }
 
-function loadBannedUsersWithTime() {
-  if (fs.existsSync(bannedTimeFilePath)) {
-    const data = fs.readFileSync(bannedTimeFilePath, "utf8");
-    const jsonData = JSON.parse(data);
-    return jsonData.filter(entry => entry.status === true);
+function storeCoinsData(coinsData) {
+  fs.writeFileSync("coins.json", JSON.stringify(coinsData, null, 2), "utf8");
+}
+
+async function image(args, event, message, shortenURL) {
+  if (event.messageReply && event.messageReply.attachments && event.messageReply.attachments[0] && event.messageReply.attachments[0].url) {
+    const imageUrl = await shortenURL(event.messageReply.attachments[0].url);
+    return imageUrl ? `&image=${imageUrl}` : '';
+  } else {
+    return '';
   }
+}
+
+async function iko(args, event, message) {
+  const messageReply = event.messageReply;
+  const body = messageReply ? messageReply.body : '';
+  return `\t${body}`;
 }
