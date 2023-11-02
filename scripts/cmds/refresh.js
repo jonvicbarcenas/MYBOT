@@ -3,7 +3,7 @@ module.exports = {
 		name: "refresh",
 		version: "1.1",
 		author: "NTKhang",
-		countDown: 60,
+		countDown: 6,
 		role: 0,
 		shortDescription: {
 			vi: "làm mới thông tin",

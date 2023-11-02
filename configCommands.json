@@ -99,15 +99,14 @@
     "moti.js",
     "123test.js",
     "draw.js",
-    "pinterest.js",
-    "anon.js",
-    "resend.js",
     "zhentai.js",
     "imganime.js",
     "autoaccept.js",
-    "badwords.js",
     "thesetname.js",
     "fight.js",
-    "zpossie.js"
+    "zpossie.js",
+    "badwords.js",
+    "anon.js",
+    "pinterest.js"
   ]
 }

@@ -25,8 +25,18 @@ module.exports = {
  onStart: async function({ event, api }) {
   try {
     const axios = require('axios');
-    const link = event.messageReply.attachments[0].url || args.join(" ");
-    if(!link) return api.sendMessage('Please reply to image.', event.threadID, event.messageID);
+    if (!event.messageReply || !event.messageReply.attachments || event.messageReply.attachments.length === 0) {
+      api.sendMessage("Trigger this command by replying to an image stoopid ahh mf.", event.threadID, event.messageID);
+      return;
+    }
+    
+    const link = event.messageReply.attachments[0].url;
+    
+    if (!link) {
+      api.sendMessage("Please reply to an image.", event.threadID, event.messageID);
+      return;
+    }
+    
     const res = await axios.get(`https://milanbhandari.imageapi.repl.co/imgur?link=${encodeURIComponent(link)}`); 
     const imageUrl = res.data.image;
     const response = await axios.get(`https://milanbhandari.imageapi.repl.co/ocr?url=${res.data.image}`);

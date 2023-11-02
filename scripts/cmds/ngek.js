@@ -1,35 +1,35 @@
-async function iko(args, event, message) {
-  const messageReply = event.messageReply;
-  if (!messageReply) {
-    return message.reply("❌ No message to reply to.");
+async function image(args, event, message, shortenURL) {
+  const imageUrl = event.messageReply && event.messageReply.attachments[0].url ? event.messageReply.attachments[0].url : args.join(" ");
+  if (!imageUrl) {
+    return message.reply("❌ No image URL provided.");
   }
 
-  const body = messageReply.body;
+  const shortenedUrl = await shortenURL(imageUrl);
 
-  message.reply(`The message being replied is: ${body}`);
+  message.reply(`${shortenedUrl}`);
 }
 
 module.exports = {
   config: {
-    name: "iko",
+    name: "downloadimage",
     aliases: ["downloadimg"],
     version: "1.0",
     author: "jv",
     countDown: 5,
     role: 0,
-    shortDescription: "Get the body of the replied message",
+    shortDescription: "Get TinyURL for an image",
     longDescription: {
-      vi: "Lấy nội dung của tin nhắn được trả lời.",
-      en: "Get the body of the replied message"
+      vi: "Lấy TinyURL cho hình ảnh",
+      en: "Get TinyURL for an image"
     },
     category: "media",
     guide: {
-      vi: "   {pn} [image|-i|i]: dùng để lấy nội dung của tin nhắn được trả lời.",
-      en: "   {pn} [image|-i|i]: use to get the body of the replied message."
+      vi: "   {pn} [image|-i|i]: dùng để lấy TinyURL cho hình ảnh.",
+      en: "   {pn} [image|-i|i]: use to get TinyURL for an image."
     }
   },
 
   onStart: async function ({ args, message, getLang, event }) {
-    await iko(args, event, message);
+    await image(args, event, message, global.utils.shortenURL);
   }
 };

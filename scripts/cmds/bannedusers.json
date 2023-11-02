@@ -28,13 +28,6 @@
     "status": "on"
   },
   {
-    "userID": "100057919087921",
-    "name": "John Walks",
-    "reason": ".",
-    "date": "03/08/2023 13:17:36",
-    "status": "on"
-  },
-  {
     "userID": "100052465060669",
     "name": "Asani Laxamanna",
     "reason": "racist group griefer",
@@ -224,13 +217,6 @@
     "status": "on"
   },
   {
-    "userID": "100055930192166",
-    "name": "Andrei Jainan",
-    "reason": " spam",
-    "date": "17/10/2023 13:31:36",
-    "status": "on"
-  },
-  {
     "userID": "100034004447523",
     "name": "Tzid Keanu John Basilisco",
     "reason": "violates the rules",
@@ -252,17 +238,234 @@
     "status": "on"
   },
   {
-    "userID": "100065473935277",
-    "name": "[𝙰𝙳𝙼𝙸𝙽] Rainlee Solanio",
-    "reason": "spam",
-    "date": "21/10/2023 00:11:32",
-    "status": "on"
-  },
-  {
     "userID": "61551487092690",
     "name": "Mark Steven Panag",
     "reason": "gagi libog mo",
     "date": "21/10/2023 08:52:44",
+    "status": "on"
+  },
+  {
+    "userID": "100084847002157",
+    "name": "Irnchu Binagsakan Ng Eroplano",
+    "reason": "shabu user shabu gods",
+    "date": "22/10/2023 13:30:59",
+    "status": "on"
+  },
+  {
+    "userID": "100084251373303",
+    "name": "Yazu",
+    "reason": "dis",
+    "date": "22/10/2023 14:10:55",
+    "status": "on"
+  },
+  {
+    "userID": "100085264013469",
+    "name": "Roden R. Canja",
+    "reason": "spam",
+    "date": "22/10/2023 15:13:39",
+    "status": "on"
+  },
+  {
+    "userID": "100055930192166",
+    "name": "Andrei Jainan",
+    "reason": " TANGA AYAW MAKIPAGLARO BOBO",
+    "date": "24/10/2023 13:45:46",
+    "status": "on"
+  },
+  {
+    "userID": "100094672743033",
+    "name": "Corrie Dong",
+    "reason": "fuck you m",
+    "date": "25/10/2023 17:41:47",
+    "status": "on"
+  },
+  {
+    "userID": "100080384074255",
+    "name": "Kio Guevarra",
+    "reason": "spam!",
+    "date": "27/10/2023 08:44:49",
+    "status": "on"
+  },
+  {
+    "userID": "100008867228914",
+    "name": "Alexandra Legaspi",
+    "reason": "kawkaw",
+    "date": "27/10/2023 13:13:22",
+    "status": "on"
+  },
+  {
+    "userID": "100079433271727",
+    "name": "Reniel Bardon",
+    "reason": "wawa",
+    "date": "27/10/2023 21:14:08",
+    "status": "on"
+  },
+  {
+    "userID": "100086092985408",
+    "name": "John Jerwin Bron",
+    "reason": "ñígga",
+    "date": "27/10/2023 22:46:39",
+    "status": "on"
+  },
+  {
+    "userID": "100061157406479",
+    "name": "Zh Dump",
+    "reason": " warfreak",
+    "date": "27/10/2023 22:59:41",
+    "status": "on"
+  },
+  {
+    "userID": "61552125814387",
+    "name": "Dran Asuncion",
+    "reason": "spam bot leave",
+    "date": "28/10/2023 19:08:54",
+    "status": "on"
+  },
+  {
+    "userID": "100095267136230",
+    "name": "Sølo-Bot Guy",
+    "reason": "so lubot guy",
+    "date": "28/10/2023 19:14:23",
+    "status": "on"
+  },
+  {
+    "userID": "100091773785897",
+    "name": "Facebook user",
+    "reason": "100093968268664 spam bot leave",
+    "date": "29/10/2023 09:19:36",
+    "status": "on"
+  },
+  {
+    "userID": "100093968268664",
+    "name": "Wendy Still Alive",
+    "reason": "spam",
+    "date": "29/10/2023 17:24:32",
+    "status": "on"
+  },
+  {
+    "userID": "100080459498141",
+    "name": "バウサ アンドレイクリス",
+    "reason": "spam bot leave",
+    "date": "29/10/2023 21:44:37",
+    "status": "on"
+  },
+  {
+    "userID": "100092267736786",
+    "name": "Donnie Chen",
+    "reason": "tubol",
+    "date": "29/10/2023 22:02:20",
+    "status": "on"
+  },
+  {
+    "userID": "100091945491005",
+    "name": "Junifer Plaza Ulbida",
+    "reason": "go to hell",
+    "date": "29/10/2023 22:35:19",
+    "status": "on"
+  },
+  {
+    "userID": "61552826493040",
+    "name": "Adrei Jainan",
+    "reason": " ayaw mmansin",
+    "date": "29/10/2023 22:41:20",
+    "status": "on"
+  },
+  {
+    "userID": "100085310869674",
+    "name": "Absary Maulana",
+    "reason": "paulit ulit amp",
+    "date": "29/10/2023 22:43:01",
+    "status": "on"
+  },
+  {
+    "userID": "100086285677419",
+    "name": "Michael Alasaas",
+    "reason": "deadass",
+    "date": "30/10/2023 13:18:17",
+    "status": "on"
+  },
+  {
+    "userID": "100093680058677",
+    "name": "Laurence Osoria",
+    "reason": "deadadd",
+    "date": "30/10/2023 13:19:10",
+    "status": "on"
+  },
+  {
+    "userID": "100028784596236",
+    "name": "Chelce Mapakit",
+    "reason": "100028784596236 respect the bot",
+    "date": "30/10/2023 13:25:04",
+    "status": "on"
+  },
+  {
+    "userID": "61552690110735",
+    "name": "Keiji Aizen",
+    "reason": "spam bot leave",
+    "date": "30/10/2023 14:35:03",
+    "status": "on"
+  },
+  {
+    "userID": "100095091543060",
+    "name": "Kai Co",
+    "reason": "kai tubol",
+    "date": "30/10/2023 16:49:58",
+    "status": "on"
+  },
+  {
+    "userID": "100088367877504",
+    "name": "Jhon Rafael Compasion",
+    "reason": "kapag naalala mo si rainlee bugok ka parin",
+    "date": "30/10/2023 18:24:14",
+    "status": "on"
+  },
+  {
+    "userID": "100083660477552",
+    "name": "Nin Masepequiña",
+    "reason": "wtf",
+    "date": "30/10/2023 19:45:05",
+    "status": "on"
+  },
+  {
+    "userID": "100069915172039",
+    "name": "Hanz",
+    "reason": "tite na mabaho",
+    "date": "30/10/2023 23:32:38",
+    "status": "on"
+  },
+  {
+    "userID": "100055640370536",
+    "name": "Onizuka Eikichie",
+    "reason": "cock",
+    "date": "31/10/2023 01:05:05",
+    "status": "on"
+  },
+  {
+    "userID": "100078302030219",
+    "name": "Cylvia Dossa",
+    "reason": "fuck you",
+    "date": "31/10/2023 01:06:36",
+    "status": "on"
+  },
+  {
+    "userID": "61552362435912",
+    "name": "Clyde Der Kaiser",
+    "reason": "spam pa more",
+    "date": "01/11/2023 08:02:33",
+    "status": "on"
+  },
+  {
+    "userID": "100053502102263",
+    "name": "Eisan",
+    "reason": "overusing bot powers",
+    "date": "01/11/2023 11:30:39",
+    "status": "on"
+  },
+  {
+    "userID": "100074804436698",
+    "name": "AL BE RT",
+    "reason": "spam",
+    "date": "01/11/2023 16:12:18",
     "status": "on"
   }
 ]

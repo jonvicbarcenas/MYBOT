@@ -37,8 +37,20 @@ const Prefixes = [
   '*ai',
 ];
 
+// Define the bannedReturn function to check and respond if the user is banned
+async function bannedReturn(api, event, userData) {
+  if (userData && userData.banned && userData.banned.status === true) {
+    const banReason = userData.banned.reason || "No reason provided";
+    const banTime = userData.banned.date || "Unknown date";
+    const banMessage = `You are banned.\nReason: ${banReason}\nTime: ${banTime}`;
+    await api.sendMessage(banMessage, event.threadID, event.messageID);
+    return true; // User is banned
+  }
+  return false; // User is not banned
+}
+
 const limitDuration = 60 * 60 * 1000; // 1 hour in milliseconds
-const requestLimit = 120;
+const requestLimit = 150;
 const dataFilePath = "requestLimit.json";
 
 let requestCounter = 0;
@@ -80,8 +92,10 @@ module.exports = {
     }, 30000); // Call every 30 seconds
   },
 
-  onChat: async function({ api, args, message, getLang, event }) {
+  onChat: async function({ api, args, message, getLang, event, usersData }) {
     const { threadID, messageID, senderID } = event;
+    const userData = await usersData.get(senderID);
+    
     const ikoQuery = await iko(args, event, message);
 
     const prefix = Prefixes.find((p) => event.body && event.body.toLowerCase().startsWith(p));
@@ -90,6 +104,11 @@ module.exports = {
     }
 
     const response = event.body.slice(prefix.length).trim();
+    // Call the bannedReturn function to check if the user is banned
+    if (await bannedReturn(api, event, userData)) {
+      return; // Do not proceed to send "😎" if the user is banned.
+    }
+    
     
     if (requestCounter >= requestLimit) {
       const currentTime = Date.now();
@@ -99,7 +118,7 @@ module.exports = {
       const minutesRemaining = Math.floor(timeRemaining / 60000);
       const secondsRemaining = Math.floor((timeRemaining % 60000) / 1000);
 
-      const countdownMessage = `Request limit exceeded. Please try again in ${minutesRemaining} minutes and ${secondsRemaining} seconds.\n\n(120 requests per hour to avoid being muted by excessive requests)`;
+      const countdownMessage = `Request limit exceeded. Please try again in ${minutesRemaining} minutes and ${secondsRemaining} seconds.\n\n(150 requests per hour to avoid being muted by excessive requests)`;
 
       api.sendMessage(countdownMessage, threadID, messageID);
       return;

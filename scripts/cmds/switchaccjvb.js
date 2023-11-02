@@ -61,8 +61,8 @@ module.exports = {
     
     const accountConfigs = {
       dain: {
-        email: "dainsleif28",
-        password: "Huayinabella"
+        email: "humbamanok1@gma.com",
+        password: "1Dainsleif!"
       },
       xiao: {
         email: "bikyongbik@gmail.com",

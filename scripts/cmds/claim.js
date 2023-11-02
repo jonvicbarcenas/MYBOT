@@ -4,6 +4,7 @@ const moment = require('moment-timezone');
 module.exports = {
   config: {
     name: 'claim',
+    aliases: ["coin", "coins"],
     version: '1.1',
     author: 'JV Barcenas',
     countDown: 5,
@@ -60,7 +61,7 @@ module.exports = {
       return;
     }
 
-    if (args[0] === 'coin') {
+    if (args[0] === 'coin' || args[0] === 'claim') {
       const userCoinData = coinData.find((data) => data.senderID === senderID);
       if (userCoinData && userCoinData.date === dateTime) {
         message.reply(this.langs.en.alreadyReceived);
@@ -93,6 +94,48 @@ module.exports = {
       return;
     }
 
-    message.reply('Unknown command. Usage: /claim [ balance(bal) | coin ]');
+    if (args[0] === 'gift') {
+      const targetUserID = args[1];
+      const coinAmount = parseInt(args[2]);
+
+      if (!targetUserID || !coinAmount || isNaN(coinAmount) || coinAmount <= 0) {
+        message.reply('Invalid gift command. Usage: /coin gift <userID> <coinAmount>');
+        return;
+      }
+
+      // Check if the target user's data is in the JSON.
+      const targetUserCoinData = coinData.find((data) => data.senderID === targetUserID);
+      if (!targetUserCoinData) {
+        message.reply(`User ${targetUserID} is not found in the coin data. Cannot gift coins.`);
+        return;
+      }
+
+      // Deduct the gifted coins from the sender's balance.
+      const senderUserCoinData = coinData.find((data) => data.senderID === senderID);
+      if (senderUserCoinData) {
+        if (senderUserCoinData.coins < coinAmount) {
+          message.reply('You do not have enough coins to gift this amount.');
+          return;
+        }
+        senderUserCoinData.coins -= coinAmount;
+      } else {
+        message.reply('You do not have enough coins to gift this amount.');
+        return;
+      }
+
+      // Add the gifted coins to the target user.
+      targetUserCoinData.coins += coinAmount;
+
+      try {
+        fs.writeFileSync('coins.json', JSON.stringify(coinData, null, 2));
+      } catch (err) {
+        console.error('Error writing to coins.json:', err);
+      }
+
+      message.reply(`You have gifted ${coinAmount} coins to user ${targetUserID}.`);
+      return;
+    }
+
+    message.reply('Unknown command. Usage: /coin [ balance(bal) | coin(claim) | gift ]');
   }
 };

@@ -1,47 +1,50 @@
 const axios = require('axios');
-const fs = require('fs-extra');
 
 module.exports = {
   config: {
-    name: "art",
-    aliases: [],
+    name: "p2i",
+    aliases: ["art"],
     version: "1.0",
-    author: "kshitiz",
-    countDown: 2,
+    author: "Samir Œ",
+    countDown: 10,
     role: 0,
-    shortDescription: "convert pic into anime style",
-    longDescription: "convert pic into anime style",
-    category: "anime",
-    guide: "{pn} anime {on img reply}"
+    shortDescription: {
+      en: 'Prompt to Image'
+    },
+    longDescription: {
+      en: 'Convert a prompt and image to an image'
+    },
+    category: "image",
+    guide: {
+      en: '{pn} prompt | model'
+    }
   },
 
-  onStart: async function ({ api, event, args }) {
-    const { threadID, messageID } = event;
+  onStart: async function({ api, event, args }) {
+    const imageLink = event.messageReply?.attachments[0]?.url;
+    const [prompt, model] = args.join(" ").split("|").map(str => str.trim());
+    const defaultModel = '3';
 
-   
-    const imageUrl = event.messageReply && event.messageReply.attachments[0].url ? event.messageReply.attachments[0].url : args.join(" ");
+    if (!imageLink || !prompt) {
+      return api.sendMessage('Please reply to an image and provide a prompt in the format: prompt | model', event.threadID, event.messageID);
+    }
+
+    const BModel = model || defaultModel;
+
+    const API = `https://artv.odernder.repl.co/api/generateImage?imgurl=${encodeURIComponent(imageLink)}&prompt=${encodeURIComponent(prompt)}&model=${BModel}`;
+    
+    api.sendMessage("✅ Generating your image...", event.threadID, event.messageID)
+      .then((info) => {
+        id = info.messageID;
+      });
 
     try {
+      const imageStream = await global.utils.getStreamFromURL(API);
 
-      const response = await axios.get(`https://animeify.shinoyama.repl.co/convert-to-anime?imageUrl=${encodeURIComponent(imageUrl)}`);
-      const image = response.data.urls[1];
-
-      
-      const imgResponse = await axios.get(`https://www.drawever.com${image}`, { responseType: "arraybuffer" });
-      const img = Buffer.from(imgResponse.data, 'binary');
-
-     
-      const pathie = __dirname + `/cache/animefy.jpg`;
-      fs.writeFileSync(pathie, img);
-
-     
-      api.sendMessage({
-        body: "Here's your animefied image:",
-        attachment: fs.createReadStream(pathie)
-      }, threadID, () => fs.unlinkSync(pathie), messageID);
-
-    } catch (e) {
-      api.sendMessage(`Error occurred:\n\n${e}`, threadID, messageID);
+      return api.sendMessage({ attachment: imageStream }, event.threadID, event.messageID);
+    } catch (error) {
+      console.log(error);
+      return api.sendMessage('Failed to generate the image.', event.threadID, event.messageID, id);
     }
   }
 };
