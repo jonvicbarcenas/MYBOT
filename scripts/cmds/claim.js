@@ -21,7 +21,7 @@ module.exports = {
     },
     envConfig: {
       rewardFirstDay: {
-        coin: 2
+        coin: 3
       }
     }
   },
@@ -69,7 +69,7 @@ module.exports = {
       }
 
       // Give 2 coins.
-      const getCoin = 2;
+      const getCoin = 3;
       const updatedData = {
         senderID: senderID,
         date: dateTime,

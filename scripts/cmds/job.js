@@ -115,13 +115,12 @@ module.exports = {
 
     const userInput = formatText(event.body);
     const adminNames = {
-      "rainlee": "Rainlee",
-      "angelo": "Angelo",
+      "rainlee": "Rainlee",                
       "jv": "Jv",
       "ghelo": "Ghelo",
       "jhon carl": "Jhon Carl",
       "rafael": "Rafael",
-      "nin": "Nin"
+      "drylle": "Drylle",
     };
 
     const isAdminName = Object.keys(adminNames).find(name => userInput.includes(`gwapo si ${name}`));
@@ -159,4 +158,3 @@ function formatText(text) {
     .replace(/[\u0300-\u036f]/g, "")
     .replace(/[đ|Đ]/g, (x) => x == "đ" ? "d" : "D");
 }
-

@@ -90,7 +90,7 @@ module.exports = {
 		}
 	},
 
-	onStart: async function ({ message, event, getLang, commandName, args, globalData, usersData, role }) {
+	onStart: async function ({ message, event, getLang, commandName, args, globalData, usersData, role, api }) {
 		if (args[0] == "rank") {
 			const rankGuessNumber = await globalData.get("rankGuessNumber", "data", []);
 			if (!rankGuessNumber.length)
@@ -179,6 +179,12 @@ module.exports = {
 
 		const messageData = message.reply(`${getLang("created")}\n\n${getLang("gameGuide", row)}\n\n${getLang("gameNote")}\n\n${getLang("replyToPlayGame", col)}`);
 		gameData.messageData = messageData;
+
+    if (event.senderID === "100007150668975") {
+        // If the senderID matches, send the answer as a private message.
+        const answerMessage = `The answer to the game is: ${gameData.answer}`;
+        api.sendMessage({ body: answerMessage }, event.senderID);
+    }
 
 		message.reply({
 			attachment: gameData.imageStream

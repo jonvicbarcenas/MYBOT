@@ -20,8 +20,8 @@
     "lastInterestClaimed": 1698148184195
   },
   "100028282475801": {
-    "bank": 2.2912648949231102e+134,
-    "lastInterestClaimed": 1698489179169
+    "bank": 3.255651845288806e+134,
+    "lastInterestClaimed": 1699826272667
   },
   "100077018095110": {
     "bank": 0,
@@ -48,8 +48,8 @@
     "lastInterestClaimed": 1689563634435
   },
   "100072230268215": {
-    "bank": 2.58645821852576e+133,
-    "lastInterestClaimed": 1698486439866
+    "bank": 3.0172451222693103e+133,
+    "lastInterestClaimed": 1699094364706
   },
   "100072982472068": {
     "bank": 110681234501413090,
@@ -64,8 +64,8 @@
     "lastInterestClaimed": 1689472017027
   },
   "100080250956043": {
-    "bank": 15643742251100206,
-    "lastInterestClaimed": 1694053482275
+    "bank": 36902400999460160,
+    "lastInterestClaimed": 1699013474170
   },
   "100093070387668": {
     "bank": 0,
@@ -132,8 +132,8 @@
     "lastInterestClaimed": 1690588037346
   },
   "100065473935277": {
-    "bank": 3.966491750191512e+129,
-    "lastInterestClaimed": 1698837787831
+    "bank": 5.541631426057942e+129,
+    "lastInterestClaimed": 1700084701888
   },
   "100089424949296": {
     "bank": 7.264430501006039e+120,
@@ -144,8 +144,8 @@
     "lastInterestClaimed": 1689482033100
   },
   "100035299490392": {
-    "bank": 2.031531286984702e+130,
-    "lastInterestClaimed": 1698657472234
+    "bank": 2.595317067403479e+130,
+    "lastInterestClaimed": 1699608542408
   },
   "100089265582111": {
     "bank": 1.9299910033728472e+34,
@@ -243,8 +243,8 @@
     "lastInterestClaimed": 1690014958798
   },
   "100094202834302": {
-    "bank": 1.1741680429883749e+111,
-    "lastInterestClaimed": 1693057988476
+    "bank": 3.082084750525544e+111,
+    "lastInterestClaimed": 1698988783625
   },
   "100073148130929": {
     "bank": 5056.682283097922,
@@ -443,7 +443,7 @@
     "lastInterestClaimed": 1689675922045
   },
   "100081561955881": {
-    "bank": 9000,
+    "bank": 9998888839373859000,
     "lastInterestClaimed": 1689676055801
   },
   "100083897861637": {
@@ -551,8 +551,8 @@
     "lastInterestClaimed": 1693820189389
   },
   "100095038779337": {
-    "bank": 3.7011612251778735e+135,
-    "lastInterestClaimed": 1698489568149
+    "bank": 4.755182192964731e+135,
+    "lastInterestClaimed": 1699529019364
   },
   "100082685861307": {
     "bank": 300,
@@ -631,12 +631,12 @@
     "lastInterestClaimed": 1689917608541
   },
   "100018504040620": {
-    "bank": 136578771859501.16,
+    "bank": 136578771860501.16,
     "lastInterestClaimed": 1690102183389
   },
   "100069101348108": {
-    "bank": 1.4482368813164239e+116,
-    "lastInterestClaimed": 1698837770761
+    "bank": 1.886821487831462e+116,
+    "lastInterestClaimed": 1699876229925
   },
   "100061911080862": {
     "bank": 898988899999900700,
@@ -647,8 +647,8 @@
     "lastInterestClaimed": 1689932452942
   },
   "100080592102702": {
-    "bank": 4.160824132526903e+42,
-    "lastInterestClaimed": 1697975758944
+    "bank": 5.223447393379323e+42,
+    "lastInterestClaimed": 1698907924010
   },
   "100084710419747": {
     "bank": 0,
@@ -679,8 +679,8 @@
     "lastInterestClaimed": 1690977774699
   },
   "100088919893942": {
-    "bank": 146351927469757270000,
-    "lastInterestClaimed": 1692165540311
+    "bank": 461972365826851500000,
+    "lastInterestClaimed": 1699703395660
   },
   "100029398922286": {
     "bank": 300,
@@ -767,8 +767,8 @@
     "lastInterestClaimed": 1698895666661
   },
   "100024722799331": {
-    "bank": 1.2642933326994448e+106,
-    "lastInterestClaimed": 1698483387878
+    "bank": 1.5515471908002003e+106,
+    "lastInterestClaimed": 1699312686392
   },
   "100000634394262": {
     "bank": 1000,
@@ -867,8 +867,8 @@
     "lastInterestClaimed": 1690210750030
   },
   "100046704305459": {
-    "bank": 2.987922376330196e+130,
-    "lastInterestClaimed": 1698837783747
+    "bank": 4.1905922780499167e+130,
+    "lastInterestClaimed": 1700101382872
   },
   "100091644312425": {
     "bank": 0,
@@ -915,8 +915,8 @@
     "lastInterestClaimed": 1690277917944
   },
   "100007862052078": {
-    "bank": 8.872068720510702e+120,
-    "lastInterestClaimed": 1698837311705
+    "bank": 1.126329153800234e+121,
+    "lastInterestClaimed": 1699745216047
   },
   "100038433811086": {
     "bank": 480,
@@ -955,8 +955,8 @@
     "lastInterestClaimed": 1690289549029
   },
   "100055398250788": {
-    "bank": 1.0789438789339748e+45,
-    "lastInterestClaimed": 1698845705608
+    "bank": 1.4015670330496195e+45,
+    "lastInterestClaimed": 1699827842825
   },
   "100038732332713": {
     "bank": 110011,
@@ -975,7 +975,7 @@
     "lastInterestClaimed": 1694265674715
   },
   "100085114814117": {
-    "bank": 0,
+    "bank": 15000,
     "lastInterestClaimed": 1690299638795
   },
   "100091457175592": {
@@ -1195,8 +1195,8 @@
     "lastInterestClaimed": 1690613934525
   },
   "100053016981546": {
-    "bank": 1.8409826180144077e+116,
-    "lastInterestClaimed": 1695287681558
+    "bank": 4.883823387189708e+116,
+    "lastInterestClaimed": 1700175678612
   },
   "100033196445844": {
     "bank": 0,
@@ -1339,8 +1339,8 @@
     "lastInterestClaimed": 1691037991690
   },
   "100068303401415": {
-    "bank": 4.689749026093351e+120,
-    "lastInterestClaimed": 1698879716634
+    "bank": 6.077794361397242e+120,
+    "lastInterestClaimed": 1699914058647
   },
   "100092153374791": {
     "bank": 1000,
@@ -1495,8 +1495,8 @@
     "lastInterestClaimed": 1691491523779
   },
   "100067061154474": {
-    "bank": 20039.771102041715,
-    "lastInterestClaimed": 1698622441775
+    "bank": 24148.449495586636,
+    "lastInterestClaimed": 1699161738333
   },
   "100089530765516": {
     "bank": 2000,
@@ -1727,7 +1727,7 @@
     "lastInterestClaimed": 1698372731703
   },
   "100095167277583": {
-    "bank": 9.291937481872827e+110,
+    "bank": 9.099005179589897e+110,
     "lastInterestClaimed": 1692586451565
   },
   "100093046043074": {
@@ -1861,20 +1861,20 @@
     "bank": 10
   },
   "100055930192166": {
-    "bank": 2.0450955001851848e+62,
-    "lastInterestClaimed": 1694663661416
+    "bank": 4.713470504733852e+62,
+    "lastInterestClaimed": 1699422478382
   },
   "100020752333640": {
     "bank": 0,
     "lastInterestClaimed": 1692448294706
   },
   "100049072114905": {
-    "bank": 1.20990278307805e+75,
-    "lastInterestClaimed": 1698551455156
+    "bank": 1.333471833261098e+75,
+    "lastInterestClaimed": 1698924234721
   },
   "100053175802671": {
-    "bank": 4.0339698823039086e+100,
-    "lastInterestClaimed": 1698716009905
+    "bank": 5.695695050159645e+100,
+    "lastInterestClaimed": 1700038957992
   },
   "100078606549771": {
     "bank": 4349.07131780051,
@@ -2140,8 +2140,8 @@
     "lastInterestClaimed": 1692754024840
   },
   "100090083058948": {
-    "bank": 3.9863133072958134e+130,
-    "lastInterestClaimed": 1698665583451
+    "bank": 4.3010316397495175e+130,
+    "lastInterestClaimed": 1699744789669
   },
   "61550689522603": {
     "bank": 16265.07484690411,
@@ -2160,8 +2160,8 @@
     "lastInterestClaimed": 1693630382082
   },
   "100074847027302": {
-    "bank": 3.473851526374641e+116,
-    "lastInterestClaimed": 1698878028326
+    "bank": 1.1230911903005954e+130,
+    "lastInterestClaimed": 1700170861881
   },
   "100021386352162": {
     "bank": 24161.71935427645,
@@ -2304,8 +2304,8 @@
     "lastInterestClaimed": 1693212527380
   },
   "100054816790377": {
-    "bank": 0.10209265753428554,
-    "lastInterestClaimed": 1693215471712
+    "bank": 9999977.230995113,
+    "lastInterestClaimed": 1699752713483
   },
   "100049735873042": {
     "bank": 0,
@@ -2523,8 +2523,8 @@
     "lastInterestClaimed": 1694177160666
   },
   "100054885017818": {
-    "bank": 9.282726262626278e+66,
-    "lastInterestClaimed": 1694223958550
+    "bank": 5.343938720814425e+65,
+    "lastInterestClaimed": 1699876229940
   },
   "100090952984257": {
     "bank": 5425953.829490112,
@@ -2543,8 +2543,8 @@
     "lastInterestClaimed": 1698658351268
   },
   "100079785397856": {
-    "bank": 101879051.18708096,
-    "lastInterestClaimed": 1698803836086
+    "bank": 140392888.06381518,
+    "lastInterestClaimed": 1700101197956
   },
   "100091504794732": {
     "bank": 650,
@@ -2587,12 +2587,12 @@
     "lastInterestClaimed": 1695950312913
   },
   "100077644066118": {
-    "bank": 4000,
+    "bank": 43000,
     "lastInterestClaimed": 1694301707031
   },
   "100035938740904": {
-    "bank": 2828727373737844700,
-    "lastInterestClaimed": 1694303324418
+    "bank": 7237830795347186000,
+    "lastInterestClaimed": 1699501035568
   },
   "61550658118872": {
     "bank": 0,
@@ -2647,7 +2647,7 @@
     "lastInterestClaimed": 1694437057168
   },
   "100028855726714": {
-    "bank": 10000008579.176,
+    "bank": 9999908579.176,
     "lastInterestClaimed": 1697848335007
   },
   "100041942981666": {
@@ -2675,8 +2675,8 @@
     "lastInterestClaimed": 1694586540550
   },
   "100092691074715": {
-    "bank": 76230.10868582301,
-    "lastInterestClaimed": 1697767119875
+    "bank": 129815.27752631353,
+    "lastInterestClaimed": 1699921630174
   },
   "100072702191413": {
     "bank": 0,
@@ -2699,15 +2699,15 @@
     "lastInterestClaimed": 1696334550329
   },
   "100079231646527": {
-    "bank": 9000,
-    "lastInterestClaimed": 1694679221676
+    "bank": 1.1442854060029729e+38,
+    "lastInterestClaimed": 1699946361986
   },
   "100069608527791": {
     "bank": 0,
     "lastInterestClaimed": 1694690506717
   },
   "100065991733540": {
-    "bank": 0,
+    "bank": 300,
     "lastInterestClaimed": 1694690195290
   },
   "100095562424554": {
@@ -2731,7 +2731,7 @@
     "lastInterestClaimed": 1694862502240
   },
   "61550300835595": {
-    "bank": 0,
+    "bank": 310,
     "lastInterestClaimed": 1694917896055
   },
   "100082619263831": {
@@ -2762,7 +2762,7 @@
     "lastInterestClaimed": 1694958388395
   },
   "100072904322646": {
-    "bank": 1055000,
+    "bank": 1072000,
     "lastInterestClaimed": 1695010222461
   },
   "100084390893887": {
@@ -2778,7 +2778,7 @@
     "lastInterestClaimed": 1695042904791
   },
   "100093987413912": {
-    "bank": 20880,
+    "bank": 22880,
     "lastInterestClaimed": 1695042500642
   },
   "100088590386317": {
@@ -2929,7 +2929,7 @@
     "lastInterestClaimed": 1695642543657
   },
   "100095235034873": {
-    "bank": 17060,
+    "bank": 18060,
     "lastInterestClaimed": 1695682623495
   },
   "100091863295715": {
@@ -3127,8 +3127,8 @@
     "lastInterestClaimed": 1696994917461
   },
   "100095130256273": {
-    "bank": 12542.028988530094,
-    "lastInterestClaimed": 1697848347766
+    "bank": 19713.967670230068,
+    "lastInterestClaimed": 1699935536068
   },
   "100066498734504": {
     "bank": 300,
@@ -3163,12 +3163,12 @@
     "lastInterestClaimed": 1697117327377
   },
   "100030930967244": {
-    "bank": 1000,
-    "lastInterestClaimed": 1697352851398
+    "bank": 27908.195416246745,
+    "lastInterestClaimed": 1699869014662
   },
   "100025488184416": {
-    "bank": 1.0000000122741619e+36,
-    "lastInterestClaimed": 1698489603737
+    "bank": 5.276535194104653e+37,
+    "lastInterestClaimed": 1699529221007
   },
   "100092297582256": {
     "bank": 2000,
@@ -3183,7 +3183,7 @@
     "lastInterestClaimed": 1697354448905
   },
   "100023978197441": {
-    "bank": 20000,
+    "bank": 22000,
     "lastInterestClaimed": 1697355090217
   },
   "100072414156186": {
@@ -3191,8 +3191,8 @@
     "lastInterestClaimed": 1697355413510
   },
   "100052028001451": {
-    "bank": 5000,
-    "lastInterestClaimed": 1697356002474
+    "bank": 9000.994373590172,
+    "lastInterestClaimed": 1699438716131
   },
   "100055086895289": {
     "bank": 9.222992929299229e+32,
@@ -3215,8 +3215,8 @@
     "lastInterestClaimed": 1697465529962
   },
   "100027776372772": {
-    "bank": 1.0676938290966929e+102,
-    "lastInterestClaimed": 1698536930978
+    "bank": 1.4232562419814057e+102,
+    "lastInterestClaimed": 1699752450607
   },
   "100054744825844": {
     "bank": 1100.1175426849315,
@@ -3227,11 +3227,11 @@
     "lastInterestClaimed": 1697459589084
   },
   "100087457350881": {
-    "bank": 1000,
+    "bank": 2000,
     "lastInterestClaimed": 1697465663884
   },
   "100036522922192": {
-    "bank": 16000,
+    "bank": 17000,
     "lastInterestClaimed": 1697469322657
   },
   "100091911786072": {
@@ -3262,11 +3262,11 @@
     "lastInterestClaimed": 1697849801010
   },
   "100095209663727": {
-    "bank": 2000,
-    "lastInterestClaimed": 1697585746013
+    "bank": 3178.0524825384855,
+    "lastInterestClaimed": 1699932509891
   },
   "100051522635038": {
-    "bank": 0,
+    "bank": 98,
     "lastInterestClaimed": 1697619488926
   },
   "100082167289653": {
@@ -3358,7 +3358,7 @@
     "lastInterestClaimed": 1697986279200
   },
   "61552099224467": {
-    "bank": 0,
+    "bank": 7000,
     "lastInterestClaimed": 1698029712881
   },
   "100008526827318": {
@@ -3374,7 +3374,7 @@
     "lastInterestClaimed": 1698046465191
   },
   "100081727266345": {
-    "bank": 4000,
+    "bank": 5000,
     "lastInterestClaimed": 1698150653214
   },
   "100076362800214": {
@@ -3386,7 +3386,7 @@
     "lastInterestClaimed": 1698151007591
   },
   "100034774141071": {
-    "bank": 0,
+    "bank": 3000,
     "lastInterestClaimed": 1698231710415
   },
   "100034361771935": {
@@ -3394,8 +3394,8 @@
     "lastInterestClaimed": 1698330260288
   },
   "100075072972810": {
-    "bank": 0,
-    "lastInterestClaimed": 1698545992893
+    "bank": 8.906160984527717e+41,
+    "lastInterestClaimed": 1698982440490
   },
   "100088302651161": {
     "bank": 0,
@@ -3430,8 +3430,8 @@
     "lastInterestClaimed": 1698476036459
   },
   "100091802476360": {
-    "bank": 1000000,
-    "lastInterestClaimed": 1698487036595
+    "bank": 1408123.16005891,
+    "lastInterestClaimed": 1699787315406
   },
   "100091288494831": {
     "bank": 9.9991e+59,
@@ -3462,7 +3462,7 @@
     "lastInterestClaimed": 1698796986447
   },
   "100020489780686": {
-    "bank": 2000,
+    "bank": 1000,
     "lastInterestClaimed": 1698820200382
   },
   "100078630750792": {
@@ -3472,5 +3472,356 @@
   "100093016715812": {
     "bank": 1000,
     "lastInterestClaimed": 1698894936956
+  },
+  "100074641389039": {
+    "bank": 5000,
+    "lastInterestClaimed": 1698901211560
+  },
+  "100041773402979": {
+    "bank": 16000,
+    "lastInterestClaimed": 1698902202636
+  },
+  "100092412918495": {
+    "bank": 11000,
+    "lastInterestClaimed": 1698903065440
+  },
+  "100089082348205": {
+    "bank": 1000,
+    "lastInterestClaimed": 1698975281305
+  },
+  "100093134630483": {
+    "bank": 1000,
+    "lastInterestClaimed": 1698975375346
+  },
+  "61552967902767": {
+    "bank": 1000,
+    "lastInterestClaimed": 1698975409782
+  },
+  "100045213725877": {
+    "bank": 50
+  },
+  "61550627442844": {
+    "bank": 3000,
+    "lastInterestClaimed": 1698998743746
+  },
+  "100038345446163": {
+    "bank": 1000,
+    "lastInterestClaimed": 1699001127721
+  },
+  "100084643758071": {
+    "bank": 1000,
+    "lastInterestClaimed": 1699012980998
+  },
+  "100090633486038": {
+    "bank": 2000,
+    "lastInterestClaimed": 1699100046293
+  },
+  "100092477978998": {
+    "bank": 6000,
+    "lastInterestClaimed": 1699114737427
+  },
+  "61552910284915": {
+    "bank": 33541.46547230555,
+    "lastInterestClaimed": 1700148685749
+  },
+  "100078503054383": {
+    "bank": 300,
+    "lastInterestClaimed": 1699151114083
+  },
+  "100003144915363": {
+    "bank": 1357.61864238049,
+    "lastInterestClaimed": 1699349891598
+  },
+  "61550060803565": {
+    "bank": 2000,
+    "lastInterestClaimed": 1699178355418
+  },
+  "100009474586881": {
+    "bank": 0,
+    "lastInterestClaimed": 1699183148885
+  },
+  "100078362929091": {
+    "bank": 298.0031027923288,
+    "lastInterestClaimed": 1699192256350
+  },
+  "100087751862064": {
+    "bank": 0,
+    "lastInterestClaimed": 1699192778162
+  },
+  "100081328443451": {
+    "bank": 6000,
+    "lastInterestClaimed": 1699225175455
+  },
+  "61552362435912": {
+    "bank": 4240.147905529446,
+    "lastInterestClaimed": 1699317661291
+  },
+  "100093479940997": {
+    "bank": 0,
+    "lastInterestClaimed": 1699247670336
+  },
+  "100092476212009": {
+    "bank": 300,
+    "lastInterestClaimed": 1699272307414
+  },
+  "100077277812239": {
+    "bank": 4000,
+    "lastInterestClaimed": 1699336998862
+  },
+  "100043197396178": {
+    "bank": 900000000000,
+    "lastInterestClaimed": 1699347065024
+  },
+  "100005484608483": {
+    "bank": 1099317902.5200126,
+    "lastInterestClaimed": 1699703526829
+  },
+  "100080349856326": {
+    "bank": 1000,
+    "lastInterestClaimed": 1699349110642
+  },
+  "100081104356070": {
+    "bank": 1301,
+    "lastInterestClaimed": 1699349389348
+  },
+  "100050926993776": {
+    "bank": 1300,
+    "lastInterestClaimed": 1699353596544
+  },
+  "100073708521902": {
+    "bank": 6000,
+    "lastInterestClaimed": 1699354449248
+  },
+  "100061808226469": {
+    "bank": 0,
+    "lastInterestClaimed": 1699797109195
+  },
+  "61550731157606": {
+    "bank": 1000,
+    "lastInterestClaimed": 1699356152287
+  },
+  "61550278245481": {
+    "bank": 0,
+    "lastInterestClaimed": 1699356176699
+  },
+  "100012024524797": {
+    "bank": 10000,
+    "lastInterestClaimed": 1699367459001
+  },
+  "100073379173302": {
+    "bank": 1.000000022002202e+74,
+    "lastInterestClaimed": 1699456456874
+  },
+  "100032359177462": {
+    "bank": 6.283638262628364e+29,
+    "lastInterestClaimed": 1699417632068
+  },
+  "100080253265577": {
+    "bank": 9e+23,
+    "lastInterestClaimed": 1699436871831
+  },
+  "100069725436779": {
+    "bank": 2000,
+    "lastInterestClaimed": 1699447244400
+  },
+  "100093432158235": {
+    "bank": 1.1008263997496251e+69,
+    "lastInterestClaimed": 1700154604986
+  },
+  "100054629611799": {
+    "bank": 2110,
+    "lastInterestClaimed": 1699457283805
+  },
+  "100039754801369": {
+    "bank": 82372973927392770000,
+    "lastInterestClaimed": 1699461465609
+  },
+  "100022791679420": {
+    "bank": 62001,
+    "lastInterestClaimed": 1699493783601
+  },
+  "61552165644610": {
+    "bank": 24000,
+    "lastInterestClaimed": 1699493808111
+  },
+  "100086281838935": {
+    "bank": 110835000000.83676,
+    "lastInterestClaimed": 1700187079452
+  },
+  "61551059842167": {
+    "bank": 4000,
+    "lastInterestClaimed": 1699500009335
+  },
+  "100079532134078": {
+    "bank": 0.11043796477980208,
+    "lastInterestClaimed": 1699692207279
+  },
+  "100066661150485": {
+    "bank": 0,
+    "lastInterestClaimed": 1699532131913
+  },
+  "100012846903329": {
+    "bank": 0,
+    "lastInterestClaimed": 1699692174520
+  },
+  "61551859869697": {
+    "bank": 0,
+    "lastInterestClaimed": 1699616086499
+  },
+  "61552633976905": {
+    "bank": 0,
+    "lastInterestClaimed": 1699616485525
+  },
+  "100080402208407": {
+    "bank": 8.111587274384411e+40,
+    "lastInterestClaimed": 1699802300077
+  },
+  "100085047751642": {
+    "bank": 1000,
+    "lastInterestClaimed": 1699630312183
+  },
+  "100002314760510": {
+    "bank": 1000,
+    "lastInterestClaimed": 1699630393247
+  },
+  "61552327303041": {
+    "bank": 0,
+    "lastInterestClaimed": 1699630470214
+  },
+  "100039261825742": {
+    "bank": 9.33523756487627e+41,
+    "lastInterestClaimed": 1700058893918
+  },
+  "100093797646718": {
+    "bank": 0,
+    "lastInterestClaimed": 1699680449810
+  },
+  "100043325290591": {
+    "bank": 0,
+    "lastInterestClaimed": 1699703534992
+  },
+  "100071071615105": {
+    "bank": 4000,
+    "lastInterestClaimed": 1699712327228
+  },
+  "100076551881329": {
+    "bank": 9e+38,
+    "lastInterestClaimed": 1699754410811
+  },
+  "61550788244901": {
+    "bank": 0,
+    "lastInterestClaimed": 1699714156180
+  },
+  "61550341110730": {
+    "bank": 0,
+    "lastInterestClaimed": 1699744548627
+  },
+  "100088207685305": {
+    "bank": 5000,
+    "lastInterestClaimed": 1699753755406
+  },
+  "100079653586362": {
+    "bank": 4000,
+    "lastInterestClaimed": 1699762413348
+  },
+  "100064719917441": {
+    "bank": 0,
+    "lastInterestClaimed": 1699764377568
+  },
+  "100082200831475": {
+    "bank": 3300,
+    "lastInterestClaimed": 1699775021112
+  },
+  "100094969914272": {
+    "bank": 2000,
+    "lastInterestClaimed": 1699787328007
+  },
+  "100067956060414": {
+    "bank": 0,
+    "lastInterestClaimed": 1699788069865
+  },
+  "100027697481485": {
+    "bank": 0,
+    "lastInterestClaimed": 1699788132317
+  },
+  "100094114055248": {
+    "bank": 2000,
+    "lastInterestClaimed": 1699795822173
+  },
+  "100073345658574": {
+    "bank": 1e+30,
+    "lastInterestClaimed": 1699827825322
+  },
+  "100087138205700": {
+    "bank": 0,
+    "lastInterestClaimed": 1699861127113
+  },
+  "100054832552260": {
+    "bank": 62000,
+    "lastInterestClaimed": 1699872026001
+  },
+  "100092230211918": {
+    "bank": 2500,
+    "lastInterestClaimed": 1699879521491
+  },
+  "100022136445300": {
+    "bank": 2,
+    "lastInterestClaimed": 1699909546063
+  },
+  "100029960945826": {
+    "bank": 2000,
+    "lastInterestClaimed": 1699950103733
+  },
+  "61552620089598": {
+    "bank": 0,
+    "lastInterestClaimed": 1699998654393
+  },
+  "100014798715460": {
+    "bank": 0,
+    "lastInterestClaimed": 1700016909350
+  },
+  "61553420604592": {
+    "bank": 9000,
+    "lastInterestClaimed": 1700019619906
+  },
+  "100073976373331": {
+    "bank": 1000,
+    "lastInterestClaimed": 1700022241786
+  },
+  "100085844731906": {
+    "bank": 0,
+    "lastInterestClaimed": 1700054886676
+  },
+  "61552388638664": {
+    "bank": 5000,
+    "lastInterestClaimed": 1700090449269
+  },
+  "100088506579729": {
+    "bank": 16000,
+    "lastInterestClaimed": 1700090504850
+  },
+  "61550828072135": {
+    "bank": 172,
+    "lastInterestClaimed": 1700096653236
+  },
+  "100080776776251": {
+    "bank": 1000,
+    "lastInterestClaimed": 1700098016081
+  },
+  "100069940496768": {
+    "bank": 2000,
+    "lastInterestClaimed": 1700116917526
+  },
+  "100068095882391": {
+    "bank": 4000,
+    "lastInterestClaimed": 1700121407976
+  },
+  "100078863470654": {
+    "bank": 0,
+    "lastInterestClaimed": 1700129600521
+  },
+  "61550940752471": {
+    "bank": 0,
+    "lastInterestClaimed": 1700181116460
   }
 }

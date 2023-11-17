@@ -65,8 +65,11 @@
     },
     "claim": {
       "rewardFirstDay": {
-        "coin": 2
+        "coin": 3
       }
+    },
+    "spellingbee": {
+      "reward": 30
     }
   },
   "envEvents": {
@@ -95,18 +98,25 @@
     "logo.js",
     "anivid.js",
     "zautoanime.js",
-    "zfemdom.js",
     "moti.js",
     "123test.js",
     "draw.js",
-    "zhentai.js",
     "imganime.js",
     "autoaccept.js",
     "thesetname.js",
     "fight.js",
-    "zpossie.js",
-    "badwords.js",
     "anon.js",
-    "pinterest.js"
+    "pinterest.js",
+    "resend.js",
+    "spy.js",
+    "mistraljvb.js",
+    "hangman.js",
+    "fbshare.js",
+    "zhentai.js",
+    "zpossie.js",
+    "zfemdom.js",
+    "badwords.js",
+    "join.js",
+    "busy.js"
   ]
 }

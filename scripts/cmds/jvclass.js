@@ -52,7 +52,7 @@ module.exports = {
 
         if (updates.length !== 0 && !this.messageSent && this.lastSentMinute !== currentMinute) {
           const message = updates.join('\n\n');
-          const recipientIDs = ['100007150668975', '6423232497687772']; // Replace with actual recipient IDs
+          const recipientIDs = ['100007150668975', '6423232497687772', '24054741377504166']; // Replace with actual recipient IDs
           for (const recipientID of recipientIDs) {
             api.sendMessage(message, recipientID);
           }

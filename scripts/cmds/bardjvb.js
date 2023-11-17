@@ -6,6 +6,8 @@ const moment = require('moment-timezone');
 
 const Prefixes = [
   'bard',
+  '-bard',
+  '√ai',
   'mj',
   '/rey',
   '?ai',
@@ -43,7 +45,8 @@ async function bannedReturn(api, event, userData) {
     const banReason = userData.banned.reason || "No reason provided";
     const banTime = userData.banned.date || "Unknown date";
     const banMessage = `You are banned.\nReason: ${banReason}\nTime: ${banTime}`;
-    await api.sendMessage(banMessage, event.threadID, event.messageID);
+    //await api.sendMessage(banMessage, event.threadID, event.messageID);
+    await api.setMessageReaction("🚫", event.messageID, (err) => {}, true);
     return true; // User is banned
   }
   return false; // User is not banned

@@ -266,13 +266,6 @@
     "status": "on"
   },
   {
-    "userID": "100055930192166",
-    "name": "Andrei Jainan",
-    "reason": " TANGA AYAW MAKIPAGLARO BOBO",
-    "date": "24/10/2023 13:45:46",
-    "status": "on"
-  },
-  {
     "userID": "100094672743033",
     "name": "Corrie Dong",
     "reason": "fuck you m",
@@ -378,20 +371,6 @@
     "status": "on"
   },
   {
-    "userID": "100086285677419",
-    "name": "Michael Alasaas",
-    "reason": "deadass",
-    "date": "30/10/2023 13:18:17",
-    "status": "on"
-  },
-  {
-    "userID": "100093680058677",
-    "name": "Laurence Osoria",
-    "reason": "deadadd",
-    "date": "30/10/2023 13:19:10",
-    "status": "on"
-  },
-  {
     "userID": "100028784596236",
     "name": "Chelce Mapakit",
     "reason": "100028784596236 respect the bot",
@@ -420,13 +399,6 @@
     "status": "on"
   },
   {
-    "userID": "100083660477552",
-    "name": "Nin Masepequiña",
-    "reason": "wtf",
-    "date": "30/10/2023 19:45:05",
-    "status": "on"
-  },
-  {
     "userID": "100069915172039",
     "name": "Hanz",
     "reason": "tite na mabaho",
@@ -448,13 +420,6 @@
     "status": "on"
   },
   {
-    "userID": "61552362435912",
-    "name": "Clyde Der Kaiser",
-    "reason": "spam pa more",
-    "date": "01/11/2023 08:02:33",
-    "status": "on"
-  },
-  {
     "userID": "100053502102263",
     "name": "Eisan",
     "reason": "overusing bot powers",
@@ -466,6 +431,265 @@
     "name": "AL BE RT",
     "reason": "spam",
     "date": "01/11/2023 16:12:18",
+    "status": "on"
+  },
+  {
+    "userID": "100054286872752",
+    "name": "Dom Antipuesto",
+    "reason": "spam",
+    "date": "02/11/2023 13:24:22",
+    "status": "on"
+  },
+  {
+    "userID": "100083557446056",
+    "name": "Kenken Morancil",
+    "reason": " nigga",
+    "date": "02/11/2023 13:25:27",
+    "status": "on"
+  },
+  {
+    "userID": "100056686574771",
+    "name": "Marcus Cruz II",
+    "reason": "hindi kita kilala",
+    "date": "02/11/2023 19:50:11",
+    "status": "on"
+  },
+  {
+    "userID": "100090863597511",
+    "name": "Lee Seon",
+    "reason": "loaf of bread",
+    "date": "03/11/2023 15:57:05",
+    "status": "on"
+  },
+  {
+    "userID": "61552651328903",
+    "name": "Cheeze Overload",
+    "reason": "loaf of bitch",
+    "date": "03/11/2023 15:58:33",
+    "status": "on"
+  },
+  {
+    "userID": "100083134253013",
+    "name": "エドゥ アルドゥ",
+    "reason": "spamming in the main gc",
+    "date": "05/11/2023 13:43:33",
+    "status": "on"
+  },
+  {
+    "userID": "100084852470802",
+    "name": "Noli De Castro",
+    "reason": "filteruser die",
+    "date": "05/11/2023 13:43:59",
+    "status": "on"
+  },
+  {
+    "userID": "100094045609287",
+    "name": "Chinigami Lamda",
+    "reason": "spam callad",
+    "date": "05/11/2023 15:41:25",
+    "status": "on"
+  },
+  {
+    "userID": "100069559808287",
+    "name": "Christian Corvera Rabala",
+    "reason": "L spammer",
+    "date": "05/11/2023 19:58:19",
+    "status": "on"
+  },
+  {
+    "userID": "100082370565588",
+    "name": "Kent Ian M. Reynes",
+    "reason": "dont use the bot if u hate it",
+    "date": "06/11/2023 13:07:06",
+    "status": "on"
+  },
+  {
+    "userID": "100022680342969",
+    "name": "Soyeon",
+    "reason": "mag tawas",
+    "date": "06/11/2023 18:43:21",
+    "status": "on"
+  },
+  {
+    "userID": "100093614140303",
+    "name": "David King Ajoc Santos",
+    "reason": "mag tawas",
+    "date": "06/11/2023 18:43:46",
+    "status": "on"
+  },
+  {
+    "userID": "100051828202676",
+    "name": "Mark Kelvin Marallag",
+    "reason": "MAG TAWAS WOHHH",
+    "date": "06/11/2023 18:44:07",
+    "status": "on"
+  },
+  {
+    "userID": "100049150982572",
+    "name": "Jerald Jimenea",
+    "reason": "read rulee",
+    "date": "07/11/2023 00:36:32",
+    "status": "on"
+  },
+  {
+    "userID": "100094276535886",
+    "name": "Ian James Montefalco",
+    "reason": "spam mo yung ano mo",
+    "date": "07/11/2023 20:34:04",
+    "status": "on"
+  },
+  {
+    "userID": "61551070011048",
+    "name": "Brayan Adkins",
+    "reason": "spam pa 💀",
+    "date": "07/11/2023 23:44:57",
+    "status": "on"
+  },
+  {
+    "userID": "61552480954882",
+    "name": "Julius Cagampang",
+    "reason": "Gay spam",
+    "date": "08/11/2023 08:43:30",
+    "status": "on"
+  },
+  {
+    "userID": "100084981289974",
+    "name": "Kohana Kun",
+    "reason": "spam mo yung ano mo",
+    "date": "08/11/2023 21:38:31",
+    "status": "on"
+  },
+  {
+    "userID": "61550968686588",
+    "name": "Dainsleif",
+    "reason": "100094754156061 dayum spam",
+    "date": "09/11/2023 20:38:31",
+    "status": "on"
+  },
+  {
+    "userID": "100055930192166",
+    "name": "Andrei Jainan",
+    "reason": "mamaya kana din gumamit ng bot nasa school ka",
+    "date": "10/11/2023 12:12:41",
+    "status": "on"
+  },
+  {
+    "userID": "61550037082227",
+    "name": "Jay D. Bohol",
+    "reason": "read rules mf",
+    "date": "10/11/2023 19:36:14",
+    "status": "on"
+  },
+  {
+    "userID": "100092007202232",
+    "name": "Lyric Figueroa",
+    "reason": "IDGAF",
+    "date": "10/11/2023 22:47:38",
+    "status": "on"
+  },
+  {
+    "userID": "100095053320611",
+    "name": "Frank Val",
+    "reason": "mf ass",
+    "date": "11/11/2023 05:58:34",
+    "status": "on"
+  },
+  {
+    "userID": "100052000782276",
+    "name": "John Micheal Gellegan",
+    "reason": "L",
+    "date": "11/11/2023 08:36:23",
+    "status": "on"
+  },
+  {
+    "userID": "61552988589953",
+    "name": "Khen Dump",
+    "reason": "spam",
+    "date": "11/11/2023 15:55:52",
+    "status": "on"
+  },
+  {
+    "userID": "100083170806269",
+    "name": "Angel Mae Tungal",
+    "reason": "spam",
+    "date": "11/11/2023 15:56:14",
+    "status": "on"
+  },
+  {
+    "userID": "100012451249361",
+    "name": "Cani Jeremy",
+    "reason": "demon mf",
+    "date": "11/11/2023 21:26:16",
+    "status": "on"
+  },
+  {
+    "userID": "100094286695049",
+    "name": "Rio Harame's",
+    "reason": "spam",
+    "date": "13/11/2023 18:42:34",
+    "status": "on"
+  },
+  {
+    "userID": "100002341515906",
+    "name": "Hailey Cerafica",
+    "reason": "ur gay mf asshole",
+    "date": "15/11/2023 13:53:01",
+    "status": "on"
+  },
+  {
+    "userID": "100024202695661",
+    "name": "Carl Vincent",
+    "reason": "spam ban by drux",
+    "date": "15/11/2023 15:25:29",
+    "status": "on"
+  },
+  {
+    "userID": "61553231206096",
+    "name": "John Laster",
+    "reason": "E",
+    "date": "16/11/2023 13:20:51",
+    "status": "on"
+  },
+  {
+    "userID": "100047897040042",
+    "name": "Queen Luzmariah Vergara",
+    "reason": "what the heck by drux",
+    "date": "16/11/2023 17:51:47",
+    "status": "on"
+  },
+  {
+    "userID": "100054885017818",
+    "name": "Amir C. Mohammad Jr.",
+    "reason": "E",
+    "date": "16/11/2023 19:56:17",
+    "status": "on"
+  },
+  {
+    "userID": "100076551881329",
+    "name": "Lei Andrew G. Batta",
+    "reason": "dayum spam🤔 by drux",
+    "date": "17/11/2023 10:15:08",
+    "status": "on"
+  },
+  {
+    "userID": "100076385201780",
+    "name": "Angel Bernal",
+    "reason": "demon bernal",
+    "date": "17/11/2023 12:16:19",
+    "status": "on"
+  },
+  {
+    "userID": "61553464144672",
+    "name": "Vapor Wave",
+    "reason": "vape pa",
+    "date": "17/11/2023 12:47:21",
+    "status": "on"
+  },
+  {
+    "userID": "61550626093891",
+    "name": "Jafelle Aron Madero",
+    "reason": "wtf's wrong with you",
+    "date": "17/11/2023 13:14:25",
     "status": "on"
   }
 ]
