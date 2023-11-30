@@ -10,8 +10,8 @@ module.exports = {
     author: "Jhon Talamera",
   },
 
-  onStart: async function ({ api, event }) {
-    api.sendMessage("Your shoti video is coming, please wait😏...", event.threadID);
+  onStart: async function ({ message, api, event }) {
+    message.reply("Shoti video is coming, please wait...");
 
     try {
       const apiKey = "$shoti-1hefkn6gmebuvbmp2j";
@@ -37,29 +37,17 @@ module.exports = {
           const username = userInfo.username;
           const nickname = userInfo.nickname;
 
-          await api.sendMessage(
-            {
-              attachment: fs.createReadStream(filePath),
-            },
-            event.threadID
-          );
-          api.sendMessage(
-            `Username: @${username}\Nickname: ${nickname}`,
-            event.threadID
-          );
+          await message.reply({
+            body: `Username: @${username}\nNickname: ${nickname}`,
+            attachment: fs.createReadStream(filePath),
+          });
         });
       } else {
-        api.sendMessage(
-          "No video URL found in the API response.",
-          event.threadID
-        );
+        message.reply("No video URL found in the API response.");
       }
     } catch (error) {
       console.error(error);
-      api.sendMessage(
-        "An error occurred while fetching the video.",
-        event.threadID
-      );
+      message.reply("An error occurred while fetching the video.");
     }
   },
 };

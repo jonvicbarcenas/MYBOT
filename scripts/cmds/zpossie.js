@@ -46,7 +46,7 @@ module.exports = {
       fs.writeFileSync(bankFilePath, JSON.stringify(bank, null, 2), "utf8");
 
       
-      const odds = 0.50; 
+      const odds = .50; 
 
       
       const randomValue = Math.random();

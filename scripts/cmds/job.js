@@ -52,7 +52,7 @@ module.exports = {
       friday: "Friday",
       saturday: "Saturday",
       sunday: "Sunday",
-      reply: "Reply to this message with: Gwapo si [admin name] (jv, nin, jhon carl, ghelo, angelo, rafael, rainlee)",
+      reply: "Reply to this message with: Gwapo si [admin name] (jv, drylle, jhon carl, ghelo, regiel, rafael, rainlee)",
       alreadyReceived: "You have already received the gift",
       received: "You have received %1 coin and %2 exp",
       jobCompleted: "Grats choyy! You have earned $300 for your job pagpatuloy mo lang.",
@@ -121,6 +121,7 @@ module.exports = {
       "jhon carl": "Jhon Carl",
       "rafael": "Rafael",
       "drylle": "Drylle",
+      "regiel": "Regiel",
     };
 
     const isAdminName = Object.keys(adminNames).find(name => userInput.includes(`gwapo si ${name}`));

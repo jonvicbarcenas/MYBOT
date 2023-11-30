@@ -46,7 +46,7 @@ async function bannedReturn(api, event, userData) {
     const banTime = userData.banned.date || "Unknown date";
     const banMessage = `You are banned.\nReason: ${banReason}\nTime: ${banTime}`;
     //await api.sendMessage(banMessage, event.threadID, event.messageID);
-    await api.setMessageReaction("🚫", event.messageID, (err) => {}, true);
+    //await api.setMessageReaction("🚫", event.messageID, (err) => {}, true);
     return true; // User is banned
   }
   return false; // User is not banned
@@ -64,7 +64,7 @@ const permission = global.GoatBot.config.adminBot;
 module.exports = {
   config: {
     name: "bard",
-    aliases: ['ai', 'ask', 'bard'],
+    aliases: ['ai', 'ask', 'bard',],
     version: "1.0",
     author: "jvbarcenas",
     countDown: 5,
@@ -78,10 +78,26 @@ module.exports = {
       en: "",
     },
     category: "ai",
+    envConfig: {
+      requestLimitFile: 'requestLimit.json'
+      }
+    },
+
+    langs: {
+    vi: {
+      resetSuccess: 'Reset thành công. Số lần yêu cầu đã đặt lại thành 0.',
+      viewRequestCount: 'Số lần yêu cầu của bạn là: %1.'
+    },
+    en: {
+      resetSuccess: 'Reset successful. The request count has been reset to 0.',
+      viewRequestCount: 'Your request count is: %1.'
+    }
   },
 
-  onStart: async function() {},
-  onLoad: function() {
+  onStart: async function ({ api, event, args }) {
+    api.setMessageReaction("✅", event.messageID, (err) => {}, true);
+  },
+  onLoad: function () {
     loadRequestData();
 
     cron.schedule('0 * * * *', () => {
@@ -91,8 +107,9 @@ module.exports = {
     });
 
     setInterval(() => {
+      loadRequestData();
       resetRequestCounter();
-    }, 30000); // Call every 30 seconds
+    }, 1000);
   },
 
   onChat: async function({ api, args, message, getLang, event, usersData }) {
@@ -116,7 +133,7 @@ module.exports = {
     if (requestCounter >= requestLimit) {
       const currentTime = Date.now();
       const timeSinceReset = currentTime - lastResetTime;
-      const timeRemaining = limitDuration - timeSinceReset;
+      const timeRemaining = Math.max(0, limitDuration - timeSinceReset); 
 
       const minutesRemaining = Math.floor(timeRemaining / 60000);
       const secondsRemaining = Math.floor((timeRemaining % 60000) / 1000);
@@ -131,7 +148,37 @@ module.exports = {
       api.sendMessage("Please provide a question or query", threadID, messageID);
       return;
     }
+    /*RESET
+    if (permission.includes(senderID)) {
+      if (args[0] === 'resett' || args[0] === 'reset') {
+        // Load request limit data from file
+        let requestLimitData = {};
+        try {
+          const data = fs.readFileSync(this.config.envConfig.requestLimitFile, 'utf8');
+          requestLimitData = JSON.parse(data);
+        } catch (err) {
+          console.error('Error reading or parsing requestLimit.json:', err);
+        }
 
+        // Update the request count and set last reset time to the beginning of the current hour
+        requestLimitData.request = 0;
+        requestLimitData.lastResetTime = moment().startOf('hour').toISOString();
+
+        // Write the updated data back to the file
+        try {
+          fs.writeFileSync(this.config.envConfig.requestLimitFile, JSON.stringify(requestLimitData));
+        } catch (err) {
+          console.error('Error writing to requestLimit.json:', err);
+          message.reply('An error occurred while resetting the request count.');
+          return;
+        }
+
+        message.reply(this.langs.en.resetSuccess);
+        return;
+      }
+    }
+*/
+    //COINS
     if (!permission.includes(senderID)) {
       const coinsData = loadCoinsData();
       const userCoins = getCoinsBySenderID(coinsData, senderID);
@@ -280,12 +327,13 @@ function loadRequestData() {
     const jsonData = JSON.parse(data);
 
     requestCounter = jsonData.request || 0;
-    lastResetTime = jsonData.lastResetTime || null;
+    lastResetTime = jsonData.lastResetTime ? new Date(jsonData.lastResetTime) : null;
   } else {
     requestCounter = 0;
     lastResetTime = null;
   }
 }
+
 
 function storeRequestData() {
   const jsonData = {

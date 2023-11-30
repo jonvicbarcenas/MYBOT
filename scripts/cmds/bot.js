@@ -1,24 +1,22 @@
 const axios = require('axios');
 
 const Prefixes = [
-  'mist',
-  '/mist',
-  'mistral',
-  '/mistral'
+  'bot',
+  '/bot',
 ];
 
 module.exports = {
   config: {
-    name: 'mist',
+    name: 'bot',
     version: '2.5',
-    author: 'JV Barcenas', // do not change
+    author: 'JV Barcenas',
     role: 0,
     category: 'ai',
     shortDescription: {
-      en: 'Asks mistralAI for an answer.',
+      en: 'Asks an AI for an answer.',
     },
     longDescription: {
-      en: 'Ask mistralAI for an answer based on the user prompt.',
+      en: 'Asks an AI for an answer based on the user prompt.',
     },
     guide: {
       en: '{pn} [prompt]',
@@ -36,21 +34,27 @@ module.exports = {
       const prompt = event.body.substring(prefix.length).trim();
 
       if (prompt === '') {
-        await message.reply("Sup, now ask me a question.");
+        await message.reply(
+          "State your request!! What is it that you seek from me?"
+        );
         return;
       }
 
-      await message.reply("Answering your query...");
+      await message.reply("Dain is thinking...");
 
-      const response = await axios.get(`https://i-think-therefore-i-am.corpselaugh.repl.co/?prompt=${encodeURIComponent(prompt)}`);
+      const response = await axios.get(`https://kemenu-koega.corpselaugh.repl.co/?prompt=${encodeURIComponent(prompt)}`);
 
-      if (response.status !== 200 || !response.data || !response.data.choices || !response.data.choices[0].message || !response.data.choices[0].message.content) {
+      if (response.status !== 200 || !response.data) {
         throw new Error('Invalid or missing response from API');
       }
 
-      const messageText = response.data.choices[0].message.content.trim();
+      const firstContent = response.data.candidates[0]?.content.trim();
 
-      await message.reply(messageText);
+      if (!firstContent) {
+        throw new Error('Invalid or missing content in API response');
+      }
+
+      await message.reply(firstContent);
 
       console.log('Sent answer as a reply to user');
     } catch (error) {

@@ -70,6 +70,12 @@
     },
     "spellingbee": {
       "reward": 30
+    },
+    "reset": {
+      "requestLimitFile": "requestLimit.json"
+    },
+    "bard": {
+      "requestLimitFile": "requestLimit.json"
     }
   },
   "envEvents": {
@@ -97,26 +103,26 @@
     "generate.js",
     "logo.js",
     "anivid.js",
-    "zautoanime.js",
     "moti.js",
     "123test.js",
     "draw.js",
     "imganime.js",
-    "autoaccept.js",
-    "thesetname.js",
     "fight.js",
     "anon.js",
-    "pinterest.js",
     "resend.js",
     "spy.js",
-    "mistraljvb.js",
     "hangman.js",
     "fbshare.js",
+    "badwords.js",
+    "busy.js",
+    "pastebinAlert.js",
+    "pinterest.js",
+    "thesetname.js",
+    "autoaccept.js",
+    "zautoanime.js",
+    "join.js",
     "zhentai.js",
     "zpossie.js",
-    "zfemdom.js",
-    "badwords.js",
-    "join.js",
-    "busy.js"
+    "zfemdom.js"
   ]
 }

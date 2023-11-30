@@ -24,8 +24,8 @@
     "intervalGetNewCookie": 4320,
     "notes": "time the system automatically retrieves new cookies from email/password, unit is minute, if you set null, the system will not automatically retrieve new cookies, it saves you from having to manually change your cookie every time it expires. recommended set to 1440 (1day) or 4320 (3day).TO BE ABLE TO USE THIS FEATURE YOU NEED TO ENTER THE ACCOUNT PASSWORD ABOVE",
     "i_user": "",
-    "email": "dainsleif62804@gmail.com",
-    "password": "Huayinabellat"
+    "email": "dainsleifthebot@gmail.com",
+    "password": "swordgod28"
   },
   "language": "en",
   "notesLanguage": "change to your language with ISO 639-1 code, available languages: vi (Vietnamese), en (English)",
@@ -41,8 +41,7 @@
     "100035299490392",
     "100072230268215",
     "100090083058948",
-    "100028282475801",
-    "100007862052078"
+    "100028282475801"
   ],
   "nickNameBot": "Dainsleif",
   "prefix": "/",
@@ -145,7 +144,7 @@
   },
   "antiInbox": false,
   "autoLoadScripts": {
-    "enable": false,
+    "enable": true,
     "ignoreCmds": "",
     "ignoreEvents": "",
     "notes": "this feature will automatically load the script when scripts have been changed, you can set ignoreCmds to ignore commands, ignoreEvents to ignore events, separate by comma or space, example: \"cmd1.js cmd2.js cmd3.js\" (without backslash)"

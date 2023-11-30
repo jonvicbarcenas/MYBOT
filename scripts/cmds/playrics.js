@@ -31,7 +31,7 @@ module.exports = {
     const data = input.split(" ");
 
     if (data.length < 2) {
-      return api.sendMessage("Please put a song", event.threadID, event.messageID);
+      return api.sendMessage("Please put a song", event.threadID);
     }
 
     data.shift();
@@ -44,9 +44,9 @@ module.exports = {
         fs.mkdirSync(cacheFolderPath);
       }
 
-      api.sendMessage(`Finding lyrics for "${song}". Please wait...`, event.threadID, event.messageID);
+      api.sendMessage(`Finding lyrics for "${song}". Please wait...`, event.threadID);
 
-      const res = await axios.get(`https://lyrist.vercel.app/api/${encodeURIComponent(song)}`);
+      const res = await axios.get(`https://api.heckerman06.repl.co/api/other/lyrics2?song=${encodeURIComponent(song)}`);
       const lyrics = res.data.lyrics || "Not found!";
       const title = res.data.title || "Not found!";
       const artist = res.data.artist || "Not found!";
@@ -87,7 +87,7 @@ module.exports = {
           attachment: fs.createReadStream(filePath)
         };
 
-        api.sendMessage(message, event.threadID, event.messageID, () => {
+        api.sendMessage(message, event.threadID, () => {
           fs.unlinkSync(filePath);
         });
       });

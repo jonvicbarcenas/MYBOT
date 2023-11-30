@@ -31,28 +31,19 @@ module.exports = {
   choices: {
     rock: {
       label: "rock",
+      emoji: "✊",
       image: "https://i.imgur.com/uAEjEMr.gif"
     },
     paper: {
       label: "paper",
+      emoji: "✋",
       image: "https://i.imgur.com/0YEYqXC.gif"
     },
     scissors: {
       label: "scissors",
+      emoji: "✌️",
       image: "https://i.imgur.com/y1t798S.gif"
     },
-    "✊": {
-      label: "✊",
-      image: "https://i.imgur.com/uAEjEMr.gif"
-    },
-    "✋": {
-      label: "✋",
-      image: "https://i.imgur.com/0YEYqXC.gif"
-    },
-    "✌": {
-      label: "✌️",
-      image: "https://i.imgur.com/y1t798S.gif"
-    }
   },
 
   onStart: async function ({ args, api, event, getLang }) {
@@ -60,14 +51,15 @@ module.exports = {
 
     const userChoice = args[0];
 
-    if (!userChoice || !(userChoice in this.choices)) {
+    const lowercaseUserChoice = userChoice.toLowerCase().replace("✊", "rock").replace("✋", "paper").replace("✌️", "scissors");
+    if (!lowercaseUserChoice || !(lowercaseUserChoice in this.choices)) {
       return api.sendMessage(getLang("rpsInvalidChoice"), event.threadID);
     }
 
     const botChoices = Object.keys(this.choices);
     const botChoice = botChoices[Math.floor(Math.random() * botChoices.length)];
 
-    const resultMessage = `You chose ${this.choices[userChoice].label}. I chose ${this.choices[botChoice].label}.`;
+    const resultMessage = `You chose ${this.choices[lowercaseUserChoice].label}. I chose ${this.choices[botChoice].label}.`;
     const resultImage = this.choices[botChoice].image;
 
     const cacheDir = path.join(__dirname, "cache");
@@ -83,7 +75,7 @@ module.exports = {
         return api.sendMessage("Failed to download image. Please try again.", event.threadID);
       }
 
-      if (userChoice === botChoice) {
+      if (lowercaseUserChoice === botChoice) {
         const tieMessage = getLang("rpsTie");
         const amountToAdd = 10;
         // Add money to user's bank data
@@ -100,12 +92,9 @@ module.exports = {
         const message = `${resultMessage}\n${tieMessage}`;
         sendRpsMessage(api, event.threadID, message, cacheFilePath);
       } else if (
-        (userChoice.toLowerCase() === "rock" && botChoice === "scissors") ||
-        (userChoice.toLowerCase() === "paper" && botChoice === "rock") ||
-        (userChoice.toLowerCase() === "scissors" && botChoice === "paper") ||
-        (userChoice === "✊" && botChoice === "✌️") ||
-        (userChoice === "✋" && botChoice === "✊") ||
-        (userChoice === "✌️" && botChoice === "✋")
+        (lowercaseUserChoice === "rock" || lowercaseUserChoice === "✊") && botChoice === "scissors" ||
+        (lowercaseUserChoice === "paper" || lowercaseUserChoice === "✋") && botChoice === "rock" ||
+        (lowercaseUserChoice === "scissors" || lowercaseUserChoice === "✌️") && botChoice === "paper"
       ) {
         const winMessage = getLang("rpsWin");
         const amountToAdd = 150;

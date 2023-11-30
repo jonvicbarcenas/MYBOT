@@ -1,3 +1,6 @@
+// File zsheesh.js here you are:
+// File zsheesh.js here you are:
+
 // Define the bannedReturn function to check and respond if the user is banned
 async function bannedReturn(api, event, userData) {
   if (userData && userData.banned && userData.banned.status === true) {

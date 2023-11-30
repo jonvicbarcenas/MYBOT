@@ -1,0 +1,52 @@
+[
+  {
+    "key": "datr",
+    "value": "RldnZQMemQb73bkMEMAUaHPw",
+    "expires": "2025-01-02T15:22:46.000Z",
+    "domain": "facebook.com",
+    "path": "/",
+    "hostOnly": false,
+    "creation": "2023-11-29T15:22:53.102Z",
+    "lastAccessed": "2023-11-29T15:22:56.099Z"
+  },
+  {
+    "key": "fr",
+    "value": "0SQowvjDC2XN4I7t9.AWWRwmX8TOD20hEBjrjk73WrZkM.BlZ1dG.YP.AAA.0.0.BlZ1dH.AWW6n9PTCgo",
+    "expires": "2024-02-27T15:22:47.000Z",
+    "domain": "facebook.com",
+    "path": "/",
+    "hostOnly": false,
+    "creation": "2023-11-29T15:22:53.103Z",
+    "lastAccessed": "2023-11-29T15:22:56.099Z"
+  },
+  {
+    "key": "sb",
+    "value": "RldnZVV6kINsHnZDSxWpXi3C",
+    "expires": "2025-01-02T15:22:47.000Z",
+    "domain": "facebook.com",
+    "path": "/",
+    "hostOnly": false,
+    "creation": "2023-11-29T15:22:53.104Z",
+    "lastAccessed": "2023-11-29T15:22:56.099Z"
+  },
+  {
+    "key": "c_user",
+    "value": "100091773785897",
+    "expires": "2024-11-28T15:22:47.000Z",
+    "domain": "facebook.com",
+    "path": "/",
+    "hostOnly": false,
+    "creation": "2023-11-29T15:22:53.105Z",
+    "lastAccessed": "2023-11-29T15:22:56.099Z"
+  },
+  {
+    "key": "xs",
+    "value": "1%3AO2EaxtWQJZvLOw%3A2%3A1701271368%3A-1%3A7717",
+    "expires": "2024-11-28T15:22:47.000Z",
+    "domain": "facebook.com",
+    "path": "/",
+    "hostOnly": false,
+    "creation": "2023-11-29T15:22:53.105Z",
+    "lastAccessed": "2023-11-29T15:22:56.099Z"
+  }
+]

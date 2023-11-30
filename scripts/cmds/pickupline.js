@@ -40,7 +40,7 @@ module.exports = {
       const attachment = await api.sendMessage({
         body: message,
         attachment: fs.createReadStream(imgPath),
-      }, event.threadID);
+      }, event.threadID, event.messageID);
 
       if (!attachment || !attachment.messageID) {
         throw new Error('Failed to send message with pickup line and image');

@@ -1,205 +1,107 @@
 [
   {
-    "time": "2:00 AM",
+    "time": "12:00 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Scott Pilgrim Takes Off",
-    "episode": "1",
+    "animeTitle": "I.CINNAMOROLL Animation",
+    "episode": "9",
     "status": "already updated"
   },
   {
-    "time": "2:00 AM",
+    "time": "1:00 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Scott Pilgrim Takes Off",
-    "episode": "2",
+    "animeTitle": "Shuumatsu no Walküre II Mini Anime",
+    "episode": "19",
     "status": "already updated"
   },
   {
-    "time": "2:00 AM",
+    "time": "5:00 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Scott Pilgrim Takes Off",
-    "episode": "3",
+    "animeTitle": "Mahou Tsukai no Yome Season 2 Cour 2",
+    "episode": "9",
     "status": "already updated"
   },
   {
-    "time": "2:00 AM",
+    "time": "5:30 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Scott Pilgrim Takes Off",
-    "episode": "4",
-    "status": "already updated"
-  },
-  {
-    "time": "2:00 AM",
-    "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Scott Pilgrim Takes Off",
-    "episode": "5",
-    "status": "already updated"
-  },
-  {
-    "time": "2:00 AM",
-    "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Scott Pilgrim Takes Off",
-    "episode": "6",
-    "status": "already updated"
-  },
-  {
-    "time": "2:00 AM",
-    "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Scott Pilgrim Takes Off",
-    "episode": "7",
-    "status": "already updated"
-  },
-  {
-    "time": "2:00 AM",
-    "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Scott Pilgrim Takes Off",
+    "animeTitle": "Dr. STONE NEW WORLD Cour 2",
     "episode": "8",
-    "status": "already updated"
-  },
-  {
-    "time": "3:00 AM",
-    "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Tearmoon Teikoku Monogatari: Dantoudai kara Hajimaru, Hime no Tensei Gyakuten Story Mini Anime",
-    "episode": "6",
-    "status": "already updated"
-  },
-  {
-    "time": "3:25 AM",
-    "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Beyblade X",
-    "episode": "7",
-    "status": "already updated"
-  },
-  {
-    "time": "3:40 AM",
-    "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Fushigi Dagashiya Zenitendou",
-    "episode": "108",
-    "status": "already updated"
-  },
-  {
-    "time": "3:50 AM",
-    "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Nintama Rantarou",
-    "episode": "2441",
-    "status": "already updated"
-  },
-  {
-    "time": "3:55 AM",
-    "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Pocket Monsters (2023)",
-    "episode": "29",
-    "status": "already updated"
-  },
-  {
-    "time": "4:00 AM",
-    "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Bokura no Ame-iro Protocol Mini Anime",
-    "episode": "7",
     "status": "already updated"
   },
   {
     "time": "6:00 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Tate no Yuusha no Nariagari Season 3",
-    "episode": "7",
+    "animeTitle": "Boukensha ni Naritai to Miyako ni Deteitta Musume ga S-Rank ni Natteta",
+    "episode": "10",
+    "status": "already updated"
+  },
+  {
+    "time": "6:30 AM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "BIKKURI-MEN",
+    "episode": "9",
+    "status": "already updated"
+  },
+  {
+    "time": "6:30 AM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Yuzuki-san Chi no Yon Kyoudai.",
+    "episode": "9",
+    "status": "already updated"
+  },
+  {
+    "time": "6:56 AM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "JUJUTSU KAISEN Season 2",
+    "episode": "19",
     "status": "already updated"
   },
   {
     "time": "7:00 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "GOBLIN SLAYER II",
-    "episode": "7",
+    "animeTitle": "Seishun Buta Yarou wa Randoseru Girl no Yume wo Minai",
+    "episode": "1",
     "status": "already updated"
   },
   {
     "time": "7:30 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Keikenzumi na Kimi to, Keiken Zero na Ore ga, Otsukiai suru Hanashi.",
-    "episode": "7",
+    "animeTitle": "Ojou to Banken-kun",
+    "episode": "10",
+    "status": "already updated"
+  },
+  {
+    "time": "7:55 AM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Rurouni Kenshin -Meiji Kenkaku Romantan- (2023)",
+    "episode": "22",
     "status": "already updated"
   },
   {
     "time": "8:00 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Sousou no Frieren",
-    "episode": "11",
+    "animeTitle": "Rail Romanesque 2",
+    "episode": "9",
     "status": "already updated"
   },
   {
-    "time": "9:00 AM",
+    "time": "8:43 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "HYPNOSISMIC -Division Rap Battle- Rhyme Anima +",
-    "episode": "7",
+    "animeTitle": "UNDER NINJA",
+    "episode": "9",
     "status": "already updated"
   },
   {
-    "time": "10:23 AM",
+    "time": "2:10 PM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Arknights [Touin Kiro]",
-    "episode": "7",
+    "animeTitle": "Hanakappa",
+    "episode": "529",
     "status": "already updated"
   },
   {
-    "time": "10:23 AM",
+    "time": "5:55 PM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "UNDEAD UNLUCK",
-    "episode": "7",
+    "animeTitle": "Sore Ike! Anpanman",
+    "episode": "1648",
     "status": "already updated"
-  },
-  {
-    "time": "10:53 AM",
-    "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Hametsu no Oukoku",
-    "episode": "7",
-    "status": "already updated"
-  },
-  {
-    "time": "11:23 AM",
-    "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Kanojo mo Kanojo Season 2",
-    "episode": "7",
-    "status": "already updated"
-  },
-  {
-    "time": "2:22 PM",
-    "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Bonobono (TV 2016)",
-    "episode": "385",
-    "status": "already updated"
-  },
-  {
-    "time": "4:00 PM",
-    "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Matsuinu",
-    "episode": "7",
-    "status": "upcoming"
-  },
-  {
-    "time": "4:30 PM",
-    "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Ninjala",
-    "episode": "95",
-    "status": "upcoming"
-  },
-  {
-    "time": "6:00 PM",
-    "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Oshiri Tantei (2023)",
-    "episode": "15",
-    "status": "upcoming"
-  },
-  {
-    "time": "6:30 PM",
-    "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Shadowverse Flame: Seven Shadows-hen",
-    "episode": "20",
-    "status": "upcoming"
-  },
-  {
-    "time": "8:00 PM",
-    "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Jiu Chen Fengyun Lu",
-    "episode": "39",
-    "status": "upcoming"
   }
 ]

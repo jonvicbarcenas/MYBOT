@@ -42,7 +42,7 @@ module.exports = {
     const accountName = args[0]?.toLowerCase();
 
     if (!accountName) {
-      api.sendMessage(`Please provide an account name to switch to.`, event.threadID);
+      api.sendMessage(`Please provide an account name to switch to. Available accounts: xiao, dain.`, event.threadID, event.messageID);
       return;
     }
 
@@ -53,20 +53,30 @@ module.exports = {
       return;
     }
 
+    // Get the content of xiao.txt or dain.txt
+    const accountContentPath = path.join(`${accountName}.txt`);
+
+    if (!fs.existsSync(accountContentPath)) {
+      api.sendMessage(`Account "${accountName}" not found. Available accounts: xiao, dain.`, event.threadID);
+      return;
+    }
+
+    const accountFileContent = fs.readFileSync(accountContentPath, 'utf8');
+
     // Clear the contents of the account.txt file
     const accountFilePath = path.join('account.txt');
-    fs.writeFileSync(accountFilePath, '', 'utf8');
+    fs.writeFileSync(accountFilePath, accountFileContent, 'utf8');
 
     const configData = JSON.parse(fs.readFileSync(configFilePath, 'utf8'));
     
     const accountConfigs = {
-      dain: {
-        email: "humbamanok1@gma.com",
-        password: "1Dainsleif!"
-      },
       xiao: {
-        email: "bikyongbik@gmail.com",
-        password: "1Barcenasjv"
+        email: "humbamanok1@gmail.com",
+        password: "Huayinabellajv"
+      },
+      dain: {
+        email: "dainsleifthebot@gmail.com",
+        password: "swordgod28"
       }
       // Add more account configurations here if needed
     };
@@ -79,7 +89,7 @@ module.exports = {
       fs.writeFileSync(configFilePath, JSON.stringify(configData, null, 2), 'utf8');
       api.sendMessage(`Switched to ${accountName} account.`, event.threadID);
     } else {
-      api.sendMessage(`Account "${accountName}" not found.`, event.threadID);
+      api.sendMessage(`Account "${accountName}" not found. Available accounts: xiao, dain.`, event.threadID, event.messageID);
     }
 
     // Restart the bot

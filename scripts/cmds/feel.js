@@ -1,62 +1,70 @@
 const axios = require('axios');
+const emoji = require('node-emoji');
+
+
+// Counter to keep track of received messages bch
+let messageCounter = 0; //do not change this this is a counter variable only!!!
+
+
+
+//NOOOOOOTEEEEEE!!!
+
+
+//this. change here, odds of how many messages should bot reacts to
+let numOfMessages = 10; // 1 for every messages he reacts to everything. then if 2 the 2nd message will be reacted to and so on.
+
+//NOTE!!: based on all users from bot userdata, not per userID...
+
+function containsOnlyEmojis(text) {
+  return emoji.has(text);
+}
 
 module.exports = {
   config: {
     name: 'feel',
-    aliases: ['feel'],
-    version: '2.5',
+    version: '1.2',
     author: 'JV Barcenas',
     role: 0,
-    category: 'utility',
+    category: 'backend',
     shortDescription: {
-      en: 'analyse text.'
+      en: 'Performs sentiment analysis on a given text.',
     },
     longDescription: {
-      en: 'analyse texts emotion using gradio'
+      en: 'Analyzes the sentiment of a given text using the sentiment analysis API.',
     },
     guide: {
-      en: '{pn} [prompt]'
-    }
+      en: 'NO GUIDE LOL',
+    },
   },
-  onStart: async function ({ message, api, event, args }) {
+  onStart: async function () {},
+  onChat: async function ({ api, event, args, message }) {
     try {
-      let prompt = args.join(' ');
+      messageCounter++;
 
-      if (!prompt) {
-        // check if there is a message reply
-        if (event.messageReply) {
-          prompt = event.messageReply.body;
+      const text = event.body.trim();
+
+      if (text === '') {
+        return;
+      }
+
+      if (messageCounter % numOfMessages === 0) {
+        const response = await axios.get(`https://nah-i-would-win.archashura.repl.co/?iyot=${encodeURIComponent(text)}`);
+
+        if (response.status !== 200 || !response.data || !response.data.content) {
+          throw new Error('Invalid or missing response from API');
+        }
+
+        const sentimentResult = response.data.content.trim();
+
+        if (containsOnlyEmojis(sentimentResult)) {
+          api.setMessageReaction(`${sentimentResult}`, event.messageID, (err) => {}, true);
+          console.log('Set sentiment analysis result as a reaction to the user');
         } else {
-          throw new Error('Please provide a prompt.');
+          throw new Error('The response does not contain only emojis.');
         }
       }
-
-      const response = await axios.get(`https://whatdaheel.dreamcorps.repl.co/api/sentiment?q=${encodeURIComponent(prompt)}`);
-
-      if (response.status !== 200 || !response.data) {
-        throw new Error('Invalid or missing response from API');
-      }
-
-      await new Promise(resolve => setTimeout(resolve, 2000));
-
-      const output = await axios.get('https://whatdaheel.dreamcorps.repl.co/sentiment');
-
-      if (output.status !== 200 || !output.data) {
-        throw new Error('Invalid or missing response from API');
-      }
-
-      const message = output.data.trim();
-
-      const messageID = await api.sendMessage(message, event.threadID);
-
-      if (!messageID) {
-        throw new Error('Failed to sentiment');
-      }
-
-      console.log(`Sent answer with message ID ${messageID}`);
     } catch (error) {
-      console.error(`Failed to get answer: ${error.message}`);
-      api.sendMessage(`Sorry, something went wrong while trying to get a sentiment: ${error.message}. Please try again later.`, event.threadID);
+      console.error(`Failed to perform sentiment analysis: ${error.message}`);
     }
-  }
+  },
 };

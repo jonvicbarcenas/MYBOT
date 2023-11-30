@@ -3,7 +3,7 @@ const axios = require('axios');
 module.exports = {
   config: {
     name: 'word',
-    aliases: ['dic', 'whatis'],
+    aliases: ['dic', 'whatis', 'define'],
     version: '1.0',
     author: 'JV',
     role: 0,
@@ -26,19 +26,27 @@ module.exports = {
       }
 
       const word = args.join(' ').toLowerCase();
-      const url = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
+      const apiKey = 'e7e3e3ad-a4b1-44f1-b7cf-ff5eea6d108a';
+      const url = `https://www.dictionaryapi.com/api/v3/references/collegiate/json/${word}?key=${apiKey}`;
 
       const wordResponse = await axios.get(url);
 
       if (wordResponse.status !== 200 || !wordResponse.data || !wordResponse.data[0]) {
-        throw new Error('Invalid or missing response from WordApi');
+        throw new Error('Invalid or missing response from Merriam-Webster API');
       }
 
-      const definition = wordResponse.data[0].meanings[0].definitions[0].definition;
+      const definitions = wordResponse.data[0].shortdef;
 
-      const message = `Here's the definition of ${word}: \n\n${definition}`;
+      if (!definitions || definitions.length === 0) {
+        api.sendMessage(`No definitions found for ${word}.`, event.threadID);
+        return;
+      }
 
-      const resultMessageID = await api.sendMessage(message, event.threadID);
+      const formattedDefinitions = definitions.map((definition, index) => `${index + 1}: ${definition}`).join('\n');
+
+      const message = `Definitions for •"${word}"•:\n\n${formattedDefinitions}`;
+
+      const resultMessageID = await api.sendMessage(message, event.threadID, event.messageID);
 
       if (!resultMessageID) {
         throw new Error('Failed to send result message');
@@ -47,7 +55,7 @@ module.exports = {
       console.log(`Sent result message with ID ${resultMessageID}`);
     } catch (error) {
       console.error(`Failed to look up word: ${error.message}`);
-      api.sendMessage('Sorry, something went wrong while trying to look up the word. Please try again later.', event.threadID);
+      api.sendMessage('Sorry, something went wrong while trying to look up the word. Please try again later.', event.threadID, event.messageID);
     }
   }
 };

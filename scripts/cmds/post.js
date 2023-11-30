@@ -1,238 +1,68 @@
-const axios = require("axios");
+const axios = require('axios');
+
+const autopost = async (postMessage, accessToken, clientId, clientSecret) => {
+  const appsecretProof = require('crypto')
+    .createHmac('sha256', clientSecret)
+    .update(accessToken)
+    .digest('hex');
+
+  const postData = {
+    message: postMessage,
+    access_token: accessToken,
+    client_id: clientId,
+    client_secret: clientSecret,
+    appsecret_proof: appsecretProof,
+  };
+
+  try {
+    const response = await axios.post(`https://graph.facebook.com/me`, postData);
+
+    if (response.status === 200) {
+      console.log(`Posted successfully: ${postMessage}`);
+      return "Posted successfully.";
+    } else {
+      return `Failed to post ${postMessage}. Response status: ${response.status}, Data: ${JSON.stringify(response.data)}`;
+    }
+  } catch (error) {
+    return `Error posting (${postMessage}): ${error.response.status}, Data: ${JSON.stringify(error.response.data)}`;
+  }
+};
 
 module.exports = {
   config: {
     name: "post",
-    aliases: ["posts"],
+    aliases: ["fbpost"],
     version: "1.0",
-    author: "JV Barcenas",
-    countDown: 5,
-    role: 2,
-    shortDescription: "post bot timeline",
-    longDescription: "post bot tls",
-    category: "Utility",
+    author: "Your Name",
+    shortDescription: {
+      en: "Post a message on Facebook.",
+    },
+    longDescription: {
+      en: "This command posts a message on Facebook using the autopost function.",
+    },
+    category: "social",
+    guide: {
+      en: '{pn} [message]',
+    },
   },
 
-  onStart: async function ({ event, api }) {
-    const { threadID, messageID, senderID } = event;
-    const uuid = getGUID();
-    const formData = {
-      "input": {
-        "composer_entry_point": "inline_composer",
-        "composer_source_surface": "timeline",
-        "idempotence_token": uuid + "_FEED",
-        "source": "WWW",
-        "attachments": [],
-        "audience": {
-          "privacy": {
-            "allow": [],
-            "base_state": "FRIENDS", // SELF EVERYONE
-            "deny": [],
-            "tag_expansion_state": "UNSPECIFIED"
-          }
-        },
-        "message": {
-          "ranges": [],
-          "text": ""
-        },
-        "with_tags_ids": [],
-        "inline_activities": [],
-        "explicit_place_id": "0",
-        "text_format_preset_id": "0",
-        "logging": {
-          "composer_session_id": uuid
-        },
-        "tracking": [
-          null
-        ],
-        "actor_id": api.getCurrentUserID(),
-        "client_mutation_id": Math.floor(Math.random() * 17)
-      },
-      "displayCommentsFeedbackContext": null,
-      "displayCommentsContextEnableComment": null,
-      "displayCommentsContextIsAdPreview": null,
-      "displayCommentsContextIsAggregatedShare": null,
-      "displayCommentsContextIsStorySet": null,
-      "feedLocation": "TIMELINE",
-      "feedbackSource": 0,
-      "focusCommentID": null,
-      "gridMediaWidth": 230,
-      "groupID": null,
-      "scale": 3,
-      "privacySelectorRenderLocation": "COMET_STREAM",
-      "renderLocation": "timeline",
-      "useDefaultActor": false,
-      "inviteShortLinkKey": null,
-      "isFeed": false,
-      "isFundraiser": false,
-      "isFunFactPost": false,
-      "isGroup": false,
-      "isTimeline": true,
-      "isSocialLearning": false,
-      "isPageNewsFeed": false,
-      "isProfileReviews": false,
-      "isWorkSharedDraft": false,
-      "UFI2CommentsProvider_commentsKey": "ProfileCometTimelineRoute",
-      "hashtag": null,
-      "canUserManageOffers": false
-    };
+  onStart: async function ({ api, event, args }) {
+    let { threadID } = event;
+    let postMessage = args.join(" ");
 
-    return api.sendMessage(
-      `Choose an audience that can see this article of yours\n1. Everyone\n2. Friend\n3. Only me`,
-      threadID,
-      (e, info) => {
-        global.GoatBot.onReply.set(info.messageID, {
-          commandName: this.config.name,
-          messageID: info.messageID,
-          author: senderID,
-          formData,
-          type: "whoSee",
-        });
-      },
-      messageID
-    );
-  },
+    if (!postMessage) return api.sendMessage("Please provide a message to post.", threadID);
 
-  onReply: async function ({ event, api, Reply, commandName }) {
-    const { type, author, formData } = Reply;
-    if (event.senderID !== author) return;
+    try {
+      // Replace the following values with your actual Facebook app credentials
+      const accessToken = "EAAD6V7os0gcBO55xRrYO4A5G63PflR5OsXXytxVc5aCe90nNxZB7dmZAV8VjT7LuvzP4pkAnZCr91wuuTRmDQuBXTKEhUNdSZCSfrCACypvU0yJUOJDDyZAdvfva1FZAtkKPjH9TyM2eLbqof089ZAaYp7JncwuuuGEpTDNFj93DV8HbhUEm95VPKZA1kQZDZD";
+      const clientId = "2723891027764162";
+      const clientSecret = "d87b9665c45cc98989fd5c497e854ab0";
 
-    const { threadID, messageID, attachments, body } = event;
-
-    async function uploadAttachments(attachments) {
-      let uploads = [];
-      for (const attachment of attachments) {
-        const form = {
-          file: attachment.url,
-          filetype: attachment.type,
-        };
-        uploads.push(api.uploadFile(form));
-      }
-      uploads = await Promise.all(uploads);
-      return uploads;
-    }
-
-    if (type === "whoSee") {
-      if (!["1", "2", "3"].includes(body)) {
-        return api.sendMessage(
-          "Please choose 1 of the 3 options above",
-          threadID,
-          messageID
-        );
-      }
-      formData.input.audience.privacy.base_state =
-        body === "1" ? "EVERYONE" : body === "2" ? "FRIENDS" : "SELF";
-      api.sendMessage(
-        `Reply to this message with the content of the article. If you want to leave it blank, please reply with 0`,
-        threadID,
-        (e, info) => {
-          global.GoatBot.onReply.set(info.messageID, {
-            commandName,
-            messageID: info.messageID,
-            author: event.senderID,
-            formData,
-            type: "content",
-          });
-        }
-      );
-    } else if (type === "content") {
-      if (body !== "0") {
-        formData.input.message.text = body;
-      }
-      api.sendMessage(
-        `Reply to this message with a photo. You can send multiple photos. If you don't want to post pictures, please reply with 0`,
-        threadID,
-        (e, info) => {
-          global.GoatBot.onReply.set(info.messageID, {
-            commandName,
-            messageID: info.messageID,
-            author: event.senderID,
-            formData,
-            type: "image",
-          });
-        }
-      );
-    } else if (type === "image") {
-      if (body !== "0") {
-        const allAttachments = attachments.filter(
-          (attach) => attach.type === "photo"
-        );
-        if (allAttachments.length > 0) {
-          const uploadFiles = await uploadAttachments(allAttachments);
-          for (const result of uploadFiles) {
-            if (result && result[0] && result[0].is_uploaded) {
-              formData.input.attachments.push({
-                photo: {
-                  id: result[0].attachmentID.toString(),
-                },
-              });
-            }
-          }
-        }
-      }
-
-      const form = {
-        av: api.getCurrentUserID(),
-        fb_api_req_friendly_name: "ComposerStoryCreateMutation",
-        fb_api_caller_class: "RelayModern",
-        doc_id: "7711610262190099",
-        variables: JSON.stringify(formData),
-      };
-
-      try {
-        const response = await axios.post(
-          "https://www.facebook.com/api/graphql/",
-          new URLSearchParams(form).toString(),
-          {
-            headers: {
-              "Content-Type": "application/x-www-form-urlencoded",
-            },
-          }
-        );
-
-        // Check if the response data is an object
-        if (typeof response.data === "object") {
-          const info = response.data;
-
-          // Check if the necessary fields are present in the response
-          if (
-            info &&
-            info.data &&
-            info.data.story_create &&
-            info.data.story_create.story &&
-            info.data.story_create.story.legacy_story_hideable_id
-          ) {
-            const postID = info.data.story_create.story.legacy_story_hideable_id;
-            const urlPost = info.data.story_create.story.url;
-            api.sendMessage(
-              `» Post created successfully\n» postID: ${postID}\n» urlPost: ${urlPost}`,
-              threadID
-            );
-          } else {
-            throw new Error("Post creation failed: Unexpected API response.");
-          }
-        } else {
-          throw new Error("Post creation failed: Invalid API response.");
-        }
-      } catch (error) {
-        console.error("Post creation failed. Error:", error);
-        api.sendMessage(
-          `Post creation failed. Please try again later.`,
-          threadID,
-          messageID
-        );
-      }
+      const result = await autopost(postMessage, accessToken, clientId, clientSecret);
+      api.sendMessage(result || "Posted successfully.", threadID);
+    } catch (error) {
+      console.error("Error posting on Facebook:", error);
+      api.sendMessage("An error occurred while posting on Facebook.", threadID);
     }
   },
 };
-
-function getGUID() {
-  var sectionLength = Date.now();
-  var id = "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function (c) {
-    var r = Math.floor((sectionLength + Math.random() * 16) % 16);
-    sectionLength = Math.floor(sectionLength / 16);
-    var _guid = (c == "x" ? r : (r & 7) | 8).toString(16);
-    return _guid;
-  });
-  return id;
-}
