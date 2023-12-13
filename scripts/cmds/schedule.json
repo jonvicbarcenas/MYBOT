@@ -1,107 +1,51 @@
 [
   {
-    "time": "12:00 AM",
-    "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "I.CINNAMOROLL Animation",
-    "episode": "9",
-    "status": "already updated"
-  },
-  {
-    "time": "1:00 AM",
-    "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Shuumatsu no Walküre II Mini Anime",
-    "episode": "19",
-    "status": "already updated"
-  },
-  {
     "time": "5:00 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Mahou Tsukai no Yome Season 2 Cour 2",
-    "episode": "9",
-    "status": "already updated"
-  },
-  {
-    "time": "5:30 AM",
-    "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Dr. STONE NEW WORLD Cour 2",
-    "episode": "8",
-    "status": "already updated"
-  },
-  {
-    "time": "6:00 AM",
-    "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Boukensha ni Naritai to Miyako ni Deteitta Musume ga S-Rank ni Natteta",
-    "episode": "10",
-    "status": "already updated"
-  },
-  {
-    "time": "6:30 AM",
-    "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "BIKKURI-MEN",
-    "episode": "9",
-    "status": "already updated"
-  },
-  {
-    "time": "6:30 AM",
-    "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Yuzuki-san Chi no Yon Kyoudai.",
-    "episode": "9",
-    "status": "already updated"
-  },
-  {
-    "time": "6:56 AM",
-    "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "JUJUTSU KAISEN Season 2",
-    "episode": "19",
-    "status": "already updated"
-  },
-  {
-    "time": "7:00 AM",
-    "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Seishun Buta Yarou wa Randoseru Girl no Yume wo Minai",
-    "episode": "1",
-    "status": "already updated"
-  },
-  {
-    "time": "7:30 AM",
-    "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Ojou to Banken-kun",
-    "episode": "10",
-    "status": "already updated"
-  },
-  {
-    "time": "7:55 AM",
-    "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Rurouni Kenshin -Meiji Kenkaku Romantan- (2023)",
-    "episode": "22",
+    "animeTitle": "Odekake Kozame",
+    "episode": "20",
     "status": "already updated"
   },
   {
     "time": "8:00 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Rail Romanesque 2",
-    "episode": "9",
+    "animeTitle": "Paradox Live THE ANIMATION",
+    "episode": "10",
     "status": "already updated"
   },
   {
-    "time": "8:43 AM",
+    "time": "8:00 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "UNDER NINJA",
-    "episode": "9",
+    "animeTitle": "Seijo no Maryoku wa Bannou desu Season 2",
+    "episode": "11",
     "status": "already updated"
   },
   {
-    "time": "2:10 PM",
+    "time": "9:10 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Hanakappa",
-    "episode": "529",
+    "animeTitle": "Tokyo Revengers: Tenjiku-hen",
+    "episode": "11",
     "status": "already updated"
   },
   {
-    "time": "5:55 PM",
+    "time": "10:00 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Sore Ike! Anpanman",
-    "episode": "1648",
+    "animeTitle": "Shinobanai! Crypto Ninja Sakuya",
+    "episode": "11",
     "status": "already updated"
+  },
+  {
+    "time": "10:29 AM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Helck",
+    "episode": "23",
+    "status": "upcoming"
+  },
+  {
+    "time": "8:00 PM",
+    "cronExpression": "Invalid DateTime * * *",
+    "animeTitle": "Zhe Tian",
+    "episode": "35",
+    "status": "upcoming"
   }
 ]

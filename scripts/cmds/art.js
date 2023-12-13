@@ -18,22 +18,23 @@ module.exports = {
   onStart: async function ({ api, event, args }) {
     const { threadID, messageID } = event;
 
+    // Check if an image is replied to
+    if (!event.messageReply || !event.messageReply.attachments || !event.messageReply.attachments[0].url) {
+      api.sendMessage("Please reply to an image.", threadID, messageID);
+      return;
+    }
 
-    const imageUrl = event.messageReply && event.messageReply.attachments[0].url ? event.messageReply.attachments[0].url : args.join(" ");
+    const imageUrl = event.messageReply.attachments[0].url;
 
     try {
-
       const response = await axios.get(`https://animeify.shinoyama.repl.co/convert-to-anime?imageUrl=${encodeURIComponent(imageUrl)}`);
       const image = response.data.urls[1];
-
 
       const imgResponse = await axios.get(`https://www.drawever.com${image}`, { responseType: "arraybuffer" });
       const img = Buffer.from(imgResponse.data, 'binary');
 
-
       const pathie = __dirname + `/cache/animefy.jpg`;
       fs.writeFileSync(pathie, img);
-
 
       api.sendMessage({
         body: "Here's your animefied image:",

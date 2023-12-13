@@ -76,6 +76,9 @@
     },
     "bard": {
       "requestLimitFile": "requestLimit.json"
+    },
+    "announcement": {
+      "announcementFile": "announcement.txt"
     }
   },
   "envEvents": {
@@ -100,7 +103,6 @@
     "pogi.js",
     "thesetmoney.js",
     "zfilswear.js",
-    "generate.js",
     "logo.js",
     "anivid.js",
     "moti.js",
@@ -108,7 +110,6 @@
     "draw.js",
     "imganime.js",
     "fight.js",
-    "anon.js",
     "resend.js",
     "spy.js",
     "hangman.js",
@@ -116,13 +117,13 @@
     "badwords.js",
     "busy.js",
     "pastebinAlert.js",
-    "pinterest.js",
-    "thesetname.js",
     "autoaccept.js",
     "zautoanime.js",
-    "join.js",
     "zhentai.js",
     "zpossie.js",
-    "zfemdom.js"
+    "zfemdom.js",
+    "imaginev3.js",
+    "thesetname.js",
+    "anon.js"
   ]
 }

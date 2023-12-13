@@ -5,7 +5,7 @@ module.exports = {
     version: '1.0',
     author: 'jun',
     role: 0,
-    category: 'utility'
+    category: 'fonts'
   },
   onStart: async function ({ api, event, args, usersData, threadsData }) {
     const message = args.map(word => word + '🤸‍♂️').join(' ');
