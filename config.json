@@ -81,7 +81,7 @@
     }
   },
   "autoRestart": {
-    "time": 3000000,
+    "time": 600000,
     "notes": "you can set time is interval with milisecond or cron time, example: 1000, 10000, 60000, 3600000, 86400000, 0 0 * * *,... docs: https://www.npmjs.com/package/node-cron. If you set time is 0 or false or null, the bot will not auto restart"
   },
   "autoUptime": {
@@ -95,7 +95,7 @@
   "autoRestartWhenListenMqttError": true,
   "restartListenMqtt": {
     "enable": true,
-    "timeRestart": 3000000,
+    "timeRestart": 300000,
     "delayAfterStopListening": 2000,
     "logNoti": true,
     "notes": "You shouldn't edit this if you don't know what it is"
