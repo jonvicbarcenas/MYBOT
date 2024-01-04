@@ -46,7 +46,7 @@ module.exports = {
       console.error('Error downloading schedule data:', error);
     }
   },
-  onEvent: async function({
+  onLoad: async function({
     api,
     event,
     message,

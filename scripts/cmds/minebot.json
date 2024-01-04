@@ -1,0 +1,14 @@
+{
+  "players": [
+    "LogBot",
+    "GUARD",
+    "XynoHunter"
+  ],
+  "numOfPlayers": 3,
+  "latestEvent": {
+    "type": "playerJoined",
+    "username": "GUARD",
+    "timestamp": 1703952921929,
+    "messageSent": true
+  }
+}

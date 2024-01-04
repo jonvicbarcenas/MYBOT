@@ -4,7 +4,7 @@ module.exports = {
 	config: {
 		name: 'shortcut',
 		aliases: ['short'],
-		version: '1.11',
+		version: '1.12',
 		author: 'NTKhang',
 		countDown: 5,
 		role: 0,
@@ -68,8 +68,7 @@ module.exports = {
 			listWithTypeContainNot: 'Nhóm bạn không có shortcut nào chứa "%1"',
 			onlyAdminRemoveAll: 'Chỉ quản trị viên mới có thể xóa tất cả các shortcut trong nhóm chat',
 			confirmRemoveAll: 'Bạn có chắc muốn xóa tất cả các shortcut trong nhóm chat này không? (thả cảm xúc vào tin nhắn này để xác nhận)',
-			removedAll: 'Đã xóa tất cả các shortcut trong nhóm chat của bạn',
-      shortcutLimitReached: 'Số lượng phím tắt đã đạt giới hạn tối đa (3 phím tắt)'
+			removedAll: 'Đã xóa tất cả các shortcut trong nhóm chat của bạn'
 		},
 		en: {
 			missingContent: 'Please enter the message content',
@@ -93,145 +92,143 @@ module.exports = {
 			listWithTypeContainNot: 'Your group has no shortcuts contain "%1"',
 			onlyAdminRemoveAll: 'Only administrators can remove all shortcuts in the group chat',
 			confirmRemoveAll: 'Are you sure you want to remove all shortcuts in this group chat? (react to this message to confirm)',
-      shortcutLimitReached: 'The number of shortcuts has reached the maximum limit (5 shortcuts)',
 			removedAll: 'Removed all shortcuts in your group chat'
 		}
 	},
 
-  onStart: async function ({ args, threadsData, message, event, role, usersData, getLang, commandName }) {
-      const { threadID, senderID, body } = event;
-      const shortCutData = await threadsData.get(threadID, 'data.shortcut', []);
-  
-      switch (args[0]) {
-          case 'add': {
-              if (shortCutData.length >= 5) {
-                  return message.reply(getLang('shortcutLimitReached'));
-              }
-  
-              let [key, content] = body.split(' ').slice(2).join(' ').split('=>');
-              const attachments = [
-                  ...event.attachments,
-                  ...(event.messageReply?.attachments || [])
-              ].filter(item => ["photo", 'png', "animated_image", "video", "audio"].includes(item.type));
-              if (!key || !content && attachments.length === 0)
-                  return message.reply(getLang('missingContent'));
-  
-              key = key.trim().toLowerCase();
-              content = (content || "").trim();
-  
-              const alreadyExists = shortCutData.find(item => item.key == key);
-              if (alreadyExists) {
-                  if (alreadyExists.author == senderID)
-                      return message.reply(getLang('shortcutExists', key), async (err, info) => {
-                          if (err)
-                              return;
-                          global.GoatBot.onReaction.set(info.messageID, {
-                              commandName,
-                              messageID: info.messageID,
-                              author: senderID,
-                              type: 'replaceContent',
-                              newShortcut: await createShortcut(key, content, attachments, threadID, senderID)
-                          });
-                      });
-                  else
-                      return message.reply(getLang('shortcutExistsByOther'));
-              }
-  
-              const newShortcut = await createShortcut(key, content, attachments, threadID, senderID);
-              shortCutData.push(newShortcut);
-              await threadsData.set(threadID, shortCutData, 'data.shortcut');
-              let msg = `${getLang('added', key, content)}\n`;
-              if (newShortcut.attachments.length > 0)
-                  msg += getLang('addedAttachment', newShortcut.attachments.length);
-              message.reply(msg);
-              break;
-          }
-          case 'del':
-          case 'delete': {
-              const key = args.slice(1).join(' ')?.trim()?.toLowerCase();
-              if (!key)
-                  return message.reply(getLang('missingKey'));
-              const index = shortCutData.findIndex(x => x.key === key);
-              if (index === -1)
-                  return message.reply(getLang('notFound', key));
-              if (senderID != shortCutData[index].author && role < 1)
-                  return message.reply(getLang('onlyAdmin'));
-              shortCutData.splice(index, 1);
-              await threadsData.set(threadID, shortCutData, 'data.shortcut');
-              message.reply(getLang('deleted', key));
-              break;
-          }
-          case 'list': {
-              if (shortCutData.length === 0)
-                  return message.reply(getLang('empty'));
-              let shortCutList = shortCutData;
-              let stringType = getLang('list');
-  
-              if (args[1]) {
-                  const type = args[1];
-                  const keyword = args.slice(2).join(' ');
-  
-                  if (type == "start") {
-                      shortCutList = shortCutData.filter(x => x.key.startsWith(keyword));
-                      stringType = getLang('listWithTypeStart', keyword);
-                  }
-                  else if (type == "end") {
-                      shortCutList = shortCutData.filter(x => x.key.endsWith(keyword));
-                      stringType = getLang('listWithTypeEnd', keyword);
-                  }
-                  else if (["contain", "has", "have", "include", "in"].includes(type)) {
-                      shortCutList = shortCutData.filter(x => x.key.includes(keyword));
-                      stringType = getLang('listWithTypeContain', keyword);
-                  }
-                  else {
-                      shortCutList = shortCutData.filter(x => x.key.startsWith(type));
-                      stringType = getLang('listWithTypeStart', type);
-                  }
-  
-                  if (shortCutList.length === 0) {
-                      if (type == "start")
-                          return message.reply(getLang('listWithTypeStartNot', keyword));
-                      else if (type == "end")
-                          return message.reply(getLang('listWithTypeEndNot', keyword));
-                      else
-                          return message.reply(getLang('listWithTypeContainNot', keyword));
-                  }
-              }
-  
-              const list = (
-                  await Promise.all(
-                      shortCutList.map(async (x, index) =>
-                          `[${index + 1}] ${x.key} => ${x.content ? 1 : 0} ${getLang("message")}, ${x.attachments.length} ${getLang('attachment')} (${await usersData.getName(x.author)})`
-                      )
-                  )
-              ).join('\n');
-              message.reply(stringType + '\n' + list);
-              break;
-          }
-          case 'remove':
-          case '-rm':
-          case 'reset':
-          case 'rm': {
-              if (threadID != senderID && role < 1)
-                  return message.reply(getLang('onlyAdminRemoveAll'));
-              message.reply(getLang('confirmRemoveAll'), (err, info) => {
-                  if (err)
-                      return;
-                  global.GoatBot.onReaction.set(info.messageID, {
-                      commandName,
-                      messageID: info.messageID,
-                      author: senderID,
-                      type: 'removeAll'
-                  });
-              });
-              break;
-          }
-          default:
-              message.SyntaxError();
-              break;
-      }
-  },
+	onStart: async function ({ args, threadsData, message, event, role, usersData, getLang, commandName }) {
+		const { threadID, senderID, body } = event;
+		const shortCutData = await threadsData.get(threadID, 'data.shortcut', []);
 
+		switch (args[0]) {
+			case 'add': {
+				const split = body.split(' ').slice(2).join(' ').split('=>');
+				const attachments = [
+					...event.attachments,
+					...(event.messageReply?.attachments || [])
+				].filter(item => ["photo", 'png', "animated_image", "video", "audio"].includes(item.type));
+
+				let key = split[0];
+				let content = split.slice(1).join('=>');
+
+				if (!key || !content && attachments.length === 0)
+					return message.reply(getLang('missingContent'));
+
+				key = key.trim().toLowerCase();
+				content = (content || "").trim();
+
+				const alreadyExists = shortCutData.find(item => item.key == key);
+				if (alreadyExists) {
+					if (alreadyExists.author == senderID)
+						return message.reply(getLang('shortcutExists', key), async (err, info) => {
+							if (err)
+								return;
+							global.GoatBot.onReaction.set(info.messageID, {
+								commandName,
+								messageID: info.messageID,
+								author: senderID,
+								type: 'replaceContent',
+								newShortcut: await createShortcut(key, content, attachments, threadID, senderID)
+							});
+						});
+					else
+						return message.reply(getLang('shortcutExistsByOther'));
+				}
+
+				const newShortcut = await createShortcut(key, content, attachments, threadID, senderID);
+				shortCutData.push(newShortcut);
+				await threadsData.set(threadID, shortCutData, 'data.shortcut');
+				let msg = `${getLang('added', key, content)}\n`;
+				if (newShortcut.attachments.length > 0)
+					msg += getLang('addedAttachment', newShortcut.attachments.length);
+				message.reply(msg);
+				break;
+			}
+			case 'del':
+			case 'delete': {
+				const key = args.slice(1).join(' ')?.trim()?.toLowerCase();
+				if (!key)
+					return message.reply(getLang('missingKey'));
+				const index = shortCutData.findIndex(x => x.key === key);
+				if (index === -1)
+					return message.reply(getLang('notFound', key));
+				if (senderID != shortCutData[index].author && role < 1)
+					return message.reply(getLang('onlyAdmin'));
+				shortCutData.splice(index, 1);
+				await threadsData.set(threadID, shortCutData, 'data.shortcut');
+				message.reply(getLang('deleted', key));
+				break;
+			}
+			case 'list': {
+				if (shortCutData.length === 0)
+					return message.reply(getLang('empty'));
+				let shortCutList = shortCutData;
+				let stringType = getLang('list');
+
+				if (args[1]) {
+					const type = args[1];
+					const keyword = args.slice(2).join(' ');
+
+					if (type == "start") {
+						shortCutList = shortCutData.filter(x => x.key.startsWith(keyword));
+						stringType = getLang('listWithTypeStart', keyword);
+					}
+					else if (type == "end") {
+						shortCutList = shortCutData.filter(x => x.key.endsWith(keyword));
+						stringType = getLang('listWithTypeEnd', keyword);
+					}
+					else if (["contain", "has", "have", "include", "in"].includes(type)) {
+						shortCutList = shortCutData.filter(x => x.key.includes(keyword));
+						stringType = getLang('listWithTypeContain', keyword);
+					}
+					else {
+						shortCutList = shortCutData.filter(x => x.key.startsWith(type));
+						stringType = getLang('listWithTypeStart', type);
+					}
+
+					if (shortCutList.length === 0) {
+						if (type == "start")
+							return message.reply(getLang('listWithTypeStartNot', keyword));
+						else if (type == "end")
+							return message.reply(getLang('listWithTypeEndNot', keyword));
+						else
+							return message.reply(getLang('listWithTypeContainNot', keyword));
+					}
+				}
+
+				const list = (
+					await Promise.all(
+						shortCutList.map(async (x, index) =>
+							`[${index + 1}] ${x.key} => ${x.content ? 1 : 0} ${getLang("message")}, ${x.attachments.length} ${getLang('attachment')} (${await usersData.getName(x.author)})`
+						)
+					)
+				).join('\n');
+				message.reply(stringType + '\n' + list);
+				break;
+			}
+			case 'remove':
+			case '-rm':
+			case 'reset':
+			case 'rm': {
+				if (threadID != senderID && role < 1)
+					return message.reply(getLang('onlyAdminRemoveAll'));
+				message.reply(getLang('confirmRemoveAll'), (err, info) => {
+					if (err)
+						return;
+					global.GoatBot.onReaction.set(info.messageID, {
+						commandName,
+						messageID: info.messageID,
+						author: senderID,
+						type: 'removeAll'
+					});
+				});
+				break;
+			}
+			default:
+				message.SyntaxError();
+				break;
+		}
+	},
 
 	onReaction: async function ({ event, message, threadsData, getLang, Reaction }) {
 		const { author } = Reaction;

@@ -118,10 +118,15 @@ module.exports = {
     
     const ikoQuery = await iko(args, event, message);
 
-    const prefix = Prefixes.find((p) => event.body && event.body.toLowerCase().startsWith(p));
+    const prefix = Prefixes.find((p) => {
+      const lowerCaseBody = event.body.toLowerCase();
+      return lowerCaseBody.startsWith(p + ' ') || lowerCaseBody === p;
+    });
+
     if (!prefix) {
       return;
     }
+
 
     const response = event.body.slice(prefix.length).trim();
     // Call the bannedReturn function to check if the user is banned

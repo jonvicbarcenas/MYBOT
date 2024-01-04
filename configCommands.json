@@ -110,7 +110,6 @@
     "draw.js",
     "imganime.js",
     "fight.js",
-    "resend.js",
     "spy.js",
     "hangman.js",
     "fbshare.js",
@@ -119,11 +118,13 @@
     "pastebinAlert.js",
     "autoaccept.js",
     "zautoanime.js",
-    "zhentai.js",
     "zpossie.js",
-    "zfemdom.js",
     "imaginev3.js",
     "thesetname.js",
-    "anon.js"
+    "nsfw.js",
+    "join.js",
+    "jvclass.js",
+    "anon.js",
+    "mineflayer.js"
   ]
 }

@@ -1,51 +1,51 @@
 [
   {
-    "time": "5:00 AM",
+    "time": "7:00 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Odekake Kozame",
-    "episode": "20",
+    "animeTitle": "Jaku-Chara Tomozaki-kun 2nd STAGE",
+    "episode": "1",
     "status": "already updated"
   },
   {
-    "time": "8:00 AM",
+    "time": "7:00 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Paradox Live THE ANIMATION",
+    "animeTitle": "Tian Guan Ci Fu 2nd Season",
     "episode": "10",
     "status": "already updated"
   },
   {
-    "time": "8:00 AM",
+    "time": "8:30 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Seijo no Maryoku wa Bannou desu Season 2",
-    "episode": "11",
+    "animeTitle": "Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e 3rd Season",
+    "episode": "1",
     "status": "already updated"
   },
   {
-    "time": "9:10 AM",
+    "time": "9:00 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Tokyo Revengers: Tenjiku-hen",
-    "episode": "11",
+    "animeTitle": "Ishura",
+    "episode": "1",
     "status": "already updated"
   },
   {
-    "time": "10:00 AM",
+    "time": "9:30 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Shinobanai! Crypto Ninja Sakuya",
-    "episode": "11",
+    "animeTitle": "Mahou Shoujo ni Akogarete",
+    "episode": "1",
     "status": "already updated"
   },
   {
-    "time": "10:29 AM",
+    "time": "11:45 AM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Helck",
-    "episode": "23",
-    "status": "upcoming"
+    "animeTitle": "Colorful na Everyday",
+    "episode": "16",
+    "status": "already updated"
   },
   {
-    "time": "8:00 PM",
+    "time": "5:10 PM",
     "cronExpression": "Invalid DateTime * * *",
-    "animeTitle": "Zhe Tian",
-    "episode": "35",
-    "status": "upcoming"
+    "animeTitle": "Hanakappa",
+    "episode": "531",
+    "status": "already updated"
   }
 ]
