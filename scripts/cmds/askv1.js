@@ -43,7 +43,7 @@ module.exports = {
 
       await message.reply("Answering your question. Please wait a moment...");
 
-      const response = await axios.get(`https://oldgpt.corpselaugh.repl.co/?ask=${encodeURIComponent(prompt)}`);
+      const response = await axios.get(`https://chatgayfeyti.onrender.com/?gpt=${encodeURIComponent(prompt)}`);
 
       if (response.status !== 200 || !response.data) {
         throw new Error('Invalid or missing response from API');

@@ -24,8 +24,8 @@
     "intervalGetNewCookie": 4320,
     "notes": "time the system automatically retrieves new cookies from email/password, unit is minute, if you set null, the system will not automatically retrieve new cookies, it saves you from having to manually change your cookie every time it expires. recommended set to 1440 (1day) or 4320 (3day).TO BE ABLE TO USE THIS FEATURE YOU NEED TO ENTER THE ACCOUNT PASSWORD ABOVE",
     "i_user": "",
-    "email": "dainsleif62804@gmail.com",
-    "password": "Huayinabellat"
+    "email": "dainsleifthebot@gmail.com",
+    "password": "swordgod28"
   },
   "language": "en",
   "notesLanguage": "change to your language with ISO 639-1 code, available languages: vi (Vietnamese), en (English)",
@@ -81,7 +81,7 @@
     }
   },
   "autoRestart": {
-    "time": 600000,
+    "time": 3000000,
     "notes": "you can set time is interval with milisecond or cron time, example: 1000, 10000, 60000, 3600000, 86400000, 0 0 * * *,... docs: https://www.npmjs.com/package/node-cron. If you set time is 0 or false or null, the bot will not auto restart"
   },
   "autoUptime": {
@@ -95,7 +95,7 @@
   "autoRestartWhenListenMqttError": true,
   "restartListenMqtt": {
     "enable": true,
-    "timeRestart": 60000,
+    "timeRestart": 3000000,
     "delayAfterStopListening": 2000,
     "logNoti": true,
     "notes": "You shouldn't edit this if you don't know what it is"

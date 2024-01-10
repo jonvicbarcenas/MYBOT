@@ -210,7 +210,7 @@ module.exports = {
           const response = event.body.slice(prefix.length).trim();
 
           const res = await axios.get(
-            `https://sypz34-3000.csb.app/?ask=${response}${ikoQuery}&apikey=Dainsleif`
+            `https://gptextra.onrender.com/?gpt=${response}${ikoQuery}`
           );
           const responseData = res.data;
 
@@ -353,7 +353,7 @@ module.exports = {
       if (error.message === "Fallback to the second API") {
         try {
           const res = await axios.get(
-            `https://sypz34-3000.csb.app/?ask=${response}${ikoQuery}&apikey=Dainsleif`
+            `https://gptextra.onrender.com/?gpt=${response}${ikoQuery}`
           ); //https://gptextra.corpselaugh.repl.co/?gpt=
           const responseData = res.data;
 
