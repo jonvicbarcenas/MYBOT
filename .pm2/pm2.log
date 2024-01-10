@@ -1,0 +1,51 @@
+2024-01-09T13:16:38: PM2 log: ===============================================================================
+2024-01-09T13:16:38: PM2 log: --- New PM2 Daemon started ----------------------------------------------------
+2024-01-09T13:16:38: PM2 log: Time                 : Tue Jan 09 2024 13:16:38 GMT+0000 (Coordinated Universal Time)
+2024-01-09T13:16:38: PM2 log: PM2 version          : 5.3.0
+2024-01-09T13:16:38: PM2 log: Node.js version      : 20.10.0
+2024-01-09T13:16:38: PM2 log: Current arch         : x64
+2024-01-09T13:16:38: PM2 log: PM2 home             : /home/ec2-user/.pm2
+2024-01-09T13:16:38: PM2 log: PM2 PID file         : /home/ec2-user/.pm2/pm2.pid
+2024-01-09T13:16:38: PM2 log: RPC socket file      : /home/ec2-user/.pm2/rpc.sock
+2024-01-09T13:16:38: PM2 log: BUS socket file      : /home/ec2-user/.pm2/pub.sock
+2024-01-09T13:16:38: PM2 log: Application log path : /home/ec2-user/.pm2/logs
+2024-01-09T13:16:38: PM2 log: Worker Interval      : 30000
+2024-01-09T13:16:38: PM2 log: Process dump file    : /home/ec2-user/.pm2/dump.pm2
+2024-01-09T13:16:38: PM2 log: Concurrent actions   : 2
+2024-01-09T13:16:38: PM2 log: SIGTERM timeout      : 1600
+2024-01-09T13:16:38: PM2 log: ===============================================================================
+2024-01-09T13:16:38: PM2 log: App [dainsleif:0] starting in -fork mode-
+2024-01-09T13:16:38: PM2 log: App [dainsleif:0] online
+2024-01-09T13:25:41: PM2 log: App [dainsleif:0] exited with code [0] via signal [SIGKILL]
+2024-01-09T13:25:41: PM2 log: App [dainsleif:0] starting in -fork mode-
+2024-01-09T13:25:41: PM2 log: App [dainsleif:0] online
+2024-01-09T13:25:43: PM2 log: App [dainsleif:0] exited with code [0] via signal [SIGKILL]
+2024-01-09T13:25:43: PM2 log: App [dainsleif:0] starting in -fork mode-
+2024-01-09T13:25:43: PM2 log: App [dainsleif:0] online
+2024-01-09T13:25:58: PM2 log: App [dainsleif:0] exited with code [0] via signal [SIGKILL]
+2024-01-09T13:25:58: PM2 log: App [dainsleif:0] starting in -fork mode-
+2024-01-09T13:25:58: PM2 log: App [dainsleif:0] online
+2024-01-09T13:26:02: PM2 log: App [dainsleif:0] exited with code [0] via signal [SIGKILL]
+2024-01-09T13:26:02: PM2 log: App [dainsleif:0] starting in -fork mode-
+2024-01-09T13:26:02: PM2 log: App [dainsleif:0] online
+2024-01-09T13:26:48: PM2 log: App [dainsleif:0] exited with code [0] via signal [SIGTERM]
+2024-01-09T13:26:48: PM2 log: App [dainsleif:0] starting in -fork mode-
+2024-01-09T13:26:48: PM2 log: App [dainsleif:0] online
+2024-01-09T13:31:21: PM2 log: App [dainsleif:0] exited with code [0] via signal [SIGKILL]
+2024-01-09T13:31:21: PM2 log: App [dainsleif:0] starting in -fork mode-
+2024-01-09T13:31:21: PM2 log: App [dainsleif:0] online
+2024-01-09T13:31:53: PM2 log: App [dainsleif:0] exited with code [0] via signal [SIGTERM]
+2024-01-09T13:31:53: PM2 log: App [dainsleif:0] starting in -fork mode-
+2024-01-09T13:31:53: PM2 log: App [dainsleif:0] online
+2024-01-09T13:32:50: PM2 log: App [dainsleif:0] exited with code [0] via signal [SIGKILL]
+2024-01-09T13:32:50: PM2 log: App [dainsleif:0] starting in -fork mode-
+2024-01-09T13:32:50: PM2 log: App [dainsleif:0] online
+2024-01-09T13:34:11: PM2 log: App [dainsleif:0] exited with code [0] via signal [SIGKILL]
+2024-01-09T13:34:11: PM2 log: App [dainsleif:0] starting in -fork mode-
+2024-01-09T13:34:11: PM2 log: App [dainsleif:0] online
+2024-01-09T13:38:50: PM2 log: App [dainsleif:0] exited with code [0] via signal [SIGKILL]
+2024-01-09T13:38:50: PM2 log: App [dainsleif:0] starting in -fork mode-
+2024-01-09T13:38:50: PM2 log: App [dainsleif:0] online
+2024-01-09T13:41:42: PM2 log: App [dainsleif:0] exited with code [0] via signal [SIGTERM]
+2024-01-09T13:41:42: PM2 log: App [dainsleif:0] starting in -fork mode-
+2024-01-09T13:41:42: PM2 log: App [dainsleif:0] online
