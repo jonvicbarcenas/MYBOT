@@ -14,9 +14,9 @@ module.exports = {
     message.reply("Shoti video is coming, please wait...");
 
     try {
-      const apiKey = "$shoti-1hefkn6gmebuvbmp2j";
+      const apiKey = "$shoti-1hecj3cvm6r1mf91948"; // Updated API key
       let response = await axios.post(
-        "https://api--v1-shoti.vercel.app/api/v1/get",
+        "https://your-shoti-api.vercel.app/api/v1/get", // Updated API endpoint
         { apikey: apiKey }
       );
 

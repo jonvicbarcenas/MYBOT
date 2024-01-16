@@ -11,7 +11,7 @@ let messageCounter = 0; //do not change this this is a counter variable only!!!
 
 
 //this. change here, odds of how many messages should bot reacts to
-let numOfMessages = 10; // 1 for every messages he reacts to everything. then if 2 the 2nd message will be reacted to and so on.
+let numOfMessages = 8; // 1 for every messages he reacts to everything. then if 2 the 2nd message will be reacted to and so on.
 
 //NOTE!!: based on all users from bot userdata, not per userID...
 
@@ -48,7 +48,7 @@ module.exports = {
       }
 
       if (messageCounter % numOfMessages === 0) {
-        const response = await axios.get(`https://nah-i-would-win.archashura.repl.co/?iyot=${encodeURIComponent(text)}`);
+        const response = await axios.get(`https://celestial-3ode.onrender.com/sentiment?iyot=${encodeURIComponent(text)}`);
 
         if (response.status !== 200 || !response.data || !response.data.content) {
           throw new Error('Invalid or missing response from API');

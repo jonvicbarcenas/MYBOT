@@ -46,7 +46,7 @@ module.exports = {
 
       api.sendMessage(`Finding lyrics for "${song}". Please wait...`, event.threadID);
 
-      const res = await axios.get(`https://api.heckerman06.repl.co/api/other/lyrics2?song=${encodeURIComponent(song)}`);
+      const res = await axios.get(`https://lyrist.vercel.app/api/${encodeURIComponent(song)}`);
       const lyrics = res.data.lyrics || "Not found!";
       const title = res.data.title || "Not found!";
       const artist = res.data.artist || "Not found!";

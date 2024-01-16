@@ -104,10 +104,15 @@ module.exports = {
       }
 
       // Check if the target user's data is in the JSON.
-      const targetUserCoinData = coinData.find((data) => data.senderID === targetUserID);
+      let targetUserCoinData = coinData.find((data) => data.senderID === targetUserID);
       if (!targetUserCoinData) {
-        message.reply(`User ${targetUserID} is not found in the coin data. Cannot gift coins.`);
-        return;
+        // If not found, add the target user to the coin data.
+        targetUserCoinData = {
+          senderID: targetUserID,
+          date: moment.tz('Asia/Ho_Chi_Minh').format('DD/MM/YYYY'),
+          coins: 0
+        };
+        coinData.push(targetUserCoinData);
       }
 
       // Deduct the gifted coins from the sender's balance.

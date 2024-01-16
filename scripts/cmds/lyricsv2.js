@@ -5,7 +5,7 @@ module.exports = {
     name: "lyricsv2",
     aliases: ["lyricv2", "ly2"],
     version: "1.0",
-    author: "MILAN",
+    author: "<->",
     countDown: 5,
     role: 0,
     shortDescription: {
@@ -24,15 +24,11 @@ module.exports = {
 
   onStart: async function ({ api, event, args, message }) {
     try {
-      const lyrics = args.join(' ');
-      if (!lyrics) {
+      const songName = args.join(' ');
+      if (!songName) {
         return api.sendMessage("Please provide a song name!", event.threadID, event.messageID);
       }
-      const { data } = await axios.get("https://milanbhandari.imageapi.repl.co/lyrics", {
-        params: {
-          query: lyrics
-        }
-      });
+      const { data } = await axios.get(`https://lyrist.vercel.app/api/${encodeURIComponent(songName)}`);
       const messageData = {
         body: `❏Title: ${data.title || ''}\n\n❏Artist: ${data.artist || ''}\n\n❏Lyrics:\n\n${data.lyrics || ''}`,
         attachment: await global.utils.getStreamFromURL(data.image)

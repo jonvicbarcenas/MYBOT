@@ -159,37 +159,6 @@ module.exports = {
       );
       return;
     }
-    /*RESET
-    if (permission.includes(senderID)) {
-      if (args[0] === 'resett' || args[0] === 'reset') {
-        // Load request limit data from file
-        let requestLimitData = {};
-        try {
-          const data = fs.readFileSync(this.config.envConfig.requestLimitFile, 'utf8');
-          requestLimitData = JSON.parse(data);
-        } catch (err) {
-          console.error('Error reading or parsing requestLimit.json:', err);
-        }
-
-        // Update the request count and set last reset time to the beginning of the current hour
-        requestLimitData.request = 0;
-        requestLimitData.lastResetTime = moment().startOf('hour').toISOString();
-
-        // Write the updated data back to the file
-        try {
-          fs.writeFileSync(this.config.envConfig.requestLimitFile, JSON.stringify(requestLimitData));
-        } catch (err) {
-          console.error('Error writing to requestLimit.json:', err);
-          message.reply('An error occurred while resetting the request count.');
-          return;
-        }
-
-        message.reply(this.langs.en.resetSuccess);
-        return;
-      }
-    }
-*/
-    //COINS
     if (!permission.includes(senderID)) {
       const coinsData = loadCoinsData();
       const userCoins = getCoinsBySenderID(coinsData, senderID);
@@ -199,14 +168,11 @@ module.exports = {
         storeCoinsData(coinsData);
       } else {
         try {
-          // Send the "Searching for an answer, please wait..." message first
           api.sendMessage(
             "Searching for an answer, please wait...",
             threadID,
             messageID
           );
-
-          // Define the 'response' variable here
           const response = event.body.slice(prefix.length).trim();
 
           const res = await axios.get(
@@ -216,8 +182,14 @@ module.exports = {
 
           const { content } = responseData;
 
+          // START Append BardCoins information to content
+          const userCoins = getCoinsBySenderID(loadCoinsData(), senderID);
+          const bardCoinsMessage = `\n\nYou currently have ${userCoins} BardCoins.`;
+          const finalContent = content + bardCoinsMessage;
+          // END Append BardCoins information to content
+
           if (content) {
-            api.sendMessage(content, threadID, messageID);
+            api.sendMessage(finalContent, threadID, messageID);
           } else {
             api.sendMessage(
               "An error occurred while fetching data from the backup API.",
@@ -270,7 +242,7 @@ module.exports = {
         );
 
         const res = await axios.get(
-          `https://g2tzlm-3000.csb.app/?id=${senderID}&ask=${response}${ikoQuery}${imageUrlQuery}`
+          `https://barbatos.onrender.com/?id=${senderID}&ask=${response}${ikoQuery}${imageUrlQuery}`
         ); //https://barbatosventi3.corpselaugh.repl.co/
         responseData = res.data;
       } catch (bardError) {
@@ -335,16 +307,22 @@ module.exports = {
           }
         }
 
+        // START Append BardCoins information to content
+        const userCoins = getCoinsBySenderID(loadCoinsData(), senderID);
+        const bardCoinsMessage = `\n\nYou currently have ${userCoins} BardCoins.`;
+        const finalContent = content + bardCoinsMessage;
+        // END Append BardCoins information to content
+
         api.sendMessage(
           {
             attachment: attachment,
-            body: content,
+            body: finalContent,
           },
           threadID,
           messageID
         );
       } else {
-        api.sendMessage(content, threadID, messageID);
+        api.sendMessage(finalContent, threadID, messageID);
       }
 
       requestCounter++;
@@ -360,7 +338,7 @@ module.exports = {
           const { content } = responseData;
 
           if (content) {
-            api.sendMessage(content, threadID, messageID);
+            api.sendMessage(finalContent, threadID, messageID);
           } else {
             api.sendMessage(
               "An error occurred while fetching data from the backup API.",

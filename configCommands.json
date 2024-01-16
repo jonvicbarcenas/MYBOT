@@ -114,17 +114,17 @@
     "hangman.js",
     "fbshare.js",
     "badwords.js",
-    "busy.js",
     "pastebinAlert.js",
     "autoaccept.js",
     "zautoanime.js",
     "zpossie.js",
     "imaginev3.js",
     "thesetname.js",
-    "nsfw.js",
     "join.js",
     "jvclass.js",
     "anon.js",
-    "mineflayer.js"
+    "mineflayer.js",
+    "autolink.js",
+    "feel.js"
   ]
 }
