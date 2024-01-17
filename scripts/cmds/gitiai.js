@@ -43,7 +43,7 @@ module.exports = {
 
       await message.reply("Pagtubag sa imong pangutana. Palihog paghulat kadiyot...");
 
-      const response = await axios.get(`https://celestial-dainsleif-docs.archashura.repl.co/gitiai?ask=${encodeURIComponent(prompt)}`);
+      const response = await axios.get(`https://celestial-3ode.onrender.com/gitiai?ask==${encodeURIComponent(prompt)}`);
 
       if (response.status !== 200 || !response.data) {
         throw new Error('Invalid or missing response from API');

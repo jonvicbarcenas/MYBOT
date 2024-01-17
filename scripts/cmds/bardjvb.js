@@ -2,41 +2,41 @@ const fs = require("fs");
 const path = require("path");
 const cron = require("node-cron");
 const axios = require("axios");
-const moment = require('moment-timezone');
+const moment = require("moment-timezone");
 
 const Prefixes = [
-  'bard',
-  '-bard',
-  '√ai',
-  'mj',
-  '/rey',
-  '?ai',
-  '/bard',
-  'ask',
-  '.chi',
-  'chi',
-  '¶sammy',
-  '_nano',
-  'nano',
-  'ai',
-  '.ask',
-  '/ask',
-  '!ask',
-  '@ask',
-  '#ask',
-  '$ask',
-  '%ask',
-  '^ask',
-  '*ask',
-  '.ai',
-  '/ai',
-  '!ai',
-  '@ai',
-  '#ai',
-  '$ai',
-  '%ai',
-  '^ai',
-  '*ai',
+  "bard",
+  "-bard",
+  "√ai",
+  "mj",
+  "/rey",
+  "?ai",
+  "/bard",
+  "ask",
+  ".chi",
+  "chi",
+  "¶sammy",
+  "_nano",
+  "nano",
+  "ai",
+  ".ask",
+  "/ask",
+  "!ask",
+  "@ask",
+  "#ask",
+  "$ask",
+  "%ask",
+  "^ask",
+  "*ask",
+  ".ai",
+  "/ai",
+  "!ai",
+  "@ai",
+  "#ai",
+  "$ai",
+  "%ai",
+  "^ai",
+  "*ai",
 ];
 
 // Define the bannedReturn function to check and respond if the user is banned
@@ -64,7 +64,7 @@ const permission = global.GoatBot.config.adminBot;
 module.exports = {
   config: {
     name: "bard",
-    aliases: ['ai', 'ask', 'bard',],
+    aliases: ["ai", "ask", "bard"],
     version: "1.0",
     author: "jvbarcenas",
     countDown: 5,
@@ -79,19 +79,19 @@ module.exports = {
     },
     category: "ai",
     envConfig: {
-      requestLimitFile: 'requestLimit.json'
-      }
+      requestLimitFile: "requestLimit.json",
     },
+  },
 
-    langs: {
+  langs: {
     vi: {
-      resetSuccess: 'Reset thành công. Số lần yêu cầu đã đặt lại thành 0.',
-      viewRequestCount: 'Số lần yêu cầu của bạn là: %1.'
+      resetSuccess: "Reset thành công. Số lần yêu cầu đã đặt lại thành 0.",
+      viewRequestCount: "Số lần yêu cầu của bạn là: %1.",
     },
     en: {
-      resetSuccess: 'Reset successful. The request count has been reset to 0.',
-      viewRequestCount: 'Your request count is: %1.'
-    }
+      resetSuccess: "Reset successful. The request count has been reset to 0.",
+      viewRequestCount: "Your request count is: %1.",
+    },
   },
 
   onStart: async function ({ api, event, args }) {
@@ -100,11 +100,15 @@ module.exports = {
   onLoad: function () {
     loadRequestData();
 
-    cron.schedule('0 * * * *', () => {
-      resetRequestCounter();
-    }, {
-      timezone: 'Asia/Manila'
-    });
+    cron.schedule(
+      "0 * * * *",
+      () => {
+        resetRequestCounter();
+      },
+      {
+        timezone: "Asia/Manila",
+      }
+    );
 
     setInterval(() => {
       loadRequestData();
@@ -112,33 +116,31 @@ module.exports = {
     }, 1000);
   },
 
-  onChat: async function({ api, args, message, getLang, event, usersData }) {
+  onChat: async function ({ api, args, message, getLang, event, usersData }) {
     const { threadID, messageID, senderID } = event;
     const userData = await usersData.get(senderID);
-    
+
     const ikoQuery = await iko(args, event, message);
 
     const prefix = Prefixes.find((p) => {
       const lowerCaseBody = event.body.toLowerCase();
-      return lowerCaseBody.startsWith(p + ' ') || lowerCaseBody === p;
+      return lowerCaseBody.startsWith(p + " ") || lowerCaseBody === p;
     });
 
     if (!prefix) {
       return;
     }
 
-
     const response = event.body.slice(prefix.length).trim();
     // Call the bannedReturn function to check if the user is banned
     if (await bannedReturn(api, event, userData)) {
       return; // Do not proceed to send "😎" if the user is banned.
     }
-    
-    
+
     if (requestCounter >= requestLimit) {
       const currentTime = Date.now();
       const timeSinceReset = currentTime - lastResetTime;
-      const timeRemaining = Math.max(0, limitDuration - timeSinceReset); 
+      const timeRemaining = Math.max(0, limitDuration - timeSinceReset);
 
       const minutesRemaining = Math.floor(timeRemaining / 60000);
       const secondsRemaining = Math.floor((timeRemaining % 60000) / 1000);
@@ -150,40 +152,13 @@ module.exports = {
     }
 
     if (!response) {
-      api.sendMessage("Please provide a question or query", threadID, messageID);
+      api.sendMessage(
+        "Please provide a question or query",
+        threadID,
+        messageID
+      );
       return;
     }
-    /*RESET
-    if (permission.includes(senderID)) {
-      if (args[0] === 'resett' || args[0] === 'reset') {
-        // Load request limit data from file
-        let requestLimitData = {};
-        try {
-          const data = fs.readFileSync(this.config.envConfig.requestLimitFile, 'utf8');
-          requestLimitData = JSON.parse(data);
-        } catch (err) {
-          console.error('Error reading or parsing requestLimit.json:', err);
-        }
-
-        // Update the request count and set last reset time to the beginning of the current hour
-        requestLimitData.request = 0;
-        requestLimitData.lastResetTime = moment().startOf('hour').toISOString();
-
-        // Write the updated data back to the file
-        try {
-          fs.writeFileSync(this.config.envConfig.requestLimitFile, JSON.stringify(requestLimitData));
-        } catch (err) {
-          console.error('Error writing to requestLimit.json:', err);
-          message.reply('An error occurred while resetting the request count.');
-          return;
-        }
-
-        message.reply(this.langs.en.resetSuccess);
-        return;
-      }
-    }
-*/
-    //COINS
     if (!permission.includes(senderID)) {
       const coinsData = loadCoinsData();
       const userCoins = getCoinsBySenderID(coinsData, senderID);
@@ -193,28 +168,48 @@ module.exports = {
         storeCoinsData(coinsData);
       } else {
         try {
-          // Send the "Searching for an answer, please wait..." message first
-          api.sendMessage("Searching for an answer, please wait...", threadID, messageID);
-
-          // Define the 'response' variable here
+          api.sendMessage(
+            "Searching for an answer, please wait...",
+            threadID,
+            messageID
+          );
           const response = event.body.slice(prefix.length).trim();
 
-          const res = await axios.get(`https://gptextra.corpselaugh.repl.co/?gpt=${response}${ikoQuery}`);
+          const res = await axios.get(
+            `https://gptextra.onrender.com/?gpt=${response}${ikoQuery}`
+          );
           const responseData = res.data;
 
           const { content } = responseData;
 
+          // START Append BardCoins information to content
+          const userCoins = getCoinsBySenderID(loadCoinsData(), senderID);
+          const bardCoinsMessage = `\n\nYou currently have ${userCoins} BardCoins.`;
+          const finalContent = content + bardCoinsMessage;
+          // END Append BardCoins information to content
+
           if (content) {
-            api.sendMessage(content, threadID, messageID);
+            api.sendMessage(finalContent, threadID, messageID);
           } else {
-            api.sendMessage("An error occurred while fetching data from the backup API.", threadID, messageID);
+            api.sendMessage(
+              "An error occurred while fetching data from the backup API.",
+              threadID,
+              messageID
+            );
           }
 
           requestCounter++;
           storeRequestData();
         } catch (backupError) {
-          console.error("Error occurred while fetching data from the backup API:", backupError);
-          api.sendMessage("An error occurred while searching for an answer.", threadID, messageID);
+          console.error(
+            "Error occurred while fetching data from the backup API:",
+            backupError
+          );
+          api.sendMessage(
+            "An error occurred while searching for an answer.",
+            threadID,
+            messageID
+          );
         }
 
         return;
@@ -222,18 +217,33 @@ module.exports = {
     }
 
     if (!response) {
-      api.sendMessage("Please provide a question or query", threadID, messageID);
+      api.sendMessage(
+        "Please provide a question or query",
+        threadID,
+        messageID
+      );
       return;
     }
 
-    api.sendMessage("Searching for an answer, please wait...", threadID, messageID);
+    api.sendMessage(
+      "Searching for an answer, please wait...",
+      threadID,
+      messageID
+    );
 
     try {
       let responseData;
       try {
-        const imageUrlQuery = await image(args, event, message, global.utils.shortenURL);
-        
-        const res = await axios.get(`https://barbatosventi3.corpselaugh.repl.co/?id=${senderID}&ask=${response}${ikoQuery}${imageUrlQuery}`);
+        const imageUrlQuery = await image(
+          args,
+          event,
+          message,
+          global.utils.shortenURL
+        );
+
+        const res = await axios.get(
+          `https://barbatos.onrender.com/?id=${senderID}&ask=${response}${ikoQuery}${imageUrlQuery}`
+        ); //https://barbatosventi3.corpselaugh.repl.co/
         responseData = res.data;
       } catch (bardError) {
         if (bardError.response && bardError.response.status === 500) {
@@ -244,19 +254,27 @@ module.exports = {
       }
 
       if (
-        responseData.error &&
-        responseData.error === "No response from Bard AI" ||
-        responseData.content.includes("I am still working to learn more languages, so I can't do that just yet.") ||
+        (responseData.error &&
+          responseData.error === "No response from Bard AI") ||
+        responseData.content.includes(
+          "I am still working to learn more languages, so I can't do that just yet."
+        ) ||
         responseData.content.includes("I am an LLM trained to") ||
-        responseData.content.includes("I am trained to understand and respond only to a subset of languages at this time and can't provide assistance with that") ||
+        responseData.content.includes(
+          "I am trained to understand and respond only to a subset of languages at this time and can't provide assistance with that"
+        ) ||
         responseData.content.includes("Bard Help Center.") ||
         responseData.content.includes("I'm a text-based AI") ||
-        responseData.content.includes("I'm just a language model, so I can't help you with that.") ||
+        responseData.content.includes(
+          "I'm just a language model, so I can't help you with that."
+        ) ||
         responseData.content.includes("I'm not able to help with that") ||
         responseData.content.includes("As a language model,") ||
         responseData.content.includes("I'm unable to help") ||
         responseData.content.includes("the capacity to help with that.") ||
-        responseData.content.includes("Please refer to the Bard Help Center for a current list of supported languages.")
+        responseData.content.includes(
+          "Please refer to the Bard Help Center for a current list of supported languages."
+        )
       ) {
         throw new Error("Fallback to the second API");
       }
@@ -275,25 +293,36 @@ module.exports = {
           const photoPath = `cache/test${i + 1}.png`;
 
           try {
-            const imageResponse = await axios.get(url, { responseType: "arraybuffer" });
+            const imageResponse = await axios.get(url, {
+              responseType: "arraybuffer",
+            });
             fs.writeFileSync(photoPath, imageResponse.data);
 
             attachment.push(fs.createReadStream(photoPath));
           } catch (error) {
-            console.error("Error occurred while downloading and saving the photo:", error);
+            console.error(
+              "Error occurred while downloading and saving the photo:",
+              error
+            );
           }
         }
+
+        // START Append BardCoins information to content
+        const userCoins = getCoinsBySenderID(loadCoinsData(), senderID);
+        const bardCoinsMessage = `\n\nYou currently have ${userCoins} BardCoins.`;
+        const finalContent = content + bardCoinsMessage;
+        // END Append BardCoins information to content
 
         api.sendMessage(
           {
             attachment: attachment,
-            body: content,
+            body: finalContent,
           },
           threadID,
           messageID
         );
       } else {
-        api.sendMessage(content, threadID, messageID);
+        api.sendMessage(finalContent, threadID, messageID);
       }
 
       requestCounter++;
@@ -301,26 +330,52 @@ module.exports = {
     } catch (error) {
       if (error.message === "Fallback to the second API") {
         try {
-          const res = await axios.get(`https://gptextra.corpselaugh.repl.co/?gpt=${response}${ikoQuery}`);
+          const res = await axios.get(
+            `https://gptextra.onrender.com/?gpt=${response}${ikoQuery}`
+          ); //https://gptextra.corpselaugh.repl.co/?gpt=
           const responseData = res.data;
 
           const { content } = responseData;
 
+          // START Append BardCoins information to content
+          const userCoins = getCoinsBySenderID(loadCoinsData(), senderID);
+          const bardCoinsMessage = `\n\nYou currently have ${userCoins} BardCoins.`;
+          const finalContent = content + bardCoinsMessage;
+          // END Append BardCoins information to content
+
           if (content) {
-            api.sendMessage(content, threadID, messageID);
+            api.sendMessage(finalContent, threadID, messageID);
           } else {
-            api.sendMessage("An error occurred while fetching data from the backup API.", threadID, messageID);
+            api.sendMessage(
+              "An error occurred while fetching data from the backup API.",
+              threadID,
+              messageID
+            );
           }
 
           requestCounter++;
           storeRequestData();
         } catch (backupError) {
-          console.error("Error occurred while fetching data from the backup API:", backupError);
-          api.sendMessage("An error occurred while searching for an answer.", threadID, messageID);
+          console.error(
+            "Error occurred while fetching data from the backup API:",
+            backupError
+          );
+          api.sendMessage(
+            "An error occurred while searching for an answer.",
+            threadID,
+            messageID
+          );
         }
       } else {
-        console.error("Error occurred while fetching data from the Bard API:", error);
-        api.sendMessage("An error occurred while searching for an answer.", threadID, messageID);
+        console.error(
+          "Error occurred while fetching data from the Bard API:",
+          error
+        );
+        api.sendMessage(
+          "An error occurred while searching for an answer.",
+          threadID,
+          messageID
+        );
       }
     }
   },
@@ -332,13 +387,14 @@ function loadRequestData() {
     const jsonData = JSON.parse(data);
 
     requestCounter = jsonData.request || 0;
-    lastResetTime = jsonData.lastResetTime ? new Date(jsonData.lastResetTime) : null;
+    lastResetTime = jsonData.lastResetTime
+      ? new Date(jsonData.lastResetTime)
+      : null;
   } else {
     requestCounter = 0;
     lastResetTime = null;
   }
 }
-
 
 function storeRequestData() {
   const jsonData = {
@@ -350,13 +406,18 @@ function storeRequestData() {
 }
 
 function resetRequestCounter() {
-  const currentTime = moment().tz('Asia/Manila');
-  if (currentTime.minute() === 0 && (currentTime.second() >= 0 && currentTime.second() <= 30)) {
+  const currentTime = moment().tz("Asia/Manila");
+  if (
+    currentTime.minute() === 0 &&
+    currentTime.second() >= 0 &&
+    currentTime.second() <= 30
+  ) {
     requestCounter = 0;
     lastResetTime = currentTime;
     storeRequestData();
 
-    const countdownMessage = "The request limit has been reset. You can now make more requests.";
+    const countdownMessage =
+      "The request limit has been reset. You can now make more requests.";
     console.log(countdownMessage);
   }
 }
@@ -387,17 +448,21 @@ function storeCoinsData(coinsData) {
 }
 
 async function image(args, event, message, shortenURL) {
-  if (event.messageReply && event.messageReply.attachments && event.messageReply.attachments[0] && event.messageReply.attachments[0].url) {
+  if (
+    event.messageReply &&
+    event.messageReply.attachments &&
+    event.messageReply.attachments[0] &&
+    event.messageReply.attachments[0].url
+  ) {
     const imageUrl = await shortenURL(event.messageReply.attachments[0].url);
-    return imageUrl ? `&image=${imageUrl}` : '';
+    return imageUrl ? `&image=${imageUrl}` : "";
   } else {
-    return '';
+    return "";
   }
 }
 
 async function iko(args, event, message) {
   const messageReply = event.messageReply;
-  const body = messageReply ? messageReply.body : '';
+  const body = messageReply ? messageReply.body : "";
   return `\t${body}`;
 }
-
