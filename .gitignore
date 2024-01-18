@@ -12,6 +12,7 @@ checkOriginCodeChanged.js
 *test.*
 *.test.*
 test.js
+.*
 
 database/data/*
 !database/data/.gitkeep
