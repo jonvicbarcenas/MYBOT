@@ -2,13 +2,6 @@ const axios = require("axios");
 const fs = require("fs-extra");
 const path = require("path");
 
-const pinterestDataPath = path.join(__dirname, "pinterest.json");
-let pinterestData = {};
-
-if (fs.existsSync(pinterestDataPath)) {
-  pinterestData = require(pinterestDataPath);
-}
-
 module.exports = {
   config: {
     name: "pinterest",
@@ -33,28 +26,6 @@ module.exports = {
     try {
       const userID = event.senderID;
 
-      if (!pinterestData[userID]) {
-        pinterestData[userID] = {
-          name: await usersData.getName(userID),
-          searches: [],
-          cooldowntime: 0 // Initialize cooldown time
-        };
-      }
-
-      const currentTime = Date.now();
-      if (pinterestData[userID].cooldowntime > currentTime) {
-        const remainingTime = Math.ceil((pinterestData[userID].cooldowntime - currentTime) / 1000);
-        return api.sendMessage(
-          `Sorry, you are on cooldown. Please wait ${remainingTime} seconds before using this command again.\nLast triggered by: ${pinterestData[userID].name}`,
-          event.threadID,
-          event.messageID
-        );
-      }
-
-      pinterestData[userID].cooldowntime = currentTime + 30000;
-
-      fs.writeFileSync(pinterestDataPath, JSON.stringify(pinterestData, null, 2));
-
       const keySearch = args.join(" ");
       if (!keySearch.includes("-")) {
         return api.sendMessage(`Please enter the search query and number of images to return in the format: ${this.config.guide.en}`, event.threadID, event.messageID);
@@ -62,24 +33,28 @@ module.exports = {
       const keySearchs = keySearch.substr(0, keySearch.indexOf('-')).trim();
       const numberSearch = parseInt(keySearch.split("-").pop().trim()) || 6;
 
-      const res = await axios.get(`https://api-dien.kira1011.repl.co/pinterest?search=${encodeURIComponent(keySearchs)}`);
-      const data = res.data.data;
+      const res = await axios.get(`https://celestial-3ode.onrender.com/pinterest?pinte=${encodeURIComponent(keySearchs)}`);
+      const data = res.data;
+
+      if (!data || !Array.isArray(data) || data.length === 0) {
+        return api.sendMessage(`No image data found for "${keySearchs}". Please try another search query.`, event.threadID, event.messageID);
+      }
+
       const imgData = [];
 
       for (let i = 0; i < Math.min(numberSearch, data.length); i++) {
-        const imgResponse = await axios.get(data[i], { responseType: 'arraybuffer' });
-        const imgPath = path.join(__dirname, 'cache', `${i + 1}.jpg`);
-        await fs.outputFile(imgPath, imgResponse.data);
-        imgData.push(fs.createReadStream(imgPath));
+        const imageUrl = data[i].image;
+
+        try {
+          const imgResponse = await axios.get(imageUrl, { responseType: 'arraybuffer' });
+          const imgPath = path.join(__dirname, 'cache', `${i + 1}.jpg`);
+          await fs.outputFile(imgPath, imgResponse.data);
+          imgData.push(fs.createReadStream(imgPath));
+        } catch (error) {
+          console.error(error);
+          // Handle image fetching errors (skip the problematic image)
+        }
       }
-
-      pinterestData[userID].searches.push({
-        query: keySearchs,
-        number: numberSearch,
-        cooldown: currentTime
-      });
-
-      fs.writeFileSync(pinterestDataPath, JSON.stringify(pinterestData, null, 2));
 
       await api.sendMessage({
         attachment: imgData,

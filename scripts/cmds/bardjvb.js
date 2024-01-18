@@ -337,6 +337,12 @@ module.exports = {
 
           const { content } = responseData;
 
+          // START Append BardCoins information to content
+          const userCoins = getCoinsBySenderID(loadCoinsData(), senderID);
+          const bardCoinsMessage = `\n\nYou currently have ${userCoins} BardCoins.`;
+          const finalContent = content + bardCoinsMessage;
+          // END Append BardCoins information to content
+
           if (content) {
             api.sendMessage(finalContent, threadID, messageID);
           } else {

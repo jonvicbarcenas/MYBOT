@@ -383,3 +383,130 @@ tmux kill-ses -t 0
 tmux a
 screen
 screen -r
+sudo yum remove tmux
+screen -r
+y
+sudo yum remove tmux
+tmux
+clear
+git checkout main
+git add .
+git commit -m "1/16/24"
+git pull origin main
+git push origin main
+clear
+screen -r
+jobs
+ps aux | grep "&"
+screen -r
+a
+d
+clear
+screen -r
+d
+node index.js
+clear
+Curl Ascii.live/rick
+curl Ascii.live/rick
+clear
+[200~curl Ascii.live/rick
+clear
+curl Ascii.live/rick
+clear
+screen -r
+screen -ls
+screen -X 32290 quit
+screen -r
+sudo yum install byobu
+sudo apt-get install byobu
+sudo apt install byobu
+sudo yum install byobu
+No match for argument: byobu
+Error: Unable to find a match: byobu
+[ec2-user@ip-172-31-2-174 ~]$ sudo apt-get install byobu
+sudo: apt-get: command not found
+[ec2-user@ip-172-31-2-174 ~]$ sudo apt install byobu
+sudo: apt: command not found
+[ec2-user@ip-172-31-2-174 ~]$ sudo yum install byobu
+Last metadata expiration check: 6:58:16 ago on Tue Jan 16 01:15:38 2024.
+No match for argument: byobu
+Error: Unable to find a match: byobu
+[ec2-user@ip-172-31-2-174 ~]$ 
+clear
+ 
+sudo apt-get install dvtm
+sudo yum install dvtm
+Error: Unable to find a match: dvtm
+[ec2-user@ip-172-31-2-174 ~]$ 
+cssa
+clear
+npm install pm2 -g
+sudo npm install pm2 -g
+clear
+pm2 start index.js 
+pm2 logs
+pm2 startup
+pm2 save
+sudo env PATH=$PATH:/usr/bin /usr/lib/node_modules/pm2/bin/pm2 startup systemd -u ec2-user --hp /home/ec2-user
+clear
+pm2 logs
+clear
+pm2 logs
+pm2 
+p,2 -h
+pm2 -h
+pm2 logs
+pm2 restart
+pm2 list
+pm2 restart 0
+pm2 logs
+pm2 stop 0
+pm2 start
+pm2 start index.js 
+pm2 logs
+reboot
+sudo reboot
+pm2 logs 
+pm2 kill
+pm2 list 
+pm2 start index.js
+ pm2 logs 
+pm2 logs 
+pm2 kill 0
+pm2 kill
+pm2 start index.js
+ pm2 lisr
+pm2 list
+pm2 logs 
+rm account.txt
+nano account.txt
+pm2 restart
+nano account.txt
+pm2 restart 1
+pm2 restart 0
+pm2 logs 
+pm2 logs
+pm2 flush
+pm2 kill 0
+pm2 kill
+pm2 start index.js
+ pm2 logs 
+pm2 kill
+pm2 list
+cd database
+cd data
+sudo rm -rf data.sql
+cd ..
+pm2 start index.js
+ pm2 logs 
+pm2 logs 
+rm account.txt
+nano account.txt
+pm2 logs 
+pm restart
+pm2 restart
+pm restart 0
+pm2 restart 0
+pm2 logs 
+pm2 restart 0
+pm2 logs
