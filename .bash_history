@@ -510,3 +510,13 @@ pm2 restart 0
 pm2 logs 
 pm2 restart 0
 pm2 logs
+git add .
+git commit -m "1/18/24"
+git push origin main
+ghghremote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/jonvicbarcenas/MYBOT.git/
+clear
+
+
+
+
