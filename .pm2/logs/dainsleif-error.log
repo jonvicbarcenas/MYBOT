@@ -1,940 +1,0 @@
-Error moving file: [Error: ENOENT: no such file or directory, lstat '/home/ec2-user/rest/account.txt'] {
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'lstat',
-  path: '/home/ec2-user/rest/account.txt'
-}
-Error moving file: [Error: ENOENT: no such file or directory, rename '/home/ec2-user/account.txt' -> '/home/ec2-user/bot2/account.txt'] {
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'rename',
-  path: '/home/ec2-user/account.txt',
-  dest: '/home/ec2-user/bot2/account.txt'
-}
-Error moving file: [Error: ENOENT: no such file or directory, rename '/home/ec2-user/bot2/account.txt' -> '/home/ec2-user/account.txt'] {
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'rename',
-  path: '/home/ec2-user/bot2/account.txt',
-  dest: '/home/ec2-user/account.txt'
-}
-Error moving file: [Error: ENOENT: no such file or directory, lstat '/home/ec2-user/rest/account.txt'] {
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'lstat',
-  path: '/home/ec2-user/rest/account.txt'
-}
-Error moving file: [Error: ENOENT: no such file or directory, rename '/home/ec2-user/account.txt' -> '/home/ec2-user/bot2/account.txt'] {
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'rename',
-  path: '/home/ec2-user/account.txt',
-  dest: '/home/ec2-user/bot2/account.txt'
-}
-Error moving file: [Error: ENOENT: no such file or directory, rename '/home/ec2-user/bot2/account.txt' -> '/home/ec2-user/account.txt'] {
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'rename',
-  path: '/home/ec2-user/bot2/account.txt',
-  dest: '/home/ec2-user/account.txt'
-}
-- Login with cookie array
-- Connecting a SQLITE database
-[90m18:37:48 12/01/2024[0m [92m LOADED:[0m [32m1[0m, [33m1[0m[90m18:37:48 12/01/2024[0m [92m LOADED:[0m [32m2[0m, [33m2[0m[90m18:37:48 12/01/2024[0m [92m LOADED:[0m [32m3[0m, [33m3[0m[90m18:37:48 12/01/2024[0m [92m LOADED:[0m [32m4[0m, [33m3[0m[90m18:37:48 12/01/2024[0m [92m LOADED:[0m [32m5[0m, [33m3[0m[90m18:37:48 12/01/2024[0m [92m LOADED:[0m [32m6[0m, [33m4[0m[90m18:37:48 12/01/2024[0m [92m LOADED:[0m [32m7[0m, [33m5[0m[90m18:37:48 12/01/2024[0m [92m LOADED:[0m [32m8[0m, [33m5[0m[90m18:37:48 12/01/2024[0m [92m LOADED:[0m [32m9[0m, [33m5[0m[90m18:37:48 12/01/2024[0m [92m LOADED:[0m [32m10[0m, [33m6[0m[90m18:37:48 12/01/2024[0m [92m LOADED:[0m [32m11[0m, [33m7[0m[90m18:37:48 12/01/2024[0m [92m LOADED:[0m [32m12[0m, [33m8[0m[90m18:37:48 12/01/2024[0m [92m LOADED:[0m [32m13[0m, [33m9[0m[90m18:37:48 12/01/2024[0m [92m LOADED:[0m [32m14[0m, [33m9[0m[90m18:37:48 12/01/2024[0m [92m LOADED:[0m [32m15[0m, [33m10[0m[90m18:37:48 12/01/2024[0m [92m LOADED:[0m [32m16[0m, [33m10[0m[90m18:37:48 12/01/2024[0m [92m LOADED:[0m [32m17[0m, [33m11[0m[90m18:37:48 12/01/2024[0m [92m LOADED:[0m [32m18[0m, [33m12[0m[90m18:37:48 12/01/2024[0m [92m LOADED:[0m [32m19[0m, [33m12[0m[90m18:37:48 12/01/2024[0m [92m LOADED:[0m [32m20[0m, [33m12[0m[90m18:37:48 12/01/2024[0m [92m LOADED:[0m [32m21[0m, [33m12[0m[90m18:37:48 12/01/2024[0m [92m LOADED:[0m [32m22[0m, [33m13[0m[90m18:37:48 12/01/2024[0m [92m LOADED:[0m [32m23[0m, [33m13[0m[90m18:37:48 12/01/2024[0m [92m LOADED:[0m [32m24[0m, [33m14[0m[90m18:37:48 12/01/2024[0m [92m LOADED:[0m [32m25[0m, [33m15[0mFontconfig error: Cannot load default config file
-[90m18:37:49 12/01/2024[0m [92m LOADED:[0m [32m26[0m, [33m15[0m[90m18:37:49 12/01/2024[0m [92m LOADED:[0m [32m27[0m, [33m16[0m[90m18:37:49 12/01/2024[0m [92m LOADED:[0m [32m28[0m, [33m17[0m[90m18:37:49 12/01/2024[0m [92m LOADED:[0m [32m29[0m, [33m18[0m[90m18:37:49 12/01/2024[0m [92m LOADED:[0m [32m30[0m, [33m19[0m[90m18:37:49 12/01/2024[0m [92m LOADED:[0m [32m31[0m, [33m20[0m[90m18:37:49 12/01/2024[0m [92m LOADED:[0m [32m32[0m, [33m20[0m[90m18:37:49 12/01/2024[0m [92m LOADED:[0m [32m33[0m, [33m21[0m[90m18:37:49 12/01/2024[0m [92m LOADED:[0m [32m34[0m, [33m22[0m[90m18:37:49 12/01/2024[0m [92m LOADED:[0m [32m35[0m, [33m23[0m[90m18:37:49 12/01/2024[0m [92m LOADED:[0m [32m36[0m, [33m24[0m[90m18:37:49 12/01/2024[0m [92m LOADED:[0m [32m37[0m, [33m25[0m[90m18:37:49 12/01/2024[0m [92m LOADED:[0m [32m38[0m, [33m25[0m[90m18:37:49 12/01/2024[0m [92m LOADED:[0m [32m39[0m, [33m26[0m[90m18:37:49 12/01/2024[0m [92m LOADED:[0m [32m40[0m, [33m26[0m[90m18:37:49 12/01/2024[0m [92m LOADED:[0m [32m41[0m, [33m27[0m[90m18:37:49 12/01/2024[0m [92m LOADED:[0m [32m42[0m, [33m28[0m[90m18:37:49 12/01/2024[0m [92m LOADED:[0m [32m43[0m, [33m29[0m[90m18:37:49 12/01/2024[0m [92m LOADED:[0m [32m44[0m, [33m30[0m[90m18:37:49 12/01/2024[0m [92m LOADED:[0m [32m45[0m, [33m31[0m[90m18:37:49 12/01/2024[0m [92m LOADED:[0m [32m46[0m, [33m32[0m[90m18:37:49 12/01/2024[0m [92m LOADED:[0m [32m47[0m, [33m33[0m[90m18:37:49 12/01/2024[0m [92m LOADED:[0m [32m48[0m, [33m34[0m[90m18:37:49 12/01/2024[0m [92m LOADED:[0m [32m49[0m, [33m35[0m[90m18:37:49 12/01/2024[0m [92m LOADED:[0m [32m50[0m, [33m36[0m[90m18:37:49 12/01/2024[0m [92m LOADED:[0m [32m51[0m, [33m36[0m[90m18:37:49 12/01/2024[0m [92m LOADED:[0m [32m52[0m, [33m36[0m[90m18:37:49 12/01/2024[0m [92m LOADED:[0m [32m53[0m, [33m37[0m[90m18:37:49 12/01/2024[0m [92m LOADED:[0m [32m54[0m, [33m38[0m[90m18:37:49 12/01/2024[0m [92m LOADED:[0m [32m55[0m, [33m38[0m[90m18:37:49 12/01/2024[0m [92m LOADED:[0m [32m56[0m, [33m39[0m[90m18:37:49 12/01/2024[0m [92m LOADED:[0m [32m57[0m, [33m40[0m[90m18:37:49 12/01/2024[0m [92m LOADED:[0m [32m58[0m, [33m41[0m[90m18:37:49 12/01/2024[0m [92m LOADED:[0m [32m59[0m, [33m41[0m[90m18:37:49 12/01/2024[0m [92m LOADED:[0m [32m60[0m, [33m42[0m[90m18:37:49 12/01/2024[0m [92m LOADED:[0m [32m61[0m, [33m43[0m[90m18:37:49 12/01/2024[0m [92m LOADED:[0m [32m62[0m, [33m44[0m[90m18:37:49 12/01/2024[0m [92m LOADED:[0m [32m63[0m, [33m45[0m[90m18:37:49 12/01/2024[0m [92m LOADED:[0m [32m64[0m, [33m46[0m[90m18:37:49 12/01/2024[0m [92m LOADED:[0m [32m65[0m, [33m46[0m[90m18:37:49 12/01/2024[0m [92m LOADED:[0m [32m66[0m, [33m47[0m[90m18:37:49 12/01/2024[0m [92m LOADED:[0m [32m67[0m, [33m48[0m[90m18:37:49 12/01/2024[0m [92m LOADED:[0m [32m68[0m, [33m49[0m[90m18:37:49 12/01/2024[0m [92m LOADED:[0m [32m69[0m, [33m49[0m[90m18:37:49 12/01/2024[0m [92m LOADED:[0m [32m70[0m, [33m49[0m[90m18:37:49 12/01/2024[0m [92m LOADED:[0m [32m71[0m, [33m49[0m[90m18:37:49 12/01/2024[0m [92m LOADED:[0m [32m72[0m, [33m50[0m[90m18:37:49 12/01/2024[0m [92m LOADED:[0m [32m73[0m, [33m51[0m[90m18:37:49 12/01/2024[0m [92m LOADED:[0m [32m74[0m, [33m52[0m[90m18:37:49 12/01/2024[0m [92m LOADED:[0m [32m75[0m, [33m53[0m[90m18:37:49 12/01/2024[0m [92m LOADED:[0m [32m76[0m, [33m53[0m[90m18:37:49 12/01/2024[0m [92m LOADED:[0m [32m77[0m, [33m53[0m[90m18:37:49 12/01/2024[0m [92m LOADED:[0m [32m78[0m, [33m53[0m[90m18:37:49 12/01/2024[0m [92m LOADED:[0m [32m79[0m, [33m54[0m[90m18:37:49 12/01/2024[0m [92m LOADED:[0m [32m80[0m, [33m54[0m[90m18:37:49 12/01/2024[0m [92m LOADED:[0m [32m81[0m, [33m55[0m[90m18:37:49 12/01/2024[0m [92m LOADED:[0m [32m82[0m, [33m56[0m[90m18:37:49 12/01/2024[0m [92m LOADED:[0m [32m83[0m, [33m57[0m[90m18:37:49 12/01/2024[0m [92m LOADED:[0m [32m84[0m, [33m58[0m[90m18:37:49 12/01/2024[0m [92m LOADED:[0m [32m85[0m, [33m59[0m[90m18:37:49 12/01/2024[0m [92m LOADED:[0m [32m86[0m, [33m60[0m[90m18:37:49 12/01/2024[0m [92m LOADED:[0m [32m87[0m, [33m60[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m88[0m, [33m61[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m89[0m, [33m62[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m90[0m, [33m63[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m91[0m, [33m64[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m92[0m, [33m65[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m93[0m, [33m66[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m94[0m, [33m67[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m95[0m, [33m68[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m96[0m, [33m69[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m97[0m, [33m70[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m98[0m, [33m71[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m99[0m, [33m72[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m100[0m, [33m73[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m101[0m, [33m74[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m102[0m, [33m75[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m103[0m, [33m75[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m104[0m, [33m76[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m105[0m, [33m77[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m106[0m, [33m78[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m107[0m, [33m79[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m108[0m, [33m79[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m109[0m, [33m80[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m110[0m, [33m81[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m111[0m, [33m82[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m112[0m, [33m83[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m113[0m, [33m84[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m114[0m, [33m85[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m115[0m, [33m85[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m116[0m, [33m86[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m117[0m, [33m87[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m118[0m, [33m88[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m119[0m, [33m88[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m120[0m, [33m89[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m121[0m, [33m90[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m122[0m, [33m91[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m123[0m, [33m91[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m124[0m, [33m91[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m125[0m, [33m91[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m126[0m, [33m91[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m127[0m, [33m91[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m128[0m, [33m91[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m129[0m, [33m91[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m130[0m, [33m91[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m131[0m, [33m91[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m132[0m, [33m91[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m133[0m, [33m92[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m134[0m, [33m93[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m135[0m, [33m94[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m136[0m, [33m94[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m137[0m, [33m95[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m138[0m, [33m96[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m139[0m, [33m97[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m140[0m, [33m98[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m141[0m, [33m99[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m142[0m, [33m100[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m143[0m, [33m101[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m144[0m, [33m102[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m145[0m, [33m103[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m146[0m, [33m104[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m147[0m, [33m104[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m148[0m, [33m105[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m149[0m, [33m105[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m150[0m, [33m105[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m151[0m, [33m106[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m152[0m, [33m106[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m153[0m, [33m106[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m154[0m, [33m107[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m155[0m, [33m107[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m156[0m, [33m108[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m157[0m, [33m108[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m158[0m, [33m109[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m159[0m, [33m110[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m160[0m, [33m111[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m161[0m, [33m112[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m162[0m, [33m113[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m163[0m, [33m113[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m164[0m, [33m113[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m165[0m, [33m114[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m166[0m, [33m115[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m167[0m, [33m115[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m168[0m, [33m116[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m169[0m, [33m117[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m170[0m, [33m118[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m171[0m, [33m119[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m172[0m, [33m120[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m1[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m2[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m3[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m4[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m5[0m[90m18:37:50 12/01/2024[0m [92m LOADED:[0m [32m6[0mFailed to perform sentiment analysis: Cannot read properties of undefined (reading 'trim')
-Failed to perform sentiment analysis: Cannot read properties of undefined (reading 'trim')
-Error downloading schedule data: AxiosError: Request failed with status code 403
-    at settle (/home/ec2-user/node_modules/axios/dist/node/axios.cjs:1970:12)
-    at BrotliDecompress.handleStreamEnd (/home/ec2-user/node_modules/axios/dist/node/axios.cjs:3065:11)
-    at BrotliDecompress.emit (node:events:526:35)
-    at endReadableNT (node:internal/streams/readable:1589:12)
-    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
-  code: 'ERR_BAD_REQUEST',
-  config: {
-    transitional: {
-      silentJSONParsing: true,
-      forcedJSONParsing: true,
-      clarifyTimeoutError: false
-    },
-    adapter: [ 'xhr', 'http' ],
-    transformRequest: [ [Function: transformRequest] ],
-    transformResponse: [ [Function: transformResponse] ],
-    timeout: 0,
-    xsrfCookieName: 'XSRF-TOKEN',
-    xsrfHeaderName: 'X-XSRF-TOKEN',
-    maxContentLength: -1,
-    maxBodyLength: -1,
-    env: { FormData: [Function], Blob: [class Blob] },
-    validateStatus: [Function: validateStatus],
-    headers: Object [AxiosHeaders] {
-      Accept: 'application/json, text/plain, */*',
-      'Content-Type': undefined,
-      'User-Agent': 'axios/1.6.4',
-      'Accept-Encoding': 'gzip, compress, deflate, br'
-    },
-    method: 'get',
-    url: 'https://anisched--marok85067.repl.co/',
-    data: undefined
-  },
-  request: <ref *1> ClientRequest {
-    _events: [Object: null prototype] {
-      abort: [Function (anonymous)],
-      aborted: [Function (anonymous)],
-      connect: [Function (anonymous)],
-      error: [Function (anonymous)],
-      socket: [Function (anonymous)],
-      timeout: [Function (anonymous)],
-      finish: [Function: requestOnFinish]
-    },
-    _eventsCount: 7,
-    _maxListeners: undefined,
-    outputData: [],
-    outputSize: 0,
-    writable: true,
-    destroyed: true,
-    _last: true,
-    chunkedEncoding: false,
-    shouldKeepAlive: true,
-    maxRequestsOnConnectionReached: false,
-    _defaultKeepAlive: true,
-    useChunkedEncodingByDefault: false,
-    sendDate: false,
-    _removedConnection: false,
-    _removedContLen: false,
-    _removedTE: false,
-    strictContentLength: false,
-    _contentLength: 0,
-    _hasBody: true,
-    _trailer: '',
-    finished: true,
-    _headerSent: true,
-    _closed: true,
-    socket: TLSSocket {
-      _tlsOptions: [Object],
-      _secureEstablished: true,
-      _securePending: false,
-      _newSessionPending: false,
-      _controlReleased: true,
-      secureConnecting: false,
-      _SNICallback: null,
-      servername: 'replit.com',
-      alpnProtocol: false,
-      authorized: true,
-      authorizationError: null,
-      encrypted: true,
-      _events: [Object: null prototype],
-      _eventsCount: 9,
-      connecting: false,
-      _hadError: false,
-      _parent: null,
-      _host: 'replit.com',
-      _closeAfterHandlingError: false,
-      _readableState: [ReadableState],
-      _maxListeners: undefined,
-      _writableState: [WritableState],
-      allowHalfOpen: false,
-      _sockname: null,
-      _pendingData: null,
-      _pendingEncoding: '',
-      server: undefined,
-      _server: null,
-      ssl: [TLSWrap],
-      _requestCert: true,
-      _rejectUnauthorized: true,
-      timeout: 5000,
-      parser: null,
-      _httpMessage: null,
-      autoSelectFamilyAttemptedAddresses: [Array],
-      [Symbol(alpncallback)]: null,
-      [Symbol(res)]: [TLSWrap],
-      [Symbol(verified)]: true,
-      [Symbol(pendingSession)]: null,
-      [Symbol(async_id_symbol)]: -1,
-      [Symbol(kHandle)]: [TLSWrap],
-      [Symbol(lastWriteQueueSize)]: 0,
-      [Symbol(timeout)]: Timeout {
-        _idleTimeout: 5000,
-        _idlePrev: [TimersList],
-        _idleNext: [Timeout],
-        _idleStart: 144732,
-        _onTimeout: [Function: bound ],
-        _timerArgs: undefined,
-        _repeat: null,
-        _destroyed: false,
-        [Symbol(refed)]: false,
-        [Symbol(kHasPrimitive)]: false,
-        [Symbol(asyncId)]: 20908,
-        [Symbol(triggerId)]: 20906
-      },
-      [Symbol(kBuffer)]: null,
-      [Symbol(kBufferCb)]: null,
-      [Symbol(kBufferGen)]: null,
-      [Symbol(kCapture)]: false,
-      [Symbol(kSetNoDelay)]: false,
-      [Symbol(kSetKeepAlive)]: true,
-      [Symbol(kSetKeepAliveInitialDelay)]: 1,
-      [Symbol(kBytesRead)]: 0,
-      [Symbol(kBytesWritten)]: 0,
-      [Symbol(connect-options)]: [Object]
-    },
-    _header: 'GET /replid/a5b4acbc-c0d7-45b7-9ca0-aba24b543bd7 HTTP/1.1\r\n' +
-      'Accept: application/json, text/plain, */*\r\n' +
-      'User-Agent: axios/1.6.4\r\n' +
-      'Accept-Encoding: gzip, compress, deflate, br\r\n' +
-      'Host: replit.com\r\n' +
-      'Connection: keep-alive\r\n' +
-      '\r\n',
-    _keepAliveTimeout: 0,
-    _onPendingData: [Function: nop],
-    agent: Agent {
-      _events: [Object: null prototype],
-      _eventsCount: 2,
-      _maxListeners: undefined,
-      defaultPort: 443,
-      protocol: 'https:',
-      options: [Object: null prototype],
-      requests: [Object: null prototype] {},
-      sockets: [Object: null prototype] {},
-      freeSockets: [Object: null prototype],
-      keepAliveMsecs: 1000,
-      keepAlive: true,
-      maxSockets: Infinity,
-      maxFreeSockets: 256,
-      scheduling: 'lifo',
-      maxTotalSockets: Infinity,
-      totalSocketCount: 2,
-      maxCachedSessions: 100,
-      _sessionCache: [Object],
-      [Symbol(kCapture)]: false
-    },
-    socketPath: undefined,
-    method: 'GET',
-    maxHeaderSize: undefined,
-    insecureHTTPParser: undefined,
-    joinDuplicateHeaders: undefined,
-    path: '/replid/a5b4acbc-c0d7-45b7-9ca0-aba24b543bd7',
-    _ended: true,
-    res: IncomingMessage {
-      _readableState: [ReadableState],
-      _events: [Object: null prototype],
-      _eventsCount: 4,
-      _maxListeners: undefined,
-      socket: null,
-      httpVersionMajor: 1,
-      httpVersionMinor: 1,
-      httpVersion: '1.1',
-      complete: true,
-      rawHeaders: [Array],
-      rawTrailers: [],
-      joinDuplicateHeaders: undefined,
-      aborted: false,
-      upgrade: false,
-      url: '',
-      method: null,
-      statusCode: 403,
-      statusMessage: 'Forbidden',
-      client: [TLSSocket],
-      _consuming: true,
-      _dumped: false,
-      req: [Circular *1],
-      responseUrl: 'https://replit.com/replid/a5b4acbc-c0d7-45b7-9ca0-aba24b543bd7',
-      redirects: [],
-      [Symbol(kCapture)]: false,
-      [Symbol(kHeaders)]: [Object],
-      [Symbol(kHeadersCount)]: 30,
-      [Symbol(kTrailers)]: null,
-      [Symbol(kTrailersCount)]: 0
-    },
-    aborted: false,
-    timeoutCb: null,
-    upgradeOrConnect: false,
-    parser: null,
-    maxHeadersCount: null,
-    reusedSocket: false,
-    host: 'replit.com',
-    protocol: 'https:',
-    _redirectable: Writable {
-      _writableState: [WritableState],
-      _events: [Object: null prototype],
-      _eventsCount: 3,
-      _maxListeners: undefined,
-      _options: [Object],
-      _ended: true,
-      _ending: true,
-      _redirectCount: 1,
-      _redirects: [],
-      _requestBodyLength: 0,
-      _requestBodyBuffers: [],
-      _onNativeResponse: [Function (anonymous)],
-      _currentRequest: [Circular *1],
-      _currentUrl: 'https://replit.com/replid/a5b4acbc-c0d7-45b7-9ca0-aba24b543bd7',
-      _isRedirect: true,
-      [Symbol(kCapture)]: false
-    },
-    [Symbol(kCapture)]: false,
-    [Symbol(kBytesWritten)]: 0,
-    [Symbol(kNeedDrain)]: false,
-    [Symbol(corked)]: 0,
-    [Symbol(kOutHeaders)]: [Object: null prototype] {
-      accept: [Array],
-      'user-agent': [Array],
-      'accept-encoding': [Array],
-      host: [Array]
-    },
-    [Symbol(errored)]: null,
-    [Symbol(kHighWaterMark)]: 16384,
-    [Symbol(kRejectNonStandardBodyWrites)]: false,
-    [Symbol(kUniqueHeaders)]: null
-  },
-  response: {
-    status: 403,
-    statusText: 'Forbidden',
-    headers: Object [AxiosHeaders] {
-      date: 'Fri, 12 Jan 2024 11:40:01 GMT',
-      'content-type': 'text/html; charset=UTF-8',
-      'transfer-encoding': 'chunked',
-      connection: 'keep-alive',
-      'x-frame-options': 'SAMEORIGIN',
-      'referrer-policy': 'same-origin',
-      'cache-control': 'max-age=15',
-      expires: 'Fri, 12 Jan 2024 11:40:16 GMT',
-      'set-cookie': [Array],
-      vary: 'Accept-Encoding',
-      'strict-transport-security': 'max-age=31536000; preload',
-      server: 'cloudflare',
-      'cf-ray': '84451f4a7d2ba93d-SYD',
-      'alt-svc': 'h3=":443"; ma=86400'
-    },
-    config: {
-      transitional: [Object],
-      adapter: [Array],
-      transformRequest: [Array],
-      transformResponse: [Array],
-      timeout: 0,
-      xsrfCookieName: 'XSRF-TOKEN',
-      xsrfHeaderName: 'X-XSRF-TOKEN',
-      maxContentLength: -1,
-      maxBodyLength: -1,
-      env: [Object],
-      validateStatus: [Function: validateStatus],
-      headers: [Object [AxiosHeaders]],
-      method: 'get',
-      url: 'https://anisched--marok85067.repl.co/',
-      data: undefined
-    },
-    request: <ref *1> ClientRequest {
-      _events: [Object: null prototype],
-      _eventsCount: 7,
-      _maxListeners: undefined,
-      outputData: [],
-      outputSize: 0,
-      writable: true,
-      destroyed: true,
-      _last: true,
-      chunkedEncoding: false,
-      shouldKeepAlive: true,
-      maxRequestsOnConnectionReached: false,
-      _defaultKeepAlive: true,
-      useChunkedEncodingByDefault: false,
-      sendDate: false,
-      _removedConnection: false,
-      _removedContLen: false,
-      _removedTE: false,
-      strictContentLength: false,
-      _contentLength: 0,
-      _hasBody: true,
-      _trailer: '',
-      finished: true,
-      _headerSent: true,
-      _closed: true,
-      socket: [TLSSocket],
-      _header: 'GET /replid/a5b4acbc-c0d7-45b7-9ca0-aba24b543bd7 HTTP/1.1\r\n' +
-        'Accept: application/json, text/plain, */*\r\n' +
-        'User-Agent: axios/1.6.4\r\n' +
-        'Accept-Encoding: gzip, compress, deflate, br\r\n' +
-        'Host: replit.com\r\n' +
-        'Connection: keep-alive\r\n' +
-        '\r\n',
-      _keepAliveTimeout: 0,
-      _onPendingData: [Function: nop],
-      agent: [Agent],
-      socketPath: undefined,
-      method: 'GET',
-      maxHeaderSize: undefined,
-      insecureHTTPParser: undefined,
-      joinDuplicateHeaders: undefined,
-      path: '/replid/a5b4acbc-c0d7-45b7-9ca0-aba24b543bd7',
-      _ended: true,
-      res: [IncomingMessage],
-      aborted: false,
-      timeoutCb: null,
-      upgradeOrConnect: false,
-      parser: null,
-      maxHeadersCount: null,
-      reusedSocket: false,
-      host: 'replit.com',
-      protocol: 'https:',
-      _redirectable: [Writable],
-      [Symbol(kCapture)]: false,
-      [Symbol(kBytesWritten)]: 0,
-      [Symbol(kNeedDrain)]: false,
-      [Symbol(corked)]: 0,
-      [Symbol(kOutHeaders)]: [Object: null prototype],
-      [Symbol(errored)]: null,
-      [Symbol(kHighWaterMark)]: 16384,
-      [Symbol(kRejectNonStandardBodyWrites)]: false,
-      [Symbol(kUniqueHeaders)]: null
-    },
-    data: '<!DOCTYPE html>\n' +
-      '<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]-->\n' +
-      '<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en-US"> <![endif]-->\n' +
-      '<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en-US"> <![endif]-->\n' +
-      '<!--[if gt IE 8]><!--> <html class="no-js" lang="en-US"> <!--<![endif]-->\n' +
-      '<head>\n' +
-      '<title>Attention Required! | Cloudflare</title>\n' +
-      '<meta charset="UTF-8" />\n' +
-      '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />\n' +
-      '<meta http-equiv="X-UA-Compatible" content="IE=Edge" />\n' +
-      '<meta name="robots" content="noindex, nofollow" />\n' +
-      '<meta name="viewport" content="width=device-width,initial-scale=1" />\n' +
-      '<link rel="stylesheet" id="cf_styles-css" href="/cdn-cgi/styles/cf.errors.css" />\n' +
-      `<!--[if lt IE 9]><link rel="stylesheet" id='cf_styles-ie-css' href="/cdn-cgi/styles/cf.errors.ie.css" /><![endif]-->\n` +
-      '<style>body{margin:0;padding:0}</style>\n' +
-      '\n' +
-      '\n' +
-      '<!--[if gte IE 10]><!-->\n' +
-      '<script>\n' +
-      '  if (!navigator.cookieEnabled) {\n' +
-      "    window.addEventListener('DOMContentLoaded', function () {\n" +
-      "      var cookieEl = document.getElementById('cookie-alert');\n" +
-      "      cookieEl.style.display = 'block';\n" +
-      '    })\n' +
-      '  }\n' +
-      '</script>\n' +
-      '<!--<![endif]-->\n' +
-      '\n' +
-      '\n' +
-      '</head>\n' +
-      '<body>\n' +
-      '  <div id="cf-wrapper">\n' +
-      '    <div class="cf-alert cf-alert-error cf-cookie-error" id="cookie-alert" data-translate="enable_cookies">Please enable cookies.</div>\n' +
-      '    <div id="cf-error-details" class="cf-error-details-wrapper">\n' +
-      '      <div class="cf-wrapper cf-header cf-error-overview">\n' +
-      '        <h1 data-translate="block_headline">Sorry, you have been blocked</h1>\n' +
-      '        <h2 class="cf-subheadline"><span data-translate="unable_to_access">You are unable to access</span> replit.com</h2>\n' +
-      '      </div><!-- /.header -->\n' +
-      '\n' +
-      '      <div class="cf-section cf-highlight">\n' +
-      '        <div class="cf-wrapper">\n' +
-      '          <div class="cf-screenshot-container cf-screenshot-full">\n' +
-      '            \n' +
-      '              <span class="cf-no-screenshot error"></span>\n' +
-      '            \n' +
-      '          </div>\n' +
-      '        </div>\n' +
-      '      </div><!-- /.captcha-container -->\n' +
-      '\n' +
-      '      <div class="cf-section cf-wrapper">\n' +
-      '        <div class="cf-columns two">\n' +
-      '          <div class="cf-column">\n' +
-      '            <h2 data-translate="blocked_why_headline">Why have I been blocked?</h2>\n' +
-      '\n' +
-      '            <p data-translate="blocked_why_detail">This website is using a security service to protect itself from online attacks. The action you just performed triggered the security solution. There are several actions that could trigger this block including submitting a certain word or phrase, a SQL command or malformed data.</p>\n' +
-      '          </div>\n' +
-      '\n' +
-      '          <div class="cf-column">\n' +
-      '            <h2 data-translate="blocked_resolve_headline">What can I do to resolve this?</h2>\n' +
-      '\n' +
-      '            <p data-translate="blocked_resolve_detail">You can email the site owner to let them know you were blocked. Please include what you were doing when this page came up and the Cloudflare Ray ID found at the bottom of this page.</p>\n' +
-      '          </div>\n' +
-      '        </div>\n' +
-      '      </div><!-- /.section -->\n' +
-      '\n' +
-      '      <div class="cf-error-footer cf-wrapper w-240 lg:w-full py-10 sm:py-4 sm:px-8 mx-auto text-center sm:text-left border-solid border-0 border-t border-gray-300">\n' +
-      '  <p class="text-13">\n' +
-      '    <span class="cf-footer-item sm:block sm:mb-1">Cloudflare Ray ID: <strong class="font-semibold">84451f4a7d2ba93d</strong></span>\n' +
-      '    <span class="cf-footer-separator sm:hidden">&bull;</span>\n' +
-      '    <span id="cf-footer-item-ip" class="cf-footer-item hidden sm:block sm:mb-1">\n' +
-      '      Your IP:\n' +
-      '      <button type="button" id="cf-footer-ip-reveal" class="cf-footer-ip-reveal-btn">Click to reveal</button>\n' +
-      '      <span class="hidden" id="cf-footer-ip">13.211.64.218</span>\n' +
-      '      <span class="cf-footer-separator sm:hidden">&bull;</span>\n' +
-      '    </span>\n' +
-      '    <span class="cf-footer-item sm:block sm:mb-1"><span>Performance &amp; security by</span> <a rel="noopener noreferrer" href="https://www.cloudflare.com/5xx-error-landing" id="brand_link" target="_blank">Cloudflare</a></span>\n' +
-      '    \n' +
-      '  </p>\n' +
-      '  <script>(function(){function d(){var b=a.getElementById("cf-footer-item-ip"),c=a.getElementById("cf-footer-ip-reveal");b&&"classList"in b&&(b.classList.remove("hidden"),c.addEventListener("click",function(){c.classList.add("hidden");a.getElementById("cf-footer-ip").classList.remove("hidden")}))}var a=document;document.addEventListener&&a.addEventListener("DOMContentLoaded",d)})();</script>\n' +
-      '</div><!-- /.error-footer -->\n' +
-      '\n' +
-      '\n' +
-      '    </div><!-- /#cf-error-details -->\n' +
-      '  </div><!-- /#cf-wrapper -->\n' +
-      '\n' +
-      '  <script>\n' +
-      '  window._cf_translation = {};\n' +
-      '  \n' +
-      '  \n' +
-      '</script>\n' +
-      '\n' +
-      '</body>\n' +
-      '</html>\n'
-  }
-}
-Failed to perform sentiment analysis: The response does not contain only emojis.
-Failed to perform sentiment analysis: Cannot read properties of undefined (reading 'trim')
-Failed to perform sentiment analysis: Cannot read properties of undefined (reading 'trim')
-AxiosError: Request failed with status code 403
-    at settle (/home/ec2-user/node_modules/axios/dist/node/axios.cjs:1970:12)
-    at BrotliDecompress.handleStreamEnd (/home/ec2-user/node_modules/axios/dist/node/axios.cjs:3065:11)
-    at BrotliDecompress.emit (node:events:526:35)
-    at endReadableNT (node:internal/streams/readable:1589:12)
-    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
-  code: 'ERR_BAD_REQUEST',
-  config: {
-    transitional: {
-      silentJSONParsing: true,
-      forcedJSONParsing: true,
-      clarifyTimeoutError: false
-    },
-    adapter: [ 'xhr', 'http' ],
-    transformRequest: [ [Function: transformRequest] ],
-    transformResponse: [ [Function: transformResponse] ],
-    timeout: 0,
-    xsrfCookieName: 'XSRF-TOKEN',
-    xsrfHeaderName: 'X-XSRF-TOKEN',
-    maxContentLength: -1,
-    maxBodyLength: -1,
-    env: { FormData: [Function], Blob: [class Blob] },
-    validateStatus: [Function: validateStatus],
-    headers: Object [AxiosHeaders] {
-      Accept: 'application/json, text/plain, */*',
-      'Content-Type': undefined,
-      'User-Agent': 'axios/1.6.4',
-      'Accept-Encoding': 'gzip, compress, deflate, br'
-    },
-    method: 'get',
-    url: 'https://api-dien.kira1011.repl.co/pinterest?search=monkey%20gorrila',
-    data: undefined
-  },
-  request: <ref *1> ClientRequest {
-    _events: [Object: null prototype] {
-      abort: [Function (anonymous)],
-      aborted: [Function (anonymous)],
-      connect: [Function (anonymous)],
-      error: [Function (anonymous)],
-      socket: [Function (anonymous)],
-      timeout: [Function (anonymous)],
-      finish: [Function: requestOnFinish]
-    },
-    _eventsCount: 7,
-    _maxListeners: undefined,
-    outputData: [],
-    outputSize: 0,
-    writable: true,
-    destroyed: true,
-    _last: true,
-    chunkedEncoding: false,
-    shouldKeepAlive: true,
-    maxRequestsOnConnectionReached: false,
-    _defaultKeepAlive: true,
-    useChunkedEncodingByDefault: false,
-    sendDate: false,
-    _removedConnection: false,
-    _removedContLen: false,
-    _removedTE: false,
-    strictContentLength: false,
-    _contentLength: 0,
-    _hasBody: true,
-    _trailer: '',
-    finished: true,
-    _headerSent: true,
-    _closed: true,
-    socket: TLSSocket {
-      _tlsOptions: [Object],
-      _secureEstablished: true,
-      _securePending: false,
-      _newSessionPending: false,
-      _controlReleased: true,
-      secureConnecting: false,
-      _SNICallback: null,
-      servername: 'replit.com',
-      alpnProtocol: false,
-      authorized: true,
-      authorizationError: null,
-      encrypted: true,
-      _events: [Object: null prototype],
-      _eventsCount: 9,
-      connecting: false,
-      _hadError: false,
-      _parent: null,
-      _host: 'replit.com',
-      _closeAfterHandlingError: false,
-      _readableState: [ReadableState],
-      _maxListeners: undefined,
-      _writableState: [WritableState],
-      allowHalfOpen: false,
-      _sockname: null,
-      _pendingData: null,
-      _pendingEncoding: '',
-      server: undefined,
-      _server: null,
-      ssl: [TLSWrap],
-      _requestCert: true,
-      _rejectUnauthorized: true,
-      timeout: 5000,
-      parser: null,
-      _httpMessage: null,
-      autoSelectFamilyAttemptedAddresses: [Array],
-      [Symbol(alpncallback)]: null,
-      [Symbol(res)]: [TLSWrap],
-      [Symbol(verified)]: true,
-      [Symbol(pendingSession)]: null,
-      [Symbol(async_id_symbol)]: -1,
-      [Symbol(kHandle)]: [TLSWrap],
-      [Symbol(lastWriteQueueSize)]: 0,
-      [Symbol(timeout)]: Timeout {
-        _idleTimeout: 5000,
-        _idlePrev: [TimersList],
-        _idleNext: [Timeout],
-        _idleStart: 274593,
-        _onTimeout: [Function: bound ],
-        _timerArgs: undefined,
-        _repeat: null,
-        _destroyed: false,
-        [Symbol(refed)]: false,
-        [Symbol(kHasPrimitive)]: false,
-        [Symbol(asyncId)]: 36044,
-        [Symbol(triggerId)]: 36042
-      },
-      [Symbol(kBuffer)]: null,
-      [Symbol(kBufferCb)]: null,
-      [Symbol(kBufferGen)]: null,
-      [Symbol(kCapture)]: false,
-      [Symbol(kSetNoDelay)]: false,
-      [Symbol(kSetKeepAlive)]: true,
-      [Symbol(kSetKeepAliveInitialDelay)]: 1,
-      [Symbol(kBytesRead)]: 0,
-      [Symbol(kBytesWritten)]: 0,
-      [Symbol(connect-options)]: [Object]
-    },
-    _header: 'GET /replid/34a01fdc-c695-492f-8284-d19370a28efd HTTP/1.1\r\n' +
-      'Accept: application/json, text/plain, */*\r\n' +
-      'User-Agent: axios/1.6.4\r\n' +
-      'Accept-Encoding: gzip, compress, deflate, br\r\n' +
-      'Host: replit.com\r\n' +
-      'Connection: keep-alive\r\n' +
-      '\r\n',
-    _keepAliveTimeout: 0,
-    _onPendingData: [Function: nop],
-    agent: Agent {
-      _events: [Object: null prototype],
-      _eventsCount: 2,
-      _maxListeners: undefined,
-      defaultPort: 443,
-      protocol: 'https:',
-      options: [Object: null prototype],
-      requests: [Object: null prototype] {},
-      sockets: [Object: null prototype] {},
-      freeSockets: [Object: null prototype],
-      keepAliveMsecs: 1000,
-      keepAlive: true,
-      maxSockets: Infinity,
-      maxFreeSockets: 256,
-      scheduling: 'lifo',
-      maxTotalSockets: Infinity,
-      totalSocketCount: 2,
-      maxCachedSessions: 100,
-      _sessionCache: [Object],
-      [Symbol(kCapture)]: false
-    },
-    socketPath: undefined,
-    method: 'GET',
-    maxHeaderSize: undefined,
-    insecureHTTPParser: undefined,
-    joinDuplicateHeaders: undefined,
-    path: '/replid/34a01fdc-c695-492f-8284-d19370a28efd',
-    _ended: true,
-    res: IncomingMessage {
-      _readableState: [ReadableState],
-      _events: [Object: null prototype],
-      _eventsCount: 4,
-      _maxListeners: undefined,
-      socket: null,
-      httpVersionMajor: 1,
-      httpVersionMinor: 1,
-      httpVersion: '1.1',
-      complete: true,
-      rawHeaders: [Array],
-      rawTrailers: [],
-      joinDuplicateHeaders: undefined,
-      aborted: false,
-      upgrade: false,
-      url: '',
-      method: null,
-      statusCode: 403,
-      statusMessage: 'Forbidden',
-      client: [TLSSocket],
-      _consuming: true,
-      _dumped: false,
-      req: [Circular *1],
-      responseUrl: 'https://replit.com/replid/34a01fdc-c695-492f-8284-d19370a28efd',
-      redirects: [],
-      [Symbol(kCapture)]: false,
-      [Symbol(kHeaders)]: [Object],
-      [Symbol(kHeadersCount)]: 30,
-      [Symbol(kTrailers)]: null,
-      [Symbol(kTrailersCount)]: 0
-    },
-    aborted: false,
-    timeoutCb: null,
-    upgradeOrConnect: false,
-    parser: null,
-    maxHeadersCount: null,
-    reusedSocket: true,
-    host: 'replit.com',
-    protocol: 'https:',
-    _redirectable: Writable {
-      _writableState: [WritableState],
-      _events: [Object: null prototype],
-      _eventsCount: 3,
-      _maxListeners: undefined,
-      _options: [Object],
-      _ended: true,
-      _ending: true,
-      _redirectCount: 1,
-      _redirects: [],
-      _requestBodyLength: 0,
-      _requestBodyBuffers: [],
-      _onNativeResponse: [Function (anonymous)],
-      _currentRequest: [Circular *1],
-      _currentUrl: 'https://replit.com/replid/34a01fdc-c695-492f-8284-d19370a28efd',
-      _isRedirect: true,
-      [Symbol(kCapture)]: false
-    },
-    [Symbol(kCapture)]: false,
-    [Symbol(kBytesWritten)]: 0,
-    [Symbol(kNeedDrain)]: false,
-    [Symbol(corked)]: 0,
-    [Symbol(kOutHeaders)]: [Object: null prototype] {
-      accept: [Array],
-      'user-agent': [Array],
-      'accept-encoding': [Array],
-      host: [Array]
-    },
-    [Symbol(errored)]: null,
-    [Symbol(kHighWaterMark)]: 16384,
-    [Symbol(kRejectNonStandardBodyWrites)]: false,
-    [Symbol(kUniqueHeaders)]: null
-  },
-  response: {
-    status: 403,
-    statusText: 'Forbidden',
-    headers: Object [AxiosHeaders] {
-      date: 'Fri, 12 Jan 2024 11:42:10 GMT',
-      'content-type': 'text/html; charset=UTF-8',
-      'transfer-encoding': 'chunked',
-      connection: 'keep-alive',
-      'x-frame-options': 'SAMEORIGIN',
-      'referrer-policy': 'same-origin',
-      'cache-control': 'max-age=15',
-      expires: 'Fri, 12 Jan 2024 11:42:25 GMT',
-      'set-cookie': [Array],
-      vary: 'Accept-Encoding',
-      'strict-transport-security': 'max-age=31536000; preload',
-      server: 'cloudflare',
-      'cf-ray': '8445227628a6a93d-SYD',
-      'alt-svc': 'h3=":443"; ma=86400'
-    },
-    config: {
-      transitional: [Object],
-      adapter: [Array],
-      transformRequest: [Array],
-      transformResponse: [Array],
-      timeout: 0,
-      xsrfCookieName: 'XSRF-TOKEN',
-      xsrfHeaderName: 'X-XSRF-TOKEN',
-      maxContentLength: -1,
-      maxBodyLength: -1,
-      env: [Object],
-      validateStatus: [Function: validateStatus],
-      headers: [Object [AxiosHeaders]],
-      method: 'get',
-      url: 'https://api-dien.kira1011.repl.co/pinterest?search=monkey%20gorrila',
-      data: undefined
-    },
-    request: <ref *1> ClientRequest {
-      _events: [Object: null prototype],
-      _eventsCount: 7,
-      _maxListeners: undefined,
-      outputData: [],
-      outputSize: 0,
-      writable: true,
-      destroyed: true,
-      _last: true,
-      chunkedEncoding: false,
-      shouldKeepAlive: true,
-      maxRequestsOnConnectionReached: false,
-      _defaultKeepAlive: true,
-      useChunkedEncodingByDefault: false,
-      sendDate: false,
-      _removedConnection: false,
-      _removedContLen: false,
-      _removedTE: false,
-      strictContentLength: false,
-      _contentLength: 0,
-      _hasBody: true,
-      _trailer: '',
-      finished: true,
-      _headerSent: true,
-      _closed: true,
-      socket: [TLSSocket],
-      _header: 'GET /replid/34a01fdc-c695-492f-8284-d19370a28efd HTTP/1.1\r\n' +
-        'Accept: application/json, text/plain, */*\r\n' +
-        'User-Agent: axios/1.6.4\r\n' +
-        'Accept-Encoding: gzip, compress, deflate, br\r\n' +
-        'Host: replit.com\r\n' +
-        'Connection: keep-alive\r\n' +
-        '\r\n',
-      _keepAliveTimeout: 0,
-      _onPendingData: [Function: nop],
-      agent: [Agent],
-      socketPath: undefined,
-      method: 'GET',
-      maxHeaderSize: undefined,
-      insecureHTTPParser: undefined,
-      joinDuplicateHeaders: undefined,
-      path: '/replid/34a01fdc-c695-492f-8284-d19370a28efd',
-      _ended: true,
-      res: [IncomingMessage],
-      aborted: false,
-      timeoutCb: null,
-      upgradeOrConnect: false,
-      parser: null,
-      maxHeadersCount: null,
-      reusedSocket: true,
-      host: 'replit.com',
-      protocol: 'https:',
-      _redirectable: [Writable],
-      [Symbol(kCapture)]: false,
-      [Symbol(kBytesWritten)]: 0,
-      [Symbol(kNeedDrain)]: false,
-      [Symbol(corked)]: 0,
-      [Symbol(kOutHeaders)]: [Object: null prototype],
-      [Symbol(errored)]: null,
-      [Symbol(kHighWaterMark)]: 16384,
-      [Symbol(kRejectNonStandardBodyWrites)]: false,
-      [Symbol(kUniqueHeaders)]: null
-    },
-    data: '<!DOCTYPE html>\n' +
-      '<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]-->\n' +
-      '<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en-US"> <![endif]-->\n' +
-      '<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en-US"> <![endif]-->\n' +
-      '<!--[if gt IE 8]><!--> <html class="no-js" lang="en-US"> <!--<![endif]-->\n' +
-      '<head>\n' +
-      '<title>Attention Required! | Cloudflare</title>\n' +
-      '<meta charset="UTF-8" />\n' +
-      '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />\n' +
-      '<meta http-equiv="X-UA-Compatible" content="IE=Edge" />\n' +
-      '<meta name="robots" content="noindex, nofollow" />\n' +
-      '<meta name="viewport" content="width=device-width,initial-scale=1" />\n' +
-      '<link rel="stylesheet" id="cf_styles-css" href="/cdn-cgi/styles/cf.errors.css" />\n' +
-      `<!--[if lt IE 9]><link rel="stylesheet" id='cf_styles-ie-css' href="/cdn-cgi/styles/cf.errors.ie.css" /><![endif]-->\n` +
-      '<style>body{margin:0;padding:0}</style>\n' +
-      '\n' +
-      '\n' +
-      '<!--[if gte IE 10]><!-->\n' +
-      '<script>\n' +
-      '  if (!navigator.cookieEnabled) {\n' +
-      "    window.addEventListener('DOMContentLoaded', function () {\n" +
-      "      var cookieEl = document.getElementById('cookie-alert');\n" +
-      "      cookieEl.style.display = 'block';\n" +
-      '    })\n' +
-      '  }\n' +
-      '</script>\n' +
-      '<!--<![endif]-->\n' +
-      '\n' +
-      '\n' +
-      '</head>\n' +
-      '<body>\n' +
-      '  <div id="cf-wrapper">\n' +
-      '    <div class="cf-alert cf-alert-error cf-cookie-error" id="cookie-alert" data-translate="enable_cookies">Please enable cookies.</div>\n' +
-      '    <div id="cf-error-details" class="cf-error-details-wrapper">\n' +
-      '      <div class="cf-wrapper cf-header cf-error-overview">\n' +
-      '        <h1 data-translate="block_headline">Sorry, you have been blocked</h1>\n' +
-      '        <h2 class="cf-subheadline"><span data-translate="unable_to_access">You are unable to access</span> replit.com</h2>\n' +
-      '      </div><!-- /.header -->\n' +
-      '\n' +
-      '      <div class="cf-section cf-highlight">\n' +
-      '        <div class="cf-wrapper">\n' +
-      '          <div class="cf-screenshot-container cf-screenshot-full">\n' +
-      '            \n' +
-      '              <span class="cf-no-screenshot error"></span>\n' +
-      '            \n' +
-      '          </div>\n' +
-      '        </div>\n' +
-      '      </div><!-- /.captcha-container -->\n' +
-      '\n' +
-      '      <div class="cf-section cf-wrapper">\n' +
-      '        <div class="cf-columns two">\n' +
-      '          <div class="cf-column">\n' +
-      '            <h2 data-translate="blocked_why_headline">Why have I been blocked?</h2>\n' +
-      '\n' +
-      '            <p data-translate="blocked_why_detail">This website is using a security service to protect itself from online attacks. The action you just performed triggered the security solution. There are several actions that could trigger this block including submitting a certain word or phrase, a SQL command or malformed data.</p>\n' +
-      '          </div>\n' +
-      '\n' +
-      '          <div class="cf-column">\n' +
-      '            <h2 data-translate="blocked_resolve_headline">What can I do to resolve this?</h2>\n' +
-      '\n' +
-      '            <p data-translate="blocked_resolve_detail">You can email the site owner to let them know you were blocked. Please include what you were doing when this page came up and the Cloudflare Ray ID found at the bottom of this page.</p>\n' +
-      '          </div>\n' +
-      '        </div>\n' +
-      '      </div><!-- /.section -->\n' +
-      '\n' +
-      '      <div class="cf-error-footer cf-wrapper w-240 lg:w-full py-10 sm:py-4 sm:px-8 mx-auto text-center sm:text-left border-solid border-0 border-t border-gray-300">\n' +
-      '  <p class="text-13">\n' +
-      '    <span class="cf-footer-item sm:block sm:mb-1">Cloudflare Ray ID: <strong class="font-semibold">8445227628a6a93d</strong></span>\n' +
-      '    <span class="cf-footer-separator sm:hidden">&bull;</span>\n' +
-      '    <span id="cf-footer-item-ip" class="cf-footer-item hidden sm:block sm:mb-1">\n' +
-      '      Your IP:\n' +
-      '      <button type="button" id="cf-footer-ip-reveal" class="cf-footer-ip-reveal-btn">Click to reveal</button>\n' +
-      '      <span class="hidden" id="cf-footer-ip">13.211.64.218</span>\n' +
-      '      <span class="cf-footer-separator sm:hidden">&bull;</span>\n' +
-      '    </span>\n' +
-      '    <span class="cf-footer-item sm:block sm:mb-1"><span>Performance &amp; security by</span> <a rel="noopener noreferrer" href="https://www.cloudflare.com/5xx-error-landing" id="brand_link" target="_blank">Cloudflare</a></span>\n' +
-      '    \n' +
-      '  </p>\n' +
-      '  <script>(function(){function d(){var b=a.getElementById("cf-footer-item-ip"),c=a.getElementById("cf-footer-ip-reveal");b&&"classList"in b&&(b.classList.remove("hidden"),c.addEventListener("click",function(){c.classList.add("hidden");a.getElementById("cf-footer-ip").classList.remove("hidden")}))}var a=document;document.addEventListener&&a.addEventListener("DOMContentLoaded",d)})();</script>\n' +
-      '</div><!-- /.error-footer -->\n' +
-      '\n' +
-      '\n' +
-      '    </div><!-- /#cf-error-details -->\n' +
-      '  </div><!-- /#cf-wrapper -->\n' +
-      '\n' +
-      '  <script>\n' +
-      '  window._cf_translation = {};\n' +
-      '  \n' +
-      '  \n' +
-      '</script>\n' +
-      '\n' +
-      '</body>\n' +
-      '</html>\n'
-  }
-}
-- Login with cookie array
-- Connecting a SQLITE database
-[90m18:43:50 12/01/2024[0m [92m LOADED:[0m [32m1[0m, [33m1[0m[90m18:43:50 12/01/2024[0m [92m LOADED:[0m [32m2[0m, [33m2[0m[90m18:43:50 12/01/2024[0m [92m LOADED:[0m [32m3[0m, [33m3[0m[90m18:43:50 12/01/2024[0m [92m LOADED:[0m [32m4[0m, [33m3[0m[90m18:43:50 12/01/2024[0m [92m LOADED:[0m [32m5[0m, [33m3[0m[90m18:43:50 12/01/2024[0m [92m LOADED:[0m [32m6[0m, [33m4[0m[90m18:43:50 12/01/2024[0m [92m LOADED:[0m [32m7[0m, [33m5[0m[90m18:43:50 12/01/2024[0m [92m LOADED:[0m [32m8[0m, [33m5[0m[90m18:43:50 12/01/2024[0m [92m LOADED:[0m [32m9[0m, [33m5[0m[90m18:43:50 12/01/2024[0m [92m LOADED:[0m [32m10[0m, [33m6[0m[90m18:43:50 12/01/2024[0m [92m LOADED:[0m [32m11[0m, [33m7[0m[90m18:43:50 12/01/2024[0m [92m LOADED:[0m [32m12[0m, [33m8[0m[90m18:43:50 12/01/2024[0m [92m LOADED:[0m [32m13[0m, [33m9[0m[90m18:43:50 12/01/2024[0m [92m LOADED:[0m [32m14[0m, [33m9[0m[90m18:43:50 12/01/2024[0m [92m LOADED:[0m [32m15[0m, [33m10[0m[90m18:43:50 12/01/2024[0m [92m LOADED:[0m [32m16[0m, [33m10[0m[90m18:43:50 12/01/2024[0m [92m LOADED:[0m [32m17[0m, [33m11[0m[90m18:43:50 12/01/2024[0m [92m LOADED:[0m [32m18[0m, [33m12[0m[90m18:43:50 12/01/2024[0m [92m LOADED:[0m [32m19[0m, [33m12[0m[90m18:43:50 12/01/2024[0m [92m LOADED:[0m [32m20[0m, [33m12[0m[90m18:43:50 12/01/2024[0m [92m LOADED:[0m [32m21[0m, [33m12[0m[90m18:43:50 12/01/2024[0m [92m LOADED:[0m [32m22[0m, [33m13[0m[90m18:43:50 12/01/2024[0m [92m LOADED:[0m [32m23[0m, [33m13[0m[90m18:43:50 12/01/2024[0m [92m LOADED:[0m [32m24[0m, [33m14[0m[90m18:43:50 12/01/2024[0m [92m LOADED:[0m [32m25[0m, [33m15[0mFontconfig error: Cannot load default config file
-[90m18:43:51 12/01/2024[0m [92m LOADED:[0m [32m26[0m, [33m15[0m[90m18:43:51 12/01/2024[0m [92m LOADED:[0m [32m27[0m, [33m16[0m[90m18:43:51 12/01/2024[0m [92m LOADED:[0m [32m28[0m, [33m17[0m[90m18:43:51 12/01/2024[0m [92m LOADED:[0m [32m29[0m, [33m18[0m[90m18:43:51 12/01/2024[0m [92m LOADED:[0m [32m30[0m, [33m19[0m[90m18:43:51 12/01/2024[0m [92m LOADED:[0m [32m31[0m, [33m20[0m[90m18:43:51 12/01/2024[0m [92m LOADED:[0m [32m32[0m, [33m20[0m[90m18:43:51 12/01/2024[0m [92m LOADED:[0m [32m33[0m, [33m21[0m[90m18:43:51 12/01/2024[0m [92m LOADED:[0m [32m34[0m, [33m22[0m[90m18:43:51 12/01/2024[0m [92m LOADED:[0m [32m35[0m, [33m23[0m[90m18:43:51 12/01/2024[0m [92m LOADED:[0m [32m36[0m, [33m24[0m[90m18:43:51 12/01/2024[0m [92m LOADED:[0m [32m37[0m, [33m25[0m[90m18:43:51 12/01/2024[0m [92m LOADED:[0m [32m38[0m, [33m25[0m[90m18:43:51 12/01/2024[0m [92m LOADED:[0m [32m39[0m, [33m26[0m[90m18:43:51 12/01/2024[0m [92m LOADED:[0m [32m40[0m, [33m26[0m[90m18:43:51 12/01/2024[0m [92m LOADED:[0m [32m41[0m, [33m27[0m[90m18:43:51 12/01/2024[0m [92m LOADED:[0m [32m42[0m, [33m28[0m[90m18:43:51 12/01/2024[0m [92m LOADED:[0m [32m43[0m, [33m29[0m[90m18:43:51 12/01/2024[0m [92m LOADED:[0m [32m44[0m, [33m30[0m[90m18:43:51 12/01/2024[0m [92m LOADED:[0m [32m45[0m, [33m31[0m[90m18:43:51 12/01/2024[0m [92m LOADED:[0m [32m46[0m, [33m32[0m[90m18:43:51 12/01/2024[0m [92m LOADED:[0m [32m47[0m, [33m33[0m[90m18:43:51 12/01/2024[0m [92m LOADED:[0m [32m48[0m, [33m34[0m[90m18:43:51 12/01/2024[0m [92m LOADED:[0m [32m49[0m, [33m35[0m[90m18:43:51 12/01/2024[0m [92m LOADED:[0m [32m50[0m, [33m36[0m[90m18:43:51 12/01/2024[0m [92m LOADED:[0m [32m51[0m, [33m36[0m[90m18:43:51 12/01/2024[0m [92m LOADED:[0m [32m52[0m, [33m36[0m[90m18:43:51 12/01/2024[0m [92m LOADED:[0m [32m53[0m, [33m37[0m[90m18:43:51 12/01/2024[0m [92m LOADED:[0m [32m54[0m, [33m38[0m[90m18:43:51 12/01/2024[0m [92m LOADED:[0m [32m55[0m, [33m38[0m[90m18:43:51 12/01/2024[0m [92m LOADED:[0m [32m56[0m, [33m39[0m[90m18:43:51 12/01/2024[0m [92m LOADED:[0m [32m57[0m, [33m40[0m[90m18:43:51 12/01/2024[0m [92m LOADED:[0m [32m58[0m, [33m41[0m[90m18:43:51 12/01/2024[0m [92m LOADED:[0m [32m59[0m, [33m41[0m[90m18:43:51 12/01/2024[0m [92m LOADED:[0m [32m60[0m, [33m42[0m[90m18:43:51 12/01/2024[0m [92m LOADED:[0m [32m61[0m, [33m43[0m[90m18:43:51 12/01/2024[0m [92m LOADED:[0m [32m62[0m, [33m44[0m[90m18:43:51 12/01/2024[0m [92m LOADED:[0m [32m63[0m, [33m45[0m[90m18:43:51 12/01/2024[0m [92m LOADED:[0m [32m64[0m, [33m46[0m[90m18:43:51 12/01/2024[0m [92m LOADED:[0m [32m65[0m, [33m46[0m[90m18:43:51 12/01/2024[0m [92m LOADED:[0m [32m66[0m, [33m47[0m[90m18:43:51 12/01/2024[0m [92m LOADED:[0m [32m67[0m, [33m48[0m[90m18:43:51 12/01/2024[0m [92m LOADED:[0m [32m68[0m, [33m49[0m[90m18:43:51 12/01/2024[0m [92m LOADED:[0m [32m69[0m, [33m49[0m[90m18:43:51 12/01/2024[0m [92m LOADED:[0m [32m70[0m, [33m49[0m[90m18:43:51 12/01/2024[0m [92m LOADED:[0m [32m71[0m, [33m49[0m[90m18:43:51 12/01/2024[0m [92m LOADED:[0m [32m72[0m, [33m50[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m73[0m, [33m51[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m74[0m, [33m52[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m75[0m, [33m53[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m76[0m, [33m53[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m77[0m, [33m53[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m78[0m, [33m53[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m79[0m, [33m54[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m80[0m, [33m54[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m81[0m, [33m55[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m82[0m, [33m56[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m83[0m, [33m57[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m84[0m, [33m58[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m85[0m, [33m59[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m86[0m, [33m60[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m87[0m, [33m60[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m88[0m, [33m61[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m89[0m, [33m62[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m90[0m, [33m63[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m91[0m, [33m64[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m92[0m, [33m65[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m93[0m, [33m66[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m94[0m, [33m67[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m95[0m, [33m68[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m96[0m, [33m69[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m97[0m, [33m70[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m98[0m, [33m71[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m99[0m, [33m72[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m100[0m, [33m73[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m101[0m, [33m74[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m102[0m, [33m75[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m103[0m, [33m75[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m104[0m, [33m76[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m105[0m, [33m77[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m106[0m, [33m78[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m107[0m, [33m79[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m108[0m, [33m79[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m109[0m, [33m80[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m110[0m, [33m81[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m111[0m, [33m82[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m112[0m, [33m83[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m113[0m, [33m84[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m114[0m, [33m85[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m115[0m, [33m85[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m116[0m, [33m86[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m117[0m, [33m87[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m118[0m, [33m88[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m119[0m, [33m88[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m120[0m, [33m89[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m121[0m, [33m90[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m122[0m, [33m91[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m123[0m, [33m91[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m124[0m, [33m91[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m125[0m, [33m91[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m126[0m, [33m91[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m127[0m, [33m91[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m128[0m, [33m91[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m129[0m, [33m91[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m130[0m, [33m91[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m131[0m, [33m91[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m132[0m, [33m91[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m133[0m, [33m92[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m134[0m, [33m93[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m135[0m, [33m94[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m136[0m, [33m94[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m137[0m, [33m95[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m138[0m, [33m96[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m139[0m, [33m97[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m140[0m, [33m98[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m141[0m, [33m99[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m142[0m, [33m100[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m143[0m, [33m101[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m144[0m, [33m102[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m145[0m, [33m103[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m146[0m, [33m104[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m147[0m, [33m104[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m148[0m, [33m105[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m149[0m, [33m105[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m150[0m, [33m105[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m151[0m, [33m106[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m152[0m, [33m106[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m153[0m, [33m106[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m154[0m, [33m107[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m155[0m, [33m107[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m156[0m, [33m108[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m157[0m, [33m108[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m158[0m, [33m109[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m159[0m, [33m110[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m160[0m, [33m111[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m161[0m, [33m112[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m162[0m, [33m113[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m163[0m, [33m113[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m164[0m, [33m113[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m165[0m, [33m114[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m166[0m, [33m115[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m167[0m, [33m115[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m168[0m, [33m116[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m169[0m, [33m117[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m170[0m, [33m118[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m171[0m, [33m119[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m172[0m, [33m120[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m1[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m2[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m3[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m4[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m5[0m[90m18:43:52 12/01/2024[0m [92m LOADED:[0m [32m6[0m- Login with cookie array
-- Connecting a SQLITE database
-[90m18:44:12 12/01/2024[0m [92m LOADED:[0m [32m1[0m, [33m1[0m[90m18:44:12 12/01/2024[0m [92m LOADED:[0m [32m2[0m, [33m2[0m[90m18:44:12 12/01/2024[0m [92m LOADED:[0m [32m3[0m, [33m3[0m[90m18:44:12 12/01/2024[0m [92m LOADED:[0m [32m4[0m, [33m3[0m[90m18:44:12 12/01/2024[0m [92m LOADED:[0m [32m5[0m, [33m3[0m[90m18:44:12 12/01/2024[0m [92m LOADED:[0m [32m6[0m, [33m4[0m[90m18:44:12 12/01/2024[0m [92m LOADED:[0m [32m7[0m, [33m5[0m[90m18:44:13 12/01/2024[0m [92m LOADED:[0m [32m8[0m, [33m5[0m[90m18:44:13 12/01/2024[0m [92m LOADED:[0m [32m9[0m, [33m5[0m[90m18:44:13 12/01/2024[0m [92m LOADED:[0m [32m10[0m, [33m6[0m[90m18:44:13 12/01/2024[0m [92m LOADED:[0m [32m11[0m, [33m7[0m[90m18:44:13 12/01/2024[0m [92m LOADED:[0m [32m12[0m, [33m8[0m[90m18:44:13 12/01/2024[0m [92m LOADED:[0m [32m13[0m, [33m9[0m[90m18:44:13 12/01/2024[0m [92m LOADED:[0m [32m14[0m, [33m9[0m[90m18:44:13 12/01/2024[0m [92m LOADED:[0m [32m15[0m, [33m10[0m[90m18:44:13 12/01/2024[0m [92m LOADED:[0m [32m16[0m, [33m10[0m[90m18:44:13 12/01/2024[0m [92m LOADED:[0m [32m17[0m, [33m11[0m[90m18:44:13 12/01/2024[0m [92m LOADED:[0m [32m18[0m, [33m12[0m[90m18:44:13 12/01/2024[0m [92m LOADED:[0m [32m19[0m, [33m12[0m[90m18:44:13 12/01/2024[0m [92m LOADED:[0m [32m20[0m, [33m12[0m[90m18:44:13 12/01/2024[0m [92m LOADED:[0m [32m21[0m, [33m12[0m[90m18:44:13 12/01/2024[0m [92m LOADED:[0m [32m22[0m, [33m13[0m[90m18:44:13 12/01/2024[0m [92m LOADED:[0m [32m23[0m, [33m13[0m[90m18:44:13 12/01/2024[0m [92m LOADED:[0m [32m24[0m, [33m14[0m[90m18:44:13 12/01/2024[0m [92m LOADED:[0m [32m25[0m, [33m15[0mFontconfig error: Cannot load default config file
-[90m18:44:13 12/01/2024[0m [92m LOADED:[0m [32m26[0m, [33m15[0m[90m18:44:13 12/01/2024[0m [92m LOADED:[0m [32m27[0m, [33m16[0m[90m18:44:13 12/01/2024[0m [92m LOADED:[0m [32m28[0m, [33m17[0m[90m18:44:13 12/01/2024[0m [92m LOADED:[0m [32m29[0m, [33m18[0m[90m18:44:13 12/01/2024[0m [92m LOADED:[0m [32m30[0m, [33m19[0m[90m18:44:13 12/01/2024[0m [92m LOADED:[0m [32m31[0m, [33m20[0m[90m18:44:13 12/01/2024[0m [92m LOADED:[0m [32m32[0m, [33m20[0m[90m18:44:13 12/01/2024[0m [92m LOADED:[0m [32m33[0m, [33m21[0m[90m18:44:13 12/01/2024[0m [92m LOADED:[0m [32m34[0m, [33m22[0m[90m18:44:13 12/01/2024[0m [92m LOADED:[0m [32m35[0m, [33m23[0m[90m18:44:13 12/01/2024[0m [92m LOADED:[0m [32m36[0m, [33m24[0m[90m18:44:13 12/01/2024[0m [92m LOADED:[0m [32m37[0m, [33m25[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m38[0m, [33m25[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m39[0m, [33m26[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m40[0m, [33m26[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m41[0m, [33m27[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m42[0m, [33m28[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m43[0m, [33m29[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m44[0m, [33m30[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m45[0m, [33m31[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m46[0m, [33m32[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m47[0m, [33m33[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m48[0m, [33m34[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m49[0m, [33m35[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m50[0m, [33m36[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m51[0m, [33m36[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m52[0m, [33m36[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m53[0m, [33m37[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m54[0m, [33m38[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m55[0m, [33m38[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m56[0m, [33m39[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m57[0m, [33m40[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m58[0m, [33m41[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m59[0m, [33m41[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m60[0m, [33m42[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m61[0m, [33m43[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m62[0m, [33m44[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m63[0m, [33m45[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m64[0m, [33m46[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m65[0m, [33m46[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m66[0m, [33m47[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m67[0m, [33m48[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m68[0m, [33m49[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m69[0m, [33m49[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m70[0m, [33m49[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m71[0m, [33m49[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m72[0m, [33m50[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m73[0m, [33m51[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m74[0m, [33m52[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m75[0m, [33m53[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m76[0m, [33m53[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m77[0m, [33m53[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m78[0m, [33m53[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m79[0m, [33m54[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m80[0m, [33m54[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m81[0m, [33m55[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m82[0m, [33m56[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m83[0m, [33m57[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m84[0m, [33m58[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m85[0m, [33m59[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m86[0m, [33m60[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m87[0m, [33m60[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m88[0m, [33m61[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m89[0m, [33m62[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m90[0m, [33m63[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m91[0m, [33m64[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m92[0m, [33m65[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m93[0m, [33m66[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m94[0m, [33m67[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m95[0m, [33m68[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m96[0m, [33m69[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m97[0m, [33m70[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m98[0m, [33m71[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m99[0m, [33m72[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m100[0m, [33m73[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m101[0m, [33m74[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m102[0m, [33m75[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m103[0m, [33m75[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m104[0m, [33m76[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m105[0m, [33m77[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m106[0m, [33m78[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m107[0m, [33m79[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m108[0m, [33m79[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m109[0m, [33m80[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m110[0m, [33m81[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m111[0m, [33m82[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m112[0m, [33m83[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m113[0m, [33m84[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m114[0m, [33m85[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m115[0m, [33m85[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m116[0m, [33m86[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m117[0m, [33m87[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m118[0m, [33m88[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m119[0m, [33m88[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m120[0m, [33m89[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m121[0m, [33m90[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m122[0m, [33m91[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m123[0m, [33m91[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m124[0m, [33m91[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m125[0m, [33m91[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m126[0m, [33m91[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m127[0m, [33m91[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m128[0m, [33m91[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m129[0m, [33m91[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m130[0m, [33m91[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m131[0m, [33m91[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m132[0m, [33m91[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m133[0m, [33m92[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m134[0m, [33m93[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m135[0m, [33m94[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m136[0m, [33m94[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m137[0m, [33m95[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m138[0m, [33m96[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m139[0m, [33m97[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m140[0m, [33m98[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m141[0m, [33m99[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m142[0m, [33m100[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m143[0m, [33m101[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m144[0m, [33m102[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m145[0m, [33m103[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m146[0m, [33m104[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m147[0m, [33m104[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m148[0m, [33m105[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m149[0m, [33m105[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m150[0m, [33m105[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m151[0m, [33m106[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m152[0m, [33m106[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m153[0m, [33m106[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m154[0m, [33m107[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m155[0m, [33m107[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m156[0m, [33m108[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m157[0m, [33m108[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m158[0m, [33m109[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m159[0m, [33m110[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m160[0m, [33m111[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m161[0m, [33m112[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m162[0m, [33m113[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m163[0m, [33m113[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m164[0m, [33m113[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m165[0m, [33m114[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m166[0m, [33m115[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m167[0m, [33m115[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m168[0m, [33m116[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m169[0m, [33m117[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m170[0m, [33m118[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m171[0m, [33m119[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m172[0m, [33m120[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m1[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m2[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m3[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m4[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m5[0m[90m18:44:14 12/01/2024[0m [92m LOADED:[0m [32m6[0m- Login with cookie array
-- Connecting a SQLITE database
-[90m18:44:58 12/01/2024[0m [92m LOADED:[0m [32m1[0m, [33m1[0m[90m18:44:58 12/01/2024[0m [92m LOADED:[0m [32m2[0m, [33m2[0m[90m18:44:58 12/01/2024[0m [92m LOADED:[0m [32m3[0m, [33m3[0m[90m18:44:58 12/01/2024[0m [92m LOADED:[0m [32m4[0m, [33m3[0m[90m18:44:58 12/01/2024[0m [92m LOADED:[0m [32m5[0m, [33m3[0m[90m18:44:58 12/01/2024[0m [92m LOADED:[0m [32m6[0m, [33m4[0m[90m18:44:58 12/01/2024[0m [92m LOADED:[0m [32m7[0m, [33m5[0m[90m18:44:58 12/01/2024[0m [92m LOADED:[0m [32m8[0m, [33m5[0m[90m18:44:58 12/01/2024[0m [92m LOADED:[0m [32m9[0m, [33m5[0m[90m18:44:58 12/01/2024[0m [92m LOADED:[0m [32m10[0m, [33m6[0m[90m18:44:58 12/01/2024[0m [92m LOADED:[0m [32m11[0m, [33m7[0m[90m18:44:58 12/01/2024[0m [92m LOADED:[0m [32m12[0m, [33m8[0m[90m18:44:58 12/01/2024[0m [92m LOADED:[0m [32m13[0m, [33m9[0m[90m18:44:58 12/01/2024[0m [92m LOADED:[0m [32m14[0m, [33m9[0m[90m18:44:58 12/01/2024[0m [92m LOADED:[0m [32m15[0m, [33m10[0m[90m18:44:58 12/01/2024[0m [92m LOADED:[0m [32m16[0m, [33m10[0m[90m18:44:58 12/01/2024[0m [92m LOADED:[0m [32m17[0m, [33m11[0m[90m18:44:58 12/01/2024[0m [92m LOADED:[0m [32m18[0m, [33m12[0m[90m18:44:58 12/01/2024[0m [92m LOADED:[0m [32m19[0m, [33m12[0m[90m18:44:58 12/01/2024[0m [92m LOADED:[0m [32m20[0m, [33m12[0m[90m18:44:58 12/01/2024[0m [92m LOADED:[0m [32m21[0m, [33m12[0m[90m18:44:58 12/01/2024[0m [92m LOADED:[0m [32m22[0m, [33m13[0m[90m18:44:58 12/01/2024[0m [92m LOADED:[0m [32m23[0m, [33m13[0m[90m18:44:58 12/01/2024[0m [92m LOADED:[0m [32m24[0m, [33m14[0m[90m18:44:58 12/01/2024[0m [92m LOADED:[0m [32m25[0m, [33m15[0mFontconfig error: Cannot load default config file
-[90m18:44:58 12/01/2024[0m [92m LOADED:[0m [32m26[0m, [33m15[0m[90m18:44:58 12/01/2024[0m [92m LOADED:[0m [32m27[0m, [33m16[0m[90m18:44:58 12/01/2024[0m [92m LOADED:[0m [32m28[0m, [33m17[0m[90m18:44:58 12/01/2024[0m [92m LOADED:[0m [32m29[0m, [33m18[0m[90m18:44:58 12/01/2024[0m [92m LOADED:[0m [32m30[0m, [33m19[0m[90m18:44:58 12/01/2024[0m [92m LOADED:[0m [32m31[0m, [33m20[0m[90m18:44:58 12/01/2024[0m [92m LOADED:[0m [32m32[0m, [33m20[0m[90m18:44:58 12/01/2024[0m [92m LOADED:[0m [32m33[0m, [33m21[0m[90m18:44:58 12/01/2024[0m [92m LOADED:[0m [32m34[0m, [33m22[0m[90m18:44:58 12/01/2024[0m [92m LOADED:[0m [32m35[0m, [33m23[0m[90m18:44:58 12/01/2024[0m [92m LOADED:[0m [32m36[0m, [33m24[0m[90m18:44:58 12/01/2024[0m [92m LOADED:[0m [32m37[0m, [33m25[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m38[0m, [33m25[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m39[0m, [33m26[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m40[0m, [33m26[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m41[0m, [33m27[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m42[0m, [33m28[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m43[0m, [33m29[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m44[0m, [33m30[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m45[0m, [33m31[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m46[0m, [33m32[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m47[0m, [33m33[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m48[0m, [33m34[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m49[0m, [33m35[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m50[0m, [33m36[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m51[0m, [33m36[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m52[0m, [33m36[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m53[0m, [33m37[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m54[0m, [33m38[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m55[0m, [33m38[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m56[0m, [33m39[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m57[0m, [33m40[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m58[0m, [33m41[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m59[0m, [33m41[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m60[0m, [33m42[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m61[0m, [33m43[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m62[0m, [33m44[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m63[0m, [33m45[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m64[0m, [33m46[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m65[0m, [33m46[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m66[0m, [33m47[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m67[0m, [33m48[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m68[0m, [33m49[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m69[0m, [33m49[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m70[0m, [33m49[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m71[0m, [33m49[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m72[0m, [33m50[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m73[0m, [33m51[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m74[0m, [33m52[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m75[0m, [33m53[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m76[0m, [33m53[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m77[0m, [33m53[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m78[0m, [33m53[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m79[0m, [33m54[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m80[0m, [33m54[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m81[0m, [33m55[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m82[0m, [33m56[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m83[0m, [33m57[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m84[0m, [33m58[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m85[0m, [33m59[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m86[0m, [33m60[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m87[0m, [33m60[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m88[0m, [33m61[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m89[0m, [33m62[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m90[0m, [33m63[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m91[0m, [33m64[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m92[0m, [33m65[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m93[0m, [33m66[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m94[0m, [33m67[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m95[0m, [33m68[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m96[0m, [33m69[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m97[0m, [33m70[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m98[0m, [33m71[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m99[0m, [33m72[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m100[0m, [33m73[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m101[0m, [33m74[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m102[0m, [33m75[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m103[0m, [33m75[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m104[0m, [33m76[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m105[0m, [33m77[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m106[0m, [33m78[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m107[0m, [33m79[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m108[0m, [33m79[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m109[0m, [33m80[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m110[0m, [33m81[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m111[0m, [33m82[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m112[0m, [33m83[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m113[0m, [33m84[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m114[0m, [33m85[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m115[0m, [33m85[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m116[0m, [33m86[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m117[0m, [33m87[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m118[0m, [33m88[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m119[0m, [33m88[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m120[0m, [33m89[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m121[0m, [33m90[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m122[0m, [33m91[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m123[0m, [33m91[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m124[0m, [33m91[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m125[0m, [33m91[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m126[0m, [33m91[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m127[0m, [33m91[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m128[0m, [33m91[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m129[0m, [33m91[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m130[0m, [33m91[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m131[0m, [33m91[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m132[0m, [33m91[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m133[0m, [33m92[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m134[0m, [33m93[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m135[0m, [33m94[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m136[0m, [33m94[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m137[0m, [33m95[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m138[0m, [33m96[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m139[0m, [33m97[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m140[0m, [33m98[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m141[0m, [33m99[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m142[0m, [33m100[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m143[0m, [33m101[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m144[0m, [33m102[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m145[0m, [33m103[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m146[0m, [33m104[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m147[0m, [33m104[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m148[0m, [33m105[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m149[0m, [33m105[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m150[0m, [33m105[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m151[0m, [33m106[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m152[0m, [33m106[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m153[0m, [33m106[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m154[0m, [33m107[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m155[0m, [33m107[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m156[0m, [33m108[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m157[0m, [33m108[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m158[0m, [33m109[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m159[0m, [33m110[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m160[0m, [33m111[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m161[0m, [33m112[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m162[0m, [33m113[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m163[0m, [33m113[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m164[0m, [33m113[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m165[0m, [33m114[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m166[0m, [33m115[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m167[0m, [33m115[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m168[0m, [33m116[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m169[0m, [33m117[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m170[0m, [33m118[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m171[0m, [33m119[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m172[0m, [33m120[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m1[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m2[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m3[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m4[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m5[0m[90m18:44:59 12/01/2024[0m [92m LOADED:[0m [32m6[0mFailed to get answer: Request failed with status code 403
-- Login with cookie array
-- Connecting a SQLITE database
-[90m18:45:25 12/01/2024[0m [92m LOADED:[0m [32m1[0m, [33m1[0m[90m18:45:26 12/01/2024[0m [92m LOADED:[0m [32m2[0m, [33m2[0m[90m18:45:26 12/01/2024[0m [92m LOADED:[0m [32m3[0m, [33m3[0m[90m18:45:26 12/01/2024[0m [92m LOADED:[0m [32m4[0m, [33m3[0m[90m18:45:26 12/01/2024[0m [92m LOADED:[0m [32m5[0m, [33m3[0m[90m18:45:26 12/01/2024[0m [92m LOADED:[0m [32m6[0m, [33m4[0m[90m18:45:26 12/01/2024[0m [92m LOADED:[0m [32m7[0m, [33m5[0m[90m18:45:26 12/01/2024[0m [92m LOADED:[0m [32m8[0m, [33m5[0m[90m18:45:26 12/01/2024[0m [92m LOADED:[0m [32m9[0m, [33m5[0m[90m18:45:26 12/01/2024[0m [92m LOADED:[0m [32m10[0m, [33m6[0m[90m18:45:26 12/01/2024[0m [92m LOADED:[0m [32m11[0m, [33m7[0m[90m18:45:26 12/01/2024[0m [92m LOADED:[0m [32m12[0m, [33m8[0m[90m18:45:26 12/01/2024[0m [92m LOADED:[0m [32m13[0m, [33m9[0m[90m18:45:26 12/01/2024[0m [92m LOADED:[0m [32m14[0m, [33m9[0m[90m18:45:26 12/01/2024[0m [92m LOADED:[0m [32m15[0m, [33m10[0m[90m18:45:26 12/01/2024[0m [92m LOADED:[0m [32m16[0m, [33m10[0m[90m18:45:26 12/01/2024[0m [92m LOADED:[0m [32m17[0m, [33m11[0m[90m18:45:26 12/01/2024[0m [92m LOADED:[0m [32m18[0m, [33m12[0m[90m18:45:26 12/01/2024[0m [92m LOADED:[0m [32m19[0m, [33m12[0m[90m18:45:26 12/01/2024[0m [92m LOADED:[0m [32m20[0m, [33m12[0m[90m18:45:26 12/01/2024[0m [92m LOADED:[0m [32m21[0m, [33m12[0m[90m18:45:26 12/01/2024[0m [92m LOADED:[0m [32m22[0m, [33m13[0m[90m18:45:26 12/01/2024[0m [92m LOADED:[0m [32m23[0m, [33m13[0m[90m18:45:26 12/01/2024[0m [92m LOADED:[0m [32m24[0m, [33m14[0m[90m18:45:26 12/01/2024[0m [92m LOADED:[0m [32m25[0m, [33m15[0mFontconfig error: Cannot load default config file
-[90m18:45:26 12/01/2024[0m [92m LOADED:[0m [32m26[0m, [33m15[0m[90m18:45:26 12/01/2024[0m [92m LOADED:[0m [32m27[0m, [33m16[0m[90m18:45:26 12/01/2024[0m [92m LOADED:[0m [32m28[0m, [33m17[0m[90m18:45:26 12/01/2024[0m [92m LOADED:[0m [32m29[0m, [33m18[0m[90m18:45:26 12/01/2024[0m [92m LOADED:[0m [32m30[0m, [33m19[0m[90m18:45:26 12/01/2024[0m [92m LOADED:[0m [32m31[0m, [33m20[0m[90m18:45:26 12/01/2024[0m [92m LOADED:[0m [32m32[0m, [33m20[0m[90m18:45:26 12/01/2024[0m [92m LOADED:[0m [32m33[0m, [33m21[0m[90m18:45:26 12/01/2024[0m [92m LOADED:[0m [32m34[0m, [33m22[0m[90m18:45:26 12/01/2024[0m [92m LOADED:[0m [32m35[0m, [33m23[0m[90m18:45:26 12/01/2024[0m [92m LOADED:[0m [32m36[0m, [33m24[0m[90m18:45:26 12/01/2024[0m [92m LOADED:[0m [32m37[0m, [33m25[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m38[0m, [33m25[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m39[0m, [33m26[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m40[0m, [33m26[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m41[0m, [33m27[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m42[0m, [33m28[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m43[0m, [33m29[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m44[0m, [33m30[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m45[0m, [33m31[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m46[0m, [33m32[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m47[0m, [33m33[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m48[0m, [33m34[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m49[0m, [33m35[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m50[0m, [33m36[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m51[0m, [33m36[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m52[0m, [33m36[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m53[0m, [33m37[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m54[0m, [33m38[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m55[0m, [33m38[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m56[0m, [33m39[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m57[0m, [33m40[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m58[0m, [33m41[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m59[0m, [33m41[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m60[0m, [33m42[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m61[0m, [33m43[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m62[0m, [33m44[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m63[0m, [33m45[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m64[0m, [33m46[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m65[0m, [33m46[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m66[0m, [33m47[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m67[0m, [33m48[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m68[0m, [33m49[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m69[0m, [33m49[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m70[0m, [33m49[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m71[0m, [33m49[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m72[0m, [33m50[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m73[0m, [33m51[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m74[0m, [33m52[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m75[0m, [33m53[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m76[0m, [33m53[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m77[0m, [33m53[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m78[0m, [33m53[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m79[0m, [33m54[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m80[0m, [33m54[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m81[0m, [33m55[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m82[0m, [33m56[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m83[0m, [33m57[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m84[0m, [33m58[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m85[0m, [33m59[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m86[0m, [33m60[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m87[0m, [33m60[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m88[0m, [33m61[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m89[0m, [33m62[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m90[0m, [33m63[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m91[0m, [33m64[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m92[0m, [33m65[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m93[0m, [33m66[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m94[0m, [33m67[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m95[0m, [33m68[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m96[0m, [33m69[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m97[0m, [33m70[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m98[0m, [33m71[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m99[0m, [33m72[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m100[0m, [33m73[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m101[0m, [33m74[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m102[0m, [33m75[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m103[0m, [33m75[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m104[0m, [33m76[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m105[0m, [33m77[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m106[0m, [33m78[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m107[0m, [33m79[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m108[0m, [33m79[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m109[0m, [33m80[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m110[0m, [33m81[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m111[0m, [33m82[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m112[0m, [33m83[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m113[0m, [33m84[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m114[0m, [33m85[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m115[0m, [33m85[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m116[0m, [33m86[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m117[0m, [33m87[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m118[0m, [33m88[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m119[0m, [33m88[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m120[0m, [33m89[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m121[0m, [33m90[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m122[0m, [33m91[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m123[0m, [33m91[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m124[0m, [33m91[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m125[0m, [33m91[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m126[0m, [33m91[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m127[0m, [33m91[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m128[0m, [33m91[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m129[0m, [33m91[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m130[0m, [33m91[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m131[0m, [33m91[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m132[0m, [33m91[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m133[0m, [33m92[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m134[0m, [33m93[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m135[0m, [33m94[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m136[0m, [33m94[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m137[0m, [33m95[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m138[0m, [33m96[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m139[0m, [33m97[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m140[0m, [33m98[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m141[0m, [33m99[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m142[0m, [33m100[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m143[0m, [33m101[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m144[0m, [33m102[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m145[0m, [33m103[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m146[0m, [33m104[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m147[0m, [33m104[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m148[0m, [33m105[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m149[0m, [33m105[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m150[0m, [33m105[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m151[0m, [33m106[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m152[0m, [33m106[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m153[0m, [33m106[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m154[0m, [33m107[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m155[0m, [33m107[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m156[0m, [33m108[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m157[0m, [33m108[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m158[0m, [33m109[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m159[0m, [33m110[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m160[0m, [33m111[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m161[0m, [33m112[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m162[0m, [33m113[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m163[0m, [33m113[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m164[0m, [33m113[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m165[0m, [33m114[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m166[0m, [33m115[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m167[0m, [33m115[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m168[0m, [33m116[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m169[0m, [33m117[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m170[0m, [33m118[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m171[0m, [33m119[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m172[0m, [33m120[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m1[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m2[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m3[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m4[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m5[0m[90m18:45:27 12/01/2024[0m [92m LOADED:[0m [32m6[0mFailed to perform sentiment analysis: The response does not contain only emojis.
-- Login with cookie array
-- Connecting a SQLITE database
-[90m18:45:57 12/01/2024[0m [92m LOADED:[0m [32m1[0m, [33m1[0m[90m18:45:57 12/01/2024[0m [92m LOADED:[0m [32m2[0m, [33m2[0m[90m18:45:57 12/01/2024[0m [92m LOADED:[0m [32m3[0m, [33m3[0m[90m18:45:57 12/01/2024[0m [92m LOADED:[0m [32m4[0m, [33m3[0m[90m18:45:57 12/01/2024[0m [92m LOADED:[0m [32m5[0m, [33m3[0m[90m18:45:57 12/01/2024[0m [92m LOADED:[0m [32m6[0m, [33m4[0m[90m18:45:58 12/01/2024[0m [92m LOADED:[0m [32m7[0m, [33m5[0m[90m18:45:58 12/01/2024[0m [92m LOADED:[0m [32m8[0m, [33m5[0m[90m18:45:58 12/01/2024[0m [92m LOADED:[0m [32m9[0m, [33m5[0m[90m18:45:58 12/01/2024[0m [92m LOADED:[0m [32m10[0m, [33m6[0m[90m18:45:58 12/01/2024[0m [92m LOADED:[0m [32m11[0m, [33m7[0m[90m18:45:58 12/01/2024[0m [92m LOADED:[0m [32m12[0m, [33m8[0m[90m18:45:58 12/01/2024[0m [92m LOADED:[0m [32m13[0m, [33m9[0m[90m18:45:58 12/01/2024[0m [92m LOADED:[0m [32m14[0m, [33m9[0m[90m18:45:58 12/01/2024[0m [92m LOADED:[0m [32m15[0m, [33m10[0m[90m18:45:58 12/01/2024[0m [92m LOADED:[0m [32m16[0m, [33m10[0m[90m18:45:58 12/01/2024[0m [92m LOADED:[0m [32m17[0m, [33m11[0m[90m18:45:58 12/01/2024[0m [92m LOADED:[0m [32m18[0m, [33m12[0m[90m18:45:58 12/01/2024[0m [92m LOADED:[0m [32m19[0m, [33m12[0m[90m18:45:58 12/01/2024[0m [92m LOADED:[0m [32m20[0m, [33m12[0m[90m18:45:58 12/01/2024[0m [92m LOADED:[0m [32m21[0m, [33m12[0m[90m18:45:58 12/01/2024[0m [92m LOADED:[0m [32m22[0m, [33m13[0m[90m18:45:58 12/01/2024[0m [92m LOADED:[0m [32m23[0m, [33m13[0m[90m18:45:58 12/01/2024[0m [92m LOADED:[0m [32m24[0m, [33m14[0m[90m18:45:58 12/01/2024[0m [92m LOADED:[0m [32m25[0m, [33m15[0mFontconfig error: Cannot load default config file
-[90m18:45:58 12/01/2024[0m [92m LOADED:[0m [32m26[0m, [33m15[0m[90m18:45:58 12/01/2024[0m [92m LOADED:[0m [32m27[0m, [33m16[0m[90m18:45:58 12/01/2024[0m [92m LOADED:[0m [32m28[0m, [33m17[0m[90m18:45:58 12/01/2024[0m [92m LOADED:[0m [32m29[0m, [33m18[0m[90m18:45:58 12/01/2024[0m [92m LOADED:[0m [32m30[0m, [33m19[0m[90m18:45:58 12/01/2024[0m [92m LOADED:[0m [32m31[0m, [33m20[0m[90m18:45:58 12/01/2024[0m [92m LOADED:[0m [32m32[0m, [33m20[0m[90m18:45:58 12/01/2024[0m [92m LOADED:[0m [32m33[0m, [33m21[0m[90m18:45:58 12/01/2024[0m [92m LOADED:[0m [32m34[0m, [33m22[0m[90m18:45:58 12/01/2024[0m [92m LOADED:[0m [32m35[0m, [33m23[0m[90m18:45:58 12/01/2024[0m [92m LOADED:[0m [32m36[0m, [33m24[0m[90m18:45:58 12/01/2024[0m [92m LOADED:[0m [32m37[0m, [33m25[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m38[0m, [33m25[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m39[0m, [33m26[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m40[0m, [33m26[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m41[0m, [33m27[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m42[0m, [33m28[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m43[0m, [33m29[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m44[0m, [33m30[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m45[0m, [33m31[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m46[0m, [33m32[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m47[0m, [33m33[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m48[0m, [33m34[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m49[0m, [33m35[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m50[0m, [33m36[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m51[0m, [33m36[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m52[0m, [33m36[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m53[0m, [33m37[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m54[0m, [33m38[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m55[0m, [33m38[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m56[0m, [33m39[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m57[0m, [33m40[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m58[0m, [33m41[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m59[0m, [33m41[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m60[0m, [33m42[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m61[0m, [33m43[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m62[0m, [33m44[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m63[0m, [33m45[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m64[0m, [33m46[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m65[0m, [33m46[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m66[0m, [33m47[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m67[0m, [33m48[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m68[0m, [33m49[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m69[0m, [33m49[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m70[0m, [33m49[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m71[0m, [33m49[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m72[0m, [33m50[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m73[0m, [33m51[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m74[0m, [33m52[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m75[0m, [33m53[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m76[0m, [33m53[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m77[0m, [33m53[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m78[0m, [33m53[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m79[0m, [33m54[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m80[0m, [33m54[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m81[0m, [33m55[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m82[0m, [33m56[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m83[0m, [33m57[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m84[0m, [33m58[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m85[0m, [33m59[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m86[0m, [33m60[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m87[0m, [33m60[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m88[0m, [33m61[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m89[0m, [33m62[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m90[0m, [33m63[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m91[0m, [33m64[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m92[0m, [33m65[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m93[0m, [33m66[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m94[0m, [33m67[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m95[0m, [33m68[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m96[0m, [33m69[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m97[0m, [33m70[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m98[0m, [33m71[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m99[0m, [33m72[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m100[0m, [33m73[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m101[0m, [33m74[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m102[0m, [33m75[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m103[0m, [33m75[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m104[0m, [33m76[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m105[0m, [33m77[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m106[0m, [33m78[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m107[0m, [33m79[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m108[0m, [33m79[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m109[0m, [33m80[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m110[0m, [33m81[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m111[0m, [33m82[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m112[0m, [33m83[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m113[0m, [33m84[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m114[0m, [33m85[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m115[0m, [33m85[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m116[0m, [33m86[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m117[0m, [33m87[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m118[0m, [33m88[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m119[0m, [33m88[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m120[0m, [33m89[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m121[0m, [33m90[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m122[0m, [33m91[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m123[0m, [33m91[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m124[0m, [33m91[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m125[0m, [33m91[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m126[0m, [33m91[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m127[0m, [33m91[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m128[0m, [33m91[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m129[0m, [33m91[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m130[0m, [33m91[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m131[0m, [33m91[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m132[0m, [33m91[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m133[0m, [33m92[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m134[0m, [33m93[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m135[0m, [33m94[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m136[0m, [33m94[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m137[0m, [33m95[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m138[0m, [33m96[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m139[0m, [33m97[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m140[0m, [33m98[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m141[0m, [33m99[0m[90m18:45:59 12/01/2024[0m [92m LOADED:[0m [32m142[0m, [33m100[0m[90m18:46:00 12/01/2024[0m [92m LOADED:[0m [32m143[0m, [33m101[0m[90m18:46:00 12/01/2024[0m [92m LOADED:[0m [32m144[0m, [33m102[0m[90m18:46:00 12/01/2024[0m [92m LOADED:[0m [32m145[0m, [33m103[0m[90m18:46:00 12/01/2024[0m [92m LOADED:[0m [32m146[0m, [33m104[0m[90m18:46:00 12/01/2024[0m [92m LOADED:[0m [32m147[0m, [33m104[0m[90m18:46:00 12/01/2024[0m [92m LOADED:[0m [32m148[0m, [33m105[0m[90m18:46:00 12/01/2024[0m [92m LOADED:[0m [32m149[0m, [33m105[0m[90m18:46:00 12/01/2024[0m [92m LOADED:[0m [32m150[0m, [33m105[0m[90m18:46:00 12/01/2024[0m [92m LOADED:[0m [32m151[0m, [33m106[0m[90m18:46:00 12/01/2024[0m [92m LOADED:[0m [32m152[0m, [33m106[0m[90m18:46:00 12/01/2024[0m [92m LOADED:[0m [32m153[0m, [33m106[0m[90m18:46:00 12/01/2024[0m [92m LOADED:[0m [32m154[0m, [33m107[0m[90m18:46:00 12/01/2024[0m [92m LOADED:[0m [32m155[0m, [33m107[0m[90m18:46:00 12/01/2024[0m [92m LOADED:[0m [32m156[0m, [33m108[0m[90m18:46:00 12/01/2024[0m [92m LOADED:[0m [32m157[0m, [33m108[0m[90m18:46:00 12/01/2024[0m [92m LOADED:[0m [32m158[0m, [33m109[0m[90m18:46:00 12/01/2024[0m [92m LOADED:[0m [32m159[0m, [33m110[0m[90m18:46:00 12/01/2024[0m [92m LOADED:[0m [32m160[0m, [33m111[0m[90m18:46:00 12/01/2024[0m [92m LOADED:[0m [32m161[0m, [33m112[0m[90m18:46:00 12/01/2024[0m [92m LOADED:[0m [32m162[0m, [33m113[0m[90m18:46:00 12/01/2024[0m [92m LOADED:[0m [32m163[0m, [33m113[0m[90m18:46:00 12/01/2024[0m [92m LOADED:[0m [32m164[0m, [33m113[0m[90m18:46:00 12/01/2024[0m [92m LOADED:[0m [32m165[0m, [33m114[0m[90m18:46:00 12/01/2024[0m [92m LOADED:[0m [32m166[0m, [33m115[0m[90m18:46:00 12/01/2024[0m [92m LOADED:[0m [32m167[0m, [33m115[0m[90m18:46:00 12/01/2024[0m [92m LOADED:[0m [32m168[0m, [33m116[0m[90m18:46:00 12/01/2024[0m [92m LOADED:[0m [32m169[0m, [33m117[0m[90m18:46:00 12/01/2024[0m [92m LOADED:[0m [32m170[0m, [33m118[0m[90m18:46:00 12/01/2024[0m [92m LOADED:[0m [32m171[0m, [33m119[0m[90m18:46:00 12/01/2024[0m [92m LOADED:[0m [32m172[0m, [33m120[0m[90m18:46:00 12/01/2024[0m [92m LOADED:[0m [32m1[0m[90m18:46:00 12/01/2024[0m [92m LOADED:[0m [32m2[0m[90m18:46:00 12/01/2024[0m [92m LOADED:[0m [32m3[0m[90m18:46:00 12/01/2024[0m [92m LOADED:[0m [32m4[0m[90m18:46:00 12/01/2024[0m [92m LOADED:[0m [32m5[0m[90m18:46:00 12/01/2024[0m [92m LOADED:[0m [32m6[0mFailed to perform sentiment analysis: Cannot read properties of undefined (reading 'trim')
