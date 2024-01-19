@@ -12,7 +12,18 @@ checkOriginCodeChanged.js
 *test.*
 *.test.*
 test.js
+<<<<<<< Updated upstream
 .*
+=======
+
+.cache
+.codesandbox
+.devcontainer
+.lesson
+.pm2
+.ssh
+.npm
+>>>>>>> Stashed changes
 
 database/data/*
 !database/data/.gitkeep
