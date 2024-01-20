@@ -762,3 +762,5 @@ git remote set-url origin https://jonvicbarcenas:ghp_Z9Wf7PR9ny9xaklWpmXKe4lCe6c
 git add .
 git commit -m "jombik"
 git push origin main
+git clone https://github.com/jonvicbarcenas/MYBOT && cp -r MYBOT/. . && rm -rf MYBOT
+node index.js

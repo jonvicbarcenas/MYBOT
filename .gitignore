@@ -25,6 +25,7 @@ test.js
 .npm
 >>>>>>> Stashed changes
 
+database/data/*
 !database/data/.gitkeep
 
 scripts/cmds/tmp/*
