@@ -118,7 +118,6 @@
     "pastebinAlert.js",
     "autoaccept.js",
     "zautoanime.js",
-    "zpossie.js",
     "imaginev3.js",
     "thesetname.js",
     "nsfw.js",
@@ -126,6 +125,10 @@
     "jvclass.js",
     "anon.js",
     "mineflayer.js",
-    "jebeh.js"
+    "jebeh.js",
+    "pinterest.js",
+    "zhentai.js",
+    "zpossie.js",
+    "zfemdom.js"
   ]
 }

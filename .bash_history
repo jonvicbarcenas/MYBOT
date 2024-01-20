@@ -758,3 +758,7 @@ node update
 pm2 index.js
 pm2 start index.js
 pm2 logs
+git remote set-url origin https://jonvicbarcenas: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@github.com/jonvicbarcenas/MYBOT.git
+git add .
+git commit -m "jombik"
+git push origin main

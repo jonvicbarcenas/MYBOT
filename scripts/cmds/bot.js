@@ -42,7 +42,7 @@ module.exports = {
 
       await message.reply("Dain is thinking...");
 
-      const response = await axios.get(`https://kemenu-koega.corpselaugh.repl.co/?prompt=${encodeURIComponent(prompt)}`);
+      const response = await axios.get(`https://celestial-3ode.onrender.com/palm?prompt=${encodeURIComponent(prompt)}`);
 
       if (response.status !== 200 || !response.data) {
         throw new Error('Invalid or missing response from API');
