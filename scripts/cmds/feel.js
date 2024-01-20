@@ -48,7 +48,7 @@ module.exports = {
       }
 
       if (messageCounter % numOfMessages === 0) {
-        const response = await axios.get(`https://nah-i-would-win.archashura.repl.co/?iyot=${encodeURIComponent(text)}`);
+        const response = await axios.get(`https://celestial-3ode.onrender.com/sentiment?iyot=${encodeURIComponent(text)}`);
 
         if (response.status !== 200 || !response.data || !response.data.content) {
           throw new Error('Invalid or missing response from API');

@@ -712,3 +712,49 @@ git remote set-url origin https://jonvicbarcenas:ghp_evfIDKbqxStGXnvFlj3ktcu7EK5
 git remote set-url origin https://jonvicbarcenas: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@github.com/jonvicbarcenas/dainsleif.git
 git push origin main
 npm update
+git remote set-url origin https://jonvicbarcenas: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@github.com/jonvicbarcenas/MYBOT
+git push origin main
+git remote set-url origin https://jonvicbarcenas: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@github.com/jonvicbarcenas/MYBOT.git
+git push origin main
+git remote set-url origin https://jonvicbarcenas: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@github.com/jonvicbarcenas/MYBOT.git
+git push origin main
+git pull
+git pull origin main
+git pull origin main --force
+git config pull.rebase false
+git pull origin main
+git config pull.rebase true
+git push origin main
+git pull origin main --force
+git commit -m "Committing changes before force pull"
+git pull origin main --force
+git stash
+git pull origin main --force
+git stash apply
+git push origin main
+rm account.txt
+nano account.txt
+git push origin main
+git add .
+git commit -m "testt 123"
+git push -u origin main
+cler
+clear
+node index.js 
+clear
+rm account.txt
+nano account.txt
+node index.js
+pm2 start index.js
+pm2 logs
+pm2 delete 0
+rm -f account.txt
+nano account.txt
+pm2 start index.js
+pm2 logs
+pm2 delete 0
+node index.js
+node update
+pm2 index.js
+pm2 start index.js
+pm2 logs

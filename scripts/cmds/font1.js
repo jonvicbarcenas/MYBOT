@@ -116,7 +116,7 @@ module.exports = {
       case 1:
         // Monospace
         try {
-          const apiUrl = `https://celestial-dainsleif-docs.archashura.repl.co/monospace?text=${encodeURIComponent(repliedMessage)}`;
+          const apiUrl = `https://celestial-3ode.onrender.com/monospace?text=${encodeURIComponent(repliedMessage)}`;
           const response = await axios.get(apiUrl);
           const transformedText = response.data.transformedText;
           message.reply(transformedText);
@@ -128,7 +128,7 @@ module.exports = {
       case 2:
         // Arial
         try {
-          const apiUrl = `https://celestial-dainsleif-docs.archashura.repl.co/arial?text=${encodeURIComponent(repliedMessage)}`;
+          const apiUrl = `https://celestial-3ode.onrender.com/arial?text=${encodeURIComponent(repliedMessage)}`;
           const response = await axios.get(apiUrl);
           const transformedText = response.data.transformedText;
           message.reply(transformedText);
@@ -140,7 +140,7 @@ module.exports = {
         case 3:
           // script
           try {
-            const apiUrl = `https://celestial-dainsleif-docs.archashura.repl.co/script?text=${encodeURIComponent(repliedMessage)}`;
+            const apiUrl = `https://celestial-3ode.onrender.com/script?text=${encodeURIComponent(repliedMessage)}`;
             const response = await axios.get(apiUrl);
             const transformedText = response.data.transformedText;
             message.reply(transformedText);

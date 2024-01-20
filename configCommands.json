@@ -125,6 +125,7 @@
     "join.js",
     "jvclass.js",
     "anon.js",
-    "mineflayer.js"
+    "mineflayer.js",
+    "jebeh.js"
   ]
 }

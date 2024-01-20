@@ -150,7 +150,7 @@
     "notes": "this feature will automatically load the script when scripts have been changed, you can set ignoreCmds to ignore commands, ignoreEvents to ignore events, separate by comma or space, example: \"cmd1.js cmd2.js cmd3.js\" (without backslash)"
   },
   "whiteListMode": {
-    "enable": true,
+    "enable": false,
     "whiteListIds": [
       "100007150668975",
       "61550750903854"
