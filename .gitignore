@@ -1,6 +1,8 @@
 node_modules
 fb-chat-api.dev
 obfcode.js
+.replit
+account.txt
 minify.js
 backupOrigin.js
 createVersion.js
