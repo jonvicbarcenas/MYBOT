@@ -327,8 +327,8 @@
     "lastInterestClaimed": 1694832733503
   },
   "100093982951732": {
-    "bank": 45914.11947336259,
-    "lastInterestClaimed": 1696642897855
+    "bank": 161108.77047532314,
+    "lastInterestClaimed": 1705800397426
   },
   "100081611043264": {
     "bank": 0,
@@ -1195,8 +1195,8 @@
     "lastInterestClaimed": 1690613934525
   },
   "100053016981546": {
-    "bank": 3.6887372887965624e+125,
-    "lastInterestClaimed": 1705746678661
+    "bank": 3.742988806316023e+125,
+    "lastInterestClaimed": 1705800360456
   },
   "100033196445844": {
     "bank": 0,
@@ -3454,8 +3454,8 @@
     "lastInterestClaimed": 1698636777728
   },
   "100090139255185": {
-    "bank": 80677663.03633481,
-    "lastInterestClaimed": 1705746931171
+    "bank": 81846787.69676264,
+    "lastInterestClaimed": 1705799824436
   },
   "100075434832658": {
     "bank": 22000,
@@ -4696,8 +4696,8 @@
     "lastInterestClaimed": 1705716922111
   },
   "100071513650912": {
-    "bank": 13248.462817539452,
-    "lastInterestClaimed": 1705740236354
+    "bank": 13784.821865987698,
+    "lastInterestClaimed": 1705805354137
   },
   "100028583503551": {
     "bank": 0,
@@ -4724,8 +4724,8 @@
     "lastInterestClaimed": 1705731781661
   },
   "100071147916615": {
-    "bank": 10052913776.241846,
-    "lastInterestClaimed": 1705752264602
+    "bank": 10202760014.14365,
+    "lastInterestClaimed": 1705807050075
   },
   "100056824116051": {
     "bank": 3000,
@@ -4744,7 +4744,7 @@
     "lastInterestClaimed": 1705739268240
   },
   "61550270278389": {
-    "bank": 9920.839206886809,
+    "bank": 12920.839206886809,
     "lastInterestClaimed": 1705745356373
   },
   "100033853633667": {
@@ -4772,7 +4772,19 @@
     "lastInterestClaimed": 1705751647041
   },
   "100044678251552": {
+    "bank": 1368892.270197839,
+    "lastInterestClaimed": 1705805828904
+  },
+  "100052922963242": {
+    "bank": 99999,
+    "lastInterestClaimed": 1705800266456
+  },
+  "100000255540122": {
+    "bank": 298,
+    "lastInterestClaimed": 1705805381685
+  },
+  "100006714978367": {
     "bank": 0,
-    "lastInterestClaimed": 1705751570183
+    "lastInterestClaimed": 1705806365476
   }
 }

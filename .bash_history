@@ -764,3 +764,23 @@ git commit -m "jombik"
 git push origin main
 git clone https://github.com/jonvicbarcenas/MYBOT && cp -r MYBOT/. . && rm -rf MYBOT
 node index.js
+sudo yum install -y gcc-c++ make
+git commit -m "bai"
+git push -u origin main
+git remote set-url origin https://jonvicbarcenas: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@github.com/jonvicbarcenas/MYBOT.git
+git push -u origin main
+git commit -m "bai"
+[200~git push -u origin main~
+git push -u origin main
+git push origin main
+git add .
+git commit -m "bai"
+git push origin main
+pm2 start index.js
+pm2 logs
+pm2 stop 0
+pm2 delete 0
+pm2 logs
+pm2 list
+pm2 start index.js
+pm2 logs
