@@ -176,7 +176,7 @@ module.exports = {
           const response = event.body.slice(prefix.length).trim();
 
           const res = await axios.get(
-            `https://gptextra.onrender.com/?gpt=${response}${ikoQuery}`
+            `https://gptextra-oq5x.onrender.com/?gpt=${response}${ikoQuery}`
           );
           const responseData = res.data;
 
@@ -242,7 +242,7 @@ module.exports = {
         );
 
         const res = await axios.get(
-          `https://barbatos.onrender.com/?id=${senderID}&ask=${response}${ikoQuery}${imageUrlQuery}`
+          `https:/gojosatoru-alive.onrender.com/?id=${senderID}&ask=${response}${ikoQuery}${imageUrlQuery}`
         ); //https://barbatosventi3.corpselaugh.repl.co/
         responseData = res.data;
       } catch (bardError) {
@@ -331,7 +331,7 @@ module.exports = {
       if (error.message === "Fallback to the second API") {
         try {
           const res = await axios.get(
-            `https://gptextra.onrender.com/?gpt=${response}${ikoQuery}`
+            `https://gptextra-oq5x.onrender.com/?gpt=${response}${ikoQuery}`
           ); //https://gptextra.corpselaugh.repl.co/?gpt=
           const responseData = res.data;
 
