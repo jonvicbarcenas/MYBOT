@@ -31,7 +31,7 @@ module.exports = {
 
        api.sendMessage("⌛ | Creating your Imagination...", event.threadID, event.messageID);
 
-      const response = await axios.get(`https://celestial-3ode.onrender.com/imagenv3?prompt=${encodeURIComponent(prompt)}`);
+      const response = await axios.get(`https://celestial-dainsleif.onrender.com/imagenv3?prompt=${encodeURIComponent(prompt)}`);
 
       if (!response.data || !response.data.url) {
         return api.sendMessage("An error occurred while generating the image!", event.threadID, event.messageID);

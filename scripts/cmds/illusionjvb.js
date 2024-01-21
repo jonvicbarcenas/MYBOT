@@ -31,7 +31,7 @@ module.exports = {
     try {
       api.sendMessage('⏳ Creating your illusion...', event.threadID);
 
-      const response = await axios.get(`https://celestial-3ode.onrender.com/illusion?image=${shortenedUrl}&prompt=${prompt}`);
+      const response = await axios.get(`https://celestial-dainsleif.onrender.com/illusion?image=${shortenedUrl}&prompt=${prompt}`);
 
       if (response.status !== 200 || !response.data || !response.data.output || response.data.output.length === 0) {
         throw new Error('Invalid or missing response from the IllusionDiff API');

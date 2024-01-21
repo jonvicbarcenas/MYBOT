@@ -29,7 +29,7 @@ module.exports = {
         return;
       }
 
-      const apiUrl = 'https://celestial-dainsleif-docs.archashura.repl.co/prompter?prompt=';
+      const apiUrl = 'https://celestial-dainsleif.onrender.com/prompter?prompt=';
       const response = await axios.get(`${apiUrl}${encodeURIComponent(prompt)}`);
 
       if (response.status !== 200 || !response.data || !response.data.generated_text) {

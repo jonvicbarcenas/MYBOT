@@ -33,7 +33,7 @@ module.exports = {
       const keySearchs = keySearch.substr(0, keySearch.indexOf('-')).trim();
       const numberSearch = parseInt(keySearch.split("-").pop().trim()) || 6;
 
-      const res = await axios.get(`https://celestial-3ode.onrender.com/pinterest?pinte=${encodeURIComponent(keySearchs)}`);
+      const res = await axios.get(`https://celestial-dainsleif.onrender.com/pinterest?pinte=${encodeURIComponent(keySearchs)}`);
       const data = res.data;
 
       if (!data || !Array.isArray(data) || data.length === 0) {
