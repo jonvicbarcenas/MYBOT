@@ -36,7 +36,7 @@ module.exports = {
 
     try {
       const res = await axios.get(
-        `https://chatgayfeyti.archashura.repl.co?gpt=fix grammar "${jvb}" and put the corrected grammar inside the [" "].`,
+        `https://celestial-dainsleif.onrender.com/gpt?gpt=fix grammar "${jvb}" and put the corrected grammar inside the [" "].`,
       );
       const { content } = res.data;
       api.sendMessage(`📜 Correct Paragraph:\n\n${content}`, threadID, messageID);

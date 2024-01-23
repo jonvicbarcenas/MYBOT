@@ -114,20 +114,20 @@
     "hangman.js",
     "fbshare.js",
     "badwords.js",
-    "busy.js",
     "pastebinAlert.js",
     "autoaccept.js",
     "zautoanime.js",
     "imaginev3.js",
     "thesetname.js",
-    "nsfw.js",
     "jvclass.js",
     "anon.js",
     "mineflayer.js",
     "jebeh.js",
-    "pinterest.js",
     "zhentai.js",
     "zpossie.js",
-    "zfemdom.js"
+    "zfemdom.js",
+    "resend.js",
+    "nsfw.js",
+    "pinterest.js"
   ]
 }

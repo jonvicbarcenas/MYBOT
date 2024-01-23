@@ -784,3 +784,71 @@ pm2 logs
 pm2 list
 pm2 start index.js
 pm2 logs
+nano account.txt
+clear
+pm2 stop 0
+git pull 
+git commit git add .
+git commit -m "11:09 1/21/24"
+git pull
+pm2 start index.js
+pm2 logs
+git push
+git pull
+git add .
+git commit -m "11:17 1/21/24"
+git pull
+git add .
+git commit -m "11:19 1/21/24"
+pm2 stop 0
+git add .
+git commit -m "11:19 1/21/24"
+git pull
+git push origin main
+git config pull.rebase false
+git pull
+git push origin main
+git add .gitignore account.txt
+git merge --continue
+git commit
+git push origin main
+pm2 start index.js
+pm2 logs
+nano account.txt
+rm -f account.txt
+nano account.txt
+pm2 start index.js
+pm2 stop 0
+pm2 start index.js
+pm2 logs
+pm2 stop 0
+git pull 
+pm2 logs
+pm2 start index.js
+pm2 logs
+pm2 stop
+pm2 stop 0
+git pull
+pm2 start index.js
+pm2 logs
+pm2 restart 0
+pm2 logs
+pm2 stop 0
+rm account.txt
+nano account.txt
+pm2 start 0
+pm2 logs
+pm2 stop 0
+nano account.txt
+rm account.txt
+nano account.txt
+pm2 start 0
+pm2 logs
+pm 2pm 
+pm2 stop 0
+rm account.txt
+nano 
+nano account.txt
+pm start 0
+pm2 start 0
+pm2 logs
