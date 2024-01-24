@@ -13,7 +13,7 @@ module.exports = {
     role: 0,
     category: 'ai',
     shortDescription: {
-      en: 'Asks an AI for an answer.',
+      en: 'I\'m a mean AI.',
     },
     longDescription: {
       en: 'Asks an AI for an answer based on the user prompt.',
@@ -42,13 +42,13 @@ module.exports = {
 
       await message.reply("Dain is thinking...");
 
-      const response = await axios.get(`https:/celestial-dainsleif.onrender.com/palm?prompt=${encodeURIComponent(prompt)}`);
+      const response = await axios.get(`https://celestial-dainsleif.onrender.com/scara?chat=${encodeURIComponent(prompt)}`);
 
       if (response.status !== 200 || !response.data) {
         throw new Error('Invalid or missing response from API');
       }
 
-      const firstContent = response.data.candidates[0]?.content.trim();
+      const firstContent = response.data.text.trim();
 
       if (!firstContent) {
         throw new Error('Invalid or missing content in API response');
