@@ -852,3 +852,33 @@ nano account.txt
 pm start 0
 pm2 start 0
 pm2 logs
+clear
+git commit "6:42 23/24"
+git add .
+git commit -m "latest 1/23/24"
+clear
+git push origin main
+git remote set-url origin https://jonvicbarcenas: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@github.com/jonvicbarcenas/MYBOT.git
+git push origin main
+pm2 logs
+git pull
+nano scripts/cmds/bot.js
+git pulll
+git pull
+pm2 logs
+top
+pm2 logs
+nano scripts/cmds/feel.js
+pm2 logs
+nano scripts/cmds/feel.js
+pm2 logs
+pm2 restart 0
+pm2 logs
+pm2 restart 0
+pm2 logs
+pm2 logs 
+pm2 logs
+pm2 stop 0
+pm2 delete 0
+pm2 start index.js
+pm2 logs
