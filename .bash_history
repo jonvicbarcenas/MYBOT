@@ -882,3 +882,65 @@ pm2 stop 0
 pm2 delete 0
 pm2 start index.js
 pm2 logs
+pm2 restart 0
+git remote set-url origin https://jonvicbarcenas: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@github.com/jonvicbarcenas/MYBOT.git
+git add .
+git commit -m "12:29 1/25/24"
+git pull
+git push -u origin main
+pm2 logs
+pm2 start 0
+pm2 logs
+clear
+pm2 stop 0
+rm account.txt
+nano account.txt
+nano /home/ec2-user/config.json; exit
+pm2 logs 
+pm2 restart 0
+pm2 logs
+pm2 restart 0
+pm2 logs
+pm2 restart 0 
+pm2 logs 
+pm2 logs
+pm2 stop 0 
+node index.js
+reboot
+sudo reboot
+/usr/bin/dnf check-release-update
+dnf upgrade --releasever=2023.3.20240122
+sudo su
+pm2 start index.js 
+pm2 logs 
+pm2 stop 0 
+pm2 restart 0 
+pm2 logs 
+pm2 stop 0 
+rm -f account.txt
+nano account.txt
+arm -f account.txt
+nano account.txt rm -f account.txt
+rm -f account.txt
+nano account.txt
+pm2 restart 0 
+pm2 logs 
+flush
+pm2 flush
+pm2 logs
+pm2 restart 0 
+arm -f account.txt
+rm -f account.txt
+nano account.txt 
+pm2 restart 0 
+pm2 flush 
+pm2 stop 0 
+rm -f account.txt
+nano account.txt 
+pm2 restart 0 
+pm2 logs 
+rm -f account.txt
+nano account.txt 
+pm2 restart 0 
+pm2 flush 
+pm2 logs
