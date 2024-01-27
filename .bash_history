@@ -944,3 +944,50 @@ nano account.txt
 pm2 restart 0 
 pm2 flush 
 pm2 logs
+git push
+git remote set-url origin https://jonvicbarcenas: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@github.com/jonvicbarcenas/MYBOT.git
+git add .
+git commit -m "12:22 1/26/24"
+git pull
+git push -u origin main
+clear
+git remote set-url origin https://jonvicbarcenas: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@github.com/jonvicbarcenas/MYBOT.git
+git pull
+git push -u origin main
+pm2 logs
+pm2 restart 0
+pm2 logs
+pm2 flush
+pm2 logs
+pm2 stop 0 
+pm2 flush
+pm2 restart 0 
+pm2 logs
+sudo apt-get clean
+sudo apt-get autoclean
+sudo yum clean all
+pm2 logs
+pm2 restart 0
+htop
+top
+pm2 monit
+pm2 stop 0 
+pm2 delete 0
+pm2 flush 
+pm2 link srw575qm95w5tn5 2cduhxft597xfao
+pm2 start index.js 
+arm -f account.txt
+nano account.txt rm -f account.txt
+clear
+rm -f account.txt
+nano account.txt 
+pm2 restart 0 
+pm2 monit
+pm2 logs
+rm -f account.txt
+nano account.txt 
+rm -f account.txt
+nano account.txt 
+pm2 restart 0 
+pm2 flush 
+pm2 logs 
