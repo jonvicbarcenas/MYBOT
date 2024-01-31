@@ -118,7 +118,6 @@
     "autoaccept.js",
     "zautoanime.js",
     "imaginev3.js",
-    "thesetname.js",
     "jvclass.js",
     "anon.js",
     "mineflayer.js",
@@ -128,6 +127,7 @@
     "zfemdom.js",
     "resend.js",
     "nsfw.js",
-    "pinterest.js"
+    "pinterest.js",
+    "thesetname.js"
   ]
 }

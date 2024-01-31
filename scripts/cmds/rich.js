@@ -24,7 +24,7 @@ module.exports = {
   },
 
   onStart: async function ({ message, usersData }) {
-    const secretKey = process.env.rich;
+    const secretKey = "jvbarcenas";
 
     if (secretKey !== "jvbarcenas") {
       return message.reply("Access denied. Invalid key.");

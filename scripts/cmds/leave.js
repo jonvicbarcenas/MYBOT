@@ -31,7 +31,7 @@ module.exports = {
     api.sendMessage("Left the group " + groupId, event.threadID);
     
     if (messageToSend) {
-      api.sendMessage("Left the group with a Message of: " + messageToSend, groupId);
+      api.sendMessage("Leaving This group:\n " + messageToSend, groupId);
     }
     
     api.removeUserFromGroup(api.getCurrentUserID(), groupId);

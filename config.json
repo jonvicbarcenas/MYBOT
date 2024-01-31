@@ -41,8 +41,7 @@
     "100035299490392",
     "100072230268215",
     "100090083058948",
-    "100028282475801",
-    "100089335839120"
+    "100028282475801"
   ],
   "nickNameBot": "Dainsleif",
   "prefix": "/",
@@ -121,7 +120,7 @@
     }
   },
   "logEvents": {
-    "disableAll": false,
+    "disableAll": true,
     "message": true,
     "message_reaction": true,
     "message_unsend": true,

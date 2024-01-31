@@ -991,3 +991,76 @@ nano account.txt
 pm2 restart 0 
 pm2 flush 
 pm2 logs 
+clear
+sudo apt update
+sudo apt install git
+git
+clear
+git clone https://github.com/jonvicbarcenas/MYBOT && cp -r MYBOT/. . && rm -rf MYBOT
+curl -sL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+sudo apt install -y nodejs
+node -v
+npm -v
+npm install
+node index.js
+npm install pm2 -g
+ubuntu@ip-172-31-2-8:~$ npm install pm2 -g
+npm ERR! code ENOENT
+npm ERR! syscall stat
+npm ERR! path /home/ubuntu/.npm/_cacache/content-v2/sha512/0d/42/86f1f5bb6f2ce802e95ff3b923b381ae35e8b4e9ca34a762182b9547ab5b23fd697e3e99e124d594fe812c6c1fb191fbd2101dcd80fc3ec6e1f1884aa411
+npm ERR! errno ENOENT
+npm ERR! enoent Invalid response body while trying to fetch https://registry.npmjs.org/@pm2%2fagent: ENOENT: no such file or directory, stat '/home/ubuntu/.npm/_cacache/content-v2/sha512/0d/42/86f1f5bb6f2ce802e95ff3b923b381ae35e8b4e9ca34a762182b9547ab5b23fd697e3e99e124d594fe812c6c1fb191fbd2101dcd80fc3ec6e1f1884aa411'
+npm ERR! enoent This is related to npm not being able to find a file.
+npm ERR! enoent 
+npm ERR! A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2024-01-27T06_04_51_788Z-debug-0.log
+ubuntu@ip-172-31-2-8:~$ clear
+sudo npm install pm2 -g
+clear
+pm2 start index.js
+pm2 startup
+sudo env PATH=$PATH:/path/to/pm2/bin pm2 startup <your init system>
+sudo env PATH=$PATH:/usr/bin /usr/lib/node_modules/pm2/bin/pm2 startup systemd -u ubuntu --hp /home/ubuntu
+pm2 save
+clear
+pm2 logs
+pm2 stop 0
+rm account.txt
+nano account.txt
+pm2 restart 0
+pm2 flush
+pm2 logs
+top
+clear
+pm2 logs
+pm2 monit
+pm2 logs
+clear
+uptime
+uptime -p
+pm2 logs
+pm2 restart 0
+pm2 logs
+pm2 restart 0 
+top
+pm2 delete 0
+screen 
+sudo apt install tmux
+tmux
+tmux attach 
+nano /home/ubuntu/database/data/data.sqlite; exit
+node index.js 
+tmux list
+tmux kill-session 0 
+tmux list-session 
+tmux kill-ses -t 0 
+clear
+pm2 start index.js 
+pm2 logs 
+pm2 restart 0 
+pm2 logs 
+reboot
+sudo reboot
+pm2 logs
+pm2 restart 0 
+pm2 logs 
+pm2 restart 0 
