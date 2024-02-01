@@ -1064,3 +1064,37 @@ pm2 logs
 pm2 restart 0 
 pm2 logs 
 pm2 restart 0 
+git add .
+git commit -m "9:35 1/30/24"
+git pull
+git push -u origin main
+git remote set-url origin https://jonvicbarcenas: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@github.com/jonvicbarcenas/MYBOT.git
+git add .
+git commit -m "9:38 1/30/24"
+git pull
+git push -u origin main
+pm2 stop
+pm2 stop 0
+git pull
+pm2 start 0
+pm2 logs
+rm database/data/data.sqlite
+pm2 logs
+pm2 stop 0
+pm2 flush
+pm2 start 0
+pm2 logs
+pm2 logs 
+pm2 logs
+top
+pm2 monit
+clear
+pm2 logs
+pm2 logs 
+pm2 restart
+pm2 restart 0 
+pm2 stop 0
+pm2 restart 0 
+pm2 logs 0 
+pm2 start 0 
+pm2 logs 
