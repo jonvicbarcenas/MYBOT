@@ -1098,3 +1098,22 @@ pm2 restart 0
 pm2 logs 0 
 pm2 start 0 
 pm2 logs 
+pm2 restart 0 
+pm2 logs 
+pm2 restart 0 
+pm2 logs 
+date /t
+time /t
+time
+date "+%Y-%m-%d %H:%M:%S"
+nano autorest.js
+pm2 start autorest.js
+pm2 logs 
+pm2 flush
+pm2 logs 0 
+pm2 restart 1 
+pm2 logs 
+pm2 restart 0
+pm2 logs
+pm2 stop 0
+node update
