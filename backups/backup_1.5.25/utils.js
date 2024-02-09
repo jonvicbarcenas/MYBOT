@@ -432,14 +432,16 @@ function splitPage(arr, limit) {
 	};
 }
 
-async function translateAPI(text, lang) {
-	try {
-		const res = await axios.get(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=${lang}&dt=t&q=${encodeURIComponent(text)}`);
-		return res.data[0][0][0];
-	}
-	catch (err) {
-		throw new CustomError(err.response ? err.response.data : err);
-	}
+function translateAPI(text, lang) {
+	return new Promise((resolve, reject) => {
+		axios.get(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=${lang}&dt=t&q=${encodeURIComponent(text)}`)
+			.then(res => {
+				resolve(res.data[0][0][0]);
+			})
+			.catch(err => {
+				reject(err);
+			});
+	});
 }
 
 async function downloadFile(url = "", path = "") {
@@ -447,15 +449,9 @@ async function downloadFile(url = "", path = "") {
 		throw new Error(`The first argument (url) must be a string`);
 	if (!path || typeof path !== "string")
 		throw new Error(`The second argument (path) must be a string`);
-	let getFile;
-	try {
-		getFile = await axios.get(url, {
-			responseType: "arraybuffer"
-		});
-	}
-	catch (err) {
-		throw new CustomError(err.response ? err.response.data : err);
-	}
+	const getFile = await axios.get(url, {
+		responseType: "arraybuffer"
+	});
 	fs.writeFileSync(path, Buffer.from(getFile.data));
 	return path;
 }
