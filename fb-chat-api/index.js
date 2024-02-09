@@ -149,6 +149,8 @@ function buildAPI(globalOptions, html, jar) {
 		mqttClient: undefined,
 		lastSeqId: irisSeqID,
 		syncToken: undefined,
+		wsReqNumber: 0,
+		wsTaskNumber: 0,
 		mqttEndpoint,
 		region,
 		firstListen: true
@@ -214,6 +216,7 @@ function buildAPI(globalOptions, html, jar) {
 		'threadColors',
 		'unsendMessage',
 		'unfriend',
+		'editMessage',
 
 		// HTTP
 		'httpGet',
