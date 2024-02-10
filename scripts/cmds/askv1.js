@@ -3,11 +3,14 @@ const axios = require('axios');
 const Prefixes = [
   'gpt',
   '/gpt',
+  'ai',
+  '/ai'
 ];
 
 module.exports = {
   config: {
     name: 'gpt',
+    aliases: ['ai'],
     version: '2.5',
     author: 'JV Barcenas', // do not change
     role: 0,
