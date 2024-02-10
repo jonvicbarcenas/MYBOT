@@ -1117,3 +1117,45 @@ pm2 restart 0
 pm2 logs
 pm2 stop 0
 node update
+rm account.txt 
+nano account.txt 
+clear
+git remote set-url origin https://jonvicbarcenas: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@github.com/jonvicbarcenas/MYBOT.git
+git add .
+git commit -m "9:38 2/9/24"
+git pull
+git push -u origin main
+pm2 stop 0
+git pull
+git commit -m "9:38 2/9/24" .3
+git pullgit commit -m "9:38 2/9/24 .3"
+git commit -m "9:38 2/9/24 .3"
+git pull
+git add .
+git commit -m "Committing local changes before pulling"
+git pull
+git stash
+git pull
+git stash pop
+git pull
+git clean -f
+git pull
+git reset --hard HEAD
+git pull
+git add .
+git commit -m "Your commit message here"
+git pull
+git push
+git pull
+pm2 start 0
+pm2 logs
+pm2 stop 0
+pm2 start 0
+pm2 logs 0
+pm2 stop 0
+git pull
+pm2 start 0
+pm2 logs 0
+pm2 logs 0 
+pm2 stop 0 1
+pm2 stop 2
