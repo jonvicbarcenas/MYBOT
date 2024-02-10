@@ -1159,3 +1159,30 @@ pm2 logs 0
 pm2 logs 0 
 pm2 stop 0 1
 pm2 stop 2
+git push origin main
+git commit -m "meeehh"
+git add .
+git commit -m "meeehh"
+git pusg origin main
+git push origin main
+git pull
+pm2 start 0 2
+pm2 logs 0
+pm2 stop 0 2
+git pull
+git commit -m "nya"
+git add .
+git commit -m "nya"
+git pull
+git push origin main
+git remote set-url origin https://jonvicbarcenas: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@github.com/jonvicbarcenas/MYBOT.git
+git push origin main
+git remote set-url origin https://jonvicbarcenas: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@github.com/jonvicbarcenas/MYBOT.git
+git push origin main
+git pull
+git commit -m "shdgfihsdf"
+git add .
+git commit -m "shdgfihsdf"
+git push origin main
+git pull
+pm2 start 0 2
