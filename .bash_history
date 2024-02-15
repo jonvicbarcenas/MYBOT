@@ -1186,3 +1186,29 @@ git commit -m "shdgfihsdf"
 git push origin main
 git pull
 pm2 start 0 2
+pm2 logs 0 
+rm account.txt
+nano account.txt
+pm2 restart 0
+pm2 restart 0 && pm2 logs 0
+pm2 logs
+pm2 stop 0 2
+git pull
+git add .
+git commit -m "negks"
+git pull
+git add .
+git pull
+git push origin main
+git commit -m "gehgshdg"
+git pull
+git push origin main
+pm2 restart 0 2 && pm2 logs
+rm account.txt
+nano account.txt
+pm2 restart 0 2 && pm2 logs
+pm2 logs 0
+cler
+clear
+git pull
+pm2 logs 

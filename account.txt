@@ -5,13 +5,8 @@
     "domain": "facebook.com",
     "path": "/",
     "hostOnly": false,
-<<<<<<< HEAD
-    "creation": "2024-02-10T08:51:18.477Z",
-    "lastAccessed": "2024-02-10T08:51:21.498Z"
-=======
-    "creation": "2024-02-10T08:56:23.104Z",
-    "lastAccessed": "2024-02-10T08:56:25.477Z"
->>>>>>> 50a53bfbd80362bb3f75681d1e9633b164223fa7
+    "creation": "2024-02-15T12:00:15.358Z",
+    "lastAccessed": "2024-02-15T12:00:19.072Z"
   },
   {
     "key": "fr",
@@ -19,13 +14,8 @@
     "domain": "facebook.com",
     "path": "/",
     "hostOnly": false,
-<<<<<<< HEAD
-    "creation": "2024-02-10T08:51:18.518Z",
-    "lastAccessed": "2024-02-10T08:51:21.498Z"
-=======
-    "creation": "2024-02-10T08:56:23.146Z",
-    "lastAccessed": "2024-02-10T08:56:25.477Z"
->>>>>>> 50a53bfbd80362bb3f75681d1e9633b164223fa7
+    "creation": "2024-02-15T12:00:15.417Z",
+    "lastAccessed": "2024-02-15T12:00:19.072Z"
   },
   {
     "key": "xs",
@@ -33,13 +23,8 @@
     "domain": "facebook.com",
     "path": "/",
     "hostOnly": false,
-<<<<<<< HEAD
-    "creation": "2024-02-10T08:51:18.528Z",
-    "lastAccessed": "2024-02-10T08:51:21.498Z"
-=======
-    "creation": "2024-02-10T08:56:23.157Z",
-    "lastAccessed": "2024-02-10T08:56:25.477Z"
->>>>>>> 50a53bfbd80362bb3f75681d1e9633b164223fa7
+    "creation": "2024-02-15T12:00:15.422Z",
+    "lastAccessed": "2024-02-15T12:00:19.072Z"
   },
   {
     "key": "c_user",
@@ -47,13 +32,8 @@
     "domain": "facebook.com",
     "path": "/",
     "hostOnly": false,
-<<<<<<< HEAD
-    "creation": "2024-02-10T08:51:18.529Z",
-    "lastAccessed": "2024-02-10T08:51:21.498Z"
-=======
-    "creation": "2024-02-10T08:56:23.160Z",
-    "lastAccessed": "2024-02-10T08:56:25.477Z"
->>>>>>> 50a53bfbd80362bb3f75681d1e9633b164223fa7
+    "creation": "2024-02-15T12:00:15.423Z",
+    "lastAccessed": "2024-02-15T12:00:19.072Z"
   },
   {
     "key": "sb",
@@ -61,12 +41,7 @@
     "domain": "facebook.com",
     "path": "/",
     "hostOnly": false,
-<<<<<<< HEAD
-    "creation": "2024-02-10T08:51:18.530Z",
-    "lastAccessed": "2024-02-10T08:51:21.498Z"
-=======
-    "creation": "2024-02-10T08:56:23.162Z",
-    "lastAccessed": "2024-02-10T08:56:25.477Z"
->>>>>>> 50a53bfbd80362bb3f75681d1e9633b164223fa7
+    "creation": "2024-02-15T12:00:15.423Z",
+    "lastAccessed": "2024-02-15T12:00:19.072Z"
   }
 ]
