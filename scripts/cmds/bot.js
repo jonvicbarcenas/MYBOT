@@ -42,7 +42,7 @@ module.exports = {
 
       await message.reply("Dain is thinking...");
 
-      const response = await axios.get(`https://celestial-dainsleif.onrender.com/scara?chat=${encodeURIComponent(prompt)}`);
+      const response = await axios.get(`https://celestial-dainsleif-v2.onrender.com/scara?chat=${encodeURIComponent(prompt)}`);
 
       if (response.status !== 200 || !response.data) {
         throw new Error('Invalid or missing response from API');

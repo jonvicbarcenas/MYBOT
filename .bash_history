@@ -1212,3 +1212,47 @@ cler
 clear
 git pull
 pm2 logs 
+git remote set-url origin https://jonvicbarcenas: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@github.com/jonvicbarcenas/MYBOT.git
+pm2 stop 0 2
+pm2 delete 0 2
+git add .
+git commit -m "9:38 2/15/24"
+git pull
+git push -u origin main
+git remote set-url origin https://jonvicbarcenas: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@github.com/jonvicbarcenas/MYBOT.git
+git add .
+git pull
+sudo git pull
+git commit -m "9:38 2/15/24"
+git push origin main
+sudo apt install xrdp 
+sudo systemctl enable xrdp
+sudo add-apt-repository ppa:gnome3-team/gnome3
+sudo apt-get install gnome-shell ubuntu-gnome-desktop
+sudo passwd ubuntu
+sudo apt-get install gnome-shell ubuntu-gnome-desktop
+sudo adduser xrdp ssl-cert
+pm2 list
+pm2 stop 0 1
+pm2 logs
+clear
+rm account.txt && nano account.txt
+pm2 restart 0
+pm2 logs
+pm2 logs 
+pm2 restart 0 
+pm2 logs
+pm2 logs 
+pm2 restart 0 
+pm2 logs 
+reboot 
+sudo reboot
+pm2 logs 
+pm2 list 
+pm2 logs 
+pm2pppoihj
+pm2 stop 0
+rm account.txt
+nano account.txt
+pm2 start 0
+pm2 logs

@@ -46,7 +46,7 @@ module.exports = {
 
       await message.reply("Answering your question. Please wait a moment...");
 
-      const response = await axios.get(`https://celestial-dainsleif.onrender.com/gpt?gpt=${encodeURIComponent(prompt)}`);
+      const response = await axios.get(`https://celestial-dainsleif-v2.onrender.com/gpt?gpt=${encodeURIComponent(prompt)}`);
 
       if (response.status !== 200 || !response.data) {
         throw new Error('Invalid or missing response from API');

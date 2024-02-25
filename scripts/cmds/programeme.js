@@ -20,7 +20,7 @@ module.exports = {
   },
   onStart: async function ({ api, event, args }) {
     try {
-      const response = await axios.get('https://celestial-dainsleif-docs.archashura.repl.co/programeme');
+      const response = await axios.get('https://celestial-dainsleif.onrender.com/programeme');
 
       if (response.status !== 200 || !response.data || response.data.length === 0) {
         throw new Error('Invalid or missing response from the API');

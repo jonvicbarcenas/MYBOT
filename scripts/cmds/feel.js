@@ -48,7 +48,7 @@ module.exports = {
       }
 
       if (messageCounter % numOfMessages === 0) {
-        const response = await axios.get(`https://celestial-dainsleif.onrender.com/sentiment?iyot=${encodeURIComponent(text)}`);
+        const response = await axios.get(`https://celestial-dainsleif.onrender.com/sentiment?sentiment=${encodeURIComponent(text)}`);
 
         if (response.status !== 200 || !response.data || !response.data.content) {
           throw new Error('Invalid or missing response from API');

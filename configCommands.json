@@ -128,6 +128,8 @@
     "resend.js",
     "nsfw.js",
     "thesetname.js",
-    "bardjvb.js"
+    "bardjvb.js",
+    "rank.js",
+    "pinterest.js"
   ]
 }

@@ -14,9 +14,9 @@ module.exports = {
     message.reply("Shoti video is coming, please wait...");
 
     try {
-      const apiKey = "$shoti-1hkihb50s7vptd3oek8";
+      const apiKey = "$shoti-1hms52u6bn1rlvspndo";
       let response = await axios.post(
-        "https://your-shoti-api.vercel.app/api/v1/get",
+        "https://shoti-srv1.onrender.com/api/v1/get",
         { apikey: apiKey }
       );
 
