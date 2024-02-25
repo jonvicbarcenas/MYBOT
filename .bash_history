@@ -1256,3 +1256,8 @@ rm account.txt
 nano account.txt
 pm2 start 0
 pm2 logs
+git remote set-url origin https://jonvicbarcenas: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@github.com/jonvicbarcenas/MYBOT.git
+git add .
+git commit -m "11:33 2/25/24"
+git pull
+git push -u origin main
