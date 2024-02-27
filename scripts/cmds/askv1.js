@@ -4,13 +4,13 @@ const Prefixes = [
   'gpt',
   '/gpt',
   'ai',
-  '/ai'
+  '!ai'
 ];
 
 module.exports = {
   config: {
     name: 'gpt',
-    aliases: ['ai'],
+    aliases: ["ai"],
     version: '2.5',
     author: 'JV Barcenas', // do not change
     role: 0,
