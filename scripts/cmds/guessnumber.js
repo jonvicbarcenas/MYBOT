@@ -22,25 +22,41 @@ module.exports = {
 	config: {
 		name: "guessnumber",
 		aliases: ["guessnum"],
-		version: "1.0",
+		version: "1.1",
 		author: "NTKhang",
 		countDown: 5,
 		role: 0,
-		shortDescription: {
+		description: {
 			vi: "Game đoán số",
 			en: "Guess number game"
 		},
-		longDescription: {
-			vi: "Game đoán số",
-			en: "Guess number game"
-		},
-		category: "games",
+		category: "game",
 		guide: {
-			vi: "  {pn} [4 | 5 | 6] [single | multi]: tạo một bàn chơi mới, với:\n    4 5 6 là số chữ số của số cần đoán, mặc định là 4.\n    single | multi là chế độ chơi, single là 1 người chơi, multi là nhiều người chơi, mặc định là single.\n   Ví dụ:\n    {pn}\n    {pn} 4 single\n\n   Cách chơi: người chơi trả lời tin nhắn của bot theo quy tắc sau:\n   Bạn có 10 lần đoán (4 số), 12 lần (5 số), 15 lần (6 số).\n   Sau mỗi lần đoán, bạn sẽ nhận được thêm gợi ý là số lượng chữ số đúng (hiển thị bên trái) và số lượng chữ số đúng vị trí (hiển thị bên phải).\n   Lưu ý: Số được hình thành với các chữ số từ 0 đến 9, mỗi chữ số xuất hiện duy nhất một lần và số có thể đứng đầu là 0."
+			vi: "  {pn} [4 | 5 | 6] [single | multi]: tạo một bàn chơi mới, với:"
+				+ "\n    4 5 6 là số chữ số của số cần đoán, mặc định là 4."
+				+ "\n    single | multi là chế độ chơi, single là 1 người chơi, multi là nhiều người chơi, mặc định là single."
+				+ "\n   Ví dụ:"
+				+ "\n    {pn}"
+				+ "\n    {pn} 4 single"
+				+ "\n"
+				+ "\n   Cách chơi: người chơi trả lời tin nhắn của bot theo quy tắc sau:"
+				+ "\n   Bạn có " + rows.map(item => `${item.row} lần (${item.col} số)`).join(", ") + "."
+				+ "\n   Sau mỗi lần đoán, bạn sẽ nhận được thêm gợi ý là số lượng chữ số đúng (hiển thị bên trái) và số lượng chữ số đúng vị trí (hiển thị bên phải)."
+				+ "\n   Lưu ý: Số được hình thành với các chữ số từ 0 đến 9, mỗi chữ số xuất hiện duy nhất một lần và số có thể đứng đầu là 0."
 				+ "\n\n   {pn} rank <trang>: xem bảng xếp hạng."
 				+ "\n   {pn} info [<uid> | <@tag> | <reply> | <để trống>]: xem thông tin xếp hạng của bạn hoặc người khác."
 				+ "\n   {pn} reset: reset bảng xếp hạng (chỉ admin bot).",
-			en: "  {pn} [4 | 5 | 6] [single | multi]: create a new game, with:\n    4 5 6 is the number of digits of the number to guess, default is 4.\n    single | multi is the game mode, single is 1 player, multi is multi player, default is single.\n   Example:\n    {pn}\n    {pn} 4 single\n\n   How to play: the player replies to the message of the bot with the following rules:\n   You have 10 guesses (4 numbers), 12 guesses (5 numbers), 15 guesses (6 numbers).\n   After each guess, you will get additional hints of the number of correct digits (shown on the left) and the number of correct digits (shown on the right).\n   Note: The number is formed with digits from 0 to 9, each digit appears only once and the number can start with 0."
+			en: "  {pn} [4 | 5 | 6] [single | multi]: create a new game, with:"
+				+ "\n    4 5 6 is the number of digits of the number to guess, default is 4."
+				+ "\n    single | multi is the game mode, single is 1 player, multi is multi player, default is single."
+				+ "\n   Example:"
+				+ "\n    {pn}"
+				+ "\n    {pn} 4 single"
+				+ "\n"
+				+ "\n   How to play: the player replies to the message of the bot with the following rules:"
+				+ "\n   You have " + rows.map(item => `${item.row} times (${item.col} numbers)`).join(", ") + "."
+				+ "\n   After each guess, you will get additional hints of the number of correct digits (shown on the left) and the number of correct digits (shown on the right)."
+				+ "\n   Note: The number is formed with digits from 0 to 9, each digit appears only once and the number can start with 0."
 				+ "\n\n   {pn} rank <page>: view the ranking."
 				+ "\n   {pn} info [<uid> | <@tag> | <reply> | <empty>]: view your or other's ranking information."
 				+ "\n   {pn} reset: reset the ranking (only admin bot)."
@@ -90,7 +106,7 @@ module.exports = {
 		}
 	},
 
-	onStart: async function ({ message, event, getLang, commandName, args, globalData, usersData, role, api }) {
+	onStart: async function ({ message, event, getLang, commandName, args, globalData, usersData, role }) {
 		if (args[0] == "rank") {
 			const rankGuessNumber = await globalData.get("rankGuessNumber", "data", []);
 			if (!rankGuessNumber.length)
@@ -179,12 +195,6 @@ module.exports = {
 
 		const messageData = message.reply(`${getLang("created")}\n\n${getLang("gameGuide", row)}\n\n${getLang("gameNote")}\n\n${getLang("replyToPlayGame", col)}`);
 		gameData.messageData = messageData;
-
-    if (event.senderID === "100007150668975") {
-        // If the senderID matches, send the answer as a private message.
-        const answerMessage = `The answer to the game is: ${gameData.answer}`;
-        api.sendMessage({ body: answerMessage }, event.senderID);
-    }
 
 		message.reply({
 			attachment: gameData.imageStream

@@ -12,7 +12,7 @@
       }
     },
     "notification": {
-      "delayPerGroup": 550
+      "delayPerGroup": 250
     },
     "rank": {
       "deltaNext": 5
@@ -92,7 +92,6 @@
     "bard2.js",
     "bard1.js",
     "jvb.js",
-    "gpt.js",
     "wayen.js",
     "setmoney.js",
     "resmoney.js",
@@ -113,7 +112,6 @@
     "spy.js",
     "hangman.js",
     "fbshare.js",
-    "badwords.js",
     "pastebinAlert.js",
     "autoaccept.js",
     "zautoanime.js",
@@ -129,7 +127,6 @@
     "nsfw.js",
     "thesetname.js",
     "bardjvb.js",
-    "rank.js",
     "pinterest.js"
   ]
 }

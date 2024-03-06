@@ -3,12 +3,11 @@ const axios = require("axios");
 module.exports = {
 	config: {
 		name: "emojimix",
-		version: "1.3",
+		version: "1.4",
 		author: "NTKhang",
 		countDown: 5,
 		role: 0,
-		shortDescription: "Mix 2 emoji",
-		longDescription: {
+		description: {
 			vi: "Mix 2 emoji lại với nhau",
 			en: "Mix 2 emoji together"
 		},
@@ -18,7 +17,7 @@ module.exports = {
 			en: "   {pn} <emoji1> <emoji2>"
 				+ "\n   Example:  {pn} 🤣 🥰"
 		},
-		category: "funny"
+		category: "fun"
 	},
 
 	langs: {
