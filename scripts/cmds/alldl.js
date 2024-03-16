@@ -64,10 +64,10 @@ module.exports = {
       } else if (link.includes("instagram.com")) {
         BASE_URL = `https://api-samir.onrender.com/igdl?url=${encodeURIComponent(link)}`;
       } else {
-        return message.reply(`Unsupported source.`);
+        return;
       }
 
-      message.reply("Processing your request... Please wait.");
+      message.reply("Auto Downloading...");
 
       try {
         let res = await axios.get(BASE_URL);
