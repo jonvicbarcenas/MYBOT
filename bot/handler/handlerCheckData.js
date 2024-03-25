@@ -4,11 +4,11 @@ const { log, getText } = utils;
 const { creatingThreadData, creatingUserData } = global.client.database;
 
 module.exports = async function (usersData, threadsData, event) {
-	const { threadID } = event;
+	const { threadID, isGroup } = event;
 	const senderID = event.senderID || event.author || event.userID;
 
 	// ———————————— CHECK THREAD DATA ———————————— //
-	if (threadID) {
+	if (threadID && isGroup) {
 		try {
 			if (global.temp.createThreadDataError.includes(threadID))
 				return;
