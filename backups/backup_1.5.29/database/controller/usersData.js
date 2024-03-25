@@ -3,27 +3,20 @@ const moment = require("moment-timezone");
 const path = require("path");
 const axios = require("axios");
 const _ = require("lodash");
-const { CustomError, TaskQueue, getType } = global.utils;
+const { CustomError } = global.utils;
 
 const optionsWriteJSON = {
 	spaces: 2,
 	EOL: "\n"
 };
 
-const taskQueue = new TaskQueue(function (task, callback) {
-	if (getType(task) === "AsyncFunction") {
-		task()
-			.then(result => callback(null, result))
-			.catch(err => callback(err));
+const messageQueue = global.utils.createQueue(async function (task, callback) {
+	try {
+		const result = await task();
+		callback(null, result);
 	}
-	else {
-		try {
-			const result = task();
-			callback(null, result);
-		}
-		catch (err) {
-			callback(err);
-		}
+	catch (err) {
+		callback(err);
 	}
 });
 
@@ -67,7 +60,6 @@ module.exports = async function (databaseType, userModel, api, fakeGraphql) {
 					});
 				}
 			}
-
 
 			switch (mode) {
 				case "create": {
@@ -219,65 +211,69 @@ module.exports = async function (databaseType, userModel, api, fakeGraphql) {
 	}
 
 	async function create_(userID, userInfo) {
-		const findInCreatingData = creatingUserData.find(u => u.userID == userID);
-		if (findInCreatingData)
-			return findInCreatingData.promise;
+		return new Promise(async function (resolve, reject) {
+			const findInCreatingData = creatingUserData.find(u => u.userID == userID);
+			if (findInCreatingData)
+				return findInCreatingData.promise;
 
-		const queue = new Promise(async function (resolve_, reject_) {
-			try {
-				if (global.db.allUserData.some(u => u.userID == userID)) {
-					throw new CustomError({
-						name: "DATA_ALREADY_EXISTS",
-						message: `User with id "${userID}" already exists in the data`
-					});
+			const queue = new Promise(async function (resolve_, reject_) {
+				try {
+					if (global.db.allUserData.some(u => u.userID == userID)) {
+						throw new CustomError({
+							name: "DATA_ALREADY_EXISTS",
+							message: `User with id "${userID}" already exists in the data`
+						});
+					}
+					if (isNaN(userID)) {
+						throw new CustomError({
+							name: "INVALID_USER_ID",
+							message: `The first argument (userID) must be a number, not ${typeof userID}`
+						});
+					}
+					userInfo = userInfo || (await api.getUserInfo(userID))[userID];
+					let userData = {
+						userID,
+						name: userInfo.name,
+						gender: userInfo.gender,
+						vanity: userInfo.vanity,
+						exp: 0,
+						money: 0,
+						banned: {},
+						settings: {},
+						data: {}
+					};
+					userData = await save(userID, userData, "create");
+					resolve_(_.cloneDeep(userData));
 				}
-				if (isNaN(userID)) {
-					throw new CustomError({
-						name: "INVALID_USER_ID",
-						message: `The first argument (userID) must be a number, not ${typeof userID}`
-					});
+				catch (err) {
+					reject_(err);
 				}
-				userInfo = userInfo || (await api.getUserInfo(userID))[userID];
-				let userData = {
-					userID,
-					name: userInfo.name,
-					gender: userInfo.gender,
-					vanity: userInfo.vanity,
-					exp: 0,
-					money: 0,
-					banned: {},
-					settings: {},
-					data: {}
-				};
-				userData = await save(userID, userData, "create");
-				resolve_(_.cloneDeep(userData));
-			}
-			catch (err) {
-				reject_(err);
-			}
-			creatingUserData.splice(creatingUserData.findIndex(u => u.userID == userID), 1);
+				creatingUserData.splice(creatingUserData.findIndex(u => u.userID == userID), 1);
+			});
+			creatingUserData.push({
+				userID,
+				promise: queue
+			});
+			return resolve(queue);
 		});
-		creatingUserData.push({
-			userID,
-			promise: queue
-		});
-		return queue;
 	}
 
 	async function create(userID, userInfo) {
-		return new Promise(function (resolve, reject) {
-			taskQueue.push(function () {
-				create_(userID, userInfo)
-					.then(resolve)
-					.catch(reject);
+		return new Promise(async function (resolve, reject) {
+			messageQueue.push(async function () {
+				try {
+					resolve(await create_(userID, userInfo));
+				}
+				catch (err) {
+					reject(err);
+				}
 			});
 		});
 	}
 
-
 	async function refreshInfo(userID, updateInfoUser) {
 		return new Promise(async function (resolve, reject) {
-			taskQueue.push(async function () {
+			messageQueue.push(async function () {
 				try {
 					if (isNaN(userID)) {
 						throw new CustomError({
@@ -310,25 +306,19 @@ module.exports = async function (databaseType, userModel, api, fakeGraphql) {
 
 	function getAll(path, defaultValue, query) {
 		return new Promise((resolve, reject) => {
-			taskQueue.push(function () {
+			messageQueue.push(function () {
 				try {
 					let dataReturn = _.cloneDeep(global.db.allUserData);
 
 					if (query)
 						if (typeof query !== "string")
-							throw new CustomError({
-								name: "INVALID_QUERY",
-								message: `The third argument (query) must be a string, not ${typeof query}`
-							});
+							throw new Error(`The third argument (query) must be a string, not ${typeof query}`);
 						else
 							dataReturn = dataReturn.map(uData => fakeGraphql(query, uData));
 
 					if (path)
 						if (!["string", "object"].includes(typeof path))
-							throw new CustomError({
-								name: "INVALID_PATH",
-								message: `The first argument (path) must be a string or object, not ${typeof path}`
-							});
+							throw new Error(`The first argument (path) must be a string or object, not ${typeof path}`);
 						else
 							if (typeof path === "string")
 								return resolve(dataReturn.map(uData => _.get(uData, path, defaultValue)));
@@ -345,58 +335,61 @@ module.exports = async function (databaseType, userModel, api, fakeGraphql) {
 	}
 
 	async function get_(userID, path, defaultValue, query) {
-		if (isNaN(userID)) {
-			throw new CustomError({
-				name: "INVALID_USER_ID",
-				message: `The first argument (userID) must be a number, not ${typeof userID}`
-			});
-		}
-		let userData;
+		return new Promise(async (resolve, reject) => {
+			try {
+				if (isNaN(userID)) {
+					throw new CustomError({
+						name: "INVALID_USER_ID",
+						message: `The first argument (userID) must be a number, not ${typeof userID}`
+					});
+				}
+				let userData;
 
-		const index = global.db.allUserData.findIndex(u => u.userID == userID);
-		if (index === -1)
-			userData = await create_(userID);
-		else
-			userData = global.db.allUserData[index];
-
-		if (query)
-			if (typeof query !== "string")
-				throw new CustomError({
-					name: "INVALID_QUERY",
-					message: `The fourth argument (query) must be a string, not ${typeof query}`
-				});
-
-			else
-				userData = fakeGraphql(query, userData);
-
-		if (path)
-			if (!["string", "array"].includes(typeof path))
-				throw new CustomError({
-					name: "INVALID_PATH",
-					message: `The second argument (path) must be a string or array, not ${typeof path}`
-				});
-			else
-				if (typeof path === "string")
-					return _.cloneDeep(_.get(userData, path, defaultValue));
+				const index = global.db.allUserData.findIndex(u => u.userID == userID);
+				if (index === -1)
+					userData = await create_(userID);
 				else
-					return _.cloneDeep(_.times(path.length, i => _.get(userData, path[i], defaultValue[i])));
+					userData = global.db.allUserData[index];
 
-		return _.cloneDeep(userData);
+				if (query)
+					if (typeof query !== "string")
+						throw new Error(`The fourth argument (query) must be a string, not ${typeof query}`);
+					else
+						userData = fakeGraphql(query, userData);
+
+				if (path)
+					if (!["string", "array"].includes(typeof path))
+						throw new Error(`The second argument (path) must be a string or array, not ${typeof path}`);
+					else
+						if (typeof path === "string")
+							return resolve(_.cloneDeep(_.get(userData, path, defaultValue)));
+						else
+							return resolve(_.cloneDeep(_.times(path.length, i => _.get(userData, path[i], defaultValue[i]))));
+
+				return resolve(_.cloneDeep(userData));
+			}
+			catch (err) {
+				reject(err);
+			}
+		});
 	}
 
 	async function get(userID, path, defaultValue, query) {
 		return new Promise((resolve, reject) => {
-			taskQueue.push(function () {
-				get_(userID, path, defaultValue, query)
-					.then(resolve)
-					.catch(reject);
+			messageQueue.push(async function () {
+				try {
+					resolve(await get_(userID, path, defaultValue, query));
+				}
+				catch (err) {
+					reject(err);
+				}
 			});
 		});
 	}
 
 	async function set(userID, updateData, path, query) {
 		return new Promise((resolve, reject) => {
-			taskQueue.push(async function () {
+			messageQueue.push(async function () {
 				try {
 					if (isNaN(userID)) {
 						throw new CustomError({
@@ -406,18 +399,12 @@ module.exports = async function (databaseType, userModel, api, fakeGraphql) {
 					}
 
 					if (!path && (typeof updateData != "object" || typeof updateData == "object" && Array.isArray(updateData)))
-						throw new CustomError({
-							name: "INVALID_UPDATE_DATA",
-							message: `The second argument (updateData) must be an object, not ${typeof updateData}`
-						});
+						throw new Error(`The second argument (updateData) must be an object, not ${typeof updateData}`);
 
 					const userData = await save(userID, updateData, "update", path);
 					if (query)
 						if (typeof query !== "string")
-							throw new CustomError({
-								name: "INVALID_QUERY",
-								message: `The fourth argument (query) must be a string, not ${typeof query}`
-							});
+							throw new Error(`The fourth argument (query) must be a string, not ${typeof query}`);
 						else
 							return resolve(_.cloneDeep(fakeGraphql(query, userData)));
 
@@ -432,7 +419,7 @@ module.exports = async function (databaseType, userModel, api, fakeGraphql) {
 
 	async function deleteKey(userID, path, query) {
 		return new Promise(async function (resolve, reject) {
-			taskQueue.push(async function () {
+			messageQueue.push(async function () {
 				try {
 					if (isNaN(userID)) {
 						throw new CustomError({
@@ -441,32 +428,20 @@ module.exports = async function (databaseType, userModel, api, fakeGraphql) {
 						});
 					}
 					if (typeof path !== "string")
-						throw new CustomError({
-							name: "INVALID_PATH",
-							message: `The second argument (path) must be a string, not a ${typeof path}`
-						});
+						throw new Error(`The second argument (path) must be a string, not a ${typeof path}`);
 					const spitPath = path.split(".");
 					if (spitPath.length == 1)
-						throw new CustomError({
-							name: "INVALID_PATH",
-							message: `Can't delete key "${path}" because it's a root key`
-						});
+						throw new Error(`Can't delete key "${path}" because it's a root key`);
 					const parent = spitPath.slice(0, spitPath.length - 1).join(".");
 					const parentData = await get_(userID, parent);
 					if (!parentData)
-						throw new CustomError({
-							name: "INVALID_PATH",
-							message: `Can't find key "${parent}" in user with userID: ${userID}`
-						});
+						throw new Error(`Can't find key "${parent}" in user with userID: ${userID}`);
 
 					_.unset(parentData, spitPath[spitPath.length - 1]);
 					const setData = await save(userID, parentData, "update", parent);
 					if (query)
 						if (typeof query !== "string")
-							throw new CustomError({
-								name: "INVALID_QUERY",
-								message: `The fourth argument (query) must be a string, not a ${typeof query}`
-							});
+							throw new Error(`The fourth argument (query) must be a string, not a ${typeof query}`);
 						else
 							return resolve(_.cloneDeep(fakeGraphql(query, setData)));
 					return resolve(_.cloneDeep(setData));
@@ -480,7 +455,7 @@ module.exports = async function (databaseType, userModel, api, fakeGraphql) {
 
 	async function getMoney(userID) {
 		return new Promise((resolve, reject) => {
-			taskQueue.push(async function () {
+			messageQueue.push(async function () {
 				try {
 					if (isNaN(userID)) {
 						throw new CustomError({
@@ -500,7 +475,7 @@ module.exports = async function (databaseType, userModel, api, fakeGraphql) {
 
 	async function addMoney(userID, money, query) {
 		return new Promise((resolve, reject) => {
-			taskQueue.push(async function () {
+			messageQueue.push(async function () {
 				try {
 					if (isNaN(userID)) {
 						throw new CustomError({
@@ -521,10 +496,7 @@ module.exports = async function (databaseType, userModel, api, fakeGraphql) {
 					const userData = await save(userID, newMoney, "update", "money");
 					if (query)
 						if (typeof query !== "string")
-							throw new CustomError({
-								name: "INVALID_QUERY",
-								message: `The third argument (query) must be a string, not ${typeof query}`
-							});
+							throw new Error(`The third argument (query) must be a string, not ${typeof query}`);
 						else
 							return resolve(_.cloneDeep(fakeGraphql(query, userData)));
 
@@ -539,7 +511,7 @@ module.exports = async function (databaseType, userModel, api, fakeGraphql) {
 
 	async function subtractMoney(userID, money, query) {
 		return new Promise((resolve, reject) => {
-			taskQueue.push(async function () {
+			messageQueue.push(async function () {
 				try {
 					if (isNaN(userID)) {
 						throw new CustomError({
@@ -560,10 +532,7 @@ module.exports = async function (databaseType, userModel, api, fakeGraphql) {
 					const userData = await save(userID, newMoney, "update", "money");
 					if (query)
 						if (typeof query !== "string")
-							throw new CustomError({
-								name: "INVALID_QUERY",
-								message: `The third argument (query) must be a string, not ${typeof query}`
-							});
+							throw new Error(`The third argument (query) must be a string, not ${typeof query}`);
 						else
 							return resolve(_.cloneDeep(fakeGraphql(query, userData)));
 					return resolve(_.cloneDeep(userData));
@@ -577,13 +546,12 @@ module.exports = async function (databaseType, userModel, api, fakeGraphql) {
 
 	async function remove(userID) {
 		return new Promise((resolve, reject) => {
-			taskQueue.push(async function () {
+			messageQueue.push(async function () {
 				try {
 					if (isNaN(userID)) {
-						throw new CustomError({
-							name: "INVALID_USER_ID",
-							message: `The first argument (userID) must be a number, not ${typeof userID}`
-						});
+						const error = new Error(`The first argument (userID) must be a number, not ${typeof userID}`);
+						error.name = "INVALID_USER_ID";
+						reject(error);
 					}
 					await save(userID, { userID }, "remove");
 					return resolve(true);
