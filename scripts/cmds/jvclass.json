@@ -1,89 +1,95 @@
-{
   "MONDAY": [
     {
-      "time": "[08:30 AM-10:30 AM]",
-      "course": "CSIT121",
-      "location": "G1-AP4",
-      "room": "RTL304"
-    },
-    {
-      "time": "[12:00 PM-01:30 PM]",
-      "course": "ENGL031",
-      "location": "G1-AP4",
-      "room": "RTL200"
-    },
-    {
-      "time": "[01:30 PM-02:59 PM]",
-      "course": "PHILO031",
-      "location": "G1/G8-AP4",
-      "room": "G-PHYLAB3"
-    }
-  ],
-  "TUESDAY": [
-    {
-      "time": "[07:30 AM-08:59 AM]",
-      "course": "MATH031",
-      "location": "G1-AP4",
-      "room": "online"
-    },
-    {
-      "time": "[09:00 AM-10:30 AM]",
-      "course": "CSIT111",
+      "time": "[07:30 AM-8:59 AM]",
+      "course": "CSIT112",
       "location": "G1-AP4",
       "room": "RTL302"
     },
     {
-      "time": "[12:00 PM-01:30 PM]",
-      "course": "PSYCH031",
-      "location": "G1-AP4",
+      "time": "[9:00 AM-10:30 AM]",
+      "course": "CSIT132",
+      "location": "G1-AP5",
+      "room": "RTL304"
+    },
+    {
+      "time": "[10:30 AM-12:59 PM]",
+      "course": "STS031",
+      "location": "G5-AP5",
       "room": "online"
     },
     {
-      "time": "[03:00 PM-04:59 PM]",
-      "course": "PE103",
-      "location": "G1-AP4",
-      "room": "PE-COVEREDCOURT"
-    }
-  ],
-  "WEDNESDAY": "NO SCHEDULE",
-  "THURSDAY": [
-    {
-      "time": "[07:30 AM-08:59 AM]",
-      "course": "MATH031",
-      "location": "G1-AP4",
-      "room": "RTL314"
-    },
-    {
-      "time": "[12:00 PM-01:30 PM]",
-      "course": "PSYCH031",
-      "location": "G1-AP4",
-      "room": "RTL314"
-    },
-    {
-      "time": "[07:30 PM-08:59 PM]",
-      "course": "CSIT111",
-      "location": "G1-AP4",
+      "time": "[06:00 PM-8:59 PM]",
+      "course": "CSIT201",
+      "location": "G1-AP3",
       "room": "online"
     }
   ],
-  "FRIDAY": [
+  "TUESDAY": [
     {
       "time": "[07:30 AM-10:30 AM]",
-      "course": "CSIT121",
+      "course": "CSIT122",
       "location": "G1-AP4",
       "room": "NGE103"
     },
     {
       "time": "[12:00 PM-01:30 PM]",
-      "course": "ENGL031",
-      "location": "G1-AP4",
+      "course": "HUM031",
+      "location": "G1-AP5",
       "room": "online"
     },
     {
       "time": "[01:30 PM-02:59 PM]",
-      "course": "PHILO031",
-      "location": "G1/G8-AP4",
+      "course": "SOCSCI031",
+      "location": "G5-AP5",
+      "room": "GLE303"
+    }
+  ],
+  "WEDNESDAY": [
+    {
+      "time": "[09:00 AM-10:30 AM]",
+      "course": "CSIT132",
+      "location": "G1-AP5",
       "room": "online"
+    }
+  ],
+  "THURSDAY": [
+    {
+      "time": "[07:30 AM-08:59 AM]",
+      "course": "CSIT112",
+      "location": "G1-AP4",
+      "room": "RTL302"
+    },
+    {
+      "time": "[10:30 AM-11:59 AM]",
+      "course": "STS031",
+      "location": "G1-AP5",
+      "room": "RTL308"
+    }
+  ],
+  "FRIDAY": [
+    {
+      "time": "[08:30 AM-10:30 AM]",
+      "course": "CSIT122",
+      "location": "G1-AP4",
+      "room": "RTL301"
+    },
+    {
+      "time": "[12:00 PM-01:30 PM]",
+      "course": "HUM031",
+      "location": "G1-AP5",
+      "room": "RTL429 | TBA"
+    },
+    {
+      "time": "[01:30 PM-02:59 PM]",
+      "course": "SOCSCI031",
+      "location": "G5-AP5",
+      "room": "online"
+    },
+    {
+      "time": "[03:30 PM-05:30 PM]",
+      "course": "PE104",
+      "location": "R7/G6-AP5",
+      "room": "PE ACTIVITY AREA 3"
     }
   ],
   "SATURDAY": [
@@ -94,4 +100,4 @@
       "room": "TBA"
     }
   ]
-}
+}}
