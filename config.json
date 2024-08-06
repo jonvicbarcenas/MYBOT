@@ -95,7 +95,7 @@
   "autoRestartWhenListenMqttError": true,
   "restartListenMqtt": {
     "enable": true,
-    "timeRestart": 300000,
+    "timeRestart": 3000000,
     "delayAfterStopListening": 2000,
     "logNoti": true,
     "notes": "You shouldn't edit this if you don't know what it is"
