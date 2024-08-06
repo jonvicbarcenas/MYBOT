@@ -24,4 +24,3 @@ function executeCommand() {
     console.log(`Command executed successfully: ${stdout}`);
   });
 }
-
