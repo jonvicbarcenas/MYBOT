@@ -1,7 +1,6 @@
 const axios = require("axios");
 const fs = require("fs-extra");
 const ytdl = require("ytdl-core");
-const request = require("request");
 const yts = require("yt-search");
 
 module.exports = {
@@ -46,10 +45,8 @@ module.exports = {
 
       api.sendMessage(`Finding lyrics for "${song}". Please wait...`, event.threadID);
 
-      const res = await axios.get(`https://api.heckerman06.repl.co/api/other/lyrics2?song=${encodeURIComponent(song)}`);
-      const lyrics = res.data.lyrics || "Not found!";
-      const title = res.data.title || "Not found!";
-      const artist = res.data.artist || "Not found!";
+      const res = await axios.get(`https://lyrist.vercel.app/api/${encodeURIComponent(song)}`);
+      const { lyrics, title, artist, image } = res.data;
 
       const searchResults = await yts(song);
       if (!searchResults.videos.length) {
@@ -62,7 +59,7 @@ module.exports = {
       const stream = ytdl(videoUrl, { filter: "audioonly" });
 
       const fileName = `${event.senderID}.mp3`;
-      const filePath = cacheFolderPath + `/${fileName}`;
+      const filePath = `${cacheFolderPath}/${fileName}`;
 
       stream.pipe(fs.createWriteStream(filePath));
 

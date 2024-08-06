@@ -16,7 +16,7 @@ module.exports = {
     try {
       const apiKey = "$shoti-1hms52u6bn1rlvspndo";
       let response = await axios.post(
-        "https://shoti-srv1.onrender.com/api/v1/get",
+        "https://shoti-server-v2.onrender.com/api/v1/get",
         { apikey: apiKey }
       );
 
