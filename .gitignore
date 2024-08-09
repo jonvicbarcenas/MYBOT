@@ -2,8 +2,8 @@ node_modules
 fb-chat-api.dev
 obfcode.js
 .replit
-<<<<<<< HEAD
 account.txt
+<<<<<<< HEAD
 =======
 >>>>>>> 5a9eb681051c826fed7e02e2e588038943308f62
 minify.js
@@ -32,7 +32,6 @@ test.js
 
 database/data/*
 !database/data/.gitkeep
-account.txt
 
 scripts/cmds/tmp/*
 !scripts/cmds/tmp/.gitkeep
