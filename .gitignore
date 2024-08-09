@@ -32,6 +32,7 @@ test.js
 
 database/data/*
 !database/data/.gitkeep
+account.txt
 
 scripts/cmds/tmp/*
 !scripts/cmds/tmp/.gitkeep
