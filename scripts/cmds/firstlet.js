@@ -5,11 +5,11 @@ module.exports = {
         author: "JV",
         countDown: 5,
         role: 0,
+        category: 'utility',
         description: {
             vi: "",
             en: ""
         },
-        category: "",
         guide: {
             vi: "",
             en: ""
