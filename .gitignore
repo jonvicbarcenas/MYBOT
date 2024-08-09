@@ -1,26 +1,43 @@
-node_modules
+# Node modules and environment files
+node_modules/
 fb-chat-api.dev
 obfcode.js
 .replit
+
+# Account file
 account.txt
+data.json
+
+# Merge conflict markers (make sure your files don't contain these lines)
 <<<<<<< HEAD
 =======
 >>>>>>> 5a9eb681051c826fed7e02e2e588038943308f62
+
+# Minified and backup files
 minify.js
 backupOrigin.js
+
+# Version control scripts
 createVersion.js
 createVersionAndCommit.js
 checkOriginCodeChanged.js
+
+# Archive files
 *.zip
 *.dev.*
 *.rar
+
+# Test files
 *test.*
 *.test.*
 test.js
+
+# Unmerged changes markers
 <<<<<<< Updated upstream
 .*
 =======
 
+# Caches and configuration files
 .cache
 .codesandbox
 .devcontainer
@@ -30,14 +47,19 @@ test.js
 .npm
 >>>>>>> Stashed changes
 
+# Databases and temporary files
 database/data/*
 !database/data/.gitkeep
 
+# Script temporary files
 scripts/cmds/tmp/*
 !scripts/cmds/tmp/.gitkeep
+
+# Script assets and guides
 scripts/cmds/assets/guide
 !scripts/cmds/assets/guide/.gitkeep
 
+# Event temporary files
 scripts/events/tmp/*
 scripts/events/data/leaveAttachment
 scripts/events/data/welcomeAttachment
