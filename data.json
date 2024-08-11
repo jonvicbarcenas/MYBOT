@@ -2,14 +2,76 @@
   "messages": [
     {
       "type": "message",
+      "senderID": "61552488179337",
+      "senderName": "Akira Takuyashi",
+      "body": "Here is your track: Television / So Far So Good",
+      "threadID": "6777800695604661",
+      "messageID": "mid.$gABgUX7LR5bWXcupbwWRQaUHJ7ULz",
+      "attachments": [
+        {
+          "type": "audio",
+          "ID": "AT3gQ6VdYNkK8qJhqHl8oVUuqQUsjiisxY2Br6hejgGrshCPgm7U-DxMon66z0PSM_UqtTUazF4geQveDj_M07WLY4HAAjt7HCY_0DnnZaAJGorqDKbECC0T_Gmu0mPfIML246rcTWsy1TgGQxlkmPtg_zc",
+          "filename": "audio.mp3",
+          "fullFileName": "audio.mp3",
+          "fileSize": 4289841,
+          "duration": 262632,
+          "original_extension": "mp3",
+          "mimeType": "audio/mpeg",
+          "audioType": "FILE_ATTACHMENT",
+          "url": "https://cdn.fbsbx.com/v/t59.3654-21/437258377_1813691422477356_7682378776088736574_n.mp3/audio.mp3?_nc_cat=102&ccb=1-7&_nc_sid=d61c36&_nc_ohc=UqJLgn5R5TMQ7kNvgEQQCOh&_nc_ht=cdn.fbsbx.com&oh=03_Q7cD1QFenOj5BO1R9gZFNhIkKqALDU-Mm6aWkd_PAyBmPPO6vw&oe=66BA9369&dl=1",
+          "isVoiceMail": false
+        }
+      ],
+      "mentions": {},
+      "timestamp": "1723383223233",
+      "isGroup": true
+    },
+    {
+      "type": "message",
       "senderID": "100085947075503",
       "senderName": "Ace Gerome🧸🇵🇭",
-      "body": "/test Suggest 10 challenge that he/she gonna do online only",
+      "body": "/tia Hi",
       "threadID": "6777800695604661",
-      "messageID": "mid.$gABgUX7LR5bWXcjLkD2RQO2dl2vpi",
+      "messageID": "mid.$gABgUX7LR5bWXcuqdY2RQaVQIeXPo",
       "attachments": [],
       "mentions": {},
-      "timestamp": "1723371199503",
+      "timestamp": "1723383240035",
+      "isGroup": true
+    },
+    {
+      "type": "message_reply",
+      "senderID": "61552488179337",
+      "senderName": "Akira Takuyashi",
+      "body": "Hello, Ace Pogi po!",
+      "threadID": "6777800695604661",
+      "messageID": "mid.$gABgUX7LR5bWXcuqqUWRQaVhM3tBW",
+      "attachments": [],
+      "mentions": {},
+      "timestamp": 1723383243345,
+      "isGroup": true
+    },
+    {
+      "type": "message",
+      "senderID": "100095125047610",
+      "senderName": "John Rey Decierdo",
+      "body": "I\nThe Nellie, a cruising yawl, swung to her anchor without a flutter of the sails, and was at rest. The flood had made, the wind was nearly calm, and being bound down the river, the only thing for it was to come to and wait for the turn of the tide.\n\nThe sea-reach of the Thames stretched before us like the beginning of an interminable waterway. In the offing the sea and the sky were welded together without a joint, and in the luminous space the tanned sails of the barges drifting up with the tide seemed to stand still in red clusters of canvas sharply peaked, with gleams of varnished sprits. A haze rested on the low shores that ran out to sea in vanishing flatness. The air was dark above Gravesend, and farther back still seemed condensed into a mournful gloom, brooding motionless over the biggest, and the greatest, town on earth.\n\nThe Director of Companies was our captain and our host. We four affectionately watched his back as he stood in the bows looking to seaward. On the whole river there was nothing that looked half so nautical. He resembled a pilot, which to a seaman is trustworthiness personified. It was difficult to realize his work was not out there in the luminous estuary, but behind him, within the brooding gloom.\n\nBetween us there was, as I have already said somewhere, the bond of the sea. Besides holding our hearts together through long periods of separation, it had the effect of making us tolerant of each other’s yarns—and even convictions. The Lawyer—the best of old fellows—had, because of his many years and many virtues, the only cushion on deck, and was lying on the only rug. The Accountant had brought out already a box of dominoes, and was toying architecturally with the bones. Marlow sat cross-legged right aft, leaning against the mizzen-mast. He had sunken cheeks, a yellow complexion, a straight back, an ascetic aspect, and, with his arms dropped, the palms of hands outwards, resembled an idol. The director, satisfied the anchor had good hold, made his way aft and sat down amongst us. We exchanged a few words lazily. Afterwards there was silence on board the yacht. For some reason or other we did not begin that game of dominoes. We felt meditative, and fit for nothing but placid staring. The day was ending in a serenity of still and exquisite brilliance. The water shone pacifically; the sky, without a speck, was a benign immensity of unstained light; the very mist on the Essex marsh was like a gauzy and radiant fabric, hung from the wooded rises inland, and draping the low shores in diaphanous folds. Only the gloom to the west, brooding over the upper reaches, became more sombre every minute, as if angered by the approach of the sun.\n\nAnd at last, in its curved and imperceptible fall, the sun sank low, and from glowing white changed to a dull red without rays and without heat, as if about to go out suddenly, stricken to death by the touch of that gloom brooding over a crowd of men.\n\nForthwith a change came over the waters, and the serenity became less brilliant but more profound. The old river in its broad reach rested unruffled at the decline of day, after ages of good service done to the race that peopled its banks, spread out in the tranquil dignity of a waterway leading to the uttermost ends of the earth. We looked at the venerable stream not in the vivid flush of a short day that comes and departs for ever, but in the august light of abiding memories. And indeed nothing is easier for a man who has, as the phrase goes, “followed the sea” with reverence and affection, than to evoke the great spirit of the past upon the lower reaches of the Thames. The tidal current runs to and fro in its unceasing service, crowded with memories of men and ships it had borne to the rest of home or to the battles of the sea. It had known and served all the men of whom the nation is proud, from Sir Francis Drake to Sir John Franklin, knights all, titled and untitled—the great knights-errant of the sea. It had borne all the ships whose names are like jewels flashing in the night of time, from the Golden Hind returning with her rotund flanks full of treasure, to be visited by the Queen’s Highness and thus pass out of the gigantic tale, to the Erebus and Terror, bound on other conquests—and that never returned. It had known the ships and the men. They had sailed from Deptford, from Greenwich, from Erith—the adventurers and the settlers; kings’ ships and the ships of men on ’Change; captains, admirals, the dark “interlopers” of the Eastern trade, and the commissioned “generals” of East India fleets. Hunters for gold or pursuers of fame, they all had gone out on that stream, bearing the sword, and often the torch, messengers of the might within the land, bearers of a spark from the sacred fire. What greatness had not floated on the ebb of that river into the mystery of an unknown earth!... The dreams of men, the seed of commonwealths, the germs of empires.\n\nThe sun set; the dusk fell on the stream, and lights“‘The chief of the Inner Station,’ he answered in a short tone, looking away. ‘Much obliged,’ I said, laughing. ‘And you are the brickmaker of the Central Station. Every one knows that.’ He was silent for a while. ‘He is a prodigy,’ he said at last. ‘He is an emissary of pity and science and progress, and devil knows what else. We want,’ he began to declaim suddenly, ‘for the guidance of the cause intrusted to us by Europe, so to speak, higher intelligence, wide sympathies, a singleness of purpose.’ ‘Who says that?’ I asked. ‘Lots of them,’ he replied. ‘Some even write that; and so he comes here, a special being, as you ought to know.’ ‘Why ought I to know?’ I interrupted, really surprised. He paid no attention. ‘Yes. Today he is chief of the best station, next year he will be assistant-manager, two years more and... but I dare-say you know what he will be in two years’ time. You are of the new gang—the gang of virtue. The same people who sent him specially also recommended you. Oh, don’t say no. I’ve my own eyes to trust.’ Light dawned upon me. My dear aunt’s influential acquaintances were producing an unexpected effect upon that young man. I nearly burst into a laugh. ‘Do you read the Company’s confidential correspondence?’ I asked. He hadn’t a word to say. It was great fun. ‘When Mr. Kurtz,’ I continued, severely, ‘is General Manager, you won’t have the opportunity.’\n\n“He blew the candle out suddenly, and we wentoutside. The moon had risen. Black figures strolled about listlessly, pouring water on the glow, whence proceeded a sound of hissing; steam ascended in the moonlight, the beaten nigger groaned somewhere. ‘What a row the brute makes!’ said the indefatigable man with the moustaches, appearing near us. ‘Serve him right. Transgression—punishment—bang! Pitiless, pitiless. That’s the only way. This will prevent all conflagrations for the future. I was just telling the manager...’ He noticed my companion, and became crestfallen all at once. ‘Not in bed yet,’ he said, with a kind of servile heartiness; ‘it’s so natural. Ha! Danger—agitation.’ He vanished. I went on to the riverside, and the other followed me. I heard a scathing murmur at my ear, ‘Heap of muffs—go to.’ The pilgrims could be seen in knots gesticulating, discussing. Several had still their staves in their hands. I verily believe they took these sticks to bed with them. Beyond the fence the forest stood up spectrally in the moonlight, and through that dim stir, through the faint sounds of that lamentable courtyard, the silence of the land went home to one’s very heart—its mystery, its greatness, the amazing reality of its concealed life. The hurt nigger moaned feebly somewhere near by, and then fetched a deep sigh that made me mend my pace away from there. I felt a hand introducing itself under my arm. ‘My dear sir,’ said the fellow, ‘I don’t want to be misunderstood, and especially by you, who will see Mr. Kurtz long before I can have that pleasure. I wouldn’t like him to get a false idea of my disposition....’\n\n“I let him run on, this papier-mache Mephistopheles, and it seemed to me that if I tried I could poke my forefinger through him, and would find nothing inside but a little loose dirt, maybe. He, don’t you see, had been planning to be assistant-manager by and by under the present man, and I could see that the coming of that Kurtz had upset them both not a little. He talked precipitately, and I did not try to stop him. I had my shoulders against the wreck of my steamer, hauled up on the slope like a carcass of some big river animal. The smell of mud, of primeval mud, by Jove! was in my nostrils, the high stillness of primeval forest was before my eyes; there were shiny patches on the black creek. The moon had spread over everything a thin layer of silver—over the rank grass, over the mud, upon the wall of matted vegetation standing higher than the wall of a temple, over the great river I could see through a sombre gap glittering, glittering, as it flowed broadly by without a murmur. All this was great, expectant, mute, while the man jabbered about himself. I wondered whether the stillness on the face of the immensity looking at us two were meant as an appeal or as a menace. What were we who had strayed in here? Could we handle that dumb thing, or would it handle us? I felt how big, how confoundedly big, was that thing that couldn’t talk, and perhaps was deaf as well. What was in there? I could see a little ivory coming out from there, and I had heard Mr. Kurtz was in there. I had heard enough about it, too—God knows! Yet somehow it didn’t bring any image with it—no more than if I had been told an angel or a fiend was in there. I believed it in the same way one of you might believe there are inhabitants in the planet Mars. I knew once a Scotch sailmaker who was certain, dead sure, there were people in Mars. If you asked him for some idea how they looked and behaved, he would get shy and mutter something about ‘walking on all-fours.’ If you as much as smiled, he would—though a man of sixty—offer to fight you. I would not have gone so far as to fight for Kurtz, but I went for him near enough to a lie. You know I hate, detest, and can’t bear a lie, not because I am straighter than the rest of us, but simply because it appalls me. There is a taint of death, a flavour of mortality in lies—which is exactly what I hate and detest in the world—what I want to forget. It makes me miserable and sick, like biting something rotten would do. Temperament, I suppose. Well, I went near enough to it by letting the young fool there believe anything he liked to imagine as to my influence in Europe. I became in an instant as much of a pretence as the rest of the bewitched pilgrims. This simply because I had a notion it somehow would be of help to that Kurtz whom at the time I did not see—you understand. He was just a word for me. I did not see the man in the name any more than you do. Do you see him? Do you see the story? Do you see anything? It seems to me I am trying to tell you a dream—making a vain attempt, because no relation of a dream can convey the dream-sensation, that commingling of absurdity, surprise, and bewilderment in a tremor of struggling revolt, that notion of being captured by the incredible which is of the very essence of dreams....”\n\nHe was silent for a while.",
+      "threadID": "6777800695604661",
+      "messageID": "mid.$gABgUX7LR5bWXcuq4DWRQaVmgaQII",
+      "attachments": [],
+      "mentions": {},
+      "timestamp": "1723383246861",
+      "isGroup": true
+    },
+    {
+      "type": "message_reply",
+      "senderID": "100085947075503",
+      "senderName": "Ace Gerome🧸🇵🇭",
+      "body": "What's that men?",
+      "threadID": "6777800695604661",
+      "messageID": "mid.$gABgUX7LR5bWXcur0RmRQaWnJkeO1",
+      "attachments": [],
+      "mentions": {},
+      "timestamp": 1723383262278,
       "isGroup": true
     }
   ],
