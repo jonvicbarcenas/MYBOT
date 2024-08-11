@@ -14,41 +14,43 @@ module.exports = {
         category: "utility",
         guide: {
             vi: "",
-            en: "{prefix}gitpush 'commit message'\nExample:\n{prefix}gitpush 'Update the code'"
+            en: "{prefix}gitpush [push/pull] [commit message]\nExample:\n{prefix}gitpush push 'Update the code'\n{prefix}gitpush pull"
         }
     },
 
     langs: {
-        vi: {
-            
-        },
-        en: {
-            
-        }
+        vi: {},
+        en: {}
     },
 
-    onStart: async function ({ api, args, message, event, threadsData, usersData, dashBoardData, globalData, threadModel, userModel, dashBoardModel, globalModel, role, commandName, getLang }) {
-        try{
-            const gitOpt = args.join(' ').tolowercase();
+    onStart: async function ({ api, args, message, event, global }) {
+        try {
+            const gitOpt = args[0].toLowerCase();
 
-            if (gitOpt !== 'push' || gitOpt !== 'pull') {
-                await message.reply('Please choose an option: pull or push');
+            if (gitOpt !== 'push' && gitOpt !== 'pull') {
+                await message.reply('Please choose an option: push or pull.');
                 return;
             }
 
-            if (gitOpt === 'push'){
-                const thisMess = "Please reply the commit message on this message of mine.";
-                message.reply({
-                    body: thisMess
-                  }, (err, info) => {
-                    global.GoatBot.onReply.set(info.messageID, {
-                      commandName: "gitpush",
-                      messageID: info.messageID,
-                      author: event.senderID,
-                    //   repliedMessage
+            if (gitOpt === 'push') {
+                if (args.length < 2) {
+                    const thisMess = "Please reply with the commit message.";
+                    message.reply({
+                        body: thisMess
+                    }, (err, info) => {
+                        if (!err) {
+                            global.GoatBot.onReply.set(info.messageID, {
+                                commandName: "gitpush",
+                                messageID: info.messageID,
+                                author: event.senderID,
+                            });
+                        }
                     });
-                });
-                
+                    return;
+                } else {
+                    const commitMessage = args.slice(1).join(' ');
+                    gitPush(commitMessage, message);
+                }
             }
 
             if (gitOpt === 'pull') {
@@ -56,35 +58,22 @@ module.exports = {
                 gitPull(message);
             }
 
-
-            // if (!message) {
-            //     message.reply('Commit message is required.');
-            //     return;
-            // }
-
-
-            gitPush(commitmes, message);
-        }catch(e){
+        } catch (e) {
             console.log(e);
         }
     },
-    onReply: async function ({ args, event, api, message, Reply }) {
-        const { author, repliedMessage } = Reply;
+
+    onReply: async function ({ args, event, message, Reply }) {
+        const { author } = Reply;
 
         if (event.senderID !== author) {
             return;
         }
-        
-        const commitmes = args.join(' ');
-        gitPush(commitmes, message);
 
+        const commitMessage = args.join(' ');
+        gitPush(commitMessage, message);
     }
 };
-
-
-
-
-
 
 function gitPush(commitMessage, message) {
     exec(`git add . && git commit -m "${commitMessage}" && git push origin main`, (error, stdout, stderr) => {
@@ -95,8 +84,8 @@ function gitPush(commitMessage, message) {
         }
 
         if (stderr) {
-            message.reply(`stderr: ${stderr}`);
             console.error(`stderr: ${stderr}`);
+            message.reply(`stderr: ${stderr}`);
             return;
         }
 
@@ -114,8 +103,8 @@ function gitPull(message) {
         }
 
         if (stderr) {
-            message.reply(`stderr: ${stderr}`);
             console.error(`stderr: ${stderr}`);
+            message.reply(`stderr: ${stderr}`);
             return;
         }
 
