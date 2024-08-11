@@ -23,40 +23,37 @@ module.exports = {
 
     onStart: async function ({ args, message }) {
         const echoMessage = args.join(" ");
-        try {
-            const replyMessage = await message.reply({
-                body: echoMessage
-            });
-
+        message.reply({
+            body: echoMessage
+        }, (err, info) => {
+            if (err) {
+                console.error("Error sending message:", err);
+                return;
+            }
             // Ensure global.GoatBot.onReply is initialized as a Map
             if (!global.GoatBot.onReply) {
                 global.GoatBot.onReply = new Map();
             }
-
-            global.GoatBot.onReply.set(replyMessage.messageID, {
+            global.GoatBot.onReply.set(info.messageID, {
                 commandName: this.config.name,
                 author: message.senderID,
-                messageID: replyMessage.messageID,
+                messageID: info.messageID,
             });
-        } catch (error) {
-            console.error("Error sending reply:", error);
-        }
+        });
     },
 
-    onReply: async function ({ Reply, message, event }) {
+    onReply: async function ({ Reply, api, args, message, event, threadsData, usersData, dashBoardData, globalData, threadModel, userModel, dashBoardModel, globalModel, role, commandName, getLang }) {
         const { messageID, author } = Reply;
-        if (author !== event.senderID) {
+        if (author != event.senderID) {
             return;
         }
-
-        // Ensure args are correctly passed
-        const messageReply = event.args.join(" ");
-        try {
-            await message.reply({
-                body: messageReply
-            });
-        } catch (error) {
-            console.error("Error replying to message:", error);
-        }
+        
+        // Verify if args is defined and contains the message text
+        const messageReply = args.join(" ") || "No reply message provided.";
+        
+        // Ensure message.reply is correctly called
+        return message.reply({
+            body: messageReply
+        });
     }
 };
