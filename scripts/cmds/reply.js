@@ -49,7 +49,7 @@ module.exports = {
         }
         
         // Verify if args is defined and contains the message text
-        const messageReply = args.join(" ") || "No reply message provided.";
+        const messageReply = event.body || args.join(" ");
         
         // Ensure message.reply is correctly called
         return message.reply({
