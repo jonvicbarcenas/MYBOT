@@ -25,6 +25,11 @@ module.exports = {
 
     onStart: async function ({ api, args, message, event, global }) {
         try {
+            if (args.length === 0) {
+                await message.reply('Please provide an option: push or pull.');
+                return;
+            }
+
             const gitOpt = args[0].toLowerCase();
 
             if (gitOpt !== 'push' && gitOpt !== 'pull') {
@@ -40,7 +45,7 @@ module.exports = {
                     }, (err, info) => {
                         if (!err) {
                             global.GoatBot.onReply.set(info.messageID, {
-                                commandName: "gitpush",
+                                commandName: "git",
                                 messageID: info.messageID,
                                 author: event.senderID,
                             });
