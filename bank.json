@@ -5256,5 +5256,17 @@
   "100070203865804": {
     "bank": 2000,
     "lastInterestClaimed": 1721129618816
+  },
+  "100095490007376": {
+    "bank": 0,
+    "lastInterestClaimed": 1723355125090
+  },
+  "100095520485317": {
+    "bank": 0,
+    "lastInterestClaimed": 1723355139619
+  },
+  "100022749995574": {
+    "bank": 0,
+    "lastInterestClaimed": 1723357101137
   }
 }
