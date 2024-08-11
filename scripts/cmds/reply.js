@@ -46,7 +46,7 @@ module.exports = {
         const { messageID, author } = Reply;
        
         return message.reply({
-            body: `Reply from ${author} with messageID ${messageID} with args: ${args.join(" ")}`
+            body: `Reply from ${author}\n with messageID ${messageID}\n\n with the message: ${args.join(" ")}`
         });
     }
 };
