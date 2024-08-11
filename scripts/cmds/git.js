@@ -39,7 +39,7 @@ module.exports = {
 
             if (gitOpt === 'push') {
                 if (args.length < 2) {
-                    const thisMess = `Please reply with the commit message. Example: /git push 'Update the code'`;
+                    const thisMess = `Please include a commit message.\nExample: /git push 'Update the code'`;
                     return message.reply(thisMess); 
                 } else {
                     const commitMessage = args.slice(1).join(' ');
