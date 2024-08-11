@@ -104,7 +104,7 @@ module.exports = {
     });
   },
   onReply: async function ({ args, event, api, message, Reply }) {
-    const { type, author, repliedMessage } = Reply;
+    const {author, repliedMessage } = Reply;
 
     if (event.senderID !== author) {
       return;
