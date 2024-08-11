@@ -39,21 +39,8 @@ module.exports = {
 
             if (gitOpt === 'push') {
                 if (args.length < 2) {
-                    const thisMess = "Please reply with the commit message.";
-                    message.reply({
-                        body: thisMess
-                    }, (err, info) => {
-                        if (!err) {
-                            global.GoatBot.onReply.set(info.messageID, {
-                                commandName: "git",
-                                messageID: info.messageID,
-                                author: event.senderID,
-                            });
-                        } else {
-                            console.error('Error in message.reply callback:', err);
-                        }
-                    });
-                    return;
+                    const thisMess = `Please reply with the commit message. Example: /git push 'Update the code'`;
+                    return message.reply(thisMess); 
                 } else {
                     const commitMessage = args.slice(1).join(' ');
                     gitPush(commitMessage, message);
@@ -68,17 +55,6 @@ module.exports = {
         } catch (e) {
             console.log(e);
         }
-    },
-
-    onReply: async function ({ args, event, message, Reply }) {
-        const { author } = Reply;
-
-        if (event.senderID !== author) {
-            return;
-        }
-
-        const commitMessage = args.join(' ');
-        gitPush(commitMessage, message);
     }
 };
 
