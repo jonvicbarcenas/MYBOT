@@ -36,7 +36,7 @@ module.exports = {
             }
             global.GoatBot.onReply.set(info.messageID, {
                 commandName: this.config.name,
-                author: message.senderID,
+                author: event.senderID,
                 messageID: info.messageID,
             });
         });
