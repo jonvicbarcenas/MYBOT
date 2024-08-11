@@ -17,34 +17,46 @@ module.exports = {
     },
 
     langs: {
-        vi: {
-            
-        },
-        en: {
-            
-        }
+        vi: {},
+        en: {}
     },
 
     onStart: async function ({ args, message }) {
         const echoMessage = args.join(" ");
-        message.reply({
-            body: echoMessage
-        }, (err, info) => {
-            global.GoatBot.onReply.set(info.messageID, {
+        try {
+            const replyMessage = await message.reply({
+                body: echoMessage
+            });
+
+            // Ensure global.GoatBot.onReply is initialized as a Map
+            if (!global.GoatBot.onReply) {
+                global.GoatBot.onReply = new Map();
+            }
+
+            global.GoatBot.onReply.set(replyMessage.messageID, {
                 commandName: this.config.name,
                 author: message.senderID,
-                messageID: info.messageID,
+                messageID: replyMessage.messageID,
             });
-        });
+        } catch (error) {
+            console.error("Error sending reply:", error);
+        }
     },
-    onReply: async function ({ Reply, api, args, message, event, threadsData, usersData, dashBoardData, globalData, threadModel, userModel, dashBoardModel, globalModel, role, commandName, getLang }) {
+
+    onReply: async function ({ Reply, message, event }) {
         const { messageID, author } = Reply;
-        if (author != event.senderID){
+        if (author !== event.senderID) {
             return;
         }
-        const messageReply = args.join(" ");
-        return message.reply({
-            body: messageReply
-        });
+
+        // Ensure args are correctly passed
+        const messageReply = event.args.join(" ");
+        try {
+            await message.reply({
+                body: messageReply
+            });
+        } catch (error) {
+            console.error("Error replying to message:", error);
+        }
     }
 };
