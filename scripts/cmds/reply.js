@@ -21,7 +21,7 @@ module.exports = {
         en: {}
     },
 
-    onStart: async function ({ args, message }) {
+    onStart: async function ({ args, message, event }) {
         const echoMessage = args.join(" ");
         message.reply({
             body: echoMessage
