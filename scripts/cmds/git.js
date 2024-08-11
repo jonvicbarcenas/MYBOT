@@ -49,6 +49,8 @@ module.exports = {
                                 messageID: info.messageID,
                                 author: event.senderID,
                             });
+                        } else {
+                            console.error('Error in message.reply callback:', err);
                         }
                     });
                     return;
