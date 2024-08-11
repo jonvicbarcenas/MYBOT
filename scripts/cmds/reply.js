@@ -31,13 +31,17 @@ module.exports = {
             body: echoMessage
         }, (err, info) => {
             global.GoatBot.onReply.set(info.messageID, {
-                commandName: info.commandName,
+                commandName: this.config.name,
+                author: message.senderID,
                 messageID: info.messageID,
             });
         });
     },
     onReply: async function ({ Reply, api, args, message, event, threadsData, usersData, dashBoardData, globalData, threadModel, userModel, dashBoardModel, globalModel, role, commandName, getLang }) {
-        const { messageID } = Reply;
+        const { messageID, author } = Reply;
+        if (author != event.senderID){
+            return;
+        }
         const messageReply = args.join(" ");
         return message.reply({
             body: messageReply
