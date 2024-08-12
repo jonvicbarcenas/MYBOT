@@ -1,4 +1,3 @@
-const fetch = require('node-fetch'); // Import fetch for server-side usage
 const uid = require("./uid");
 
 module.exports = {
@@ -40,16 +39,13 @@ module.exports = {
         const imageUrl = `http://13.127.169.105:3000/image?newImage=&text=${encodeURIComponent(name)}&uid=${senderID}&rank=${levelUser}`;
 
         try {
-            const response = await fetch(imageUrl);
-            if (!response.ok) throw new Error('Network response was not ok');
+            // Use global.utils.getStreamFromURL to fetch the image as a stream
+            const stream = await global.utils.getStreamFromURL(imageUrl);
 
-            // Get the image as a buffer
-            const imageBuffer = await response.buffer();
-            
-            // Reply with the image
+            // Reply with the image stream
             await message.reply({
                 body: 'Here is your Genshin Impact card!',
-                attachment: imageBuffer
+                attachment: stream
             });
         } catch (error) {
             console.error('Error creating card:', error);
