@@ -1,8 +1,6 @@
 const fetch = require('node-fetch'); // Import fetch for server-side usage
 const fs = require('fs-extra'); // For file operations
 const path = require('path'); // For handling file paths
-const uid = require("./uid");
-
 module.exports = {
     config: {
         name: "genshin",
@@ -31,15 +29,10 @@ module.exports = {
         const userData = await usersData.get(senderID);
 
         // Define `exp` and `name` for the purpose of this example.
-        const exp = userData.exp || 0; // Assuming `exp` is a property of `userData`
-        const name = userData.name || 'Unknown'; // Assuming `name` is a property of `userData`
+        const exp = userData.exp; // Assuming `exp` is a property of `userData`
+        const name = userData.name || 'Traveler'; // Assuming `name` is a property of `userData`
 
-        // Define deltaNext for the purpose of this example
-        const deltaNext = 1000; // You might want to adjust this value
-
-        const levelUser = expToLevel(exp, deltaNext);
-
-        const imageUrl = `http://13.127.169.105:3000/image?newImage=&text=${encodeURIComponent(name)}&uid=${senderID}&rank=${levelUser}`;
+        const imageUrl = `http://13.127.169.105:3000/image?newImage=&text=${encodeURIComponent(name)}&uid=${senderID}&rank=${exp}`;
 
         try {
             const response = await fetch(imageUrl);
@@ -66,5 +59,3 @@ module.exports = {
         }
     }
 };
-
-const expToLevel = (exp, deltaNextLevel = 1000) => Math.floor((1 + Math.sqrt(1 + 8 * exp / deltaNextLevel)) / 2);
