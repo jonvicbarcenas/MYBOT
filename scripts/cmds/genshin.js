@@ -40,7 +40,7 @@ module.exports = {
 
         const levelUser = expToLevel(exp, deltaNext);
 
-        const imageUrl = `http://13.127.169.105:3000/image?newImage=${encodeURIComponent(avatarUrl)}&text=${encodeURIComponent(name)}&uid=${senderID}&rank=${levelUser}`;
+        const imageUrl = `http://13.127.169.105:3000/image?newImage=&text=${encodeURIComponent(name)}&uid=${senderID}&rank=${levelUser}`;
 
         try {
             const response = await fetch(imageUrl);
