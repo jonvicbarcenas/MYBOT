@@ -38,19 +38,28 @@ module.exports = {
 
         const imageUrl = `http://13.127.169.105:3000/image?newImage=&text=${encodeURIComponent(name)}&uid=${senderID}&rank=${levelUser}`;
 
-        try {
-            // Use global.utils.getStreamFromURL to fetch the image as a stream
-            const stream = await global.utils.getStreamFromURL(imageUrl);
 
-            // Reply with the image stream
-            await message.reply({
-                body: 'Here is your Genshin Impact card!',
-                attachment: stream
-            });
-        } catch (error) {
-            console.error('Error creating card:', error);
-            await message.reply('There was an error creating your card.');
-        }
+        message.reply({
+            body: 'senderID: ' + senderID + ' name: ' + name + ' level: ' + levelUser
+        });
+
+
+
+
+
+        // try {
+        //     // Use global.utils.getStreamFromURL to fetch the image as a stream
+        //     const stream = await global.utils.getStreamFromURL(imageUrl);
+
+        //     // Reply with the image stream
+        //     await message.reply({
+        //         body: 'Here is your Genshin Impact card!',
+        //         attachment: stream
+        //     });
+        // } catch (error) {
+        //     console.error('Error creating card:', error);
+        //     await message.reply('There was an error creating your card.');
+        // }
     }
 };
 
