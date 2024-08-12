@@ -56,7 +56,6 @@ module.exports = {
 
             // Send the image (adjust according to your API or method of sending files)
             await message.reply({
-                body: "Here's your Genshin Impact card!",
                 attachment: fs.createReadStream(imgPath)
             });
 
