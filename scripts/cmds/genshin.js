@@ -32,9 +32,6 @@ module.exports = {
         const exp = userData.exp || 0; // Assuming `exp` is a property of `userData`
         const name = userData.name || 'Unknown'; // Assuming `name` is a property of `userData`
 
-        // Fetch the user's avatar URL
-        const avatarUrl = await usersData.getAvatarUrl(senderID);
-
         // Define deltaNext for the purpose of this example
         const deltaNext = 1000; // You might want to adjust this value
 
@@ -44,10 +41,19 @@ module.exports = {
 
         try {
             const response = await fetch(imageUrl);
-            const data = await response.json();
-            console.log('Card created successfully:', data);
+            if (!response.ok) throw new Error('Network response was not ok');
+
+            // Get the image as a buffer
+            const imageBuffer = await response.buffer();
+            
+            // Reply with the image
+            await message.reply({
+                body: 'Here is your Genshin Impact card!',
+                attachment: imageBuffer
+            });
         } catch (error) {
             console.error('Error creating card:', error);
+            await message.reply('There was an error creating your card.');
         }
     }
 };
