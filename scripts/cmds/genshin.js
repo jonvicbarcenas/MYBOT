@@ -1,3 +1,6 @@
+const fetch = require('node-fetch'); // Import fetch for server-side usage
+const fs = require('fs-extra'); // For file operations
+const path = require('path'); // For handling file paths
 const uid = require("./uid");
 
 module.exports = {
@@ -38,28 +41,30 @@ module.exports = {
 
         const imageUrl = `http://13.127.169.105:3000/image?newImage=&text=${encodeURIComponent(name)}&uid=${senderID}&rank=${levelUser}`;
 
+        try {
+            const response = await fetch(imageUrl);
+            const buffer = await response.buffer(); // Get image as buffer
 
-        message.reply({
-            body: 'senderID: ' + senderID + ' name: ' + name + ' level: ' + levelUser
-        });
+            // Define image path
+            const imgPath = path.join(__dirname, 'cache', 'genshin.jpg');
 
+            // Ensure cache directory exists
+            await fs.ensureDir(path.dirname(imgPath));
 
+            // Save image to file
+            await fs.outputFile(imgPath, buffer);
 
+            // Send the image (adjust according to your API or method of sending files)
+            await message.reply({
+                body: "Here's your Genshin Impact card!",
+                attachment: fs.createReadStream(imgPath)
+            });
 
-
-        // try {
-        //     // Use global.utils.getStreamFromURL to fetch the image as a stream
-        //     const stream = await global.utils.getStreamFromURL(imageUrl);
-
-        //     // Reply with the image stream
-        //     await message.reply({
-        //         body: 'Here is your Genshin Impact card!',
-        //         attachment: stream
-        //     });
-        // } catch (error) {
-        //     console.error('Error creating card:', error);
-        //     await message.reply('There was an error creating your card.');
-        // }
+            // Delete the image after sending
+            await fs.remove(imgPath);
+        } catch (error) {
+            console.error('Error creating or sending card:', error);
+        }
     }
 };
 
