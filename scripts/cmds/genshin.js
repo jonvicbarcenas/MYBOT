@@ -31,9 +31,8 @@ module.exports = {
     onStart: async function ({ api, args, message, event, threadsData, usersData, dashBoardData, globalData, threadModel, userModel, dashBoardModel, globalModel, role, commandName, getLang }) {
         const senderID = event.senderID;
         const userData = await usersData.get(senderID);
-        const name = userData.name;
-        const { exp } = await usersData.get(senderID);
-        const levelUser = expToLevel(exp, deltaNext);
+        // const name = userData.name;
+        // const { exp } = await usersData.get(senderID);
 
         // Fetch the user's avatar URL
         const avatarUrl = await usersData.getAvatarUrl(senderID);
