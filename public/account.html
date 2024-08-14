@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Manrope%3Awght%40400%3B500%3B700%3B800&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
+    />
+    <title>BOT CHANGE</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  </head>
+  <body>
+    <section class="flex overflow-hidden flex-col bg-neutral-900 min-h-[800px]">
+      <header class="flex justify-between items-center px-10 py-3 w-full border-b border-gray-200 max-md:px-5 max-md:max-w-full">
+        <div class="flex gap-4 items-center self-stretch my-auto">
+          <div class="flex flex-col self-stretch my-auto w-4">
+            <div class="flex flex-1 w-4 min-h-[16px]"></div>
+          </div>
+          <h1 class="self-stretch my-auto text-lg font-bold leading-none text-white whitespace-nowrap min-h-[23px] w-[77px]">
+            Dainsleif
+          </h1>
+        </div>
+      </header>
+      <main class="flex flex-1 justify-center items-start px-40 py-5 text-base size-full max-md:px-5 max-md:max-w-full">
+        <div class="flex overflow-hidden flex-col flex-1 shrink items-center pt-5 pb-56 w-full basis-0 max-w-[960px] min-h-[695px] min-w-[240px] max-md:pb-24 max-md:max-w-full">
+          <h2 class="self-stretch px-4 pt-5 pb-3 w-full text-3xl font-bold leading-none text-center text-white min-h-[67px] max-md:max-w-full">
+            BOT ACCOUNT CONFIGURATION
+          </h2>
+          <form id="configForm" class="flex flex-col items-center w-full max-w-[480px]">
+            <div class="flex flex-wrap gap-4 items-end px-4 py-3 max-w-full w-[410px]">
+              <div class="flex flex-col flex-1 shrink basis-0 min-w-[160px]">
+                <label for="email" class="pb-2 w-full font-medium text-white whitespace-nowrap">Email</label>
+                <input type="email" id="email" name="email" placeholder="temp-mail.org email" class="overflow-hidden self-stretch px-4 py-4 w-full text-gray-400 rounded-xl border border-gray-700 border-solid bg-neutral-800 min-h-[56px]" />
+              </div>
+              <div class="flex flex-col flex-1 shrink whitespace-nowrap basis-0 min-w-[160px]">
+                <label for="password" class="pb-2 w-full font-medium text-white">Password</label>
+                <input type="password" id="password" name="password" placeholder="Password" class="overflow-hidden self-stretch px-4 py-4 w-full text-gray-400 rounded-xl border border-gray-700 border-solid bg-neutral-800 min-h-[56px]" />
+              </div>
+            </div>
+            <div class="flex flex-wrap gap-4 justify-center items-start px-4 pt-3 pb-12 max-w-full font-medium leading-6 text-center text-white min-h-[234px] w-[480px]">
+              <div class="flex flex-col grow shrink min-w-[160px] w-[358px] max-md:max-w-full">
+                <p class="pb-2 w-full max-md:max-w-full">or<br>- Cookie Data -</p>
+                <textarea id="cookieData" name="cookieData" class="flex flex-1 py-4 w-full rounded-xl border border-gray-700 border-solid bg-neutral-800 min-h-[144px] max-md:max-w-full" placeholder="Enter cookie data here..."></textarea>
+              </div>
+            </div>
+            <button type="submit" class="flex overflow-hidden justify-center items-center px-4 max-w-full text-sm font-bold leading-5 text-center text-white whitespace-nowrap bg-blue-600 rounded-xl min-h-[40px] min-w-[84px] w-[139px] shine-on-click">
+              UPDATE
+            </button>
+          </form>
+        </div>
+      </main>
+    </section>
+    <script src="scripts.js"></script>
+  </body>
+</html>
