@@ -40,3 +40,11 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+document.getElementById('b1').addEventListener('click', () => {
+    Swal.fire({
+        title: 'Good job!',
+        text: 'You clicked the button!',
+        icon: 'success'
+    });
+});
