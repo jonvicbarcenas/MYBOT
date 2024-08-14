@@ -69,7 +69,7 @@ app.post('/update-config', (req, res) => {
 
 // Function to restart the pm2 process
 function restartPm2Process() {
-    exec('sudo pm2 restart index.js', (error, stdout, stderr) => {
+    exec('sudo pm2 restart index', (error, stdout, stderr) => {
         if (error) {
             console.error(`Error restarting pm2 process: ${error.message}`);
             return;
