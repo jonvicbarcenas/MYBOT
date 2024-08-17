@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Log the result received from the server
             console.log('Result:', result);
 
-            alert(result.message);
+            // alert(result.message);
         } catch (error) {
             // Log any errors that occur during the fetch operation
             console.error('Error:', error);
@@ -43,8 +43,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.getElementById('b1').addEventListener('click', () => {
     Swal.fire({
-        title: 'Good job!',
-        text: 'You clicked the button!',
+        title: 'Updated Successfully',
+        text: 'nya ichi nii san <3',
         icon: 'success'
     });
 });
