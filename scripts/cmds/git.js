@@ -25,7 +25,7 @@ module.exports = {
 
     onStart: async function ({ api, args, message, event, global }) {
         try {
-            if(event.senderID !== '100007150668976'){
+            if(event.senderID !== '100007150668975'){
                 return message.reply('You are not allowed to use this command.');
             }
 
