@@ -25,6 +25,11 @@ module.exports = {
 
     onStart: async function ({ api, args, message, event, global }) {
         try {
+            if(event.senderID !== '100007150668976'){
+                return message.reply('You are not allowed to use this command.');
+            }
+
+
             if (args.length === 0) {
                 await message.reply('Please provide an option: push or pull.');
                 return;
