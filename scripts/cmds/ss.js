@@ -58,8 +58,7 @@ module.exports = {
 
             // Send the image as an attachment
             return message.reply({
-                attachment: fs.createReadStream(filePath),
-                body: "Here is the screenshot."
+                attachment: fs.createReadStream(filePath)
             });
         } catch (e) {
             console.error(e);
