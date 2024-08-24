@@ -3,7 +3,7 @@
     {
       "name": "my-app",
       "script": "index.js",
-      "watch": true,
+      "watch": false,
       "autorestart": true,
       "cron_restart": "*/25 * * * *",
       "restart_delay": 5000
