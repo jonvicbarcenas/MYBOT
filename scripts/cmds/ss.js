@@ -6,7 +6,7 @@ module.exports = {
     config: {
         name: "ss",
         aliases: ["screenshot"],
-        version: "1.0.0",
+        version: "1.1",
         author: "JV",
         countDown: 5,
         role: 0,
@@ -14,7 +14,7 @@ module.exports = {
             vi: "",
             en: ""
         },
-        category: "",
+        category: "utility",
         guide: {
             vi: "",
             en: "{PREFIX}ss <link>"
