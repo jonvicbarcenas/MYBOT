@@ -1,3 +1,4 @@
+const axios = require('axios');
 const fs = require('fs');
 const path = require('path');
 
@@ -43,20 +44,22 @@ module.exports = {
                 fs.mkdirSync(cacheDir);
             }
 
-            const response = await global.utils.request.get({
-                url: `https://api.apiflash.com/v1/urltoimage?access_key=${access_key}&wait_until=page_loaded&url=${encodeURIComponent(url)}`,
-                encoding: null 
+            const response = await axios.get(`https://api.apiflash.com/v1/urltoimage?access_key=${access_key}&wait_until=page_loaded&url=${encodeURIComponent(url)}`, {
+                responseType: 'arraybuffer' 
             });
 
-            if (!response || !response.body) {
+            if (!response || !response.data) {
                 console.error(response);
                 return message.reply("An error occurred while fetching the screenshot.");
             }
 
-            fs.writeFileSync(filePath, response.body);
+            // Write the image to the cache directory
+            fs.writeFileSync(filePath, response.data);
 
+            // Send the image as an attachment
             return message.reply({
                 attachment: fs.createReadStream(filePath),
+                body: "Here is the screenshot."
             });
         } catch (e) {
             console.error(e);
