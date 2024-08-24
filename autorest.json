@@ -1,0 +1,12 @@
+{
+  "apps": [
+    {
+      "name": "my-app",
+      "script": "index.js",
+      "watch": true,
+      "autorestart": true,
+      "cron_restart": "*/25 * * * *",
+      "restart_delay": 5000
+    }
+  ]
+}
