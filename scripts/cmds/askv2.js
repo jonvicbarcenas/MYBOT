@@ -28,7 +28,7 @@ module.exports = {
   onChat: async function ({ api, event, args, message }) {
     const senderID = event.senderID;
     try {
-      const prefix = Prefixes.find((p) => event.body && event.body.toLowerCase().startsWith(p)) + " ";
+      const prefix = Prefixes.find((p) => event.body && event.body.toLowerCase().startsWith(p));
 
       if (!prefix) {
         return; 
