@@ -24,7 +24,7 @@
     "intervalGetNewCookie": 4320,
     "notes": "time the system automatically retrieves new cookies from email/password, unit is minute, if you set null, the system will not automatically retrieve new cookies, it saves you from having to manually change your cookie every time it expires. recommended set to 1440 (1day) or 4320 (3day).TO BE ABLE TO USE THIS FEATURE YOU NEED TO ENTER THE ACCOUNT PASSWORD ABOVE",
     "i_user": "",
-    "email": "didihan322@ndiety.com",
+    "email": "humbamanok1@gmail.com",
     "password": "orangepatata16"
   },
   "language": "en",
