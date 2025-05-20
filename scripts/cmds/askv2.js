@@ -7,7 +7,8 @@ const Prefixes = [
   '/gpt',
   'ai',
   '!ai',
-  '@Meta'
+  '@Meta',
+  'dain'
 ];
 
 // Storage for conversation history

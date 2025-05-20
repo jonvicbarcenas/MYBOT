@@ -91,6 +91,10 @@
     },
     "genshinrank": {
       "deltaNext": 5
+    },
+    "aniwatch": {
+      "delayPerGroup": 250,
+      "appDownloadUrl": "https://exxample.com"
     }
   },
   "envEvents": {
@@ -106,14 +110,8 @@
     "jvb.js",
     "wayen.js",
     "setmoney.js",
-    "resmoney.js",
     "pastel.js",
-    "thesetmoney.js",
     "123test.js",
-    "spy.js",
-    "thesetname.js",
-    "askv1.js",
-    "zfilswear.js",
-    "autoaccept.js"
+    "askv1.js"
   ]
 }

@@ -8,7 +8,7 @@ module.exports = {
   credits: "Jas",
   usePrefix: true,
   description: "Share a post on Facebook",
-  commandCategory: "Social",
+  category: "Social",
 },
  
 onStart: async ({ api, event, args }) => {

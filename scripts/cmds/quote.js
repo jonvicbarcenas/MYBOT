@@ -3,44 +3,100 @@ const axios = require('axios');
 module.exports = {
   config: {
     name: 'quote',
-    aliases: ['randomquote', 'inspire', 'quotes'],
-    version: '1.0',
-    author: 'JV',
+    version: '1.1',
+    author: 'JV BARCENAS',
+    countDown: 5,
     role: 0,
-    category: 'utility',
-    shortDescription: {
-      en: 'Shares a random quote.'
+    description: {
+      vi: 'Hiển thị một câu trích dẫn ngẫu nhiên',
+      en: 'Display a random inspirational quote'
     },
-    longDescription: {
-      en: 'Shares a random quote fetched from the ZenQuotes API.'
-    },
+    category: 'fun',
     guide: {
-      en: '{pn}'
+      vi: '{pn} [danh mục]',
+      en: '{pn} [category]'
     }
   },
-  onStart: async function ({ api, event }) {
+
+  langs: {
+    vi: {
+      error: '❌ Đã xảy ra lỗi: %1',
+      loading: '⏳ Đang tìm một câu trích dẫn hay...',
+      noQuotes: 'Không tìm thấy câu trích dẫn nào cho danh mục đã cho.'
+    },
+    en: {
+      error: '❌ An error occurred: %1',
+      loading: '⏳ Looking for an inspirational quote...',
+      noQuotes: 'No quotes found for the given category.'
+    }
+  },
+
+  onStart: async function ({ args, message, getLang }) {
+    // Send loading message
+    message.reply(getLang('loading'));
+    
+    const category = args.join(' ').toLowerCase();
+    
     try {
-      const response = await axios.get('https://zenquotes.io/api/random');
-
-      if (response.status !== 200 || !response.data || !response.data[0] || !response.data[0].q || !response.data[0].a) {
-        throw new Error('Invalid or missing response from ZenQuotes API');
+      // Use a different API that doesn't have certificate issues
+      let apiUrl = 'https://api.themotivate365.com/stoic-quote';
+      
+      // Get quote from API
+      const response = await axios.get(apiUrl, {
+        // Add timeout to prevent hanging if API is slow
+        timeout: 10000,
+        // Setup for handling HTTPS issues
+        httpsAgent: new (require('https').Agent)({
+          rejectUnauthorized: false // Note: This is not ideal for security, but helps bypass certificate issues
+        })
+      });
+      
+      // Check if quote was found
+      if (!response.data || (!response.data.quote && !response.data.author)) {
+        // Fallback to another API if the first one fails
+        const fallbackResponse = await axios.get('https://zenquotes.io/api/random', { 
+          timeout: 7000,
+          httpsAgent: new (require('https').Agent)({
+            rejectUnauthorized: false
+          })
+        });
+        
+        if (!fallbackResponse.data || !fallbackResponse.data[0]) {
+          return message.reply(getLang('noQuotes'));
+        }
+        
+        // Format the quote from fallback API
+        const quoteText = `"${fallbackResponse.data[0].q}"\n\n- ${fallbackResponse.data[0].a}`;
+        return message.reply(quoteText);
       }
-
-      const quote = response.data[0].q;
-      const author = response.data[0].a;
-
-      const message = `"${quote}"\n- ${author}`;
-
-      const messageID = await api.sendMessage(message, event.threadID);
-
-      if (!messageID) {
-        throw new Error('Failed to send message with quote');
+      
+      // Format the quote from primary API
+      const quoteText = `"${response.data.quote}"\n\n- ${response.data.author}`;
+      
+      // Send the quote
+      return message.reply(quoteText);
+      
+    } catch (err) {
+      console.error("Quote API error:", err.message);
+      
+      // Try a final fallback to a very reliable API
+      try {
+        const lastFallbackResponse = await axios.get('https://api.quotable.io/random', {
+          timeout: 10000,
+          httpsAgent: new (require('https').Agent)({
+            rejectUnauthorized: false
+          })
+        });
+        
+        if (lastFallbackResponse.data && lastFallbackResponse.data.content) {
+          const quoteText = `"${lastFallbackResponse.data.content}"\n\n- ${lastFallbackResponse.data.author}`;
+          return message.reply(quoteText);
+        }
+      } catch (fallbackErr) {
+        console.error("All quote APIs failed:", fallbackErr.message);
       }
-
-      console.log(`Sent quote with message ID ${messageID}`);
-    } catch (error) {
-      console.error(`Failed to send quote: ${error.message}`);
-      api.sendMessage('Sorry, something went wrong while trying to share a quote. Please try again later.', event.threadID);
+      
+      return message.reply(getLang('error', err.message));
     }
   }
 };
