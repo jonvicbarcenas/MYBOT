@@ -1,56 +1,44 @@
 "use strict";
 
-const utils = require("../utils");
-const log = require("npmlog");
+var utils = require("../utils");
+var log = require("npmlog");
 
 module.exports = function (defaultFuncs, api, ctx) {
-	return function deleteMessage(messageOrMessages, callback) {
-		let resolveFunc = function () { };
-		let rejectFunc = function () { };
-		const returnPromise = new Promise(function (resolve, reject) {
-			resolveFunc = resolve;
-			rejectFunc = reject;
-		});
-		if (!callback) {
-			callback = function (err) {
-				if (err) {
-					return rejectFunc(err);
-				}
-				resolveFunc();
-			};
-		}
+  return function deleteMessage(messageOrMessages, callback) {
+    var resolveFunc = function () { };
+    var rejectFunc = function () { };
+    var returnPromise = new Promise(function (resolve, reject) {
+      resolveFunc = resolve;
+      rejectFunc = reject;
+    });
+    if (!callback) {
+      callback = function (err) {
+        if (err) return rejectFunc(err);
 
-		const form = {
-			client: "mercury"
-		};
+        resolveFunc();
+      };
+    }
 
-		if (utils.getType(messageOrMessages) !== "Array") {
-			messageOrMessages = [messageOrMessages];
-		}
+    var form = {
+      client: "mercury"
+    };
 
-		for (let i = 0; i < messageOrMessages.length; i++) {
-			form["message_ids[" + i + "]"] = messageOrMessages[i];
-		}
+    if (utils.getType(messageOrMessages) !== "Array") messageOrMessages = [messageOrMessages];
 
-		defaultFuncs
-			.post(
-				"https://www.facebook.com/ajax/mercury/delete_messages.php",
-				ctx.jar,
-				form
-			)
-			.then(utils.parseAndCheckLogin(ctx, defaultFuncs))
-			.then(function (resData) {
-				if (resData.error) {
-					throw resData;
-				}
+    for (var i = 0; i < messageOrMessages.length; i++) form["message_ids[" + i + "]"] = messageOrMessages[i];
 
-				return callback();
-			})
-			.catch(function (err) {
-				log.error("deleteMessage", err);
-				return callback(err);
-			});
+    defaultFuncs
+      .post("https://www.facebook.com/ajax/mercury/delete_messages.php", ctx.jar, form)
+      .then(utils.parseAndCheckLogin(ctx, defaultFuncs))
+      .then(function (resData) {
+        if (resData.error) throw resData;
+        return callback();
+      })
+      .catch(function (err) {
+        log.error("deleteMessage", err);
+        return callback(err);
+      });
 
-		return returnPromise;
-	};
+    return returnPromise;
+  };
 };

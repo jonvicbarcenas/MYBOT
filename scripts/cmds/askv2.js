@@ -46,13 +46,25 @@ module.exports = {
 
       await message.reply("Answering your question. Please wait a moment...");
 
-      const response = await axios.get(`https://celestial-dainsleif.onrender.com/gem?chat=${encodeURIComponent(prompt)}&id=${senderID}`);
+      const apiKey = "AIzaSyCJZCWeH-8rPxRcfyzPuFKoX2otEgB9nJA"; // Replace with your actual API key
+      const model = "gemini-2.0-flash";
+      const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
 
-      if (response.status !== 200 || !response.data) {
+      const requestBody = {
+        contents: [{
+          parts: [{
+            text: prompt
+          }]
+        }]
+      };
+
+      const response = await axios.post(apiUrl, requestBody);
+
+      if (response.status !== 200 || !response.data || !response.data.candidates || !response.data.candidates[0] || !response.data.candidates[0].content || !response.data.candidates[0].content.parts || !response.data.candidates[0].content.parts[0]) {
         throw new Error('Invalid or missing response from API');
       }
 
-      const messageText = response.data.content.trim();
+      const messageText = response.data.candidates[0].content.parts[0].text.trim();
 
       await message.reply(messageText);
 

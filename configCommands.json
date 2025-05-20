@@ -79,6 +79,15 @@
     },
     "announcement": {
       "announcementFile": "announcement.txt"
+    },
+    "typemaster": {
+      "reward": 50
+    },
+    "hangman": {
+      "reward": 50
+    },
+    "wordle": {
+      "reward": 100
     }
   },
   "envEvents": {
@@ -101,7 +110,6 @@
     "pastel.js",
     "pogi.js",
     "thesetmoney.js",
-    "zfilswear.js",
     "logo.js",
     "anivid.js",
     "moti.js",
@@ -110,22 +118,17 @@
     "imganime.js",
     "fight.js",
     "spy.js",
-    "hangman.js",
     "fbshare.js",
     "pastebinAlert.js",
-    "zautoanime.js",
     "imaginev3.js",
     "jvclass.js",
     "mineflayer.js",
     "jebeh.js",
-    "zhentai.js",
-    "zpossie.js",
-    "zfemdom.js",
-    "nsfw.js",
     "bardjvb.js",
     "0autodl.js",
     "autoaccept.js",
     "thesetname.js",
-    "askv1.js"
+    "askv1.js",
+    "nsfw.js"
   ]
 }
