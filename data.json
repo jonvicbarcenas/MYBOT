@@ -1,27 +1,15 @@
 {
   "messages": [
     {
-      "type": "message_reply",
-      "senderID": "100088330302130",
-      "senderName": "Itim Na Bayag",
-      "body": "Spiders don't attack🥲",
-      "threadID": "28123655423916989",
-      "messageID": "mid.$gAGPqUMtT-72dHXLk92W7C2ZiAJ7M",
-      "attachments": [],
-      "mentions": {},
-      "timestamp": 1747719134455,
-      "isGroup": true
-    },
-    {
       "type": "message",
-      "senderID": "100088330302130",
-      "senderName": "Itim Na Bayag",
-      "body": "Imma go shower🥲",
-      "threadID": "28123655423916989",
-      "messageID": "mid.$gAGPqUMtT-72dHXMHe2W7C245sXAb",
+      "senderID": "61550009672145",
+      "senderName": "Kai Rylan",
+      "body": "⚔️",
+      "threadID": "27921796814100586",
+      "messageID": "mid.$gAGMyueyYWGqdHsIvoGW7Xzkw8Ivm",
       "attachments": [],
       "mentions": {},
-      "timestamp": "1747719143291",
+      "timestamp": "1747741108128",
       "isGroup": true
     }
   ],
