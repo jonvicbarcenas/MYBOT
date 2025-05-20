@@ -88,6 +88,9 @@
     },
     "wordle": {
       "reward": 100
+    },
+    "genshinrank": {
+      "deltaNext": 5
     }
   },
   "envEvents": {
@@ -110,6 +113,7 @@
     "spy.js",
     "thesetname.js",
     "askv1.js",
-    "zfilswear.js"
+    "zfilswear.js",
+    "autoaccept.js"
   ]
 }
