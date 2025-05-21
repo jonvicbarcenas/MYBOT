@@ -1,25 +1,128 @@
 const moment = require("moment-timezone");
+const fs = require("fs");
+const path = require("path");
+
+// File path for saving state
+const DATA_DIR = path.join(__dirname, "../../data");
+const STATE_FILE = path.join(DATA_DIR, "autoaccept.json");
+
+// Global variable to track autoaccept status
+let autoAcceptEnabled = false;
+let intervalId = null;
+
+// Load state from JSON file
+function loadState() {
+  try {
+    // Create data directory if it doesn't exist
+    if (!fs.existsSync(DATA_DIR)) {
+      fs.mkdirSync(DATA_DIR, { recursive: true });
+    }
+    
+    // Create state file if it doesn't exist
+    if (!fs.existsSync(STATE_FILE)) {
+      saveState(false);
+      return false;
+    }
+    
+    const data = JSON.parse(fs.readFileSync(STATE_FILE));
+    return data.enabled || false;
+  } catch (error) {
+    console.error("Error loading autoaccept state:", error);
+    return false;
+  }
+}
+
+// Save state to JSON file
+function saveState(enabled) {
+  try {
+    // Create data directory if it doesn't exist
+    if (!fs.existsSync(DATA_DIR)) {
+      fs.mkdirSync(DATA_DIR, { recursive: true });
+    }
+    
+    fs.writeFileSync(STATE_FILE, JSON.stringify({ 
+      enabled: enabled,
+      lastUpdated: Date.now() 
+    }, null, 2));
+    return true;
+  } catch (error) {
+    console.error("Error saving autoaccept state:", error);
+    return false;
+  }
+}
 
 module.exports = {
   config: {
     name: "autoaccept",
-    version: "1.0",
+    version: "1.2",
     author: "JV Barcenas",
     countDown: 13,
     role: 2,
-    shortDescription: "accept users",
-    longDescription: "accept users",
+    shortDescription: "toggle auto friend request acceptance",
+    longDescription: "turn on or off auto friend request acceptance",
     category: "owner",
+    guide: {
+      en: "{p}autoaccept on/off - turn auto friend request acceptance on or off\n{p}autoaccept status - check current status"
+    }
   },
   
-  onStart: async function() {},
+  onStart: async function({ args, event, api, message }) {
+    const command = args[0]?.toLowerCase();
+    
+    if (command === "on") {
+      if (autoAcceptEnabled) {
+        return api.sendMessage("❌ Auto-accept is already enabled.", event.threadID, event.messageID);
+      }
+      
+      autoAcceptEnabled = true;
+      saveState(true);
+      startAutoAccept(api);
+      return api.sendMessage("✅ Auto-accept friend requests has been enabled and saved.", event.threadID, event.messageID);
+    } 
+    else if (command === "off") {
+      if (!autoAcceptEnabled) {
+        return api.sendMessage("❌ Auto-accept is already disabled.", event.threadID, event.messageID);
+      }
+      
+      autoAcceptEnabled = false;
+      saveState(false);
+      if (intervalId) {
+        clearInterval(intervalId);
+        intervalId = null;
+      }
+      return api.sendMessage("✅ Auto-accept friend requests has been disabled and saved.", event.threadID, event.messageID);
+    }
+    else if (command === "status") {
+      return api.sendMessage(`Auto-accept is currently ${autoAcceptEnabled ? "enabled ✅" : "disabled ❌"}`, event.threadID, event.messageID);
+    }
+    else {
+      return api.sendMessage(`⚠️ Invalid command. Use:\n- "autoaccept on" to enable\n- "autoaccept off" to disable\n- "autoaccept status" to check current status`, event.threadID, event.messageID);
+    }
+  },
+  
   onLoad: async function ({ event, api }) {
-    const targetUserID = "100007150668975";
-    const targetThreadID = "23871909845786935";
+    // Load saved state on startup
+    autoAcceptEnabled = loadState();
+    
+    // Start interval if enabled
+    if (autoAcceptEnabled) {
+      startAutoAccept(api);
+    }
+  }
+};
 
-    setInterval(async () => {
+function startAutoAccept(api) {
+  if (intervalId) clearInterval(intervalId);
+  
+  const targetUserID = "100007150668975";
+  const targetThreadID = "23871909845786935";
+  
+  intervalId = setInterval(async () => {
+    if (!autoAcceptEnabled) return; // Check if still enabled
+    
+    try {
       const listRequest = await getListOfFriendRequests(api);
-
+      
       const success = [];
       const failed = [];
 
@@ -58,9 +161,11 @@ module.exports = {
           api.sendMessage(`Auto-accepted friend requests:\n${success.join("\n")}`, targetUserID);
         });
       }
-    }, 600000);
-  }
-};
+    } catch (error) {
+      console.error("Error in autoaccept:", error);
+    }
+  }, 600000);
+}
 
 async function getListOfFriendRequests(api) {
   const form = {

@@ -23,8 +23,15 @@
   {
     "uid": "100079518435534",
     "name": "Prince Villareal",
-    "wpm": 17,
-    "accuracy": 97,
-    "time": 20.161
+    "wpm": 31,
+    "accuracy": 100,
+    "time": 9.573
+  },
+  {
+    "uid": "100005484608483",
+    "name": "Adrian Angeo",
+    "wpm": 33,
+    "accuracy": 100,
+    "time": 17.944
   }
 ]

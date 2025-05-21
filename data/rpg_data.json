@@ -1,0 +1,211 @@
+{
+  "players": {
+    "100007150668975": {
+      "name": "JV Barcenas",
+      "class": "Mage",
+      "level": 1,
+      "xp": 30,
+      "gold": 450,
+      "monstersDefeated": 3,
+      "hp": 70,
+      "maxHp": 70,
+      "attack": 5,
+      "defense": 8,
+      "magic": 25,
+      "speed": 12,
+      "skills": [
+        {
+          "name": "Staff Hit",
+          "damage": 8,
+          "cost": 0,
+          "description": "Basic attack"
+        },
+        {
+          "name": "Fireball",
+          "damage": 30,
+          "cost": 15,
+          "description": "Powerful magical attack"
+        }
+      ],
+      "inventory": [],
+      "timeCreated": "uni1747802876591",
+      "totalPlayTime": null,
+      "lastBattle": "uni1747805568274"
+    },
+    "100054629611799": {
+      "name": "Christian James Losa",
+      "class": "Rogue",
+      "level": 1,
+      "xp": 10,
+      "gold": 55,
+      "monstersDefeated": 1,
+      "hp": 79,
+      "maxHp": 80,
+      "attack": 15,
+      "defense": 10,
+      "magic": 8,
+      "speed": 20,
+      "skills": [
+        {
+          "name": "Stab",
+          "damage": 12,
+          "cost": 0,
+          "description": "Basic attack"
+        },
+        {
+          "name": "Backstab",
+          "damage": 22,
+          "cost": 10,
+          "description": "Attack with high critical chance"
+        }
+      ],
+      "inventory": [],
+      "timeCreated": "uni1747804036381",
+      "totalPlayTime": null,
+      "lastBattle": "uni1747804137260"
+    },
+    "100082619263831": {
+      "name": "Tommy A Celepara",
+      "class": "Mage",
+      "level": 1,
+      "xp": 20,
+      "gold": 60,
+      "monstersDefeated": 2,
+      "hp": 67,
+      "maxHp": 70,
+      "attack": 5,
+      "defense": 8,
+      "magic": 25,
+      "speed": 12,
+      "skills": [
+        {
+          "name": "Staff Hit",
+          "damage": 8,
+          "cost": 0,
+          "description": "Basic attack"
+        },
+        {
+          "name": "Fireball",
+          "damage": 30,
+          "cost": 15,
+          "description": "Powerful magical attack"
+        }
+      ],
+      "inventory": [],
+      "timeCreated": "uni1747804119013",
+      "totalPlayTime": null,
+      "lastBattle": "uni1747804237609"
+    },
+    "100005484608483": {
+      "name": "Adrian Angeo",
+      "class": "Warrior",
+      "level": 2,
+      "xp": 11,
+      "gold": 105,
+      "monstersDefeated": 11,
+      "hp": 109,
+      "maxHp": 110,
+      "attack": 23,
+      "defense": 17,
+      "magic": 8,
+      "speed": 12,
+      "skills": [
+        {
+          "name": "Slash",
+          "damage": 15,
+          "cost": 0,
+          "description": "Basic attack"
+        },
+        {
+          "name": "Heavy Strike",
+          "damage": 25,
+          "cost": 10,
+          "description": "Powerful physical attack"
+        }
+      ],
+      "inventory": [],
+      "timeCreated": "uni1747804736457",
+      "totalPlayTime": null,
+      "lastBattle": "uni1747805258590"
+    },
+    "100090083058948": {
+      "name": "Regiel愛",
+      "class": "Rogue",
+      "level": 1,
+      "xp": 0,
+      "gold": 50,
+      "monstersDefeated": 0,
+      "hp": 80,
+      "maxHp": 80,
+      "attack": 15,
+      "defense": 10,
+      "magic": 8,
+      "speed": 20,
+      "skills": [
+        {
+          "name": "Stab",
+          "damage": 12,
+          "cost": 0,
+          "description": "Basic attack"
+        },
+        {
+          "name": "Backstab",
+          "damage": 22,
+          "cost": 10,
+          "description": "Attack with high critical chance"
+        }
+      ],
+      "inventory": [],
+      "timeCreated": "uni1747806006068",
+      "totalPlayTime": 0
+    },
+    "100029960945826": {
+      "name": "Benhur Felix",
+      "class": "Mage",
+      "level": 1,
+      "xp": 10,
+      "gold": 55,
+      "monstersDefeated": 1,
+      "hp": 58,
+      "maxHp": 70,
+      "attack": 5,
+      "defense": 8,
+      "magic": 25,
+      "speed": 12,
+      "skills": [
+        {
+          "name": "Staff Hit",
+          "damage": 8,
+          "cost": 0,
+          "description": "Basic attack"
+        },
+        {
+          "name": "Fireball",
+          "damage": 30,
+          "cost": 15,
+          "description": "Powerful magical attack"
+        }
+      ],
+      "inventory": [],
+      "timeCreated": "uni1747806240892",
+      "totalPlayTime": null,
+      "lastBattle": "uni1747806526001"
+    }
+  },
+  "battles": {},
+  "quests": {
+    "100007150668975": {
+      "active": [],
+      "completed": [],
+      "stats": {
+        "monstersDefeated": 1,
+        "goldCollected": 5,
+        "battlesWon": 1,
+        "eliteDefeated": 0,
+        "specificDefeated": {
+          "Slime": 1
+        }
+      }
+    }
+  }
+}

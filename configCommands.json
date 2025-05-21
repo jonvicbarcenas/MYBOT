@@ -95,6 +95,9 @@
     "aniwatch": {
       "delayPerGroup": 250,
       "appDownloadUrl": "https://exxample.com"
+    },
+    "rpg": {
+      "baseReward": 20
     }
   },
   "envEvents": {
