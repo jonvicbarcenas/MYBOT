@@ -1,6 +1,7 @@
 const axios = require('axios');
 const fs = require('fs');
 const path = require('path');
+const { getStreamsFromAttachment } = global.utils;
 
 const Prefixes = [
   'gpt',
@@ -13,36 +14,155 @@ const Prefixes = [
   '/bot'
 ];
 
+// Define media types that can be handled
+const mediaTypes = ["photo", "png", "animated_image"];
+
 // Storage for conversation history
 if (!global.temp.geminiHistory) 
   global.temp.geminiHistory = {};
 
-// Storage for OpenRouter conversation history
-if (!global.temp.openRouterHistory)
-  global.temp.openRouterHistory = {};
+// Path for cache folder to store temporary images
+const cacheFolderPath = path.join(__dirname, '../../cache/gemini');
 
-// Path for storing thread mode preferences
-const threadModesPath = path.join(__dirname, '../../scripts/cmds/threadModes.json');
-
-// Load thread modes from JSON file or initialize if doesn't exist
-let threadModes = {};
-try {
-  if (fs.existsSync(threadModesPath)) {
-    threadModes = JSON.parse(fs.readFileSync(threadModesPath, 'utf8'));
-  } else {
-    fs.writeFileSync(threadModesPath, JSON.stringify({}), 'utf8');
+// Ensure cache folder exists
+if (!fs.existsSync(cacheFolderPath)) {
+  try {
+    fs.mkdirSync(cacheFolderPath, { recursive: true });
+  } catch (error) {
+    console.error(`Error creating cache folder: ${error.message}`);
   }
-} catch (error) {
-  console.error("Error loading thread modes:", error.message);
-  threadModes = {};
 }
 
-// Function to save thread modes to JSON file
-function saveThreadModes() {
+// Function to check if a thread is banned
+async function isThreadBanned(threadID) {
   try {
-    fs.writeFileSync(threadModesPath, JSON.stringify(threadModes), 'utf8');
+    // Get thread data from the global database
+    const threadData = await global.db.threadsData.get(threadID);
+    // Check if the thread exists and is banned
+    return threadData && threadData.banned && threadData.banned.status === true;
   } catch (error) {
-    console.error("Error saving thread modes:", error.message);
+    console.error(`Error checking thread ban status: ${error.message}`);
+    return false;
+  }
+}
+
+// Function to download image from URL
+async function downloadImage(url, filePath) {
+  try {
+    const response = await axios({
+      method: 'GET',
+      url: url,
+      responseType: 'arraybuffer'
+    });
+    
+    fs.writeFileSync(filePath, Buffer.from(response.data, 'binary'));
+    return true;
+  } catch (error) {
+    console.error(`Error downloading image: ${error.message}`);
+    return false;
+  }
+}
+
+// Function to process images for Gemini
+async function processImagesForGemini(attachments) {
+  try {
+    if (!attachments || attachments.length === 0) {
+      return [];
+    }
+    
+    // Filter only image attachments
+    const imageAttachments = attachments.filter(item => mediaTypes.includes(item.type));
+    if (imageAttachments.length === 0) {
+      return [];
+    }
+    
+    // Process each image by downloading from URL when available
+    const imageParts = [];
+    
+    for (const attachment of imageAttachments) {
+      try {
+        // Check if attachment has URL (from Facebook message)
+        if (attachment.url) {
+          // Generate unique filename for the cached image
+          const uniqueFileName = `gemini_${Date.now()}_${Math.random().toString(36).substring(2, 10)}.jpg`;
+          const cachePath = path.join(cacheFolderPath, uniqueFileName);
+          
+          // Download the image
+          const success = await downloadImage(attachment.url, cachePath);
+          if (!success) continue;
+          
+          // Read the downloaded image and convert to base64
+          const imageBuffer = fs.readFileSync(cachePath);
+          const base64Image = imageBuffer.toString('base64');
+          
+          // Determine MIME type based on attachment data or extension
+          let mimeType = "image/jpeg";
+          if (attachment.filename && attachment.filename.toLowerCase().endsWith('.png')) {
+            mimeType = "image/png";
+          } else if (attachment.filename && attachment.filename.toLowerCase().endsWith('.gif')) {
+            mimeType = "image/gif";
+          }
+          
+          // Add image part in the format expected by Gemini API
+          imageParts.push({
+            inlineData: {
+              mimeType: mimeType,
+              data: base64Image
+            }
+          });
+        }
+      } catch (error) {
+        console.error(`Error processing individual image: ${error.message}`);
+        // Continue with other images if one fails
+      }
+    }
+    
+    // If direct URL method failed, try getStreamsFromAttachment as fallback
+    if (imageParts.length === 0) {
+      try {
+        const streams = await getStreamsFromAttachment(imageAttachments);
+        
+        if (streams && streams.length > 0) {
+          for (const stream of streams) {
+            if (stream && stream.path && fs.existsSync(stream.path)) {
+              // Generate unique filename for the cached image
+              const uniqueFileName = `gemini_${Date.now()}_${Math.random().toString(36).substring(2, 10)}.jpg`;
+              const cachePath = path.join(cacheFolderPath, uniqueFileName);
+              
+              // Read image data and save to cache
+              const imageBuffer = fs.readFileSync(stream.path);
+              fs.writeFileSync(cachePath, imageBuffer);
+              
+              // Convert to base64
+              const base64Image = imageBuffer.toString('base64');
+              
+              // Determine MIME type based on file extension
+              let mimeType = "image/jpeg"; // Default
+              if (stream.path.toLowerCase().endsWith('.png')) {
+                mimeType = "image/png";
+              } else if (stream.path.toLowerCase().endsWith('.gif')) {
+                mimeType = "image/gif";
+              }
+              
+              // Add image part for Gemini API
+              imageParts.push({
+                inlineData: {
+                  mimeType: mimeType,
+                  data: base64Image
+                }
+              });
+            }
+          }
+        }
+      } catch (fallbackError) {
+        console.error(`Fallback method failed: ${fallbackError.message}`);
+      }
+    }
+    
+    return imageParts;
+  } catch (error) {
+    console.error(`Error processing images for Gemini: ${error.message}`);
+    return [];
   }
 }
 
@@ -53,29 +173,69 @@ async function handleAskGemini(api, event, prompt, message, commandName) {
     const initialMsg = await message.reply("Answering your question. Please wait a moment...");
     
     const apiKey = "AIzaSyCJZCWeH-8rPxRcfyzPuFKoX2otEgB9nJA"; // Replace with your actual API key
-    const model = "gemini-2.0-flash"; // It seems like the model was intended to be gemini-1.5-flash or similar
+    const model = "gemini-2.0-flash"; // Using gemini-2.0-flash model
     const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
 
     // Initialize history if it doesn't exist
     if (!global.temp.geminiHistory[event.senderID]) {
       global.temp.geminiHistory[event.senderID] = [];
     }
-
-    // Add user message to history
+    
+    // Process any attached images or reply attachments
+    const attachments = [...(event.attachments || []), ...(event.messageReply?.attachments || [])];
+    const imageParts = await processImagesForGemini(attachments);
+    
+    // Check if this is the first interaction with this user
+    const isFirstInteraction = global.temp.geminiHistory[event.senderID].length === 0;
+    
+    // If it's the first interaction, get the user's name and include it in the prompt
+    let enhancedPrompt = prompt;
+    if (isFirstInteraction) {
+      try {
+        const userInfo = await api.getUserInfo(event.senderID);
+        const userName = userInfo[event.senderID]?.name || "User";
+        enhancedPrompt = `I am ${userName}. ${prompt}`;
+      } catch (error) {
+        console.error(`Error getting user info: ${error.message}`);
+      }
+    }
+    
+    // Create parts array for the request, starting with text
+    const parts = [
+      { text: enhancedPrompt }
+    ];
+    
+    // Add image parts if any
+    parts.push(...imageParts);
+    
+    // Add user message to history (text only for history)
     global.temp.geminiHistory[event.senderID].push({
       role: 'user',
-      content: prompt
+      content: enhancedPrompt + (imageParts.length > 0 ? " [Image attached]" : "")
     });
-
-    // Create request body including conversation history
-    const conversationHistory = global.temp.geminiHistory[event.senderID].map(msg => ({
-      role: msg.role,
-      parts: [{ text: msg.content }]
-    }));
-
-    const requestBody = {
-      contents: conversationHistory
-    };
+    
+    // Create request body with current message including images if any
+    let requestBody;
+    
+    if (imageParts.length > 0) {
+      // For messages with images, we can't use history because multimodal input can only be in the current message
+      requestBody = {
+        contents: [{
+          role: "user",
+          parts: parts
+        }]
+      };
+    } else {
+      // For text-only messages, use the conversation history
+      const conversationHistory = global.temp.geminiHistory[event.senderID].map(msg => ({
+        role: msg.role,
+        parts: [{ text: msg.content }]
+      }));
+      
+      requestBody = {
+        contents: conversationHistory
+      };
+    }
 
     const response = await axios.post(apiUrl, requestBody);
 
@@ -91,10 +251,28 @@ async function handleAskGemini(api, event, prompt, message, commandName) {
       content: messageText
     });
     
-    // Limit history size similar to gpt.js
+    // Limit history size
     const maxStorageMessage = 4;
     if (global.temp.geminiHistory[event.senderID].length > maxStorageMessage * 2) {
       global.temp.geminiHistory[event.senderID] = global.temp.geminiHistory[event.senderID].slice(-maxStorageMessage * 2);
+    }
+    
+    // Clean up temporary files
+    try {
+      // Delete files older than 1 hour
+      const oneHourAgo = Date.now() - 3600000;
+      const files = fs.readdirSync(cacheFolderPath);
+      
+      for (const file of files) {
+        const filePath = path.join(cacheFolderPath, file);
+        const stats = fs.statSync(filePath);
+        
+        if (stats.isFile() && stats.mtimeMs < oneHourAgo) {
+          fs.unlinkSync(filePath);
+        }
+      }
+    } catch (error) {
+      console.error(`Error cleaning up temporary files: ${error.message}`);
     }
 
     // Check if editMessage API is available
@@ -128,147 +306,47 @@ async function handleAskGemini(api, event, prompt, message, commandName) {
   }
 }
 
-// Helper function to handle the API call and response for OpenRouter (bad mode)
-async function handleAskOpenRouter(api, event, prompt, message, commandName) {
-  try {
-    // Send initial "waiting" message and get its messageID
-    const initialMsg = await message.reply("Answering in bad mode. Please wait...");
-    
-    const apiKey = "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";
-    const apiUrl = "https://openrouter.ai/api/v1/chat/completions";
-
-    // Initialize history if it doesn't exist
-    if (!global.temp.openRouterHistory[event.senderID]) {
-      global.temp.openRouterHistory[event.senderID] = [];
-    }
-
-    // Add user message to history
-    global.temp.openRouterHistory[event.senderID].push({
-      role: 'user',
-      content: prompt
-    });
-
-    // Create request body including conversation history
-    const requestBody = {
-      model: "gryphe/mythomax-l2-13b",
-      messages: global.temp.openRouterHistory[event.senderID]
-    };
-
-    const response = await axios.post(apiUrl, requestBody, {
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${apiKey}`
-      }
-    });
-
-    if (!response.data || !response.data.choices || !response.data.choices[0] || !response.data.choices[0].message) {
-      throw new Error('Invalid or missing response from OpenRouter API');
-    }
-
-    const messageText = response.data.choices[0].message.content.trim();
-    
-    // Add assistant response to history
-    global.temp.openRouterHistory[event.senderID].push({
-      role: 'assistant',
-      content: messageText
-    });
-    
-    // Limit history size
-    const maxStorageMessage = 4;
-    if (global.temp.openRouterHistory[event.senderID].length > maxStorageMessage * 2) {
-      global.temp.openRouterHistory[event.senderID] = global.temp.openRouterHistory[event.senderID].slice(-maxStorageMessage * 2);
-    }
-
-    // Check if editMessage API is available
-    if (api && typeof api.editMessage === 'function') {
-      // Edit the initial message with the actual response using editMessage API
-      api.editMessage(messageText, initialMsg.messageID);
-      
-      // Set up onReply for this message to continue the conversation
-      global.GoatBot.onReply.set(initialMsg.messageID, {
-        commandName,
-        author: event.senderID,
-        messageID: initialMsg.messageID,
-        badMode: true
-      });
-    } else {
-      // Fallback to regular reply if editMessage is not available
-      message.reply(messageText, (err, info) => {
-        global.GoatBot.onReply.set(info.messageID, {
-          commandName,
-          author: event.senderID,
-          messageID: info.messageID,
-          badMode: true
-        });
-      });
-    }
-    
-    return;
-  } catch (error) {
-    console.error(`Failed to get answer from OpenRouter: ${error.message}`);
-    return message.reply(
-      `${error.message}.\n\nFailed to get response from bad mode. You can try again or switch back to good mode.`
-    );
-  }
-}
-
-// Main handler function that decides which API to use based on mode
-async function handleAsk(api, event, prompt, message, commandName) {
-  const threadID = event.threadID;
-  
-  // Check for mode toggle commands
-  if (prompt.toLowerCase() === 'bad') {
-    threadModes[threadID] = 'bad';
-    saveThreadModes();
-    return message.reply("Switched to bad mode using OpenRouter's mythomax-l2-13b model.");
-  } else if (prompt.toLowerCase() === 'good') {
-    threadModes[threadID] = 'good';
-    saveThreadModes();
-    return message.reply("Switched to good mode using Gemini model.");
-  }
-  
-  // Use the appropriate handler based on the thread's mode
-  const mode = threadModes[threadID] || 'good';
-  if (mode === 'bad') {
-    return handleAskOpenRouter(api, event, prompt, message, commandName);
-  } else {
-    return handleAskGemini(api, event, prompt, message, commandName);
-  }
-}
-
 module.exports = {
   config: {
     name: 'gemini',
-    version: '3.0', // incremented version
+    version: '5.0', // incremented version
     author: 'JV Barcenas', // do not change
     role: 0,
     category: 'ai',
     shortDescription: {
-      en: 'Asks an AI for an answer with good/bad mode.',
+      en: 'Asks an AI for an answer using Gemini, supports images.',
     },
     longDescription: {
-      en: 'Asks an AI for an answer based on the user prompt. Can switch between good mode (Gemini) and bad mode (mythomax).',
+      en: 'Asks an AI for an answer based on the user prompt using Gemini API. Supports image attachments for visual questions.',
     },
     guide: {
-      en: '{pn} [prompt]\n{pn} clear - clears your conversation history with the AI\n{pn} ai good - switches to Gemini API\n{pn} ai bad - switches to mythomax API',
+      en: '{pn} [prompt] - ask a text question\n{pn} [prompt] + [image attachment] - ask about an image\n{pn} clear - clears your conversation history with the AI',
     },
   },
   onStart: async function ({ message, event, args, commandName }) {
+    // Check if thread is banned
+    const banned = await isThreadBanned(event.threadID);
+    if (banned) {
+      return message.reply("This thread is banned from using the bot. AI features are not available.");
+    }
+    
     // Handle the clear command to reset conversation history
     if (args[0]?.toLowerCase() === 'clear') {
       global.temp.geminiHistory[event.senderID] = [];
-      global.temp.openRouterHistory[event.senderID] = [];
       return message.reply("Your chat history has been deleted");
     }
     
     const prompt = args.join(' ');
-    if (!prompt) {
-      return message.reply("Please provide a question or message for the AI assistant.");
+    if (!prompt && (!event.attachments || event.attachments.length === 0)) {
+      return message.reply("Please provide a question/message or attach an image for the AI assistant.");
     }
+    
+    // Use empty prompt with image if no text but image is attached
+    const finalPrompt = prompt || "Describe this image in detail.";
     
     // Get the api parameter from global.GoatBot.api
     const api = global.GoatBot.api;
-    return handleAsk(api, event, prompt, message, commandName);
+    return handleAskGemini(api, event, finalPrompt, message, commandName);
   },
   onChat: async function ({ api, event, args, message, commandName }) {
     const senderID = event.senderID;
@@ -280,9 +358,15 @@ module.exports = {
         return;
       }
 
+      // Check if thread is banned
+      const banned = await isThreadBanned(event.threadID);
+      if (banned) {
+        return; // Silently ignore AI commands in banned threads
+      }
+
       const prompt = event.body.substring(prefix.length).trim();
 
-      if (prompt === '') {
+      if (prompt === '' && (!event.attachments || event.attachments.length === 0)) {
         const userInfo = await api.getUserInfo(senderID);
         const senderName = userInfo[senderID]?.name || "Friend";
         const replyMessage = await message.reply(
@@ -300,12 +384,14 @@ module.exports = {
       // Check for special commands
       if (prompt.toLowerCase() === 'clear') {
         global.temp.geminiHistory[senderID] = [];
-        global.temp.openRouterHistory[senderID] = [];
         return message.reply("Your chat history has been deleted");
       }
 
-      // If there's a prompt, handle the request with appropriate mode
-      await handleAsk(api, event, prompt, message, module.exports.config.name);
+      // Use empty prompt with image if no text but image is attached
+      const finalPrompt = prompt || "Describe this image in detail.";
+      
+      // If there's a prompt, handle the request
+      await handleAskGemini(api, event, finalPrompt, message, module.exports.config.name);
 
     } catch (error) {
       console.error(`Error in onChat: ${error.message}`);
@@ -323,32 +409,29 @@ module.exports = {
       return;
     }
 
+    // Check if thread is banned
+    const banned = await isThreadBanned(event.threadID);
+    if (banned) {
+      return message.reply("This thread is banned from using the bot. AI features are not available.");
+    }
+
     const prompt = event.body.trim();
 
-    if (prompt === '') {
-      await message.reply("It looks like you replied without a question. Please provide the question you want me to answer.");
+    if (prompt === '' && (!event.attachments || event.attachments.length === 0)) {
+      await message.reply("It looks like you replied without a question or image. Please provide a question or attach an image.");
       return;
     }
     
     // Check if user wants to clear history
     if (prompt.toLowerCase() === 'clear') {
       global.temp.geminiHistory[senderID] = [];
-      global.temp.openRouterHistory[senderID] = [];
       return message.reply("Your chat history has been deleted");
     }
 
-    // Process the reply and continue conversation with the appropriate mode
-    // If the reply was from a bad mode message, continue using bad mode
-    if (Reply.badMode) {
-      await handleAskOpenRouter(api, event, prompt, message, commandName);
-    } else {
-      // Check the thread mode and use the appropriate handler
-      const mode = threadModes[event.threadID] || 'good';
-      if (mode === 'bad') {
-        await handleAskOpenRouter(api, event, prompt, message, commandName);
-      } else {
-        await handleAskGemini(api, event, prompt, message, commandName);
-      }
-    }
+    // Use empty prompt with image if no text but image is attached
+    const finalPrompt = prompt || "Describe this image in detail.";
+    
+    // Process the reply and continue conversation
+    await handleAskGemini(api, event, finalPrompt, message, commandName);
   }
 };

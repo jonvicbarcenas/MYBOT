@@ -1,0 +1,30 @@
+== SCREENSHOT COMMAND DOCUMENTATION ==
+
+MYBOT now includes two different screenshot commands to capture webpages:
+
+1. Basic Screenshot Command:
+   - Command: ss
+   - Usage: {PREFIX}ss <url>
+   - Example: {PREFIX}ss google.com
+   - Description: Takes a quick screenshot of a webpage
+
+2. Advanced Screenshot Command:
+   - Command: screenshot (aliases: web, capture)
+   - Usage: {PREFIX}screenshot <url> [options]
+   - Options:
+     • full - Captures the entire webpage (full-page screenshot)
+     • mobile - Captures the page in mobile view
+   - Examples:
+     • {PREFIX}screenshot google.com
+     • {PREFIX}screenshot facebook.com full
+     • {PREFIX}screenshot twitter.com mobile
+
+The advanced command uses Puppeteer for better quality screenshots with more options, but if it fails, it will automatically fall back to the API service used by the simple command.
+
+Features of the Advanced Command:
+- Better webpage rendering
+- Full-page screenshots
+- Mobile view screenshots
+- More reliable for complex websites
+
+Note: Screenshots may take 5-10 seconds to process, especially for complex websites. 

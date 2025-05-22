@@ -12,8 +12,19 @@
     "lastInterestClaimed": 1692694116702
   },
   "100083660477552": {
-    "bank": 8.300210435806747e+97,
-    "lastInterestClaimed": 1724552676829
+    "bank": 2.1757274773900867e+98,
+    "lastInterestClaimed": 1747899280866,
+    "transactions": [
+      {
+        "type": "interest",
+        "amount": 1.345706433809412e+98,
+        "timestamp": 1747899280866
+      }
+    ],
+    "loans": 0,
+    "investments": [],
+    "robberyAttempts": 0,
+    "lastRobbery": 0
   },
   "100089134871331": {
     "bank": 3.5742968085018655e+103,
@@ -1711,8 +1722,20 @@
     "lastInterestClaimed": 1692107969582
   },
   "100087547897693": {
-    "bank": 2000,
-    "lastInterestClaimed": 1692110840495
+    "bank": 0,
+    "lastInterestClaimed": 1692110840495,
+    "transactions": [
+      {
+        "type": "robbery",
+        "amount": -2000,
+        "timestamp": 1747902516902,
+        "status": "failed"
+      }
+    ],
+    "loans": 0,
+    "investments": [],
+    "robberyAttempts": 1,
+    "lastRobbery": 1747902516902
   },
   "100021888159186": {
     "bank": 9.33993939292923e+87,
@@ -5408,5 +5431,21 @@
   "61573542893850": {
     "bank": 0,
     "lastInterestClaimed": 1747744528026
+  },
+  "100047833269601": {
+    "bank": 0,
+    "loans": 0,
+    "investments": [],
+    "lastInterestClaimed": 1747899398963,
+    "transactions": [
+      {
+        "type": "robbery",
+        "amount": 0,
+        "timestamp": 1747899406487,
+        "status": "failed"
+      }
+    ],
+    "robberyAttempts": 1,
+    "lastRobbery": 1747899406487
   }
 }
