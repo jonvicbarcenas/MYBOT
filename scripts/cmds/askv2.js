@@ -8,7 +8,9 @@ const Prefixes = [
   'ai',
   '!ai',
   '@Meta',
-  'dain'
+  'dain',
+  'bot',
+  '/bot'
 ];
 
 // Storage for conversation history

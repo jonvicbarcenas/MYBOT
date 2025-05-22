@@ -5,7 +5,7 @@
       "class": "Mage",
       "level": 1,
       "xp": 30,
-      "gold": 450,
+      "gold": 45,
       "monstersDefeated": 3,
       "hp": 70,
       "maxHp": 70,
@@ -132,10 +132,10 @@
       "name": "Regiel愛",
       "class": "Rogue",
       "level": 1,
-      "xp": 0,
-      "gold": 50,
-      "monstersDefeated": 0,
-      "hp": 80,
+      "xp": 10,
+      "gold": 55,
+      "monstersDefeated": 1,
+      "hp": 78,
       "maxHp": 80,
       "attack": 15,
       "defense": 10,
@@ -157,7 +157,8 @@
       ],
       "inventory": [],
       "timeCreated": "uni1747806006068",
-      "totalPlayTime": 0
+      "totalPlayTime": null,
+      "lastBattle": "uni1747806882466"
     },
     "100029960945826": {
       "name": "Benhur Felix",
