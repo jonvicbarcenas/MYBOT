@@ -83,6 +83,21 @@ app.post('/stop-bot', (req, res) => {
     });
 });
 
+// Endpoint to get bot logs
+app.get('/bot-logs', (req, res) => {
+    exec('pm2 logs BOT --lines 100 --nostream', (error, stdout, stderr) => {
+        if (error) {
+            console.error(`Error getting pm2 logs: ${error.message}`);
+            return res.status(500).json({ message: 'Failed to get bot logs', error: error.message });
+        }
+        if (stderr) {
+            console.error(`stderr: ${stderr}`);
+            return res.status(500).json({ message: 'Failed to get bot logs', error: stderr });
+        }
+        res.json({ logs: stdout });
+    });
+});
+
 // Function to restart the pm2 process (used after cookie update)
 function restartPm2Process() {
     exec('pm2 restart BOT', (error, stdout, stderr) => {

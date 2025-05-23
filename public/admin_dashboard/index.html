@@ -4,27 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bot Admin Dashboard</title>
-    <link rel="stylesheet" href="style.css"> <!-- We'll create this next -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Bot Administration</h1>
+    <div class="dashboard-container">
+        <div class="sidebar">
+            <div class="logo">
+                <i class="fas fa-robot"></i>
+                <h2>BOT ADMIN</h2>
+            </div>
+            <nav>
+                <ul>
+                    <li class="active" data-section="control-section"><i class="fas fa-sliders-h"></i> Control Panel</li>
+                    <li data-section="cookies-section"><i class="fas fa-cookie"></i> Cookies</li>
+                    <li data-section="logs-section"><i class="fas fa-file-alt"></i> Logs</li>
+                </ul>
+            </nav>
+            <div class="status-indicator">
+                <p>Bot Status: <span id="botStatus">Loading...</span></p>
+            </div>
+        </div>
 
-    <section>
-        <h2>Account Cookies</h2>
-        <textarea id="cookieData" rows="10" cols="50"></textarea><br>
-        <button id="getCookies">Get Current Cookies</button>
-        <button id="updateCookies">Update Cookies & Restart Bot</button>
-    </section>
+        <main class="main-content">
+            <section id="control-section" class="content-section active">
+                <div class="card">
+                    <h2><i class="fas fa-sliders-h"></i> Bot Control</h2>
+                    <div class="control-buttons">
+                        <button id="startBot" class="btn success"><i class="fas fa-play"></i> Start Bot</button>
+                        <button id="stopBot" class="btn danger"><i class="fas fa-stop"></i> Stop Bot</button>
+                        <button id="refreshStatus" class="btn info"><i class="fas fa-sync-alt"></i> Refresh Status</button>
+                    </div>
+                </div>
+            </section>
 
-    <section>
-        <h2>Bot Control</h2>
-        <p>Status: <span id="botStatus">Loading...</span></p>
-        <button id="startBot">Start Bot</button>
-        <button id="stopBot">Stop Bot</button>
-    </section>
+            <section id="cookies-section" class="content-section">
+                <div class="card">
+                    <h2><i class="fas fa-cookie"></i> Account Cookies</h2>
+                    <div class="form-control">
+                        <textarea id="cookieData" rows="10" placeholder="Enter account cookies here..."></textarea>
+                    </div>
+                    <div class="cookie-buttons">
+                        <button id="getCookies" class="btn info"><i class="fas fa-download"></i> Get Current Cookies</button>
+                        <button id="updateCookies" class="btn warning"><i class="fas fa-upload"></i> Update & Restart Bot</button>
+                    </div>
+                </div>
+            </section>
 
-    <div id="message" style="color: green;"></div>
-    <div id="error" style="color: red;"></div>
+            <section id="logs-section" class="content-section">
+                <div class="card">
+                    <h2><i class="fas fa-file-alt"></i> Bot Logs</h2>
+                    <div class="logs-header">
+                        <button id="refreshLogs" class="btn info"><i class="fas fa-sync-alt"></i> Refresh Logs</button>
+                        <div class="search-container">
+                            <input type="text" id="logSearch" placeholder="Search logs...">
+                            <button id="clearSearch" class="btn secondary"><i class="fas fa-times"></i></button>
+                        </div>
+                    </div>
+                    <div class="logs-container">
+                        <pre id="logContent">Loading logs...</pre>
+                    </div>
+                </div>
+            </section>
+
+            <div id="notifications">
+                <div id="message" class="notification success"></div>
+                <div id="error" class="notification error"></div>
+            </div>
+        </main>
+    </div>
 
     <script src="script.js"></script>
 </body>
