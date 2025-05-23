@@ -1,7 +1,7 @@
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
-const { exec } = require('child_process');
+const { exec, spawn } = require('child_process');
 
 const app = express();
 const port = 3003; // Or any other available port
@@ -95,6 +95,37 @@ app.get('/bot-logs', (req, res) => {
             return res.status(500).json({ message: 'Failed to get bot logs', error: stderr });
         }
         res.json({ logs: stdout });
+    });
+});
+
+// Endpoint for streaming logs (Server-Sent Events)
+app.get('/stream-logs', (req, res) => {
+    // Set headers for SSE
+    res.writeHead(200, {
+        'Content-Type': 'text/event-stream',
+        'Cache-Control': 'no-cache',
+        'Connection': 'keep-alive'
+    });
+
+    // Send initial message
+    res.write('data: Connected to log stream\n\n');
+
+    // Function to send logs as SSE
+    const sendLogs = (data) => {
+        res.write(`data: ${data.toString().replace(/\n/g, '\ndata: ')}\n\n`);
+    };
+
+    // Start pm2 logs in streaming mode
+    const logProcess = spawn('pm2', ['logs', 'BOT', '--raw', '--lines', '0']);
+
+    logProcess.stdout.on('data', sendLogs);
+    logProcess.stderr.on('data', sendLogs);
+
+    // Handle client disconnect
+    req.on('close', () => {
+        if (logProcess) {
+            logProcess.kill();
+        }
     });
 });
 

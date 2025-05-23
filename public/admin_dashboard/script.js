@@ -17,6 +17,12 @@ const clearSearchButton = document.getElementById('clearSearch');
 const navItems = document.querySelectorAll('nav ul li');
 const sections = document.querySelectorAll('.content-section');
 
+// Log streaming variables
+let logEventSource = null;
+let isLogStreamActive = false;
+let logBuffer = [];
+const MAX_LOG_LINES = 1000; // Maximum number of log lines to keep in buffer
+
 // Function to display notifications
 function showNotification(msg, isError = false) {
     const element = isError ? errorDiv : messageDiv;
@@ -64,6 +70,11 @@ navItems.forEach(item => {
         const targetSectionId = item.getAttribute('data-section');
         sections.forEach(section => section.classList.remove('active'));
         document.getElementById(targetSectionId).classList.add('active');
+        
+        // Start log streaming when navigating to logs section
+        if (targetSectionId === 'logs-section' && !isLogStreamActive) {
+            startLogStreaming();
+        }
     });
 });
 
@@ -106,14 +117,15 @@ async function fetchBotStatus() {
     }
 }
 
-// Function to fetch and display bot logs
+// Function to fetch initial logs
 async function fetchBotLogs() {
     try {
         logContent.textContent = 'Loading logs...';
         const response = await fetch('/bot-logs');
         const data = await response.json();
         if (response.ok) {
-            logContent.textContent = data.logs || 'No logs available';
+            logBuffer = data.logs ? data.logs.split('\n') : ['No logs available'];
+            updateLogDisplay();
         } else {
             logContent.textContent = `Error fetching logs: ${data.message}`;
             showNotification(`Error fetching logs: ${data.message}`, true);
@@ -124,37 +136,117 @@ async function fetchBotLogs() {
     }
 }
 
-// Function to filter logs based on search input
-function filterLogs() {
-    const searchTerm = logSearch.value.toLowerCase();
-    if (!searchTerm) {
-        fetchBotLogs(); // Reload all logs if search is cleared
-        return;
+// Function to start log streaming
+function startLogStreaming() {
+    if (isLogStreamActive) return; // Don't start multiple streams
+    
+    try {
+        // Close any existing connection
+        if (logEventSource) {
+            logEventSource.close();
+        }
+        
+        // Connect to the log stream
+        logEventSource = new EventSource('/stream-logs');
+        isLogStreamActive = true;
+        
+        // Update button text
+        refreshLogsButton.innerHTML = '<i class="fas fa-stop"></i> Stop Live Logs';
+        
+        // Handle connection open
+        logEventSource.onopen = () => {
+            showNotification('Live log streaming started');
+        };
+        
+        // Handle incoming log messages
+        logEventSource.onmessage = (event) => {
+            // Add new log lines to buffer
+            const newLines = event.data.split('\n');
+            logBuffer = [...logBuffer, ...newLines];
+            
+            // Limit buffer size
+            if (logBuffer.length > MAX_LOG_LINES) {
+                logBuffer = logBuffer.slice(logBuffer.length - MAX_LOG_LINES);
+            }
+            
+            // Apply search filter if active
+            updateLogDisplay();
+        };
+        
+        // Handle errors
+        logEventSource.onerror = () => {
+            stopLogStreaming();
+            showNotification('Log stream disconnected. Click "Refresh Logs" to reconnect.', true);
+        };
+    } catch (error) {
+        showNotification(`Error starting log stream: ${error}`, true);
+        isLogStreamActive = false;
+    }
+}
+
+// Function to stop log streaming
+function stopLogStreaming() {
+    if (!isLogStreamActive) return;
+    
+    if (logEventSource) {
+        logEventSource.close();
+        logEventSource = null;
     }
     
-    const allLogs = logContent.textContent;
-    const logLines = allLogs.split('\n');
-    const filteredLines = logLines.filter(line => 
-        line.toLowerCase().includes(searchTerm)
-    );
+    isLogStreamActive = false;
     
-    if (filteredLines.length === 0) {
-        logContent.textContent = `No matches found for: "${searchTerm}"`;
+    // Update button text
+    refreshLogsButton.innerHTML = '<i class="fas fa-sync-alt"></i> Refresh Logs';
+}
+
+// Function to update log display (applies filtering if needed)
+function updateLogDisplay() {
+    const searchTerm = logSearch.value.toLowerCase();
+    
+    let displayedLogs;
+    if (searchTerm) {
+        displayedLogs = logBuffer.filter(line => 
+            line.toLowerCase().includes(searchTerm)
+        );
+        
+        if (displayedLogs.length === 0) {
+            logContent.textContent = `No matches found for: "${searchTerm}"`;
+            return;
+        }
     } else {
-        logContent.textContent = filteredLines.join('\n');
+        displayedLogs = logBuffer;
+    }
+    
+    // Update log display with latest content
+    logContent.textContent = displayedLogs.join('\n');
+    
+    // Auto-scroll to bottom if user hasn't scrolled up
+    const logsContainer = document.querySelector('.logs-container');
+    if (logsContainer.scrollHeight - logsContainer.scrollTop <= logsContainer.clientHeight + 100) {
+        logsContainer.scrollTop = logsContainer.scrollHeight;
+    }
+}
+
+// Function to toggle log streaming
+function toggleLogStreaming() {
+    if (isLogStreamActive) {
+        stopLogStreaming();
+        showNotification('Live log streaming stopped');
+    } else {
+        startLogStreaming();
     }
 }
 
 // Event listeners
 getCookiesButton.addEventListener('click', fetchCookies);
 refreshStatusButton.addEventListener('click', fetchBotStatus);
-refreshLogsButton.addEventListener('click', fetchBotLogs);
+refreshLogsButton.addEventListener('click', toggleLogStreaming);
 
 // Search functionality
-logSearch.addEventListener('input', filterLogs);
+logSearch.addEventListener('input', updateLogDisplay);
 clearSearchButton.addEventListener('click', () => {
     logSearch.value = '';
-    fetchBotLogs();
+    updateLogDisplay();
 });
 
 updateCookiesButton.addEventListener('click', async () => {
@@ -216,7 +308,19 @@ stopBotButton.addEventListener('click', async () => {
     }
 });
 
+// Clean up event source when user leaves the page
+window.addEventListener('beforeunload', () => {
+    if (logEventSource) {
+        logEventSource.close();
+    }
+});
+
 // Initial data load
 fetchCookies();
 fetchBotStatus();
-fetchBotLogs(); 
+fetchBotLogs();
+
+// Auto-start log streaming if logs section is initially active
+if (document.getElementById('logs-section').classList.contains('active')) {
+    startLogStreaming();
+} 
