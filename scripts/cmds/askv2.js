@@ -46,6 +46,29 @@ async function isThreadBanned(threadID) {
   }
 }
 
+// Function to check if a user is banned (globally or in thread)
+async function isUserBanned(userID, threadID) {
+  try {
+    // Check if user is globally banned (from user.js)
+    const userData = await global.db.usersData.get(userID);
+    if (userData && userData.banned && userData.banned.status === true) {
+      return true;
+    }
+    
+    // Check if user is banned in this thread (from ban.js)
+    const threadData = await global.db.threadsData.get(threadID);
+    const threadBannedUsers = threadData?.data?.banned_ban || [];
+    if (threadBannedUsers.some(user => user.id == userID)) {
+      return true;
+    }
+    
+    return false;
+  } catch (error) {
+    console.error(`Error checking user ban status: ${error.message}`);
+    return false;
+  }
+}
+
 // Function to download image from URL
 async function downloadImage(url, filePath) {
   try {
@@ -169,6 +192,12 @@ async function processImagesForGemini(attachments) {
 // Helper function to handle the API call and response for Gemini
 async function handleAskGemini(api, event, prompt, message, commandName) {
   try {
+    // Check if user is banned (from user.js or ban.js)
+    const isUserBannedStatus = await isUserBanned(event.senderID, event.threadID);
+    if (isUserBannedStatus) {
+      return;
+    }
+    
     // Send initial "waiting" message and get its messageID
     const initialMsg = await message.reply("Answering your question. Please wait a moment...");
     
@@ -330,6 +359,12 @@ module.exports = {
       return message.reply("This thread is banned from using the bot. AI features are not available.");
     }
     
+    // Check if user is banned (from user.js or ban.js)
+    const isUserBannedStatus = await isUserBanned(event.senderID, event.threadID);
+    if (isUserBannedStatus) {
+      return;
+    }
+    
     // Handle the clear command to reset conversation history
     if (args[0]?.toLowerCase() === 'clear') {
       global.temp.geminiHistory[event.senderID] = [];
@@ -362,6 +397,12 @@ module.exports = {
       const banned = await isThreadBanned(event.threadID);
       if (banned) {
         return; // Silently ignore AI commands in banned threads
+      }
+      
+      // Check if user is banned (from user.js or ban.js)
+      const isUserBannedStatus = await isUserBanned(senderID, event.threadID);
+      if (isUserBannedStatus) {
+        return message.reply("Sorry, you are banned from using the bot. AI features are not available for you.");
       }
 
       const prompt = event.body.substring(prefix.length).trim();
@@ -413,6 +454,12 @@ module.exports = {
     const banned = await isThreadBanned(event.threadID);
     if (banned) {
       return message.reply("This thread is banned from using the bot. AI features are not available.");
+    }
+    
+    // Check if user is banned (from user.js or ban.js)
+    const isUserBannedStatus = await isUserBanned(senderID, event.threadID);
+    if (isUserBannedStatus) {
+      return message.reply("Sorry, you are banned from using the bot. AI features are not available for you.");
     }
 
     const prompt = event.body.trim();
