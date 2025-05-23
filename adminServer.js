@@ -53,7 +53,7 @@ app.get('/bot-status', (req, res) => {
 
 // Endpoint to start the bot
 app.post('/start-bot', (req, res) => {
-    exec('pm2 start index', (error, stdout, stderr) => {
+    exec('pm2 start BOT', (error, stdout, stderr) => {
         if (error) {
             console.error(`Error starting pm2 process: ${error.message}`);
             return res.status(500).json({ message: 'Failed to start bot', error: error.message });
@@ -69,7 +69,7 @@ app.post('/start-bot', (req, res) => {
 
 // Endpoint to stop the bot
 app.post('/stop-bot', (req, res) => {
-    exec('pm2 stop index', (error, stdout, stderr) => {
+    exec('pm2 stop BOT', (error, stdout, stderr) => {
         if (error) {
             console.error(`Error stopping pm2 process: ${error.message}`);
             return res.status(500).json({ message: 'Failed to stop bot', error: error.message });
@@ -85,7 +85,7 @@ app.post('/stop-bot', (req, res) => {
 
 // Function to restart the pm2 process (used after cookie update)
 function restartPm2Process() {
-    exec('pm2 restart index', (error, stdout, stderr) => {
+    exec('pm2 restart BOT', (error, stdout, stderr) => {
         if (error) {
             console.error(`Error restarting pm2 process: ${error.message}`);
             return;
