@@ -4,9 +4,9 @@
       "name": "JV Barcenas",
       "class": "Mage",
       "level": 1,
-      "xp": 30,
-      "gold": 45,
-      "monstersDefeated": 3,
+      "xp": 40,
+      "gold": 50,
+      "monstersDefeated": 4,
       "hp": 70,
       "maxHp": 70,
       "attack": 5,
@@ -30,7 +30,7 @@
       "inventory": [],
       "timeCreated": "uni1747802876591",
       "totalPlayTime": null,
-      "lastBattle": "uni1747805568274"
+      "lastBattle": "uni1748007354362"
     },
     "100054629611799": {
       "name": "Christian James Losa",
@@ -191,20 +191,121 @@
       "timeCreated": "uni1747806240892",
       "totalPlayTime": null,
       "lastBattle": "uni1747806526001"
+    },
+    "100048528609607": {
+      "name": "Seikaぶ.",
+      "class": "Mage",
+      "level": 2,
+      "xp": 22,
+      "gold": 110,
+      "monstersDefeated": 12,
+      "hp": 80,
+      "maxHp": 80,
+      "attack": 8,
+      "defense": 10,
+      "magic": 28,
+      "speed": 14,
+      "skills": [
+        {
+          "name": "Staff Hit",
+          "damage": 8,
+          "cost": 0,
+          "description": "Basic attack"
+        },
+        {
+          "name": "Fireball",
+          "damage": 30,
+          "cost": 15,
+          "description": "Powerful magical attack"
+        }
+      ],
+      "inventory": [],
+      "timeCreated": "uni1748003203555",
+      "totalPlayTime": null,
+      "lastBattle": "uni1748004608408"
+    },
+    "100076172289915": {
+      "name": "Raven Cortez",
+      "class": "Warrior",
+      "level": 1,
+      "xp": 20,
+      "gold": 60,
+      "monstersDefeated": 2,
+      "hp": 98,
+      "maxHp": 100,
+      "attack": 20,
+      "defense": 15,
+      "magic": 5,
+      "speed": 10,
+      "skills": [
+        {
+          "name": "Slash",
+          "damage": 15,
+          "cost": 0,
+          "description": "Basic attack"
+        },
+        {
+          "name": "Heavy Strike",
+          "damage": 25,
+          "cost": 10,
+          "description": "Powerful physical attack"
+        }
+      ],
+      "inventory": [],
+      "timeCreated": "uni1748004343150",
+      "totalPlayTime": null,
+      "lastBattle": "uni1748004758947"
+    },
+    "100051639491236": {
+      "name": "Xyrelle Angelo Mangilit",
+      "class": "Warrior",
+      "level": 1,
+      "xp": 0,
+      "gold": 50,
+      "monstersDefeated": 0,
+      "hp": 100,
+      "maxHp": 100,
+      "attack": 20,
+      "defense": 15,
+      "magic": 5,
+      "speed": 10,
+      "skills": [
+        {
+          "name": "Slash",
+          "damage": 15,
+          "cost": 0,
+          "description": "Basic attack"
+        },
+        {
+          "name": "Heavy Strike",
+          "damage": 25,
+          "cost": 10,
+          "description": "Powerful physical attack"
+        }
+      ],
+      "inventory": [],
+      "timeCreated": "uni1748004899410",
+      "totalPlayTime": 0
     }
   },
   "battles": {},
   "quests": {
     "100007150668975": {
-      "active": [],
+      "active": [
+        {
+          "id": 1,
+          "startedAt": "uni1748008648649",
+          "progress": 0
+        }
+      ],
       "completed": [],
       "stats": {
-        "monstersDefeated": 1,
-        "goldCollected": 5,
-        "battlesWon": 1,
+        "monstersDefeated": 2,
+        "goldCollected": 10,
+        "battlesWon": 2,
         "eliteDefeated": 0,
         "specificDefeated": {
-          "Slime": 1
+          "Slime": 2
         }
       }
     }

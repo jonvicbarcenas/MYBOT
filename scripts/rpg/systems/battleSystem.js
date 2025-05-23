@@ -1,6 +1,7 @@
 const { getTime } = global.utils;
 const { saveRPGData, updateRankData } = require('../utils/dataManager');
 const { MONSTERS, XP_TO_LEVEL_UP, STAT_INCREASE_PER_LEVEL } = require('../data/gameData');
+const { QUESTS } = require('./questSystem');
 
 function startBattle({ message, senderID, lang, globalData }) {
   const playerData = global.rpgData.players[senderID];
@@ -23,7 +24,13 @@ function startBattle({ message, senderID, lang, globalData }) {
   
   // Generate a monster based on player level
   const monsterTier = Math.min(Math.floor(playerData.level / 3), MONSTERS.length - 1);
-  const monster = { ...MONSTERS[monsterTier] };
+  
+  // Get available monsters up to the calculated tier
+  const availableMonsters = MONSTERS.slice(0, monsterTier + 1);
+  
+  // Select a random monster from the available monsters
+  const randomMonsterIndex = Math.floor(Math.random() * availableMonsters.length);
+  const monster = { ...availableMonsters[randomMonsterIndex] };
   
   // Scale monster based on player level
   const levelFactor = 1 + (playerData.level - 1) * 0.1;
@@ -235,28 +242,44 @@ async function handleBattleWon({ message, playerData, battle, senderID, lang, gl
   playerData.totalPlayTime += (getTime("unix") - battle.startTime);
   
   // Update quest progress
-  if (typeof global.updateQuestProgress === 'function') {
-    global.updateQuestProgress(senderID, "monster_defeated", { 
-      name: battle.monster.name,
-      level: Math.floor(playerData.level / 3)
+  if (playerData.quests && playerData.quests.active.length > 0) {
+    const completedQuests = [];
+    playerData.quests.active = playerData.quests.active.filter(activeQuest => {
+      const questDef = QUESTS[activeQuest.id];
+      if (!questDef) return true; // Keep if quest definition is missing
+
+      if (questDef.type === "kill_monster" && questDef.target === battle.monster.name) {
+        activeQuest.progress = (activeQuest.progress || 0) + 1;
+        if (activeQuest.progress >= questDef.count) {
+          // Quest completed
+          completedQuests.push(questDef);
+          return false; // Remove from active quests
+        }
+      }
+      return true; // Keep active if not completed or not related to defeated monster
     });
-    global.updateQuestProgress(senderID, "gold_collected", { 
-      amount: battle.monster.gold 
-    });
-    global.updateQuestProgress(senderID, "battle_won", {});
+
+    // Process completed quests
+    for (const quest of completedQuests) {
+      playerData.xp += quest.reward.xp;
+      playerData.gold += quest.reward.gold;
+      playerData.quests.completed.push({ id: quest.id }); // Add to completed
+      await message.reply(lang("questCompleted", quest.name, quest.reward.xp, quest.reward.gold)); // Need this lang string
+    }
   }
-  
-  // Check for level up
-  if (playerData.xp >= XP_TO_LEVEL_UP(playerData.level)) {
-    await handleLevelUp({ message, playerData, battle, senderID, lang, globalData });
-    return;
-  }
-  
-  // Update ranking data
-  await updateRankData(globalData, senderID, playerData);
-  
+
   saveRPGData();
-  return message.reply(lang("battleWon", battle.monster.name, battle.monster.xp, battle.monster.gold));
+
+  // Check for level up
+  while (playerData.xp >= XP_TO_LEVEL_UP(playerData.level)) {
+    await handleLevelUp({ message, playerData, battle, senderID, lang, globalData });
+  }
+
+  // Update rank data
+  updateRankData(globalData, senderID, playerData);
+  
+  // Send battle won message
+  await message.reply(lang("battleWon", battle.monster.name, battle.monster.xp, battle.monster.gold));
 }
 
 async function handleLevelUp({ message, playerData, battle, senderID, lang, globalData }) {

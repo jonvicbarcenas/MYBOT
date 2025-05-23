@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bot Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css"> <!-- We'll create this next -->
+</head>
+<body>
+    <h1>Bot Administration</h1>
+
+    <section>
+        <h2>Account Cookies</h2>
+        <textarea id="cookieData" rows="10" cols="50"></textarea><br>
+        <button id="getCookies">Get Current Cookies</button>
+        <button id="updateCookies">Update Cookies & Restart Bot</button>
+    </section>
+
+    <section>
+        <h2>Bot Control</h2>
+        <p>Status: <span id="botStatus">Loading...</span></p>
+        <button id="startBot">Start Bot</button>
+        <button id="stopBot">Stop Bot</button>
+    </section>
+
+    <div id="message" style="color: green;"></div>
+    <div id="error" style="color: red;"></div>
+
+    <script src="script.js"></script>
+</body>
+</html> 

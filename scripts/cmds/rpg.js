@@ -10,6 +10,7 @@ const { handleCharacterCreation, showCharacterProfile, resetCharacter, healChara
 const { startBattle, handleBattleAction } = require('../rpg/systems/battleSystem');
 const { showShop, buyItem, showInventory, equipItem, useItem } = require('../rpg/systems/shopSystem');
 const { showRankings, resetRankings, showPlayerRank } = require('../rpg/systems/rankSystem');
+const { showQuests, acceptQuest } = require('../rpg/systems/questSystem');
 
 // Game data structures
 const CLASSES = {
@@ -146,7 +147,14 @@ module.exports = {
       userRankInfo: "🏆 | Player: %1\nLevel: %2\nClass: %3\nGold: %4\nMonsters defeated: %5\nTotal play time: %6",
       
       // Help
-      help: "📖 RPG Adventure Help:\n\n• '{pn} create <class>': Create a new character\n• '{pn} profile': View your stats\n• '{pn} battle': Fight a monster\n• '{pn} heal': Restore health (20 gold)\n• '{pn} shop': Buy items\n• '{pn} buy <id>': Purchase an item from the shop\n• '{pn} inventory': View your items\n• '{pn} equip <item>': Equip an item\n• '{pn} use <item>': Use a consumable\n• '{pn} rank': View leaderboard\n• '{pn} quest': Manage your quests\n• '{pn} reset': Delete your character\n\nShop has a Name Change service (ID: 11) for 50 gold!"
+      help: "📖 RPG Adventure Help:\n\n• '{pn} create <class>': Create a new character\n• '{pn} profile': View your stats\n• '{pn} battle': Fight a monster\n• '{pn} heal': Restore health (20 gold)\n• '{pn} shop': Buy items\n• '{pn} buy <id>': Purchase an item from the shop\n• '{pn} inventory': View your items\n• '{pn} equip <item>': Equip an item\n• '{pn} use <item>': Use a consumable\n• '{pn} rank': View leaderboard\n• '{pn} quest': Manage your quests\n• '{pn} reset': Delete your character\n\nShop has a Name Change service (ID: 11) for 50 gold!",
+
+      noActiveQuests: "📜 You have no active quests at the moment.",
+
+      invalidQuestId: "⚠️ Invalid quest ID. Please check the available quests using '{pn} quest'.",
+      questAlreadyActive: "⚠️ You are already on the '%1' quest.",
+      questAlreadyCompleted: "⚠️ You have already completed the '%1' quest.",
+      questAccepted: "✅ You have accepted the '%1' quest! Good luck!"
     }
   },
 
@@ -215,6 +223,14 @@ module.exports = {
     
     else if (args[0] === "help") {
       return message.reply(lang("help"));
+    }
+    
+    else if (args[0] === "quest") {
+      if (args[1] === "accept") {
+        return acceptQuest({ message, senderID, args, lang, playerData, saveRPGData });
+      } else {
+        return showQuests({ message, senderID, lang, playerData });
+      }
     }
     
     // Default command - game status
