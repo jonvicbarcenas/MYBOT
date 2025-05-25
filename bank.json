@@ -1207,7 +1207,29 @@
   },
   "100053016981546": {
     "bank": 3.630973972384418e+127,
-    "lastInterestClaimed": 1747712506705
+    "lastInterestClaimed": 1747712506705,
+    "transactions": [
+      {
+        "type": "investment",
+        "amount": 1e+42,
+        "timestamp": 1748151751443,
+        "plan": "crypto",
+        "returnRate": "-47.8%"
+      }
+    ],
+    "loans": 0,
+    "investments": [
+      {
+        "amount": 1e+42,
+        "plan": "crypto",
+        "initialAmount": 1e+42,
+        "currentValue": 5.215049677413417e+41,
+        "timestamp": 1748151751443,
+        "risk": "High Risk"
+      }
+    ],
+    "robberyAttempts": 0,
+    "lastRobbery": 0
   },
   "100033196445844": {
     "bank": 0,
@@ -2163,8 +2185,70 @@
     "lastInterestClaimed": 1692754024840
   },
   "100090083058948": {
-    "bank": 4.8839997270154776e+132,
-    "lastInterestClaimed": 1724586542890
+    "bank": 1.2876180414420075e+133,
+    "lastInterestClaimed": 1748150713310,
+    "transactions": [
+      {
+        "type": "interest",
+        "amount": 7.992180687404597e+132,
+        "timestamp": 1748150713310
+      },
+      {
+        "type": "investment",
+        "amount": 270,
+        "timestamp": 1748150794345,
+        "plan": "crypto",
+        "returnRate": "132.2%"
+      },
+      {
+        "type": "investment",
+        "amount": 626,
+        "timestamp": 1748151055114,
+        "plan": "crypto",
+        "returnRate": "25.5%"
+      },
+      {
+        "type": "withdraw",
+        "amount": 1e+42,
+        "timestamp": 1748151091331
+      },
+      {
+        "type": "investment",
+        "amount": 1e+42,
+        "timestamp": 1748151125527,
+        "plan": "crypto",
+        "returnRate": "56.9%"
+      }
+    ],
+    "loans": 0,
+    "investments": [
+      {
+        "amount": 270,
+        "plan": "crypto",
+        "initialAmount": 270,
+        "currentValue": 626,
+        "timestamp": 1748150794345,
+        "risk": "High Risk"
+      },
+      {
+        "amount": 626,
+        "plan": "crypto",
+        "initialAmount": 626,
+        "currentValue": 785,
+        "timestamp": 1748151055114,
+        "risk": "High Risk"
+      },
+      {
+        "amount": 1e+42,
+        "plan": "crypto",
+        "initialAmount": 1e+42,
+        "currentValue": 1.5693508910771103e+42,
+        "timestamp": 1748151125527,
+        "risk": "High Risk"
+      }
+    ],
+    "robberyAttempts": 0,
+    "lastRobbery": 0
   },
   "61550689522603": {
     "bank": 16265.07484690411,
@@ -2184,7 +2268,19 @@
   },
   "100074847027302": {
     "bank": 1.472819977008963e+133,
-    "lastInterestClaimed": 1747715288466
+    "lastInterestClaimed": 1747715288466,
+    "transactions": [
+      {
+        "type": "robbery",
+        "amount": 23387,
+        "timestamp": 1748154369674,
+        "status": "successful"
+      }
+    ],
+    "loans": 0,
+    "investments": [],
+    "robberyAttempts": 1,
+    "lastRobbery": 1748154369674
   },
   "100021386352162": {
     "bank": 24161.71935427645,
@@ -3222,92 +3318,123 @@
     "lastInterestClaimed": 1697357401705
   },
   "100092007202232": {
-    "bank": 331749410000,
-    "lastInterestClaimed": 1697370756249,
+    "bank": 2248378781044.741,
+    "lastInterestClaimed": 1748154328793,
     "transactions": [
       {
-        "type": "lottery",
-        "amount": 12855664000,
-        "timestamp": 1748008167421,
-        "tickets": 10000000,
-        "spent": 10000000000,
-        "won": 22855664000
+        "type": "loan",
+        "amount": 60000,
+        "timestamp": 1748154255348,
+        "interestRate": "5%",
+        "repayAmount": 63000
       },
       {
-        "type": "lottery",
-        "amount": 12854377000,
-        "timestamp": 1748008199756,
-        "tickets": 9999999,
-        "spent": 9999999000,
-        "won": 22854376000
+        "type": "loan_repayment",
+        "amount": -63000,
+        "timestamp": 1748154268705
       },
       {
-        "type": "lottery",
-        "amount": 12993776000,
-        "timestamp": 1748008484878,
-        "tickets": 10000000,
-        "spent": 10000000000,
-        "won": 22993776000
+        "type": "interest",
+        "amount": 21891928.198745217,
+        "timestamp": 1748154280717
       },
       {
-        "type": "lottery",
-        "amount": 12575792000,
-        "timestamp": 1748008493417,
-        "tickets": 10000000,
-        "spent": 10000000000,
-        "won": 22575792000
+        "type": "investment",
+        "amount": 100000000000,
+        "timestamp": 1748154309909,
+        "plan": "crypto",
+        "returnRate": "129.9%"
       },
       {
-        "type": "lottery",
-        "amount": 12867690000,
-        "timestamp": 1748008499983,
-        "tickets": 10000000,
-        "spent": 10000000000,
-        "won": 22867690000
+        "type": "interest",
+        "amount": 7032341.761372329,
+        "timestamp": 1748154318954
       },
       {
-        "type": "lottery",
-        "amount": 12983182000,
-        "timestamp": 1748008506405,
-        "tickets": 10000000,
-        "spent": 10000000000,
-        "won": 22983182000
+        "type": "interest",
+        "amount": 1809540.3487938694,
+        "timestamp": 1748154328793
       },
       {
-        "type": "lottery",
-        "amount": 25669730000,
-        "timestamp": 1748008536269,
-        "tickets": 20000000,
-        "spent": 20000000000,
-        "won": 45669730000
+        "type": "investment",
+        "amount": 100000000000,
+        "timestamp": 1748154342390,
+        "plan": "crypto",
+        "returnRate": "168.9%"
       },
       {
-        "type": "lottery",
-        "amount": 25618250000,
-        "timestamp": 1748008584547,
-        "tickets": 20000000,
-        "spent": 20000000000,
-        "won": 45618250000
+        "type": "investment",
+        "amount": 100000000000,
+        "timestamp": 1748154348654,
+        "plan": "crypto",
+        "returnRate": "112.5%"
       },
       {
-        "type": "lottery",
-        "amount": 127998434000,
-        "timestamp": 1748008648559,
-        "tickets": 100000000,
-        "spent": 100000000000,
-        "won": 227998434000
+        "type": "investment",
+        "amount": 100000000000,
+        "timestamp": 1748154358262,
+        "plan": "crypto",
+        "returnRate": "38.5%"
       },
       {
-        "type": "lottery",
-        "amount": 38244250000,
-        "timestamp": 1748008652948,
-        "tickets": 30000000,
-        "spent": 30000000000,
-        "won": 68244250000
+        "type": "investment",
+        "amount": 100000000000,
+        "timestamp": 1748154365987,
+        "plan": "crypto",
+        "returnRate": "5.9%"
       }
     ],
     "loans": 0,
-    "investments": [],
+    "investments": [
+      {
+        "amount": 20000000000,
+        "plan": "crypto",
+        "initialAmount": 20000000000,
+        "currentValue": 17121122547,
+        "timestamp": 1748154145424,
+        "risk": "High Risk"
+      },
+      {
+        "amount": 100000000000,
+        "plan": "crypto",
+        "initialAmount": 100000000000,
+        "currentValue": 229863972864,
+        "timestamp": 1748154309909,
+        "risk": "High Risk"
+      },
+      {
+        "amount": 100000000000,
+        "plan": "crypto",
+        "initialAmount": 100000000000,
+        "currentValue": 268940622978,
+        "timestamp": 1748154342390,
+        "risk": "High Risk"
+      },
+      {
+        "amount": 100000000000,
+        "plan": "crypto",
+        "initialAmount": 100000000000,
+        "currentValue": 212502430237,
+        "timestamp": 1748154348654,
+        "risk": "High Risk"
+      },
+      {
+        "amount": 100000000000,
+        "plan": "crypto",
+        "initialAmount": 100000000000,
+        "currentValue": 138455094765,
+        "timestamp": 1748154358262,
+        "risk": "High Risk"
+      },
+      {
+        "amount": 100000000000,
+        "plan": "crypto",
+        "initialAmount": 100000000000,
+        "currentValue": 105943880221,
+        "timestamp": 1748154365987,
+        "risk": "High Risk"
+      }
+    ],
     "robberyAttempts": 0,
     "lastRobbery": 0
   },
@@ -5598,7 +5725,19 @@
   },
   "61564949953457": {
     "bank": 0,
-    "lastInterestClaimed": 1747718395228
+    "lastInterestClaimed": 1747718395228,
+    "transactions": [
+      {
+        "type": "robbery",
+        "amount": 0,
+        "timestamp": 1748154416038,
+        "status": "failed"
+      }
+    ],
+    "loans": 0,
+    "investments": [],
+    "robberyAttempts": 1,
+    "lastRobbery": 1748154416038
   },
   "61556020145193": {
     "bank": 0,
@@ -5849,5 +5988,174 @@
     ],
     "robberyAttempts": 1,
     "lastRobbery": 1748004423330
+  },
+  "61550787147158": {
+    "bank": 1000,
+    "loans": 0,
+    "investments": [],
+    "lastInterestClaimed": 1748149096763,
+    "transactions": [
+      {
+        "type": "robbery",
+        "amount": 0,
+        "timestamp": 1748149096767,
+        "status": "failed"
+      },
+      {
+        "type": "withdraw",
+        "amount": 1000,
+        "timestamp": 1748149166316
+      }
+    ],
+    "robberyAttempts": 1,
+    "lastRobbery": 1748149096766
+  },
+  "61550009672145": {
+    "bank": 79536.14013496805,
+    "loans": 105,
+    "investments": [],
+    "lastInterestClaimed": 1748150187700,
+    "transactions": [
+      {
+        "type": "robbery",
+        "amount": 79435,
+        "timestamp": 1748149691814,
+        "status": "successful"
+      },
+      {
+        "type": "interest",
+        "amount": 1.140134968055556,
+        "timestamp": 1748150187700
+      },
+      {
+        "type": "loan",
+        "amount": 100,
+        "timestamp": 1748150417156,
+        "interestRate": "5%",
+        "repayAmount": 105
+      }
+    ],
+    "robberyAttempts": 1,
+    "lastRobbery": 1748149691814
+  },
+  "61557109888634": {
+    "bank": 3510,
+    "loans": 6300,
+    "investments": [
+      {
+        "amount": 200,
+        "plan": "crypto",
+        "initialAmount": 200,
+        "currentValue": 262,
+        "timestamp": 1748150060155,
+        "risk": "High Risk"
+      },
+      {
+        "amount": 200,
+        "plan": "crypto",
+        "initialAmount": 200,
+        "currentValue": 213,
+        "timestamp": 1748150145208,
+        "risk": "High Risk"
+      },
+      {
+        "amount": 200,
+        "plan": "crypto",
+        "initialAmount": 200,
+        "currentValue": 303,
+        "timestamp": 1748150251258,
+        "risk": "High Risk"
+      }
+    ],
+    "lastInterestClaimed": 1748149922254,
+    "transactions": [
+      {
+        "type": "loan",
+        "amount": 6000,
+        "timestamp": 1748149936353,
+        "interestRate": "5%",
+        "repayAmount": 6300
+      },
+      {
+        "type": "investment",
+        "amount": 200,
+        "timestamp": 1748150060155,
+        "plan": "crypto",
+        "returnRate": "31.4%"
+      },
+      {
+        "type": "investment",
+        "amount": 200,
+        "timestamp": 1748150145208,
+        "plan": "crypto",
+        "returnRate": "6.8%"
+      },
+      {
+        "type": "investment",
+        "amount": 200,
+        "timestamp": 1748150251258,
+        "plan": "crypto",
+        "returnRate": "51.8%"
+      }
+    ],
+    "robberyAttempts": 0,
+    "lastRobbery": 0
+  },
+  "100055767381913": {
+    "bank": 350,
+    "lastInterestClaimed": 1748150031975
+  },
+  "100083667414210": {
+    "bank": 0,
+    "loans": 10500,
+    "investments": [],
+    "lastInterestClaimed": 1748150148689,
+    "transactions": [
+      {
+        "type": "loan",
+        "amount": 10000,
+        "timestamp": 1748150186635,
+        "interestRate": "5%",
+        "repayAmount": 10500
+      },
+      {
+        "type": "withdraw",
+        "amount": 10000,
+        "timestamp": 1748150250640
+      }
+    ],
+    "robberyAttempts": 0,
+    "lastRobbery": 0
+  },
+  "100031098262929": {
+    "bank": 1223,
+    "loans": 0,
+    "investments": [],
+    "lastInterestClaimed": 1748151525771,
+    "transactions": [
+      {
+        "type": "withdraw",
+        "amount": 777,
+        "timestamp": 1748151664530
+      }
+    ],
+    "robberyAttempts": 0,
+    "lastRobbery": 0
+  },
+  "100064003159667": {
+    "bank": 0,
+    "loans": 0,
+    "investments": [],
+    "lastInterestClaimed": 1748154438229,
+    "transactions": [
+      {
+        "type": "robbery",
+        "amount": 0,
+        "timestamp": 1748154438231,
+        "status": "failed"
+      }
+    ],
+    "robberyAttempts": 1,
+    "lastRobbery": 1748154438231
   }
 }

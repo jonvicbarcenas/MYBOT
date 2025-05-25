@@ -1,0 +1,85 @@
+{
+  "lastFetched": "2025-05-25T06:35:58.665Z",
+  "nextRefreshIn": 204,
+  "stock": {
+    "gear": [
+      {
+        "name": "Watering Can",
+        "quantity": "x1",
+        "emoji": "🚿"
+      },
+      {
+        "name": "Favorite Tool",
+        "quantity": "x3",
+        "emoji": "🛡️"
+      },
+      {
+        "name": "Recall Wrench",
+        "quantity": "x2",
+        "emoji": "🔧"
+      },
+      {
+        "name": "Trowel",
+        "quantity": "x3",
+        "emoji": "🪚"
+      }
+    ],
+    "seeds": [
+      {
+        "name": "Carrot",
+        "quantity": "x23",
+        "emoji": "🥕"
+      },
+      {
+        "name": "Strawberry",
+        "quantity": "x3",
+        "emoji": "🍓"
+      },
+      {
+        "name": "Tomato",
+        "quantity": "x2",
+        "emoji": "🍅"
+      },
+      {
+        "name": "Orange Tulip",
+        "quantity": "x20",
+        "emoji": "🌷"
+      },
+      {
+        "name": "Blueberry",
+        "quantity": "x2",
+        "emoji": "🫐"
+      }
+    ],
+    "eggs": [
+      {
+        "name": "Common Egg",
+        "quantity": "x1",
+        "emoji": "🥚"
+      },
+      {
+        "name": "Common Egg",
+        "quantity": "x1",
+        "emoji": "🥚"
+      },
+      {
+        "name": "Common Egg",
+        "quantity": "x1",
+        "emoji": "🥚"
+      }
+    ],
+    "lastUpdated": "Last updated: 6:35:31 AM. Page refreshes automatically.",
+    "weather": {
+      "icon": "☀️",
+      "status": "Snow Ended",
+      "description": "The snow has ended. Time to dry up your crops and reset!",
+      "lastUpdated": "Updated: 6:27:20 AM"
+    }
+  },
+  "weather": {
+    "icon": "☀️",
+    "status": "Snow Ended",
+    "description": "The snow has ended. Time to dry up your crops and reset!",
+    "lastUpdated": "Updated: 6:27:20 AM"
+  }
+}

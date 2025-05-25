@@ -286,6 +286,38 @@
       "inventory": [],
       "timeCreated": "uni1748004899410",
       "totalPlayTime": 0
+    },
+    "61557109888634": {
+      "name": "Sae Itoshi",
+      "class": "Warrior",
+      "level": 1,
+      "xp": 10,
+      "gold": 55,
+      "monstersDefeated": 1,
+      "hp": 99,
+      "maxHp": 100,
+      "attack": 20,
+      "defense": 15,
+      "magic": 5,
+      "speed": 10,
+      "skills": [
+        {
+          "name": "Slash",
+          "damage": 15,
+          "cost": 0,
+          "description": "Basic attack"
+        },
+        {
+          "name": "Heavy Strike",
+          "damage": 25,
+          "cost": 10,
+          "description": "Powerful physical attack"
+        }
+      ],
+      "inventory": [],
+      "timeCreated": "uni1748149684994",
+      "totalPlayTime": null,
+      "lastBattle": "uni1748149737625"
     }
   },
   "battles": {},
