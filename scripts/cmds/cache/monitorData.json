@@ -3,13 +3,13 @@
   "activeUsers": {},
   "commandUsage": {
     "monitorhook": {
-      "count": 17,
-      "lastUsed": 1748155002148
+      "count": 38,
+      "lastUsed": 1748155144699
     }
   },
   "botStats": {
     "startTime": 1748154823622,
-    "totalCommands": 17,
+    "totalCommands": 38,
     "totalMessages": 0
   },
   "reports": []

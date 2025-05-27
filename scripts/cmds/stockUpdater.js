@@ -6,17 +6,79 @@ const moment = require('moment-timezone');
 module.exports = {
   config: {
     name: "stockUpdater",
-    version: "1.0",
+    version: "1.1",
     author: "JV Barcenas",
     category: "owner",
+    description: "Manage stock update notifications",
+    usage: "[enable/disable/add] [threadID]",
+    cooldowns: 5
   },
   lastSentTime: null,
-  onStart: async function ({ api, event }) {
-    return api.sendMessage(
-      `Automatically update stock information`,
-      event.threadID,
-      event.messageID
-    );
+  onStart: async function ({ api, event, args, message, Users }) {
+    const configPath = path.join(__dirname, '../../configCommands.json');
+    let config = JSON.parse(fs.readFileSync(configPath, 'utf8'));
+    
+    // Initialize stockUpdater config if it doesn't exist
+    if (!config.envCommands.stockUpdater) {
+      config.envCommands.stockUpdater = { enabledThreads: [] };
+      fs.writeFileSync(configPath, JSON.stringify(config, null, 2), 'utf8');
+    }
+    
+    // Check if user is admin
+    const isAdmin = await Users.getInfo(event.senderID).then(info => {
+      return global.GoatBot.config.adminBot.includes(event.senderID);
+    }).catch(() => false);
+    
+    if (!isAdmin) {
+      return message.reply("⚠️ You don't have permission to use this command. Only bot admins can use this command.");
+    }
+    
+    const command = args[0]?.toLowerCase();
+    const threadID = args[1];
+    
+    if (!command) {
+      // Show current enabled threads
+      const enabledThreads = config.envCommands.stockUpdater.enabledThreads || [];
+      return message.reply(`📊 Stock updates are currently enabled for ${enabledThreads.length} threads.`);
+    }
+    
+    if (["enable", "disable", "add"].includes(command) && !threadID) {
+      return message.reply("⚠️ Please provide a thread ID.");
+    }
+    
+    let enabledThreads = config.envCommands.stockUpdater.enabledThreads || [];
+    
+    switch (command) {
+      case "enable":
+        if (enabledThreads.includes(threadID)) {
+          return message.reply("⚠️ This thread is already enabled for stock updates.");
+        }
+        enabledThreads.push(threadID);
+        config.envCommands.stockUpdater.enabledThreads = enabledThreads;
+        fs.writeFileSync(configPath, JSON.stringify(config, null, 2), 'utf8');
+        return message.reply("✅ Thread has been enabled for stock updates.");
+        
+      case "disable":
+        if (!enabledThreads.includes(threadID)) {
+          return message.reply("⚠️ This thread is not enabled for stock updates.");
+        }
+        enabledThreads = enabledThreads.filter(id => id !== threadID);
+        config.envCommands.stockUpdater.enabledThreads = enabledThreads;
+        fs.writeFileSync(configPath, JSON.stringify(config, null, 2), 'utf8');
+        return message.reply("✅ Thread has been disabled for stock updates.");
+        
+      case "add":
+        if (enabledThreads.includes(threadID)) {
+          return message.reply("⚠️ This thread is already enabled for stock updates.");
+        }
+        enabledThreads.push(threadID);
+        config.envCommands.stockUpdater.enabledThreads = enabledThreads;
+        fs.writeFileSync(configPath, JSON.stringify(config, null, 2), 'utf8');
+        return message.reply("✅ Thread has been added to stock updates.");
+        
+      default:
+        return message.reply("⚠️ Invalid command. Use 'enable', 'disable', or 'add'.");
+    }
   },
   onLoad: async function({
     api,
@@ -79,9 +141,13 @@ module.exports = {
           message += `${stock.weather.description}\n`;
           message += `${stock.weather.lastUpdated}`;
           
-          // Send message to multiple threads
-          const threadIDs = ['28123655423916989', '23871909845786935', '6430224813769264'];
-          for (const threadID of threadIDs) {
+          // Read enabled threads from config
+          const configPath = path.join(__dirname, '../../configCommands.json');
+          const config = JSON.parse(fs.readFileSync(configPath, 'utf8'));
+          const enabledThreads = config.envCommands.stockUpdater?.enabledThreads || [];
+          
+          // Send message to enabled threads
+          for (const threadID of enabledThreads) {
             api.sendMessage(message, threadID);
           }
           console.log('Stock update messages sent successfully!');
