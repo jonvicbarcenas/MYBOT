@@ -5,7 +5,6 @@ obfcode.js
 .replit
 
 # Account file
-account.txt
 data.json
 
 # Merge conflict markers (make sure your files don't contain these lines)
@@ -33,9 +32,6 @@ checkOriginCodeChanged.js
 test.js
 
 # Unmerged changes markers
-<<<<<<< Updated upstream
-.*
-=======
 
 # Caches and configuration files
 .cache
@@ -45,7 +41,6 @@ test.js
 .pm2
 .ssh
 .npm
->>>>>>> Stashed changes
 
 # Databases and temporary files
 database/data/*

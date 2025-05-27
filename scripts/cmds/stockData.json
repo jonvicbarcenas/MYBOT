@@ -1,21 +1,21 @@
 {
-  "lastFetched": "2025-05-27T06:46:06.616Z",
-  "nextRefreshIn": -31,
+  "lastFetched": "2025-05-27T07:10:10.907Z",
+  "nextRefreshIn": -56,
   "stock": {
     "gear": [
       {
         "name": "Watering Can",
-        "quantity": "x1",
+        "quantity": "x3",
         "emoji": "🚿"
       },
       {
         "name": "Favorite Tool",
-        "quantity": "x1",
+        "quantity": "x3",
         "emoji": "🛡️"
       },
       {
         "name": "Recall Wrench",
-        "quantity": "x1",
+        "quantity": "x3",
         "emoji": "🔧"
       },
       {
@@ -27,33 +27,23 @@
     "seeds": [
       {
         "name": "Carrot",
-        "quantity": "x6",
+        "quantity": "x12",
         "emoji": "🥕"
       },
       {
-        "name": "Strawberry",
-        "quantity": "x6",
-        "emoji": "🍓"
-      },
-      {
-        "name": "Apple",
-        "quantity": "x1",
-        "emoji": "🍎"
+        "name": "Blueberry",
+        "quantity": "x5",
+        "emoji": "🫐"
       },
       {
         "name": "Tomato",
-        "quantity": "x2",
+        "quantity": "x3",
         "emoji": "🍅"
       },
       {
-        "name": "Orange Tulip",
-        "quantity": "x19",
-        "emoji": "🌷"
-      },
-      {
-        "name": "Blueberry",
-        "quantity": "x2",
-        "emoji": "🫐"
+        "name": "Strawberry",
+        "quantity": "x4",
+        "emoji": "🍓"
       }
     ],
     "eggs": [
@@ -73,18 +63,18 @@
         "emoji": "🥚"
       }
     ],
-    "lastUpdated": "Last updated: 6:45:36 AM. Page refreshes automatically.",
+    "lastUpdated": "Last updated: 7:05:39 AM. Page refreshes automatically.",
     "weather": {
       "icon": "☀️",
-      "status": "Rain Ended",
-      "description": "The rain has ended. Time to dry up your crops and reset!",
-      "lastUpdated": "Updated: 6:23:17 AM"
+      "status": "Meteor Shower Alert!",
+      "description": "Streaks of light tear across the night sky — it's a Meteor Shower!\nFalling meteors may bring rare surprises and bonuses to your garden.\n\nNOTE: This event can randomly occur during Night. Keep an eye out!",
+      "lastUpdated": "Updated: 7:08:18 AM"
     }
   },
   "weather": {
     "icon": "☀️",
-    "status": "Rain Ended",
-    "description": "The rain has ended. Time to dry up your crops and reset!",
-    "lastUpdated": "Updated: 6:23:17 AM"
+    "status": "Meteor Shower Alert!",
+    "description": "Streaks of light tear across the night sky — it's a Meteor Shower!\nFalling meteors may bring rare surprises and bonuses to your garden.\n\nNOTE: This event can randomly occur during Night. Keep an eye out!",
+    "lastUpdated": "Updated: 7:08:18 AM"
   }
 }
