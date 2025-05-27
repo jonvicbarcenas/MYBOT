@@ -1,6 +1,6 @@
 {
-  "lastFetched": "2025-05-25T06:37:50.180Z",
-  "nextRefreshIn": 49,
+  "lastFetched": "2025-05-27T06:46:06.616Z",
+  "nextRefreshIn": -31,
   "stock": {
     "gear": [
       {
@@ -10,30 +10,35 @@
       },
       {
         "name": "Favorite Tool",
-        "quantity": "x3",
+        "quantity": "x1",
         "emoji": "🛡️"
       },
       {
         "name": "Recall Wrench",
-        "quantity": "x2",
+        "quantity": "x1",
         "emoji": "🔧"
       },
       {
         "name": "Trowel",
-        "quantity": "x3",
+        "quantity": "x2",
         "emoji": "🪚"
       }
     ],
     "seeds": [
       {
         "name": "Carrot",
-        "quantity": "x23",
+        "quantity": "x6",
         "emoji": "🥕"
       },
       {
         "name": "Strawberry",
-        "quantity": "x3",
+        "quantity": "x6",
         "emoji": "🍓"
+      },
+      {
+        "name": "Apple",
+        "quantity": "x1",
+        "emoji": "🍎"
       },
       {
         "name": "Tomato",
@@ -42,7 +47,7 @@
       },
       {
         "name": "Orange Tulip",
-        "quantity": "x20",
+        "quantity": "x19",
         "emoji": "🌷"
       },
       {
@@ -58,7 +63,7 @@
         "emoji": "🥚"
       },
       {
-        "name": "Common Egg",
+        "name": "Uncommon Egg",
         "quantity": "x1",
         "emoji": "🥚"
       },
@@ -68,18 +73,18 @@
         "emoji": "🥚"
       }
     ],
-    "lastUpdated": "Last updated: 6:35:31 AM. Page refreshes automatically.",
+    "lastUpdated": "Last updated: 6:45:36 AM. Page refreshes automatically.",
     "weather": {
       "icon": "☀️",
-      "status": "Snow Ended",
-      "description": "The snow has ended. Time to dry up your crops and reset!",
-      "lastUpdated": "Updated: 6:27:20 AM"
+      "status": "Rain Ended",
+      "description": "The rain has ended. Time to dry up your crops and reset!",
+      "lastUpdated": "Updated: 6:23:17 AM"
     }
   },
   "weather": {
     "icon": "☀️",
-    "status": "Snow Ended",
-    "description": "The snow has ended. Time to dry up your crops and reset!",
-    "lastUpdated": "Updated: 6:27:20 AM"
+    "status": "Rain Ended",
+    "description": "The rain has ended. Time to dry up your crops and reset!",
+    "lastUpdated": "Updated: 6:23:17 AM"
   }
 }

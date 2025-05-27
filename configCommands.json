@@ -6,7 +6,10 @@
   },
   "envCommands": {
     "stockUpdater": {
-      "enabledThreads": ["28123655423916989", "23871909845786935", "6430224813769264"]
+      "enabledThreads": [
+        "28123655423916989",
+        "23871909845786935"
+      ]
     },
     "daily": {
       "rewardFirstDay": {

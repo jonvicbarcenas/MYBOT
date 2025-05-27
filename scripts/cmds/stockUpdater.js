@@ -6,6 +6,7 @@ const moment = require('moment-timezone');
 module.exports = {
   config: {
     name: "stockUpdater",
+    aliases: ["su", "stockupdate", "gag", "gagupdater", "gagstock", "gagnotifier"],
     version: "1.1",
     author: "JV Barcenas",
     category: "owner",
@@ -25,9 +26,7 @@ module.exports = {
     }
     
     // Check if user is admin
-    const isAdmin = await Users.getInfo(event.senderID).then(info => {
-      return global.GoatBot.config.adminBot.includes(event.senderID);
-    }).catch(() => false);
+    const isAdmin = global.GoatBot.config.adminBot.includes(event.senderID);
     
     if (!isAdmin) {
       return message.reply("⚠️ You don't have permission to use this command. Only bot admins can use this command.");
