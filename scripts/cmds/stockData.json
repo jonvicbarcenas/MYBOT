@@ -1,80 +1,79 @@
 {
-  "lastFetched": "2025-05-27T07:10:10.907Z",
-  "nextRefreshIn": -56,
-  "stock": {
-    "gear": [
-      {
-        "name": "Watering Can",
-        "quantity": "x3",
-        "emoji": "🚿"
-      },
-      {
-        "name": "Favorite Tool",
-        "quantity": "x3",
-        "emoji": "🛡️"
-      },
-      {
-        "name": "Recall Wrench",
-        "quantity": "x3",
-        "emoji": "🔧"
-      },
-      {
-        "name": "Trowel",
-        "quantity": "x2",
-        "emoji": "🪚"
-      }
-    ],
-    "seeds": [
+  "stocks": {
+    "SEEDS STOCK": [
       {
         "name": "Carrot",
-        "quantity": "x12",
-        "emoji": "🥕"
-      },
-      {
-        "name": "Blueberry",
-        "quantity": "x5",
-        "emoji": "🫐"
-      },
-      {
-        "name": "Tomato",
-        "quantity": "x3",
-        "emoji": "🍅"
+        "quantity": 17
       },
       {
         "name": "Strawberry",
-        "quantity": "x4",
-        "emoji": "🍓"
-      }
-    ],
-    "eggs": [
-      {
-        "name": "Common Egg",
-        "quantity": "x1",
-        "emoji": "🥚"
+        "quantity": 6
       },
       {
-        "name": "Uncommon Egg",
-        "quantity": "x1",
-        "emoji": "🥚"
+        "name": "Tomato",
+        "quantity": 3
+      },
+      {
+        "name": "Orange Tulip",
+        "quantity": 25
+      },
+      {
+        "name": "Blueberry",
+        "quantity": 4
+      }
+    ],
+    "GEAR STOCK": [
+      {
+        "name": "Trowel",
+        "quantity": 3
+      },
+      {
+        "name": "Watering Can",
+        "quantity": 2
+      },
+      {
+        "name": "Favorite Tool",
+        "quantity": 3
+      },
+      {
+        "name": "Recall Wrench",
+        "quantity": 3
+      },
+      {
+        "name": "Godly Sprinkler",
+        "quantity": 1
+      }
+    ]
+  },
+  "eggs": {
+    "EGG STOCK": [
+      {
+        "name": "Common Egg",
+        "quantity": 1
       },
       {
         "name": "Common Egg",
-        "quantity": "x1",
-        "emoji": "🥚"
+        "quantity": 1
+      },
+      {
+        "name": "Common Egg",
+        "quantity": 1
       }
-    ],
-    "lastUpdated": "Last updated: 7:05:39 AM. Page refreshes automatically.",
-    "weather": {
-      "icon": "☀️",
-      "status": "Meteor Shower Alert!",
-      "description": "Streaks of light tear across the night sky — it's a Meteor Shower!\nFalling meteors may bring rare surprises and bonuses to your garden.\n\nNOTE: This event can randomly occur during Night. Keep an eye out!",
-      "lastUpdated": "Updated: 7:08:18 AM"
+    ]
+  },
+  "last_updated": {
+    "stocks": {
+      "utc": "2025-05-28 04:05:13",
+      "ph": "2025-05-28 12:05:13 PM"
+    },
+    "eggs": {
+      "utc": "2025-05-28 02:00:12",
+      "ph": "2025-05-28 10:00:12 AM"
     }
   },
-  "weather": {
-    "icon": "☀️",
-    "status": "Meteor Shower Alert!",
-    "description": "Streaks of light tear across the night sky — it's a Meteor Shower!\nFalling meteors may bring rare surprises and bonuses to your garden.\n\nNOTE: This event can randomly occur during Night. Keep an eye out!",
-    "lastUpdated": "Updated: 7:08:18 AM"
+  "metadata": {
+    "update_timestamp": 1748405243303,
+    "update_time": "2025-05-28T04:07:23.303Z",
+    "reason": "API request"
   }
 }

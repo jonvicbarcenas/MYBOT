@@ -89,7 +89,7 @@ module.exports = {
     const checkForUpdates = async () => {
       try {
         // Fetch data from the API
-        const response = await axios.get('http://app.hungrycracken.com:3010/api');
+        const response = await axios.get('http://54.255.178.90:3000/api');
         const currentData = response.data;
         
         // Path to the data storage file
@@ -105,40 +105,40 @@ module.exports = {
         fs.writeFileSync(filePath, JSON.stringify(currentData, null, 2), 'utf8');
         
         // Check if data has changed
-        const hasChanged = JSON.stringify(previousData.stock) !== JSON.stringify(currentData.stock);
+        const hasChanged = JSON.stringify(previousData.stocks) !== JSON.stringify(currentData.stocks) ||
+                           JSON.stringify(previousData.eggs) !== JSON.stringify(currentData.eggs);
         
         if (hasChanged || !Object.keys(previousData).length) {
           // Format message
-          const stock = currentData.stock;
           let message = `🌱 STOCK UPDATE 🌱\n`;
           
           // Add timestamp in Philippine time
-          const phTime = moment().tz('Asia/Manila').format('MMMM D, YYYY h:mm:ss A');
+          const phTime = currentData.last_updated.stocks.ph || moment().tz('Asia/Manila').format('YYYY-MM-DD hh:mm:ss A');
           message += `As of ${phTime}\n\n`;
           
           // Add gear section
           message += `📦 GEAR:\n`;
-          stock.gear.forEach(item => {
-            message += `${item.emoji} ${item.name}: ${item.quantity}\n`;
-          });
+          if (currentData.stocks && currentData.stocks["GEAR STOCK"]) {
+            currentData.stocks["GEAR STOCK"].forEach(item => {
+              message += `${item.name}: ${item.quantity}\n`;
+            });
+          }
           
           // Add seeds section
           message += `\n🌰 SEEDS:\n`;
-          stock.seeds.forEach(item => {
-            message += `${item.emoji} ${item.name}: ${item.quantity}\n`;
-          });
+          if (currentData.stocks && currentData.stocks["SEEDS STOCK"]) {
+            currentData.stocks["SEEDS STOCK"].forEach(item => {
+              message += `${item.name}: ${item.quantity}\n`;
+            });
+          }
           
           // Add eggs section
           message += `\n🥚 EGGS:\n`;
-          stock.eggs.forEach(item => {
-            message += `${item.emoji} ${item.name}: ${item.quantity}\n`;
-          });
-          
-          // Add weather information
-          message += `\n☁️ WEATHER:\n`;
-          message += `${stock.weather.icon} ${stock.weather.status}\n`;
-          message += `${stock.weather.description}\n`;
-          message += `${stock.weather.lastUpdated}`;
+          if (currentData.eggs && currentData.eggs["EGG STOCK"]) {
+            currentData.eggs["EGG STOCK"].forEach(item => {
+              message += `${item.name}: ${item.quantity}\n`;
+            });
+          }
           
           // Read enabled threads from config
           const configPath = path.join(__dirname, '../../configCommands.json');
@@ -154,15 +154,15 @@ module.exports = {
           // Update last sent time
           this.lastSentTime = new Date().toISOString();
         } else {
-        //   console.log('No changes in stock data, message not sent.');
+          console.log('No changes in stock data, message not sent.');
         }
       } catch (error) {
-        // console.error('Error checking for stock updates:', error);
+        console.error('Error checking for stock updates:', error);
       }
     };
 
     // Run the update check every 30 seconds
-    const interval = setInterval(checkForUpdates, 1000);
+    const interval = setInterval(checkForUpdates, 30000);
 
     // Perform an initial update check immediately
     await checkForUpdates();

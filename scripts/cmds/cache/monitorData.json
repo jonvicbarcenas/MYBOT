@@ -1,15 +1,10 @@
 {
   "activeGroups": {},
   "activeUsers": {},
-  "commandUsage": {
-    "monitorhook": {
-      "count": 3,
-      "lastUsed": 1748329736871
-    }
-  },
+  "commandUsage": {},
   "botStats": {
-    "startTime": 1748329692833,
-    "totalCommands": 3,
+    "startTime": 1748405212127,
+    "totalCommands": 0,
     "totalMessages": 0
   },
   "reports": []
