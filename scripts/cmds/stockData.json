@@ -3,45 +3,45 @@
     "SEEDS STOCK": [
       {
         "name": "Carrot",
-        "quantity": 17
+        "quantity": 11
+      },
+      {
+        "name": "Bamboo",
+        "quantity": 12
       },
       {
         "name": "Strawberry",
-        "quantity": 6
+        "quantity": 5
       },
       {
         "name": "Tomato",
-        "quantity": 3
-      },
-      {
-        "name": "Orange Tulip",
-        "quantity": 25
+        "quantity": 2
       },
       {
         "name": "Blueberry",
-        "quantity": 4
+        "quantity": 1
       }
     ],
     "GEAR STOCK": [
+      {
+        "name": "Advanced Sprinkler",
+        "quantity": 2
+      },
       {
         "name": "Trowel",
         "quantity": 3
       },
       {
         "name": "Watering Can",
-        "quantity": 2
+        "quantity": 1
       },
       {
         "name": "Favorite Tool",
-        "quantity": 3
+        "quantity": 1
       },
       {
         "name": "Recall Wrench",
         "quantity": 3
-      },
-      {
-        "name": "Godly Sprinkler",
-        "quantity": 1
       }
     ]
   },
@@ -56,24 +56,56 @@
         "quantity": 1
       },
       {
-        "name": "Common Egg",
+        "name": "Uncommon Egg",
+        "quantity": 1
+      }
+    ]
+  },
+  "honeyStocks": {
+    "HONEY STOCK": [
+      {
+        "name": "Bee Chair",
+        "quantity": 1
+      },
+      {
+        "name": "Flower Seed Pack",
+        "quantity": 1
+      },
+      {
+        "name": "Bee Egg",
+        "quantity": 1
+      },
+      {
+        "name": "Bee Crate",
+        "quantity": 1
+      },
+      {
+        "name": "Honey Torch",
+        "quantity": 1
+      },
+      {
+        "name": "Honey Comb",
         "quantity": 1
       }
     ]
   },
   "last_updated": {
     "stocks": {
-      "utc": "2025-05-28 04:05:13",
-      "ph": "2025-05-28 12:05:13 PM"
+      "utc": "2025-06-01 08:21:49",
+      "ph": "2025-06-01 04:21:49 PM"
     },
     "eggs": {
-      "utc": "2025-05-28 02:00:12",
-      "ph": "2025-05-28 10:00:12 AM"
+      "utc": "2025-06-01 08:01:14",
+      "ph": "2025-06-01 04:01:14 PM"
+    },
+    "honeyStocks": {
+      "utc": "2025-06-01 08:13:15",
+      "ph": "2025-06-01 04:13:15 PM"
     }
   },
   "metadata": {
-    "update_timestamp": 1748405243303,
-    "update_time": "2025-05-28T04:07:23.303Z",
+    "update_timestamp": 1748766254369,
+    "update_time": "2025-06-01T08:24:14.369Z",
     "reason": "API request"
   }
 }

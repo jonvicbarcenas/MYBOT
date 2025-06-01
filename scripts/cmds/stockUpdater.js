@@ -106,7 +106,8 @@ module.exports = {
         
         // Check if data has changed
         const hasChanged = JSON.stringify(previousData.stocks) !== JSON.stringify(currentData.stocks) ||
-                           JSON.stringify(previousData.eggs) !== JSON.stringify(currentData.eggs);
+                           JSON.stringify(previousData.eggs) !== JSON.stringify(currentData.eggs) ||
+                           JSON.stringify(previousData.honeyStocks) !== JSON.stringify(currentData.honeyStocks);
         
         if (hasChanged || !Object.keys(previousData).length) {
           // Format message
@@ -136,6 +137,14 @@ module.exports = {
           message += `\n🥚 EGGS:\n`;
           if (currentData.eggs && currentData.eggs["EGG STOCK"]) {
             currentData.eggs["EGG STOCK"].forEach(item => {
+              message += `${item.name}: ${item.quantity}\n`;
+            });
+          }
+          
+          // Add honey section
+          message += `\n🍯 HONEY EVENT:\n`;
+          if (currentData.honeyStocks && currentData.honeyStocks["HONEY STOCK"]) {
+            currentData.honeyStocks["HONEY STOCK"].forEach(item => {
               message += `${item.name}: ${item.quantity}\n`;
             });
           }
