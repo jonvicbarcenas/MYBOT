@@ -7,7 +7,7 @@ module.exports = {
   config: {
     name: "stockUpdater",
     aliases: ["su", "stockupdate", "gag", "gagupdater", "gagstock", "gagnotifier"],
-    version: "1.1",
+    version: "1.2",
     author: "JV Barcenas",
     category: "owner",
     description: "Manage stock update notifications",
@@ -117,6 +117,14 @@ module.exports = {
           const phTime = currentData.last_updated.stocks.ph || moment().tz('Asia/Manila').format('YYYY-MM-DD hh:mm:ss A');
           message += `As of ${phTime}\n\n`;
           
+          // Check for Master Sprinkler
+          let hasMasterSprinkler = false;
+          if (currentData.stocks && currentData.stocks["GEAR STOCK"]) {
+            hasMasterSprinkler = currentData.stocks["GEAR STOCK"].some(item => 
+              item.name === "Master Sprinkler" && item.quantity > 0
+            );
+          }
+          
           // Add gear section
           message += `📦 GEAR:\n`;
           if (currentData.stocks && currentData.stocks["GEAR STOCK"]) {
@@ -156,7 +164,44 @@ module.exports = {
           
           // Send message to enabled threads
           for (const threadID of enabledThreads) {
-            api.sendMessage(message, threadID);
+            if (hasMasterSprinkler) {
+              // If Master Sprinkler is in stock, tag all members
+              try {
+                const threadInfo = await api.getThreadInfo(threadID);
+                const participantIDs = threadInfo.participantIDs;
+                const mentions = [];
+                
+                // Add alert message for Master Sprinkler
+                let alertMessage = message + "\n⚠️ MASTER SPRINKLER ALERT! ⚠️\n";
+                let tagBody = "@all";
+                
+                // Create mentions array for tagging all members
+                for (let i = 0; i < participantIDs.length; i++) {
+                  mentions.push({
+                    tag: "@all",
+                    id: participantIDs[i],
+                    fromIndex: i === 0 ? alertMessage.length : alertMessage.length + i - 1
+                  });
+                  
+                  if (i > 0) {
+                    alertMessage += " ";
+                  }
+                }
+                
+                // Send message with mentions
+                api.sendMessage({
+                  body: alertMessage + tagBody,
+                  mentions
+                }, threadID);
+              } catch (err) {
+                console.error(`Error tagging all in thread ${threadID}:`, err);
+                // Fallback to normal message if tagging fails
+                api.sendMessage(message, threadID);
+              }
+            } else {
+              // Normal message without tagging
+              api.sendMessage(message, threadID);
+            }
           }
           console.log('Stock update messages sent successfully!');
           
